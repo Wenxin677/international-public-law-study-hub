@@ -1,72 +1,83 @@
-/* ==========================================================================
-   glossary.js — bilingual legal glossary with table + flashcard trainer
-   ========================================================================== */
+/* glossary.js — searchable Khmer/English legal glossary, table or flashcards */
 (function () {
   'use strict';
-  const I = window.IPL, D = window.IPL_DATA;
-  const t = I.t, esc = I.esc;
-  let mode = 'table';
+  const I = window.IPL, D = window.IPL_DATA, S = window.IPLSearch;
+  const t = I.t, esc = I.esc, qs = I.qs;
+  let mode = 'table', rows = D.glossary.slice();
 
-  function rows(q, chapterId) {
-    q = (q || '').trim().toLowerCase();
-    return D.glossary.filter(function (g) {
-      if (chapterId && g.chapter.id !== chapterId) return false;
-      if (!q) return true;
-      return (g.km + ' ' + (g.en || '') + ' ' + (g.defKm || '') + ' ' + (g.defEn || '')).toLowerCase().indexOf(q) >= 0;
+  function matches(g, q) {
+    if (!q) return true;
+    const lq = q.toLowerCase();
+    return (g.km || '').indexOf(q) >= 0 || (g.en || '').toLowerCase().indexOf(lq) >= 0 ||
+      (g.defKm || '').indexOf(q) >= 0 || (g.defEn || '').toLowerCase().indexOf(lq) >= 0;
+  }
+
+  function render() {
+    const q = qs('#gsearch').value.trim();
+    rows = D.glossary.filter(function (g) { return matches(g, q); });
+    qs('#gcount').textContent = rows.length + ' ' + t('gloss.count');
+    const host = qs('#gbody');
+    if (!rows.length) { host.innerHTML = '<div class="card muted">' + esc(t('gloss.empty')) + '</div>'; return; }
+    if (mode === 'flash') {
+      host.className = 'flip-grid';
+      host.innerHTML = rows.slice(0, 240).map(function (g, i) {
+        const def = I.state.lang === 'km' ? (g.defKm || g.defEn) : (g.defEn || g.defKm);
+        return '<div class="flip" data-i="' + i + '"><div class="inner">' +
+          '<div class="face"><b>' + esc(g.km) + '</b><span class="muted small">' + esc(g.en) + '</span></div>' +
+          '<div class="face back">' + esc(I.truncate(def || '—', 240)) +
+          '<span class="faint small">' + esc(t('common.page')) + ' ' + (g.page || '—') + '</span></div>' +
+          '</div></div>';
+      }).join('');
+      I.qsa('.flip', host).forEach(function (f) {
+        f.addEventListener('click', function () { f.classList.toggle('on'); });
+      });
+      return;
+    }
+    host.className = '';
+    host.innerHTML = '<div class="card" style="padding:0;overflow:hidden"><div class="scroll-x"><table class="tbl">' +
+      '<thead><tr><th>' + esc(I.state.lang === 'km' ? 'ពាក្យ' : 'Khmer') + '</th><th>English</th><th>' +
+      esc(t('gloss.def')) + '</th><th>' + esc(t('common.page')) + '</th></tr></thead><tbody>' +
+      rows.slice(0, 400).map(function (g, i) {
+        const def = I.state.lang === 'km' ? (g.defKm || g.defEn) : (g.defEn || g.defKm);
+        return '<tr class="gloss-row" data-i="' + i + '"><td class="gloss-term">' + esc(g.km) + '</td>' +
+          '<td>' + esc(g.en) + '</td><td class="gloss-def">' + esc(I.truncate(def || '—', 150)) + '</td>' +
+          '<td class="nowrap">p.' + (g.page || '—') + '</td></tr>';
+      }).join('') + '</tbody></table></div></div>';
+    I.qsa('.gloss-row', host).forEach(function (r) {
+      r.addEventListener('click', function () { detail(rows[+r.dataset.i]); });
     });
   }
 
-  function paint() {
-    const host = I.qs('#gloss-host');
-    const q = I.qs('#gloss-search').value;
-    const ch = I.qs('#gloss-chapter').value;
-    const list = rows(q, ch);
-    I.qs('#gloss-count').textContent = list.length + ' ' + t('gloss.count');
-    if (mode === 'table') {
-      host.innerHTML = '<table class="data"><thead><tr><th>' + esc(t('gloss.term')) + '</th><th>' +
-        esc(t('gloss.en')) + '</th><th>' + esc(t('gloss.def')) + '</th><th>' + esc(t('gloss.chapter')) + '</th></tr></thead><tbody>' +
-        list.map(function (g) {
-          return '<tr><td class="km" style="font-weight:600;color:var(--gold-soft)">' + esc(g.km) + '</td>' +
-            '<td>' + esc(g.en || '') + '</td>' +
-            '<td class="km">' + esc(I.state.lang === 'km' ? (g.defKm || '') : (g.defEn || '')) +
-            (I.state.lang === 'km' && g.defEn ? '<div class="en small muted">' + esc(g.defEn) + '</div>' : '') + '</td>' +
-            '<td class="small muted"><a href="learn.html#' + g.lesson.id + '">' + esc(I.pick(g.chapter.title)) + '</a>' +
-            (g.page ? '<br>p.' + g.page : '') + '</td></tr>';
-        }).join('') + '</tbody></table>' || '<p class="muted">—</p>';
-    } else {
-      host.innerHTML = '<div class="term-grid">' + list.slice(0, 60).map(function (g, i) {
-        return '<div class="flip" data-flip="' + i + '"><div class="flip-inner">' +
-          '<div class="flip-face"><div class="tkm">' + esc(g.km) + '</div><div class="ten">' + esc(g.en || '') + '</div>' +
-          '<div class="small muted">' + esc(t('learn.flash')) + '</div></div>' +
-          '<div class="flip-face flip-back"><div class="km">' + esc(I.state.lang === 'km' ? (g.defKm || '') : (g.defEn || '')) + '</div>' +
-          '<div class="small muted" style="margin-top:6px"><a href="learn.html#' + g.lesson.id + '">' + esc(I.pick(g.chapter.title)) +
-          (g.page ? ' · p.' + g.page : '') + '</a></div></div></div></div>';
-      }).join('') + '</div>';
-      I.qsa('.flip', host).forEach(function (c) {
-        c.addEventListener('click', function () { c.classList.toggle('flipped'); });
-      });
-    }
+  function detail(g) {
+    if (!g) return;
+    const l = g.lesson;
+    I.modal(g.km, 
+      '<div class="row" style="gap:8px;margin-bottom:10px"><span class="pill gold">' + esc(g.en || '') + '</span>' +
+      (g.page ? '<span class="pill">' + esc(t('common.page')) + ' ' + g.page + '</span>' : '') + '</div>' +
+      '<p class="km">' + esc(g.defKm || g.defEn || '—') + '</p>' +
+      (g.defEn && g.defEn !== g.defKm ? '<p class="muted">' + esc(g.defEn) + '</p>' : '') +
+      (l ? '<div class="cite-list"><a class="cite" href="learn.html#' + l.id + '">' + esc(t('gloss.where')) + ': ' + esc(I.pick(l.title)) + '</a>' +
+        '<a class="cite" href="teacher.html?q=' + encodeURIComponent(g.km) + '">🤖 ' + esc(t('nav.teacher')) + '</a></div>' : ''),
+      '<button class="btn" data-close>' + esc(t('common.close')) + '</button>');
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    if (!I.guard()) return;
     I.renderChrome('glossary.html');
-    I.qs('#gloss-search').setAttribute('placeholder', t('gloss.search'));
-    I.qs('#gloss-chapter').innerHTML = '<option value="">' + esc(t('common.all')) + '</option>' +
-      D.chapters.filter(function (c) { return c.lessons.some(function (l) { return (l.terms || []).length; }); })
-        .map(function (c) { return '<option value="' + c.id + '">' + esc(I.pick(c.title)) + '</option>'; }).join('');
-    I.qs('#gloss-search').addEventListener('input', paint);
-    I.qs('#gloss-chapter').addEventListener('change', paint);
-    I.qs('#mode-table').addEventListener('click', function () { mode = 'table'; paint(); });
-    I.qs('#mode-flash').addEventListener('click', function () { mode = 'flash'; paint(); });
-    paint();
-    // deep link: glossary.html#t=<term>
-    if (location.hash.indexOf('#t=') === 0) {
-      const term = decodeURIComponent(location.hash.slice(3));
-      I.qs('#gloss-search').value = term;
-      paint();
+    qs('#gsearch').addEventListener('input', function () { render(); });
+    I.qsa('[data-mode]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        mode = b.dataset.mode;
+        I.qsa('[data-mode]').forEach(function (x) { x.classList.toggle('primary', x.dataset.mode === mode); });
+        render();
+      });
+    });
+    const m = location.hash.match(/t=([^&]+)/);
+    if (m) { qs('#gsearch').value = decodeURIComponent(m[1]); }
+    render();
+    if (m) {
+      const first = D.glossary.filter(function (g) { return matches(g, decodeURIComponent(m[1])); })[0];
+      if (first) setTimeout(function () { detail(first); }, 150);
     }
-    I.commandPalette(D.glossary.map(function (g) {
-      return { kind: 'term', text: g.km + ' · ' + (g.en || ''), href: 'glossary.html#t=' + encodeURIComponent(g.km) };
-    }));
   });
 })();

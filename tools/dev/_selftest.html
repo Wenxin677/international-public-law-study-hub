@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RoboCL self-test (dev only)</title>
+<style>body{font:12.5px/1.55 ui-monospace,monospace;background:#0b1120;color:#dfe7ff;margin:0;padding:14px}pre{white-space:pre-wrap}</style>
+</head>
+<body>
+<pre id="out">running…</pre>
+<div id="frames" style="position:fixed;left:-9999px;top:0"></div>
+<script>
+/* Dev harness: drives the real pages in an iframe and reports PASS/FAIL as text.
+   Runs over http:// so iframes are same-origin. Deleted before shipping. */
+const lines = [];
+const out = document.getElementById('out');
+const log = (s) => { lines.push(s); out.textContent = lines.join('\n'); };
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+function open(page, w) {
+  return new Promise((resolve) => {
+    const f = document.createElement('iframe');
+    f.style.width = (w || 1200) + 'px';
+    f.style.height = '900px';
+    f.style.position = 'fixed'; f.style.left = '-9999px';
+    f.src = page + (page.indexOf('?') < 0 ? '?' : '&') + '_t=' + Date.now();
+    f.onload = () => setTimeout(() => resolve(f), 500);
+    document.getElementById('frames').appendChild(f);
+    setTimeout(() => resolve(f), 12000);
+  });
+}
+let pass = 0, fail = 0;
+function check(name, cond, extra) {
+  if (cond) { pass++; log('  ✓ ' + name + (extra ? ' — ' + extra : '')); }
+  else { fail++; log('  ✗ ' + name + (extra ? ' — ' + extra : '')); }
+}
+function errBar(d) { return d.getElementById('err-bar'); }
+
+async function waitFor(fn, ms, step) {
+  const t0 = Date.now();
+  while (Date.now() - t0 < ms) {
+    try { if (fn()) return true; } catch (e) {}
+    await sleep(step || 120);
+  }
+  return false;
+}
+
+(async () => {
+  log('RoboCL self-test — ' + new Date().toLocaleString());
+  try { localStorage.clear(); sessionStorage.clear(); } catch (e) {}
+
+  /* ---------------------------------------------------------- auth */
+  log('auth (signin.html)');
+  let f = await open('signin.html');
+  let w = f.contentWindow, d = f.contentDocument;
+  check('page loads', !!w.IPLAuth && !!w.IPL, 'engine=' + (w.IPLAuth ? w.IPLAuth.engine : '-'));
+  const badUser = await w.IPLAuth.signup('ab', 'test1234', 'test1234');
+  check('rejects a too-short username', !badUser.ok, badUser.msg);
+  const mismatch = await w.IPLAuth.signup('student1', 'test1234', 'nope');
+  check('rejects mismatched passwords', !mismatch.ok, mismatch.msg);
+  const created = await w.IPLAuth.signup('student1', 'test1234', 'test1234');
+  check('creates the account', created.ok, 'user=' + created.user);
+  const dup = await w.IPLAuth.signup('student1', 'test1234', 'test1234');
+  check('refuses a duplicate username', !dup.ok, dup.msg);
+  const stored = w.IPLAuth.accounts().student1;
+  check('password is hashed, not stored', !!stored && !('password' in stored) && (stored.hash || '').length > 30,
+        'algo=' + (stored && stored.algo));
+  check('session started', !!w.IPLAuth.session(), (w.IPLAuth.session() || {}).u);
+  w.IPLAuth.signout();
+  await sleep(150);
+  const wrong = await w.IPLAuth.signin('student1', 'wrongpass', true);
+  check('rejects a wrong password', !wrong.ok, wrong.msg);
+  const good = await w.IPLAuth.signin('student1', 'test1234', true);
+  check('signs in with the right password', good.ok);
+  const evs = w.IPLAuth.events().map(e => e.type);
+  check('records sign-up / sign-in / failure events', evs.indexOf('signup') >= 0 && evs.indexOf('signin') >= 0 && evs.indexOf('signin_failed') >= 0, evs.join(','));
+  check('report() exposes accounts + events', w.IPLAuth.report().accounts.length === 1 && w.IPLAuth.report().events.length > 0);
+  check('CSV export works', w.IPLAuth.toCSV().split('\n').length > 2);
+  f.remove();
+
+  /* ---------------------------------------------------------- dashboard */
+  log('dashboard.html');
+  f = await open('dashboard.html'); w = f.contentWindow; d = f.contentDocument;
+  check('guard passed (signed in)', !!d.getElementById('greet'), 'greet="' + (d.getElementById('greet') || {}).textContent + '"');
+  check('chapters rendered', d.querySelectorAll('#chapters .chapter-card').length === 10,
+        d.querySelectorAll('#chapters .chapter-card').length + ' cards');
+  check('quick actions rendered', d.querySelectorAll('#quick a').length === 4);
+  check('continue card has a lesson', /learn\.html#/.test(d.getElementById('continue-card').innerHTML));
+  check('no script error bar', !errBar(d));
+  f.remove();
+
+  /* ---------------------------------------------------------- guard */
+  log('guard (signed out)');
+  localStorage.removeItem('robo.session');
+  sessionStorage.removeItem('robo.session');
+  f = await open('learn.html'); w = f.contentWindow; d = f.contentDocument;
+  await sleep(600);
+  check('app page redirects to signin when signed out', /signin\.html/.test(w.location.href), w.location.href.split('/').pop());
+  f.remove();
+
+  /* sign back in deterministically, on a fresh page */
+  async function ensureSignedIn() {
+    const g = await open('signin.html');
+    const s = await g.contentWindow.IPLAuth.signin('student1', 'test1234', true);
+    const ok = !!g.contentWindow.IPLAuth.session();
+    g.remove();
+    return s.ok && ok;
+  }
+  check('signs back in after signing out', await ensureSignedIn());
+
+  /* ---------------------------------------------------------- learn */
+  log('learn.html');
+  f = await open('learn.html'); w = f.contentWindow; d = f.contentDocument;
+  check('rail lists 10 chapters', d.querySelectorAll('#rail .ch').length === 10);
+  check('a lesson rendered', !!d.querySelector('#lesson h1'), (d.querySelector('#lesson h1') || {}).textContent);
+  check('key points + quotes present', d.querySelectorAll('#lesson .point-list li').length > 0 && d.querySelectorAll('#lesson .quote').length > 0,
+        d.querySelectorAll('#lesson .point-list li').length + ' points, ' + d.querySelectorAll('#lesson .quote').length + ' quotes');
+  check('flashcards rendered', d.querySelectorAll('#lesson .flip').length > 0);
+  /* notes + studied */
+  const ta = d.getElementById('notes');
+  ta.value = 'self-test note';
+  d.getElementById('save-notes').click();
+  await sleep(200);
+  check('notes saved to progress', w.IPL.getNotes(w.IPL_DATA.lessons[0].id) === 'self-test note');
+  d.getElementById('mark-btn').click();
+  await sleep(250);
+  check('lesson marked as studied (+XP)', Object.keys(w.IPL.getProgress().lessons).length >= 1, 'xp=' + w.IPL.getProgress().xp);
+  /* deep link */
+  w.location.hash = '#' + w.IPL_DATA.lessons[3].id;
+  await sleep(400);
+  check('hash deep-link switches lesson', d.querySelector('#lesson h1').textContent === w.IPL.pick(w.IPL_DATA.lessons[3].title));
+  check('no script error bar', !errBar(d));
+  f.remove();
+
+  /* ---------------------------------------------------------- quiz */
+  log('quiz.html');
+  f = await open('quiz.html'); w = f.contentWindow; d = f.contentDocument;
+  check('setup offers mixed + chapters', !!d.querySelector('[data-mixed]') && d.querySelectorAll('[data-ch]').length === 10);
+  d.querySelector('[data-mixed]').click();
+  await sleep(400);
+  check('quiz started with 10 questions', /(1\D+10)/.test(d.getElementById('run-wrap').textContent), 'q=' + d.querySelectorAll('#opts .option').length + ' options');
+  let answered = 0;
+  for (let i = 0; i < 10; i++) {
+    const opt = d.querySelector('#opts .option');
+    if (!opt) break;
+    opt.click();
+    await sleep(180);
+    if (i === 0) check('answer shows explanation + page link', !!d.querySelector('#fb .explain'));
+    answered++;
+    const nx = d.getElementById('next');
+    if (nx && !nx.disabled) { nx.click(); await sleep(200); } else break;
+  }
+  check('all questions answered', answered === 10, answered + ' answered');
+  await sleep(300);
+  check('result view rendered with a score', /%/.test(d.getElementById('result-wrap').textContent), (d.querySelector('.result-ring i') || {}).textContent);
+  check('quiz result saved to progress', Object.keys(w.IPL.getProgress().quiz).length >= 1, 'best=' + JSON.stringify(w.IPL.getProgress().quiz.mixed && w.IPL.getProgress().quiz.mixed.best));
+  check('no script error bar', !errBar(d));
+  f.remove();
+
+  /* ---------------------------------------------------------- teacher */
+  log('teacher.html (RoboCL)');
+  f = await open('teacher.html'); w = f.contentWindow; d = f.contentDocument;
+  check('intro + suggestions shown', !!d.querySelector('.empty-chat') && d.querySelectorAll('.suggest-row button').length > 0);
+  d.getElementById('chat-text').value = 'តើអធិបតេយ្យភាពជាអ្វី?';
+  d.getElementById('send-btn').click();
+  const sawThinking = await waitFor(() => d.getElementById('thinking'), 3000, 60);
+  check('shows a thinking panel with steps', sawThinking && d.querySelectorAll('#thinking li').length === 5);
+  await waitFor(() => d.querySelector('.answer-actions'), 12000, 150);
+  const streamedOk = await waitFor(() => d.querySelector('.thread .msg.bot.streaming') === null && d.querySelectorAll('.thread .sec').length >= 3, 20000, 200);
+  check('answer streamed in', streamedOk, d.querySelectorAll('.thread .sec').length + ' sections');
+  const ans = d.querySelector('.thread .msg.bot:last-child');
+  check('answer has sections (short answer / why / book)', d.querySelectorAll('.thread .sec').length >= 2, d.querySelectorAll('.thread .sec').length + ' sections');
+  check('answer cites sources with pages', d.querySelectorAll('.thread .cite').length > 0, d.querySelectorAll('.thread .cite').length + ' citations');
+  check('answer offers follow-up actions', d.querySelectorAll('.answer-actions button').length === 5);
+  await sleep(400);
+  check('chat saved to history', d.querySelectorAll('#chat-list button').length >= 1);
+  check('no script error bar', !errBar(d));
+  f.remove();
+
+  /* ---------------------------------------------------------- library */
+  log('library.html');
+  f = await open('library.html'); w = f.contentWindow; d = f.contentDocument;
+  check('lists 3 sources', d.querySelectorAll('#lib-list .lib-src').length === 3);
+  const pageText = d.querySelector('.reader-page');
+  check('textbook opens as text', !!pageText, 'page chars=' + (pageText ? pageText.textContent.length : 0));
+  d.getElementById('next-pg').click();
+  await sleep(200);
+  check('pager advances', /2/.test((d.querySelector('.pager') ? d.querySelector('.pager').parentElement : d.querySelector('.viewer-body')).textContent) && /205/.test(d.querySelector('.viewer-body').textContent));
+  const eccc = d.querySelectorAll('#lib-list .lib-src')[1];
+  eccc.click();
+  await sleep(400);
+  check('reference document opens', d.querySelector('.lib-src.active') ? d.querySelector('.lib-src.active').textContent.indexOf('20') > 0 : false, (d.getElementById('lib-head') || {}).textContent.slice(0, 60));
+  const pdfBtn = d.querySelector('[data-view="pdf"]');
+  check('PDF view offered for the references', !!pdfBtn);
+  if (pdfBtn) {
+    pdfBtn.click(); await sleep(300);
+    check('PDF viewer embedded', !!d.querySelector('iframe.pdf-frame'), (d.querySelector('iframe.pdf-frame') || {}).src);
+  }
+  const shotsBtn = d.querySelectorAll('#lib-list .lib-src')[0];
+  shotsBtn.click(); await sleep(400);
+  const sv = d.querySelector('[data-view="shots"]');
+  if (sv) { sv.click(); await sleep(300); check('look-inside gallery renders', d.querySelectorAll('.shot').length === 6); }
+  check('no script error bar', !errBar(d));
+  f.remove();
+
+  /* ---------------------------------------------------------- glossary */
+  log('glossary.html');
+  f = await open('glossary.html'); w = f.contentWindow; d = f.contentDocument;
+  check('table rendered with terms', d.querySelectorAll('#gbody tbody tr').length > 100, d.querySelectorAll('#gbody tbody tr').length + ' rows');
+  const gs = d.getElementById('gsearch');
+  gs.value = 'អធិបតេយ្យ'; gs.dispatchEvent(new w.Event('input', { bubbles: true }));
+  await sleep(250);
+  const narrowed = d.querySelectorAll('#gbody tbody tr').length;
+  check('search narrows the list', narrowed > 0 && narrowed < 60, narrowed + ' rows');
+  const row = d.querySelector('#gbody tbody tr');
+  if (row) { row.click(); await sleep(250); check('term detail modal opens', !!d.querySelector('#modal-backdrop.open')); }
+  d.querySelector('[data-mode="flash"]').click();
+  await sleep(250);
+  check('flashcard mode renders', d.querySelectorAll('#gbody .flip').length > 0);
+  check('no script error bar', !errBar(d));
+  f.remove();
+
+  /* ---------------------------------------------------------- landing + about + admin */
+  log('index.html / about.html / admin.html');
+  f = await open('index.html'); w = f.contentWindow; d = f.contentDocument;
+  await sleep(2800);
+  check('landing counters finish', d.querySelector('[data-count="238"]').textContent !== '0', d.querySelector('[data-count="238"]').textContent);
+  check('landing shows the tutorial cards', d.querySelectorAll('#tour-grid .feature').length === 5);
+  check('landing FAQ rendered', d.querySelectorAll('#faq details').length === 4);
+  check('landing CTAs are wired', /signin\.html|dashboard\.html/.test(d.getElementById('hero-cta').innerHTML));
+  check('landing has no error bar', !errBar(d));
+  f.remove();
+
+  f = await open('about.html'); w = f.contentWindow; d = f.contentDocument;
+  check('credit shows the creator', /Sok Panha/.test(d.body.innerText) && /AI/i.test(d.body.innerText));
+  check('credit lists the sources', /Paris Convention/.test(d.body.innerText));
+  f.remove();
+
+  f = await open('admin.html'); w = f.contentWindow; d = f.contentDocument;
+  check('admin asks for the code first', !!d.getElementById('code'));
+  d.getElementById('code').value = 'panha2026';
+  d.getElementById('go').click();
+  await sleep(300);
+  const adminTxt = d.getElementById('admin-body').textContent;
+  check('admin shows the account list after the code', /student1/.test(adminTxt), adminTxt.replace(/\s+/g, ' ').slice(0, 90));
+  check('admin offers CSV export', !!d.getElementById('csv') && !!d.getElementById('copy'));
+  f.remove();
+
+  /* ---------------------------------------------------------- language */
+  log('language switch');
+  f = await open('dashboard.html'); w = f.contentWindow; d = f.contentDocument;
+  const kmText = d.getElementById('greet').textContent;
+  w.IPL.setLang('en');
+  await sleep(200);
+  check('setLang navigates with _l=en', /_l=en/.test(w.location.href), w.location.href.split('/').pop());
+  f.remove();
+  f = await open('teacher.html?_l=en'); w = f.contentWindow; d = f.contentDocument;
+  check('English UI renders (RoboCL title)', /AI Teacher/.test(d.title) || /teacher/i.test(d.title), d.title);
+  const ta2 = d.getElementById('chat-text');
+  ta2.value = 'What is sovereignty?';
+  d.getElementById('send-btn').click();
+  await waitFor(() => d.querySelector('.answer-actions'), 12000, 150);
+  await waitFor(() => d.querySelector('.thread .msg.bot.streaming') === null && d.querySelectorAll('.thread .sec').length >= 3, 20000, 200);
+  check('English answer produced', d.querySelectorAll('.thread .sec').length >= 3, d.querySelectorAll('.thread .sec').length + ' sections, ' + d.querySelectorAll('.thread .cite').length + ' citations');
+  check('no error bar in English', !errBar(d));
+  f.remove();
+
+  log('');
+  log(fail ? ('RESULT: ' + pass + ' passed, ' + fail + ' FAILED') : ('RESULT: all ' + pass + ' checks passed'));
+  log('done');
+  try { localStorage.clear(); sessionStorage.clear(); } catch (e) {}
+})();
+</script>
+</body>
+</html>

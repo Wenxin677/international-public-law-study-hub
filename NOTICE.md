@@ -9,7 +9,8 @@ or redistributing the data files.
 * Copyright remains with the author (and any publisher/institution holding rights).
 * The app quotes this textbook: verbatim passages with page numbers, lesson summaries, key points,
   quiz questions and Khmer–English terminology, and the full text is indexed in
-  `site/data/corpus.js` so that the *Ask the book* feature can search it.
+  `docs/data/corpus.js` (plus `docs/data/library.js` for the page reader) so that the **RoboCL**
+  teacher can search it.
 * Intended use: private study by students who are expected to work with this textbook.
   It is **not** a substitute for owning or reading the book, and no commercial use is intended.
 * **If you are the author or a rights holder and you would prefer a shorter quotation, or the
@@ -46,9 +47,31 @@ This app is a study aid. It is not legal advice and cannot replace the original 
 teacher, or a qualified lawyer. Quiz answers and chatbot output are study aids; always check the
 cited page.
 
-## 6. Theme music, images and fonts
+## 6. Fonts, images and the RoboCL logo
 
-* Fonts are loaded from Google Fonts: Kantumruy Pro, Inter, Fraunces (SIL Open Font License).
-* The cover image is a render of page i of the textbook, included so students recognise the book.
-  It remains the property of the book's rights holder.
+* Fonts are loaded from Google Fonts: Inter and Noto Sans Khmer (both SIL Open Font License).
+  They are progressive enhancement only — the app falls back to the system Khmer fonts offline.
+* `docs/assets/img/logo.png` and its variants: the RoboCL mascot (a robot reading a law book
+  beside the scales of justice) was generated with an AI image tool for this project by Sok Panha.
+* `docs/assets/img/cover.jpg` is a render of page i of the textbook, included so students
+  recognise the book. It remains the property of the book's rights holder.
+* `docs/assets/img/pages/*.jpg` are renders of six sample pages, used for the "real page samples"
+  view in the Library, under the same educational-quotation terms as section 1.
 * No other third-party assets are bundled.
+
+## 7. Accounts and privacy
+
+* Accounts are created with a **username and password only**. No email address, name or other
+  personal data is requested or collected.
+* Passwords are **never stored and never transmitted**. The browser derives a PBKDF2-SHA256 hash
+  (120 000 rounds, random 16-byte salt) via the Web Crypto API and stores only that hash; a
+  pure-JS iterated SHA-256 path is used when `crypto.subtle` is unavailable (e.g. `file://`).
+  This is a study tool's convenience login — it is not a bank, and it is not built to protect
+  valuable secrets. Do not reuse an important password.
+* By default, accounts and the sign-up/sign-in record live **in the visitor's own browser**
+  (localStorage). The owner can export them from `admin.html` on that device.
+* If the owner configures the optional Supabase integration (`docs/data/config.js` +
+  `tools/supabase.sql`), each sign-up/sign-in also sends the **username, event type, device and
+  timestamp** to that database — never the password and never its hash. The shipped anon key can
+  insert rows but cannot read the table back, so the collected data is visible to the project
+  owner only.

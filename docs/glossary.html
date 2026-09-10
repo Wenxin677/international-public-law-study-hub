@@ -2,44 +2,53 @@
 <html lang="km" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>វាក្យសព្ទ · Glossary — International Public Law Study Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Glossary · RoboCL</title>
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;700&family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e8b44a'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='serif'>ច</text></svg>">
+<script>
+  try {
+    document.documentElement.dataset.theme = localStorage.getItem('robo.theme') || 'dark';
+    var lg = localStorage.getItem('robo.lang') === 'en' ? 'en' : 'km';
+    document.documentElement.lang = lg; document.documentElement.dataset.bootlang = lg;
+  } catch (e) {}
+</script>
 </head>
-<body>
+<body data-lang="km">
+<div id="splash"><div class="slogo"><img src="assets/img/logo.png" alt="RoboCL"><span class="ring"></span></div><div class="lbl">RoboCL</div></div>
 <header class="topbar" id="topbar"></header>
-<main class="wrap">
-  <h1 class="km" style="margin-bottom:4px">វាក្យសព្ទច្បាប់ · Legal glossary</h1>
-  <p class="muted small km">ពាក្យបច្ចេកទេសទាំងអស់ដែលបានចងក្រងពីមេរៀន — ចុចលើកាត ដើម្បីត្រឡប់មើលនិយមន័យ។</p>
-  <div class="kbach" style="margin:14px 0 18px"></div>
-  <div class="card">
-    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:14px">
-      <input class="search" id="gloss-search" style="flex:1 1 260px" autocomplete="off">
-      <select class="search" id="gloss-chapter" style="flex:0 1 220px"></select>
-      <button class="btn sm" id="mode-table">តារាង</button>
-      <button class="btn sm" id="mode-flash">កាតសិក្សា</button>
-      <span class="pill" id="gloss-count"></span>
+
+<main>
+  <div class="wrap">
+    <div class="page-head">
+      <h1 data-t="gloss.title"></h1>
+      <p class="sub" data-t="gloss.sub"></p>
     </div>
-    <div id="gloss-host"></div>
+
+    <div class="row" style="margin-bottom:14px">
+      <input class="input" id="gsearch" type="search" data-t-ph="gloss.search" style="max-width:420px">
+      <button class="btn sm primary" data-mode="table" data-t="gloss.table"></button>
+      <button class="btn sm" data-mode="flash" data-t="gloss.flash"></button>
+      <span class="spacer"></span>
+      <span class="pill" id="gcount"></span>
+    </div>
+
+    <div id="gbody"></div>
   </div>
 </main>
-<footer class="footer" id="footer"></footer>
-<script src="assets/js/core.js"></script>
-<script src="assets/js/search.js"></script>
-<script src="data/corpus.js"></script>
-<script src="data/lessons.js"></script>
-<script src="assets/js/data.js"></script>
-<script src="assets/js/glossary.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const t = window.IPL.t;
-    document.getElementById('mode-table').textContent = t('gloss.listmode');
-    document.getElementById('mode-flash').textContent = t('gloss.flashmode');
-  });
-</script>
+
+<footer class="site" id="footer"></footer>
+
+<script src="data/lessons.js" defer></script>
+<script src="assets/js/search.js" defer></script>
+<script src="data/config.js" defer></script>
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/auth.js" defer></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/glossary.js" defer></script>
 </body>
 </html>

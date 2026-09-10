@@ -1,188 +1,214 @@
-/* ==========================================================================
-   quiz.js — lesson/chapter quizzes with instant feedback and citations
-   ========================================================================== */
+/* quiz.js — setup, question loop, results and review */
 (function () {
   'use strict';
   const I = window.IPL, D = window.IPL_DATA;
-  const t = I.t, esc = I.esc;
+  const t = I.t, esc = I.esc, qs = I.qs;
 
-  const S = { items: [], i: 0, right: 0, wrong: [], mode: 'lesson', id: null, answered: false };
+  const run = { list: [], i: 0, right: 0, wrong: [], id: '', answered: false, timed: false };
 
-  function shuffle(arr) {
-    const a = arr.slice();
-    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const x = a[i]; a[i] = a[j]; a[j] = x; }
+  /* ------------------------------------------------------------- setup */
+  function setup() {
+    const host = qs('#setup');
+    const filter = qs('#qsearch').value.trim().toLowerCase();
+    const chs = D.chapters.filter(function (c) {
+      if (!filter) return true;
+      return I.pick(c.title).toLowerCase().indexOf(filter) >= 0;
+    });
+    host.innerHTML =
+      '<div class="card hoverable" data-mixed style="cursor:pointer;background:linear-gradient(135deg,rgba(111,155,240,.18),rgba(232,180,74,.14))">' +
+      '<div class="row"><div class="av" style="font-size:1.3rem">🎲</div><div style="flex:1">' +
+      '<h3 style="margin:0 0 4px">' + esc(t('quiz.mixed')) + '</h3>' +
+      '<div class="muted small">' + esc(t('quiz.mixed.d')) + '</div></div><span class="pill gold">10</span></div></div>' +
+      chs.map(function (ch) {
+        const n = D.quizForChapter(ch.id).length;
+        return '<div class="card hoverable quiz-setup" data-ch="' + ch.id + '">' +
+          '<div class="row"><span class="badge-num">' + ch.num + '</span><div style="flex:1;min-width:0">' +
+          '<b>' + esc(I.pick(ch.title)) + '</b>' +
+          '<div class="muted small">' + ch.lessons.length + ' ' + esc(t('quiz.lesson')) + ' · p.' + ch.pages.from + '–' + ch.pages.to + '</div>' +
+          '</div><span class="pill">' + n + ' ' + esc(t('quiz.title')) + '</span></div>' +
+          '<div class="lesson-strip" style="margin-top:12px">' +
+          ch.lessons.map(function (l) {
+            return '<button class="btn sm" data-ls="' + l.id + '">' + esc(I.truncate(I.pick(l.title), 30)) + '</button>';
+          }).join('') +
+          '</div></div>';
+      }).join('');
+    host.classList.add('grid', 'g2');
+
+    I.qsa('[data-mixed]', host).forEach(function (n) {
+      n.addEventListener('click', function () { start('mixed'); });
+    });
+    I.qsa('[data-ch]', host).forEach(function (n) {
+      n.addEventListener('click', function (e) {
+        if (e.target.closest('[data-ls]')) return;
+        start('ch:' + n.dataset.ch);
+      });
+    });
+    I.qsa('[data-ls]', host).forEach(function (b) {
+      b.addEventListener('click', function (e) { e.stopPropagation(); start('ls:' + b.dataset.ls); });
+    });
+  }
+
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const x = a[i]; a[i] = a[j]; a[j] = x;
+    }
     return a;
   }
 
-  /* build a runnable question with shuffled options (answer index tracked) */
-  function prepare(q, lesson) {
-    const lang = I.state.lang === 'km' ? 'km' : 'en';
-    const optsKm = (q.options && (q.options.km || q.options.en)) || [];
-    const optsEn = (q.options && (q.options.en || q.options.km)) || [];
-    const n = Math.max(optsKm.length, optsEn.length);
-    const idx = shuffle(Array.from({ length: n }, function (_, i) { return i; }));
-    const correctPos = idx.indexOf(q.answer == null ? 0 : q.answer);
-    return {
-      lesson: lesson, raw: q,
-      q: q.q || {}, explain: q.explain || {}, page: q.page,
-      options: idx.map(function (o) {
-        return { km: optsKm[o] || optsEn[o] || '', en: optsEn[o] || optsKm[o] || '' };
-      }),
-      correctPos: correctPos < 0 ? 0 : correctPos
-    };
-  }
-
-  function start(mode, id) {
-    S.mode = mode; S.id = id; S.i = 0; S.right = 0; S.wrong = []; S.answered = false;
-    let raw = [];
-    if (mode === 'lesson') {
-      const l = D.lessonById(id);
-      raw = (l ? l.quiz : []).map(function (q) { return { q: q, lesson: l }; });
-    } else if (mode === 'chapter') {
-      raw = D.quizForChapter(id);
-    } else {
-      raw = shuffle(D.allQuestions()).slice(0, 10);
-    }
-    S.items = shuffle(raw).map(function (r) { return prepare(r.q, r.lesson); });
-    if (!S.items.length) { I.qs('#quiz-host').innerHTML = '<div class="card">' + esc(t('quiz.noquiz')) + '</div>'; return; }
-    render();
-  }
-
-  function render() {
-    const host = I.qs('#quiz-host');
-    const it = S.items[S.i];
-    const pct = Math.round((S.i / S.items.length) * 100);
-    host.innerHTML =
-      '<div class="quiz-head">' +
-      '<span class="pill gold">' + esc(S.mode === 'lesson' ? I.pick(it.lesson.title) : (S.mode === 'chapter' ? it.lesson.chapter.title.km : t('quiz.title'))) + '</span>' +
-      '<span class="small muted">' + esc(t('quiz.question') + ' ' + (S.i + 1) + ' ' + t('quiz.of') + ' ' + S.items.length) + '</span>' +
-      '<div class="progress"><i style="width:' + pct + '%"></i></div></div>' +
-      '<div class="q-text">' + I.bilingual(it.q) + '</div>' +
-      '<div class="options" id="opts">' + it.options.map(function (o, i) {
-        const body = I.state.lang === 'both'
-          ? esc(o.km) + '<span class="en small muted" style="display:block">' + esc(o.en) + '</span>'
-          : esc(I.state.lang === 'km' ? o.km : o.en);
-        return '<button class="option" data-opt="' + i + '"><span class="key">' + (i + 1) + '</span><span>' + body + '</span></button>';
-      }).join('') + '</div>' +
-      '<div id="feedback"></div>';
-  }
-
-  function answer(pos) {
-    if (S.answered) return;
-    S.answered = true;
-    const it = S.items[S.i];
-    const ok = pos === it.correctPos;
-    const opts = I.qsa('#opts .option');
-    opts.forEach(function (o, i) {
-      o.disabled = true;
-      if (i === it.correctPos) o.classList.add('correct');
-      else if (i === pos) o.classList.add('wrong');
+  function start(id) {
+    let items = [];
+    if (id === 'mixed') items = shuffle(D.allQuestions().slice()).slice(0, 10);
+    else if (id.indexOf('ch:') === 0) items = shuffle(D.quizForChapter(id.slice(3)).slice()).slice(0, 12);
+    else if (id.indexOf('ls:') === 0) items = D.quizForLesson(id.slice(3)).map(function (q, i) { return { q: q, lesson: D.lessonById(id.slice(3)), index: i }; });
+    if (!items.length) { I.toast(t('quiz.noquiz')); return; }
+    /* shuffle the options of each question so the correct key is not always first */
+    items.forEach(function (it) {
+      const q = it.q;
+      const pairs = [];
+      (q.options.km || []).forEach(function (o, i) { pairs.push({ km: o, en: (q.options.en || [])[i] || '', right: i === q.answer }); });
+      shuffle(pairs);
+      q.options.km = pairs.map(function (p) { return p.km; });
+      q.options.en = pairs.map(function (p) { return p.en; });
+      q.answer = pairs.findIndex(function (p) { return p.right; });
     });
-    if (ok) { S.right++; I.addXP(5); } else { S.wrong.push({ it: it, pick: pos }); }
-    const fb = I.qs('#feedback');
-    fb.innerHTML = '<div class="explain">' +
-      '<b style="color:' + (ok ? 'var(--ok)' : 'var(--bad)') + '">' + esc(ok ? t('quiz.correct') : t('quiz.wrong')) + '</b>' +
-      I.bilingual(it.explain) +
-      '<div class="cite-list" style="margin-top:10px">' +
-      (it.page ? '<span class="cite">' + esc(t('quiz.page')) + ' ' + it.page + '</span>' : '') +
-      '<a class="cite" href="learn.html#' + it.lesson.id + '">' + esc(I.pick(it.lesson.title)) + '</a>' +
-      '<a class="cite" href="chat.html?q=' + encodeURIComponent((I.pick(it.q) || '').slice(0, 70)) + '">' + esc(t('quiz.askbook')) + '</a>' +
-      '</div></div>' +
-      '<div style="margin-top:14px"><button class="btn primary" id="next-btn" data-next="1">' +
-      esc(S.i + 1 >= S.items.length ? t('quiz.finish') : t('quiz.next')) + '</button></div>';
+    run.list = items; run.i = 0; run.right = 0; run.wrong = []; run.id = id; run.answered = false;
+    qs('#setup-wrap').hidden = true;
+    qs('#run-wrap').hidden = false;
+    qs('#result-wrap').hidden = true;
+    question();
   }
 
-  function next() {
-    S.answered = false;
-    S.i++;
-    if (S.i >= S.items.length) finish(); else render();
+  /* ------------------------------------------------------------- questions */
+  function question() {
+    const it = run.list[run.i];
+    const q = it.q;
+    const L = I.state.lang;
+    const opts = (q.options && (q.options[L] || q.options.en || q.options.km)) || [];
+    run.answered = false;
+    qs('#run-wrap').innerHTML =
+      '<div class="q-card">' +
+      '<div class="q-top">' +
+      '<span class="pill">' + esc(t('quiz.question')) + ' ' + (run.i + 1) + ' ' + esc(t('quiz.of')) + ' ' + run.list.length + '</span>' +
+      '<span class="pill gold">' + esc(I.truncate(I.pick(it.lesson.title), 40)) + '</span>' +
+      '<span class="spacer"></span><button class="btn sm ghost" id="quit">✕ ' + esc(t('common.close')) + '</button>' +
+      '</div>' +
+      '<div class="q-bar"><i style="width:' + ((run.i) / run.list.length * 100) + '%"></i></div>' +
+      '<div class="q-text">' + I.T(q.q) + '</div>' +
+      '<div class="options" id="opts">' +
+      opts.map(function (o, i) {
+        return '<button class="option" data-opt="' + i + '"><span class="key">' + (i + 1) + '</span><span>' + esc(o) + '</span></button>';
+      }).join('') + '</div>' +
+      '<div id="fb"></div>' +
+      '<div class="row" style="margin-top:16px"><span class="spacer"></span>' +
+      '<button class="btn primary" id="next" disabled>' + (run.i === run.list.length - 1 ? esc(t('quiz.finish')) : esc(t('quiz.next'))) + '</button></div>' +
+      '</div>';
+    qs('#quit').addEventListener('click', backToSetup);
+    I.qsa('#opts .option').forEach(function (b) {
+      b.addEventListener('click', function () { answer(+b.dataset.opt); });
+    });
+    qs('#next').addEventListener('click', function () {
+      if (run.i === run.list.length - 1) result();
+      else { run.i++; question(); }
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function finish() {
-    const host = I.qs('#quiz-host');
-    const total = S.items.length;
-    const pct = Math.round((S.right / total) * 100);
-    const key = (S.mode === 'lesson' ? 'l:' : 'c:') + S.id;
-    const p = I.getProgress();
-    const prev = p.quiz[key] || { best: 0, total: total };
-    p.quiz[key] = { best: Math.max(prev.best || 0, pct), total: total, ts: Date.now(), wrong: S.wrong.length };
-    I.saveProgress(p);
-    I.addXP(S.right * 2);
-    const circumference = 2 * Math.PI * 58;
-    host.innerHTML =
-      '<div class="card pad-lg" style="text-align:center">' +
-      '<div class="score-ring" style="background:conic-gradient(var(--gold) ' + (pct * 3.6) + 'deg, var(--line-soft) 0)">' +
-      '<div style="width:104px;height:104px;border-radius:50%;background:var(--card);display:grid;place-items:center">' +
-      '<b>' + pct + '%</b></div></div>' +
-      '<h2 style="margin-top:16px" class="km">' + esc(t('quiz.score') + ': ' + S.right + '/' + total) + '</h2>' +
-      '<p class="muted">' + esc(t('quiz.average') + ': ' + (p.quiz[key].best || 0) + '%') + '</p>' +
-      '<div class="grid cols-2" style="margin-top:18px;text-align:left">' +
-      '<div><h3>' + esc(t('quiz.review')) + '</h3>' +
-      (S.wrong.length ? S.wrong.map(function (w) {
-        return '<div class="review-row"><span class="pill bad">✕</span><div><div class="km">' + esc(I.pick(w.it.q)) + '</div>' +
-          '<div class="small muted">' + esc(t('quiz.answer')) + ': ' + esc(I.pick(w.it.options[w.it.correctPos])) +
-          (w.it.page ? ' · ' + esc(t('quiz.page')) + ' ' + w.it.page : '') + '</div></div></div>';
-      }).join('') : '<p class="muted">' + esc('—') + '</p>') +
-      '</div><div>' +
-      '<button class="btn primary" id="again-btn" data-again="1">' + esc(t('quiz.retry')) + '</button> ' +
-      '<a class="btn" href="' + (S.mode === 'lesson' ? 'learn.html#' + S.id : 'quiz.html') + '">' +
-      esc(S.mode === 'lesson' ? I.pick((D.lessonById(S.id) || {}).title || {}) : t('quiz.title')) + '</a>' +
-      '</div></div></div>';
-  }
-
-  /* ---------- delegated clicks: survive re-renders ---------- */
-  document.addEventListener('click', function (e) {
-    const t = e.target.closest('[data-lesson],[data-chapter],[data-mixed],[data-opt],[data-next],[data-again]');
-    if (!t) return;
-    if (t.dataset.lesson && !t.disabled) start('lesson', t.dataset.lesson);
-    else if (t.dataset.chapter && !t.disabled) start('chapter', t.dataset.chapter);
-    else if (t.dataset.mixed && !t.disabled) start('mixed', 'all');
-    else if (t.dataset.opt != null && !t.disabled) answer(parseInt(t.dataset.opt, 10));
-    else if (t.dataset.next != null && !t.disabled) next();
-    else if (t.dataset.again != null && !t.disabled) start(S.mode, S.id);
-  });
-
-  function menu() {
-    const host = I.qs('#quiz-host');
-    host.innerHTML = '<div class="card pad-lg"><h3>' + esc(t('quiz.choose')) + '</h3>' +
-      '<div class="grid cols-2">' +
-      D.chapters.map(function (ch) {
-        const n = ch.lessons.reduce(function (a, l) { return a + l.quiz.length; }, 0);
-        if (!n) return '';
-        return '<div class="card"><div class="small muted">' + esc(ch.title.en) + '</div>' +
-          '<h4 class="km">' + esc(ch.title.km) + '</h4>' +
-          '<div class="small muted">' + n + ' ' + esc(t('stat.questions')) + '</div>' +
-          '<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">' +
-          '<button class="btn sm primary" data-chapter="' + ch.id + '">' + esc(t('quiz.start')) + ' (chapter)</button>' +
-          ch.lessons.filter(function (l) { return l.quiz.length; }).map(function (l) {
-            return '<button class="btn sm" data-lesson="' + l.id + '">' + esc(I.pick(l.title)) + '</button>';
-          }).join('') +
-          '</div></div>';
-      }).join('') +
-      '<div class="card"><div class="small muted">mixed</div><h4>' + esc(t('quiz.title')) + ' — 10</h4>' +
-      '<button class="btn sm primary" data-mixed="1">' + esc(t('quiz.start')) + '</button></div>' +
+  function answer(choice) {
+    if (run.answered) return;
+    run.answered = true;
+    const it = run.list[run.i], q = it.q;
+    const L = I.state.lang;
+    const btns = I.qsa('#opts .option');
+    const right = q.answer;
+    btns.forEach(function (b) { b.disabled = true; });
+    if (choice === right) {
+      btns[choice].classList.add('correct');
+      run.right++;
+      I.addXP(4);
+    } else {
+      btns[choice].classList.add('wrong');
+      btns[right].classList.add('reveal');
+      run.wrong.push({ lesson: it.lesson, q: q, chosen: choice });
+    }
+    const page = q.page ? ' <a class="cite" href="library.html#textbook=' + q.page + '">📖 ' + esc(t('quiz.page')) + ' ' + q.page + '</a>' : '';
+    qs('#fb').innerHTML = '<div class="explain">' +
+      '<b style="color:' + (choice === right ? 'var(--ok)' : 'var(--bad)') + '">' +
+      esc(choice === right ? '✓ ' + t('quiz.correct') : '✕ ' + t('quiz.wrong')) + '</b>' +
+      '<div style="margin-top:8px"><b>' + esc(t('quiz.explain')) + ':</b> ' + I.T(q.explain || '') + '</div>' +
+      '<div class="cite-list" style="margin-top:10px">' + page +
+      '<a class="cite" href="teacher.html?q=' + encodeURIComponent(qs('.q-text').textContent.trim()) + '">🤖 ' + esc(t('quiz.ask')) + '</a>' +
+      '<a class="cite" href="learn.html#' + it.lesson.id + '">📘 ' + esc(I.truncate(I.pick(it.lesson.title), 34)) + '</a>' +
       '</div></div>';
+    qs('#next').disabled = false;
+    qs('#next').focus();
   }
 
-  window.IPLQuiz = { start: start, menu: menu, state: S, answer: answer, next: next, prepare: prepare };
+  /* ------------------------------------------------------------- result */
+  function result() {
+    const total = run.list.length;
+    const pct = Math.round((run.right / total) * 100);
+    const saved = I.saveQuizResult(run.id, run.right, total, run.wrong.map(function (w) { return w.q; }));
+    qs('#run-wrap').hidden = true;
+    qs('#result-wrap').hidden = false;
+    const msg = pct >= 90 ? t('quiz.perfect') : (pct >= 60 ? t('quiz.good') : t('quiz.keep'));
+    qs('#result-wrap').innerHTML =
+      '<div class="q-card card">' +
+      '<div class="result-hero"><div class="result-ring" style="--p:' + pct + '"><i>' + run.right + '/' + total + '</i></div>' +
+      '<h2 style="margin:0">' + pct + '%</h2>' +
+      '<div class="muted">' + esc(msg) + '</div>' +
+      (saved.better ? '<div class="pill ok" style="margin-top:10px">★ ' + esc(t('quiz.best')) + ' ' + run.right + '/' + total + '</div>' : '') +
+      '<div class="pill gold" style="margin-top:10px">+' + saved.gained + ' XP</div>' +
+      '</div>' +
+      '<div class="row" style="justify-content:center;margin-bottom:18px">' +
+      '<button class="btn primary" id="again">↻ ' + esc(t('quiz.again')) + '</button>' +
+      '<a class="btn" href="dashboard.html">🏠 ' + esc(t('nav.dashboard')) + '</a>' +
+      '<a class="btn gold" href="teacher.html">🤖 ' + esc(t('nav.teacher')) + '</a>' +
+      '</div>' +
+      (run.wrong.length ? '<h3>' + esc(t('quiz.review')) + '</h3>' + run.wrong.map(function (w) {
+        const L = I.state.lang;
+        const opts = (w.q.options && (w.q.options[L] || []) ) || [];
+        return '<div class="card" style="margin-bottom:12px">' +
+          '<b>' + esc(I.pick(w.lesson.title)) + '</b>' +
+          '<div style="margin:8px 0">' + I.T(w.q.q) + '</div>' +
+          '<div class="notice ok" style="margin:0">✓ ' + esc(opts[w.q.answer] || '') + '</div>' +
+          '<div class="small muted" style="margin-top:8px">' + I.T(w.q.explain || '') + '</div>' +
+          (w.q.page ? '<div class="cite-list" style="margin-top:8px"><a class="cite" href="library.html#textbook=' + w.q.page + '">📖 p.' + w.q.page + '</a>' +
+            '<a class="cite" href="learn.html#' + w.lesson.id + '">📘 ' + esc(t('learn.title')) + '</a></div>' : '') +
+          '</div>';
+      }).join('') : '') +
+      '</div>';
+    qs('#again').addEventListener('click', function () { start(run.id); });
+    I.addXP(6);
+  }
 
+  function backToSetup() {
+    qs('#run-wrap').hidden = true;
+    qs('#result-wrap').hidden = true;
+    qs('#setup-wrap').hidden = false;
+    setup();
+  }
+
+  /* ------------------------------------------------------------- init */
   document.addEventListener('DOMContentLoaded', function () {
+    if (!I.guard()) return;
     I.renderChrome('quiz.html');
-    const hash = location.hash.slice(1);
-    if (hash.indexOf('lesson=') === 0) start('lesson', hash.slice(7));
-    else if (hash.indexOf('chapter=') === 0) start('chapter', hash.slice(8));
-    else menu();
+    setup();
+    qs('#qsearch').addEventListener('input', setup);
+    const m = location.hash.match(/(?:#|&)(lesson|chapter)=([^&]+)/);
+    if (m) {
+      const id = m[1] === 'lesson' ? 'ls:' + m[2] : 'ch:' + m[2];
+      setTimeout(function () { start(id); }, 120);
+    }
     document.addEventListener('keydown', function (e) {
-      if (!S.items.length) return;
-      if (e.key >= '1' && e.key <= '4') {
-        const b = I.qsa('#opts .option')[parseInt(e.key, 10) - 1];
+      if (qs('#run-wrap').hidden) return;
+      if (/^[1-4]$/.test(e.key)) {
+        const b = I.qsa('#opts .option')[+e.key - 1];
         if (b && !b.disabled) b.click();
       } else if (e.key === 'Enter') {
-        const n = I.qs('#next-btn'); if (n) n.click();
+        const n = qs('#next');
+        if (n && !n.disabled) n.click();
       }
     });
-    I.commandPalette(D.lessons.filter(function (l) { return l.quiz.length; }).map(function (l) {
-      return { kind: 'quiz', text: I.pick(l.title), href: 'quiz.html#lesson=' + l.id };
-    }));
   });
 })();

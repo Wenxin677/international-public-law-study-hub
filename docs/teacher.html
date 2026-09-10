@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Quiz · RoboCL</title>
+<title>RoboCL · AI Teacher</title>
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,38 +22,39 @@
 <div id="splash"><div class="slogo"><img src="assets/img/logo.png" alt="RoboCL"><span class="ring"></span></div><div class="lbl">RoboCL</div></div>
 <header class="topbar" id="topbar"></header>
 
-<main>
-  <div class="wrap">
-    <div class="page-head">
-      <h1 data-t="quiz.title"></h1>
-      <p class="sub" data-t="quiz.sub"></p>
-    </div>
+<main style="padding:0;display:flex;flex-direction:column">
+  <div class="chat-shell">
+    <aside class="chat-side" id="chat-side"></aside>
 
-    <div id="setup-wrap">
-      <div class="field" style="max-width:420px">
-        <input class="input" id="qsearch" type="search" data-t-ph="common.search">
-      </div>
-      <h2 style="font-size:1.1rem" data-t="quiz.choose"></h2>
-      <div id="setup"></div>
-      <div class="small faint" style="margin-top:14px">
-        ⌨ <span class="km-only">ចុច ១–៤ ដើម្បីជ្រើសចម្លើយ និង Enter សម្រាប់សំណួរបន្ទាប់</span>
-        <span class="en-only">Press 1–4 to answer and Enter for the next question</span>
-      </div>
-    </div>
+    <section class="chat-main">
+      <div class="chat-scroll" id="chat-scroll"><div class="thread" id="thread"></div></div>
 
-    <div id="run-wrap" hidden></div>
-    <div id="result-wrap" hidden></div>
+      <div class="composer-wrap">
+        <div class="composer">
+          <div class="suggest-row" id="suggest"></div>
+          <div class="composer-box">
+            <textarea id="chat-text" rows="1" data-t-ph="teacher.placeholder" aria-label="question"></textarea>
+            <button class="send" id="send-btn" data-t-title="teacher.send" aria-label="send">➤</button>
+          </div>
+          <div class="composer-hint">
+            <button class="icon-btn chat-side-toggle" id="side-toggle" aria-label="chats">☰</button>
+            <button class="btn sm ghost" id="clear-btn">🧹 <span data-t="teacher.clear"></span></button>
+            <span class="spacer"></span>
+            <span>Enter ⏎ · Shift+Enter ↵</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </main>
 
-<footer class="site" id="footer"></footer>
-
 <script src="data/lessons.js" defer></script>
+<script src="data/corpus.js" defer></script>
 <script src="assets/js/search.js" defer></script>
 <script src="data/config.js" defer></script>
 <script src="assets/js/core.js" defer></script>
 <script src="assets/js/auth.js" defer></script>
 <script src="assets/js/data.js" defer></script>
-<script src="assets/js/quiz.js" defer></script>
+<script src="assets/js/teacher.js" defer></script>
 </body>
 </html>

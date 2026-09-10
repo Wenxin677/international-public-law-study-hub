@@ -1,97 +1,125 @@
-# មជ្ឈមណ្ឌលសិក្សា ច្បាប់សាធារណៈអន្តរជាតិ · Public International Law Study Hub
+# RoboCL — Public International Law Study Hub
 
-A bilingual **Khmer / English** study web app for public international law, built from three sources:
+**Live site:** https://wenxin677.github.io/international-public-law-study-hub/
+**Built by Sok Panha, with AI.**
 
-| # | Source | Language | What it is |
-|---|--------|----------|------------|
-| 1 | **ច្បាប់សាធារណៈអន្តរជាតិ** — *International Public Law*, ឡាយ រត្តនា (Lay Rottana), 2021 | Khmer | 193-page textbook: the international community, states, sources of international law, the use of force, treaties, conventions, the 1991 Paris Peace Agreements |
-| 2 | **Law on the Establishment of the Extraordinary Chambers** (ECCC Law, as amended 27 Oct 2004) | English | Legal basis of the Khmer Rouge tribunal |
-| 3 | **Paris Convention for the Protection of Industrial Property** (WIPO, 1883 as revised) | English | National treatment, priority, patents, marks, the Union |
+A bilingual **Khmer / English** study app for public international law, made from three
+source documents and one AI teacher that never invents an answer.
 
-Everything runs **in the browser**. No server, no build step, no account, no tracking. Progress, notes and any API key stay in `localStorage`.
+| # | Source | Language | Pages |
+|---|---|---|---|
+| 1 | ច្បាប់សាធារណៈអន្តរជាតិ — ឡាយ រត្តនា (2021) | Khmer | 193 |
+| 2 | Law on the Establishment of the Extraordinary Chambers (ECCC Law, as amended 27 Oct 2004) | English | 20 |
+| 3 | Paris Convention for the Protection of Industrial Property (WIPO, 1883/1979) | English | 20 |
+
+Everything inside the app — 10 chapters, 33 lessons, 238 quiz questions, 193 glossary terms
+and 624 searchable passages — is derived from those documents only.
 
 ---
 
-## ✨ What is in the app
+## What is in it
 
 | Page | What it does |
-|------|--------------|
-| `index.html` | Landing page: stats, chapter strip, XP / rank / streak progress |
-| `learn.html` | 10 chapters → 33 lessons with **objectives, key points, verbatim quotes (page-cited), flashcard terms and per-lesson notes** |
-| `quiz.html` | 238 questions: per-lesson, per-chapter and mixed-10 runs. Instant feedback, explanation, source page, score ring, review of wrong answers, best-score memory, keyboard shortcuts (1–4, Enter) |
-| `chat.html` | **Ask the book** — a grounded assistant: BM25 retrieval over the whole corpus with Khmer-aware character n-grams (Khmer has no word spaces), English↔Khmer bridging through the app's own glossary, citation chips, “show source text”, and an optional plug-in-your-own-API-key mode for paraphrased / translated answers |
-| `glossary.html` | 193 legal terms: Khmer ↔ English, definitions, chapter + page, table or flashcard mode |
-| `about.html` | The sources, the method, how to cite, disclaimer |
+|---|---|
+| `index.html` | **Homepage / tutorial** — what the site is, the five study tools, four steps to start, FAQ, and the sources. Public (no account needed). |
+| `signin.html` | **Sign in / create account** — username + password only. |
+| `dashboard.html` | **Dashboard** — progress ring, streak, XP and rank, best quiz scores, continue-where-you-stopped, all 10 chapters, your notes. |
+| `learn.html` | **Lessons** — chapter rail + lesson with objectives, key points, verbatim quotes (with page numbers), term flashcards, your notes, mark-as-studied, print. |
+| `quiz.html` | **Quizzes** — per lesson, per chapter (12 questions) or mixed (10 random), instant explanations, page references, review of your mistakes, best-score memory. Keys `1–4` / `Enter`. |
+| `teacher.html` | **RoboCL, the AI teacher** — a Claude-style chat. Shows its work ("reading the question → searching the book → comparing passages → building the answer → checking pages"), streams the answer, and always cites the page. |
+| `library.html` | **Textbook & sources** — read the textbook page by page, open the reference PDFs in an embedded viewer, see real page samples. |
+| `glossary.html` | **Glossary** — 193 Khmer–English legal terms, table or flashcards. |
+| `about.html` | **About / credits** — who built it, how, and the rights note. |
+| `admin.html` | **User data** (owner) — the accounts and sign-in records on this device, with CSV / JSON export. |
 
-Extras: Khmer / English / **both** language modes, dark & light themes, `Ctrl/⌘+K` command palette, printable lesson sheets, offline-friendly (no network calls unless you add an API key).
+RoboCL answers are **retrieval-grounded**: the engine finds the passages, then composes an
+answer from quoted text, the authored key points and the term definitions. When the sources do
+not cover a question it says so instead of guessing.
 
-## 🚀 Run it
+---
 
-Open `index.html` in a browser — that is all. To serve it locally:
+## Accounts
+
+* Sign-up needs **only a username and a password** — no email, no payment, no personal data.
+* The password is never stored. The browser derives a **PBKDF2-SHA256 hash (120 000 rounds,
+  random salt)** with `crypto.subtle` and keeps only that. Where `crypto.subtle` is unavailable
+  (opening the files directly from disk in some browsers) it falls back to iterated SHA-256.
+* Every app page is behind `IPL.guard()`: without a session you are sent to `signin.html`.
+* Sign-up / sign-in / sign-in-failure / sign-out events are recorded locally so the owner can
+  see who used the site. `admin.html` (code `panha2026`, change it in `docs/data/config.js`)
+  lists them and exports CSV or JSON.
+* **Collecting this from every visitor's device needs a database** — a static site has nowhere
+  to put it. `docs/data/config.js` has a ready-made Supabase slot: create a free project, run
+  [`tools/supabase.sql`](tools/supabase.sql), paste the URL + anon key, and sign-ups/sign-ins
+  from every device land in a table only you can read (the shipped key can insert, not select).
+  Only the username, the event and the device are sent — never the password or its hash.
+
+---
+
+## Sources, rights and honesty
+
+* The **code** is MIT (see `LICENSE`).
+* The **texts are not ours**. They are quoted with page numbers for study, credited to their
+  authors, and `NOTICE.md` invites a takedown request from any rights holder.
+* The textbook ships as a full-text index (the owner's choice). To publish a reduced
+  quotes-only build instead: `python tools/build_site_data.py --quotes-only`.
+* The textbook PDF itself is **not** published; the Library reads the text recovered from it.
+  The two reference documents are public legal texts and are included for the PDF viewer.
+
+---
+
+## Repository layout
+
+```
+docs/                     the published site (GitHub Pages, main → /docs)
+  index.html … admin.html the ten pages
+  assets/css/style.css    design system (dark/light, animations, mobile)
+  assets/js/              core · auth · data · search · teacher · learn · quiz · glossary · library · home · landing · signin · admin
+  assets/img/             RoboCL logo set + look-inside page samples
+  data/lessons.js         10 chapters, 33 lessons, quizzes, terms  (generated)
+  data/corpus.js          624 passages for retrieval                (generated)
+  data/library.js         245 pages of source text for the reader   (generated)
+  data/config.js          owner settings: admin code, optional Supabase cloud
+  library/*.pdf           the two public reference documents
+content/                  authored lesson JSON (the editorial source)
+tools/                    the pipeline that builds everything above
+tools/dev/                browser self-test + responsive audit harnesses
+```
+
+## Rebuilding
 
 ```bash
-cd docs && python -m http.server 8000     # then http://localhost:8000
+python tools/build_corpus.py        # chapter text -> retrieval corpus
+python tools/build_library.py       # per-page reading data + look-inside images
+python tools/build_site_data.py     # merge content/ -> docs/data/*.js, verify every quote
+python tools/verify_site.py         # links, i18n coverage, data consistency, guards
 ```
 
-## 🧠 How the Khmer textbook text was recovered
+`tools/verify_site.py` fails if any internal link is broken, if a translation key is missing
+from either language, if the landing-page numbers drift from the built data, or if an app page
+stops guarding its content.
 
-The textbook PDF was produced with MS Word 2000 and a legacy KhmerOS font. Its embedded
-`ToUnicode` maps are corrupt, so every normal PDF extractor returns shifted, garbled Khmer
-(`សេចក្តី` → `សេចកតី`, `ព្រឹត្តិ` → `្រទឹស្តី`, …).
+## Testing the real pages
 
-`tools/` contains the recovery pipeline actually used here:
-
-1. **`recover.py`** — the embedded font subsets are copies of the KhmerOS fonts that ship with
-   Windows and keep the original glyph numbering (`Identity-H` + `CIDToGIDMap/Identity`).
-   Glyph outlines are matched against the installed `KhmerOS_siemreap.ttf` / `KhmerOS_muollight.ttf`
-   to recover the exact Unicode for every glyph — including legacy ligature forms such as
-   `.a` (base + ា) and `.au` (base + ៅ) — and then `khmer_order.py` rebuilds Unicode **logical order**
-   from the display order the glyphs were laid out in.
-2. **`khmer_order.py`** — display → logical reordering: pre-base vowels (េ ែ ៃ), the ╞ro╡ subscript
-   written before its base, split vowels (េ+ា → ោ, េ+ី → ើ, …), vowel signs typed before subscripts.
-3. **`decode_all.py`**, **`build_corpus.py`** — decode all 205 PDF pages, split the book into
-   chapter files and build the searchable corpus.
-4. **`build_site_data.py`** — merge the lesson JSON in `content/` into `docs/data/` and, crucially,
-   **verify every quote verbatim against the decoded source** (currently 128/128) so no lesson text
-   is invented.
-
-Reproducing it needs `pymupdf`, `fonttools`, the KhmerOS fonts installed on Windows, and the source PDFs.
-
-## 📁 Layout
-
-```
-docs/                     the published app (GitHub Pages: main /docs) (static, no build step)
-  index.html learn.html quiz.html chat.html glossary.html about.html
-  assets/css/style.css    design system
-  assets/js/              core (i18n/progress), search (BM25), data, per-page scripts
-  data/corpus.js          searchable passages from all three sources
-  data/lessons.js         10 chapters · 33 lessons · 238 questions · 193 terms
-tools/                    the text-recovery + build pipeline (Python / Node)
-content/                  the lesson content sources (JSON)
-```
-
-## 🤝 Contributing / updating content
-
-Lessons live in `content/*.json` following `content/_TEMPLATE.json`. After editing:
+`tools/dev/_selftest.html` and `tools/dev/_audit.html` drive the actual pages in a browser:
 
 ```bash
-python tools/build_site_data.py     # merges content → docs/data + verifies quotes
-node tools/search_test.js "your question"    # checks the chatbot retrieval
+cp tools/dev/*.html docs/            # they must be served from docs/ to be same-origin
+python -m http.server 8099 --bind 127.0.0.1   # from docs/
+# open http://127.0.0.1:8099/_selftest.html   -> 69 flow checks (auth, lessons, quiz, RoboCL, library, admin, EN/KM)
+# open http://127.0.0.1:8099/_audit.html      -> horizontal-overflow audit at 360 / 390 / 768 px
 ```
 
-Every quote must be a verbatim substring of the decoded source, otherwise the build reports it.
+Last run: **69/69 checks passed**, no horizontal overflow on any page at 360 px.
 
-## ⚖️ Licence & attribution
+## Method note
 
-* **Code** (HTML/CSS/JS/Python in this repository): MIT — see `LICENSE`.
-* **Quoted texts**: they are **not** MIT-licensed. The Khmer textbook remains the property of
-  its author, ឡាយ រត្តនា (2021); the ECCC Law and the Paris Convention are public legal
-  instruments (WIPO / UN). Quotations are included, with page references, for educational study.
-  See `NOTICE.md` — and if you are a rights holder and want something removed, open an issue.
-* This is a **study aid, not legal advice**.
+The Khmer PDF's text layer is corrupt (a Word 2000 font whose ToUnicode map points at the wrong
+glyphs), so extractors return scrambled text. `tools/recover.py` recovers it exactly by matching
+each embedded glyph outline against the KhmerOS fonts installed on the machine, then
+`tools/khmer_order.py` rebuilds Khmer logical order from the display order. Every quote in the
+app is checked to be a verbatim substring of that recovered text — 128/128 verified.
 
-## 🙏 Credits
+---
 
-Built as a study tool for Cambodian law students. Fonts: Kantumruy Pro, Inter, Fraunces (Google Fonts).
-Text recovery, lesson structure, quizzes and the assistant were generated from the three sources above —
-every claim in the app carries the page it came from.
+Study tool only — not legal advice. Questions: open an issue on the repository.

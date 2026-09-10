@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sign in · RoboCL</title>
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  try {
+    document.documentElement.dataset.theme = localStorage.getItem('robo.theme') || 'dark';
+    var lg = localStorage.getItem('robo.lang') === 'en' ? 'en' : 'km';
+    document.documentElement.lang = lg; document.documentElement.dataset.bootlang = lg;
+  } catch (e) {}
+</script>
+</head>
+<body data-lang="km">
+<div id="splash"><div class="slogo"><img src="assets/img/logo.png" alt="RoboCL"><span class="ring"></span></div><div class="lbl">RoboCL</div></div>
+<header class="topbar" id="topbar"></header>
+
+<main>
+  <div class="wrap auth-wrap">
+    <div class="auth-side">
+      <img src="assets/img/logo.png" alt="RoboCL">
+      <h2 data-t="app.name"></h2>
+      <p class="muted" data-t="app.tag"></p>
+      <ul>
+        <li><span class="tick">✓</span><span data-t="auth.benefit.1"></span></li>
+        <li><span class="tick">✓</span><span data-t="auth.benefit.2"></span></li>
+        <li><span class="tick">✓</span><span data-t="auth.benefit.3"></span></li>
+        <li><span class="tick">✓</span><span data-t="auth.benefit.4"></span></li>
+      </ul>
+    </div>
+
+    <div class="card auth-card">
+      <div class="tabs" role="tablist">
+        <button data-tab="signin" role="tab" aria-selected="true" data-t="auth.signin"></button>
+        <button data-tab="signup" role="tab" aria-selected="false" data-t="auth.signup"></button>
+      </div>
+      <h2 id="form-title" style="margin-bottom:4px"></h2>
+      <p class="muted small" data-t="auth.only"></p>
+
+      <form id="auth-form" autocomplete="on" style="margin-top:16px">
+        <div class="field">
+          <label for="username" data-t="auth.username"></label>
+          <input class="input" id="username" name="username" type="text" autocomplete="username"
+                 minlength="3" maxlength="20" required data-t-ph="auth.username.ph">
+        </div>
+        <div class="field">
+          <label for="password" data-t="auth.password"></label>
+          <div class="pw-wrap">
+            <input class="input" id="password" name="password" type="password" autocomplete="current-password"
+                   minlength="6" required data-t-ph="auth.password.ph">
+            <button type="button" class="icon-btn eye" id="pw-eye" data-t-title="auth.showpass" aria-label="show">👁</button>
+          </div>
+          <div class="strength" id="pw-strength" hidden><i id="pw-bar"></i></div>
+        </div>
+        <div class="field" id="field-confirm" hidden>
+          <label for="confirm" data-t="auth.confirm"></label>
+          <input class="input" id="confirm" type="password" autocomplete="new-password" minlength="6">
+        </div>
+        <label class="check" style="margin-bottom:14px">
+          <input type="checkbox" id="remember" checked><span data-t="auth.remember"></span>
+        </label>
+        <div class="notice bad" id="form-err" hidden></div>
+        <button class="btn primary block" id="submit-btn" type="submit" data-t="auth.signin"></button>
+      </form>
+
+      <div class="auth-alt" id="swap"></div>
+      <div class="small faint center" style="margin-top:12px" data-t="auth.localnote"></div>
+      <div class="small faint center" id="engine-note" style="margin-top:6px"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site" id="footer"></footer>
+
+<script src="data/config.js" defer></script>
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/auth.js" defer></script>
+<script src="assets/js/signin.js" defer></script>
+</body>
+</html>

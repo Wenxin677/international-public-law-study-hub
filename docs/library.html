@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Quiz · RoboCL</title>
+<title>Textbook &amp; sources · RoboCL</title>
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,35 +25,31 @@
 <main>
   <div class="wrap">
     <div class="page-head">
-      <h1 data-t="quiz.title"></h1>
-      <p class="sub" data-t="quiz.sub"></p>
+      <h1 data-t="lib.title"></h1>
+      <p class="sub" data-t="lib.sub"></p>
     </div>
 
-    <div id="setup-wrap">
-      <div class="field" style="max-width:420px">
-        <input class="input" id="qsearch" type="search" data-t-ph="common.search">
-      </div>
-      <h2 style="font-size:1.1rem" data-t="quiz.choose"></h2>
-      <div id="setup"></div>
-      <div class="small faint" style="margin-top:14px">
-        ⌨ <span class="km-only">ចុច ១–៤ ដើម្បីជ្រើសចម្លើយ និង Enter សម្រាប់សំណួរបន្ទាប់</span>
-        <span class="en-only">Press 1–4 to answer and Enter for the next question</span>
-      </div>
-    </div>
+    <div class="lib-shell">
+      <aside>
+        <div class="small faint" style="margin-bottom:8px" data-t="lib.pick"></div>
+        <div class="lib-list" id="lib-list"></div>
+        <div class="card small muted" style="margin-top:12px" data-t="lib.note"></div>
+      </aside>
 
-    <div id="run-wrap" hidden></div>
-    <div id="result-wrap" hidden></div>
+      <section>
+        <div id="lib-head" style="margin-bottom:14px"></div>
+        <div class="viewer" id="viewer"></div>
+      </section>
+    </div>
   </div>
 </main>
 
 <footer class="site" id="footer"></footer>
 
-<script src="data/lessons.js" defer></script>
-<script src="assets/js/search.js" defer></script>
+<script src="data/library.js" defer></script>
 <script src="data/config.js" defer></script>
 <script src="assets/js/core.js" defer></script>
 <script src="assets/js/auth.js" defer></script>
-<script src="assets/js/data.js" defer></script>
-<script src="assets/js/quiz.js" defer></script>
+<script src="assets/js/library.js" defer></script>
 </body>
 </html>

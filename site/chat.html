@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>សួរសៀវភៅ · Ask the book — International Public Law Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;700&family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e8b44a'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='serif'>ច</text></svg>">
+</head>
+<body>
+<header class="topbar" id="topbar"></header>
+<main class="wrap">
+  <div class="chat-shell">
+    <section>
+      <h1 class="km" style="margin:0 0 4px">សួរសៀវភៅ · Ask the book</h1>
+      <p class="muted small km">ចម្លើយទាំងអស់ផ្អែកលើប្រភព ៣ ដែលបានផ្តល់ឱ្យ។ ប្រសិនបើរកមិនឃើញ ប្រព័ន្ធនឹងប្រាប់អ្នកត្រង់ៗ។</p>
+      <div class="kbach" style="margin:14px 0 18px"></div>
+      <div class="chat-log" id="chat-log"></div>
+      <div class="suggest" id="suggest"></div>
+      <div class="chat-input">
+        <textarea id="chat-text" rows="2"></textarea>
+        <button class="btn primary" id="chat-send">ផ្ញើ</button>
+      </div>
+      <div style="margin-top:10px"><button class="btn ghost sm" id="chat-clear"></button></div>
+    </section>
+
+    <aside>
+      <div class="card" style="margin-bottom:16px">
+        <h3 class="km" style="font-size:16px" id="how-title"></h3>
+        <ul class="point-list small" id="how-list"></ul>
+      </div>
+      <div class="card">
+        <h3 class="km" style="font-size:16px" id="api-title"></h3>
+        <p class="small muted km" id="api-help"></p>
+        <label class="small muted">Base URL</label>
+        <input class="search" id="api-base" placeholder="https://api.openai.com/v1" style="margin:6px 0 10px">
+        <label class="small muted">Model</label>
+        <input class="search" id="api-model" placeholder="gpt-4o-mini" style="margin:6px 0 10px">
+        <label class="small muted">API key</label>
+        <input class="search" id="api-key" type="password" placeholder="sk-…" style="margin:6px 0 10px">
+        <button class="btn sm" id="api-save">Save</button>
+      </div>
+    </aside>
+  </div>
+</main>
+<footer class="footer" id="footer"></footer>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="data/corpus.js"></script>
+<script src="data/lessons.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/chat.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const t = window.IPL.t;
+    document.getElementById('chat-send').textContent = t('chat.send');
+    document.getElementById('chat-clear').textContent = t('chat.clear');
+    document.getElementById('chat-text').placeholder = t('chat.placeholder');
+    document.getElementById('how-title').textContent = t('chat.suggest');
+    document.getElementById('api-title').textContent = t('chat.key');
+    document.getElementById('api-help').textContent = t('chat.keyhelp');
+    document.getElementById('how-list').innerHTML =
+      ['<b class="km">1.</b> ' + t('chat.local'),
+       '<b class="km">2.</b> ' + t('chat.evidence'),
+       '<b class="km">3.</b> ' + t('chat.related')].map(function (x) { return '<li>' + x + '</li>'; }).join('');
+    // deep link: chat.html?q=...
+    const q = new URLSearchParams(location.search).get('q');
+    if (q) setTimeout(function () {
+      document.getElementById('chat-text').value = q;
+      document.getElementById('chat-send').click();
+    }, 250);
+  });
+</script>
+</body>
+</html>

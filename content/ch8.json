@@ -1,0 +1,1242 @@
+{
+  "id": "ch8",
+  "num": 8,
+  "title": {
+    "km": "កិច្ចព្រមព្រៀងទីក្រុងប៉ារីស",
+    "en": "The Paris Peace Agreements"
+  },
+  "pages": {
+    "from": 143,
+    "to": 193
+  },
+  "summary": {
+    "km": "ជំពូកនេះពន្យល់អំពីកិច្ចព្រមព្រៀងទីក្រុងប៉ារីស ថ្ងៃទី២៣ ខែតុលា ឆ្នាំ១៩៩១ ដំណាក់កាលអន្តរកាលក្រោមការគ្រប់គ្រងរបស់អ៊ុនតាក់ ការរៀបចំការបោះឆ្នោត សិទ្ធិមនុស្ស និងការអភិវឌ្ឍន៍ដោយចីរភាព ព្រមទាំងខ្លឹមសារនៃកិច្ចព្រមព្រៀងទី១ ទី២ និងទី៣។",
+    "en": "This chapter explains the Paris Peace Agreements of 23 October 1991, the UNTAC-supervised transitional period, the organization of the elections, human rights and sustainable development, and the content of Agreements 1, 2 and 3."
+  },
+  "lessons": [
+    {
+      "id": "ch8-l1",
+      "title": {
+        "km": "កិច្ចព្រមព្រៀងទីក្រុងប៉ារីស និងប្រតិបត្តិការរក្សាសន្តិភាព",
+        "en": "The Paris Peace Agreements and Peacekeeping Operations"
+      },
+      "pages": {
+        "from": 143,
+        "to": 148
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អំពីប្រតិបត្តិការរក្សាសន្តិភាពរបស់ អ.ស.ប និងលក្ខខណ្ឌនៃការយល់ព្រមពីរដ្ឋម្ចាស់ផ្ទះ",
+          "ប្រៀបធៀបតួនាទី៤ គឺ ការពង្រឹងសន្តិភាព ការបង្កើតសន្តិភាព ការថែរក្សាសន្តិភាព និងការកសាងក្រោយជម្លោះ",
+          "រាយយន្តការដោះស្រាយជម្លោះដោយសន្តិវិធី រួមមាន ការចរចា ការសុីសួរ សន្ធាន ការបង្រួបបង្រួម និងមជ្ឈត្តកម្ម",
+          "ពន្យល់ពីការប្រទាញប្រទង់អាសនៈកម្ពុជានៅ អ.ស.ប និងភារកិច្ចរបស់អ៊ុនតាក់"
+        ],
+        "en": [
+          "Explain UN peacekeeping operations and the requirement of host-state consent",
+          "Compare the four roles of peace enforcement, peacemaking, peacekeeping and post-conflict peacebuilding",
+          "List the mechanisms for the peaceful settlement of disputes: negotiation, inquiry, good offices, conciliation and arbitration",
+          "Explain Cambodia's struggle for its UN seat and the mandate of UNTAC"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "ជំពូកទី៦ នៃធម្មនុញ្ញ អ.ស.ប និយាយអំពីដំណោះស្រាយដោយសន្តិវិធី រីឯជំពូកទី៧ និយាយអំពីវិធានការក្តៅ ដូចជាការប្រើកម្លាំង និងការដាក់ទណ្ឌកម្ម ដូច្នេះគេចាត់ប្រតិបត្តិការថែរក្សាសន្តិភាពថាជា «ជំពូកទី៩កន្លះ»។",
+          "កងកម្លាំងថែរក្សាសន្តិភាពអាចឈានជើងចូលប្រទេសមួយបាន លុះត្រាតែម្ចាស់ផ្ទះយល់ព្រម ហើយម្ចាស់ផ្ទះក៏អាចទាមទារឱ្យពួកគេចាកចេញ ឬបដិសេធមិនឱ្យចូលតែម្តង។",
+          "អ៊ុនតាក់ (អាជ្ញាធរបណ្តោះអាសន្ន អ.ស.ប នៅកម្ពុជា) មានភារកិច្ចត្រួតពិនិត្យការឈប់បាញ់ បញ្ឈប់ជំនួយបរទេស ដកកងកម្លាំងបរទេស ប្រមូលផ្តុំ និងដកហូតអាវុធពីគ្រប់ភាគី ធានាការរំសាយកងទ័ព៧០ភាគរយ ត្រួតពិនិត្យរចនាសម្ព័ន្ធសុីវិលរួមទាំងនគរបាល ធានាការគោរពសិទ្ធិមនុស្ស ធ្វើមាតុភូមិនិវត្តន៍ជនភៀសខ្លួន និងរៀបចំការបោះឆ្នោតដោយសេរី និងយុត្តិធម៌។",
+          "នៅឆ្នាំ១៩៩២ អគ្គលេខាធិការ អ.ស.ប បានដាក់ចេញនូវតួនាទី៤ គឺ ការពង្រឹងសន្តិភាព ការបង្កើតសន្តិភាព ការថែរក្សាសន្តិភាព និងការកសាងក្រោយជម្លោះ ដោយការថែរក្សាសន្តិភាពបច្ចុប្បន្នឈរលើគោលការណ៍បី គឺ ការយល់ព្រមពីភាគី ការមិនលម្អៀង និងការមិនប្រើកម្លាំង លើកលែងករណីការពារខ្លួន។",
+          "យន្តការដោះស្រាយជម្លោះដោយសន្តិវិធីមាន ការចរចា ការសុីសួរ សន្ធាន (ការិយាល័យកណ្តាល) ការបង្រួបបង្រួម និងមជ្ឈត្តកម្ម ដែលជាដំណោះស្រាយដោយចៅក្រមដែលភាគីជ្រើសរើសដោយខ្លួនឯង ផ្អែកលើការគោរពច្បាប់។",
+          "ព្រះរាជាណាចក្រកម្ពុជាប្រជាធិបតេយ្យ (ខ្មែរក្រហម) បន្តកាន់អាសនៈកម្ពុជានៅ អ.ស.ប អស់រយៈពេល១០ឆ្នាំ រហូតដល់ខែតុលា ឆ្នាំ១៩៩១ ដោយមហាសន្និបាតបានបោះឆ្នោតគាំទ្រ៧១សម្លេង ប្រឆាំង៣៥សម្លេង អនុបវាទ៣៤សម្លេង និងអវត្តមាន១២សម្លេង។"
+        ],
+        "en": [
+          "Chapter 6 of the UN Charter deals with peaceful settlement while Chapter 7 deals with coercive measures such as force and sanctions, so peacekeeping is sometimes called 'Chapter 9 and a half'.",
+          "Peacekeeping forces may enter a state only with the consent of the host state, which may also demand that they withdraw or refuse entry outright.",
+          "UNTAC (the UN Transitional Authority in Cambodia) was tasked to supervise the ceasefire, stop foreign aid, withdraw foreign forces, regroup and disarm all parties, ensure 70% demobilization, control civil administration including the police, ensure respect for human rights, repatriate refugees, and organize free and fair elections.",
+          "In 1992 the UN Secretary-General set out four roles: peace enforcement, peacemaking, peacekeeping and post-conflict peacebuilding; current peacekeeping rests on three principles: consent of the parties, impartiality, and non-use of force except in self-defence.",
+          "Peaceful dispute settlement mechanisms include negotiation, inquiry, good offices, conciliation and arbitration, the latter being settlement by judges chosen by the parties on the basis of respect for law.",
+          "Democratic Kampuchea (the Khmer Rouge) kept Cambodia's UN seat for about ten years until October 1991; the General Assembly upheld the credentials committee by 71 votes to 35, with 34 abstentions and 12 absent."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ក្រោយកិច្ចព្រមព្រៀងទីប៉ារីសថ្ងៃទី២៣ខែតុលាឆ្នាំ១៩៩១",
+          "en": "After the Paris Agreement of 23 October 1991",
+          "page": 144
+        },
+        {
+          "km": "អ៊ុនកាត់ដែលមានអាណត្តិពីខែកុម្ភៈឆ្នាំ១៩៩២ ដល់ខែកញ្ញា ឆ្នាំ១៩៩៣បានដាក់",
+          "en": "UNTAC, whose mandate ran from February 1992 to September 1993, deployed",
+          "page": 144
+        },
+        {
+          "km": "•ការថែរក្សាសន្តិភាព៖ ដាក់តាំងពង្រាយកម្លាំង អ.ស.ប.តាមការយល់ព្រមពីគ្រប់ភាគីជម្លោះ",
+          "en": "Peacekeeping: deploying UN forces with the agreement of all the parties to the conflict",
+          "page": 145
+        },
+        {
+          "km": "បន្តអាសនៈឱ្យខ្មែរក្រហមជាតំណាងស្របច្បាប់របស់កម្ពុជារហូតដល់ខែតុលា ឆ្នាំ ១៩៩១",
+          "en": "continued to give the seat to the Khmer Rouge as the legal representative of Cambodia until October 1991",
+          "page": 147
+        }
+      ],
+      "terms": [
+        {
+          "km": "ប្រតិបត្តិការរក្សាសន្តិភាព",
+          "en": "Peacekeeping operation",
+          "defKm": "ការដាក់កងកម្លាំង អ.ស.ប ទៅកាន់ប្រទេសមួយ ដោយមានការយល់ព្រមពីគ្រប់ភាគីជម្លោះ",
+          "defEn": "The deployment of UN forces to a country with the consent of all the parties to the conflict"
+        },
+        {
+          "km": "ការពង្រឹងសន្តិភាព",
+          "en": "Peace enforcement",
+          "defKm": "ការបញ្ជាឱ្យធ្វើសកម្មភាព ទោះមានឬគ្មានការយល់ស្របពីភាគីជម្លោះ ដើម្បីធានាបទឈប់បាញ់",
+          "defEn": "Action ordered whether or not the parties consent, in order to secure a ceasefire"
+        },
+        {
+          "km": "មជ្ឈត្តកម្ម",
+          "en": "Arbitration",
+          "defKm": "ដំណោះស្រាយជម្លោះរវាងរដ្ឋដោយចៅក្រមដែលខ្លួនជ្រើសរើស ផ្អែកតាមការគោរពច្បាប់",
+          "defEn": "Settlement of a dispute between states by judges chosen by the parties and based on respect for law"
+        },
+        {
+          "km": "សន្ធាន",
+          "en": "Good offices",
+          "defKm": "ការផ្តល់ការិយាល័យកណ្តាលរបស់ អ.ស.ប ដល់ភាគីជម្លោះដែលអាចពឹងផ្អែកបាន",
+          "defEn": "The provision of the UN's neutral good offices to parties to a conflict"
+        },
+        {
+          "km": "ការបង្រួបបង្រួម",
+          "en": "Conciliation",
+          "defKm": "យន្តការដែលរួមមានទាំងការស្វែងរកការពិត និងសន្ធាន ដើម្បីស្នើដំណោះស្រាយដល់ភាគីជម្លោះ",
+          "defEn": "A mechanism combining fact-finding and good offices to propose a settlement to the parties"
+        },
+        {
+          "km": "អ៊ុនតាក់",
+          "en": "UNTAC",
+          "defKm": "អាជ្ញាធរបណ្តោះអាសន្ន អ.ស.ប នៅកម្ពុជា ដែលមានផ្នែកយោធា និងផ្នែកសុីវិល",
+          "defEn": "The United Nations Transitional Authority in Cambodia, with military and civil components"
+        },
+        {
+          "km": "ការកសាងក្រោយជម្លោះ",
+          "en": "Post-conflict peacebuilding",
+          "defKm": "ការរៀបចំជំរុញកិច្ចសហប្រតិបត្តិការសង្គម និងសេដ្ឋកិច្ច ដើម្បីកសាងទំនុកចិត្តរវាងភាគីជម្លោះ",
+          "defEn": "Promoting social and economic cooperation to build confidence between parties after conflict"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើតួនាទីណាមួយ មិនមែនជាក្នុងចំណោមតួនាទី៤ ដែលបានដាក់ចេញនៅឆ្នាំ១៩៩២ ស្តីពីរបៀបវារៈសន្តិភាព?",
+            "en": "Which of the following is NOT one of the four roles set out in 1992 on the peace agenda?"
+          },
+          "options": {
+            "km": [
+              "ការពង្រឹងសន្តិភាព",
+              "ការបង្កើតសន្តិភាព",
+              "ការថែរក្សាសន្តិភាព",
+              "ការដាក់ទណ្ឌកម្មសេដ្ឋកិច្ច"
+            ],
+            "en": [
+              "Peace enforcement",
+              "Peacemaking",
+              "Peacekeeping",
+              "Economic sanctions"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "តួនាទី៤ ដែលបានដាក់ចេញនៅឆ្នាំ១៩៩២ គឺ ការពង្រឹងសន្តិភាព ការបង្កើតសន្តិភាព ការថែរក្សាសន្តិភាព និងការកសាងក្រោយជម្លោះ។",
+            "en": "The four roles set out in 1992 are peace enforcement, peacemaking, peacekeeping and post-conflict peacebuilding."
+          },
+          "page": 145
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍បីនៃការថែរក្សាសន្តិភាពបច្ចុប្បន្នមានអ្វីខ្លះ?",
+            "en": "What are the three principles of contemporary peacekeeping?"
+          },
+          "options": {
+            "km": [
+              "ការយល់ព្រមពីភាគី ភាពមិនលម្អៀង និងការមិនប្រើកម្លាំង លើកលែងករណីការពារខ្លួន",
+              "ការប្រើកម្លាំង ការដាក់ទណ្ឌកម្ម និងការគាបសង្កត់",
+              "ការបោះឆ្នោត សិទ្ធិមនុស្ស និងការអភិវឌ្ឍន៍",
+              "ការចរចា មជ្ឈត្តកម្ម និងតុលាការអន្តរជាតិ"
+            ],
+            "en": [
+              "Consent of the parties, impartiality, and non-use of force except in self-defence",
+              "Use of force, sanctions and coercion",
+              "Elections, human rights and development",
+              "Negotiation, arbitration and the International Court of Justice"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការថែរក្សាសន្តិភាពបច្ចុប្បន្នមានគោលការណ៍បី គឺ ការយល់ព្រមពីភាគី ភាពមិនលម្អៀង និងការមិនប្រើកម្លាំង លើកលែងក្នុងករណីការពារខ្លួន។",
+            "en": "The text states three principles: consent of the parties, impartiality, and non-use of force except in self-defence."
+          },
+          "page": 145
+        },
+        {
+          "q": {
+            "km": "តើអាណត្តិរបស់អ៊ុនតាក់ មានរយៈពេលពីពេលណាដល់ពេលណា?",
+            "en": "What was the period of UNTAC's mandate?"
+          },
+          "options": {
+            "km": [
+              "ខែកុម្ភៈ ឆ្នាំ១៩៩២ ដល់ ខែកញ្ញា ឆ្នាំ១៩៩៣",
+              "ខែតុលា ឆ្នាំ១៩៩១ ដល់ ខែកុម្ភៈ ឆ្នាំ១៩៩២",
+              "ខែកញ្ញា ឆ្នាំ១៩៩០ ដល់ ខែតុលា ឆ្នាំ១៩៩១",
+              "ខែមករា ឆ្នាំ១៩៩៣ ដល់ ខែឧសភា ឆ្នាំ១៩៩៤"
+            ],
+            "en": [
+              "February 1992 to September 1993",
+              "October 1991 to February 1992",
+              "September 1990 to October 1991",
+              "January 1993 to May 1994"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា អ៊ុនកាត់មានអាណត្តិពីខែកុម្ភៈឆ្នាំ១៩៩២ ដល់ខែកញ្ញា ឆ្នាំ១៩៩៣។",
+            "en": "The text states that UNTAC's mandate ran from February 1992 to September 1993."
+          },
+          "page": 144
+        },
+        {
+          "q": {
+            "km": "តើអ៊ុនតាក់បានដាក់តាំងពង្រាយកងយោធា និងប៉ូលីសុីវិលចំនួនប៉ុន្មាននាក់?",
+            "en": "How many troops and civil police did UNTAC deploy?"
+          },
+          "options": {
+            "km": [
+              "កងយោធា ១,៦០០ នាក់ និងប៉ូលីស ៣៣៥ នាក់",
+              "កងយោធា ១៦,០០០ នាក់ និងប៉ូលីស ៣,៣៥៩ នាក់",
+              "កងយោធា ៤,៣៧០ នាក់ និងប៉ូលីស ៥០០ នាក់",
+              "កងយោធា ១២០,០០០ នាក់ និងប៉ូលីស ១,០០០ នាក់"
+            ],
+            "en": [
+              "1,600 troops and 335 police",
+              "16,000 troops and 3,359 police",
+              "4,370 troops and 500 police",
+              "120,000 troops and 1,000 police"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា អ៊ុនតាក់បានដាក់តាំងពង្រាយកងយោធាជិក១៦០០០នាក់ និងប៉ូលីសុីវិល៣៣៥៩នាក់។",
+            "en": "The text states that UNTAC deployed 16,000 troops and 3,359 civil police."
+          },
+          "page": 144
+        },
+        {
+          "q": {
+            "km": "តើជំពូកទីប៉ុន្មាននៃធម្មនុញ្ញ អ.ស.ប ដែលនិយាយអំពីការដោះស្រាយជម្លោះដោយសន្តិវិធី?",
+            "en": "Which chapter of the UN Charter deals with the peaceful settlement of disputes?"
+          },
+          "options": {
+            "km": [
+              "ជំពូកទី៦",
+              "ជំពូកទី៧",
+              "ជំពូកទី៩",
+              "ជំពូកទី១១"
+            ],
+            "en": [
+              "Chapter 6",
+              "Chapter 7",
+              "Chapter 9",
+              "Chapter 11"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ជំពូកទី៦ នៃធម្មនុញ្ញនិយាយអំពីដំណោះស្រាយដោយសន្តិវិធី រីឯជំពូកទី៧ និយាយអំពីវិធានការក្តៅ។",
+            "en": "Chapter 6 concerns peaceful settlement, whereas Chapter 7 concerns coercive measures."
+          },
+          "page": 144
+        },
+        {
+          "q": {
+            "km": "តើយន្តការណាដែលដំណោះស្រាយជម្លោះរវាងរដ្ឋដោយចៅក្រមដែលខ្លួនជ្រើសរើស ផ្អែកលើការគោរពច្បាប់?",
+            "en": "Which mechanism settles disputes between states through judges chosen by the parties, based on respect for law?"
+          },
+          "options": {
+            "km": [
+              "ការចរចា",
+              "ការសុីសួរ",
+              "សន្ធាន",
+              "មជ្ឈត្តកម្ម"
+            ],
+            "en": [
+              "Negotiation",
+              "Inquiry",
+              "Good offices",
+              "Arbitration"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថា គោលដៅនៃមជ្ឈត្តកម្មអន្តរជាតិ គឺជាដំណោះស្រាយជម្លោះរវាងរដ្ឋដោយចៅក្រមដែលខ្លួនជ្រើសរើស ផ្អែកតាមការគោរពច្បាប់។",
+            "en": "The text says international arbitration settles disputes between states through judges the parties choose, on the basis of respect for law."
+          },
+          "page": 147
+        },
+        {
+          "q": {
+            "km": "តើកិច្ចព្រមព្រៀងទីក្រុងប៉ារីសត្រូវបានចុះហត្ថលេខានៅថ្ងៃណា?",
+            "en": "On what date were the Paris Peace Agreements signed?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី២៣ ខែតុលា ឆ្នាំ១៩៩១",
+              "ថ្ងៃទី២៣ ខែឧសភា ឆ្នាំ១៩៩១",
+              "ថ្ងៃទី២៨ ខែកុម្ភៈ ឆ្នាំ១៩៩២",
+              "ថ្ងៃទី១៦ ខែតុលា ឆ្នាំ១៩៩១"
+            ],
+            "en": [
+              "23 October 1991",
+              "23 May 1991",
+              "28 February 1992",
+              "16 October 1991"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា អ៊ុនតាក់ត្រូវបានបង្កើតឡើងក្រោយកិច្ចព្រមព្រៀងទីក្រុងប៉ារីស ថ្ងៃទី២៣ ខែតុលា ឆ្នាំ១៩៩១។",
+            "en": "The text links UNTAC's creation to the Paris Agreement of 23 October 1991."
+          },
+          "page": 144
+        },
+        {
+          "q": {
+            "km": "តើមហាសន្និបាត អ.ស.ប បានបោះឆ្នោតគាំទ្រការបន្តទទួលស្គាល់អាសនៈកម្ពុជាដោយលទ្ធផលយ៉ាងណា?",
+            "en": "With what result did the UN General Assembly vote to continue recognizing Cambodia's seat?"
+          },
+          "options": {
+            "km": [
+              "៧១ គាំទ្រ ៣៥ ប្រឆាំង ៣៤ អនុបវាទ",
+              "៣៥ គាំទ្រ ៧១ ប្រឆាំង ៣៤ អនុបវាទ",
+              "៦ គាំទ្រ ៣ ប្រឆាំង",
+              "៥១ គាំទ្រ ១២ ប្រឆាំង"
+            ],
+            "en": [
+              "71 in favour, 35 against, 34 abstentions",
+              "35 in favour, 71 against, 34 abstentions",
+              "6 in favour, 3 against",
+              "51 in favour, 12 against"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា មហាសន្និបាតបានបោះឆ្នោតគាំទ្រ៧១សម្លេង ប្រឆាំង៣៥សម្លេង អនុបវាទ៣៤សម្លេង និងអវត្តមាន១២សម្លេង។",
+            "en": "The text records 71 votes in favour, 35 against, 34 abstentions and 12 absent."
+          },
+          "page": 148
+        }
+      ]
+    },
+    {
+      "id": "ch8-l2",
+      "title": {
+        "km": "កម្ពុជានិងកិច្ចព្រមព្រៀង៖ សិទ្ធិមនុស្ស និងការអភិវឌ្ឍន៍ដោយចីរភាព",
+        "en": "Cambodia and the Agreements: Human Rights and Sustainable Development"
+      },
+      "pages": {
+        "from": 149,
+        "to": 156
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អំពីឬសគល់ប្រវត្តិសាស្ត្រនៃសិទ្ធិមនុស្ស និងព្រឹត្តិការណ៍សំខាន់ៗ ពីឆ្នាំ១២១៥ ដល់ឆ្នាំ១៩៦៦",
+          "ពន្យល់អំពីតួនាទីក្រុមប្រឹក្សាសិទ្ធិមនុស្ស អ.ស.ប នៅក្រុងហ្សឺណែវ និងអនុសញ្ញាអន្តរជាតិដែលកម្ពុជាបានផ្តល់សច្ចាប័ន",
+          "ពន្យល់អំពីអណត្តិ ឧត្តមស្នងការ និងអ្នករាយការណ៍ពិសេសនៅកម្ពុជា",
+          "ប្រៀបធៀបគោលដៅអភិវឌ្ឍសហស្សវត្សរ៍ និងគោលដៅអភិវឌ្ឍដោយចីរភាព"
+        ],
+        "en": [
+          "Explain the historical roots of human rights and the milestones from 1215 to 1966",
+          "Explain the role of the UN Human Rights Council in Geneva and the international conventions Cambodia has ratified",
+          "Explain the OHCHR mandate and the UN Special Rapporteur in Cambodia",
+          "Compare the Millennium Development Goals with the Sustainable Development Goals"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "សិទ្ធិមនុស្សជាសសរស្តម្ភមួយនៃសសរស្តម្ភទាំង៣របស់ធម្មនុញ្ញ អ.ស.ប ដែលសសរស្តម្ភពីរទៀត គឺសន្តិសុខ និងការអភិវឌ្ឍន៍។",
+          "ចំណុចសំខាន់ៗក្នុងប្រវត្តិសិទ្ធិមនុស្សមាន ឆ្នាំ១២១៥ ម៉ាកណា ខាតា ឆ្នាំ១៦២៨ ញត្តិស្តីពីច្បាប់ ឆ្នាំ១៧៧៦ សេចក្តីប្រកាសឯករាជ្យអាមេរិក ឆ្នាំ១៧៨៩ សេចក្តីប្រកាសសិទ្ធិបុរស និងពលរដ្ឋនៅបារាំង ឆ្នាំ១៨៦៤ អនុសញ្ញាហ្សឺណែវលើកទី១ និងឆ្នាំ១៩៤៨ សេចក្តីប្រកាសជាសកលស្តីពីសិទ្ធិមនុស្ស។",
+          "ក្រុមប្រឹក្សាសិទ្ធិមនុស្ស អ.ស.ប មានទីតាំងនៅក្រុងហ្សឺណែវ មានសមាជិកតែ៤៧ប្រទេស ជ្រើសតាំងដោយមហាសន្និបាត ហើយស្តាប់របាយការណ៍ និងអនុម័តសេចក្តីសម្រេចជារៀងរាល់ខែកញ្ញា។",
+          "កម្ពុជាបានផ្តល់សច្ចាប័នលើអនុសញ្ញាជាច្រើន រួមមានអនុសញ្ញាប្រឆាំងនឹងការធ្វើទារុណកម្ម កតិកាសញ្ញាស្តីពីសិទ្ធិសុីវិល និងនយោបាយ អនុសញ្ញាស្តីពីការលុបបំបាត់គ្រប់ទម្រង់នៃការរើសអើងប្រឆាំងស្ត្រី (CEDAW) និងអនុសញ្ញាស្តីពីកុមារ។",
+          "ឧត្តមស្នងការសិទ្ធិមនុស្សនៅកម្ពុជាត្រូវបានបង្កើតតាមសេចក្តីសម្រេចចិត្តលេខ1993/6 នាឆ្នាំ១៩៩៣ ដោយយោងលើកិច្ចព្រមព្រៀងសន្តិភាពក្រុងប៉ារីស ហើយអ្នករាយការណ៍ពិសេសមានអាណត្តិ២ឆ្នាំម្តង។",
+          "គោលដៅអភិវឌ្ឍដោយចីរភាពដែលអនុម័តនៅឆ្នាំ២០១៥ មានគោលដៅធំៗ១៧ ឆ្នាំ២០៣០ មានមុំ៣ គឺកំណើនសេដ្ឋកិច្ច ការរួមសម្បត្តិសង្គម និងការពារបរិស្ថាន ហើយកម្ពុជាបានបន្ថែមគោលដៅទី១៨ គឺវិស័យដោះមីន។"
+        ],
+        "en": [
+          "Human rights are one of the three pillars of the UN Charter, the other two being security and development.",
+          "Key milestones in the history of human rights include Magna Carta (1215), the Petition of Right (1628), the US Declaration of Independence (1776), the French Declaration of the Rights of Man and the Citizen (1789), the First Geneva Convention (1864) and the Universal Declaration of Human Rights (1948).",
+          "The UN Human Rights Council sits in Geneva, has only 47 member states elected by the General Assembly, and hears reports and adopts decisions every September.",
+          "Cambodia has ratified many conventions, including the Convention against Torture, the ICCPR, the Convention on the Elimination of All Forms of Discrimination against Women (CEDAW) and the Convention on the Rights of the Child.",
+          "The OHCHR office in Cambodia was created by Commission decision 1993/6 in 1993, referring to the Paris Peace Agreements, and the Special Rapporteur's mandate is renewed every two years.",
+          "The Sustainable Development Goals adopted in 2015 comprise 17 goals to 2030 with three dimensions — economic growth, social inclusion and environmental protection — and Cambodia added an eighteenth national goal: mine clearance."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "សិទ្ធិមនុស្សជាសសរស្តម្ភមួយនៃសសរស្តម្ភទាំង៣របស់ធម្មនុញ្ញ អ.ស.បដែលសសរស្តម្ភ២",
+          "en": "Human rights are one of the three pillars of the UN Charter; the other two pillars",
+          "page": 150
+        },
+        {
+          "km": "បានបង្កើតឡើងតាមសេចក្តីសម្រេចចិត្តរបស់គណៈកម្មការសិទ្ធិមនុស្សលេខ1993/6 នាឆ្នាំ១៩៩៣",
+          "en": "was created by Human Rights Commission decision No. 1993/6 in 1993",
+          "page": 151
+        },
+        {
+          "km": "អតីតអគ្គលេខាធិការ អ.ស.ប កូហ្វី អាណាន់ ធ្លាប់បាននិយាយថា មិនមានសន្តីភាពទេបើគ្មាន",
+          "en": "The former UN Secretary-General Kofi Annan said that there is no peace without",
+          "page": 152
+        },
+        {
+          "km": "សម្រាប់កម្ពុជាបានរាប់បញ្ចូលវិស័យដោះមីនគោលដៅទី១៨សម្រាប់ថ្នាក់ជាតិរបស់ខ្លួន",
+          "en": "For Cambodia, mine clearance was added as an eighteenth goal at the national level",
+          "page": 154
+        }
+      ],
+      "terms": [
+        {
+          "km": "សេចក្តីប្រកាសជាសកលស្តីពីសិទ្ធិមនុស្ស",
+          "en": "Universal Declaration of Human Rights",
+          "defKm": "សេចក្តីប្រកាសដែលចែងថា កិត្តិយសដែលមានពីកំណើតរបស់មនុស្សជាមូលដ្ឋាននៃសេរីភាព យុត្តិធម៌ និងសន្តិភាពសកល",
+          "defEn": "The declaration holding that the inherent dignity of the human person is the foundation of freedom, justice and peace"
+        },
+        {
+          "km": "ក្រុមប្រឹក្សាសិទ្ធិមនុស្ស",
+          "en": "Human Rights Council",
+          "defKm": "អង្គការអន្តររដ្ឋាភិបាលនៅក្រុងហ្សឺណែវ ដែលមានសមាជិក៤៧ប្រទេស មានអំណាចពិនិត្យ ការពារ និងជំរុញសិទ្ធិមនុស្ស",
+          "defEn": "The intergovernmental body in Geneva with 47 member states that examines, protects and promotes human rights"
+        },
+        {
+          "km": "ឧត្តមស្នងការសម្រាប់សិទ្ធិមនុស្ស",
+          "en": "High Commissioner for Human Rights",
+          "defKm": "ការិយាល័យនៅកម្ពុជាដែលពិនិត្យមើលសិទ្ធិមនុស្ស និងធ្វើការតាមអនុស្សាណៈយោគយល់ជាមួយរាជរដ្ឋាភិបាល",
+          "defEn": "The office in Cambodia that monitors human rights under a memorandum of understanding with the Royal Government"
+        },
+        {
+          "km": "អ្នករាយការណ៍ពិសេស",
+          "en": "Special Rapporteur",
+          "defKm": "អ្នកត្រូវបានតែងតាំងចាប់ពីឆ្នាំ១៩៩៣ ដើម្បីអង្កេតបញ្ហាសិទ្ធិមនុស្ស និងរាយការណ៍ទៅក្រុមប្រឹក្សាសិទ្ធិមនុស្ស",
+          "defEn": "An official appointed from 1993 to investigate human rights issues and report to the Human Rights Council"
+        },
+        {
+          "km": "កតិកាសញ្ញាអន្តរជាតិស្តីពីសិទ្ធិសុីវិលនិងនយោបាយ",
+          "en": "International Covenant on Civil and Political Rights",
+          "defKm": "កតិកាសញ្ញាដែលកម្ពុជាបានផ្តល់សច្ចាប័ន ក្នុងចំណោមកតិកាសញ្ញាអន្តរជាតិពីរដែលអនុម័តនៅឆ្នាំ១៩៦៦",
+          "defEn": "One of the two international covenants adopted in 1966, which Cambodia has ratified"
+        },
+        {
+          "km": "គោលដៅអភិវឌ្ឍសហស្សវត្សរ៍",
+          "en": "Millennium Development Goals",
+          "defKm": "គោលដៅដែល អ.ស.ប ដាក់ចេញដោយផ្តោតលើ៨ចំណុច ដូចជាការលុបបំបាត់ភាពក្រីក្រ ការអត់ឃ្លាន សុខភាព ការអប់រំ និងបញ្ហាបរិស្ថាន",
+          "defEn": "The goals set by the UN with a focus on eight points: poverty, hunger, health, education and the environment"
+        },
+        {
+          "km": "គោលដៅអភិវឌ្ឍដោយចីរភាព",
+          "en": "Sustainable Development Goals",
+          "defKm": "គោលដៅដែលមេដឹកនាំពិភពលោកបានអនុម័តនៅឆ្នាំ២០១៥ មាន១៧គោលដៅ ត្រូវសម្រេចនៅឆ្នាំ២០៣០ ដោយមិនទុកឱ្យនរណាម្នាក់ត្រូវគេទុកចោល",
+          "defEn": "The goals adopted by world leaders in 2015, comprising 17 goals to be achieved by 2030 and leaving no one behind"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើសសរស្តម្ភបីរបស់ធម្មនុញ្ញ អ.ស.ប មានអ្វីខ្លះ?",
+            "en": "What are the three pillars of the UN Charter?"
+          },
+          "options": {
+            "km": [
+              "សិទ្ធិមនុស្ស សន្តិសុខ និងការអភិវឌ្ឍន៍",
+              "សន្តិភាព ពាណិជ្ជកម្ម និងកសិកម្ម",
+              "សិទ្ធិមនុស្ស ការបោះឆ្នោត និងការយោធា",
+              "សន្តិសុខ ពន្ធដារ និងការអប់រំ"
+            ],
+            "en": [
+              "Human rights, security and development",
+              "Peace, trade and agriculture",
+              "Human rights, elections and the military",
+              "Security, taxation and education"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា សិទ្ធិមនុស្សជាសសរស្តម្ភមួយនៃសសរស្តម្ភទាំង៣ រីឯសសរស្តម្ភ២ទៀត គឺសន្តិសុខ និងការអភិវឌ្ឍន៍។",
+            "en": "The text states that human rights is one of the three pillars, the other two being security and development."
+          },
+          "page": 150
+        },
+        {
+          "q": {
+            "km": "តើសេចក្តីប្រកាសជាសកលស្តីពីសិទ្ធិមនុស្សត្រូវបានអនុម័តនៅឆ្នាំណា?",
+            "en": "In which year was the Universal Declaration of Human Rights adopted?"
+          },
+          "options": {
+            "km": [
+              "ឆ្នាំ១៩៤៥",
+              "ឆ្នាំ១៩៤៨",
+              "ឆ្នាំ១៩៦៦",
+              "ឆ្នាំ១៩៧៦"
+            ],
+            "en": [
+              "1945",
+              "1948",
+              "1966",
+              "1976"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "ក្នុងបញ្ជីព្រឹត្តិការណ៍សំខាន់ៗ អត្ថបទចែងថា ឆ្នាំ១៩៤៨ សេចក្តីប្រកាសជាសកលស្តីពីសិទ្ធិមនុស្ស។",
+            "en": "In its list of milestones the text records 1948 for the Universal Declaration of Human Rights."
+          },
+          "page": 150
+        },
+        {
+          "q": {
+            "km": "តើក្រុមប្រឹក្សាសិទ្ធិមនុស្ស អ.ស.ប ដែលមានទីតាំងនៅក្រុងហ្សឺណែវ មានសមាជិកប៉ុន្មានប្រទេស?",
+            "en": "How many states are members of the UN Human Rights Council in Geneva?"
+          },
+          "options": {
+            "km": [
+              "១៥ប្រទេស",
+              "២៧ប្រទេស",
+              "៤៧ប្រទេស",
+              "៥៤ប្រទេស"
+            ],
+            "en": [
+              "15 states",
+              "27 states",
+              "47 states",
+              "54 states"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា ក្រុមប្រឹក្សាសិទ្ធិមនុស្សនេះមានសមាជិកតែ៤៧ប្រទេស តាមការបោះឆ្នោតដោយមហាសន្និបាត។",
+            "en": "The text states the Council has only 47 member states, elected by the General Assembly."
+          },
+          "page": 150
+        },
+        {
+          "q": {
+            "km": "តើឧត្តមស្នងការសម្រាប់សិទ្ធិមនុស្សនៅកម្ពុជាត្រូវបានបង្កើតឡើងតាមសេចក្តីសម្រេចចិត្តលេខណា?",
+            "en": "By which decision was the High Commissioner for Human Rights office in Cambodia created?"
+          },
+          "options": {
+            "km": [
+              "សេចក្តីសម្រេចចិត្តលេខ1993/6 នាឆ្នាំ១៩៩៣",
+              "សេចក្តីសម្រេចចិត្តលេខ៦៦៨ នាឆ្នាំ១៩៩០",
+              "សេចក្តីសម្រេចចិត្តលេខ៤៥.៣ នាឆ្នាំ១៩៩០",
+              "សេចក្តីសម្រេចចិត្តលេខ៧១៧ នាឆ្នាំ១៩៩១"
+            ],
+            "en": [
+              "Decision No. 1993/6 of 1993",
+              "Decision No. 668 of 1990",
+              "Decision No. 45.3 of 1990",
+              "Decision No. 717 of 1991"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ឧត្តមស្នងការត្រូវបានបង្កើតឡើងតាមសេចក្តីសម្រេចចិត្តរបស់គណៈកម្មការសិទ្ធិមនុស្សលេខ1993/6 នាឆ្នាំ១៩៩៣ ដោយយោងលើកិច្ចព្រមព្រៀងសន្តិភាពក្រុងប៉ារីស។",
+            "en": "The text states it was created by Human Rights Commission decision 1993/6 in 1993, referring to the Paris Peace Agreements."
+          },
+          "page": 151
+        },
+        {
+          "q": {
+            "km": "តើប្រទេសណាដែលនាំមុខការលើកសំណើនៅ អ.ស.ប ស្តីពីការដាក់កំហិតលើទោសប្រហារជីវិត?",
+            "en": "Which actor leads the initiative at the UN to restrict the death penalty?"
+          },
+          "options": {
+            "km": [
+              "សហភាពអឺរ៉ុប",
+              "សហរដ្ឋអាមេរិក",
+              "អាស៊ាន",
+              "សហព័ន្ធរុស្ស៊ី"
+            ],
+            "en": [
+              "The European Union",
+              "The United States",
+              "ASEAN",
+              "The Russian Federation"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា អ.ស.ប តែងអនុម័តសេចក្តីសម្រេចប្រចាំឆ្នាំស្នើឱ្យដាក់កំហិតលើទោសប្រហារជីវិត ដែលជាគំនិតផ្តួចផ្តើមនាមុខដោយសហភាពអឺរ៉ុប។",
+            "en": "The text says the annual UN resolution restricting the death penalty is an initiative led by the European Union."
+          },
+          "page": 152
+        },
+        {
+          "q": {
+            "km": "តើលោក កូហ្វី អាណាន់ បានលើកឡើងយ៉ាងណាអំពីទំនាក់ទំនងរវាងសន្តិភាព ការអភិវឌ្ឍន៍ និងសិទ្ធិមនុស្ស?",
+            "en": "What did Kofi Annan say about the relationship between peace, development and human rights?"
+          },
+          "options": {
+            "km": [
+              "មិនមានសន្តិភាពទេបើគ្មានការអភិវឌ្ឍន៍ ហើយគ្មានសិទ្ធិមនុស្សទេបើគ្មានទាំងពីរ",
+              "សន្តិភាពអាចសម្រេចបានដោយការប្រើកម្លាំងយោធាតែម្នាក់ឯង",
+              "ការអភិវឌ្ឍន៍សំខាន់ជាងសិទ្ធិមនុស្ស",
+              "សិទ្ធិមនុស្សមិនពាក់ព័ន្ធនឹងសន្តិភាពទេ"
+            ],
+            "en": [
+              "There is no peace without development, and no human rights without both",
+              "Peace can be achieved by military force alone",
+              "Development matters more than human rights",
+              "Human rights are unrelated to peace"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទដកស្រង់សម្តីរបស់លោក កូហ្វី អាណាន់ ថា មិនមានសន្តីភាពទេបើគ្មានការអភិវឌ្ឍន៍ ហើយគ្មានការអភិវឌ្ឍន៍ទេបើគ្មានសន្តិភាព ហើយបើគ្មានទាំង២នេះ គឺគ្មានសិទ្ធិមនុស្ស។",
+            "en": "The text quotes Kofi Annan: there is no peace without development, no development without peace, and without both there are no human rights."
+          },
+          "page": 152
+        },
+        {
+          "q": {
+            "km": "តើគោលដៅអភិវឌ្ឍដោយចីរភាព ដែលអនុម័តនៅឆ្នាំ២០១៥ មានគោលដៅធំៗចំនួនប៉ុន្មាន?",
+            "en": "How many major goals do the Sustainable Development Goals adopted in 2015 contain?"
+          },
+          "options": {
+            "km": [
+              "៨គោលដៅ",
+              "១៧គោលដៅ",
+              "១៨គោលដៅ",
+              "២០៣០គោលដៅ"
+            ],
+            "en": [
+              "8 goals",
+              "17 goals",
+              "18 goals",
+              "2030 goals"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា គោលដៅអភិវឌ្ឍដោយចីរភាពគ្រោងសម្រេចឱ្យបាននូវគោលដៅធំៗចំនួន១៧ ត្រូវសម្រេចនៅឆ្នាំ២០៣០។",
+            "en": "The text states the SDGs set 17 major goals, to be achieved by 2030."
+          },
+          "page": 153
+        },
+        {
+          "q": {
+            "km": "តើកម្ពុជាបានបន្ថែមវិស័យអ្វីជាគោលដៅទី១៨ សម្រាប់ថ្នាក់ជាតិរបស់ខ្លួន?",
+            "en": "Which sector did Cambodia add as its eighteenth national goal?"
+          },
+          "options": {
+            "km": [
+              "វិស័យដោះមីន",
+              "វិស័យអប់រំដោយគុណភាព",
+              "សមភាពហ្សេនឌ័រ",
+              "ជីវិតក្នុងទឹក"
+            ],
+            "en": [
+              "Mine clearance",
+              "Quality education",
+              "Gender equality",
+              "Life below water"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា សម្រាប់កម្ពុជាបានរាប់បញ្ចូលវិស័យដោះមីនគោលដៅទី១៨សម្រាប់ថ្នាក់ជាតិរបស់ខ្លួន។",
+            "en": "The text states Cambodia added mine clearance as goal 18 at the national level."
+          },
+          "page": 154
+        }
+      ]
+    },
+    {
+      "id": "ch8-l3",
+      "title": {
+        "km": "ដំណាក់កាលអន្តរកាល៖ ភារកិច្ចរបស់អ៊ុនតាក់",
+        "en": "The Transitional Period: The Mandate of UNTAC"
+      },
+      "pages": {
+        "from": 157,
+        "to": 174
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អំពីនីតិក្រមរួម និងទំនាក់ទំនងរវាងអ៊ុនតាក់ និង អេសអិនសុី",
+          "ពន្យល់អំពីភារកិច្ចរបស់អ៊ុនតាក់លើវិស័យរដ្ឋបាលសុីវិល និងវិស័យយោធា",
+          "ពន្យល់អំពីដំណើរការបោះឆ្នោត និងសិទ្ធិមនុស្សក្នុងដំណាក់កាលអន្តរកាល",
+          "ពន្យល់អំពីគោលការណ៍សម្រាប់រដ្ឋធម្មនុញ្ញថ្មីរបស់កម្ពុជា"
+        ],
+        "en": [
+          "Explain the overall framework and the relationship between UNTAC and the SNC",
+          "Explain UNTAC's tasks in civil administration and in the military field",
+          "Explain the electoral process and human rights during the transitional period",
+          "Explain the principles for Cambodia's new constitution"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "ស្របតាមមាត្រា៦ អ៊ុនតាក់អនុវត្តអំណាចចាំបាច់ដើម្បីធានាការអនុវត្តកិច្ចព្រមព្រៀង រួមទាំងអំណាចរៀបចំ និងដឹកនាំការបោះឆ្នោត ព្រមទាំងទិដ្ឋភាពរដ្ឋបាលដែលពាក់ព័ន្ធ។ អេសអិនសុីជូនមតិណែនាំដល់អ៊ុនតាក់ បើគ្មានកុងសង់ស៊ុសក្នុងចំណោមសមាជិកទេ ប្រធាន អេសអិនសុី គឺសម្តេចនរោត្តម សីហនុ មានសិទ្ធិសម្រេច ហើយបើសម្តេចមិនអាចសម្រេចបាន សិទ្ធិនោះផ្ទេរទៅតំណាងពិសេសរបស់លោកអគ្គលេខាធិការ អ.ស.ប។",
+          "អង្គការ ស្ថាប័ន និងការិយាល័យរដ្ឋបាលដែលមានតួនាទីក្នុងវិស័យការបរទេស ការពារជាតិ ហិរញ្ញវត្ថុ សន្តិសុខសាធារណៈ និងឃោសនាការ ត្រូវដាក់ក្រោមការត្រួតពិនិត្យដោយផ្ទាល់របស់អ៊ុនតាក់ ដើម្បីធានាអព្យាក្រឹតភាព។",
+          "មុខងារយោធារួមមាន ការពិនិត្យបញ្ជាក់ការដកកងកម្លាំងបរទេស ការតាមដានការឈប់បាញ់ ការបញ្ឈប់ជំនួយបរទេស ការស្វែងរកកន្លែងលាក់អាវុធ ការបោសសំអាតមីន ការប្រមូលផ្តុំ និងដាក់ក្នុងបន្ទាយ និងការរំសាយកងកម្លាំងយ៉ាងតិច៧០ភាគរយ។",
+          "ការបោះឆ្នោតធ្វើឡើងដើម្បីរើសសភាធម្មនុញ្ញដែលមានសមាជិក១២០នាក់ ដោយប្រព័ន្ធតំណាងសមាមាត្រតាមខេត្ត និងដោយសន្លឹកឆ្នោតសំងាត់ ដោយដំណើរការមានរយៈពេលមិនលើសពី៩ខែចាប់ពីផ្តើមចុះបញ្ជីឈ្មោះអ្នកបោះឆ្នោត។",
+          "ការឈប់បាញ់អនុវត្តជាពីរដំណាក់កាល៖ ដំណាក់កាលទី១ ដោយមានការជួយគ្រាំទ្រពីលោកអគ្គលេខាធិការ និងដំណាក់កាលទី២ ត្រូវពិនិត្យតាមដាន និងបញ្ជាក់ដោយអ៊ុនតាក់ ដោយកាលបរិច្ឆេទត្រូវកំណត់យ៉ាងតិច៤សប្តាហ៍មុនពេលចូលជាធរមាន។",
+          "រដ្ឋធម្មនុញ្ញថ្មីត្រូវជាច្បាប់កំពូលរបស់ប្រទេស ត្រូវប្រកាសសិទ្ធិជាមូលដ្ឋាន ត្រូវបង្កើតតុលាការឯករាជ្យ ត្រូវប្រកាសអព្យាក្រឹតភាព និងត្រូវអនុម័តដោយសម្លេងភាគច្រើនពីរភាគបីនៃសមាជិកសភាធម្មនុញ្ញ។"
+        ],
+        "en": [
+          "Under Article 6, UNTAC exercises the powers necessary to ensure implementation of the agreement, including powers relating to the organization and conduct of the election and the related aspects of Cambodia's administration. The SNC advises UNTAC; if there is no consensus among SNC members, its President, Norodom Sihanouk, decides, and if he cannot decide, that right passes to the Special Representative of the UN Secretary-General.",
+          "The bodies, institutions and administrative offices responsible for foreign affairs, national defence, finance, public security and information were placed under UNTAC's direct control to ensure strict neutrality.",
+          "Military functions include verifying the withdrawal of foreign forces, monitoring the ceasefire, stopping foreign aid, locating arms caches, mine clearance, regroupment and cantonment, and demobilizing at least 70% of the forces.",
+          "The election chose a 120-member constituent assembly through a provincial proportional system and a secret ballot; the process could not exceed nine months from the start of voter registration.",
+          "The ceasefire was implemented in two phases: phase one with the support of the UN Secretary-General, and phase two monitored and verified by UNTAC, with the date set at least four weeks in advance.",
+          "The new constitution had to be the supreme law, declare fundamental rights, establish an independent judiciary, proclaim neutrality, and be adopted by a two-thirds majority of the constituent assembly."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ភារកិច្ចរបស់អាជ្ញាធរបណ្តោះអាសន្ន អ.ស.ប នៅកម្ពុជាអ៊ុនតាក់",
+          "en": "The tasks of the UN Transitional Authority in Cambodia, UNTAC",
+          "page": 157
+        },
+        {
+          "km": "ស្របតាមមាត្រាទី ១៦ អ៊ុនតាក់ត្រូវរៀបចំបែបបទទាំងឡាយសម្រាប់៖",
+          "en": "In accordance with Article 16, UNTAC shall take measures for:",
+          "page": 162
+        },
+        {
+          "km": "១.សភាធម្មនុញ្ញដែលមានលើកឡើងនៅក្នុងមាត្រា១២នៃកិច្ចព្រមព្រៀង ត្រូវមានសមាជិក",
+          "en": "1. The constituent assembly referred to in Article 12 of the Agreement shall have members",
+          "page": 170
+        },
+        {
+          "km": "រដ្ឋធម្មនុញ្ញ គឺជាច្បាប់កំពូលរបស់ប្រទេស ។ គេអាចធ្វើការកែប្រែរដ្ឋធម្មនុញ្ញនេះបានលុះ",
+          "en": "The constitution is the supreme law of the country. It may be amended only",
+          "page": 174
+        }
+      ],
+      "terms": [
+        {
+          "km": "ដំណាក់កាលអន្តរកាល",
+          "en": "Transitional period",
+          "defKm": "កាលៈទេសៈដែលចាប់ផ្តើមពីពេលកិច្ចព្រមព្រៀងចូលជាធរមាន និងបញ្ចប់នៅពេលសភាធម្មនុញ្ញអនុម័តរដ្ឋធម្មនុញ្ញ និងក្លាយជាសភានីតិបញ្ញត្តិ",
+          "defEn": "The period running from entry into force of the agreement until the constituent assembly adopts the constitution and becomes the legislature"
+        },
+        {
+          "km": "អេសអិនសុី",
+          "en": "Supreme National Council (SNC)",
+          "defKm": "អង្គការស្របច្បាប់ និងជាប្រភពនៃអំណាចតែមួយគត់ដែលតំណាងតម្កល់អធិបតេយ្យភាព ឯករាជ្យ និងឯកភាពនៃកម្ពុជាក្នុងដំណាក់កាលអន្តរកាល",
+          "defEn": "The legitimate body and sole source of authority representing Cambodia's sovereignty, independence and unity during the transitional period"
+        },
+        {
+          "km": "តំណាងពិសេសនៃលោកអគ្គលេខាធិការ",
+          "en": "Special Representative of the Secretary-General",
+          "defKm": "អ្នកដែលអគ្គលេខាធិការ អ.ស.ប ចាត់តាំងឱ្យបំពេញភារកិច្ចក្នុងនាមរបស់លោកនៅកម្ពុជា",
+          "defEn": "The official appointed by the UN Secretary-General to act on his behalf in Cambodia"
+        },
+        {
+          "km": "ការប្រមូលផ្តុំ និងការដាក់ក្នុងបន្ទាយ",
+          "en": "Regroupment and cantonment",
+          "defEn": "Moving all party forces into designated assembly areas and cantonments under UNTAC supervision",
+          "defKm": "ការនាំកងកម្លាំងទាំងអស់នៃភាគីទៅកាន់តំបន់ប្រមូលផ្តុំ និងបន្ទាយដែលបានកំណត់ ក្រោមការត្រួតពិនិត្យរបស់អ៊ុនតាក់"
+        },
+        {
+          "km": "ការរំសាយកងកម្លាំង",
+          "en": "Demobilization",
+          "defKm": "ការបញ្ចុះកម្លាំងយោធាជាដំណាក់ៗ យ៉ាងតិច៧០ភាគរយ ហើយបើចាំបាច់អ៊ុនតាក់ជួយឱ្យពួកគេចូលក្នុងជីវភាពសុីវិល",
+          "defEn": "The phased reduction of at least 70% of military forces, with UNTAC helping the demobilized enter civilian life"
+        },
+        {
+          "km": "សភាធម្មនុញ្ញ",
+          "en": "Constituent assembly",
+          "defKm": "សភាដែលមានសមាជិក១២០នាក់ ជាប់ឆ្នោតដោយសេរី និងត្រឹមត្រូវ ដើម្បីព្រាង និងអនុម័តរដ្ឋធម្មនុញ្ញថ្មី និងក្លាយជាសភានីតិបញ្ញត្តិ",
+          "defEn": "The 120-member body elected in a free and fair vote to draft and adopt the new constitution and become the legislature"
+        },
+        {
+          "km": "ក្រុមការងារយោធាចម្រុះ",
+          "en": "Joint military working group",
+          "defKm": "ក្រុមដែលដឹកនាំដោយនាយទាហានជាន់ខ្ពស់បំផុតរបស់ អ.ស.ប នៅកម្ពុជា ដើម្បីដោះស្រាយបញ្ហាក្នុងការអនុវត្តការឈប់បាញ់",
+          "defEn": "The group led by the most senior UN military officer in Cambodia to resolve problems in implementing the ceasefire"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើអ្នកណាមានសិទ្ធិសម្រេច បើគ្មានកុងសង់ស៊ុសក្នុងចំណោមសមាជិក អេសអិនសុី ហើយប្រធាន អេសអិនសុី ក៏មិនអាចសម្រេចបាន?",
+            "en": "Who decides if there is no consensus among SNC members and the SNC President cannot decide?"
+          },
+          "options": {
+            "km": [
+              "តំណាងពិសេសរបស់លោកអគ្គលេខាធិការ អ.ស.ប",
+              "ប្រធានក្រុមប្រឹក្សាសន្តិសុខ អ.ស.ប",
+              "រដ្ឋមន្ត្រីការបរទេសនៃភាគីទាំងបួន",
+              "អគ្គលេខាធិការ អ.ស.ប ដោយខ្លួនឯង"
+            ],
+            "en": [
+              "The Special Representative of the UN Secretary-General",
+              "The President of the UN Security Council",
+              "The foreign ministers of the four parties",
+              "The UN Secretary-General personally"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា បើសម្តេចនរោត្តម សីហនុ ប្រធាន អេសអិនសុី មិនអាចសម្រេចបាន សិទ្ធិនៃសេចក្តីសម្រេចនឹងផ្ទេរទៅឱ្យតំណាងពិសេសរបស់លោកអគ្គលេខាធិការ អ.ស.ប។",
+            "en": "The text says that if President Norodom Sihanouk cannot decide, the power of decision passes to the Special Representative of the UN Secretary-General."
+          },
+          "page": 157
+        },
+        {
+          "q": {
+            "km": "តើវិស័យណាខ្លះដែលត្រូវដាក់ក្រោមការត្រួតពិនិត្យដោយផ្ទាល់របស់អ៊ុនតាក់?",
+            "en": "Which sectors were placed under UNTAC's direct control?"
+          },
+          "options": {
+            "km": [
+              "ការបរទេស ការពារជាតិ ហិរញ្ញវត្ថុ សន្តិសុខសាធារណៈ និងឃោសនាការ",
+              "កសិកម្ម ឧស្សាហកម្ម និងពាណិជ្ជកម្ម",
+              "ការអប់រំ សុខាភិបាល និងសាសនា",
+              "យុត្តិធម៌ និងពន្ធដារ"
+            ],
+            "en": [
+              "Foreign affairs, national defence, finance, public security and information",
+              "Agriculture, industry and commerce",
+              "Education, health and religion",
+              "Justice and taxation"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា អង្គការ ស្ថាប័ន និងការិយាល័យរដ្ឋបាលដែលមានតួនាទីក្នុងវិស័យការបរទេស ការពារជាតិ ហិរញ្ញវត្ថុ សន្តិសុខសាធារណៈ និងឃោសនាការ នឹងត្រូវដាក់ឱ្យស្ថិតនៅក្រោមការត្រួតពិនិត្យដោយផ្ទាល់របស់អ៊ុនតាក់។",
+            "en": "The text places those bodies responsible for foreign affairs, national defence, finance, public security and information under UNTAC's direct control."
+          },
+          "page": 158
+        },
+        {
+          "q": {
+            "km": "តើកងកម្លាំងយោធារបស់ភាគីនីមួយៗត្រូវរំសាយយ៉ាងតិចប៉ុន្មានភាគរយ?",
+            "en": "At least what percentage of each party's military forces had to be demobilized?"
+          },
+          "options": {
+            "km": [
+              "៥០ភាគរយ",
+              "៦០ភាគរយ",
+              "៧០ភាគរយ",
+              "៩០ភាគរយ"
+            ],
+            "en": [
+              "50%",
+              "60%",
+              "70%",
+              "90%"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា ភាគីទាំងអស់យល់ព្រមឱ្យដំណើរការជាដំណាក់ និងតុល្យភាព នូវការរំសាយកងកម្លាំងយោធារបស់ខ្លួនយ៉ាងតិច៧០ភាគរយ។",
+            "en": "The text says all parties agreed to the phased and balanced demobilization of at least 70% of their armed forces."
+          },
+          "page": 165
+        },
+        {
+          "q": {
+            "km": "តើសភាធម្មនុញ្ញមានសមាជិកចំនួនប៉ុន្មាននាក់?",
+            "en": "How many members did the constituent assembly have?"
+          },
+          "options": {
+            "km": [
+              "១០០ នាក់",
+              "១២០ នាក់",
+              "១៥០ នាក់",
+              "៥០០ នាក់"
+            ],
+            "en": [
+              "100 members",
+              "120 members",
+              "150 members",
+              "500 members"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា សភាធម្មនុញ្ញត្រូវមានសមាជិកចំនួន១២០នាក់ ហើយក្នុងរយៈពេល៣ខែត្រូវបំពេញភារកិច្ចព្រាង និងអនុម័តរដ្ឋធម្មនុញ្ញថ្មី។",
+            "en": "The text states the assembly was to have 120 members, which within three months had to draft and adopt the new constitution."
+          },
+          "page": 170
+        },
+        {
+          "q": {
+            "km": "តើត្រូវការអ្នកមានឈ្មោះបោះឆ្នោតចំនួនប៉ុន្មាននាក់ ដើម្បីបង្កើតគណបក្សនយោបាយមួយ?",
+            "en": "How many registered voters were needed to form a political party?"
+          },
+          "options": {
+            "km": [
+              "១០០ នាក់",
+              "១,២០០ នាក់",
+              "៥,០០០ នាក់",
+              "១០,០០០ នាក់"
+            ],
+            "en": [
+              "100",
+              "1,200",
+              "5,000",
+              "10,000"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា គេអាចបង្កើតគណបក្សនយោបាយដោយអ្នកដែលមានឈ្មោះបោះឆ្នោតមួយក្រុមមានមនុស្សចំនួន៥០០០នាក់។",
+            "en": "The text states a political party could be formed by a group of 5,000 registered voters."
+          },
+          "page": 171
+        },
+        {
+          "q": {
+            "km": "តើអ៊ុនតាក់មានភារកិច្ចអ្វីខ្លះផ្នែកសិទ្ធិមនុស្ស ស្របតាមមាត្រាទី១៦?",
+            "en": "What were UNTAC's human rights tasks under Article 16?"
+          },
+          "options": {
+            "km": [
+              "កម្មវិធីអប់រំអំពីសិទ្ធិមនុស្ស ការឃ្លាំមើលជាទូទៅ និងការសុីបអង្កេតការប្តឹងតវ៉ា",
+              "ការចាប់ខ្លួនជនល្មើសដោយផ្ទាល់",
+              "ការសម្រេចទោសប្រហារជីវិត",
+              "ការតាក់តែងរដ្ឋធម្មនុញ្ញថ្មីជំនួសសភាធម្មនុញ្ញ"
+            ],
+            "en": [
+              "A human rights education programme, general monitoring, and investigation of complaints",
+              "Directly arresting offenders",
+              "Imposing the death penalty",
+              "Drafting the new constitution instead of the assembly"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ស្របតាមមាត្រាទី១៦ អ៊ុនតាក់ត្រូវរៀបចំបែបបទសម្រាប់ការតាក់តែង និងអនុវត្តកម្មវិធីអប់រំអំពីសិទ្ធិមនុស្ស ការឃ្លាំមើលជាទូទៅ និងការសុីបអង្កេតការប្តឹងតវ៉ា ព្រមទាំងការកែតម្រូវ។",
+            "en": "The text says UNTAC had to arrange for a human rights education programme, general monitoring, and the investigation of complaints with corrective action."
+          },
+          "page": 162
+        },
+        {
+          "q": {
+            "km": "តើរដ្ឋធម្មនុញ្ញថ្មីរបស់កម្ពុជាត្រូវអនុម័តដោយសម្លេងប៉ុន្មាននៃសមាជិកសភាធម្មនុញ្ញ?",
+            "en": "By what majority did the constituent assembly have to adopt the new constitution?"
+          },
+          "options": {
+            "km": [
+              "សម្លេងភាគច្រើនសាមញ្ញ",
+              "សម្លេងពីរភាគបី",
+              "សម្លេងពាក់កណ្តាល",
+              "សម្លេងឯកច្ឆ័ន្ទទាំងអស់"
+            ],
+            "en": [
+              "A simple majority",
+              "A two-thirds majority",
+              "A half",
+              "Unanimity"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា រដ្ឋធម្មនុញ្ញត្រូវអនុម័តដោយសម្លេងភាគច្រើនពីរភាគបី នៃសមាជិតរបស់សភាធម្មនុញ្ញ។",
+            "en": "The text states the constitution had to be adopted by a two-thirds majority of the members of the constituent assembly."
+          },
+          "page": 174
+        }
+      ]
+    },
+    {
+      "id": "ch8-l4",
+      "title": {
+        "km": "កិច្ចព្រមព្រៀងទី១ ទី២ និងទី៣ និងសន្និសីទទីក្រុងប៉ារីស",
+        "en": "Agreements 1, 2 and 3 and the Paris Conference"
+      },
+      "pages": {
+        "from": 175,
+        "to": 193
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អំពីខ្លឹមសារនៃកិច្ចព្រមព្រៀងទី១ ស្តីពីដំណោះស្រាយនយោបាយរួមមួយ នៃជម្លោះកម្ពុជា",
+          "ពន្យល់អំពីកិច្ចព្រមព្រៀងទី២ ស្តីពីអធិបតេយ្យភាព ឯករាជ្យ បូរណភាព អព្យាក្រឹតភាព និងឯកភាពជាតិ",
+          "ពន្យល់អំពីសេចក្តីថ្លែងការណ៍ស្តីពីការស្តារ និងការកសាងប្រទេសកម្ពុជាឡើងវិញ (កិច្ចព្រមព្រៀងទី៣)",
+          "រាយព័ត៌មានសំខាន់ៗនៃសន្និសីទទីក្រុងប៉ារីស និងកិច្ចព្រមព្រៀងចុងក្រោយ"
+        ],
+        "en": [
+          "Explain the content of Agreement 1 on a Comprehensive Political Settlement of the Cambodia Conflict",
+          "Explain Agreement 2 on sovereignty, independence, territorial integrity, neutrality and national unity",
+          "Explain the Declaration on the Rehabilitation and Reconstruction of Cambodia (Agreement 3)",
+          "List key features of the Paris Conference and its Final Act"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "កិច្ចព្រមព្រៀងទី១ មានចំណងជើងថា កិច្ចព្រមព្រៀងស្តីពីដំណោះស្រាយនយោបាយរួមមួយ នៃជម្លោះកម្ពុជា ដោយផ្អែកលើឯកសារក្របខ័ណ្ឌ ថ្ងៃទី២៧ ខែសីហា ឆ្នាំ១៩៩០ ដែលក្រុមប្រឹក្សាសន្តិសុខបានយល់ព្រមជាឯកច្ឆ័ន្ទតាមសេចក្តីសម្រេចចិត្តលេខ៦៦៨ (១៩៩០) ចុះថ្ងៃទី២០ ខែកញ្ញា ឆ្នាំ១៩៩០ និងមហាសន្និបាតតាមសេចក្តីសម្រេចចិត្តលេខ៤៥.៣ ចុះថ្ងៃទី១៥ ខែតុលា ឆ្នាំ១៩៩០។",
+          "កិច្ចព្រមព្រៀងទី១ កត់សម្គាល់ការបង្កើតក្រុមប្រឹក្សាជាតិជាន់ខ្ពស់នៅហ្សាការតា ថ្ងៃទី១០ ខែកញ្ញា ឆ្នាំ១៩៩០ ជាតំណាងតម្កល់អធិបតេយ្យភាព និងឯកភាពជាតិ ហើយស្វាគមន៍ការជ្រើសតាំងសម្តេចនរោត្តម សីហនុ ជាប្រធាន។",
+          "កិច្ចព្រមព្រៀងទី១ ស្នើក្រុមប្រឹក្សាសន្តិសុខ អ.ស.ប ឱ្យបង្កើតអ៊ុនតាក់ UNTAC ដោយមានផ្នែកយោធា និងផ្នែកសុីវិល ក្រោមការទទួលខុសត្រូវផ្ទាល់របស់អគ្គលេខាធិការ អ.ស.ប ហើយស្នើឱ្យចាត់តាំងតំណាងពិសេសម្នាក់។",
+          "កិច្ចព្រមព្រៀងទី២ ស្តីពីអធិបតេយ្យភាព ឯករាជ្យ បូរណភាព ភាពមិនអាចរំលោភបាននៃដែនដី អព្យាក្រឹតភាព និងឯកភាពជាតិ ដោយកម្ពុជាសន្យាថានឹងថែរក្សា និងការពារពួកវា ហើយអព្យាក្រឹតភាពអចិន្ត្រៃយ៍ត្រូវប្រកាស និងចារិកទុកក្នុងរដ្ឋធម្មនុញ្ញ ព្រមទាំងមានសេចក្តីថ្លែងការណ៍ស្តីពីសិទ្ធិមនុស្ស និងការតាមដានស្ថានការណ៍សិទ្ធិមនុស្សនៅកម្ពុជា ដោយអាចចាត់តាំងអ្នករាយការណ៍ពិសេសរាយការណ៍ជារៀងរាល់ឆ្នាំ។",
+          "កិច្ចព្រមព្រៀងទី៣ ជាសេចក្តីថ្លែងការណ៍ស្តីពីការស្តារ និងការកសាងប្រទេសកម្ពុជាឡើងវិញ ដែលការទទួលខុសត្រូវជាសំខាន់ស្ថិតនៅលើប្រជាជន និងរដ្ឋាភិបាលកម្ពុជាដែលបង្កើតឡើងតាមរយៈការបោះឆ្នោតដោយសេរី និងត្រឹមត្រូវ ដោយគ្មានការបង្ខិតបង្ខំពីភាគីខាងក្រៅ ហើយស្នើឱ្យមានគណៈកម្មាធិការអន្តរជាតិស្តីពីការកសាងប្រទេសកម្ពុជាឡើងវិញ (ICORC) ដើម្បីសម្របសម្រួលជំនួយ និងផ្តោតលើស្បៀង សុខភាព ទីលំនៅ ការហ្វឹកហ្វឹន ការអប់រំ និងហេដ្ឋារចនាសម្ព័ន្ធ។",
+          "សន្និសីទទីក្រុងប៉ារីសប្រព្រឹត្តទៅពីរលើក៖ លើកទី១ ពីថ្ងៃទី៣០ ខែកក្កដា ដល់ថ្ងៃទី៣០ ខែសីហា ឆ្នាំ១៩៨៩ និងលើកទី២ ពីថ្ងៃទី២១ ដល់ថ្ងៃទី២៣ ខែតុលា ឆ្នាំ១៩៩១ ដោយមានសហប្រធានពីររូប គឺរដ្ឋមន្ត្រីការបរទេសបារាំង និងឥណ្ឌូណេសុី។"
+        ],
+        "en": [
+          "Agreement 1 is titled the Agreement on a Comprehensive Political Settlement of the Cambodia Conflict, based on the framework document of 27 August 1990 endorsed unanimously by Security Council resolution 668 (1990) of 20 September 1990 and General Assembly resolution 45.3 of 15 October 1990.",
+          "Agreement 1 notes the creation of the Supreme National Council in Jakarta on 10 September 1990 as the representative of Cambodian sovereignty and national unity, and welcomes the election of Norodom Sihanouk as its President.",
+          "Agreement 1 requests the Security Council to establish UNTAC with military and civil components under the direct responsibility of the UN Secretary-General, who is to appoint a Special Representative.",
+          "Agreement 2 concerns sovereignty, independence, territorial integrity, inviolability, neutrality and national unity: Cambodia undertakes to maintain and protect them and its permanent neutrality is to be declared and enshrined in the constitution; it also contains a statement on human rights and provides for continued monitoring of the human rights situation, including the possible appointment of a special rapporteur reporting annually.",
+          "Agreement 3 is the Declaration on the Rehabilitation and Reconstruction of Cambodia: primary responsibility lies with the Cambodian people and the government created through free and fair elections, free of outside coercion, and it proposes an International Committee on the Reconstruction of Cambodia (ICORC) to coordinate aid focusing on food, health, housing, training, education and infrastructure.",
+          "The Paris Conference was held in two sessions: the first from 30 July to 30 August 1989 and the second from 21 to 23 October 1991, chaired by the foreign ministers of France and Indonesia."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "កិច្ចព្រមព្រៀងស្តីពីដំណោះស្រាយនយោបាយរួមមួយ នៃជម្លោះកម្ពុជា",
+          "en": "Agreement on a Comprehensive Political Settlement of the Cambodia Conflict",
+          "page": 175
+        },
+        {
+          "km": "នៅក្នុងទូទាំងដំណាក់កាលអន្តរកាល អេសរិនសុី  SNC ជាតំណាងកម្ពុជានៅក្រៅប្រទេស",
+          "en": "Throughout the transitional period the SNC is the representative of Cambodia abroad",
+          "page": 177
+        },
+        {
+          "km": "កម្ពុជា តាមរយៈឯកសារនេះសន្យាយ៉ាងឧឡារិកថា នឹងថែរក្សា និង ការពារអធិបតេយ្យ",
+          "en": "Cambodia, through this instrument, solemnly undertakes to maintain and protect the sovereignty",
+          "page": 183
+        },
+        {
+          "km": "ទិដៅជាបឋមនៃការកសាងប្រទេសកម្ពុជាឡើងវិញ គឺការរីកចំរើននៃប្រជាជាតិ និង ប្រជា",
+          "en": "The primary objective of the reconstruction of Cambodia is the progress of the nation and of the",
+          "page": 186
+        }
+      ],
+      "terms": [
+        {
+          "km": "ដំណោះស្រាយនយោបាយរួម",
+          "en": "Comprehensive political settlement",
+          "defKm": "ដំណោះស្រាយដែលរួមបញ្ចូលទាំងបញ្ហាយោធា ការបោះឆ្នោត មាតុភូមិនិវត្តន៍ជនភៀសខ្លួន និងគោលការណ៍រដ្ឋធម្មនុញ្ញ",
+          "defEn": "A settlement covering military matters, elections, refugee repatriation and constitutional principles"
+        },
+        {
+          "km": "ឯកសារក្របខ័ណ្ឌ",
+          "en": "Framework document",
+          "defKm": "ឯកសារថ្ងៃទី២៧ ខែសីហា ឆ្នាំ១៩៩០ ដែលភាគីកម្ពុជាព្រមព្រៀងទាំងស្រុង និងធ្វើជាមូលដ្ឋាននៃដំណោះស្រាយ",
+          "defEn": "The document of 27 August 1990 agreed in full by the Cambodian parties and used as the basis of the settlement"
+        },
+        {
+          "km": "អព្យាក្រឹតភាពអចិន្ត្រៃយ៍",
+          "en": "Permanent neutrality",
+          "defKm": "អព្យាក្រឹតភាពរបស់កម្ពុជាដែលត្រូវប្រកាស និងចារិកទុកក្នុងរដ្ឋធម្មនុញ្ញដែលអនុម័តក្រោយការបោះឆ្នោត",
+          "defEn": "Cambodia's neutrality, to be proclaimed and inscribed in the constitution adopted after the election"
+        },
+        {
+          "km": "ការធានាអន្តរជាតិ",
+          "en": "International guarantee",
+          "defKm": "ការសន្យារបស់រដ្ឋហត្ថលេខីឯទៀត ដែលទទួលស្គាល់ និងគោរពអធិបតេយ្យភាព ឯករាជ្យ បូរណភាព និងអព្យាក្រឹតភាពកម្ពុជា",
+          "defEn": "The undertaking of the other signatory states to recognize and respect Cambodia's sovereignty, independence, integrity and neutrality"
+        },
+        {
+          "km": "គណៈកម្មាធិការអន្តរជាតិស្តីពីការកសាងប្រទេសកម្ពុជាឡើងវិញ",
+          "en": "International Committee on the Reconstruction of Cambodia (ICORC)",
+          "defKm": "ស្ថាប័នពិគ្រោះយោបល់ដែលស្នើឱ្យបង្កើតឡើង ដើម្បីសម្របសម្រួល និងតាមដានវិភាគទានសម្រាប់ការកសាងកម្ពុជាឡើងវិញ",
+          "defEn": "The consultative body proposed to coordinate and monitor contributions for the reconstruction of Cambodia"
+        },
+        {
+          "km": "សហប្រធាននៃសន្និសីទ",
+          "en": "Co-Chairs of the Conference",
+          "defKm": "រដ្ឋមន្ត្រីការបរទេសនៃសាធារណរដ្ឋបារាំង និងសាធារណរដ្ឋឥណ្ឌូណេសុី ដែលដឹកនាំសន្និសីទទីក្រុងប៉ារីស",
+          "defEn": "The foreign ministers of France and Indonesia, who chaired the Paris Conference"
+        },
+        {
+          "km": "សេចក្តីថ្លែងការណ៍ស្តីពីការស្តារ និងការកសាងប្រទេសកម្ពុជាឡើងវិញ",
+          "en": "Declaration on the Rehabilitation and Reconstruction of Cambodia",
+          "defKm": "កិច្ចព្រមព្រៀងទី៣ ដែលកំណត់ទិសដៅនៃការកសាងប្រទេសកម្ពុជាឡើងវិញ និងតួនាទីរបស់សហគមន៍អន្តរជាតិ",
+          "defEn": "Agreement 3, setting out the objectives of Cambodia's reconstruction and the role of the international community"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើកិច្ចព្រមព្រៀងទី១ មានចំណងជើងថាយ៉ាងណា?",
+            "en": "What is the title of Agreement 1?"
+          },
+          "options": {
+            "km": [
+              "កិច្ចព្រមព្រៀងស្តីពីដំណោះស្រាយនយោបាយរួមមួយ នៃជម្លោះកម្ពុជា",
+              "សេចក្តីថ្លែងការណ៍ស្តីពីការស្តារ និងការកសាងប្រទេសកម្ពុជាឡើងវិញ",
+              "កិច្ចព្រមព្រៀងស្តីពីអធិបតេយ្យភាព ឯករាជ្យ បូរណភាព និងអព្យាក្រឹតភាពកម្ពុជា",
+              "ឯកសារក្របខ័ណ្ឌថ្ងៃទី២៧ ខែសីហា ឆ្នាំ១៩៩០"
+            ],
+            "en": [
+              "Agreement on a Comprehensive Political Settlement of the Cambodia Conflict",
+              "Declaration on the Rehabilitation and Reconstruction of Cambodia",
+              "Agreement on the sovereignty, independence, integrity and neutrality of Cambodia",
+              "The framework document of 27 August 1990"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "កិច្ចព្រមព្រៀងទី១ មានចំណងជើងថា កិច្ចព្រមព្រៀងស្តីពីដំណោះស្រាយនយោបាយរួមមួយ នៃជម្លោះកម្ពុជា ដែលផ្អែកលើឯកសារក្របខ័ណ្ឌ។",
+            "en": "Agreement 1 is the Agreement on a Comprehensive Political Settlement of the Cambodia Conflict, based on the framework document."
+          },
+          "page": 175
+        },
+        {
+          "q": {
+            "km": "តើសេចក្តីសម្រេចចិត្តរបស់ក្រុមប្រឹក្សាសន្តិសុខលេខណាដែលយល់ព្រមជាឯកច្ឆ័ន្ទលើឯកសារក្របខ័ណ្ឌ?",
+            "en": "Which Security Council resolution unanimously endorsed the framework document?"
+          },
+          "options": {
+            "km": [
+              "លេខ ៦៦៨ (១៩៩០) ចុះថ្ងៃទី២០ កញ្ញា ១៩៩០",
+              "លេខ ៧១៧ (១៩៩១) ចុះថ្ងៃទី១៦ តុលា ១៩៩១",
+              "លេខ ៤៥.៣ ចុះថ្ងៃទី១៥ តុលា ១៩៩០",
+              "លេខ ១៩៩៣/៦ នាឆ្នាំ១៩៩៣"
+            ],
+            "en": [
+              "Resolution 668 (1990) of 20 September 1990",
+              "Resolution 717 (1991) of 16 October 1991",
+              "Resolution 45.3 of 15 October 1990",
+              "Decision 1993/6 of 1993"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ឯកសារក្របខ័ណ្ឌត្រូវបានយល់ព្រមជាឯកច្ឆ័ន្ទដោយក្រុមប្រឹក្សាសន្តិសុខ តាមសេចក្តីសម្រេចចិត្តលេខ៦៦៨ «១៩៩០» ចុះថ្ងៃទី២០ កញ្ញា ១៩៩០។",
+            "en": "The text says the Security Council unanimously endorsed the framework document by resolution 668 (1990) of 20 September 1990."
+          },
+          "page": 176
+        },
+        {
+          "q": {
+            "km": "តើអព្យាក្រឹតភាពអចិន្ត្រៃយ៍របស់កម្ពុជានឹងត្រូវប្រកាស និងចារិកទុកនៅឯណា?",
+            "en": "Where is Cambodia's permanent neutrality to be proclaimed and inscribed?"
+          },
+          "options": {
+            "km": [
+              "ក្នុងរដ្ឋធម្មនុញ្ញកម្ពុជា ដែលនឹងអនុម័តក្រោយការបោះឆ្នោតដោយសេរី និងត្រឹមត្រូវ",
+              "ក្នុងសេចក្តីសម្រេចចិត្តរបស់ក្រុមប្រឹក្សាសន្តិសុខ អ.ស.ប",
+              "ក្នុងកិច្ចព្រមព្រៀងទីក្រុងប៉ារីស តែម្នាក់ឯង",
+              "ក្នុងច្បាប់ស្តីពីរបបមូលដ្ឋាន"
+            ],
+            "en": [
+              "In the Cambodian constitution to be adopted after the free and fair election",
+              "In a UN Security Council decision",
+              "In the Paris Peace Agreements alone",
+              "In legislation on local administration"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា អព្យាក្រឹតភាពអចិន្ត្រៃយ៍របស់កម្ពុជា នឹងត្រូវប្រកាសហើយ និងចារិកទុកនៅក្នុងរដ្ឋធម្មនុញ្ញកម្ពុជា ដែលនឹងត្រូវអនុម័តក្រោយពីការបោះឆ្នោតដោយសេរី និងត្រឹមត្រូវ។",
+            "en": "The text states Cambodia's permanent neutrality will be proclaimed and inscribed in the constitution adopted after the free and fair election."
+          },
+          "page": 183
+        },
+        {
+          "q": {
+            "km": "តើការទទួលខុសត្រូវជាសំខាន់ក្នុងការសម្រេចអំពីសេចក្តីត្រូវការ និងគម្រោងផែនការកសាងប្រទេសកម្ពុជាឡើងវិញ ស្ថិតនៅលើអ្នកណា?",
+            "en": "On whom does the primary responsibility for determining reconstruction needs and plans rest?"
+          },
+          "options": {
+            "km": [
+              "ប្រជាជន និងរដ្ឋាភិបាលកម្ពុជា ដែលត្រូវបង្កើតឡើងតាមរយៈការបោះឆ្នោតដោយសេរី និងត្រឹមត្រូវ",
+              "គណៈកម្មាធិការកាកបាទក្រហមអន្តរជាតិ",
+              "ឧត្តមស្នងការអង្គការសហប្រជាជាតិសម្រាប់ជនភៀសខ្លួន",
+              "ប្រទេសដែលផ្តល់ជំនួយតែប៉ុណ្ណោះ"
+            ],
+            "en": [
+              "The Cambodian people and the government created through the free and fair election",
+              "The International Committee of the Red Cross",
+              "The UN High Commissioner for Refugees",
+              "The donor countries alone"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការទទួលខុសត្រូវជាសំខាន់ត្រូវស្ថិតនៅលើប្រជាជន និងរដ្ឋាភិបាលកម្ពុជា ដែលត្រូវបង្កើតឡើងតាមរយៈការបោះឆ្នោតដោយសេរី និងត្រឹមត្រូវ ដោយមិនត្រូវមានការបង្ខិតបង្ខំពីប្រភពខាងក្រៅ។",
+            "en": "The text says primary responsibility lies with the Cambodian people and the government created through the free and fair election, free of outside coercion."
+          },
+          "page": 187
+        },
+        {
+          "q": {
+            "km": "តើអ្នកណាជាសហប្រធាននៃសន្និសីទទីក្រុងប៉ារីស?",
+            "en": "Who were the co-chairs of the Paris Conference?"
+          },
+          "options": {
+            "km": [
+              "រដ្ឋមន្ត្រីការបរទេសនៃសាធារណរដ្ឋបារាំង និងសាធារណរដ្ឋឥណ្ឌូណេសុី",
+              "អគ្គលេខាធិការ អ.ស.ប និងប្រធានក្រុមប្រឹក្សាសន្តិសុខ",
+              "រដ្ឋមន្ត្រីការបរទេសនៃសហរដ្ឋអាមេរិក និងសហភាពសូវៀត",
+              "ប្រធានក្រុមប្រឹក្សាជាតិជាន់ខ្ពស់ និងអគ្គលេខាធិការ អ.ស.ប"
+            ],
+            "en": [
+              "The foreign ministers of France and Indonesia",
+              "The UN Secretary-General and the President of the Security Council",
+              "The foreign ministers of the United States and the Soviet Union",
+              "The President of the SNC and the UN Secretary-General"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា សហប្រធាននៃសន្និសីទមាន រដ្ឋមន្ត្រីក្រសួងការបរទេសនៃសាធារណរដ្ឋបារាំង និងរដ្ឋមន្ត្រីក្រសួងការបរទេសនៃសាធារណរដ្ឋឥណ្ឌូណេសុី។",
+            "en": "The text gives the co-chairs as the foreign minister of France and the foreign minister of Indonesia."
+          },
+          "page": 189
+        },
+        {
+          "q": {
+            "km": "តើសម័យប្រជុំលើកទីមួយនៃសន្និសីទទីក្រុងប៉ារីសប្រព្រឹត្តទៅនៅពេលណា?",
+            "en": "When was the first session of the Paris Conference held?"
+          },
+          "options": {
+            "km": [
+              "ពីថ្ងៃទី៣០ ខែកក្កដា ដល់ថ្ងៃទី៣០ ខែសីហា ឆ្នាំ១៩៨៩",
+              "ពីថ្ងៃទី២១ ដល់ថ្ងៃទី២៣ ខែតុលា ឆ្នាំ១៩៩១",
+              "ពីថ្ងៃទី១០ ខែកញ្ញា ឆ្នាំ១៩៩០",
+              "ពីថ្ងៃទី២៧ ខែសីហា ឆ្នាំ១៩៩០"
+            ],
+            "en": [
+              "From 30 July to 30 August 1989",
+              "From 21 to 23 October 1991",
+              "From 10 September 1990",
+              "From 27 August 1990"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា សន្និសីទប្រព្រឹត្តទៅដោយមានសម័យប្រជុំពីរលើក លើកទីមួយពីថ្ងៃទី៣០ ខែកក្កដា ដល់ថ្ងៃទី៣០ ខែសីហា ឆ្នាំ១៩៨៩ ហើយលើកទីពីរពីថ្ងៃទី២១ ដល់ថ្ងៃទី២៣ ខែតុលា ឆ្នាំ១៩៩១។",
+            "en": "The text states the conference had two sessions: the first from 30 July to 30 August 1989 and the second from 21 to 23 October 1991."
+          },
+          "page": 189
+        },
+        {
+          "q": {
+            "km": "តើអក្សរកាត់ ICORC សំដៅលើអ្វី?",
+            "en": "What does the abbreviation ICORC refer to?"
+          },
+          "options": {
+            "km": [
+              "គណៈកម្មាធិការអន្តរជាតិស្តីពីការកសាងប្រទេសកម្ពុជាឡើងវិញ",
+              "គណៈកម្មាធិការកាកបាទក្រហមអន្តរជាតិ",
+              "ក្រុមប្រឹក្សាជាតិជាន់ខ្ពស់នៃកម្ពុជា",
+              "អាជ្ញាធរបណ្តោះអាសន្ន អ.ស.ប នៅកម្ពុជា"
+            ],
+            "en": [
+              "The International Committee on the Reconstruction of Cambodia",
+              "The International Committee of the Red Cross",
+              "The Supreme National Council of Cambodia",
+              "The UN Transitional Authority in Cambodia"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា គេត្រូវបង្កើតស្ថាប័នពិគ្រោះយោបល់មួយ ហៅថាគណៈកម្មាធិការអន្តរជាតិ ស្តីពីការកសាងប្រទេសកម្ពុជាឡើងវិញ ICORC។",
+            "en": "The text provides for a consultative body called the International Committee on the Reconstruction of Cambodia, ICORC."
+          },
+          "page": 188
+        }
+      ]
+    }
+  ]
+}

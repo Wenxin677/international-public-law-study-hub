@@ -1,0 +1,603 @@
+{
+  "id": "ch7",
+  "num": 7,
+  "title": { "km": "ប្រវត្តិនៃធម្មនុញ្ញអន្តរជាតិ", "en": "History of International Charters" },
+  "pages": { "from": 129, "to": 142 },
+  "summary": {
+    "km": "ជំពូកនេះនិយាយអំពីប្រវត្តិនៃពាក្យធម្មនុញ្ញដែលកើតចេញពី Magna Carta កតិការសញ្ញាអន្តរជាតិ និងលក្ខណៈវិនិច្ឆ័យនៃអនុស្សារណៈយោគយល់គ្នា រួមមានសុពលភាព ភាគីនៃច្បាប់អន្តរជាតិ និងលំនាំនៃសន្ធិសញ្ញាទ្វេភាគី និងពហុភាគី។",
+    "en": "This chapter traces the origin of the word 'charter' in the Magna Carta, explains international covenants, and sets out the criteria of memoranda of understanding, including validity, the parties to international law, and the models of bilateral and multilateral treaties."
+  },
+  "lessons": [
+    {
+      "id": "ch7-l1",
+      "title": { "km": "៦.ប្រវត្តិនៃធម្មនុញ្ញអន្តរជាតិ និងប្រវត្តិនៃពាក្យធម្មនុញ្ញ", "en": "6. History of International Charters and the Origin of the Word 'Charter'" },
+      "pages": { "from": 129, "to": 129 },
+      "objectives": {
+        "km": [
+          "ពន្យល់ពីប្រភពនៃពាក្យធម្មនុញ្ញ",
+          "រៀបរាប់អំពី Magna Carta ឆ្នាំ ១២១៥",
+          "បញ្ជាក់ពីគោលបំណងនៃ Magna Carta"
+        ],
+        "en": [
+          "Explain the origin of the word 'charter'",
+          "Describe the Magna Carta of 1215",
+          "State the purpose of the Magna Carta"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "ពាក្យធម្មនុញ្ញមានប្រវត្តិចេញមកពីពាក្យ Magna Carta ជាភាសាឡាតាំង ដែលមានន័យថា Great Charter",
+          "Magna Carta ជាឯកសារដែលបានប្រថាប់ត្រាដោយព្រះមហាក្សត្រនៃចក្រភណអង់គ្លេស ព្រះនាម ចន",
+          "Magna Carta ត្រូវបានប្រថាប់ត្រានៅថ្ងៃទី ១៥ ខែមិថុនា ឆ្នាំ ១២១៥",
+          "ឯកសារនេះសម្រាប់ធានានូវសិទ្ធិអំណាច និងអភ័យឯកសិទ្ធិរបស់ព្រះមហាក្សត្រនៅក្នុងប្រទេសអង់គ្លេស",
+          "ឥទ្ធិពលនៃ Magna Carta រីករាលដាលទៅបណ្ដាប្រទេសដែលទទួលឥទ្ធិពលពីទំនៀមទម្លាប់ប្រពៃណីរបស់ប្រទេសអង់គ្លេស"
+        ],
+        "en": [
+          "The word 'charter' comes from Magna Carta, Latin for 'Great Charter'",
+          "Magna Carta is a document sealed by the monarch of the Kingdom of England, named John",
+          "Magna Carta was sealed on 15 June 1215",
+          "The document was intended to guarantee the rights, powers and privileges of the monarch in England",
+          "The influence of Magna Carta spread to the countries influenced by English custom and tradition"
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ពាក្យធម្មនុញ្ញមានប្រវត្តិចេញមកពីពាក្យ ម៉ាណាសាតា",
+          "en": "The word 'charter' has its origin in the word Magna Carta.",
+          "page": 129
+        },
+        {
+          "km": "Magna Carta គឺជាឯកសារដែលបានប្រថាប់ត្រា",
+          "en": "Magna Carta is a document that was sealed",
+          "page": 129
+        },
+        {
+          "km": "ដែលសម្រាប់ធានានូវសិទ្ធិអំណាចនិងអភ័យឯកសិទ្ធិរបស់ព្រះមហាក្សត្រនៅក្នុងប្រទេស",
+          "en": "which serves to guarantee the rights, powers and privileges of the monarch in the country",
+          "page": 129
+        }
+      ],
+      "terms": [
+        {
+          "km": "ធម្មនុញ្ញ",
+          "en": "Charter",
+          "defKm": "ឯកសារដែលត្រូវបានប្រថាប់ត្រា ហើយពាក្យនេះកើតចេញពី Magna Carta ជាភាសាឡាតាំង ដែលមានន័យថា Great Charter",
+          "defEn": "A sealed document; the word derives from Magna Carta, Latin for 'Great Charter'."
+        },
+        {
+          "km": "ម៉ាណាសាតា Magna Carta",
+          "en": "Magna Carta",
+          "defKm": "ឯកសារដែលបានប្រថាប់ត្រាដោយព្រះមហាក្សត្រនៃចក្រភណអង់គ្លេស ព្រះនាម ចន នៅថ្ងៃទី ១៥ ខែមិថុនា ឆ្នាំ ១២១៥",
+          "defEn": "A document sealed by King John of the Kingdom of England on 15 June 1215."
+        },
+        {
+          "km": "ចក្រភណអង់គ្លេស",
+          "en": "The Kingdom of England",
+          "defKm": "ប្រទេសអង់គ្លេស ដែលមានព្រះមហាក្សត្រព្រះនាម ចន ប្រថាប់ត្រា Magna Carta",
+          "defEn": "England, whose monarch named John sealed the Magna Carta."
+        },
+        {
+          "km": "ព្រះមហាក្សត្រ",
+          "en": "Monarch",
+          "defKm": "ប្រមុខដ៏ខ្ពស់បំផុតនៃចក្រភណ ឬរដ្ឋ ដែលមានសិទ្ធិអំណាច និងអភ័យឯកសិទ្ធិ",
+          "defEn": "The highest head of a kingdom or state, holding rights, powers and privileges."
+        },
+        {
+          "km": "អភ័យឯកសិទ្ធិ",
+          "en": "Privileges",
+          "defKm": "សិទ្ធិពិសេសដែលត្រូវបានធានាដោយឯកសារ ដូចជាសិទ្ធិរបស់ព្រះមហាក្សត្រ",
+          "defEn": "Special rights guaranteed by a document, such as those enjoyed by the monarch."
+        },
+        {
+          "km": "ទំនៀមទម្លាប់",
+          "en": "Custom",
+          "defKm": "ប្រពៃណី ឬការប្រតិបត្តិដែលបន្តពីជំនាន់មួយទៅជំនាន់មួយ",
+          "defEn": "Custom or tradition handed down from one generation to the next."
+        }
+      ],
+      "quiz": [
+        {
+          "q": { "km": "តើពាក្យធម្មនុញ្ញមានប្រភពមកពីពាក្យណា?", "en": "The word 'charter' has its origin in which term?" },
+          "options": {
+            "km": ["ម៉ាណាសាតា Magna Carta", "Pacta Sunt Servanda", "Jus Cogens", "អនុសញ្ញាទីក្រុងវីយ៉េន"],
+            "en": ["Magna Carta", "Pacta Sunt Servanda", "Jus Cogens", "The Vienna Convention"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ពាក្យធម្មនុញ្ញមានប្រវត្តិចេញមកពីពាក្យ ម៉ាណាសាតា Magna Carta ជាភាសាឡាតាំង ដែលមានន័យថា Great Carter។",
+            "en": "The word 'charter' derives from Magna Carta, which comes from the Latin meaning 'Great Charter'."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើ Magna Carta មានន័យជាភាសាអង់គ្លេសថាអ្វី?", "en": "What does Magna Carta mean in English?" },
+          "options": {
+            "km": ["Great Council", "Great Kingdom", "Great Charter", "Great Court"],
+            "en": ["Great Council", "Great Kingdom", "Great Charter", "Great Court"]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "ពាក្យ Magna Carta ជាភាសាឡាតាំង ហើយមានន័យថា Great Carter។",
+            "en": "The words Magna Carta are Latin and mean 'Great Charter'."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើ Magna Carta ត្រូវបានប្រថាប់ត្រានៅថ្ងៃ ខែ ឆ្នាំណា?", "en": "On what date was the Magna Carta sealed?" },
+          "options": {
+            "km": ["ថ្ងៃទី ១៥ ខែមិថុនា ឆ្នាំ ១២១៥", "ថ្ងៃទី ២៧ ខែសីហា ឆ្នាំ ១៩២៨", "ថ្ងៃទី ២៣ ខែឧសភា ឆ្នាំ ១៩៦៩", "ថ្ងៃទី ១៤ ខែឧសភា ឆ្នាំ ១៩៥៤"],
+            "en": ["15 June 1215", "27 August 1928", "23 May 1969", "14 May 1954"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "Magna Carta ត្រូវបានប្រថាប់ត្រានៅថ្ងៃទី ១៥ ខែមិថុនា ឆ្នាំ ១២១៥។",
+            "en": "The Magna Carta was sealed on 15 June 1215."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើព្រះមហាក្សត្រអង្គណាដែលបានប្រថាប់ត្រា Magna Carta?", "en": "Which monarch sealed the Magna Carta?" },
+          "options": {
+            "km": ["លោកស្ដាលីន", "ព្រះនាម ចន (Jhon King)", "លោកអុីត្លែរ", "ព្រះបាទនរោត្តម"],
+            "en": ["Stalin", "A king named John (Jhon King)", "Hitler", "King Norodom"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "Magna Carta ត្រូវបានប្រថាប់ត្រាដោយព្រះមហាក្សត្រនៃចក្រភណអង់គ្លេស ព្រះនាម ចន។",
+            "en": "The Magna Carta was sealed by the monarch of the Kingdom of England, named John."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើ Magna Carta ត្រូវបានធ្វើឡើងក្នុងគោលបំណងអ្វី?", "en": "For what purpose was the Magna Carta made?" },
+          "options": {
+            "km": ["ដើម្បីលុបបំបាត់សង្គ្រាម", "ដើម្បីបង្កើតសហភាពសូវៀត", "ដើម្បីធានាសិទ្ធិអំណាច និងអភ័យឯកសិទ្ធិរបស់ព្រះមហាក្សត្រ", "ដើម្បីបង្កើតអង្គការសហប្រជាជាតិ"],
+            "en": ["To eliminate war", "To create the Soviet Union", "To guarantee the rights, powers and privileges of the monarch", "To create the United Nations"]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "Magna Carta បានធ្វើឡើងដើម្បីធានានូវសិទ្ធិអំណាច និងអភ័យឯកសិទ្ធិរបស់ព្រះមហាក្សត្រនៅក្នុងប្រទេសអង់គ្លេស។",
+            "en": "The Magna Carta was made to guarantee the rights, powers and privileges of the monarch in England."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើ Magna Carta មានឥទ្ធិពលលើប្រទេសណា?", "en": "Which countries were influenced by the Magna Carta?" },
+          "options": {
+            "km": ["មានតែលើប្រទេសអង់គ្លេស", "មានតែលើសហភាពសូវៀត", "មានលើបណ្ដាប្រទេសដែលទទួលឥទ្ធិពលពីទំនៀមទម្លាប់ប្រពៃណីរបស់ប្រទេសអង់គ្លេស", "គ្មានឥទ្ធិពលលើប្រទេសណាទេ"],
+            "en": ["Only England", "Only the Soviet Union", "The countries influenced by English custom and tradition", "No country at all"]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "ឥទ្ធិពលនៃ Magna Carta រីករាលដាលទៅបណ្ដាប្រទេសទាំងឡាយដែលទទួលឥទ្ធិពលពីទំនៀមទម្លាប់ប្រពៃណីរបស់ប្រទេសអង់គ្លេស។",
+            "en": "Its influence spread to the countries that received the influence of English custom and tradition."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើ Magna Carta ជាឯកសារប្រភេទណា?", "en": "What kind of document is the Magna Carta?" },
+          "options": {
+            "km": ["ឯកសារដែលបានប្រថាប់ត្រាដោយព្រះមហាក្សត្រ", "សន្ធិសញ្ញាពាណិជ្ជកម្ម", "ច្បាប់ក្នុងស្រុក", "លិខិតផ្តល់សិទ្ធិ"],
+            "en": ["A document sealed by the monarch", "A commercial treaty", "A domestic law", "A letter of full powers"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "Magna Carta គឺជាឯកសារដែលបានប្រថាប់ត្រាដោយព្រះមហាក្សត្រនៃចក្រភណអង់គ្លេស។",
+            "en": "Magna Carta is a document that was sealed by the monarch of the Kingdom of England."
+          },
+          "page": 129
+        }
+      ]
+    },
+    {
+      "id": "ch7-l2",
+      "title": { "km": "៦.១ កតិការសញ្ញាអន្តរជាតិ", "en": "6.1 International Covenants" },
+      "pages": { "from": 129, "to": 130 },
+      "objectives": {
+        "km": [
+          "ពន្យល់ពីអត្ថន័យនៃកតិកាសញ្ញា",
+          "រាយលក្ខណៈវិនិច្ឆ័យរបស់កតិកាសញ្ញា",
+          "លើកឧទាហរណ៍កតិកាសញ្ញាសំខាន់ៗ"
+        ],
+        "en": [
+          "Explain the meaning of a covenant",
+          "List the criteria of a covenant",
+          "Give examples of major covenants"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "កតិកាសញ្ញាមានន័យស្មើនឹងកិច្ចព្រមព្រៀងជាអន្តរជាតិ",
+          "ពាក្យកតិកាសញ្ញាត្រូវបានគេប្រើជាទូទៅសម្រាប់ប្រធានបទដែលមានចរិកនយោបាយ យោធា ឬបក្សសម្ព័ន្ធ",
+          "លក្ខណៈវិនិច្ឆ័យរបស់កតិកាសញ្ញាគឺធ្វើឡើងដោយរដ្ឋពីរ ឬច្រើនរួមគ្នា",
+          "កតិកាសញ្ញាកេឡូហ្ស ព្រីយ៉ង ឬកតិកាសញ្ញាទីក្រុងប៉ារីស ចុះហត្ថលេខាថ្ងៃទី ២៧ ខែសីហា ឆ្នាំ ១៩២៨ ដើម្បីលុបបំបាត់ចោលសង្គ្រាម",
+          "កតិកាសញ្ញាមិនឈ្លានពានគ្នារវាងគណបក្សណាសុីអាល្លឺម៉ង់ និងសូវៀត ថ្ងៃទី ២៣ ខែសីហា ឆ្នាំ ១៩៣៩ មានចរិតជាសម្ងាត់",
+          "កតិកាសញ្ញាវ៉ាសូវី បង្កើតនៅថ្ងៃទី ១៤ ខែឧសភា ឆ្នាំ ១៩៥៤ និងរលាយនៅថ្ងៃទី ១ ខែកក្កដា ឆ្នាំ ១៩៩១"
+        ],
+        "en": [
+          "A covenant has the same meaning as an international agreement",
+          "The word covenant is generally used for subjects of a political, military or alliance character",
+          "The criteria of a covenant are that it is made by two or more states together",
+          "The Kellogg-Briand Pact, or Pact of Paris, was signed on 27 August 1928 to eliminate war",
+          "The non-aggression covenant between Nazi Germany and the Soviet Union of 23 August 1939 had a secret character",
+          "The Warsaw Pact was created on 14 May 1954 and dissolved on 1 July 1991"
+        ]
+      },
+      "quotes": [
+        {
+          "km": "កតិកាសញ្ញា មានន័យស្មើនិងកិច្ចព្រមព្រៀងជាអន្តរជាតុមួយដែរ",
+          "en": "A covenant has the same meaning as an international agreement.",
+          "page": 129
+        },
+        {
+          "km": "លក្ខណៈវិនិច្ឆ័យរបស់កតិកាសញ្ញាតាមផ្លូវច្បាប់ ក៏ដូចជាសន្ឋិសញ្ញាអន្តរជាតិ",
+          "en": "The legal criteria of a covenant, just as of an international treaty,",
+          "page": 129
+        },
+        {
+          "km": "កតិកាសញ្ញាទីក្រុងប៉ារីសត្រូវបានចុះហត្ថលេខានៅថ្ងៃទី២៧ខែសីហាឆ្នាំ១៩២៨",
+          "en": "The Pact of Paris was signed on 27 August 1928.",
+          "page": 129
+        },
+        {
+          "km": "កតិកាសញ្ញាវ៉ាសូវី គឺជាឈ្មោះនៃទីក្រុងរបស់ប្រទេសប៉ូឡូញ។",
+          "en": "Warsaw is the name of a city of Poland.",
+          "page": 130
+        }
+      ],
+      "terms": [
+        {
+          "km": "កតិកាសញ្ញា",
+          "en": "Covenant",
+          "defKm": "មានន័យស្មើនឹងកិច្ចព្រមព្រៀងអន្តរជាតិ ហើយគេប្រើជាទូទៅសម្រាប់ប្រធានបទដែលមានចរិកនយោបាយ យោធា ឬបក្សសម្ព័ន្ធ",
+          "defEn": "An international agreement; the term is generally used for subjects of a political, military or alliance character."
+        },
+        {
+          "km": "បក្សសម្ព័ន្ធ",
+          "en": "Alliance",
+          "defKm": "ការរួមចំណងរវាងរដ្ឋ ឬភាគីនយោបាយ ដើម្បីសម្រេចគោលដៅរួម",
+          "defEn": "A union between states or political parties in pursuit of common aims."
+        },
+        {
+          "km": "កតិកាសញ្ញាកេឡូហ្ស ព្រីយ៉ង",
+          "en": "Kellogg-Briand Pact",
+          "defKm": "កតិកាសញ្ញាដែលក៏ត្រូវហៅថាកតិកាសញ្ញាទីក្រុងប៉ារីស ចុះហត្ថលេខានៅថ្ងៃទី ២៧ ខែសីហា ឆ្នាំ ១៩២៨ ក្នុងគោលបំណងលុបបំបាត់ចោលសង្គ្រាមក្នុងឋានៈជានយោបាយជាតិ",
+          "defEn": "A pact also called the Pact of Paris, signed on 27 August 1928 to eliminate war as an instrument of national policy."
+        },
+        {
+          "km": "កតិកាសញ្ញាវ៉ាសូវី",
+          "en": "Warsaw Pact",
+          "defKm": "សន្ធិសញ្ញាមិត្តភាព កិច្ចសហប្រតិបត្តិការ និងជួយគ្នាទៅវិញទៅមក បង្កើតនៅថ្ងៃទី ១៤ ខែឧសភា ឆ្នាំ ១៩៥៤ និងរលាយនៅថ្ងៃទី ១ ខែកក្កដា ឆ្នាំ ១៩៩១",
+          "defEn": "A treaty of friendship, cooperation and mutual assistance created on 14 May 1954 and dissolved on 1 July 1991."
+        },
+        {
+          "km": "អង្គការសន្ធិសញ្ញាមហាសាគរអាត្លង់ទិកខាងជើង",
+          "en": "North Atlantic Treaty Organization (NATO)",
+          "defKm": "អង្គការសន្ធិសញ្ញាដែលបង្កើតឡើងនៅថ្ងៃទី ០១ ខែមេសា ឆ្នាំ ១៩៤៩",
+          "defEn": "The treaty organization created on 1 April 1949."
+        },
+        {
+          "km": "ចរិក",
+          "en": "Character",
+          "defKm": "លក្ខណៈ ឬធម្មជាតិនៃកតិកាសញ្ញា ឬកិច្ចព្រមព្រៀងមួយ (ឧ. ជាសម្ងាត់)",
+          "defEn": "The character or nature of a covenant or agreement (e.g. being secret)."
+        }
+      ],
+      "quiz": [
+        {
+          "q": { "km": "តើកតិកាសញ្ញាមានន័យស្មើនឹងអ្វី?", "en": "A covenant has the same meaning as what?" },
+          "options": {
+            "km": ["កិច្ចព្រមព្រៀងអន្តរជាតិ", "ច្បាប់ក្នុងស្រុក", "សេចក្តីប្រកាសសង្គ្រាម", "លិខិតផ្តល់សិទ្ធិ"],
+            "en": ["An international agreement", "A domestic law", "A declaration of war", "A letter of full powers"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "កតិកាសញ្ញា មានន័យស្មើនិងកិច្ចព្រមព្រៀងជាអន្តរជាតុមួយដែរ។",
+            "en": "A covenant has the same meaning as an international agreement."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើកតិកាសញ្ញាត្រូវបានគេប្រើជាទូទៅសម្រាប់ប្រធានបទបែបណា?", "en": "For what kind of subjects is the term covenant generally used?" },
+          "options": {
+            "km": ["ប្រធានបទបច្ចេកទេសតែប៉ុណ្ណោះ", "ប្រធានបទដែលមានចរិកនយោបាយ យោធា ឬបក្សសម្ព័ន្ធ", "ប្រធានបទសាសនា", "ប្រធានបទកីឡា"],
+            "en": ["Only technical subjects", "Subjects of a political, military or alliance character", "Religious subjects", "Sporting subjects"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "ពាក្យកតិកាសញ្ញាជាទូទៅគេតែងតែយកមកប្រើសំដៅទៅលើប្រធានបទទាំងឡាយណា ដែលមានចរិក នយោបាយ យោធា ឬបក្សសម្ព័ន្ធ។",
+            "en": "The term covenant is generally used for subjects of a political, military or alliance character."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើលក្ខណៈវិនិច្ឆ័យតាមផ្លូវច្បាប់របស់កតិកាសញ្ញាគឺអ្វី?", "en": "What is the legal criterion of a covenant?" },
+          "options": {
+            "km": ["ធ្វើឡើងដោយបុគ្គលឯកជន", "ធ្វើឡើងដោយអង្គការមិនមែនរដ្ឋាភិបាល", "ធ្វើឡើងដោយរដ្ឋពីរ ឬច្រើនរួមគ្នា", "ធ្វើឡើងដោយរដ្ឋតែមួយ"],
+            "en": ["Made by private individuals", "Made by a non-governmental organization", "Made by two or more states together", "Made by a single state"]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "លក្ខណៈវិនិច្ឆ័យរបស់កតិកាសញ្ញាតាមផ្លូវច្បាប់ ក៏ដូចជាសន្ឋិសញ្ញាអន្តរជាតិដែរ គឺធ្វើឡើងដោយរដ្ឋពីរ ឬច្រើនរួមគ្នា។",
+            "en": "The legal criterion of a covenant, as of an international treaty, is that it is made by two or more states together."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើកតិកាសញ្ញាកេឡូហ្ស ព្រីយ៉ង ត្រូវបានចុះហត្ថលេខានៅថ្ងៃណា?", "en": "When was the Kellogg-Briand Pact signed?" },
+          "options": {
+            "km": ["ថ្ងៃទី ២៧ ខែសីហា ឆ្នាំ ១៩២៨", "ថ្ងៃទី ២៣ ខែសីហា ឆ្នាំ ១៩៣៩", "ថ្ងៃទី ១៤ ខែឧសភា ឆ្នាំ ១៩៥៤", "ថ្ងៃទី ០១ ខែមេសា ឆ្នាំ ១៩៤៩"],
+            "en": ["27 August 1928", "23 August 1939", "14 May 1954", "1 April 1949"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "កតិកាសញ្ញាកេឡូហ្ស ព្រីយ៉ង ឬហៅថាកតិកាសញ្ញាទីក្រុងប៉ារីស ត្រូវបានចុះហត្ថលេខានៅថ្ងៃទី២៧ខែសីហាឆ្នាំ១៩២៨។",
+            "en": "The Kellogg-Briand Pact, also called the Pact of Paris, was signed on 27 August 1928."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើកតិកាសញ្ញាកេឡូហ្ស ព្រីយ៉ង ត្រូវបានហៅម្យ៉ាងទៀតថាអ្វី?", "en": "By what other name is the Kellogg-Briand Pact known?" },
+          "options": {
+            "km": ["កតិកាសញ្ញាទីក្រុងវីយ៉េន", "កតិកាសញ្ញាទីក្រុងប៉ារីស", "កតិកាសញ្ញាវ៉ាសូវី", "កតិកាសញ្ញាទីក្រុងមុយនីច"],
+            "en": ["The Vienna Pact", "The Pact of Paris", "The Warsaw Pact", "The Munich Pact"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "កតិកាសញ្ញាកេឡូហ្ស ព្រីយ៉ង ឬហៅថាកតិកាសញ្ញាទីក្រុងប៉ារីស។",
+            "en": "The Kellogg-Briand Pact is also called the Pact of Paris."
+          },
+          "page": 129
+        },
+        {
+          "q": { "km": "តើកតិកាសញ្ញាមិនឈ្លានពានគ្នារវាងគណបក្សណាសុីអាល្លឺម៉ង់ និងសូវៀត ចុះហត្ថលេខានៅថ្ងៃណា?", "en": "When was the non-aggression covenant between Nazi Germany and the Soviet Union signed?" },
+          "options": {
+            "km": ["ថ្ងៃទី ២៣ ខែសីហា ឆ្នាំ ១៩៣៩", "ថ្ងៃទី ២៧ ខែសីហា ឆ្នាំ ១៩២៨", "ថ្ងៃទី ១៤ ខែឧសភា ឆ្នាំ ១៩៥៤", "ថ្ងៃទី ១៥ ខែមិថុនា ឆ្នាំ ១២១៥"],
+            "en": ["23 August 1939", "27 August 1928", "14 May 1954", "15 June 1215"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "កតិកាសញ្ញានេះត្រូវបានចុះនៅថ្ងៃទី ២៣ ខែសីហា ឆ្នាំ ១៩៣៩ ហើយមានចរិតជាសម្ងាត់។",
+            "en": "That covenant was signed on 23 August 1939 and had a secret character."
+          },
+          "page": 130
+        },
+        {
+          "q": { "km": "តើប្រទេសណាដែលបានដកខ្លួនចេញពីអង្គការកតិកាសញ្ញាវ៉ាសូវី នៅក្នុងឆ្នាំ ១៩៦៨?", "en": "Which country withdrew from the Warsaw Pact organization in 1968?" },
+          "options": {
+            "km": ["ប៉ូឡូញ", "ហុងគ្រី", "អាល់បានី", "រូម៉ានី"],
+            "en": ["Poland", "Hungary", "Albania", "Romania"]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "ប្រទេសអាល់បានីបានដកខ្លួនចេញពីអង្គការនេះ នៅក្នុងឆ្នាំ ១៩៦៨។",
+            "en": "Albania withdrew from the organization in 1968."
+          },
+          "page": 130
+        },
+        {
+          "q": { "km": "តើកតិកាសញ្ញាវ៉ាសូវីត្រូវបានរលាយនៅថ្ងៃណា?", "en": "When was the Warsaw Pact dissolved?" },
+          "options": {
+            "km": ["ថ្ងៃទី ១៤ ខែឧសភា ឆ្នាំ ១៩៥៤", "ថ្ងៃទី ១ ខែកក្កដា ឆ្នាំ ១៩៩១", "ថ្ងៃទី ០១ ខែមេសា ឆ្នាំ ១៩៤៩", "ថ្ងៃទី ២៣ ខែសីហា ឆ្នាំ ១៩៣៩"],
+            "en": ["14 May 1954", "1 July 1991", "1 April 1949", "23 August 1939"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "កតិកាសញ្ញាវ៉ាសូវី បង្កើតនៅថ្ងៃទី ១៤ ខែឧសភា ឆ្នាំ ១៩៥៤ និងរលាយនៅថ្ងៃទី ១ ខែកក្កដា ឆ្នាំ ១៩៩១។",
+            "en": "The Warsaw Pact was created on 14 May 1954 and dissolved on 1 July 1991."
+          },
+          "page": 130
+        }
+      ]
+    },
+    {
+      "id": "ch7-l3",
+      "title": { "km": "៦.២ លក្ខណៈវិនិច្ឆ័យនៃអនុស្សារណៈយោគយល់គ្នា", "en": "6.2 Criteria of Memoranda of Understanding" },
+      "pages": { "from": 130, "to": 142 },
+      "objectives": {
+        "km": [
+          "ពន្យល់ពីលក្ខណៈវិនិច្ឆ័យនៃអនុស្សារណៈយោគយល់គ្នា",
+          "វិភាគមូលដ្ឋានសុពលភាពនៃសន្ធិសញ្ញាអន្តរជាតិ",
+          "បញ្ជាក់ភាគីដែលមានសមត្ថកិច្ចធ្វើសន្ធិសញ្ញា",
+          "រៀបរាប់លំនាំនៃសន្ធិសញ្ញាទ្វេភាគី និងពហុភាគី"
+        ],
+        "en": [
+          "Explain the criteria of a memorandum of understanding",
+          "Analyse the basis of validity of an international treaty",
+          "Identify the parties competent to conclude treaties",
+          "Describe the models of bilateral and multilateral treaties"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "អនុស្សារណៈនៃការយោគយល់គ្នា ជាលិខិតូបករណ៍អន្តរជាតិដែលមានលក្ខណៈជាកិច្ចសម្របសម្រួល និងជាទម្រង់លិខិតទោល",
+          "មូលដ្ឋានសុពលភាពនៃសន្ធិសញ្ញាអន្តរជាតិ គឺគោលការណ៍សន្ធិសញ្ញាត្រូវថែរក្សា (Pacta Sunt Servanda)",
+          "សន្ធិសញ្ញាមិនអាចមានសុពលភាពទេ ប្រសិនបើផ្ទុយនឹងវិធាននីតិអន្តរជាតិដែលមានរួចហើយ",
+          "ភាគីដែលមានសមត្ថភាពចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ គឺមានតែរដ្ឋប៉ុណ្ណោះ (មាត្រា ៦ នៃអនុសញ្ញាទីក្រុងវីយ៉េន ឆ្នាំ ១៩៦៩)",
+          "ប្រមុខរដ្ឋ ប្រមុខរដ្ឋាភិបាល រដ្ឋមន្ត្រីការបរទេស និងប្រមុខបេសកកម្មការទូត អាចចុះហត្ថលេខាដោយមិនចាំបាច់បង្ហាញលិខិតផ្តល់សិទ្ធិ",
+          "លំនាំនៃសន្ធិសញ្ញាទ្វេភាគី និងពហុភាគី ឆ្លងកាត់ដំណាក់កាលចរចា ចុះហត្ថលេខា និងការផ្តល់សច្ចាប័ន"
+        ],
+        "en": [
+          "A memorandum of understanding is an international instrument of a facilitative character, in the form of a single document",
+          "The basis of validity of an international treaty is the principle that treaties must be kept (pacta sunt servanda)",
+          "A treaty cannot be valid if it conflicts with existing rules of international law",
+          "The parties able to sign an international treaty are states alone (Article 6 of the Vienna Convention of 1969)",
+          "Heads of state, heads of government, foreign ministers and heads of diplomatic missions may sign without producing full powers",
+          "The models of bilateral and multilateral treaties pass through negotiation, signature and ratification"
+        ]
+      },
+      "quotes": [
+        {
+          "km": "អនុស្សរណៈយោគយល់គ្នា ជាលិខិតូបករណ៍អន្តរជាតិ ដែលមានលក្ខណៈជាកិច្ចសម្រប",
+          "en": "A memorandum of understanding is an international instrument of a facilitative character",
+          "page": 130
+        },
+        {
+          "km": "គោលការណ៍ដែលមានឈ្មោះថា គោលការណ៍ សន្ធិសញ្ញាត្រូវថែរក្សា",
+          "en": "The principle which is named the principle that treaties must be kept",
+          "page": 130
+        },
+        {
+          "km": "ភាគីដែលមានសមត្ថភាពចុះហត្ថលេខា លើសន្ធិសញ្ញាអន្តរជាតិ គឺមានតែ រដ្ឋប៉ុណ្ណោះ។",
+          "en": "The parties having the capacity to sign an international treaty are states alone.",
+          "page": 131
+        },
+        {
+          "km": "សន្ធិសញ្ញា ជាប្រភពដ៏សំខាន់មួយនៃនិតិអន្តរជាតិ។",
+          "en": "A treaty is one of the important sources of international law.",
+          "page": 134
+        }
+      ],
+      "terms": [
+        {
+          "km": "អនុស្សារណៈយោគយល់គ្នា",
+          "en": "Memorandum of understanding",
+          "defKm": "លិខិតូបករណ៍អន្តរជាតិដែលមានលក្ខណៈជាកិច្ចសម្របសម្រួល និងជាទម្រង់លិខិតទោល ចែងអំពីកិច្ចព្រមព្រៀងទ្វេភាគី ឬពហុភាគី",
+          "defEn": "An international instrument of a facilitative character, in the form of a single document, recording a bilateral or multilateral agreement."
+        },
+        {
+          "km": "សុពលភាព",
+          "en": "Validity",
+          "defKm": "លក្ខណៈដែលសន្ធិសញ្ញាអាចមានអនុភាព និងអាចអនុវត្តបានតាមផ្លូវច្បាប់",
+          "defEn": "The quality by which a treaty has legal force and can be applied."
+        },
+        {
+          "km": "គោលការណ៍សន្ធិសញ្ញាត្រូវថែរក្សា (Pacta Sunt Servanda)",
+          "en": "Pacta sunt servanda",
+          "defKm": "គោលការណ៍ដែលតម្រូវឱ្យភាគីដែលបានចុះហត្ថលេខាមានកាតព្វកិច្ចគោរព និងប្រតិបត្តិតាមរាល់ខ្លឹមសារដែលមានចែង",
+          "defEn": "The principle requiring signatory parties to respect and carry out every provision of the treaty."
+        },
+        {
+          "km": "លិខិតផ្តល់សិទ្ធិ",
+          "en": "Full powers",
+          "defKm": "ឯកសារផ្លូវការដែលចេញដោយអាជ្ញាធរមានសមត្ថកិច្ចនៃរដ្ឋ ចាត់តាំងមួយរូប ឬច្រើនរូបជាតំណាងរដ្ឋនោះ",
+          "defEn": "An official document issued by a competent state authority appointing one or more persons as representatives of that state."
+        },
+        {
+          "km": "ការផ្តល់សច្ចាប័ន",
+          "en": "Ratification",
+          "defKm": "លិខិតអន្តរជាតិផ្លូវការដែលធ្វើឱ្យរដ្ឋមួយបញ្ជាក់ពីការយល់ព្រមរបស់ខ្លួនចំពោះកាតព្វកិច្ចចងភ្ជាប់ដោយសន្ធិសញ្ញាមួយ",
+          "defEn": "A formal international instrument by which a state confirms its consent to be bound by a treaty."
+        },
+        {
+          "km": "(ខ)រក្សាទុក",
+          "en": "Reservation",
+          "defKm": "សេចក្តីប្រកាសដែលធ្វើដោយរដ្ឋមួយ ដើម្បីបដិសេធ ឬកែប្រែអនុភាពតាមផ្លូវច្បាប់នៃបទបញ្ញត្តិខ្លះៗរបស់សន្ធិសញ្ញា",
+          "defEn": "A declaration by a state excluding or modifying the legal effect of certain provisions of a treaty."
+        },
+        {
+          "km": "បទដ្ឋានដាច់ខាតនៃច្បាប់អន្តរជាតិទូទៅ (Jus Cogens)",
+          "en": "Jus cogens",
+          "defKm": "បទដ្ឋានដាច់ខាតនៃច្បាប់អន្តរជាតិទូទៅ ដែលសន្ធិសញ្ញាមិនអាចប្រទាំងប្រទើសបាន",
+          "defEn": "Peremptory norms of general international law with which a treaty may not conflict."
+        }
+      ],
+      "quiz": [
+        {
+          "q": { "km": "តើអនុស្សរណៈនៃការយោគយល់គ្នាមានលក្ខណៈវិនិច្ឆ័យជាទម្រង់អ្វី?", "en": "What form does a memorandum of understanding take?" },
+          "options": {
+            "km": ["ទម្រង់លិខិតទោល", "សន្ធិសញ្ញាពហុភាគីផ្លូវការ", "ច្បាប់ក្នុងស្រុក", "ដីកាតុលាការ"],
+            "en": ["A single-document form", "A formal multilateral treaty", "A domestic law", "A court judgment"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អនុស្សរណៈយោគយល់គ្នា ជាលិខិតូបករណ៍អន្តរជាតិ ដែលមានលក្ខណៈជាកិច្ចសម្របសម្រួល ហើយមានលក្ខណៈវិនិច្ឆ័យជាទម្រង់លិខិតទោល។",
+            "en": "A memorandum of understanding is an international instrument of a facilitative character and in the form of a single document."
+          },
+          "page": 130
+        },
+        {
+          "q": { "km": "តើមូលដ្ឋានសុពលភាពនៃសន្ធិសញ្ញាអន្តរជាតិយោងទៅលើគោលការណ៍អ្វី?", "en": "On which principle is the validity of an international treaty based?" },
+          "options": {
+            "km": ["គោលការណ៍ស្ម័គ្រចិត្តដោយសេរី", "គោលការណ៍សន្ធិសញ្ញាត្រូវថែរក្សា", "គោលការណ៍អធិបតេយ្យភាព", "គោលការណ៍អព្យាក្រឹតភាព"],
+            "en": ["The principle of free consent", "The principle that treaties must be kept", "The principle of sovereignty", "The principle of neutrality"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "មូលដ្ឋានសុពលភាពនៃសន្ធិសញ្ញាអន្តរជាតិ គឺយោងទៅលើគោលការណ៍ដែលមានឈ្មោះថា គោលការណ៍សន្ធិសញ្ញាត្រូវថែរក្សា។",
+            "en": "The basis of validity of an international treaty is the principle known as pacta sunt servanda."
+          },
+          "page": 130
+        },
+        {
+          "q": { "km": "តើសន្ធិសញ្ញាមិនអាចមានសុពលភាពក្នុងករណីណា?", "en": "In which case can a treaty not be valid?" },
+          "options": {
+            "km": ["នៅពេលសន្ធិសញ្ញាចុះហត្ថលេខាដោយរដ្ឋមន្ត្រីការបរទេស", "នៅពេលសន្ធិសញ្ញាផ្ទុយនឹងវិធាននីតិអន្តរជាតិដែលមានរួចហើយ", "នៅពេលសន្ធិសញ្ញាមានពីរភាសា", "នៅពេលសន្ធិសញ្ញាត្រូវបានចុះបញ្ជី"],
+            "en": ["When it is signed by a foreign minister", "When it conflicts with existing rules of international law", "When it is drafted in two languages", "When it is registered"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "សន្ធិសញ្ញាមិនអាចមានសុពលភាព និងមិនអាចអនុវត្តបានទេ ប្រសិនបើសន្ធិសញ្ញាផ្ទុយនឹងវិធាននីតិអន្តរជាតិដែលមានរួចហើយ។",
+            "en": "A treaty can neither be valid nor be applied if it conflicts with existing rules of international law."
+          },
+          "page": 131
+        },
+        {
+          "q": { "km": "តើមាត្រា ៦ នៃអនុសញ្ញាទីក្រុងវីយ៉េន ស្ដីពីច្បាប់សន្ធិសញ្ញា ឆ្នាំ ១៩៦៩ ចែងថាអ្វី?", "en": "What does Article 6 of the Vienna Convention on the Law of Treaties of 1969 state?" },
+          "options": {
+            "km": ["បណ្ដាលរដ្ឋទាំងឡាយមានសមត្ថកិច្ចចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ", "មានតែរដ្ឋមហាអំណាចទេដែលមានសមត្ថកិច្ច", "បុគ្គលឯកជនក៏មានសមត្ថកិច្ចដែរ", "សន្ធិសញ្ញាមិនត្រូវការហត្ថលេខាទេ"],
+            "en": ["All states have the capacity to sign international treaties", "Only great powers have that capacity", "Private individuals also have that capacity", "A treaty does not need a signature"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "មាត្រា ៦ បានចែងថា បណ្ដាលរដ្ឋទាំងឡាយមានសមត្ថកិច្ចចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ។",
+            "en": "Article 6 provides that all states have the capacity to sign international treaties."
+          },
+          "page": 131
+        },
+        {
+          "q": { "km": "តើបុគ្គលណាមួយក្នុងចំណោមនេះ អាចចុះហត្ថលេខាលើសន្ធិសញ្ញាដោយមិនចាំបាច់ផ្តល់សិទ្ធិពីសំណាក់រដ្ឋ?", "en": "Which of the following may sign a treaty without being given full powers by the state?" },
+          "options": {
+            "km": ["រដ្ឋមន្ត្រីកសិកម្ម", "ប្រមុខបេសកកម្មការទូត", "អភិបាលខេត្ត", "រដ្ឋមន្ត្រីអប់រំ"],
+            "en": ["Minister of agriculture", "Head of a diplomatic mission", "Provincial governor", "Minister of education"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "តំណាងរដ្ឋអាចមានសមត្ថកិច្ចចុះហត្ថលេខាដោយមិនចាំបាច់ផ្តល់សិទ្ធិ ប្រសិនបើបុគ្គលនោះជាប្រមុខរដ្ឋ ប្រមុខរដ្ឋាភិបាល រដ្ឋមន្ត្រីការបរទេស ឬប្រមុខបេសកកម្មការទូត។",
+            "en": "A representative may sign without full powers if that person is a head of state, head of government, foreign minister or head of a diplomatic mission."
+          },
+          "page": 132
+        },
+        {
+          "q": { "km": "តើនីតិអន្តរជាតិចងភ្ជាប់ទៅនឹងអ្វី នៅពេលរដ្ឋាភិបាលផ្លាស់ប្តូរ?", "en": "To what is international law attached when a government changes?" },
+          "options": {
+            "km": ["ចងភ្ជាប់ទៅនឹងរដ្ឋាភិបាល", "ចងភ្ជាប់ទៅនឹងរដ្ឋ តែមិនចងភ្ជាប់ទៅនឹងរដ្ឋាភិបាល", "ចងភ្ជាប់ទៅនឹងគណបក្សនយោបាយ", "មិនចងភ្ជាប់ទៅអ្វីទាំងអស់"],
+            "en": ["It is attached to the government", "It is attached to the state, not to the government", "It is attached to a political party", "It is attached to nothing"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "កាតព្វកិច្ចដែលបង្កើតឡើងដោយសន្ធិសញ្ញានៅតែបន្ត ទោះជារដ្ឋាភិបាលមួយផ្លាស់ប្តូរក៏ដោយ ពោលគឺនីតិអន្តរជាតិចងភ្ជាប់ទៅនឹងរដ្ឋ តែមិនចងភ្ជាប់ទៅនឹងរដ្ឋាភិបាលទេ។",
+            "en": "Obligations created by a treaty continue even if the government changes: international law binds the state, not the government."
+          },
+          "page": 132
+        },
+        {
+          "q": { "km": "តើការសូកប៉ាន់ទៅតំណាងរដ្ឋមួយ ដើម្បីចុះសន្ធិសញ្ញា មានផលវិបាកអ្វី?", "en": "What is the effect of bribing a state's representative to sign a treaty?" },
+          "options": {
+            "km": ["រដ្ឋនីមួយៗមានសិទ្ធិមិនអនុវត្តសន្ធិសញ្ញានោះបាន", "សន្ធិសញ្ញាកាន់តែរឹងមាំ", "គ្មានផលវិបាកអ្វីទាំងអស់", "សន្ធិសញ្ញាត្រូវបានចុះបញ្ជីជាស្វ័យប្រវត្តិ"],
+            "en": ["A state has the right not to apply that treaty", "The treaty becomes stronger", "There is no effect at all", "The treaty is automatically registered"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "រដ្ឋនីមួយៗមានសិទ្ធិមិនអនុវត្តសន្ធិសញ្ញាណាមួយបាន ដរាបណារដ្ឋមួយទៀតណែនាំឱ្យអ្នកតំណាងខ្លួនចុះសន្ធិសញ្ញានោះ តាមរយៈនៃការសូកប៉ាន់។",
+            "en": "A state has the right not to apply a treaty when another state has induced its representative to sign it by means of bribery."
+          },
+          "page": 133
+        },
+        {
+          "q": { "km": "តើអនុសញ្ញាទីក្រុងវីយ៉េនស្តីពីច្បាប់សន្ធិសញ្ញា ត្រូវបានចុះហត្ថលេខានៅថ្ងៃណា?", "en": "When was the Vienna Convention on the Law of Treaties signed?" },
+          "options": {
+            "km": ["ថ្ងៃទី ២៧ ខែមករា ឆ្នាំ ១៩៨០", "ថ្ងៃទី ២៣ ខែឧសភា ឆ្នាំ ១៩៦៩", "ថ្ងៃទី ២៤ ខែមិថុនា ឆ្នាំ ២០១០", "ថ្ងៃទី ១៧ ខែធ្នូ ឆ្នាំ ១៨៦៣"],
+            "en": ["27 January 1980", "23 May 1969", "24 June 2010", "17 December 1863"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អនុសញ្ញាទីក្រុងវីយ៉េនស្តីពីច្បាប់សន្ធិសញ្ញា ចុះហត្ថលេខានៅថ្ងៃទី ២៣ ខែឧសភា ឆ្នាំ ១៩៦៩ និងចូលជាធរមាននៅថ្ងៃទី ២៧ ខែមករា ឆ្នាំ ១៩៨០។",
+            "en": "It was signed at Vienna on 23 May 1969 and entered into force on 27 January 1980."
+          },
+          "page": 137
+        }
+      ]
+    }
+  ]
+}

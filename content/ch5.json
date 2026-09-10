@@ -1,0 +1,885 @@
+{
+  "id": "ch5",
+  "num": 5,
+  "title": {
+    "km": "ទំនាក់ទំនងរវាងនីតិជាតិ និងនីតិអន្តរជាតិ",
+    "en": "Relations between National Law and International Law"
+  },
+  "pages": {
+    "from": 101,
+    "to": 108
+  },
+  "summary": {
+    "km": "ជំពូកនេះពន្យល់អំពីទំនាក់ទំនងរវាងច្បាប់ជាតិ និងច្បាប់អន្តរជាតិ តាមរយៈការសិក្សាអំពីច្បាប់សន្ធិសញ្ញាអន្តរជាតិ ជាពិសេសអនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីច្បាប់សន្ធិសញ្ញា ១៩៦៩ និយមន័យ និងលក្ខណៈវិនិច្ឆ័យផ្លូវច្បាប់នៃសន្ធិសញ្ញា ព្រមទាំងគោលការណ៍ និងប្រភេទនៃសន្ធិសញ្ញា។",
+    "en": "This chapter explains the relations between national law and international law through the law of treaties, in particular the Vienna Convention on the Law of Treaties of 1969: the definition and legal criteria of a treaty, its principles, and the main types of treaties."
+  },
+  "lessons": [
+    {
+      "id": "ch5-l1",
+      "title": {
+        "km": "ច្បាប់ស្ដីពីសន្ធិសញ្ញាអន្តរជាតិ ១៩៦៩",
+        "en": "The Law of International Treaties, 1969"
+      },
+      "pages": {
+        "from": 101,
+        "to": 104
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អំពីប្រវត្តិនៃអនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីនីតិសន្ធិសញ្ញា",
+          "រៀបរាប់កាលបរិច្ឆេទសំខាន់ៗនៃការអនុម័ត ការបើកឱ្យចុះហត្ថលេខា និងការចូលជាធរមាន",
+          "ស្គាល់អនុសញ្ញាទីក្រុងវីយ៉េនទាំង៣ដែលទាក់ទងនឹងសន្ធិសញ្ញាអន្តរជាតិ"
+        ],
+        "en": [
+          "Explain the background of the Vienna Convention on the Law of Treaties",
+          "State the key dates of the Convention's adoption, opening for signature and entry into force",
+          "Identify the three Vienna Conventions relating to international treaties"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "អនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីនីតិសន្ធិសញ្ញាត្រូវបានអនុម័តនៅថ្ងៃទី២២ ខែឧសភា ឆ្នាំ១៩៦៩ និងបើកឱ្យរដ្ឋទាំងឡាយចុះហត្ថលេខានៅថ្ងៃទី២៣ ខែឧសភា ឆ្នាំ១៩៦៩។",
+          "អនុសញ្ញានេះបានចូលជាធរមាននៅថ្ងៃទី២៧ ខែមករា ឆ្នាំ១៩៨០ ដោយមានរដ្ឋចំនួន១១០បានផ្ដល់សច្ចាប័នមកទល់ខែតុលា ឆ្នាំ២០០៩។",
+          "រដ្ឋដែលមិនទាន់បានផ្ដល់សច្ចាប័ន ក៏នៅតែទទួលស្គាល់សន្ធិសញ្ញានេះថាជាគោលការណ៍ដ៏សំខាន់មួយនៃនីតិទំនៀមទម្លាប់។",
+          "អនុសញ្ញានេះត្រូវបានព្រាងឡើងដោយគណៈកម្មាធិការនីតិអន្តរជាតិរបស់អង្គការសហប្រជាជាតិ ដោយចាប់ផ្ដើមនៅឆ្នាំ១៩៤៩ និងបញ្ចប់នៅឆ្នាំ១៩៦៩។",
+          "អនុសញ្ញានេះត្រូវបានអនុម័តនៅសន្និសីទការទូតដែលរៀបចំឡើងដោយអង្គការសហប្រជាជាតិនៅទីក្រុងវីយ៉េន ប្រទេសអូទ្រីស។",
+          "ក្រៅពីអនុសញ្ញាឆ្នាំ១៩៦៩ មានអនុសញ្ញាទីក្រុងវីយ៉េនឆ្នាំ១៩៧៨ (ការបន្តនៃរដ្ឋ) និងឆ្នាំ១៩៨៦ (សន្ធិសញ្ញារវាងអង្គការអន្តរជាតិ)។"
+        ],
+        "en": [
+          "The Vienna Convention on the Law of Treaties was adopted on 22 May 1969 and opened for signature on 23 May 1969.",
+          "It entered into force on 27 January 1980; 110 states had ratified it by October 2009.",
+          "Even states that have not ratified still recognise this treaty as an important principle of customary law.",
+          "It was drafted by the International Law Commission of the United Nations, which began work in 1949 and finished in 1969.",
+          "It was adopted at a diplomatic conference organised by the United Nations in Vienna, Austria.",
+          "Besides the 1969 Convention there are Vienna Conventions of 1978 (succession of states) and 1986 (treaties with international organisations)."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "១.អនុសញ្ញាស្តីពីនិតិសន្ធិសញ្ញាទីក្រុងវីយ៉េន ដែលធ្វើឡើងនៅថ្ងៃទី ២៣ ខែ ឧសភា ១៩៦៩",
+          "en": "1. The Vienna Convention on the Law of Treaties, concluded on 23 May 1969.",
+          "page": 103
+        },
+        {
+          "km": "អនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីនីតិសន្ធិសញ្ញាត្រូវបានចូលជាធរមាននៅថ្ងៃទី២៧ខែមករា",
+          "en": "The Vienna Convention on the Law of Treaties entered into force on 27 January [1980] ...",
+          "page": 103
+        },
+        {
+          "km": "គណៈកម្មាធិការនីតិអន្តរជាតិរបស់អង្គការសហប្រជាជាតិដែលចាប់ផ្តើមតាក់តែងនូវអនុសញ្ញានេះ",
+          "en": "The International Law Commission of the United Nations, which began drafting this Convention ...",
+          "page": 103
+        },
+        {
+          "km": "ហើយបានបញ្ចប់នៅឆ្នាំ១៩៦៩ តាមរយះសន្និសិតការទូតដែលរៀបចំឡើងដោយ",
+          "en": "... and it finished in 1969 through the diplomatic conference organised by ...",
+          "page": 103
+        }
+      ],
+      "terms": [
+        {
+          "km": "អនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីនីតិសន្ធិសញ្ញា",
+          "en": "Vienna Convention on the Law of Treaties",
+          "defKm": "សន្ធិសញ្ញាអន្តរជាតិឆ្នាំ១៩៦៩ ដែលចងក្រងវិធានទំនៀមទម្លាប់ស្ដីពីសន្ធិសញ្ញារវាងរដ្ឋនិងរដ្ឋ",
+          "defEn": "The 1969 international treaty that codifies the customary rules on treaties between states."
+        },
+        {
+          "km": "សច្ចាប័ន",
+          "en": "Ratification",
+          "defKm": "ការបញ្ជាក់ការយល់ព្រមរបស់រដ្ឋឱ្យចងភ្ជាប់ដោយសន្ធិសញ្ញា",
+          "defEn": "The act by which a state confirms its consent to be bound by a treaty."
+        },
+        {
+          "km": "ការចូលជាធរមាន",
+          "en": "Entry into force",
+          "defKm": "ពេលវេលាដែលសន្ធិសញ្ញាចាប់ផ្ដើមមានចំណងជាផ្លូវការ",
+          "defEn": "The moment when a treaty formally begins to have binding effect."
+        },
+        {
+          "km": "គណៈកម្មាធិការនីតិអន្តរជាតិ",
+          "en": "International Law Commission",
+          "defKm": "ស្ថាប័នរបស់អង្គការសហប្រជាជាតិដែលព្រាងអត្ថបទអនុសញ្ញាទីក្រុងវីយ៉េន",
+          "defEn": "The United Nations body that drafted the text of the Vienna Convention."
+        },
+        {
+          "km": "នីតិទំនៀមទម្លាប់",
+          "en": "Customary law",
+          "defKm": "វិធានច្បាប់អន្តរជាតិដែលកើតឡើងពីការអនុវត្តរបស់រដ្ឋ ហើយត្រូវបានទទួលស្គាល់ជាទូទៅ",
+          "defEn": "Rules of international law arising from state practice and generally recognised as law."
+        },
+        {
+          "km": "សន្និសីទការទូត",
+          "en": "Diplomatic conference",
+          "defKm": "កិច្ចប្រជុំរវាងរដ្ឋនានាដើម្បីចរចា និងអនុម័តអត្ថបទសន្ធិសញ្ញា",
+          "defEn": "A conference of states convened to negotiate and adopt the text of a treaty."
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើអនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីនីតិសន្ធិសញ្ញាត្រូវបានអនុម័តនៅថ្ងៃណា?",
+            "en": "On which date was the Vienna Convention on the Law of Treaties adopted?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី២៧ ខែមករា ឆ្នាំ១៩៨០",
+              "ថ្ងៃទី២៣ ខែសីហា ឆ្នាំ១៩៧៨",
+              "ថ្ងៃទី២៣ ខែឧសភា ឆ្នាំ១៩៦៩",
+              "ថ្ងៃទី២២ ខែឧសភា ឆ្នាំ១៩៦៩"
+            ],
+            "en": [
+              "27 January 1980",
+              "23 August 1978",
+              "23 May 1969",
+              "22 May 1969"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថាអនុសញ្ញាត្រូវបានអនុម័តនៅថ្ងៃទី២២ ខែឧសភា ឆ្នាំ១៩៦៩ ហើយបានបើកឱ្យចុះហត្ថលេខានៅថ្ងៃទី២៣ ខែឧសភា ឆ្នាំ១៩៦៩។",
+            "en": "The text states that it was adopted on 22 May 1969 and opened for signature on 23 May 1969."
+          },
+          "page": 103
+        },
+        {
+          "q": {
+            "km": "តើអនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីនីតិសន្ធិសញ្ញាបានចូលជាធរមាននៅថ្ងៃណា?",
+            "en": "When did the Vienna Convention on the Law of Treaties enter into force?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី២២ ខែឧសភា ឆ្នាំ១៩៦៩",
+              "ខែតុលា ឆ្នាំ២០០៩",
+              "ថ្ងៃទី២៧ ខែមករា ឆ្នាំ១៩៨០",
+              "ថ្ងៃទី២៣ ខែឧសភា ឆ្នាំ១៩៦៩"
+            ],
+            "en": [
+              "22 May 1969",
+              "October 2009",
+              "27 January 1980",
+              "23 May 1969"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថាអនុសញ្ញាត្រូវបានចូលជាធរមាននៅថ្ងៃទី២៧ ខែមករា ឆ្នាំ១៩៨០។",
+            "en": "The text states that the Convention entered into force on 27 January 1980."
+          },
+          "page": 103
+        },
+        {
+          "q": {
+            "km": "តើមានរដ្ឋប៉ុន្មានដែលបានផ្ដល់សច្ចាប័នរហូតមកទល់ខែតុលា ឆ្នាំ២០០៩?",
+            "en": "How many states had ratified by October 2009?"
+          },
+          "options": {
+            "km": [
+              "១១០រដ្ឋ",
+              "៦៩រដ្ឋ",
+              "១០រដ្ឋ",
+              "២៣រដ្ឋ"
+            ],
+            "en": [
+              "110 states",
+              "69 states",
+              "10 states",
+              "23 states"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថាមានរដ្ឋចំនួន១១០បានផ្ដល់សច្ចាប័នរហូតមកទល់ខែតុលា ឆ្នាំ២០០៩។",
+            "en": "The text says 110 states had ratified up to October 2009."
+          },
+          "page": 103
+        },
+        {
+          "q": {
+            "km": "តើស្ថាប័នណាដែលបានព្រាងអត្ថបទអនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីនីតិសន្ធិសញ្ញា?",
+            "en": "Which body drafted the Vienna Convention on the Law of Treaties?"
+          },
+          "options": {
+            "km": [
+              "តុលាការឧក្រិដ្ឋកម្មអន្តរជាតិ",
+              "រដ្ឋាភិបាលអូទ្រីស",
+              "សន្និសីទការទូតនៅទីក្រុងហ្សឺណែវ",
+              "គណៈកម្មាធិការនីតិអន្តរជាតិរបស់អង្គការសហប្រជាជាតិ"
+            ],
+            "en": [
+              "The International Criminal Court",
+              "The Austrian government",
+              "A diplomatic conference in Geneva",
+              "The International Law Commission of the United Nations"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថាអនុសញ្ញានេះត្រូវបានព្រាងឡើងដោយគណៈកម្មាធិការនីតិអន្តរជាតិរបស់អង្គការសហប្រជាជាតិ។",
+            "en": "The text says the Convention was drafted by the International Law Commission of the United Nations."
+          },
+          "page": 103
+        },
+        {
+          "q": {
+            "km": "តើសន្និសីទការទូតដែលអនុម័តអនុសញ្ញានេះត្រូវបានរៀបចំឡើងនៅទីណា?",
+            "en": "Where was the diplomatic conference that adopted the Convention held?"
+          },
+          "options": {
+            "km": [
+              "ទីក្រុងប៉ារីស",
+              "ទីក្រុងវីយ៉េន ប្រទេសអូទ្រីស",
+              "ទីក្រុងហ្សឺណែវ",
+              "ទីក្រុងញូវយ៉ក"
+            ],
+            "en": [
+              "Paris",
+              "Vienna, Austria",
+              "Geneva",
+              "New York"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថាសន្និសីទការទូតត្រូវបានរៀបចំឡើងដោយអង្គការសហប្រជាជាតិនៅទីក្រុងវីយ៉េន ប្រទេសអូទ្រីស។",
+            "en": "The text says the diplomatic conference was organised by the United Nations in Vienna, Austria."
+          },
+          "page": 103
+        },
+        {
+          "q": {
+            "km": "តើគណៈកម្មាធិការនីតិអន្តរជាតិបានចាប់ផ្ដើមតាក់តែងអនុសញ្ញានេះនៅឆ្នាំណា?",
+            "en": "In which year did the International Law Commission begin drafting the Convention?"
+          },
+          "options": {
+            "km": [
+              "ឆ្នាំ១៩៤៩",
+              "ឆ្នាំ១៩៥៩",
+              "ឆ្នាំ១៩៦៩",
+              "ឆ្នាំ១៩៨០"
+            ],
+            "en": [
+              "1949",
+              "1959",
+              "1969",
+              "1980"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថាគណៈកម្មាធិការនីតិអន្តរជាតិបានចាប់ផ្ដើមតាក់តែងអនុសញ្ញានេះនៅឆ្នាំ១៩៤៩ និងបញ្ចប់នៅឆ្នាំ១៩៦៩។",
+            "en": "The text says the Commission began drafting in 1949 and finished in 1969."
+          },
+          "page": 103
+        },
+        {
+          "q": {
+            "km": "តើអនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីនីតិនៃសន្ធិសញ្ញារវាងអង្គការអន្តរជាតិ ត្រូវបានធ្វើឡើងនៅឆ្នាំណា?",
+            "en": "In which year was the Vienna Convention on treaties with international organisations concluded?"
+          },
+          "options": {
+            "km": [
+              "ឆ្នាំ១៩៩៦",
+              "ឆ្នាំ១៩៧៨",
+              "ឆ្នាំ១៩៨៦",
+              "ឆ្នាំ១៩៦៩"
+            ],
+            "en": [
+              "1996",
+              "1978",
+              "1986",
+              "1969"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទរាយអនុសញ្ញាទាំង៣ ដោយអនុសញ្ញាស្ដីពីនីតិនៃសន្ធិសញ្ញារវាងអង្គការសហប្រជាជាតិ ឬអង្គការអន្តរជាតិ ធ្វើឡើងនៅថ្ងៃទី២១ ខែមីនា ឆ្នាំ១៩៨៦។",
+            "en": "The text lists the three Conventions, the one on treaties with the UN or international organisations being concluded on 21 March 1986."
+          },
+          "page": 103
+        }
+      ]
+    },
+    {
+      "id": "ch5-l2",
+      "title": {
+        "km": "និយមន័យសន្ធិសញ្ញាអន្តរជាតិ",
+        "en": "Definition of an International Treaty"
+      },
+      "pages": {
+        "from": 103,
+        "to": 104
+      },
+      "objectives": {
+        "km": [
+          "ផ្ដល់និយមន័យនៃពាក្យសន្ធិសញ្ញាអន្តរជាតិតាមអត្ថបទ",
+          "ពន្យល់និយមន័យរបស់លោក អូផែនហុីម អំពីសន្ធិសញ្ញាអន្តរជាតិ",
+          "រៀបរាប់លិខិតផ្សេងៗដែលអាចរាប់បញ្ចូលជាសន្ធិសញ្ញាអន្តរជាតិ"
+        ],
+        "en": [
+          "Define 'international treaty' as presented in the text",
+          "Explain Oppenheim's definition of an international treaty",
+          "List the instruments that may also count as international treaties"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "សន្ធិសញ្ញាអន្តរជាតិគឺជាកិច្ចព្រមព្រៀងអន្តរជាតិដែលធ្វើឡើងរវាងរដ្ឋនិងរដ្ឋ ក្នុងទម្រង់ជាលាយលក្ខណ៍អក្សរ ហើយឋិតនៅក្រោមនីតិអន្តរជាតិ។",
+          "តាមលោក អូផែនហុីម សន្ធិសញ្ញាអន្តរជាតិជាកិច្ចព្រមព្រៀងដែលមានចរិតជាកិច្ចសន្យារវាងរដ្ឋនិងរដ្ឋ ឬអង្គការរបស់រដ្ឋ ដើម្បីបង្កើតសិទ្ធិ និងកាតព្វកិច្ចផ្លូវច្បាប់រវាងភាគីនានា។",
+          "សន្ធិសញ្ញាអន្តរជាតិស្ថិតនៅក្រោមនីតិអន្តរជាតិ ហើយភាគីអាចជារដ្ឋពីរ ឬរដ្ឋច្រើន។",
+          "បច្ចុប្បន្ន ពាក្យសន្ធិសញ្ញាមិនត្រឹមតែសំដៅលើកិច្ចព្រមព្រៀងដែលមានលក្ខណៈជាអន្តរជាតិប៉ុណ្ណោះទេ តែរួមបញ្ចូលលិខិតផ្សេងៗទៀតផងដែរ។",
+          "លិខិតដែលអាចរាប់បញ្ចូលមានដូចជា អនុសញ្ញា កិច្ចព្រមព្រៀង សេចក្តីប្រកាស ធម្មនុញ កតិកាសញ្ញា ច្បាប់ចុងក្រោយ ច្បាប់ទូទៅ និងកិច្ចសន្យាស្ថាប័នសាសនា។",
+          "សន្ធិសញ្ញាមានកំណត់ថ្នាក់ឯកទេសផ្សេងៗគ្នាទៅតាមខ្លឹមសារ និងឈ្មោះរបស់វា។"
+        ],
+        "en": [
+          "An international treaty is an international agreement concluded between states in written form and governed by international law.",
+          "For Oppenheim, a treaty is an agreement of a contractual character between states, or organisations of states, in order to create legal rights and obligations between the parties.",
+          "An international treaty is governed by international law and the parties may be two or more states.",
+          "Today the word 'treaty' is not limited to agreements of an international character; other instruments may also be included.",
+          "Instruments that may be included are conventions, agreements, declarations, charters, covenants, final acts, general acts and contracts of religious institutions.",
+          "Treaties bear different special designations according to their content and name."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "សន្ធិសញ្ញាអន្តរជាតិគឺជាកិច្ចព្រមព្រៀងអន្តរជាតិដែលធ្វើឡើងរវាងរដ្ឋនិងរដ្ឋ",
+          "en": "An international treaty is an international agreement concluded between states and states ...",
+          "page": 103
+        },
+        {
+          "km": "ឋិតនៅក្រោមនីតិអន្តរជាតិ",
+          "en": "... governed by international law.",
+          "page": 103
+        },
+        {
+          "km": "នីតិវីធីអន្តរជាតិមួយចំនួនដូចជាលោក អូផែនហុីម",
+          "en": "Some writers on international law, such as Oppenheim ...",
+          "page": 104
+        },
+        {
+          "km": "សន្ធិសញ្ញាអន្តរជាតិជាកិច្ចព្រមព្រៀងទាំងឡាយដោយមានចរិតជាកិច្ចសន្យារវាងរដ្ឋនិងរដ្ឋ",
+          "en": "... an international treaty is any agreement of a contractual character between states and states ...",
+          "page": 104
+        }
+      ],
+      "terms": [
+        {
+          "km": "សន្ធិសញ្ញាអន្តរជាតិ",
+          "en": "International treaty",
+          "defKm": "កិច្ចព្រមព្រៀងអន្តរជាតិជាលាយលក្ខណ៍អក្សររវាងរដ្ឋនិងរដ្ឋ ដែលឋិតនៅក្រោមនីតិអន្តរជាតិ",
+          "defEn": "An international agreement in written form between states, governed by international law."
+        },
+        {
+          "km": "កិច្ចសន្យា",
+          "en": "Contract",
+          "defKm": "កិច្ចព្រមព្រៀងដែលបង្កើតសិទ្ធិ និងកាតព្វកិច្ចផ្លូវច្បាប់រវាងភាគីនានា",
+          "defEn": "An agreement that creates legal rights and obligations between the parties."
+        },
+        {
+          "km": "អនុសញ្ញា",
+          "en": "Convention",
+          "defKm": "ឈ្មោះដែលគេប្រើសម្រាប់សន្ធិសញ្ញាអន្តរជាតិ ជាពិសេសសន្ធិសញ្ញាពហុភាគី",
+          "defEn": "A name used for an international treaty, especially a multilateral one."
+        },
+        {
+          "km": "ធម្មនុញ",
+          "en": "Charter",
+          "defKm": "លិខិតអន្តរជាតិដែលអាចរាប់បញ្ចូលជាសន្ធិសញ្ញា ដូចជាធម្មនុញសហប្រជាជាតិ",
+          "defEn": "An international instrument that may count as a treaty, such as the UN Charter."
+        },
+        {
+          "km": "កតិកាសញ្ញា",
+          "en": "Covenant",
+          "defKm": "លិខិតអន្តរជាតិមួយប្រភេទដែលរាប់បញ្ចូលជាសន្ធិសញ្ញាអន្តរជាតិ",
+          "defEn": "A type of international instrument counted among international treaties."
+        },
+        {
+          "km": "លាយលក្ខណ៍អក្សរ",
+          "en": "Written form",
+          "defKm": "ការធ្វើជាលាយលក្ខណ៍អក្សរ ដែលជាលក្ខខ័ណ្ឌមួយនៃសន្ធិសញ្ញាអន្តរជាតិ",
+          "defEn": "Being drawn up in writing, a formal condition of an international treaty."
+        },
+        {
+          "km": "អង្គការរបស់រដ្ឋ",
+          "en": "Organisation of states",
+          "defKm": "ស្ថាប័នដែលបង្កើតឡើងដោយរដ្ឋ ហើយអាចជាភាគីនៃសន្ធិសញ្ញាអន្តរជាតិ",
+          "defEn": "An entity created by states which can be a party to an international treaty."
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើតាមអត្ថបទ សន្ធិសញ្ញាអន្តរជាតិត្រូវធ្វើឡើងក្នុងទម្រង់អ្វី?",
+            "en": "According to the text, in what form must an international treaty be made?"
+          },
+          "options": {
+            "km": [
+              "ដោយពាក្យសម្ដីតែប៉ុណ្ណោះ",
+              "ជាលាយលក្ខណ៍អក្សរ",
+              "ដោយការអនុវត្តជាទម្លាប់",
+              "ដោយសញ្ញាសម្ងាត់"
+            ],
+            "en": [
+              "Orally only",
+              "In written form",
+              "By customary practice",
+              "By secret signal"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថាសន្ធិសញ្ញាអន្តរជាតិជាកិច្ចព្រមព្រៀងអន្តរជាតិដែលធ្វើឡើងរវាងរដ្ឋនិងរដ្ឋនៅក្នុងទម្រង់ជាលាយលក្ខណ៍អក្សរ។",
+            "en": "The text states that an international treaty is an international agreement between states in written form."
+          },
+          "page": 103
+        },
+        {
+          "q": {
+            "km": "តើសន្ធិសញ្ញាអន្តរជាតិស្ថិតនៅក្រោមច្បាប់អ្វី?",
+            "en": "Under which law does an international treaty stand?"
+          },
+          "options": {
+            "km": [
+              "នីតិព្រហ្មទណ្ឌជាតិ",
+              "នីតិពាណិជ្ជកម្មជាតិ",
+              "នីតិអន្តរជាតិ",
+              "នីតិពន្ធដារជាតិ"
+            ],
+            "en": [
+              "National criminal law",
+              "National commercial law",
+              "International law",
+              "National tax law"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថាសន្ធិសញ្ញាអន្តរជាតិឋិតនៅក្រោមនីតិអន្តរជាតិ។",
+            "en": "The text states that an international treaty is governed by international law."
+          },
+          "page": 103
+        },
+        {
+          "q": {
+            "km": "តើលោក អូផែនហុីម ឱ្យនិយមន័យសន្ធិសញ្ញាអន្តរជាតិថាជាកិច្ចព្រមព្រៀងដែលមានចរិតអ្វី?",
+            "en": "For Oppenheim, an international treaty is an agreement of what character?"
+          },
+          "options": {
+            "km": [
+              "មានចរិតជាផ្ទាល់ខ្លួន",
+              "មានចរិតជាកិច្ចសន្យា",
+              "មានចរិតជាសាសនា",
+              "មានចរិតជាពាណិជ្ជកម្មតែប៉ុណ្ណោះ"
+            ],
+            "en": [
+              "Purely personal",
+              "Of a contractual character",
+              "Of a religious character",
+              "Purely commercial"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថាលោក អូផែនហុីមឱ្យនិយមន័យថាសន្ធិសញ្ញាអន្តរជាតិជាកិច្ចព្រមព្រៀងដែលមានចរិតជាកិច្ចសន្យារវាងរដ្ឋនិងរដ្ឋ ឬអង្គការរបស់រដ្ឋ។",
+            "en": "The text says Oppenheim defines it as an agreement of a contractual character between states or organisations of states."
+          },
+          "page": 104
+        },
+        {
+          "q": {
+            "km": "តើតាមលោក អូផែនហុីម គោលបំណងនៃសន្ធិសញ្ញាគឺអ្វី?",
+            "en": "According to Oppenheim as quoted in the text, what is the purpose of a treaty?"
+          },
+          "options": {
+            "km": [
+              "បង្កើតសិទ្ធិ និងកាតព្វកិច្ចផ្លូវច្បាប់រវាងភាគីនានា",
+              "បង្កើតសង្គ្រាម",
+              "ផ្ដល់ឯកសិទ្ធិដល់មន្ត្រី",
+              "លុបបំបាត់រដ្ឋតូចៗ"
+            ],
+            "en": [
+              "To create legal rights and obligations between the parties",
+              "To create war",
+              "To grant privileges to officials",
+              "To abolish small states"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថាគោលបំណងគឺដើម្បីបង្កើតបានជាសិទ្ធិនិងកាតព្វកិច្ចផ្លូវច្បាប់រវាងភាគីនានា។",
+            "en": "The text states the purpose is to create legal rights and obligations between the parties."
+          },
+          "page": 104
+        },
+        {
+          "q": {
+            "km": "តើលិខិតណាមួយដែលអត្ថបទមិនបានរាយថាអាចរាប់បញ្ចូលជាសន្ធិសញ្ញាអន្តរជាតិ?",
+            "en": "Which of the following is NOT listed in the text as possibly counting as an international treaty?"
+          },
+          "options": {
+            "km": [
+              "ធម្មនុញ",
+              "កតិកាសញ្ញា",
+              "ច្បាប់សាធារណៈជាតិ",
+              "អនុសញ្ញា"
+            ],
+            "en": [
+              "Charter",
+              "Covenant",
+              "National public law",
+              "Convention"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទរាយលិខិតដូចជា អនុសញ្ញា កិច្ចព្រមព្រៀង សេចក្តីប្រកាស ធម្មនុញ កតិកាសញ្ញា ច្បាប់ចុងក្រោយ និងច្បាប់ទូទៅ ដែលអាចរាប់ជាសន្ធិសញ្ញាអន្តរជាតិ ដោយច្បាប់សាធារណៈជាតិមិនស្ថិតក្នុងបញ្ជីនេះទេ។",
+            "en": "The text lists conventions, agreements, declarations, charters, covenants, final acts and general acts as possibly counting as international treaties; national public law is not among them."
+          },
+          "page": 104
+        },
+        {
+          "q": {
+            "km": "តើតាមអត្ថបទ សន្ធិសញ្ញាអន្តរជាតិអាចធ្វើឡើងរវាងអ្នកណា?",
+            "en": "According to the text, between whom may an international treaty be concluded?"
+          },
+          "options": {
+            "km": [
+              "រវាងបុគ្គលឯកជនតែប៉ុណ្ណោះ",
+              "រវាងខេត្តក្រុងតែប៉ុណ្ណោះ",
+              "រវាងរដ្ឋនិងរដ្ឋ ឬអង្គការរបស់រដ្ឋ",
+              "រវាងក្រុមហ៊ុននិងក្រុមហ៊ុន"
+            ],
+            "en": [
+              "Between private individuals only",
+              "Between provinces and cities only",
+              "Between states and states, or organisations of states",
+              "Between companies and companies"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថាសន្ធិសញ្ញាអន្តរជាតិជាកិច្ចសន្យារវាងរដ្ឋពីរ ឬរដ្ឋច្រើន ហើយអាចធ្វើឡើងដោយរដ្ឋ ឬអង្គការរបស់រដ្ឋ។",
+            "en": "The text says a treaty is a contract between two or several states, concluded by states or organisations of states."
+          },
+          "page": 104
+        },
+        {
+          "q": {
+            "km": "តើបច្ចុប្បន្ន ពាក្យ សន្ធិសញ្ញាអន្តរជាតិ អាចរាប់បញ្ចូលលិខិតផ្សេងៗដែរឬទេ?",
+            "en": "Today, can the term 'international treaty' also cover other instruments?"
+          },
+          "options": {
+            "km": [
+              "បាន ដូចជាអនុសញ្ញា និងធម្មនុញ",
+              "ទេ មានតែកិច្ចព្រមព្រៀង",
+              "បាន តែចំពោះពេលសង្គ្រាម",
+              "ទេ មានតែលិខិតផ្ទាល់ខ្លួន"
+            ],
+            "en": [
+              "Yes, such as a convention or a charter",
+              "No, only agreements",
+              "Yes, but only in wartime",
+              "No, only personal instruments"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថានាពេលបច្ចុប្បន្ននេះ ពាក្យសន្ធិសញ្ញាមិនត្រឹមតែជាកិច្ចព្រមព្រៀងដែលមានលក្ខណៈជាអន្តរជាតិប៉ុណ្ណោះទេ តែលិខិតផ្សេងៗទៀតក៏អាចរាប់បញ្ចូលបានដែរ។",
+            "en": "The text says that today the term is not limited to agreements of an international character; other instruments may also count."
+          },
+          "page": 104
+        }
+      ]
+    },
+    {
+      "id": "ch5-l3",
+      "title": {
+        "km": "គោលការណ៍នៃច្បាប់សន្ធិសញ្ញា និងប្រភេទសន្ធិសញ្ញា",
+        "en": "Principles of Treaty Law and Types of Treaties"
+      },
+      "pages": {
+        "from": 104,
+        "to": 108
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់គោលការណ៍សំខាន់ៗនៃច្បាប់សន្ធិសញ្ញា",
+          "បកស្រាយពាក្យ Bona Fide, Pacta sunt Servanda និង Rebus sic Stantibus",
+          "បែងចែកសន្ធិសញ្ញាទ្វេភាគី និងសន្ធិសញ្ញាពហុភាគី"
+        ],
+        "en": [
+          "Explain the main principles of treaty law",
+          "Interpret the maxims bona fide, pacta sunt servanda and rebus sic stantibus",
+          "Distinguish bilateral treaties from multilateral treaties"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "សន្ធិសញ្ញាអន្តរជាតិទាំងឡាយត្រូវស្ថិតនៅក្រោមអនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីច្បាប់សន្ធិសញ្ញា ដែលបង្កើតឡើងនៅថ្ងៃទី២៣ ខែឧសភា ឆ្នាំ១៩៦៩ និងចូលជាធរមាននៅថ្ងៃទី២៧ ខែមករា ឆ្នាំ១៩៨០។",
+          "គោលការណ៍យល់ព្រមស្ម័គ្រចិត្តដោយសេរី និងសុឆន្ទៈល្អ (Bona Fide) ហាមប្រាមមិនឱ្យមានការគំរាមកំហែង ឬការប្រើប្រាស់កម្លាំងនៅក្នុងការចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ។",
+          "សន្ធិសញ្ញាមានចំណងខាងផ្លូវច្បាប់ចំពោះតែរដ្ឋជាភាគី ហើយមិនអាចមានចំណងភ្ជាប់ទៅនឹងរដ្ឋទីបីដែលមិនមែនជាភាគីឡើយ។",
+          "គោលការណ៍ Pacta sunt Servanda មានន័យថាសន្ធិសញ្ញាត្រូវតែគោរព និងមានចំណងលើរដ្ឋហត្ថលេខីទាំងឡាយ។",
+          "គោលការណ៍ Rebus sic Stantibus ទាក់ទងនឹងការផ្លាស់ប្តូរនូវមាត្រា ឬ(ខ) ដែលអាចធ្វើឱ្យសន្ធិសញ្ញាឈានទៅដល់ការបញ្ចប់។",
+          "សន្ធិសញ្ញាអន្តរជាតិមានទម្រង់ពីរគឺ សន្ធិសញ្ញាទ្វេភាគីរវាងរដ្ឋអធិបតេយ្យ និងសន្ធិសញ្ញាពហុភាគីដែលធ្វើឡើងដោយរដ្ឋអធិបតេយ្យច្រើនរួមគ្នា។"
+        ],
+        "en": [
+          "All international treaties are governed by the Vienna Convention on the Law of Treaties, concluded on 23 May 1969 and in force since 27 January 1980.",
+          "The principle of free consent and good faith (bona fide) prohibits threat or use of force in concluding an international treaty.",
+          "A treaty has a legal bond only for the states that are parties and cannot bind a third state which is not a party.",
+          "Pacta sunt servanda means that treaties must be respected and are binding on the signatory states.",
+          "Rebus sic stantibus concerns a change in an article or paragraph of a treaty that may bring the treaty to termination.",
+          "International treaties have two forms: a bilateral treaty between sovereign states, and a multilateral treaty concluded by several sovereign states together."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "គោលការណ៍នេះចេញមកពីភាសាឡាតាំងថា Bona Fide មានន័យថា",
+          "en": "This principle comes from the Latin phrase Bona Fide, which means ...",
+          "page": 104
+        },
+        {
+          "km": "គឺមានចំណងខាងផ្លូវច្បាប់ ចំពោះតែ និង ភាគីដែលចុះហត្ថលេខាតែ ប៉ុណ្ណោះ",
+          "en": "... has a legal bond only for the parties which have signed [it] ...",
+          "page": 105
+        },
+        {
+          "km": "គ.គោលការណ៍ទីពីរ មានគេហៅថា Pacta sunt Servanda មានន័យថា",
+          "en": "The second principle is called Pacta sunt Servanda, which means ...",
+          "page": 105
+        },
+        {
+          "km": "គោលការណ៍នេះជាភាសាច្បាប់ដើម គឺ Rebus sic stantibus មានន័យថា",
+          "en": "This principle, in the original legal Latin, is Rebus sic stantibus, which means ...",
+          "page": 105
+        }
+      ],
+      "terms": [
+        {
+          "km": "គោលការណ៍យល់ព្រមស្ម័គ្រចិត្តដោយសេរី",
+          "en": "Free consent",
+          "defKm": "គោលការណ៍ដែលរដ្ឋភាគីចូលចុះហត្ថលេខាលើសន្ធិសញ្ញាដោយស្ម័គ្រចិត្ត",
+          "defEn": "The principle that a state party concludes a treaty of its own free will."
+        },
+        {
+          "km": "សុឆន្ទៈល្អ",
+          "en": "Good faith (bona fide)",
+          "defKm": "ការធ្វើសកម្មភាពដោយចេតនាស្មោះត្រង់ ជាគោលការណ៍មួយនៃច្បាប់សន្ធិសញ្ញា",
+          "defEn": "Acting honestly and sincerely; a principle of treaty law."
+        },
+        {
+          "km": "Pacta sunt Servanda",
+          "en": "Pacta sunt servanda",
+          "defKm": "គោលការណ៍ថាសន្ធិសញ្ញាត្រូវតែគោរព និងមានចំណងលើរដ្ឋហត្ថលេខី",
+          "defEn": "The principle that treaties must be observed and bind the signatory states."
+        },
+        {
+          "km": "Rebus sic Stantibus",
+          "en": "Rebus sic stantibus",
+          "defKm": "គោលការណ៍ថាការផ្លាស់ប្តូរនូវមាត្រា ឬខ អាចធ្វើឱ្យសន្ធិសញ្ញាឈានទៅដល់ការបញ្ចប់",
+          "defEn": "The principle that a change in the terms of a treaty may bring it to termination."
+        },
+        {
+          "km": "សន្ធិសញ្ញាទ្វេភាគី",
+          "en": "Bilateral treaty",
+          "defKm": "សន្ធិសញ្ញាដែលធ្វើឡើងរវាងរដ្ឋអធិបតេយ្យពីរ",
+          "defEn": "A treaty concluded between two sovereign states."
+        },
+        {
+          "km": "សន្ធិសញ្ញាពហុភាគី",
+          "en": "Multilateral treaty",
+          "defKm": "សន្ធិសញ្ញាដែលធ្វើឡើងដោយរដ្ឋអធិបតេយ្យច្រើនរួមគ្នា",
+          "defEn": "A treaty concluded by several sovereign states together."
+        },
+        {
+          "km": "រដ្ឋទីបី",
+          "en": "Third state",
+          "defKm": "រដ្ឋដែលមិនមែនជាភាគីនៃសន្ធិសញ្ញា ហើយមិនត្រូវចងភ្ជាប់ដោយសន្ធិសញ្ញានោះ",
+          "defEn": "A state that is not a party to a treaty and is not bound by it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើពាក្យឡាតាំងណាដែលសម្គាល់គោលការណ៍យល់ព្រមស្ម័គ្រចិត្តដោយសេរី និងសុឆន្ទៈល្អ?",
+            "en": "Which Latin phrase expresses the principle of free consent and good faith?"
+          },
+          "options": {
+            "km": [
+              "Pacta sunt Servanda",
+              "Rebus sic Stantibus",
+              "Bona Fide",
+              "Pacta tertiis"
+            ],
+            "en": [
+              "Pacta sunt Servanda",
+              "Rebus sic Stantibus",
+              "Bona Fide",
+              "Pacta tertiis"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថាគោលការណ៍យល់ព្រមស្ម័គ្រចិត្តដោយសេរីនិងសុឆន្ទៈល្អ ចេញមកពីភាសាឡាតាំងថា Bona Fide។",
+            "en": "The text says the principle of free consent and good faith comes from the Latin Bona Fide."
+          },
+          "page": 104
+        },
+        {
+          "q": {
+            "km": "តើអត្ថបទចែងថាហាមប្រាមអ្វីនៅក្នុងការចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ?",
+            "en": "What does the text say is prohibited in concluding an international treaty?"
+          },
+          "options": {
+            "km": [
+              "ការបកប្រែជាភាសាជាតិ",
+              "ការចរចាជាលាយលក្ខណ៍អក្សរ",
+              "ការគំរាមកំហែង ឬការប្រើប្រាស់កម្លាំង",
+              "ការមានភាគីច្រើន"
+            ],
+            "en": [
+              "Translation into a national language",
+              "Written negotiation",
+              "Threat or use of force",
+              "Having several parties"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថាមានគោលការណ៍ហាមប្រាមមិនឱ្យមានការគំរាមកំហែង ឬការប្រើប្រាស់កម្លាំងនៅក្នុងការចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ។",
+            "en": "The text states there is a principle prohibiting threat or use of force in signing an international treaty."
+          },
+          "page": 105
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍ Pacta sunt Servanda មានន័យដូចម្ដេច?",
+            "en": "What does the principle Pacta sunt Servanda mean?"
+          },
+          "options": {
+            "km": [
+              "សន្ធិសញ្ញាត្រូវតែគោរព",
+              "សន្ធិសញ្ញាត្រូវធ្វើជាភាសាបរទេស",
+              "សន្ធិសញ្ញាត្រូវបញ្ចប់ដោយសង្គ្រាម",
+              "សន្ធិសញ្ញាមិនចងភ្ជាប់រដ្ឋទីបី"
+            ],
+            "en": [
+              "Treaties must be respected",
+              "Treaties must be made in a foreign language",
+              "Treaties end through war",
+              "Treaties do not bind third states"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា Pacta sunt Servanda មានន័យថាគោលការណ៍សន្ធិសញ្ញាត្រូវតែគោរព ហើយសន្ធិសញ្ញាត្រូវមានចំណងខាងផ្លូវច្បាប់ទៅលើរដ្ឋហត្ថលេខី។",
+            "en": "The text says Pacta sunt Servanda means treaty principles must be respected and a treaty is legally binding on the signatory states."
+          },
+          "page": 105
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍ដែលហាមសន្ធិសញ្ញាចងភ្ជាប់រដ្ឋទីបី មានឈ្មោះអ្វីក្នុងអត្ថបទ?",
+            "en": "What is the name given in the text to the rule that a treaty cannot bind a third state?"
+          },
+          "options": {
+            "km": [
+              "Rule of pacta tertiis nec nocent nec prosunt",
+              "Bona Fide",
+              "Rebus sic Stantibus",
+              "Pacta sunt Servanda"
+            ],
+            "en": [
+              "The rule of pacta tertiis nec nocent nec prosunt",
+              "Bona Fide",
+              "Rebus sic Stantibus",
+              "Pacta sunt Servanda"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថាសន្ធិសញ្ញាមិនអាចមានចំណងភ្ជាប់ទៅនឹងរដ្ឋទីបីដែលមិនមែនជាភាគី ដែលគេហៅថា Rule of pacta tertiis nec nocent nec prosunt។",
+            "en": "The text says a treaty cannot be linked to a third state which is not a party; this is called the rule of pacta tertiis nec nocent nec prosunt."
+          },
+          "page": 105
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍ Rebus sic Stantibus ទាក់ទងនឹងអ្វី?",
+            "en": "What does the principle Rebus sic stantibus concern?"
+          },
+          "options": {
+            "km": [
+              "ការបកប្រែសន្ធិសញ្ញា",
+              "ការផ្ដល់សច្ចាប័ន",
+              "ការចុះហត្ថលេខាដោយបង្ខំ",
+              "ការផ្លាស់ប្តូរនូវមាត្រា ឬខ ដែលអាចធ្វើឱ្យសន្ធិសញ្ញាឈានទៅដល់ការបញ្ចប់"
+            ],
+            "en": [
+              "Translating a treaty",
+              "Ratification",
+              "Signing under coercion",
+              "A change in an article or paragraph that may bring a treaty to termination"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថា Rebus sic stantibus មានន័យថារាល់ការផ្លាស់ប្តូរនូវមាត្រា ឬ(ខ)ទាំងឡាយណាមួយរបស់សន្ធិសញ្ញា អាចធ្វើឱ្យសន្ធិសញ្ញាឈានទៅដល់ការបញ្ចប់។",
+            "en": "The text says Rebus sic stantibus means any change in an article or paragraph of a treaty may bring the treaty to termination."
+          },
+          "page": 105
+        },
+        {
+          "q": {
+            "km": "តើតាមអត្ថបទ សន្ធិសញ្ញាអន្តរជាតិមានទម្រង់ប៉ុន្មាន?",
+            "en": "According to the text, how many forms do international treaties have?"
+          },
+          "options": {
+            "km": [
+              "ទម្រង់បួន",
+              "មានតែទម្រង់ពហុភាគីប៉ុណ្ណោះ",
+              "ទម្រង់ពីរគឺទ្វេភាគី និងពហុភាគី",
+              "ទម្រង់បី"
+            ],
+            "en": [
+              "Four",
+              "Only the multilateral form",
+              "Two: bilateral and multilateral",
+              "Three"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថាជាទូទៅសន្ធិសញ្ញាអន្តរជាតិមានទម្រង់ពីរគឺ សន្ធិសញ្ញាទ្វេរភាគីរវាងរដ្ឋអធិបតេយ្យ និងសន្ធិសញ្ញាពហុភាគីធ្វើឡើងដោយអធិបតេយ្យច្រើនរួមគ្នា។",
+            "en": "The text states that treaties generally have two forms: bilateral between sovereign states, and multilateral concluded by several sovereign states together."
+          },
+          "page": 105
+        },
+        {
+          "q": {
+            "km": "តើក្នុងចំណោមខាងក្រោម សន្ធិសញ្ញាណាជាឧទាហរណ៍នៃសន្ធិសញ្ញាពហុភាគី តាមអត្ថបទ?",
+            "en": "Which of the following is given in the text as an example of a multilateral treaty?"
+          },
+          "options": {
+            "km": [
+              "កិច្ចព្រមព្រៀងស្ដីពីពន្ធដាររវាងរដ្ឋពីរ",
+              "កិច្ចព្រមព្រៀងរវាងកម្ពុជា និងសហរដ្ឋអាមេរិក ឆ្នាំ២០០៣",
+              "កិច្ចព្រមព្រៀងរវាងរដ្ឋពីរ",
+              "ធម្មនុញ្ញាសហប្រជាជាតិ ឬកិច្ចព្រមព្រៀងទីក្រុងប៉ារីស ១៩៩១"
+            ],
+            "en": [
+              "A tax agreement between two states",
+              "The 2003 agreement between Cambodia and the United States",
+              "An agreement between two states",
+              "The Charter of the United Nations or the 1991 Paris Agreements"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថាចំពោះសន្ធិសញ្ញាពហុភាគីមានដូចជា ធម្មនុញ្ញាសហប្រជាជាតិ ឬកិច្ចព្រមព្រៀងទីក្រុងប៉ារីស ១៩៩១ ស្ដីពីសន្តិភាពនៅកម្ពុជា។",
+            "en": "The text cites the UN Charter and the 1991 Paris Agreements on peace in Cambodia as multilateral treaties."
+          },
+          "page": 105
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1210 @@
+{
+  "id": "ch4",
+  "num": 4,
+  "title": {
+    "km": "ប្រភពនៃច្បាប់អន្តរជាតិ",
+    "en": "Sources of International Law"
+  },
+  "pages": {
+    "from": 78,
+    "to": 100
+  },
+  "summary": {
+    "km": "ជំពូកនេះពន្យល់អំពីប្រភពនៃច្បាប់អន្តរជាតិ ដែលមានចែងក្នុងមាត្រា៣៨ នៃលក្ខន្តិកៈនៃតុលាការយុត្តិធម៌អន្តរជាតិ គឺ សន្ធិសញ្ញាអន្តរជាតិ ទំនៀមទម្លាប់អន្តរជាតិ គោលការណ៍ទូទៅនៃច្បាប់ និងសេចក្តីសម្រេចរបស់តុលាការ។ ជំពូកនេះក៏ពន្យល់ផងដែរអំពីវិសាលភាពនៃនីតិអន្តរជាតិ និងវិធាននៃការប្រើប្រាស់កម្លាំង ដូចជា វិធានការផ្លូវច្បាប់ ការហ៊ុមព័ទ្ធដោយសន្តិវិធី វិធានការសងសឹក និងការធ្វើអន្តរាគមន៍។",
+    "en": "This chapter explains the sources of international law set out in Article 38 of the Statute of the International Court of Justice: international treaties, international custom, general principles of law, and judicial decisions. It also explains the scope of international law and the rules governing the use of force, including legal measures, peaceful blockade, reprisals and intervention."
+  },
+  "lessons": [
+    {
+      "id": "ch4-l1",
+      "title": {
+        "km": "លក្ខន្តិកៈនៃតុលាការយុត្តិធម៌អន្តរជាតិ និងប្រភពនៃច្បាប់អន្តរជាតិ",
+        "en": "The Statute of the International Court of Justice and the Sources of International Law"
+      },
+      "pages": {
+        "from": 78,
+        "to": 82
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អត្ថន័យនៃប្រភពនៃច្បាប់អន្តរជាតិ",
+          "រាយប្រភពទាំងបួនដែលមានចែងក្នុងមាត្រា៣៨ នៃលក្ខន្តិកៈនៃតុលាការយុត្តិធម៌អន្តរជាតិ",
+          "វិភាគមូលហេតុដែលធ្វើឱ្យសន្ធិសញ្ញាអន្តរជាតិក្លាយជាប្រភពដ៏សំខាន់",
+          "ពន្យល់លក្ខខណ្ឌនៃការកើតឡើងនៃទំនៀមទម្លាប់អន្តរជាតិ"
+        ],
+        "en": [
+          "Explain the meaning of the sources of international law",
+          "List the four sources set out in Article 38 of the Statute of the International Court of Justice",
+          "Analyse why international treaties are a principal source of international law",
+          "Explain the conditions for the formation of international custom"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "ប្រភពនៃច្បាប់អន្តរជាតិមានចែងក្នុងមាត្រា៣៨ នៃលក្ខន្តិកៈនៃតុលាការយុត្តិធម៌អន្តរជាតិ",
+          "ប្រភពទាំងបួនមាន៖ សន្ធិសញ្ញាអន្តរជាតិ ទំនៀមទម្លាប់អន្តរជាតិ គោលការណ៍ទូទៅនៃច្បាប់ និងសេចក្តីសម្រេចរបស់តុលាការ ឬសាលាជំនុំជម្រះ ព្រមទាំងកិច្ចការយុត្តិធម៌",
+          "សន្ធិសញ្ញាត្រូវបានចាត់ទុកជាប្រភពដ៏សំខាន់ និងជាលិខិតដ៏សំខាន់បំផុតសម្រាប់ការរីកចម្រើននៃនីតិអន្តរជាតិសាធារណៈ",
+          "សន្ធិសញ្ញាអន្តរជាតិត្រូវធ្វើឡើងជាលាយលក្ខណ៍អក្សរ ហើយមានឈ្មោះច្រើនបែប ដូចជា កតិកាសញ្ញា កិច្ចព្រមព្រៀង និងអនុសញ្ញា",
+          "ទំនៀមទម្លាប់អន្តរជាតិជាប្រភពសំខាន់ទី២ ហើយកើតឡើងពីការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋ និងការទទួលយកការអនុវត្តន៍នោះថាជាកាតព្វកិច្ចផ្លូវច្បាប់"
+        ],
+        "en": [
+          "The sources of international law are laid down in Article 38 of the Statute of the International Court of Justice",
+          "The four sources are: international treaties, international custom, general principles of law, and judicial decisions and the teachings of publicists",
+          "Treaties are regarded as an important source and the most important instrument for the progressive development of public international law",
+          "International treaties are concluded in written form and carry many different names, such as covenant, agreement and convention",
+          "International custom is the second important source and arises from actual state practice together with acceptance of that practice as a legal obligation"
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ចំណុចផ្ដើមនៃប្រភពរបស់នីតិអន្តរជាតិគឺមានចែងក្នុងមាត្រា៣៨នៃលក្ខន្តិកៈរបស់តុលាការ",
+          "en": "The starting point of the sources of international law is laid down in Article 38 of the Statute of the International Court of Justice",
+          "page": 79
+        },
+        {
+          "km": "៣.គោលការណ៍ទូទៅនៃច្បាប់ដែលស្គាល់ដោយអារ្យប្រជាជាតិ",
+          "en": "3. The general principles of law recognised by civilised nations",
+          "page": 79
+        },
+        {
+          "km": "ប្រភពសំខាន់ទី២នៃនីតិអន្តរជាតិគឺទំនៀមទម្លាប់។",
+          "en": "The second important source of international law is custom.",
+          "page": 80
+        },
+        {
+          "km": "-ទំនៀមទម្លាប់អន្តរជាតិជាសកម្មភាបជាក់ស្ដែងជាទូទៅដែលយកបានក្នុងឋានៈជាច្បាប់មួយ។",
+          "en": "International custom is general practice accepted in the capacity of law.",
+          "page": 81
+        }
+      ],
+      "terms": [
+        {
+          "km": "ប្រភពនៃច្បាប់អន្តរជាតិ",
+          "en": "Sources of international law",
+          "defKm": "ទម្រង់ ឬមូលដ្ឋានដែលបង្កើតឱ្យមានវិធាននៃច្បាប់អន្តរជាតិ",
+          "defEn": "The forms or bases from which rules of international law are created"
+        },
+        {
+          "km": "លក្ខន្តិកៈនៃតុលាការយុត្តិធម៌អន្តរជាតិ",
+          "en": "Statute of the International Court of Justice",
+          "defKm": "ឯកសារច្បាប់ដែលបង្កើតតុលាការយុត្តិធម៌អន្តរជាតិ ហើយមាត្រា៣៨ ចែងអំពីប្រភពនៃច្បាប់អន្តរជាតិ",
+          "defEn": "The legal instrument establishing the ICJ, whose Article 38 sets out the sources of international law"
+        },
+        {
+          "km": "សន្ធិសញ្ញាអន្តរជាតិ",
+          "en": "International treaty",
+          "defKm": "កិច្ចព្រមព្រៀងជាលាយលក្ខណ៍អក្សររវាងរដ្ឋពីរ ឬច្រើន ដែលស្ថិតនៅក្រោមនីតិអន្តរជាតិ",
+          "defEn": "A written agreement between two or more states, governed by international law"
+        },
+        {
+          "km": "ទំនៀមទម្លាប់អន្តរជាតិ",
+          "en": "International custom",
+          "defKm": "ភស្តុតាងនៃការអនុវត្តទូទៅដែលត្រូវបានរដ្ឋនានាទទួលស្គាល់ថាជាច្បាប់",
+          "defEn": "Evidence of general practice accepted by states as law"
+        },
+        {
+          "km": "គោលការណ៍ទូទៅនៃច្បាប់",
+          "en": "General principles of law",
+          "defKm": "គោលការណ៍ដែលត្រូវបានទទួលស្គាល់ជាទូទៅក្នុងប្រព័ន្ធច្បាប់របស់រដ្ឋទាំងឡាយ",
+          "defEn": "Principles recognised generally in the legal systems of states"
+        },
+        {
+          "km": "ការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋ",
+          "en": "State practice",
+          "defKm": "សកម្មភាពជាក់ស្ដែងរបស់រដ្ឋទាំងឡាយ ដែលជាធាតុទី១ នៃការកើតឡើងនៃទំនៀមទម្លាប់",
+          "defEn": "The actual conduct of states, the first element in the formation of custom"
+        },
+        {
+          "km": "សេចក្តីសម្រេចរបស់តុលាការ",
+          "en": "Judicial decision",
+          "defKm": "សេចក្តីសម្រេចរបស់តុលាការ ឬសាលាជំនុំជម្រះ ដែលជាធាតុសំខាន់នៃការបង្កើតនីតិសហគមន៍អន្តរជាតិ",
+          "defEn": "A decision of a court or tribunal, an important element in forming the law of the international community"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើចំណុចផ្ដើមនៃប្រភពនៃច្បាប់អន្តរជាតិមានចែងនៅក្នុងឯកសារណា?",
+            "en": "Where is the starting point of the sources of international law set out?"
+          },
+          "options": {
+            "km": [
+              "មាត្រា៣៨ នៃលក្ខន្តិកៈនៃតុលាការយុត្តិធម៌អន្តរជាតិ",
+              "ធម្មនុញ្ញសហប្រជាជាតិ",
+              "សន្ធិសញ្ញាវ៉េស្តផលឡា",
+              "អនុសញ្ញាទីក្រុងវីយ៉េន"
+            ],
+            "en": [
+              "Article 38 of the Statute of the ICJ",
+              "The UN Charter",
+              "The Peace of Westphalia",
+              "The Vienna Convention"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ចំណុចផ្ដើមនៃប្រភពរបស់នីតិអន្តរជាតិគឺមានចែងក្នុងមាត្រា៣៨ នៃលក្ខន្តិកៈរបស់តុលាការយុត្តិធម៌អន្តរជាតិ។",
+            "en": "The text states that the starting point of the sources of international law is Article 38 of the Statute of the ICJ."
+          },
+          "page": 79
+        },
+        {
+          "q": {
+            "km": "តើប្រភពណាមួយមិនមានចែងក្នុងបញ្ជីប្រភពទាំងបួននៃមាត្រា៣៨?",
+            "en": "Which of the following is NOT among the four sources listed in Article 38?"
+          },
+          "options": {
+            "km": [
+              "សន្ធិសញ្ញាអន្តរជាតិ",
+              "ទំនៀមទម្លាប់អន្តជាតិ",
+              "គោលការណ៍ទូទៅនៃច្បាប់",
+              "រដ្ឋធម្មនុញ្ញរបស់រដ្ឋនីមួយៗ"
+            ],
+            "en": [
+              "International treaties",
+              "International custom",
+              "General principles of law",
+              "The national constitution of each state"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "ប្រភពទាំងបួនគឺ សន្ធិសញ្ញា ទំនៀមទម្លាប់ គោលការណ៍ទូទៅនៃច្បាប់ និងសេចក្តីសម្រេចរបស់តុលាការ ព្រមទាំងកិច្ចការយុត្តិធម៌។",
+            "en": "The four are treaties, custom, general principles of law, and judicial decisions together with the teachings of publicists."
+          },
+          "page": 79
+        },
+        {
+          "q": {
+            "km": "តើសន្ធិសញ្ញាអន្តរជាតិត្រូវបានគេចាត់ទុកថាជាអ្វី?",
+            "en": "How are international treaties characterised in the text?"
+          },
+          "options": {
+            "km": [
+              "ជាប្រភពដ៏សំខាន់ និងជាលិខិតដ៏សំខាន់បំផុតដើម្បីធ្វើឱ្យនីតិអន្តរជាតិសាធារណៈរីកចម្រើន",
+              "ជាប្រភពដែលគ្មានចរិតផ្លូវច្បាប់",
+              "ជាឯកសារដែលអនុវត្តបានតែក្នុងពេលមានសង្គ្រាម",
+              "ជាឯកសារដែលគ្មានចំណងកាតព្វកិច្ច"
+            ],
+            "en": [
+              "An important source and the most important instrument for the progressive development of public international law",
+              "A source with no legal character",
+              "A document applicable only in time of war",
+              "A document creating no binding obligation"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា សន្ធិសញ្ញាអន្តរជាតិត្រូវបានគេចាត់ទុកថាជាប្រភពដ៏សំខាន់ និងជាលិខិតដ៏សំខាន់បំផុតដើម្បីធ្វើឱ្យនីតិអន្តរជាតិសាធារណៈមានការរីកចម្រើន។",
+            "en": "The text says treaties are an important source and the most important instrument for the progressive development of public international law."
+          },
+          "page": 80
+        },
+        {
+          "q": {
+            "km": "តើមុនពេលបង្កើតអង្គការសហប្រជាជាតិ ប្រភពណាដែលសំខាន់ជាងគេនៃនីតិអន្តរជាតិសាធារណៈ?",
+            "en": "Before the creation of the United Nations, which source was the most important in public international law?"
+          },
+          "options": {
+            "km": [
+              "សន្ធិសញ្ញាអន្តរជាតិ",
+              "ទំនៀមទម្លាប់អន្តរជាតិ",
+              "គោលការណ៍ទូទៅនៃច្បាប់",
+              "សេចក្តីសម្រេចរបស់តុលាការ"
+            ],
+            "en": [
+              "International treaties",
+              "International custom",
+              "General principles of law",
+              "Judicial decisions"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា នៅមុនពេលបង្កើតអង្គការសហប្រជាជាតិ ទំនៀមទម្លាប់អន្តរជាតិជាប្រភពសំខាន់ជាងគេ។",
+            "en": "The text says that before the UN was created, international custom was the most important source."
+          },
+          "page": 80
+        },
+        {
+          "q": {
+            "km": "តើកត្តាពីរណាខ្លះដែលបង្កើតនីតិអន្តរជាតិជាទំនៀមទម្លាប់?",
+            "en": "Which two factors create customary international law?"
+          },
+          "options": {
+            "km": [
+              "ការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋ និងការព្រមទទួលយកថាជាកាតព្វកិច្ចផ្លូវច្បាប់",
+              "ការចុះហត្ថលេខាលើសន្ធិសញ្ញា និងការផ្ដល់សច្ចាប័ន",
+              "សេចក្តីសម្រេចរបស់តុលាការ និងមតិយោបល់អ្នកច្បាប់",
+              "ការបោះឆ្នោតនៅមហាសន្និបាត និងក្រុមប្រឹក្សាសន្តិសុខ"
+            ],
+            "en": [
+              "Actual state practice and acceptance of that practice as a legal obligation",
+              "Signature of a treaty and its ratification",
+              "Judicial decisions and the views of jurists",
+              "Votes in the General Assembly and the Security Council"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងកត្តាពីរគឺ ក. ការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋនានា និង ខ. ការព្រមទទួលយកការអនុវត្តន៍ជាក់ស្ដែងនោះថាជាកាតព្វកិច្ចទៅតាមផ្លូវច្បាប់។",
+            "en": "The text lists two factors: (a) actual state practice, and (b) acceptance of that practice as a legal obligation."
+          },
+          "page": 81
+        },
+        {
+          "q": {
+            "km": "តើធាតុផ្សំណាមួយស្ថិតក្នុងចំណោមធាតុទាំងបួននៃទំនៀមទម្លាប់អន្តរជាតិ យោងតាមអត្ថបទ?",
+            "en": "Which of the following is one of the four elements of international custom given in the text?"
+          },
+          "options": {
+            "km": [
+              "មតិទាំងគំនិតយោបល់អ្នកច្បាប់",
+              "ការបោះឆ្នោតជាឯកច្ឆ័ន្ទ",
+              "ការទទួលស្គាល់ដោយក្រុមប្រឹក្សាសន្តិសុខ",
+              "ការចុះហត្ថលេខាដោយរដ្ឋទាំងអស់"
+            ],
+            "en": [
+              "The opinions and thinking of jurists",
+              "A unanimous vote",
+              "Recognition by the Security Council",
+              "Signature by all states"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ធាតុទាំងបួនគឺ ថេរៈវេលាយូរអង្វែង ឯកសណ្ឋាននិងស្ថេរភាព ឱកាសការណ៍នៃការអនុវត្តន៍ជាក់ស្ដែង និងមតិទាំងគំនិតយោបល់អ្នកច្បាប់។",
+            "en": "The four elements are duration of time, uniformity and stability, occasions of actual practice, and the opinions of jurists."
+          },
+          "page": 81
+        },
+        {
+          "q": {
+            "km": "តើអត្ថបទលើកឡើងយ៉ាងណាអំពីសន្ធិសញ្ញាទាំងអស់?",
+            "en": "What does the text say about treaties in general?"
+          },
+          "options": {
+            "km": [
+              "មិនមែនសន្ធិសញ្ញា ឬកិច្ចព្រមព្រៀងទាំងអស់សុទ្ធតែជាប្រភពនៃនីតិអន្តរជាតិទេ",
+              "សន្ធិសញ្ញាទាំងអស់សុទ្ធតែជាប្រភពនៃនីតិអន្តរជាតិ",
+              "មានតែសន្ធិសញ្ញារវាងរដ្ឋពីរទេដែលជាប្រភព",
+              "មានតែសន្ធិសញ្ញារបស់អង្គការសហប្រជាជាតិទេដែលជាប្រភព"
+            ],
+            "en": [
+              "Not every treaty or agreement is a source of international law",
+              "Every treaty is a source of international law",
+              "Only bilateral treaties are sources",
+              "Only UN treaties are sources"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទបញ្ជាក់ថា រាល់សន្ធិសញ្ញា ឬកិច្ចព្រមព្រៀងមិនមែនសុទ្ធតែជាប្រភពនៃនីតិអន្តរជាតិនោះទេ។",
+            "en": "The text notes that not all treaties or agreements are sources of international law."
+          },
+          "page": 80
+        }
+      ]
+    },
+    {
+      "id": "ch4-l2",
+      "title": {
+        "km": "សេចក្តីសម្រេចរបស់តុលាការ និងការអនុវត្តនីតិអន្តរជាតិ",
+        "en": "Judicial Decisions and the Application of International Law"
+      },
+      "pages": {
+        "from": 82,
+        "to": 85
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់តួនាទីនៃសេចក្តីសម្រេចរបស់តុលាការក្នុងការបង្កើតនីតិសហគមន៍អន្តរជាតិ",
+          "ពន្យល់មូលហេតុដែលធ្វើឱ្យការដោះស្រាយអធិករណ៍អន្តរជាតិមានភាពស្មុគស្មាញ",
+          "រៀបរាប់អធិករណ៍រវាងប្រទេសនីការ៉ាហ្គា និងសហរដ្ឋអាមេរិក និងលទ្ធផលរបស់វា"
+        ],
+        "en": [
+          "Explain the role of judicial decisions in forming the law of the international community",
+          "Explain why the settlement of international disputes is more complex",
+          "Describe the Nicaragua v. United States case and its outcome"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "សេចក្តីសម្រេចរបស់តុលាការ ឬសាលាជំនុំជម្រះ គឺជាធាតុដ៏សំខាន់មួយនៃការបង្កើតនីតិសហគមន៍អន្តរជាតិ",
+          "តុលាការយុត្តិធម៌អន្តរជាតិមិនមានសមត្ថកិច្ចលើជម្លោះឯកជន ឬបុគ្គលទេ ហើយមានតែរដ្ឋទេដែលអាចជាភាគី",
+          "សេចក្តីសម្រេចរបស់តុលាការយុត្តិធម៌អន្តរជាតិពុំមានលក្ខណៈបង្ខិតបង្ខំ",
+          "ការដោះស្រាយអធិករណ៍អន្តរជាតិមានកត្តាបីដែលធ្វើឱ្យវាស្មុគស្មាញ",
+          "នៅក្នុងអធិករណ៍នីការ៉ាហ្គា និងសហរដ្ឋអាមេរិក តុលាការបានសម្រេចថាខ្លួនមានសមត្ថកិច្ច ហើយថាសហរដ្ឋអាមេរិកបានបំពានទៅលើទំនៀមទម្លាប់អន្តរជាតិ"
+        ],
+        "en": [
+          "The decisions of courts and tribunals are an important element in forming the law of the international community",
+          "The ICJ has no jurisdiction over private or individual disputes; only states may appear as parties",
+          "ICJ decisions have no coercive character",
+          "Three factors make the judicial settlement of international disputes complex",
+          "In Nicaragua v. United States the Court held that it had jurisdiction and that the United States had violated customary international law"
+        ]
+      },
+      "quotes": [
+        {
+          "km": "បញ្ញត្តិណាដែលតម្រូវឱ្យរដ្ឋទាំងឡាយទទួលស្គាល់តុលាការយុត្តិធម៌អន្តរជាតិនោះទេ។",
+          "en": "There is no provision requiring states to recognise the International Court of Justice.",
+          "page": 82
+        },
+        {
+          "km": "ប៉ុន្តែមានតែរដ្ឋទេដែលអាចមានវត្តមានជាភាគីនៅចំពោះមុខតុលាការនេះបាន",
+          "en": "But only states may appear as parties before this Court",
+          "page": 82
+        },
+        {
+          "km": "អធិករណ៍រវាងប្រទេសនីការ៉ាហ្គា និងសហរដ្ឋអាមេរិក នៅទសវត្សទី៨០។",
+          "en": "The case between Nicaragua and the United States in the 1980s.",
+          "page": 83
+        },
+        {
+          "km": "តុលាការអន្តរជាតិ  នៅថ្ងៃទី ២៤ ខែ វិច្ឆិកា ឆ្នាំ១៩៨៦ បានសម្រេចថា អធិករណ៍នេះជាសមត្ថកិច្ច",
+          "en": "On 24 November 1986 the International Court of Justice decided that the case fell within its competence",
+          "page": 84
+        }
+      ],
+      "terms": [
+        {
+          "km": "អធិករណ៍",
+          "en": "Case (dispute)",
+          "defKm": "ជម្លោះ ឬរឿងក្តីរវាងរដ្ឋនិងរដ្ឋ ដែលអាចយកទៅដោះស្រាយតាមផ្លូវតុលាការ",
+          "defEn": "A dispute or case between states which may be brought for judicial settlement"
+        },
+        {
+          "km": "យុត្តាធិការ",
+          "en": "Jurisdiction",
+          "defKm": "អំណាចរបស់តុលាការក្នុងការបកស្រាយច្បាប់ និងវិនិច្ឆ័យអធិករណ៍",
+          "defEn": "The power of a court to interpret the law and adjudicate a case"
+        },
+        {
+          "km": "សាលដីកាវិនិច្ឆ័យ",
+          "en": "Judgment",
+          "defKm": "សេចក្តីសម្រេចរបស់តុលាការនៅក្នុងរឿងក្តីមួយ",
+          "defEn": "The decision of a court in a given case"
+        },
+        {
+          "km": "ការបង្ខិតបង្ខំ",
+          "en": "Coercion (enforcement)",
+          "defKm": "លក្ខណៈនៃការបង្ខំឱ្យអនុវត្ត ដែលសេចក្តីសម្រេចរបស់តុលាការយុត្តិធម៌អន្តរជាតិពុំមាន",
+          "defEn": "The coercive character that ICJ decisions lack"
+        },
+        {
+          "km": "អធិបតេយ្យ",
+          "en": "Sovereignty",
+          "defKm": "អំណាចខ្ពស់បំផុតរបស់រដ្ឋលើទឹកដី និងកិច្ចការខាងក្នុងរបស់ខ្លួន",
+          "defEn": "The supreme authority of a state over its territory and internal affairs"
+        },
+        {
+          "km": "គោលការណ៍មិនធ្វើអន្តរាគមន៍",
+          "en": "Principle of non-intervention",
+          "defKm": "គោលការណ៍ហាមឃាត់រដ្ឋមួយមិនឱ្យជ្រៀតជ្រែកកិច្ចការផ្ទៃក្នុងរបស់រដ្ឋដទៃ",
+          "defEn": "The principle prohibiting a state from interfering in the internal affairs of another state"
+        },
+        {
+          "km": "អង្គការសហប្រជាជាតិ",
+          "en": "United Nations",
+          "defKm": "អង្គការអន្តរជាតិ ដែលតុលាការយុត្តិធម៌អន្តរជាតិជាស្ថាប័នច្បាប់ដ៏សំខាន់មួយរបស់ខ្លួន",
+          "defEn": "The international organisation of which the ICJ is one of the principal legal organs"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើនៅថ្ងៃទី២៤ ខែវិច្ឆិកា ឆ្នាំ១៩៨៦ តុលាការអន្តរជាតិបានសម្រេចយ៉ាងណាក្នុងអធិករណ៍នីការ៉ាហ្គា?",
+            "en": "What did the International Court of Justice decide on 24 November 1986 in the Nicaragua case?"
+          },
+          "options": {
+            "km": [
+              "ថាអធិករណ៍នេះជាសមត្ថកិច្ចរបស់តុលាការអន្តរជាតិ",
+              "ថាតុលាការគ្មានសមត្ថកិច្ច",
+              "ថាអធិករណ៍នេះជាជម្លោះនយោបាយសុទ្ធ",
+              "ថាភាគីទាំងពីរត្រូវឈប់នាំរឿងទៅតុលាការ"
+            ],
+            "en": [
+              "That the case fell within its jurisdiction",
+              "That it had no jurisdiction",
+              "That the case was purely political",
+              "That both parties must stop bringing cases"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "តុលាការអន្តរជាតិបានសម្រេចថា អធិករណ៍នេះជាសមត្ថកិច្ចរបស់តុលាការអន្តរជាតិ ដោយយោងលើកត្តាពីរ ហើយកត្តាទី១ គឺអធិករណ៍នេះមានចរិកផ្លូវច្បាប់ មិនមែនជាអធិករណ៍ដោយអាវុធ។",
+            "en": "The Court held that the case fell within its jurisdiction on two grounds; the first was that the dispute was legal and not an armed dispute."
+          },
+          "page": 84
+        },
+        {
+          "q": {
+            "km": "តើសហរដ្ឋអាមេរិកបានជំទាស់យ៉ាងណាចំពោះពាក្យបណ្ដឹងរបស់នីការ៉ាហ្គា?",
+            "en": "How did the United States object to Nicaragua's application?"
+          },
+          "options": {
+            "km": [
+              "ថាជម្លោះនេះជាជម្លោះផ្នែកនយោបាយ មិនមែនជាជម្លោះខាងផ្នែកច្បាប់",
+              "ថាតុលាការគ្មានចៅក្រមគ្រប់គ្រាន់",
+              "ថានីការ៉ាហ្គាមិនមែនជារដ្ឋអធិបតេយ្យ",
+              "ថាអធិករណ៍នេះស្ថិតនៅក្រោមយុត្តាធិការរបស់តុលាការជាតិ"
+            ],
+            "en": [
+              "That it was a political dispute, not a legal dispute",
+              "That the Court had too few judges",
+              "That Nicaragua was not a sovereign state",
+              "That the case fell under national jurisdiction"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "សហរដ្ឋអាមេរិកបានជំទាស់ថា តុលាការអន្តរជាតិមិនមានយុត្តាធិការលើអធិករណ៍នេះទេ ពីព្រោះជម្លោះនេះជាជម្លោះផ្នែកនយោបាយ មិនមែនជាជម្លោះខាងផ្នែកច្បាប់។",
+            "en": "The US objected that the Court had no jurisdiction because the dispute was political and not legal."
+          },
+          "page": 84
+        },
+        {
+          "q": {
+            "km": "តើនៅថ្ងៃណាដែលតុលាការបានប្រើយុត្តិសាស្ត្រសម្រាប់អនុវត្ត សម្រេចឱ្យសហរដ្ឋអាមេរិកគោរពអធិបតេយ្យរបស់នីការ៉ាហ្គា?",
+            "en": "On what date did the Court, using provisional measures, order the United States to respect Nicaragua's sovereignty?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី១០ ខែឧសភា ឆ្នាំ១៩៨៥",
+              "ថ្ងៃទី២៤ ខែវិច្ឆិកា ឆ្នាំ១៩៨៦",
+              "ថ្ងៃទី០៤ ខែមករា ឆ្នាំ១៩៨២",
+              "ថ្ងៃទី២៦ ខែមេសា ឆ្នាំ១៩៨៤"
+            ],
+            "en": [
+              "10 May 1985",
+              "24 November 1986",
+              "4 January 1982",
+              "26 April 1984"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា នៅថ្ងៃទី១០ ខែឧសភា ឆ្នាំ១៩៨៥ តុលាការបានប្រើប្រាស់យុត្តិសាស្ត្រសម្រាប់អនុវត្ត ដោយសម្រេចឱ្យសហរដ្ឋអាមេរិកគោរពអធិបតេយ្យ បូរណភាពដែនដី និងឯករាជ្យខាងនយោបាយរបស់ប្រទេសនីការ៉ាហ្គា។",
+            "en": "The text states that on 10 May 1985 the Court used provisional measures, ordering the United States to respect Nicaragua's sovereignty, territorial integrity and political independence."
+          },
+          "page": 84
+        },
+        {
+          "q": {
+            "km": "តើមានតែអ្នកណាទេដែលអាចមានវត្តមានជាភាគីនៅចំពោះមុខតុលាការយុត្តិធម៌អន្តរជាតិ?",
+            "en": "Who alone may appear as a party before the International Court of Justice?"
+          },
+          "options": {
+            "km": [
+              "រដ្ឋតែប៉ុណ្ណោះ",
+              "បុគ្គល និងក្រុមហ៊ុនឯកជន",
+              "អង្គការមិនមែនរដ្ឋាភិបាល",
+              "គ្រប់អង្គការអន្តរជាតិ"
+            ],
+            "en": [
+              "States only",
+              "Individuals and private companies",
+              "Non-governmental organisations",
+              "All international organisations"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា មានតែរដ្ឋទេដែលអាចមានវត្តមានជាភាគីនៅចំពោះមុខតុលាការនេះបាន។",
+            "en": "The text says that only states may appear as parties before this Court."
+          },
+          "page": 82
+        },
+        {
+          "q": {
+            "km": "តើមានកត្តាប៉ុន្មានដែលធ្វើឱ្យការដោះស្រាយអធិករណ៍ក្នុងប្រព័ន្ធនីតិអន្តរជាតិមានភាពស្មុគស្មាញ?",
+            "en": "How many factors make the settlement of disputes in the international legal system complex?"
+          },
+          "options": {
+            "km": [
+              "បី",
+              "ពីរ",
+              "បួន",
+              "ប្រាំ"
+            ],
+            "en": [
+              "Three",
+              "Two",
+              "Four",
+              "Five"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា មូលហេតុមានកត្តាបីសំខាន់ គឺ តុលាការពិភពលោកមិនមានសមត្ថកិច្ចលើជម្លោះឯកជន ការគ្មានចរិតបង្ខិតបង្ខំ និងបញ្ហាទម្រង់អធិករណ៍ដែលអាចយកមកដោះស្រាយបាន។",
+            "en": "The text says there are three main factors: the world court's lack of jurisdiction over private disputes, the absence of coercive character, and the question of which disputes may be brought."
+          },
+          "page": 83
+        },
+        {
+          "q": {
+            "km": "តើចៅក្រមណាដែលមិនយល់ព្រមទទួលយកសាលដីការរបស់តុលាការក្នុងអធិករណ៍នីការ៉ាហ្គា?",
+            "en": "Which judge refused to accept the Court's judgment in the Nicaragua case?"
+          },
+          "options": {
+            "km": [
+              "លោក ស្តេបេល (Stephen S Chwebel)",
+              "លោក កាល់ ដូនិច",
+              "លោក ជ៉ូជី ណាហ្គុយម៉ូ",
+              "លោក ឃីត វ៉ល់ហេម"
+            ],
+            "en": [
+              "Judge Stephen S. Chwebel",
+              "Karl Dönitz",
+              "Chuichi Nagumo",
+              "Kurt Waldheim"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ចៅក្រមសញ្ជតិអាមេរិក លោក ស្តេបេល មិនយល់ព្រមទទួលយកសាលដីការរបស់តុលាការនេះទេ។",
+            "en": "The American judge Stephen S. Chwebel did not accept the Court's judgment."
+          },
+          "page": 85
+        }
+      ]
+    },
+    {
+      "id": "ch4-l3",
+      "title": {
+        "km": "វិសាលភាព និងការបកស្រាយនៃនីតិអន្តរជាតិ",
+        "en": "The Scope and Interpretation of International Law"
+      },
+      "pages": {
+        "from": 85,
+        "to": 90
+      },
+      "objectives": {
+        "km": [
+          "ចែកប្រភេទនៃនីតិអន្តរជាតិជាបីប្រភេទ",
+          "ពន្យល់ទំនាក់ទំនងរវាងនីតិជាតិ និងនីតិអន្តរជាតិ",
+          "រៀបរាប់គោលការណ៍សំខាន់ៗដែលកើតចេញពីសន្ធិសញ្ញាវ៉េស្តផលឡា",
+          "ពន្យល់ពីសិទ្ធិការពារខ្លួនតាមមាត្រា៥១ នៃធម្មនុញ្ញសហប្រជាជាតិ"
+        ],
+        "en": [
+          "Classify international law into its three types",
+          "Explain the relationship between national law and international law",
+          "List the key principles arising from the Peace of Westphalia",
+          "Explain the right of self-defence under Article 51 of the UN Charter"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "នីតិអន្តរជាតិត្រូវបានរដ្ឋនានាទទួលយកដោយបែងចែកជាបីប្រភេទ៖ នីតិអន្តរជាតិសាកល នីតិអន្តរជាតិទូទៅ និងនីតិអន្តរជាតិដោយឡែក",
+          "រដ្ឋមានកាតព្វកិច្ចធ្វើឱ្យនីតិជាតិរបស់ខ្លួនស្របទៅតាមវិធាននានានៃនីតិអន្តរជាតិ",
+          "នៅពេលមានជម្លោះរវាងរដ្ឋនិងរដ្ឋ តុលាការយុត្តិធម៌អន្តរជាតិជាស្ថាប័នកាត់សេចក្តីដោយឈរលើគោលការណ៍នៃសន្ធិសញ្ញា ឬកិច្ចព្រមព្រៀង",
+          "មាត្រា៥១ នៃធម្មនុញ្ញសហប្រជាជាតិ ទទួលស្គាល់សិទ្ធិរបស់រដ្ឋក្នុងការពារខ្លួន នៅពេលមានការវាយប្រហារដោយកម្លាំងប្រដាប់អាវុធ",
+          "សន្ធិសញ្ញាវ៉េស្តផលឡា បានបង្កប់ទស្សនាទានស្តីពីប្រជាជាតិ-រដ្ឋអធិបតេយ្យ ដោយឈរលើបូរណភាពដែនដី និងការបញ្ចៀសតួអង្គផ្តាច់មុខ",
+          "គោលការណ៍ដែលកើតចេញពីប្រព័ន្ធវ៉េស្តផលឡា មាន អធិបតេយ្យភាព សិទ្ធិសម្រេចជោគវាសនាដោយខ្លួនឯង សមភាពរវាងរដ្ឋ និងការមិនជ្រៀតជ្រែក"
+        ],
+        "en": [
+          "International law is accepted by states in three categories: universal, general and particular international law",
+          "States are obliged to bring their national law into conformity with the rules of international law",
+          "When a dispute arises between states, the ICJ decides it on the basis of treaty or agreement",
+          "Article 51 of the UN Charter recognises the right of states to self-defence when an armed attack occurs",
+          "The Peace of Westphalia embedded the doctrine of the sovereign nation-state, based on territorial integrity and the avoidance of a single dominant power",
+          "The principles arising from the Westphalian system include sovereignty, self-determination, equality of states and non-intervention"
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ជាទូទៅ នីតិអន្តរជាតិត្រូវបានប្រជាជាតិទាំងឡាយទទួលយកដោយបែងចែកជាបីប្រភេទគឺ ៖",
+          "en": "Generally, international law is accepted by nations as divided into three categories:",
+          "page": 85
+        },
+        {
+          "km": "នីតិអន្តរជាតិមានវិសាលភាពក្នុកាអនុវត្តជាក់ស្ដែងទៅតាមមុខសញ្ញាបី",
+          "en": "International law has a scope that in actual practice falls under three headings",
+          "page": 86
+        },
+        {
+          "km": "សន្ធសញ្ញាវ៉េស្តផលឡា ឬហៅថា សន្ធិសញ្ញាសន្តិភាពវ៉េស្តផលឡា គឺជាសន្ធិសញ្ញាពីរដែលធ្វើ",
+          "en": "The Treaty of Westphalia, also called the Peace of Westphalia, consists of two treaties concluded",
+          "page": 89
+        },
+        {
+          "km": "ទី២គោលការណ៍សមភាពរវាងរដ្ឋ និងរដ្ឋ។",
+          "en": "2. The principle of equality between state and state.",
+          "page": 90
+        }
+      ],
+      "terms": [
+        {
+          "km": "វិសាលភាពនៃនីតិអន្តរជាតិ",
+          "en": "Scope of international law",
+          "defKm": "វិសាលភាពនៃការអនុវត្តជាក់ស្ដែងនៃនីតិអន្តរជាតិ ដែលអត្ថបទចែកជាមុខសញ្ញាបី",
+          "defEn": "The extent to which international law applies in practice, divided in the text into three headings"
+        },
+        {
+          "km": "នីតិអន្តរជាតិសាកល",
+          "en": "Universal international law",
+          "defKm": "វិធានទាំងឡាយដែលប្រជាជាតិនានាព្រមទទួលយកថាជានីតិអន្តរជាតិ",
+          "defEn": "The rules that nations accept as international law"
+        },
+        {
+          "km": "នីតិអន្តរជាតិទូទៅ",
+          "en": "General international law",
+          "defKm": "វិធានទាំងឡាយដែលបណ្ដាប្រទេសភាគច្រើនសុខចិត្តទទួលយក នៅពេលច្បាប់នោះសមស្របតាមលក្ខណៈភូមិសាស្ត្ររបស់ខ្លួន",
+          "defEn": "The rules that most states accept when the law suits their geographical situation"
+        },
+        {
+          "km": "នីតិអន្តរជាតិដោយឡែក",
+          "en": "Particular international law",
+          "defKm": "សន្ធិសញ្ញា ឬកិច្ចព្រមព្រៀងនានារវាងរដ្ឋពីរ ឬច្រើន",
+          "defEn": "Treaties or agreements between two or more states"
+        },
+        {
+          "km": "សន្ធិសញ្ញាវ៉េស្តផលឡា",
+          "en": "Peace of Westphalia",
+          "defKm": "សន្ធិសញ្ញាពីរដែលធ្វើឡើងនៅឆ្នាំ១៦៤៨ ដើម្បីបញ្ចប់សង្គ្រាម៣០ឆ្នាំ និងសង្គ្រាម៨ឆ្នាំ",
+          "defEn": "The two treaties concluded in 1648 ending the Thirty Years' War and the Eight Years' War"
+        },
+        {
+          "km": "បូរណភាពដែនដី",
+          "en": "Territorial integrity",
+          "defKm": "គោលការណ៍ដែលហាមឃាត់ការបំពាន ឬការបំបែកទឹកដីរបស់រដ្ឋដទៃ",
+          "defEn": "The principle prohibiting encroachment on or dismemberment of another state's territory"
+        },
+        {
+          "km": "សិទ្ធិសម្រេចជោគវាសនាដោយខ្លួនឯង",
+          "en": "Right of self-determination",
+          "defKm": "សិទ្ធិសំខាន់នៃនយោបាយរបស់ប្រជាជាតិក្នុងការសម្រេចជោគវាសនារបស់ខ្លួន",
+          "defEn": "The key political right of a people to decide its own destiny"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើនីតិអន្តរជាតិត្រូវបានបែងចែកជាប៉ុន្មានប្រភេទ?",
+            "en": "Into how many categories is international law divided?"
+          },
+          "options": {
+            "km": [
+              "បីប្រភេទ",
+              "ពីរប្រភេទ",
+              "បួនប្រភេទ",
+              "ប្រាំប្រភេទ"
+            ],
+            "en": [
+              "Three",
+              "Two",
+              "Four",
+              "Five"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា នីតិអន្តរជាតិត្រូវបានបែងចែកជាបីប្រភេទ គឺ នីតិអន្តរជាតិសាកល នីតិអន្តរជាតិទូទៅ និងនីតិអន្តរជាតិដោយឡែក។",
+            "en": "The text divides international law into three categories: universal, general and particular."
+          },
+          "page": 85
+        },
+        {
+          "q": {
+            "km": "តើនីតិអន្តរជាតិដោយឡែករួមបញ្ចូលអ្វី?",
+            "en": "What does particular international law include?"
+          },
+          "options": {
+            "km": [
+              "សន្ធិសញ្ញា ឬកិច្ចព្រមព្រៀងនានារវាងរដ្ឋពីរ ឬច្រើន",
+              "វិធានដែលប្រជាជាតិទាំងអស់ទទួលយកជាសកល",
+              "ច្បាប់ស្តីពីដែនសមុទ្រ",
+              "សេចក្តីសម្រេចរបស់ក្រុមប្រឹក្សាសន្តិសុខតែប៉ុណ្ណោះ"
+            ],
+            "en": [
+              "Treaties or agreements between two or more states",
+              "Rules accepted universally by all nations",
+              "The law of the sea",
+              "Security Council decisions only"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា នីតិអន្តរជាតិដោយឡែក រួមបញ្ចូលនូវសន្ធិសញ្ញាកិច្ចព្រមព្រៀងនានារវាងរដ្ឋពីរ ឬច្រើន ឧទាហរណ៍ កិច្ចព្រមព្រៀងខាងវិស័យពាណិជ្ជកម្ម។",
+            "en": "The text says particular international law covers treaties or agreements between two or more states, such as trade agreements."
+          },
+          "page": 85
+        },
+        {
+          "q": {
+            "km": "តើក្រុមប្រទេសហ្សេ ២០ (G-20) ត្រូវបានបង្កើតឡើងនៅថ្ងៃណា?",
+            "en": "When was the G-20 group established?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី២០ ខែសីហា ឆ្នាំ២០០៣",
+              "ថ្ងៃទី២៦ ខែមិថុនា ឆ្នាំ២០១០",
+              "ថ្ងៃទី០១ ខែកក្កដា ឆ្នាំ២០១០",
+              "ថ្ងៃទី២៤ ខែឧសភា ឆ្នាំ២០១០"
+            ],
+            "en": [
+              "20 August 2003",
+              "26 June 2010",
+              "1 July 2010",
+              "24 May 2010"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ក្រុមប្រទេសហ្សេ ២០ ត្រូវបានបង្កើតឡើងនៅថ្ងៃទី២០ ខែសីហា ឆ្នាំ២០០៣ ហើយបច្ចុប្បន្នមានសមាជិក ២៣ រដ្ឋ។",
+            "en": "The text states the G-20 was established on 20 August 2003 and now has 23 member states."
+          },
+          "page": 87
+        },
+        {
+          "q": {
+            "km": "តើមូលនិធិដែលបង្កើតឡើងនៅសន្និសិទ្ធកំពូលនៅទីក្រុងតូរ៉ុងតូ មានឈ្មោះអ្វី?",
+            "en": "What is the name of the fund created at the Toronto summit?"
+          },
+          "options": {
+            "km": [
+              "មូលនិធិមូស្ខូកា (Fund Muskoka)",
+              "មូលនិធិសហប្រជាជាតិ",
+              "មូលនិធិ UNDP",
+              "មូលនិធិតូរ៉ុងតូ"
+            ],
+            "en": [
+              "The Muskoka Fund",
+              "The UN Fund",
+              "The UNDP Fund",
+              "The Toronto Fund"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា មូលនិធិនេះត្រូវបានគេប្រសិទ្ធនាមថា មូលនិធិមូស្ខូកា Fund Muskoka ដើម្បីជួយកាត់បន្ថយអត្រាមរណៈមាតា និងទារក។",
+            "en": "The text says the fund was named the Muskoka Fund, to help reduce maternal and infant mortality."
+          },
+          "page": 87
+        },
+        {
+          "q": {
+            "km": "តើមាត្រា៥១ នៃធម្មនុញ្ញសហប្រជាជាតិ ទទួលស្គាល់សិទ្ធិអ្វី?",
+            "en": "What right does Article 51 of the UN Charter recognise?"
+          },
+          "options": {
+            "km": [
+              "សិទ្ធិរបស់រដ្ឋក្នុងការពារខ្លួន នៅពេលមានការវាយប្រហារដោយកម្លាំងប្រដាប់អាវុធ",
+              "សិទ្ធិក្នុងការធ្វើសង្គ្រាមឈ្លានពាន",
+              "សិទ្ធិក្នុងការដាក់ទណ្ឌកម្មសេដ្ឋកិច្ច",
+              "សិទ្ធិក្នុងការបង្កើតតុលាការជាតិ"
+            ],
+            "en": [
+              "The right of states to defend themselves when attacked by armed force",
+              "The right to wage a war of aggression",
+              "The right to impose economic sanctions",
+              "The right to establish national courts"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា មាត្រាទី៥១ នៃធម្មនុញ្ញសហប្រជាជាតិបានទទួលស្គាល់ថា រដ្ឋទាំងឡាយមានសិទ្ធិដើម្បីការពារខ្លួន នៅក្នុងករណីដែលមានការវាយប្រហារដោយកម្លាំងប្រដាប់អាវុធមកលើខ្លួន។",
+            "en": "The text says Article 51 recognises that states have the right to self-defence when an armed attack is made against them."
+          },
+          "page": 89
+        },
+        {
+          "q": {
+            "km": "តើការវាយប្រហារលើមូលដ្ឋានកងទ័ពអាកាសសហរដ្ឋអាមេរិកនៅកំពង់ផែផៀលហាបូរ បានចាប់ផ្ដើមនៅថ្ងៃណា?",
+            "en": "When did the attack on the US air base at Pearl Harbor begin?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី០៧ ខែធ្នូ ឆ្នាំ១៩៤១",
+              "ថ្ងៃទី១៥ ខែឧសភា ឆ្នាំ១៦៤៨",
+              "ថ្ងៃទី០៤ ខែមករា ឆ្នាំ១៩៨២",
+              "ថ្ងៃទី២៦ ខែមេសា ឆ្នាំ១៩៨៤"
+            ],
+            "en": [
+              "7 December 1941",
+              "15 May 1648",
+              "4 January 1982",
+              "26 April 1984"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការវាយប្រហារដោយកងទ័ពអាកាសរបស់ជប៉ុន មកលើមូលដ្ឋានកងទ័ពអាកាសរបស់សហរដ្ឋអាមេរិកនៅកំពង់ផែផៀលហាបូរ បានចាប់ផ្ដើមឡើងនៅវាលាព្រឹកព្រលឹម ថ្ងៃទី០៧ ខែធ្នូ ឆ្នាំ១៩៤១។",
+            "en": "The text says the Japanese air attack on the US base at Pearl Harbor began at dawn on 7 December 1941."
+          },
+          "page": 88
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍ណាមួយស្ថិតក្នុងចំណោមគោលការណ៍ដែលកើតចេញពីប្រព័ន្ធវ៉េស្តផលឡា?",
+            "en": "Which of the following is among the principles arising from the Westphalian system?"
+          },
+          "options": {
+            "km": [
+              "គោលការណ៍មិនជ្រៀតជ្រែករបស់រដ្ឋមួយ ចូលទៅក្នុងកិច្ចការរបស់រដ្ឋផ្សេងទៀត",
+              "គោលការណ៍នៃការគ្រប់គ្រងដោយអាណានិគម",
+              "គោលការណ៍នៃសង្គ្រាមឈ្លានពានស្របច្បាប់",
+              "គោលការណ៍នៃការលុបបំបាត់អធិបតេយ្យភាពរដ្ឋ"
+            ],
+            "en": [
+              "The principle that a state must not interfere in the affairs of another state",
+              "The principle of colonial rule",
+              "The principle that aggressive war is lawful",
+              "The principle of abolishing state sovereignty"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទរៀបរាប់គោលការណ៍ដូចជា អធិបតេយ្យរបស់រដ្ឋទាំងឡាយ និងសិទ្ធិសម្រេចជោគវាសនាដោយខ្លួនឯង សមភាពរវាងរដ្ឋ និងការមិនជ្រៀតជ្រែករបស់រដ្ឋមួយចូលទៅក្នុងកិច្ចការរបស់រដ្ឋផ្សេងទៀត។",
+            "en": "The text lists sovereignty and self-determination, equality between states, and the principle that a state must not interfere in another state's affairs."
+          },
+          "page": 90
+        },
+        {
+          "q": {
+            "km": "តើច្បាប់ប្រឆាំងភេរវកម្មរបស់កម្ពុជា ត្រូវបានរដ្ឋសភាអនុម័តនៅថ្ងៃណា?",
+            "en": "When was Cambodia's anti-terrorism law adopted by the National Assembly?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី២៦ ខែមិថុនា ឆ្នាំ២០០៧",
+              "ថ្ងៃទី១០ ខែកក្ដដា ឆ្នាំ២០០៧",
+              "ថ្ងៃទី២០ ខែសីហា ឆ្នាំ២០០៣",
+              "ថ្ងៃទី២១ ខែធ្នូ ឆ្នាំ១៩៦៥"
+            ],
+            "en": [
+              "26 June 2007",
+              "10 October 2007",
+              "20 August 2003",
+              "21 December 1965"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ច្បាប់នេះរដ្ឋសភាអនុម័តនៅថ្ងៃទី២៦ ខែមិថុនា ឆ្នាំ២០០៧ ហើយត្រូវបានព្រឹទ្ធសភាយល់ព្រមនៅថ្ងៃទី១០ ខែកក្ដដា ឆ្នាំ២០០៧។",
+            "en": "The text says the National Assembly adopted it on 26 June 2007 and the Senate approved it on 10 October 2007."
+          },
+          "page": 86
+        }
+      ]
+    },
+    {
+      "id": "ch4-l4",
+      "title": {
+        "km": "៣.២ នីតិអន្តរជាតិ និងការប្រើប្រាស់កម្លាំង",
+        "en": "International Law and the Use of Force"
+      },
+      "pages": {
+        "from": 90,
+        "to": 100
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់លក្ខខណ្ឌទាំងបីនៃការប្រើកម្លាំងដែលស្របទៅតាមច្បាប់",
+          "ពន្យល់ពីវិធានការហ៊ុមព័ទ្ធដោយសន្តិវិធី និងមាត្រា៤១ និង៤២ នៃធម្មនុញ្ញសហប្រជាជាតិ",
+          "បែងចែកវិធានការសងសឹកក្នុងផ្លូវច្បាប់ និងវិធានការសងសឹកក្រៅផ្លូវច្បាប់",
+          "ពន្យល់ពីអន្តរាគមន៍ និងប្រភេទទាំងបីរបស់វា"
+        ],
+        "en": [
+          "Explain the three conditions for the lawful use of force",
+          "Explain peaceful blockade and Articles 41 and 42 of the UN Charter",
+          "Distinguish lawful reprisals from unlawful reprisals",
+          "Explain intervention and its three types"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "ធម្មនុញ្ញសហប្រជាជាតិ ជំពូកទី១ មាត្រាទី៤ ចែងឱ្យសមាជិកចៀសវាងការគំរាមកំហែង ឬការប្រើកម្លាំងប្រឆាំងនឹងបូរណភាពដែនដី ឬឯករាជ្យនយោបាយរបស់រដ្ឋណាមួយ",
+          "ការប្រើកម្លាំងដែលស្របតាមច្បាប់មានលក្ខខណ្ឌបី៖ ការពារខ្លួន សកម្មភាពក្នុងក្របខណ្ឌអង្គការសហប្រជាជាតិ និងការរៀបចំថែរក្សាសន្តិភាពក្នុងតំបន់",
+          "សេចក្តីសម្រេចរួមគ្នាដើម្បីសន្តិភាព A/RES/377 ដែលមហាសន្និបាតអនុម័តតាំងពីថ្ងៃទី០៣ ខែវិច្ឆិកា ឆ្នាំ១៩៥០ អនុញ្ញាតឱ្យមហាសន្និបាតមានសិទ្ធិអំណាចប្រើកម្លាំងកងយោធា",
+          "ក្រុមប្រឹក្សាសន្តិសុខអាចចាត់វិធានការដោយអនុលោមតាមមាត្រា៤១ និង៤២ ដូចជាការដាក់ទណ្ឌកម្មខាងសេដ្ឋកិច្ច និងការប្រើកម្លាំងយោធា",
+          "វិធានការសងសឹកក្រៅផ្លូវច្បាប់ ត្រូវមានលក្ខខណ្ឌបី៖ មានសកម្មភាពផ្ទុយនឹងនីតិអន្តរជាតិពីមុន ការទាមទារសំណងមិនបានជោគជ័យ និងការគិតគូរចំពោះការខូចខាតដែលកើតឡើង",
+          "អន្តរាគមន៍ដាច់ខាតមានបីប្រភេទ៖ ការធ្វើអន្តរាគមន៍ក្នុងប្រទេស ក្រៅប្រទេស និងដោយដាក់ទណ្ឌកម្ម"
+        ],
+        "en": [
+          "Chapter 1, Article 4 of the UN Charter requires members to refrain from the threat or use of force against the territorial integrity or political independence of any state",
+          "The lawful use of force has three conditions: self-defence, action within the UN framework, and regional peacekeeping arrangements",
+          "The Uniting for Peace resolution A/RES/377, adopted by the General Assembly on 3 November 1950, allows the Assembly to authorise the use of armed force",
+          "The Security Council may take measures under Articles 41 and 42, such as economic sanctions and the use of military force",
+          "Unlawful reprisals must meet three conditions: a prior act contrary to international law, the failure of a claim for reparation, and consideration of the injury caused",
+          "Absolute intervention has three types: intervention inside a state, outside a state, and intervention by imposing sanctions"
+        ]
+      },
+      "quotes": [
+        {
+          "km": "៣.២.នីតិអន្តរជាតិ និង ការប្រើប្រាស់កម្លាំង",
+          "en": "3.2. International law and the use of force",
+          "page": 90
+        },
+        {
+          "km": "ក.នៅក្នុងករណីប្រើកម្លាំងដើម្បីការពារខ្លួន ដោយរដ្ឋតែឯកឯង ឬ រដ្ឋទាំងឡាយ ដែលរួមគ្នាជាសម្ព័ន្ធ",
+          "en": "a. In the case of the use of force in self-defence, by a single state or by states acting together in alliance",
+          "page": 91
+        },
+        {
+          "km": "វិធានការសងសឹកក្នុងផ្លូវច្បាប់ ជាសកម្មភាពប្រឆាំងដោយស្របច្បាប់ដែលធ្វើឡើងដោយរដ្ឋ",
+          "en": "Lawful reprisals are counter-measures taken lawfully by one state",
+          "page": 94
+        },
+        {
+          "km": "វិធានការសងសឹកក្រៅផ្លូវច្បាប់ ឬហៅម្យ៉ាងទៀតថាការផ្ចាញ់តប ជាវិធានកាបង្ខិតបង្ខំដែលធ្វើ",
+          "en": "Unlawful reprisals, otherwise called retaliation, are coercive measures taken",
+          "page": 95
+        }
+      ],
+      "terms": [
+        {
+          "km": "ការប្រើប្រាស់កម្លាំង",
+          "en": "Use of force",
+          "defKm": "ការប្រើកម្លាំងកងទ័ពដើម្បីដោះស្រាយបញ្ហា ដែលនីតិវិទូប្រសិទ្ធនាមថា the jus ad bellum",
+          "defEn": "The use of armed force to settle a dispute, which jurists call the jus ad bellum"
+        },
+        {
+          "km": "សិទ្ធិការពារខ្លួន",
+          "en": "Right of self-defence",
+          "defKm": "សិទ្ធិរបស់រដ្ឋក្នុងការការពារខ្លួន នៅពេលមានការវាយប្រហារដោយកម្លាំងប្រដាប់អាវុធ ដូចមានចែងក្នុងមាត្រា៥១",
+          "defEn": "The right of a state to defend itself when attacked by armed force, as provided in Article 51"
+        },
+        {
+          "km": "សិទ្ធិវ៉េតូ",
+          "en": "Veto (special dissent)",
+          "defKm": "សិទ្ធិជំទាស់ពិសេសរបស់សមាជិកអន្ត្រៃយ៍នៃក្រុមប្រឹក្សាសន្តិសុខ ដែលរារាំងការអនុម័តសេចក្តីសម្រេច",
+          "defEn": "The special right of dissent of the permanent members of the Security Council, which blocks the adoption of a resolution"
+        },
+        {
+          "km": "វិធានការសងសឹកក្នុងផ្លូវច្បាប់",
+          "en": "Lawful reprisal",
+          "defKm": "សកម្មភាពប្រឆាំងដោយស្របច្បាប់ដែលធ្វើឡើងដោយរដ្ឋមួយ ដើម្បីឆ្លើយតបទៅនឹងសកម្មភាពអមិត្តដោយចេតនារបស់រដ្ឋមួយទៀត",
+          "defEn": "A lawful counter-measure taken by one state in response to the deliberate unfriendly act of another state"
+        },
+        {
+          "km": "វិធានការសងសឹកក្រៅផ្លូវច្បាប់",
+          "en": "Unlawful reprisal (retorsion)",
+          "defKm": "វិធានការបង្ខិតបង្ខំដែលធ្វើឡើងដើម្បីឱ្យរដ្ឋដែលប្រព្រឹត្តអំពើដកថយ ឬសងនូវកំហួតខាត",
+          "defEn": "A coercive measure taken to make the offending state withdraw or compensate for the loss caused"
+        },
+        {
+          "km": "ការហ៊ុមព័ទ្ធដោយសន្តិវិធី",
+          "en": "Peaceful blockade (sanctions)",
+          "defKm": "វិធានការបង្ខិតបង្ខំដែលគេប្រើនៅពេលមានសន្តិភាព ចំពោះរដ្ឋដែលធ្វើសកម្មភាពផ្ទុយនឹងគោលការណ៍នៃនីតិអន្តរជាតិ",
+          "defEn": "A coercive measure used in peacetime against a state acting contrary to the principles of international law"
+        },
+        {
+          "km": "ការធ្វើអន្តរាគមន៍",
+          "en": "Intervention",
+          "defKm": "សកម្មភាពជ្រៀតជ្រែកចូលកិច្ចការផ្ទៃក្នុងរបស់រដ្ឋមួយទៅរដ្ឋដទៃ ដែលមានបីប្រភេទ",
+          "defEn": "Interference in the internal affairs of one state by another, of which there are three types"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើការប្រើកម្លាំងដែលមានលក្ខណៈសមស្របទៅតាមច្បាប់ មានលក្ខខណ្ឌប៉ុន្មាន?",
+            "en": "How many conditions attach to the lawful use of force?"
+          },
+          "options": {
+            "km": [
+              "បី",
+              "ពីរ",
+              "បួន",
+              "ប្រាំ"
+            ],
+            "en": [
+              "Three",
+              "Two",
+              "Four",
+              "Five"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការប្រើប្រាស់កម្លាំងដែលមានលក្ខណៈសមស្របទៅតាមច្បាប់ មានលក្ខខ័ណ្ឌបី គឺ ការពារខ្លួន ក្របខណ្ឌអង្គការសហប្រជាជាតិ និងការរៀបចំថែរក្សាសន្តិភាពក្នុងតំបន់។",
+            "en": "The text says the lawful use of force has three conditions: self-defence, the UN framework, and regional peacekeeping arrangements."
+          },
+          "page": 90
+        },
+        {
+          "q": {
+            "km": "តើធម្មនុញ្ញសហប្រជាជាតិ ជំពូកទី១ មាត្រាទី៤ ចែងឱ្យសមាជិកធ្វើអ្វី?",
+            "en": "What does Chapter 1, Article 4 of the UN Charter require of members?"
+          },
+          "options": {
+            "km": [
+              "ចៀសវាងកុំពឹងផ្អែកលើការគំរាមកំហែង ឬការប្រើប្រាស់កម្លាំងប្រឆាំងនឹងរដ្ឋដទៃ",
+              "បង្កើនកងទ័ពរបស់ខ្លួន",
+              "ដាក់ទណ្ឌកម្មលើរដ្ឋជិតខាង",
+              "ប្រកាសសង្គ្រាមភ្លាមៗ"
+            ],
+            "en": [
+              "To refrain from the threat or use of force against other states",
+              "To expand their armed forces",
+              "To impose sanctions on neighbouring states",
+              "To declare war immediately"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា មាត្រាទី៤ បានចែងថានៅក្នុងកិច្ចប្រាស្រ័យទាក់ទងអន្តរជាតិ សមាជិករបស់សហប្រជាជាតិត្រូវចៀសវាងកុំពឹងផ្អែកលើការគំរាមកំហែង ឬការប្រើប្រាស់កម្លាំង។",
+            "en": "The text says Article 4 provides that in international relations UN members must refrain from the threat or use of force."
+          },
+          "page": 90
+        },
+        {
+          "q": {
+            "km": "តើសេចក្តីសម្រេចរួមគ្នាដើម្បីសន្តិភាព A/RES/377 ត្រូវបានមហាសន្និបាតអនុម័តនៅថ្ងៃណា?",
+            "en": "When did the General Assembly adopt the Uniting for Peace resolution A/RES/377?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី០៣ ខែវិច្ឆិកា ឆ្នាំ១៩៥០",
+              "ថ្ងៃទី២១ ខែធ្នូ ឆ្នាំ១៩៦៥",
+              "ថ្ងៃទី០៣ ខែមីនា ឆ្នាំ២០០៤",
+              "ថ្ងៃទី០១ ខែកក្កដា ឆ្នាំ២០១០"
+            ],
+            "en": [
+              "3 November 1950",
+              "21 December 1965",
+              "3 March 2004",
+              "1 July 2010"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា សេចក្តីសម្រេចនេះត្រូវបានមហាសន្និបាតអនុម័ត ចាប់តាំងទី០៣ ខែវិច្ឆិកា ឆ្នាំ១៩៥០ មកម្ល៉េះ។",
+            "en": "The text says the General Assembly adopted the resolution on 3 November 1950."
+          },
+          "page": 91
+        },
+        {
+          "q": {
+            "km": "តើហេតុអ្វីបានជាមហាសន្និបាតសហប្រជាជាតិមិនអាចអនុម័តសេចក្តីសម្រេចលេខ 377A បាន?",
+            "en": "Why was the General Assembly unable to adopt resolution 377A?"
+          },
+          "options": {
+            "km": [
+              "ពីព្រោះសហភាពសូវៀត ដែលជាសមាជិកអន្ត្រៃយ៍នៃក្រុមប្រឹក្សាសន្តិសុខ បានបោះឆ្នោតប្រឆាំង",
+              "ពីព្រោះគ្មានរដ្ឋចូលរួមប្រជុំ",
+              "ពីព្រោះសន្ធិសញ្ញាមិនត្រូវបានចុះហត្ថលេខា",
+              "ពីព្រោះតុលាការយុត្តិធម៌អន្តរជាតិបានច្រានចោល"
+            ],
+            "en": [
+              "Because the Soviet Union, a permanent member of the Security Council, voted against it",
+              "Because no states attended the session",
+              "Because the treaty was not signed",
+              "Because the ICJ rejected it"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា សហភាពសូវៀតដែលជាសមាជិកអន្ត្រៃយ៍នៃក្រុមប្រឹក្សាសន្តិសុខនៃសហប្រជាជាតិដែរ បានបោះឆ្នោតប្រឆាំងនឹងសេចក្តីសម្រេចលេខ 377A។",
+            "en": "The text says the Soviet Union, itself a permanent member of the Security Council, voted against resolution 377A."
+          },
+          "page": 91
+        },
+        {
+          "q": {
+            "km": "តើរដ្ឋមន្ត្រីការបរទេសនៃប្រទេសណាដែលបានលើកសំណើឱ្យមានកងទ័ពរក្សាសន្តិភាពប្រចាំតំបន់អាសុីអាគ្នេយ៍?",
+            "en": "Which country's foreign minister proposed a regional Southeast Asian peacekeeping force?"
+          },
+          "options": {
+            "km": [
+              "ឥណ្ឌូនេសុី",
+              "វៀតណាម",
+              "ថៃឡង់",
+              "ហ្វីលីពីន"
+            ],
+            "en": [
+              "Indonesia",
+              "Vietnam",
+              "Thailand",
+              "The Philippines"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា នៅថ្ងៃទី០៣ ខែមីនា ឆ្នាំ២០០៤ រដ្ឋមន្ត្រីការបរទេសនៃប្រទេសឥណ្ឌូនេសុីបានលើកសំណើឱ្យមានកងទ័ពរក្សាសន្តិភាពប្រចាំតំបន់អាសុីអាគ្នេយ៍។",
+            "en": "The text says that on 3 March 2004 Indonesia's foreign minister proposed a regional Southeast Asian peacekeeping force."
+          },
+          "page": 91
+        },
+        {
+          "q": {
+            "km": "តើវិធានការសងសឹកក្រៅផ្លូវច្បាប់មានលក្ខខណ្ឌប៉ុន្មាន យោងតាមលក្ខខណ្ឌដែលតុលាការអាល្លឺម៉ង់បានដាក់ចេញ?",
+            "en": "How many conditions for unlawful reprisals did the German court set out?"
+          },
+          "options": {
+            "km": [
+              "បី",
+              "ពីរ",
+              "បួន",
+              "ប្រាំ"
+            ],
+            "en": [
+              "Three",
+              "Two",
+              "Four",
+              "Five"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "តុលាការរបស់ប្រទេសអាល្លឺម៉ង់បានដាក់ចេញនូវលក្ខខ័ណ្ឌបី គឺ មានសកម្មភាពផ្ទុយនឹងនីតិអន្តរជាតិពីមុន ការទាមទារសំណងជួសជុលមិនបានទទួលជោគជ័យ និងការគិតគូរចំពោះការរងរបួស ឬការខូចខាត។",
+            "en": "The German court set out three conditions: a prior act contrary to international law, the failure of a claim for reparation, and consideration of the injuries or damage caused."
+          },
+          "page": 96
+        },
+        {
+          "q": {
+            "km": "តើអន្តរាគមន៍ដាច់ខាតមានប៉ុន្មានប្រភេទ?",
+            "en": "How many types of absolute intervention are there?"
+          },
+          "options": {
+            "km": [
+              "បីប្រភេទ",
+              "ពីរប្រភេទ",
+              "បួនប្រភេទ",
+              "ប្រាំប្រភេទ"
+            ],
+            "en": [
+              "Three",
+              "Two",
+              "Four",
+              "Five"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា អន្តរាគមន៍ដាច់ខាតមានបីប្រភេទ គឺ ការធ្វើអន្តរាគមន៍ក្នុងប្រទេស ការធ្វើអន្តរាគមន៍ក្រៅប្រទេស និងការធ្វើអន្តរាគមន៍ដោយដាក់ទណ្ឌកម្ម។",
+            "en": "The text lists three types: intervention inside a state, intervention outside a state, and intervention by imposing sanctions."
+          },
+          "page": 96
+        },
+        {
+          "q": {
+            "km": "តើការចាប់អ្នកការទូតសហរដ្ឋអាមេរិកចំនួន៥២នាក់ធ្វើជាចំណាប់ខ្មាំងនៅប្រទេសអុឺរ៉ង មានរយៈពេលប៉ុន្មានថ្ងៃ?",
+            "en": "How many days were the 52 American diplomats held hostage in Iran?"
+          },
+          "options": {
+            "km": [
+              "៤៤៤ថ្ងៃ",
+              "៣០ថ្ងៃ",
+              "១៩៧៩ថ្ងៃ",
+              "៥២ថ្ងៃ"
+            ],
+            "en": [
+              "444 days",
+              "30 days",
+              "1,979 days",
+              "52 days"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ចំណាប់ខ្មាំងនោះមានរយៈពេល ៤៤៤ថ្ងៃ ពីថ្ងៃទី០៤ ខែវិច្ឆិកា ១៩៧៩ ដល់ថ្ងៃ ២០មករា១៩៨១ នៅក្នុងស្ថានទូតអាមេរិកនៅទីក្រុងតេហរ៉ង។",
+            "en": "The text says the hostages were held for 444 days, from 4 November 1979 to 20 January 1981, at the US embassy in Tehran."
+          },
+          "page": 97
+        }
+      ]
+    }
+  ]
+}

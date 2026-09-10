@@ -1,0 +1,1258 @@
+{
+  "id": "ch2",
+  "num": 2,
+  "title": {
+    "km": "នីតិអន្តរជាតិ",
+    "en": "International Law"
+  },
+  "pages": {
+    "from": 43,
+    "to": 66
+  },
+  "summary": {
+    "km": "ជំពូកនេះពន្យល់អំពីនិយមន័យ និងចរិកលក្ខណៈនៃនីតិអន្តរជាតិ ទស្សនៈស្តីពីការបង្កើតច្បាប់អន្តរជាតិ ព្រឹត្តិការណ៍វិវត្តន៍នៃនីតិអន្តរជាតិ និងទ្រឹស្ដីសំខាន់ៗអំពីរដ្ឋ។",
+    "en": "This chapter explains the definition and characteristics of international law, the views on how international law is created, the evolution of international law, and the main theories of the state."
+  },
+  "lessons": [
+    {
+      "id": "ch2-l1",
+      "title": {
+        "km": "និយមន័យ និងចរិកលក្ខណៈនៃនីតិអន្តរជាតិ",
+        "en": "Definitions and Characteristics of International Law"
+      },
+      "pages": {
+        "from": 43,
+        "to": 49
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អត្ថន័យនៃនីតិអន្តរជាតិ និងនីតិអន្តរជាតិសាធារណៈ",
+          "រាយប្រភពដំបូងនៃនីតិអន្តរជាតិ គឺទំនៀមទម្លាប់ និងអនុសញ្ញា",
+          "ពន្យល់ចរិកលក្ខណៈទាំងបួននៃនីតិអន្តរជាតិ និងផ្តល់ឧទាហរណ៍ជាក់ស្តែង"
+        ],
+        "en": [
+          "Explain the meaning of international law and of public international law",
+          "List the primary sources of international law, namely custom and convention",
+          "Explain the four characteristics of international law with practical examples"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "នៅសតវត្សទី២០ នីតិអន្តរជាតិត្រូវបានទទួលស្គាល់ថាជាច្បាប់នៃប្រទេសជាតិទាំងឡាយ ឬជាច្បាប់របស់សហគមន៍អន្តរជាតិ។",
+          "នីតិអន្តរជាតិជាវិធាន និងបញ្ញត្តិសម្រាប់គ្រប់គ្រងទំនាក់ទំនងតាមផ្លូវច្បាប់រវាងប្រជាជាតិ ឬរដ្ឋ។",
+          "ការសិក្សានីតិអន្តរជាតិសាធារណៈផ្អែកលើវិស័យសំខាន់ពីរ គឺច្បាប់នៃប្រជាជាតិទាំងឡាយ និងសន្ធិសញ្ញា អនុសញ្ញា កតិកាសញ្ញា អនុស្សណៈ និងកិច្ចព្រមព្រៀងអន្តរជាតិទាំងឡាយ។",
+          "ទំនៀមទម្លាប់ និងអនុសញ្ញាជាប្រភពដំបូងនៃនីតិអន្តរជាតិ ហើយទំនៀមទម្លាប់កើតឡើងនៅពេលរដ្ឋទាំងឡាយសុខចិត្តគោរពតាម ដោយឆ្លងតាមការអនុវត្តជាទូទៅ និងស្របគ្នា។",
+          "នីតិអន្តរជាតិមានអនុភាពគតិយុត្ត និងចរិកលក្ខណៈបញ្ជា ប៉ុន្តែគ្មានលក្ខណៈជាការចាប់បង្ខំ។",
+          "នីតិអន្តរជាតិកើតឡើងដោយការចូលរួម ពិភាក្សា កែតម្រូវ បំពេញបន្ថែម និងការអនុម័ត ហើយរដ្ឋទទួលយកមកអនុវត្តដោយស្ម័គ្រចិត្ត គ្មានការបង្ខិតបង្ខំ។"
+        ],
+        "en": [
+          "In the twentieth century international law came to be recognized as the law of nations, or the law of the international community.",
+          "International law is the body of rules and provisions governing legal relations between nations or states.",
+          "The study of public international law rests on two main fields: the law of nations, and treaties, conventions, pacts, modus vivendi and international agreements of all kinds.",
+          "Custom and convention are the primary sources of international law; custom arises when states consent to observe a practice generally and consistently.",
+          "International law has legal force and a peremptory character, but it is not coercive in nature.",
+          "International law is made through the participation, discussion, amendment, supplementing and adoption of many states, and states accept it voluntarily, without coercion."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ជាទូទៅនៅសតវទី ២០ នីតិអន្តរជាតិ ត្រូវបានគេទទួលស្គាស់ថា ជាច្បាប់នៃប្រទេសជាតិ",
+          "en": "By and large, in the twentieth century international law has been recognized as the law of the nations, or one may say as the law of the international community.",
+          "page": 43
+        },
+        {
+          "km": "-នីតិអន្តរជាតិ គឺជាវិធានទាំងឡាយណាដែលរដ្ឋទាំងអស់ និងភាពនីតិបុគ្គលដទៃទៀតទទួល",
+          "en": "International law is the body of rules which all states and other legal persons accept as binding in the international community.",
+          "page": 44
+        },
+        {
+          "km": "ទំនៀមទម្លាប់និងអនុសញ្ញាជាប្រភពដំបូងនៃនីតិអន្តរជាតិ ទំនៀមទម្លាប់អន្តរជាតិកើតមានឡើងនៅ",
+          "en": "Custom and convention are the primary sources of international law; international custom arises whenever states consent to observe it through general and consistent practice.",
+          "page": 44
+        },
+        {
+          "km": "វិធានដែលមានអនុភាពគតិយុត្ត មានន័យថា នីតិអន្តរជាតិជាទូទៅមានចរិកលក្ខណៈបញ្ជា។",
+          "en": "Rules that possess legal force mean that international law generally has a peremptory character.",
+          "page": 45
+        }
+      ],
+      "terms": [
+        {
+          "km": "នីតិអន្តរជាតិ",
+          "en": "International law",
+          "defKm": "វិធាន និងបញ្ញត្តិសម្រាប់គ្រប់គ្រងទំនាក់ទំនងតាមផ្លូវច្បាប់រវាងប្រជាជាតិ ឬរដ្ឋ",
+          "defEn": "The body of rules and provisions governing legal relations between nations or states"
+        },
+        {
+          "km": "នីតិអន្តរជាតិសាធារណៈ",
+          "en": "Public international law",
+          "defKm": "នីតិដែលភ្ជាប់ទៅនឹងរចនាសម្ព័ន្ធ និងដំណើរការប្រព្រឹត្តនៃបណ្ដារដ្ឋអធិបតេយ្យ ព្រមទាំងតួអង្គដទៃទៀត",
+          "defEn": "The law concerned with the structure and operation of sovereign states and with other actors subject to it"
+        },
+        {
+          "km": "សហគមន៍អន្តរជាតិ",
+          "en": "International community",
+          "defKm": "សង្គមមនុស្សរួមដែលនីតិអន្តរជាតិត្រូវបានតាក់តែងឡើងដើម្បីការពារ",
+          "defEn": "The shared society of humankind which international law is designed to protect"
+        },
+        {
+          "km": "ទំនៀមទម្លាប់អន្តរជាតិ",
+          "en": "International custom",
+          "defKm": "ប្រភពដំបូងនៃនីតិអន្តរជាតិ ដែលកើតឡើងនៅពេលរដ្ឋសុខចិត្តគោរពតាម ដោយឆ្លងតាមការអនុវត្តជាទូទៅ និងស្របគ្នា",
+          "defEn": "A primary source of international law, arising when states consent to it through general and consistent practice"
+        },
+        {
+          "km": "អនុសញ្ញា",
+          "en": "Convention",
+          "defKm": "លិខិតូបករណ៍អន្តរជាតិដែលចូលជាធរមាន និងជាចំណងគតិយុត្តភ្ជាប់ទៅនឹងភាគីទាំងឡាយ",
+          "defEn": "An international instrument that enters into force and binds the parties legally"
+        },
+        {
+          "km": "នីតិបុគ្គល",
+          "en": "Legal person",
+          "defKm": "អ្នកទទួលយកនីតិអន្តរជាតិជាចំណងកាតព្វកិច្ច ដូចជារដ្ឋ អង្គការអន្តររដ្ឋាភិបាល និងក្រុមហ៊ុនសាជីកម្មពហុជាតិ",
+          "defEn": "An entity to which international law is binding, such as states, intergovernmental organizations and multinational corporations"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើនៅសតវត្សទីប៉ុន្មាន ដែលនីតិអន្តរជាតិត្រូវបានគេទទួលស្គាល់ថាជាច្បាប់នៃប្រទេសជាតិទាំងឡាយ?",
+            "en": "In which century did international law come to be recognized as the law of the nations?"
+          },
+          "options": {
+            "km": [
+              "សតវត្សទី១៩",
+              "សតវត្សទី២០",
+              "សតវត្សទី១៦",
+              "សតវត្សទី១៨"
+            ],
+            "en": [
+              "The 19th century",
+              "The 20th century",
+              "The 16th century",
+              "The 18th century"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា ជាទូទៅនៅសតវត្សទី២០ នីតិអន្តរជាតិត្រូវបានគេទទួលស្គាល់ថាជាច្បាប់នៃប្រទេសជាតិទាំងឡាយ។",
+            "en": "The text states that generally, in the twentieth century, international law was recognized as the law of the nations."
+          },
+          "page": 43
+        },
+        {
+          "q": {
+            "km": "តើពាក្យ 'នីតិអន្តរជាតិ' ត្រូវបានបកប្រែប្រើដោយទស្សនវិទូអង់គ្លេសឈ្មោះអ្វី នាឆ្នាំ១៧៨០?",
+            "en": "Which English philosopher used the translated term 'international law' in 1780?"
+          },
+          "options": {
+            "km": [
+              "Bentham",
+              "Louis Renault",
+              "ចក ស៊ែល",
+              "ហ្យន អូស្តីន"
+            ],
+            "en": [
+              "Bentham",
+              "Louis Renault",
+              "Chak Sear",
+              "John Austin"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ពាក្យបកប្រែចេញពីពាក្យនីតិអន្តរជាតិរបស់ទស្សនវិទូអង់គ្លេស Bentham នាឆ្នាំ១៧៨០។",
+            "en": "The text says the translation of international law is attributed to the English philosopher Bentham in 1780."
+          },
+          "page": 44
+        },
+        {
+          "q": {
+            "km": "តើអ្នកច្បាប់បារាំងឈ្មោះអ្វី ដែលបានប្រើពាក្យនីតិអន្តរជាតិឱ្យមានន័យដូចនឹងច្បាប់របស់មនុស្ស នៅឆ្នាំ១៨៧៩?",
+            "en": "Which French jurist used the term international law with the meaning of the law of humankind in 1879?"
+          },
+          "options": {
+            "km": [
+              "ថូម៉ាស់ ហូប",
+              "ហូកូក្រូទូស្សន៍",
+              "Bentham",
+              "Louis Renault"
+            ],
+            "en": [
+              "Thomas Hobbes",
+              "Hugo Grotius",
+              "Bentham",
+              "Louis Renault"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថា នីតិអន្តរជាតិមានន័យដូចនឹងច្បាប់របស់មនុស្ស ប្រើដោយអ្នកច្បាប់បារាំងឈ្មោះ Louis Renault នៅក្នុងឆ្នាំ១៨៧៩។",
+            "en": "The text states that international law was given the meaning of the law of humankind by the French jurist Louis Renault in 1879."
+          },
+          "page": 45
+        },
+        {
+          "q": {
+            "km": "តើចរិកលក្ខណៈណាមួយ មិនត្រឹមត្រូវចំពោះនីតិអន្តរជាតិ?",
+            "en": "Which of the following is NOT a characteristic of international law?"
+          },
+          "options": {
+            "km": [
+              "វិធានមានអនុភាពគតិយុត្ត",
+              "រដ្ឋត្រូវមានកាតព្វកិច្ចទទួលយកមកអនុវត្តជាចាំបាច់",
+              "មានលក្ខណៈជាការចាប់បង្ខំខ្លាំង",
+              "រៀបចំជាផ្នែកៗទៅតាមប្រធានបទ"
+            ],
+            "en": [
+              "Its rules have legal force",
+              "States are obliged to accept and apply it",
+              "It is backed by strong coercion",
+              "It is arranged in separate subject-matter fields"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា រដ្ឋទាំងឡាយត្រូវមានកាតព្វកិច្ចទទួលយកមកអនុវត្តជាចាំបាច់ ប៉ុន្តែមិនមានលក្ខណៈជាការចាប់បង្ខំនោះទេ។",
+            "en": "The text says states are obliged to accept and apply the rules, but international law is not coercive in character."
+          },
+          "page": 45
+        },
+        {
+          "q": {
+            "km": "តើអនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីទំនាក់ទំនងការទូត ត្រូវបានអនុម័តនៅឆ្នាំណា?",
+            "en": "In which year was the Vienna Convention on Diplomatic Relations adopted?"
+          },
+          "options": {
+            "km": [
+              "ឆ្នាំ១៩៦៩",
+              "ឆ្នាំ១៩៨២",
+              "ឆ្នាំ១៩៩៤",
+              "ឆ្នាំ១៩៦១"
+            ],
+            "en": [
+              "1969",
+              "1982",
+              "1994",
+              "1961"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អនុសញ្ញាទីក្រុងវីយ៉េនស្ដីពីទំនាក់ទំនងការទូត បានអនុម័តនៅទីក្រុងវីយ៉េន ប្រទេសអូទ្រីស ឆ្នាំ១៩៦១។",
+            "en": "The Vienna Convention on Diplomatic Relations was adopted in Vienna, Austria, in 1961."
+          },
+          "page": 45
+        },
+        {
+          "q": {
+            "km": "តើអនុសញ្ញាសហប្រជាជាតិស្ដីពីនីតិសមុទ្រ ចូលជាធរមាននៅថ្ងៃទីណា?",
+            "en": "When did the United Nations Convention on the Law of the Sea enter into force?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី១៦ វិច្ឆិកា ឆ្នាំ១៩៩៤",
+              "ថ្ងៃទី១៧ កក្កដា ឆ្នាំ១៩៩៨",
+              "ថ្ងៃទី០១ កក្កដា ឆ្នាំ២០០២",
+              "ថ្ងៃទី១០ ធ្នូ ឆ្នាំ១៩៨២"
+            ],
+            "en": [
+              "16 November 1994",
+              "17 July 1998",
+              "01 July 2002",
+              "10 December 1982"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អនុសញ្ញាសហប្រជាជាតិស្ដីពីនីតិសមុទ្រ អនុម័តនៅថ្ងៃទី១០ ធ្នូ ឆ្នាំ១៩៨២ និងចូលជាធរមាននៅថ្ងៃទី១៦ ខែវិច្ឆិកា ឆ្នាំ១៩៩៤។",
+            "en": "That convention was adopted on 10 December 1982 and entered into force on 16 November 1994."
+          },
+          "page": 45
+        },
+        {
+          "q": {
+            "km": "តើលក្ខន្តិកៈទីក្រុងរ៉ូម ស្តីពីការបង្កើតតុលាការព្រហ្មទណ្ឌអន្តរជាតិ ចូលជាធរមាននៅថ្ងៃទីណា?",
+            "en": "When did the Rome Statute creating the International Criminal Court enter into force?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី០៩ ធ្នូ ឆ្នាំ១៩៤៨",
+              "ថ្ងៃទី១៧ កក្កដា ឆ្នាំ១៩៩៨",
+              "ថ្ងៃទី០១ កក្កដា ឆ្នាំ២០០២",
+              "ថ្ងៃទី២២ ឧសភា ឆ្នាំ១៩៦២"
+            ],
+            "en": [
+              "09 December 1948",
+              "17 July 1998",
+              "01 July 2002",
+              "22 May 1962"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "លក្ខន្តិកៈទីក្រុងរ៉ូមធ្វើឡើងថ្ងៃទី១៧ កក្កដា ឆ្នាំ១៩៩៨ និងចូលជាធរមានថ្ងៃទី០១ កក្កដា ឆ្នាំ២០០២។",
+            "en": "The Rome Statute was concluded on 17 July 1998 and entered into force on 01 July 2002."
+          },
+          "page": 45
+        },
+        {
+          "q": {
+            "km": "តើនីតិអន្តរជាតិកើតឡើងបានដោយសារកត្តាអ្វី ជាចម្បង?",
+            "en": "Above all, how does international law come into being?"
+          },
+          "options": {
+            "km": [
+              "សេចក្តីសម្រេចរបស់តុលាការជាតិនីមួយៗ",
+              "ការចូលរួម និងការទទួលយកក្នុងលក្ខណៈស្ម័គ្រចិត្តពីសំណាក់រដ្ឋភាគច្រើន",
+              "ការបង្ខិតបង្ខំពីរដ្ឋមហាអំណាច",
+              "ការដាក់ទណ្ឌកម្មយោធាលើរដ្ឋដែលបដិសេធ"
+            ],
+            "en": [
+              "Through decisions of each domestic court",
+              "Through the participation and voluntary acceptance of most states",
+              "Through coercion by great powers",
+              "Through military sanctions on states that refuse"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា នីតិអន្តរជាតិកើតឡើងដោយមានការចូលរួមពីរដ្ឋភាគច្រើន ហើយការទទួលយកនេះគឺទទួលយកក្នុងលក្ខណៈស្ម័គ្រចិត្ត ដោយគ្មានការបង្ខិតបង្ខំ។",
+            "en": "The text says international law arises with the participation of most states, and that acceptance is voluntary and without coercion."
+          },
+          "page": 47
+        }
+      ]
+    },
+    {
+      "id": "ch2-l2",
+      "title": {
+        "km": "ទស្សនៈស្តីពីការបង្កើតច្បាប់អន្តរជាតិ",
+        "en": "Views on How International Law Is Created"
+      },
+      "pages": {
+        "from": 49,
+        "to": 50
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់ពីប្រភពគំនិតនៃនីតិអន្តរជាតិទំនើប គឺអធិបតេយ្យភាពរបស់រដ្ឋ",
+          "ស្គាល់នីតិវិទូសំខាន់ៗ និងស្នាដៃរបស់លោក",
+          "ពន្យល់គោលការណ៍ប៉ាតាសន់សេវេនដារ និងគោលការណ៍ឆន្ទៈល្អ"
+        ],
+        "en": [
+          "Explain the intellectual origins of modern international law in the sovereignty of states",
+          "Identify the leading jurists and their works",
+          "Explain the principle pacta sunt servanda and the principle of good faith"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "នីតិអន្តរជាតិទំនើបកើតឡើងអាស្រ័យដោយលទ្ធផលនៃការទទួលយកគំនិតដែលផ្តោតលើអធិបតេយ្យភាពរបស់រដ្ឋ។",
+          "នីតិវិទូជាតិហូឡង់ លោក ហូកូក្រូទូស្សន៍ ត្រូវបានប្រវត្តិវិទូប្រសិទ្ធនាមថាជាបិតានៃនីតិអន្តរជាតិទំនើប។",
+          "ស្នាដៃរបស់លោក ហូកូក្រូទូស្សន៍ មានចំណងជើងថា សង្គ្រាមនិងសន្តិភាព ចេញផ្សាយឆ្នាំ១៦២៥ និង សេរីភាពសមុទ្រ ចេញផ្សាយឆ្នាំ១៦០៩។",
+          "គោលការណ៍ប៉ាតាសន់សេវេនដារ មានន័យថារាល់កិច្ចព្រមព្រៀងទាំងឡាយត្រូវតែរក្សាទុក។",
+          "រាល់សន្ធិសញ្ញាដែលចូលជាធរមាន ជាចំណងគតិយុត្តភ្ជាប់ទៅនឹងភាគីទាំងឡាយ ដែលត្រូវអនុវត្តឱ្យមានប្រសិទ្ធិភាពដោយឆន្ទៈល្អ។",
+          "នីតិវិទូដទៃទៀតបានរួមចំណែក ដូចជា លោក ខនីលីសវ៉ាន់ប័រគើសុខ ខាងនីតិសមុទ្រ និងលោក អីមីរ៉េចដេវិលទ័រ ដែលសរសេរស្នាដៃ នីតិប្រជាជាតិ។"
+        ],
+        "en": [
+          "Modern international law came about as a result of accepting ideas centred on the sovereignty of states.",
+          "The Dutch jurist Hugo Grotius was called by historians the father of modern international law.",
+          "His works are On the Law of War and Peace, published in 1625, and The Freedom of the Seas, published in 1609.",
+          "The principle pacta sunt servanda means that every agreement must be kept.",
+          "Every treaty in force is a legal bond for the parties, who must implement it effectively and in good faith.",
+          "Other jurists contributed as well, notably Cornelius van Bynkershoek on the law of the sea and Emmerich de Vattel, who wrote The Law of Nations."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "នីតិអន្តរជាតិទំនើបបានកើតឡើងអាស្រ័យដោយលទ្ធផលនៃការទទូលយកនូវគំនិតដែលផ្តោត",
+          "en": "Modern international law arose as a result of accepting the idea centred on the sovereignty of states.",
+          "page": 49
+        },
+        {
+          "km": "វិទូសញ្ជាតិហូឡង់គឺលោក ហូកូក្រូទូស្សន៍ដែលប្រវត្តិវិទូប្រសិទ្ធនាមលោកថា ជាបិតានៃនីតិអន្តរជាតិ",
+          "en": "The Dutch jurist Hugo Grotius, whom historians call the father of modern international law, wrote a work entitled War and Peace.",
+          "page": 49
+        },
+        {
+          "km": "នៃប្រជាជាតិទាំងឡាយ ដោយឈរលើគោលការណ៍(ប៉ាតាសន់សេវេនដារ)។គោលការណ៍នេះចេញ",
+          "en": "International law comes into being through the agreement of the community of nations, standing on the principle pacta sunt servanda.",
+          "page": 49
+        },
+        {
+          "km": "បន្ទាប់មកមាននីតិវិទូហូឡង់ម្នាក់ទៀត លោកខនីលីសវ៉ាន់ប័រគើសុខ បានរួមចំណែកចំពោះ",
+          "en": "Then there was another Dutch jurist, Cornelius van Bynkershoek, who contributed to the development of international law, especially the law of the sea.",
+          "page": 50
+        }
+      ],
+      "terms": [
+        {
+          "km": "បិតានៃនីតិអន្តរជាតិទំនើប",
+          "en": "Father of modern international law",
+          "defKm": "ប្រសិទ្ធនាមដែលប្រវត្តិវិទូផ្ដល់ឱ្យលោក ហូកូក្រូទូស្សន៍ នីតិវិទូហូឡង់",
+          "defEn": "The title given by historians to Hugo Grotius, the Dutch jurist"
+        },
+        {
+          "km": "គោលការណ៍ប៉ាតាសន់សេវេនដារ",
+          "en": "Pacta sunt servanda",
+          "defKm": "គោលការណ៍ដែលចេញមកពីពាក្យឡាតាំង មានន័យថារាល់កិច្ចព្រមព្រៀងទាំងឡាយត្រូវតែរក្សាទុក",
+          "defEn": "A principle derived from Latin meaning that every agreement must be kept"
+        },
+        {
+          "km": "ឆន្ទៈល្អ",
+          "en": "Good faith",
+          "defKm": "ការអនុវត្តសន្ធិសញ្ញាដោយស្មោះត្រង់ ដែលជាមូលដ្ឋាននៃគោលការណ៍សន្ធិសញ្ញា",
+          "defEn": "The honest performance of a treaty, forming the basis of the law of treaties"
+        },
+        {
+          "km": "អធិបតេយ្យភាពរបស់រដ្ឋ",
+          "en": "Sovereignty of states",
+          "defKm": "គំនិតគ្រឹះដែលនីតិអន្តរជាតិទំនើបកើតឡើងដោយសារការទទួលយកវា",
+          "defEn": "The foundational idea on whose acceptance modern international law arose"
+        },
+        {
+          "km": "នីតិសមុទ្រ",
+          "en": "Law of the sea",
+          "defKm": "ផ្នែកនៃនីតិអន្តរជាតិដែលលោក ខនីលីសវ៉ាន់ប័រគើសុខ បានរួមចំណែកអភិវឌ្ឍ",
+          "defEn": "The field of international law to which Cornelius van Bynkershoek contributed"
+        },
+        {
+          "km": "សន្ធិសញ្ញា",
+          "en": "Treaty",
+          "defKm": "កិច្ចព្រមព្រៀងដែលចូលជាធរមាន ហើយជាចំណងគតិយុត្តភ្ជាប់ទៅនឹងភាគីទាំងឡាយ",
+          "defEn": "An agreement in force that legally binds the parties"
+        },
+        {
+          "km": "នីតិវិទូ",
+          "en": "Jurist",
+          "defKm": "អ្នកមានចំណេះដឹងខាងផ្លូវច្បាប់ជ្រៅជ្រះ ដែលចូលរួមតាក់តែងនីតិអន្តរជាតិ",
+          "defEn": "A person with deep legal expertise who takes part in the making of international law"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើលោកណាត្រូវបានប្រវត្តិវិទូប្រសិទ្ធនាមថាជាបិតានៃនីតិអន្តរជាតិទំនើប?",
+            "en": "Who was called by historians the father of modern international law?"
+          },
+          "options": {
+            "km": [
+              "លោក ចន ឡក់",
+              "លោក ហូកូក្រូទូស្សន៍ (ជាតិហូឡង់)",
+              "លោក នីកូឡា ម៉ាឆេយ៉ាវេលី",
+              "លោក ថូម៉ាស ហប"
+            ],
+            "en": [
+              "John Locke",
+              "Hugo Grotius (Dutch)",
+              "Niccolo Machiavelli",
+              "Thomas Hobbes"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា នីតិវិទូជាតិហូឡង់ គឺលោក ហូកូក្រូទូស្សន៍ ដែលប្រវត្តិវិទូប្រសិទ្ធនាមលោកថាជាបិតានៃនីតិអន្តរជាតិទំនើប។",
+            "en": "The text says the Dutch jurist Hugo Grotius was called by historians the father of modern international law."
+          },
+          "page": 49
+        },
+        {
+          "q": {
+            "km": "តើស្នាដៃ 'សង្គ្រាមនិងសន្តិភាព' របស់លោក ហូកូក្រូទូស្សន៍ ចេញផ្សាយនៅឆ្នាំណា?",
+            "en": "In which year was Grotius' work 'War and Peace' published?"
+          },
+          "options": {
+            "km": [
+              "ឆ្នាំ១៦៤៨",
+              "ឆ្នាំ១៦៩០",
+              "ឆ្នាំ១៦០៩",
+              "ឆ្នាំ១៦២៥"
+            ],
+            "en": [
+              "1648",
+              "1690",
+              "1609",
+              "1625"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថា លោកបានសរសេរស្នាដៃមួយមានចំណងជើងថា សង្គ្រាមនិងសន្តិភាព ចេញផ្សាយនៅក្នុងឆ្នាំ១៦២៥។",
+            "en": "The text says he wrote a work entitled War and Peace, published in 1625."
+          },
+          "page": 49
+        },
+        {
+          "q": {
+            "km": "តើស្នាដៃ 'សេរីភាពសមុទ្រ' ចេញផ្សាយនៅឆ្នាំណា?",
+            "en": "In which year was 'The Freedom of the Seas' published?"
+          },
+          "options": {
+            "km": [
+              "ឆ្នាំ១៧០០",
+              "ឆ្នាំ១៦០៩",
+              "ឆ្នាំ១៦២៥",
+              "ឆ្នាំ១៦៣៣"
+            ],
+            "en": [
+              "1700",
+              "1609",
+              "1625",
+              "1633"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា ស្នាដៃមួយទៀតដែលមានចំណងជើងថា សេរីភាពសមុទ្រ ចេញផ្សាយនៅឆ្នាំ១៦០៩។",
+            "en": "The text says another work entitled The Freedom of the Seas was published in 1609."
+          },
+          "page": 49
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍ប៉ាតាសន់សេវេនដារ មានន័យដូចម្តេច?",
+            "en": "What does the principle pacta sunt servanda mean?"
+          },
+          "options": {
+            "km": [
+              "រាល់កិច្ចព្រមព្រៀងទាំងឡាយត្រូវតែរក្សាទុក",
+              "រដ្ឋមហាអំណាចមានសិទ្ធិពិសេសលើសរដ្ឋតូច",
+              "សន្ធិសញ្ញាអាចបោះបង់ចោលបានគ្រប់ពេលវេលា",
+              "ច្បាប់ជាតិខ្ពស់ជាងសន្ធិសញ្ញាអន្តរជាតិ"
+            ],
+            "en": [
+              "Every agreement must be kept",
+              "Great powers hold special rights over small states",
+              "A treaty may be abandoned at any time",
+              "Domestic law ranks above an international treaty"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "គោលការណ៍នេះចេញមកពីពាក្យឡាតាំង ដែលមានន័យថារាល់កិច្ចព្រមព្រៀងទាំងឡាយត្រូវតែរក្សាទុក។",
+            "en": "The principle comes from Latin and means that every agreement must be kept."
+          },
+          "page": 49
+        },
+        {
+          "q": {
+            "km": "តើនីតិវិទូហូឡង់ណាមួយ បានរួមចំណែកជាពិសេសចំពោះនីតិសមុទ្រ?",
+            "en": "Which Dutch jurist contributed especially to the law of the sea?"
+          },
+          "options": {
+            "km": [
+              "លោក អីមីរ៉េចដេវិលទ័រ",
+              "លោក ថូម៉ាស់ ហូប",
+              "លោក ខនីលីសវ៉ាន់ប័រគើសុខ",
+              "លោក ហូកូក្រូទូស្សន៍"
+            ],
+            "en": [
+              "Emmerich de Vattel",
+              "Thomas Hobbes",
+              "Cornelius van Bynkershoek",
+              "Hugo Grotius"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា នីតិវិទូហូឡង់ម្នាក់ទៀត លោក ខនីលីសវ៉ាន់ប័រគើសុខ បានរួមចំណែកចំពោះការអភិវឌ្ឍន៍នីតិអន្តរជាតិ ជាពិសេសនីតិសមុទ្រ។",
+            "en": "The text says the Dutch jurist Cornelius van Bynkershoek contributed to the development of international law, especially the law of the sea."
+          },
+          "page": 50
+        },
+        {
+          "q": {
+            "km": "តើលោកណា ជាអ្នកការទូតស្វីស ដែលបានសរសេរស្នាដៃមានចំណងជើងថា 'នីតិប្រជាជាតិ'?",
+            "en": "Which Swiss diplomat wrote a work entitled 'The Law of Nations'?"
+          },
+          "options": {
+            "km": [
+              "លោក អីមីរ៉េចដេវិលទ័រ",
+              "លោក ហូកូក្រូទូស្សន៍",
+              "លោក ចន ឡក់",
+              "លោក ម៉ុងតែសគ្យើ"
+            ],
+            "en": [
+              "Emmerich de Vattel",
+              "Hugo Grotius",
+              "John Locke",
+              "Montesquieu"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា អ្នកការទូតស្វីស គឺលោក អីមីរ៉េចដេវិលទ័រ បានសរសេរស្នាដៃដែលចំណងជើងថា នីតិប្រជាជាតិ។",
+            "en": "The text says the Swiss diplomat Emmerich de Vattel wrote the work entitled The Law of Nations."
+          },
+          "page": 50
+        },
+        {
+          "q": {
+            "km": "តើនីតិអន្តរជាតិទំនើបបានកើតឡើងអាស្រ័យដោយគំនិតផ្តោតលើអ្វី?",
+            "en": "Modern international law arose from ideas centred on what?"
+          },
+          "options": {
+            "km": [
+              "តុល្យភាពកម្លាំងនៅលើសមុទ្រ",
+              "សិទ្ធិពិសេសរបស់ព្រះមហាក្សត្រ",
+              "អធិបតេយ្យភាពរបស់រដ្ឋ",
+              "អំណាចផ្ដាច់ការនៃសាសនាចក្រ"
+            ],
+            "en": [
+              "The balance of naval power",
+              "The privileges of monarchs",
+              "The sovereignty of states",
+              "The despotic power of the church"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា នីតិអន្តរជាតិទំនើបបានកើតឡើងអាស្រ័យដោយលទ្ធផលនៃការទទួលយកនូវគំនិតដែលផ្តោតលើអធិបតេយ្យភាពរបស់រដ្ឋ។",
+            "en": "The text says modern international law arose as a result of accepting ideas focused on the sovereignty of states."
+          },
+          "page": 49
+        }
+      ]
+    },
+    {
+      "id": "ch2-l3",
+      "title": {
+        "km": "ព្រឹត្តិការណ៍វិវត្តន៍នៃនីតិអន្តរជាតិ",
+        "en": "The Evolution of International Law"
+      },
+      "pages": {
+        "from": 50,
+        "to": 60
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់កត្តាបី ដែលធ្វើឱ្យការដោះស្រាយអធិករណ៍អន្តរជាតិតាមតុលាការមានភាពស្មុគស្មាញ",
+          "វិភាគអធិករណ៍រវាងប្រទេសនីការ៉ាហ្គា និងសហរដ្ឋអាមេរិក",
+          "ចាត់ថ្នាក់នីតិអន្តរជាតិជាបីប្រភេទ",
+          "ពន្យល់គោលការណ៍ទាក់ទងនឹងការប្រើប្រាស់កម្លាំងក្នុងនីតិអន្តរជាតិ"
+        ],
+        "en": [
+          "Explain the three factors that make judicial settlement of international disputes complex",
+          "Analyse the dispute between Nicaragua and the United States",
+          "Classify international law into its three types",
+          "Explain the principles governing the use of force in international law"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "នៅក្នុងប្រព័ន្ធនីតិអន្តរជាតិ ការដោះស្រាយអធិករណ៍តាមតុលាការមានភាពស្មុគស្មាញជាងនៅក្នុងរដ្ឋ ដោយមានកត្តាសំខាន់បី។",
+          "តុលាការយុត្តិធម៌អន្តរជាតិមានសមត្ថកិច្ចតែលើអធិករណ៍រវាងរដ្ឋអធិបតេយ្យប៉ុណ្ណោះ មិនមែនលើជម្លោះរបស់បុគ្គល ឬក្រុមហ៊ុនឯកជនទេ។",
+          "យុត្តាធិការ និងសាលក្រមរបស់តុលាការយុត្តិធម៌អន្តរជាតិ គ្មានចរិតនៃការបង្ខិតបង្ខំទេ។",
+          "នីតិអន្តរជាតិត្រូវបានបែងចែកជាបីប្រភេទ គឺនីតិអន្តរជាតិសាកល នីតិអន្តរជាតិទូទៅ និងនីតិអន្តរជាតិដោយឡែក។",
+          "នីតិអន្តរជាតិកំណត់ការប្រើប្រាស់កម្លាំងតាមគោលការណ៍ពីរ គឺច្បាប់ដើម្បីឈានទៅធ្វើសឹកសង្គ្រាម (the jus ad bellum) និងច្បាប់នៅក្នុងពេលមានសង្គ្រាម។",
+          "ការប្រើប្រាស់កម្លាំងដែលស្របតាមច្បាប់ មានលក្ខខណ្ឌបី គឺការពារខ្លួន សកម្មភាពក្នុងក្របខណ្ឌអង្គការសហប្រជាជាតិ និងការថែរក្សាសន្តិភាពក្នុងតំបន់។"
+        ],
+        "en": [
+          "Within the international legal system, judicial settlement of disputes is more complex than within a state, and rests on three main factors.",
+          "The International Court of Justice has jurisdiction only over disputes between sovereign states, not over those of private individuals or companies.",
+          "The jurisdiction and judgments of the International Court of Justice have no coercive character.",
+          "International law is divided into three types: universal, general and particular international law.",
+          "International law governs the use of force through two principles: the law governing resort to war (the jus ad bellum) and the law applicable in wartime.",
+          "Lawful use of force has three conditions: self-defence, action within the framework of the United Nations, and regional peacekeeping."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ការអនុវត្តនីតិអន្តជាតិសម្រាប់ប្រជាជាតិនីមួយៗ មានលក្ខណៈស្មុគស្មាញ មិនដូចការអនុវត្ត",
+          "en": "The application of international law for each nation is complex, unlike the application of law within a country.",
+          "page": 50
+        },
+        {
+          "km": "តុលាការអន្តរជាតិនៅថ្ងៃទី ២៤ ខែ វិច្ឆិកា ឆ្នាំ១៩៨៦ បានសម្រេចថា អធិករណ៍នេះជាសមត្ថកិច្ច",
+          "en": "On 24 November 1986 the International Court of Justice decided that this dispute fell within its jurisdiction.",
+          "page": 52
+        },
+        {
+          "km": "ស្រាយបញ្ហា នីតិវិទូប្រសិទ្ធនាមថា the jus ad bellum ។ ជាទូទៅ បទពិសោធន៍នៅក្នុងប្រវត្តិសាស្ត្រ",
+          "en": "The use of military force to settle problems was called by jurists the jus ad bellum.",
+          "page": 57
+        },
+        {
+          "km": "ប៉ុន្តែនៅក្នុងកាលៈទេសៈណាក៏ដោយ រដ្ឋទាំងឡាយត្រូវខិតខំចៀសវាងនូវការប្រើប្រាស់កម្លាំង",
+          "en": "But in whatever circumstances, states must strive to avoid the use of military force in settling disputes, whether national or international.",
+          "page": 60
+        }
+      ],
+      "terms": [
+        {
+          "km": "តុលាការយុត្តិធម៌អន្តរជាតិ",
+          "en": "International Court of Justice",
+          "defKm": "ស្ថាប័នតុលាការពិភពលោកដែលកាត់សេចក្ដីអធិករណ៍រវាងរដ្ឋអធិបតេយ្យ ដោយផ្អែកលើការព្រមព្រៀងរបស់ភាគី",
+          "defEn": "The world court that decides disputes between sovereign states on the basis of the parties' consent"
+        },
+        {
+          "km": "យុត្តាធិការ",
+          "en": "Jurisdiction",
+          "defKm": "សមត្ថកិច្ចរបស់តុលាការក្នុងការបកស្រាយច្បាប់ និងចេញសាលដីកា",
+          "defEn": "The court's competence to interpret the law and issue judgments"
+        },
+        {
+          "km": "អធិករណ៍",
+          "en": "Dispute",
+          "defKm": "ជម្លោះរវាងរដ្ឋនិងរដ្ឋ ដែលអាចយកទៅឱ្យតុលាការយុត្តិធម៌អន្តរជាតិជំនុំជម្រះ បើភាគីព្រមព្រៀង",
+          "defEn": "A conflict between states which may be submitted to the International Court of Justice if the parties agree"
+        },
+        {
+          "km": "នីតិអន្តរជាតិសាកល",
+          "en": "Universal international law",
+          "defKm": "វិធានទាំងឡាយដែលប្រជាជាតិនានាព្រមទទួលយកថាជានីតិអន្តរជាតិ ហើយគ្របដណ្ដប់លើបញ្ហាជាច្រើន",
+          "defEn": "Rules which nations accept as international law and which cover many subject matters"
+        },
+        {
+          "km": "នីតិអន្តរជាតិទូទៅ",
+          "en": "General international law",
+          "defKm": "វិធានដែលបណ្ដាប្រទេសភាគច្រើនសុខចិត្តទទួលយក នៅពេលសមស្របទៅតាមលក្ខណៈភូមិសាស្ត្ររបស់ខ្លួន",
+          "defEn": "Rules accepted by most countries when they fit their geographical circumstances"
+        },
+        {
+          "km": "នីតិអន្តរជាតិដោយឡែក",
+          "en": "Particular international law",
+          "defKm": "សន្ធិសញ្ញា និងកិច្ចព្រមព្រៀងនានារវាងរដ្ឋពីរ ឬច្រើន",
+          "defEn": "Treaties and agreements between two or more states"
+        },
+        {
+          "km": "សិទ្ធិវេតូ",
+          "en": "Veto right",
+          "defKm": "សិទ្ធិជំទាស់ពិសេសរបស់សមាជិកអចិន្ត្រៃយ៍ក្រុមប្រឹក្សាសន្តិសុខ ដែលរារាំងការអនុម័តសេចក្តីសម្រេច",
+          "defEn": "The special power of a permanent member of the Security Council to block the adoption of a resolution"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើមូលហេតុដែលធ្វើឱ្យការដោះស្រាយអធិករណ៍តាមតុលាការក្នុងនីតិអន្តរជាតិមានភាពស្មុគស្មាញ មានប៉ុន្មានកត្តា?",
+            "en": "How many main factors make judicial settlement of disputes in international law complex?"
+          },
+          "options": {
+            "km": [
+              "កត្តាប្រាំ",
+              "កត្តាពីរ",
+              "កត្តាបី",
+              "កត្តាបួន"
+            ],
+            "en": [
+              "Five factors",
+              "Two factors",
+              "Three factors",
+              "Four factors"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការដោះស្រាយអធិករណ៍តាមរយៈតុលាការមានភាពស្មុគស្មាញជាងការដោះស្រាយតាមផ្លូវតុលាការជាតិ ហើយមូលហេតុមានកត្តាបីសំខាន់។",
+            "en": "The text says judicial settlement of international disputes is more complex than in domestic courts, and that there are three main factors."
+          },
+          "page": 50
+        },
+        {
+          "q": {
+            "km": "តើនរណាខ្លះ ដែលអាចយកអធិករណ៍របស់ខ្លួនទៅដាក់ឱ្យតុលាការយុត្តិធម៌អន្តរជាតិកាត់សេចក្ដី?",
+            "en": "Who may bring a case before the International Court of Justice?"
+          },
+          "options": {
+            "km": [
+              "រដ្ឋអធិបតេយ្យ",
+              "បុគ្គលឯកជន",
+              "ក្រុមហ៊ុនឯកជន",
+              "អង្គការមិនមែនរដ្ឋាភិបាល"
+            ],
+            "en": [
+              "Sovereign states",
+              "Private individuals",
+              "Private companies",
+              "Non-governmental organizations"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា តុលាការយុត្តិធម៌អន្តរជាតិមិនមានសមត្ថកិច្ចដោះស្រាយជម្លោះជាឯកជន ជាបុគ្គល ឬក្រុមហ៊ុនឯកជនណាមួយឡើយ មានតែរដ្ឋអធិបតេយ្យទេ។",
+            "en": "The text says the ICJ has no competence over private, individual or corporate disputes; only sovereign states may submit cases."
+          },
+          "page": 50
+        },
+        {
+          "q": {
+            "km": "តើប្រទេសនីការ៉ាហ្គា បានដាក់ពាក្យបណ្ដឹងទៅតុលាការយុត្តិធម៌អន្តរជាតិ ប្រឆាំងនឹងសហរដ្ឋអាមេរិក នៅឆ្នាំណា?",
+            "en": "In which year did Nicaragua file its case against the United States at the ICJ?"
+          },
+          "options": {
+            "km": [
+              "ឆ្នាំ១៩៨១",
+              "ឆ្នាំ១៩៨២",
+              "ឆ្នាំ១៩៨៤",
+              "ឆ្នាំ១៩៨៦"
+            ],
+            "en": [
+              "1981",
+              "1982",
+              "1984",
+              "1986"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា រដ្ឋាភិបាលនីការ៉ាហ្គា បានដាក់ពាក្យបណ្ដឹងទៅតុលាការយុត្តិធម៌អន្តរជាតិនៅខែមេសា ឆ្នាំ១៩៨៤ ប្ដឹងចំពោះទង្វើរបស់សហរដ្ឋអាមេរិក។",
+            "en": "The text says Nicaragua filed its application with the ICJ in April 1984, complaining of the conduct of the United States."
+          },
+          "page": 51
+        },
+        {
+          "q": {
+            "km": "តើតុលាការអន្តរជាតិបានសម្រេចថា អធិករណ៍នីការ៉ាហ្គា និងសហរដ្ឋអាមេរិក ជាសមត្ថកិច្ចរបស់ខ្លួន នៅថ្ងៃទីណា?",
+            "en": "On what date did the ICJ decide that the Nicaragua–United States dispute fell within its jurisdiction?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី២៦ ខែមិថុនា ឆ្នាំ២០០៧",
+              "ថ្ងៃទី១០ ខែឧសភា ឆ្នាំ១៩៨៥",
+              "ថ្ងៃទី០៤ ខែមករា ឆ្នាំ១៩៨២",
+              "ថ្ងៃទី២៤ ខែវិច្ឆិកា ឆ្នាំ១៩៨៦"
+            ],
+            "en": [
+              "26 June 2007",
+              "10 May 1985",
+              "04 January 1982",
+              "24 November 1986"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថា តុលាការអន្តរជាតិនៅថ្ងៃទី២៤ ខែវិច្ឆិកា ឆ្នាំ១៩៨៦ បានសម្រេចថាអធិករណ៍នេះជាសមត្ថកិច្ចរបស់តុលាការអន្តរជាតិ។",
+            "en": "The text says that on 24 November 1986 the ICJ found the case to be within its jurisdiction."
+          },
+          "page": 52
+        },
+        {
+          "q": {
+            "km": "តើនីតិអន្តរជាតិត្រូវបានប្រជាជាតិទាំងឡាយទទួលយក ដោយបែងចែកជាប៉ុន្មានប្រភេទ?",
+            "en": "Into how many types is international law divided as accepted by nations?"
+          },
+          "options": {
+            "km": [
+              "ប្រភេទពីរ",
+              "ប្រភេទបី",
+              "ប្រភេទបួន",
+              "ប្រភេទប្រាំ"
+            ],
+            "en": [
+              "Two types",
+              "Three types",
+              "Four types",
+              "Five types"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា នីតិអន្តរជាតិត្រូវបានប្រជាជាតិទាំងឡាយទទួលយកដោយបែងចែកជាបីប្រភេទ គឺ សាកល ទូទៅ និងដោយឡែក។",
+            "en": "The text says international law is accepted in three types: universal, general and particular."
+          },
+          "page": 52
+        },
+        {
+          "q": {
+            "km": "តើកងទ័ពអាកាសជប៉ុន បានវាយប្រហារមូលដ្ឋានកងទ័ពអាកាសសហរដ្ឋអាមេរិកនៅផៀលហាបូរ នៅថ្ងៃទីណា?",
+            "en": "On what date did Japanese air forces attack the US base at Pearl Harbor?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី២៦ ខែមិថុនា ឆ្នាំ១៩៤៥",
+              "ថ្ងៃទី១៥ ខែឧសភា ឆ្នាំ១៦៤៨",
+              "ថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៦៤៨",
+              "ថ្ងៃទី០៧ ខែធ្នូ ឆ្នាំ១៩៤១"
+            ],
+            "en": [
+              "26 June 1945",
+              "15 May 1648",
+              "24 October 1648",
+              "07 December 1941"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការវាយប្រហារដោយកងទ័ពអាកាសរបស់ជប៉ុន បានចាប់ផ្ដើមឡើងនៅវេលាព្រឹកព្រលឹម ថ្ងៃទី០៧ ខែធ្នូ ឆ្នាំ១៩៤១។",
+            "en": "The text says the Japanese air attack began in the early morning of 07 December 1941."
+          },
+          "page": 55
+        },
+        {
+          "q": {
+            "km": "តើសេចក្តីសម្រេចរួមគ្នាដើម្បីសន្តិភាព (លេខ៣៧៧A) ត្រូវបានមហាសន្និបាតសហប្រជាជាតិអនុម័តចាប់តាំងពីថ្ងៃណា?",
+            "en": "From what date did the General Assembly adopt the Uniting for Peace resolution (377A)?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី០៣ ខែមីនា ឆ្នាំ២០០៤",
+              "ថ្ងៃទី០៣ ខែវិច្ឆិកា ឆ្នាំ១៩៥០",
+              "ថ្ងៃទី២៤ ខែវិច្ឆិកា ឆ្នាំ១៩៨៦",
+              "ថ្ងៃទី០១ ខែកក្កដា ឆ្នាំ២០០២"
+            ],
+            "en": [
+              "03 March 2004",
+              "03 November 1950",
+              "24 November 1986",
+              "01 July 2002"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា សេចក្តីសម្រេចរួមគ្នាដើម្បីសន្តិភាព ត្រូវបានមហាសន្និបាតអនុម័ត ចាប់តាំងពីថ្ងៃទី០៣ ខែវិច្ឆិកា ឆ្នាំ១៩៥០ មកម្ល៉េះ។",
+            "en": "The text says the Uniting for Peace resolution was adopted by the General Assembly from 03 November 1950 onwards."
+          },
+          "page": 58
+        },
+        {
+          "q": {
+            "km": "តើពាក្យ the jus ad bellum សំដៅលើអ្វី?",
+            "en": "What does the term 'the jus ad bellum' refer to?"
+          },
+          "options": {
+            "km": [
+              "សិទ្ធិនៃការប្រើប្រាស់កម្លាំងកងទ័ពដើម្បីដោះស្រាយបញ្ហា",
+              "ច្បាប់សម្រាប់ការពារសិទ្ធិមនុស្ស",
+              "ការហាមឃាត់សង្គ្រាមជាដាច់ខាត",
+              "ច្បាប់ស្តីពីពាណិជ្ជកម្មអន្តរជាតិ"
+            ],
+            "en": [
+              "The right to use military force to settle problems",
+              "The law for the protection of human rights",
+              "An absolute prohibition of war",
+              "The law of international trade"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការប្រើប្រាស់កម្លាំងកងទ័ពដើម្បីដោះស្រាយបញ្ហា នីតិវិទូប្រសិទ្ធនាមថា the jus ad bellum។",
+            "en": "The text says the use of military force to settle problems was called by jurists the jus ad bellum."
+          },
+          "page": 57
+        }
+      ]
+    },
+    {
+      "id": "ch2-l4",
+      "title": {
+        "km": "អំពីរដ្ឋ និងទ្រឹស្ដីសំខាន់ៗនៃដើមកំណើតរដ្ឋ",
+        "en": "The State and the Main Theories of Its Origin"
+      },
+      "pages": {
+        "from": 60,
+        "to": 66
+      },
+      "objectives": {
+        "km": [
+          "រៀបរាប់ទ្រឹស្ដីសំខាន់ៗ នៃដើមកំណើតរដ្ឋ",
+          "ពន្យល់ទស្សនាទានរបស់ ម៉ាឆេយ៉ាវេលី ថូម៉ាស ហប ចន ឡក់ និងម៉ុងតែសគ្យើ អំពីរដ្ឋ និងច្បាប់",
+          "ពន្យល់គោលការណ៍នៃសង្គមអន្តរជាតិតាមបែបវ៉េស្វាលី",
+          "រាយលក្ខណៈវិនិច្ឆ័យនៃរដ្ឋតាមច្បាប់អន្តរជាតិទំនើប"
+        ],
+        "en": [
+          "Set out the main theories of the origin of the state",
+          "Explain the views of Machiavelli, Hobbes, Locke and Montesquieu on the state and law",
+          "Explain the principles of the Westphalian international society",
+          "List the criteria of statehood under modern international law"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "រដ្ឋបានចាប់កំណើតក្នុងរវាងគ.ស ១២៨០ ដល់ ១៣៦០ នៅពេលដែលទ្វីបអឺរ៉ុបពោរពេញទៅដោយភ្លើងសង្គ្រាម ហើយព្រះមហាក្សត្របានកំណត់ដែនដីនគររៀងៗខ្លួន។",
+          "លោក ដង់ អាលីយេរី ជាអ្នកប្រាជ្ញមុនគេបង្អស់ដែលបង្ហាញទស្សនាទានអំពីរដ្ឋ តាមរយៈស្នាដៃ ព្រះរាជាណាចក្រ ក្នុងគ.ស ១៣១១។",
+          "លោក នីកូឡា ម៉ាឆេយ៉ាវេលី បានយកពាក្យ រដ្ឋ មកបង្ហាញជាលើកដំបូងតាមស្នាដៃ ព្រះអង្គម្ចាស់ ក្នុងឆ្នាំ១៥១៣ ហើយបែងចែកអំណាចគ្រប់គ្រងរដ្ឋជាសាធារណរដ្ឋ និងក្សត្របូរី។",
+          "លោក ថូម៉ាស ហប យល់ឃើញថារដ្ឋកើតឡើងដោយកិច្ចសន្យារវាងមនុស្ស និងមនុស្ស ដែលបុគ្គលលះបង់សិទ្ធិទៅឱ្យអ្នកកាន់អធិបតេយ្យ ។",
+          "លោក ចន ឡក់ បានបែងចែកអំណាចជាបី គឺអំណាចនីតិបញ្ញត្តិ នីតិប្រតិបត្តិ និងអំណាចសហព័ន្ធ ហើយយល់ថាអធិបតេយ្យភាពនៅជាមួយប្រជាជន។",
+          "លោក ម៉ុងតែសគ្យើ បានចាត់ទុកច្បាប់ជាទំនាក់ទំនងចាំបាច់ចេញពីធម្មជាតិ បែងចែកច្បាប់ជាបីទំរង់ និងរបបគ្រប់គ្រងរដ្ឋជាបីប្រភេទ។"
+        ],
+        "en": [
+          "The state came into being between 1280 and 1360 CE, when Europe was filled with the fires of war, as monarchs fixed the boundaries of their own kingdoms.",
+          "Dante Alighieri was the earliest scholar to set out a doctrine of the state, in his work De Monarchia in 1311 CE.",
+          "Niccolo Machiavelli first introduced the word 'state' in his work The Prince in 1513, and divided the government of states into republics and principalities.",
+          "Thomas Hobbes held that the state arises through a contract between human beings, in which individuals surrender their rights to the holder of sovereignty.",
+          "John Locke divided power into three branches — legislative, executive and federative — and held that sovereignty rests with the people, not the state.",
+          "Montesquieu treated law as a necessary relation arising from nature, divided law into three types, and classified systems of government into three kinds."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "១. រដ្ឋបានចាប់កំណើតក្នុងរវាងគ.ស ១២៨០ ដល់ ១៣៦០ នៅពេលដែលទ្វីបអុឺរ៉ុបពោរពេញទៅ",
+          "en": "The state came into being between 1280 and 1360 CE, at a time when the European continent was filled with the fires of war.",
+          "page": 60
+        },
+        {
+          "km": "៣. ក្រោយមកទៀតលោក នីកូឡា ម៉ាឆេយ៉ាវេលី បានយកពាក្យ រដ្ឋមកបង្ហាញជាលើកដំបូងតាមរយៈ",
+          "en": "Later, Niccolo Machiavelli introduced the word state for the first time through his work entitled The Prince, in 1513.",
+          "page": 60
+        },
+        {
+          "km": "តាមទស្សនៈរបស់លោក ចន ឡក់រដ្ឋត្រូវមានព្រំដែន ហើយអំណាចត្រូវមានការបែងចែក។ ដូច្នេះបាន",
+          "en": "In the view of John Locke, the state must have borders and power must be divided.",
+          "page": 62
+        },
+        {
+          "km": "រដ្ឋ គឺជាទឹកដីជាកំណត់",
+          "en": "A state is a defined territory.",
+          "page": 66
+        }
+      ],
+      "terms": [
+        {
+          "km": "រដ្ឋ",
+          "en": "State",
+          "defKm": "ក្រុមមនុស្សដែលរស់នៅក្នុងទឹកដីណាមួយ និងរស់នៅក្រោមអំណាចច្បាប់ និងអំណាចនយោបាយរួមមួយ",
+          "defEn": "A group of people living in a territory and under a single legal and political authority"
+        },
+        {
+          "km": "កិច្ចសន្យាសង្គម",
+          "en": "Social contract",
+          "defKm": "កិច្ចសន្យារវាងមនុស្ស និងមនុស្ស ដែលបុគ្គលលះបង់សិទ្ធិទៅឱ្យអ្នកកាន់អធិបតេយ្យ តាមទស្សនៈ ថូម៉ាស ហប",
+          "defEn": "The contract among people by which individuals surrender their rights to the sovereign, in Hobbes' view"
+        },
+        {
+          "km": "ការបែងចែកអំណាច",
+          "en": "Separation of powers",
+          "defKm": "ការខ្ចាត់ខ្ចាយអំណាចក្នុងរដ្ឋជាច្រើនផ្នែក ដូចជានីតិបញ្ញត្តិ នីតិប្រតិបត្តិ និងអំណាចសហព័ន្ធ តាមទស្សនៈ ចន ឡក់",
+          "defEn": "The division of state power into several branches, such as legislative, executive and federative, in Locke's view"
+        },
+        {
+          "km": "អធិបតេយ្យផ្ដាច់ការ",
+          "en": "Absolute sovereignty",
+          "defKm": "អំណាចពេញលេញដែលរដ្ឋកាន់កាប់ ដែលតាមទស្សនៈ ថូម៉ាស ហប ជាទម្រង់រដ្ឋអាចរក្សាសន្តិភាពបាន",
+          "defEn": "The plenary power held by the state which, in Hobbes' view, is the form of state able to keep the peace"
+        },
+        {
+          "km": "រាជាធិបតេយ្យ",
+          "en": "Monarchy",
+          "defKm": "របបគ្រប់គ្រងរដ្ឋដែលអំណាចឋិតនៅលើព្រះមហាក្សត្រ ឬព្រះមហាក្សត្រីយានី តាមការបែងចែករបស់ ម៉ុងតែសគ្យើ",
+          "defEn": "A system of government in which power rests with a king or queen, in Montesquieu's classification"
+        },
+        {
+          "km": "របបផ្ដាច់ការ",
+          "en": "Despotism",
+          "defKm": "រដ្ឋដែលគ្រប់គ្រងអំណាចដោយមនុស្សម្នាក់ ដែលប្រើអំណាចផ្តាច់មុខ ហើយគ្មានវិធានជាច្បាប់អ្វីទាំងអស់",
+          "defEn": "A state ruled by one person exercising exclusive power with no legal rules whatsoever"
+        },
+        {
+          "km": "សង្គមអន្តរជាតិតាមបែបវ៉េស្វាលី",
+          "en": "Westphalian international society",
+          "defKm": "សង្គមអន្តរជាតិដែលកើតឡើងតាមរយៈកិច្ចប្រជុំនៅទីក្រុងវ៉េស្ទាលី ថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៦៤៨ ដោយឈរលើគោលការណ៍បី",
+          "defEn": "The international society established by the congress at Westphalia on 24 October 1648, resting on three principles"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើរដ្ឋបានចាប់កំណើតក្នុងរវាងគ.ស ឆ្នាំណា?",
+            "en": "Between which years CE did the state come into being?"
+          },
+          "options": {
+            "km": [
+              "រវាងឆ្នាំ១២៨០ ដល់ ១៣៦០",
+              "រវាងឆ្នាំ១៤៦៩ ដល់ ១៥២៧",
+              "រវាងឆ្នាំ១៥៨៨ ដល់ ១៦៧៩",
+              "រវាងឆ្នាំ១៦៣២ ដល់ ១៧០៤"
+            ],
+            "en": [
+              "Between 1280 and 1360",
+              "Between 1469 and 1527",
+              "Between 1588 and 1679",
+              "Between 1632 and 1704"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា រដ្ឋបានចាប់កំណើតក្នុងរវាងគ.ស ១២៨០ ដល់ ១៣៦០ នៅពេលដែលទ្វីបអឺរ៉ុបពោរពេញទៅដោយភ្លើងសង្គ្រាម។",
+            "en": "The text says the state came into being between 1280 and 1360 CE, when Europe was filled with the fires of war."
+          },
+          "page": 60
+        },
+        {
+          "q": {
+            "km": "តើលោកណាជាអ្នកប្រាជ្ញមុនគេបង្អស់ ដែលបង្ហាញឱ្យឃើញពីទស្សនាទានរបស់លោកស្ដីអំពីរដ្ឋ?",
+            "en": "Who was the earliest scholar to set out his doctrine of the state?"
+          },
+          "options": {
+            "km": [
+              "លោក នីកូឡា ម៉ាឆេយ៉ាវេលី",
+              "លោក ថូម៉ាស ហប",
+              "លោក ចន ឡក់",
+              "លោក ដង់ អាលីយេរី"
+            ],
+            "en": [
+              "Niccolo Machiavelli",
+              "Thomas Hobbes",
+              "John Locke",
+              "Dante Alighieri"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថា លោក ដង់ អាលីយេរី គឺជាអ្នកប្រាជ្ញមុនគេបង្អស់ដែលបង្ហាញឱ្យឃើញពីទស្សនាទានរបស់លោកស្ដីអំពីរដ្ឋ។",
+            "en": "The text says Dante Alighieri was the very first scholar to set out his doctrine of the state."
+          },
+          "page": 60
+        },
+        {
+          "q": {
+            "km": "តើលោកណា ដែលបានយកពាក្យ 'រដ្ឋ' មកបង្ហាញជាលើកដំបូង តាមរយៈស្នាដៃ 'ព្រះអង្គម្ចាស់' ក្នុងឆ្នាំ១៥១៣?",
+            "en": "Who first introduced the word 'state', through the work 'The Prince' in 1513?"
+          },
+          "options": {
+            "km": [
+              "លោក ថូម៉ាស ហប",
+              "លោក ម៉ុងតែសគ្យើ",
+              "លោក នីកូឡា ម៉ាឆេយ៉ាវេលី",
+              "លោក ដង់ អាលីយេរី"
+            ],
+            "en": [
+              "Thomas Hobbes",
+              "Montesquieu",
+              "Niccolo Machiavelli",
+              "Dante Alighieri"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា លោក នីកូឡា ម៉ាឆេយ៉ាវេលី បានយកពាក្យ រដ្ឋ មកបង្ហាញជាលើកដំបូងតាមរយៈស្នាដៃ ព្រះអង្គម្ចាស់ ក្នុងឆ្នាំ១៥១៣។",
+            "en": "The text says Machiavelli introduced the word state for the first time through The Prince in 1513."
+          },
+          "page": 60
+        },
+        {
+          "q": {
+            "km": "តាមទស្សនៈរបស់លោក ថូម៉ាស ហប តើរដ្ឋអាចកើតឡើងបានដោយសារអ្វី?",
+            "en": "In Hobbes' view, how can the state come into being?"
+          },
+          "options": {
+            "km": [
+              "ដោយការបោះឆ្នោតប្រជាធិបតេយ្យផ្ទាល់",
+              "ដោយតុល្យភាពកម្លាំងរវាងរដ្ឋមហាអំណាច",
+              "ដោយកិច្ចសន្យារវាងមនុស្ស និងមនុស្ស ដែលបុគ្គលលះបង់សិទ្ធិ",
+              "ដោយការបែងចែកអំណាចជាបី"
+            ],
+            "en": [
+              "Through direct democratic elections",
+              "Through the balance of power among great states",
+              "Through a contract among people in which individuals surrender their rights",
+              "Through the division of power into three branches"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា តាមរយៈកិច្ចសន្យានេះ បុគ្គលទាំងអស់ត្រូវលះបង់សិទ្ធិរបស់ខ្លួន ដើម្បីទៅឱ្យអ្នកកាន់អធិបតេយ្យ ទោះបីជាព្រះមហាក្សត្រ ឬក្រុមប្រឹក្សាណាមួយក្តី។",
+            "en": "The text says that through this contract all individuals surrender their rights to the holder of sovereignty, whether a monarch or a council."
+          },
+          "page": 61
+        },
+        {
+          "q": {
+            "km": "តាមទស្សនៈរបស់លោក ចន ឡក់ តើអធិបតេយ្យភាពស្ថិតនៅកន្លែងណា?",
+            "en": "In Locke's view, where does sovereignty lie?"
+          },
+          "options": {
+            "km": [
+              "នៅក្នុងសភានីតិបញ្ញត្តិតែមួយ",
+              "នៅជាមួយប្រជាជន មិនមែនស្ថិតនៅក្នុងរដ្ឋទេ",
+              "នៅក្នុងដៃព្រះមហាក្សត្រតែមួយ",
+              "នៅក្នុងក្រុមប្រឹក្សាសន្តិសុខ"
+            ],
+            "en": [
+              "In the legislature alone",
+              "With the people, not within the state",
+              "In the hands of the monarch alone",
+              "In the Security Council"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា ឡក់ បានលើកឡើងថា អធិបតេយ្យភាពមិនមែនស្ថិតនៅក្នុងរដ្ឋទេ ប៉ុន្តែគឺនៅជាមួយប្រជាជន។",
+            "en": "The text says Locke argued that sovereignty does not lie in the state but with the people."
+          },
+          "page": 62
+        },
+        {
+          "q": {
+            "km": "តើលោក ម៉ុងតែសគ្យើ បានធ្វើការបែងចែកប្រភេទច្បាប់ជាប៉ុន្មានទំរង់ និងអ្វីខ្លះ?",
+            "en": "Into how many types did Montesquieu divide law, and what are they?"
+          },
+          "options": {
+            "km": [
+              "ពីរទំរង់ គឺច្បាប់ជាតិ និងច្បាប់អន្តរជាតិ",
+              "ពីរទំរង់ គឺច្បាប់រដ្ឋ និងច្បាប់សហព័ន្ធ",
+              "បួនទំរង់ គឺច្បាប់ព្រហ្មទណ្ឌ រដ្ឋប្បវេណី ពាណិជ្ជកម្ម និងការងារ",
+              "បីទំរង់ គឺច្បាប់សាសនា ច្បាប់សីលធម៌ និងច្បាប់នយោបាយ/ច្បាប់បវេណី"
+            ],
+            "en": [
+              "Two: domestic law and international law",
+              "Two: state law and federal law",
+              "Four: criminal, civil, commercial and labour law",
+              "Three: religious law, moral law and political/civil law"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងថា លោកបានធ្វើការបែងចែកប្រភេទច្បាប់ជាទំរងបី គឺច្បាប់សាសនា ច្បាប់សីលធម៌ និងច្បាប់នយោបាយ និងច្បាប់បវេណី។",
+            "en": "The text says he divided law into three types: religious law, moral law, and political and civil law."
+          },
+          "page": 64
+        },
+        {
+          "q": {
+            "km": "តាមទស្សនៈរបស់លោក ម៉ុងតែសគ្យើ តើរបបគ្រប់គ្រងរដ្ឋបានបែងចែកជាប៉ុន្មានប្រភេទ និងអ្វីខ្លះ?",
+            "en": "According to Montesquieu, into how many kinds are systems of government divided, and what are they?"
+          },
+          "options": {
+            "km": [
+              "បីប្រភេទ គឺសាធារណរដ្ឋ រាជាធិបតេយ្យ និងផ្ដាច់ការ",
+              "ពីរប្រភេទ គឺប្រជាធិបតេយ្យ និងអភិជនាធិបតេយ្យ",
+              "ពីរប្រភេទ គឺសហព័ន្ធ និងឯកភាព",
+              "បួនប្រភេទ គឺរដ្ឋធំ រដ្ឋតូច រដ្ឋកោះ និងរដ្ឋជាប់ដីគោក"
+            ],
+            "en": [
+              "Three: republic, monarchy and despotism",
+              "Two: democracy and aristocracy",
+              "Two: federal and unitary",
+              "Four: large, small, island and landlocked states"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា លោកបានធ្វើការបែងចែករបបគ្រប់គ្រងរដ្ឋជាបីប្រភេទ គឺរដ្ឋតាមបែបសាធារណៈរដ្ឋ រដ្ឋតាមបែបរាជាធិបតេយ្យ និងរដ្ឋតាមបែបផ្ដាច់ការ។",
+            "en": "The text says he divided systems of government into three: republic, monarchy and despotism."
+          },
+          "page": 64
+        },
+        {
+          "q": {
+            "km": "តាមច្បាប់អន្តរជាតិទំនើប តើរដ្ឋត្រូវមានលក្ខណៈវិនិច្ឆ័យអ្វីខ្លះ?",
+            "en": "Under modern international law, what criteria must a state satisfy?"
+          },
+          "options": {
+            "km": [
+              "មានកំពង់ផែសមុទ្រ និងនាវាចរណ៍",
+              "ទឹកដីជាកំណត់ ប្រជាពលរដ្ឋរស់នៅជាអចិន្ត្រៃយ៍ រដ្ឋាភិបាលសម្រាប់គ្រប់គ្រង និងសមត្ថកិច្ចទំនាក់ទំនងជាមួយរដ្ឋអធិបតេយ្យផ្សេងទៀត",
+              "មានកងទ័ពខ្លាំង និងធនាគារជាតិ",
+              "មានរដ្ឋធម្មនុញ្ញ និងគណបក្សនយោបាយច្រើន"
+            ],
+            "en": [
+              "A seaport and a merchant fleet",
+              "Defined territory, permanent population, a government, and capacity to conduct relations with other sovereign states",
+              "A strong army and a national bank",
+              "A constitution and multiple political parties"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា រដ្ឋគឺជាទឹកដីជាកំណត់ មានប្រជាពលរដ្ឋរស់នៅជាអចិន្ត្រៃយ៍ មានរដ្ឋាភិបាលសម្រាប់គ្រប់គ្រង និងមានសមត្ថកិច្ចសម្រាប់ធ្វើការទំនាក់ទំនងជាមួយរដ្ឋអធិបតេយ្យផ្សេងទៀត។",
+            "en": "The text says a state is a defined territory with a permanent population, a government, and the capacity to conduct relations with other sovereign states."
+          },
+          "page": 66
+        }
+      ]
+    }
+  ]
+}

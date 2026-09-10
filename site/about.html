@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>អំពី និងប្រភព · About &amp; sources — International Public Law Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;700&family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e8b44a'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='serif'>ច</text></svg>">
+</head>
+<body>
+<header class="topbar" id="topbar"></header>
+<main class="wrap narrow">
+  <h1 class="km">អំពីគម្រោងនេះ · About this project</h1>
+  <div class="kbach" style="margin:14px 0 20px"></div>
+
+  <section class="card pad-lg" style="margin-bottom:18px">
+    <h2 class="km" style="font-size:20px">ប្រភពទាំង ៣ · The three sources</h2>
+    <p class="small muted">Every lesson, quiz answer and chatbot citation in this app points back to one of these three documents.</p>
+    <div class="grid cols-2" style="margin-top:12px">
+      <div class="card">
+        <span class="pill gold">1 · Khmer</span>
+        <h3 class="km" style="font-size:17px">ច្បាប់សាធារណៈអន្តរជាតិ</h3>
+        <p class="small">International Public Law — <b>ឡាយ រតតនា (Lay Rottana)</b>, 2021.
+        193 printed pages covering the international community, states, sources of international law,
+        the use of force, treaties, conventions and the 1991 Paris Peace Agreements.
+        The full text is searchable in “Ask the book”.</p>
+      </div>
+      <div class="card">
+        <span class="pill gold">2 · English</span>
+        <h3 style="font-size:17px">Law on the Establishment of the Extraordinary Chambers (ECCC Law)</h3>
+        <p class="small">As amended and promulgated on 27 October 2004 — the legal basis of the Khmer Rouge
+        tribunal in Cambodia, with the Khmer and international practice it introduced.</p>
+      </div>
+      <div class="card">
+        <span class="pill gold">3 · English</span>
+        <h3 style="font-size:17px">Paris Convention for the Protection of Industrial Property</h3>
+        <p class="small">WIPO text (1883, as revised Stockholm 1967 and amended 1979) — national treatment,
+        the right of priority, patents, marks and the administrative structure of the Union.</p>
+      </div>
+      <div class="card">
+        <span class="pill">+</span>
+        <h3 style="font-size:17px">Cambodian context</h3>
+        <p class="small">The 1991 Paris Peace Agreements, UNTAC and the ECCC are treated in the Khmer textbook
+        itself, so the study path connects general international law with Cambodian practice.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card pad-lg" style="margin-bottom:18px">
+    <h2 class="km" style="font-size:20px">វិធីសាស្ត្រ · How it was built</h2>
+    <ol class="point-list">
+      <li><b>Text recovery.</b> The textbook PDF uses a legacy Khmer font whose embedded text layer is corrupted.
+        The page text was recovered by mapping each embedded glyph back to the original KhmerOS font
+        (glyph-outline matching) and then converting the display order into proper Unicode logical order.
+        Handy side effect: every quote in this app is the printed text itself.</li>
+      <li><b>Structure.</b> Chapters, sections and page numbers come from the book’s own table of contents
+        and section headings — books pages 1–193 (PDF pages 12–205).</li>
+      <li><b>Lessons &amp; quizzes.</b> Objectives, key points, terms and questions are written from the
+        recovered text; each item keeps its page reference so you can check it against the book.</li>
+      <li><b>Ask the book.</b> Answers are produced by an in-browser search engine (BM25 over the full text,
+        with Khmer-aware character n-grams, because Khmer is written without spaces). It quotes the source
+        and shows the page. It never invents an answer: if the sources do not cover your question it says so.
+        Optionally you can plug in your own AI model key for paraphrased or translated answers.</li>
+      <li><b>Everything runs in your browser.</b> No server, no tracking, no account. Your progress,
+        notes and API key stay in this browser’s local storage.</li>
+    </ol>
+  </section>
+
+  <section class="card pad-lg" style="margin-bottom:18px">
+    <h2 class="km" style="font-size:20px">របៀបយោង · How to cite</h2>
+    <div class="quote" style="border-left-color:var(--accent)">
+      ឡាយ រតតនា, <i>ច្បាប់សាធារណៈអន្តរជាតិ</i> (ភ្នំពេញ, ២០២១), ទំព័រ …
+      <span class="src">Lay Rottana, <i>International Public Law</i> (Phnom Penh, 2021), p. …</span>
+    </div>
+    <p class="small muted">Each quote card in the app has a “copy citation” button that puts this reference
+    (with the page number) on your clipboard.</p>
+  </section>
+
+  <section class="card pad-lg callout warn">
+    <h2 class="km" style="font-size:20px">ការប្រកាសដោះសា · Disclaimer</h2>
+    <p class="km">ឧបករណ៍នេះជាជំនួយការសិក្សាប៉ុណ្ណោះ។ វាមិនមែនជាយោបល់ផ្លូវច្បាប់ និងមិនអាចជំនួសការអានឯកសារដើម
+      ឬការប្រឹក្សាជាមួយគ្រូ ឬមេធាវីបានទេ។ អត្ថបទ និងឯកសារទាំងអស់ជាកម្មសិទ្ធិរបស់អ្នកនិពន្ធ និងស្ថាប័នដើម
+      ហើយត្រូវបានដកស្រង់សម្រាប់គោលបំណងអប់រំតែប៉ុណ្ណោះ។</p>
+    <p class="small muted" style="margin-top:10px">This is a study aid. It is not legal advice and is not a
+      substitute for reading the original documents or consulting a teacher or lawyer. All quoted texts remain
+      the property of their original authors and institutions and are reproduced here for educational study only.
+      If you are a rights holder and want a passage removed, open an issue in the repository.</p>
+  </section>
+
+  <section class="card pad-lg">
+    <h2 class="km" style="font-size:20px">ទិន្នន័យ និងអាជ្ញាបណ្ណ · Data &amp; licence</h2>
+    <ul class="point-list small">
+      <li>The application code (HTML/CSS/JS) is released under the MIT licence — see <span class="mono">LICENSE</span>.</li>
+      <li>Quoted source texts are <b>not</b> MIT-licensed; they belong to their authors. Only short quotations with
+        page references are included for study purposes.</li>
+      <li>Corpus statistics: <span id="stats-line" class="mono"></span></li>
+      <li>Fonts: Kantumruy Pro, Inter and Fraunces via Google Fonts.</li>
+    </ul>
+  </section>
+</main>
+<footer class="footer" id="footer"></footer>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="data/corpus.js"></script>
+<script src="data/lessons.js"></script>
+<script src="assets/js/data.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.IPL.renderChrome('about.html');
+    const s = window.IPL_DATA.stats, c = window.IPL_DATA.corpus.length;
+    document.getElementById('stats-line').textContent =
+      s.lessons + ' lessons · ' + s.questions + ' quiz questions · ' + s.terms + ' terms · ' +
+      c + ' indexed passages';
+  });
+</script>
+</body>
+</html>

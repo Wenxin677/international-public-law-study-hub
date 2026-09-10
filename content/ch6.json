@@ -1,0 +1,949 @@
+{
+  "id": "ch6",
+  "num": 6,
+  "title": {
+    "km": "អនុសញ្ញា",
+    "en": "Conventions"
+  },
+  "pages": {
+    "from": 109,
+    "to": 128
+  },
+  "summary": {
+    "km": "ជំពូកនេះពន្យល់អំពីអនុសញ្ញាជាលិខិតូបករណ៍អន្តរជាតិដែលមានលក្ខណៈផ្លូវការ ពិធីសារ អនុស្សារណៈយោគយល់គ្នា សេចក្តីប្រកាស ព្រមទាំងសុពលភាព និងចំណាត់ថ្នាក់នៃសន្ធិសញ្ញាអន្តរជាតិ។",
+    "en": "This chapter explains conventions as formal international instruments, protocols, memoranda of understanding and declarations, as well as the validity and the classification of international treaties."
+  },
+  "lessons": [
+    {
+      "id": "ch6-l1",
+      "title": {
+        "km": "៥.អនុសញ្ញា ពិធីសារ និងអនុស្សារណៈយោគយល់គ្នា",
+        "en": "Conventions, Protocols and Memoranda of Understanding"
+      },
+      "pages": {
+        "from": 109,
+        "to": 111
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អត្ថន័យ និងលក្ខណៈវិនិច្ឆ័យនៃអនុសញ្ញាអន្តរជាតិ",
+          "ប្រៀបធៀបអនុសញ្ញា ជាមួយសន្ធិសញ្ញា និងកិច្ចព្រមព្រៀង",
+          "ចាត់ថ្នាក់ប្រភេទនៃពិធីសារ និងពន្យល់មុខងាររបស់វា",
+          "ពន្យល់ពីលក្ខណៈ និងឧទាហរណ៍នៃអនុស្សារណៈយោគយល់គ្នា"
+        ],
+        "en": [
+          "Explain the meaning and the legal criteria of an international convention",
+          "Compare a convention with a treaty and an agreement",
+          "Classify the types of protocols and explain their functions",
+          "Explain the character and examples of a memorandum of understanding"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "ន័យទូទៅនៃពាក្យអនុសញ្ញាដូចគ្នានឹងន័យទូទៅនៃពាក្យសន្ធិសញ្ញា ប៉ុន្តែអនុសញ្ញាតម្រូវឱ្យមានការចូលរួមពីរដ្ឋភាគច្រើននៃសហគមន៍អន្តរជាតិទាំងមូល។",
+          "រដ្ឋពីរ ឬរដ្ឋបី មិនអាចបង្កើតជាអនុសញ្ញាអន្តរជាតិបានទេ ដោយសារប្រធានបទត្រូវពាក់ព័ន្ធនឹងបញ្ហារួមរបស់មនុស្សជាតិ ឬពិភពលោកទាំងមូល។",
+          "កិច្ចព្រមព្រៀងមានលក្ខណៈផ្លូវការតិចជាងសន្ធិសញ្ញា ហើយទាក់ទងនឹងកម្មវត្ថុដែលមានដែនអនុវត្តចង្អៀតជាង។",
+          "អនុសញ្ញាអន្តរជាតិត្រូវបានរៀបចំឡើងដោយរដ្ឋអធិបតេយ្យជាច្រើន ដូចជាអនុសញ្ញាស្តីពីបទឧក្រិដ្ឋប្រល័យពូជសាសន៍ ឆ្នាំ១៩៤៨ និងអនុសញ្ញាស្តីពីសិទ្ធិរបស់កុមារ ឆ្នាំ១៩៨៩។",
+          "ពិធីសាមានបីប្រភេទគឺ ៖ ពិធីសាចុះហត្ថលេខា ពិធីសាជម្រើស និងពិធីសាធ្វើវិសោធនកម្ម។",
+          "អនុស្សារណៈយោគយល់គ្នាជាលិខិតូបករណ៍អន្តរជាតិដែលមានលក្ខណៈជាកិច្ចសម្របសម្រួល និងមានទម្រង់ជាលិខិតទោល។"
+        ],
+        "en": [
+          "The ordinary meaning of the word 'convention' is the same as that of 'treaty', but a convention requires the participation of many states of the whole international community.",
+          "Two or three states cannot create an international convention, because its subject matter must concern a common problem of humanity or of the entire world.",
+          "An agreement is less formal in character than a treaty and relates to subject matter with a narrower scope.",
+          "International conventions are drawn up by many sovereign states, for example the Convention on the Prevention and Punishment of the Crime of Genocide of 1948 and the Convention on the Rights of the Child of 1989.",
+          "Protocols are of three kinds: signature protocols, optional protocols and amendment protocols.",
+          "A memorandum of understanding is an international instrument of a flexible character, cast in the form of a single document."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ជាធម្មតាគឺជាព្រមព្រៀងមានលក្ខណៈផ្លូវការតិចជាងសន្ធិសញ្ញា។ម្យ៉ាងទៀតកិច្ចព្រមព្រៀង",
+          "en": "As a rule it is an agreement of a less formal character than a treaty; furthermore, an agreement",
+          "page": 109
+        },
+        {
+          "km": "ន័យទូទៅនៃពាក្យអនុសញ្ញាក៏ដូចគ្នានឹងន័យទូទៅនៃពាក្យសន្ធិសញ្ញាដែរ។",
+          "en": "The ordinary meaning of the word 'convention' is the same as the ordinary meaning of the word 'treaty'.",
+          "page": 110
+        },
+        {
+          "km": "ខ. ពិធីសាជម្រើស ធម្មតាពិធីសានេះ ត្រូវបានអនុម័តក្នុងថ្ងៃតែមួយ នឹង សន្ធិសញ្ញា ប៉ុន្តែវាមាន",
+          "en": "B. Optional protocol: as a rule this protocol is adopted on the same day as the treaty, but it has",
+          "page": 111
+        },
+        {
+          "km": "អនុស្សរណៈយោគយល់គ្នា ជាលិខិតូបករណ៍អន្តរជាតិ ដែលមានលក្ខណៈជាកិច្ចសម្រប",
+          "en": "A memorandum of understanding is an international instrument of a conciliatory character",
+          "page": 111
+        }
+      ],
+      "terms": [
+        {
+          "km": "អនុសញ្ញា",
+          "en": "Convention",
+          "defKm": "លិខិតូបករណ៍អន្តរជាតិដែលមានលក្ខណៈផ្លូវការ ហើយតម្រូវឱ្យមានការចូលរួមពីរដ្ឋភាគច្រើននៃសហគមន៍អន្តរជាតិទាំងមូល។",
+          "defEn": "A formal international instrument requiring the participation of many states of the entire international community."
+        },
+        {
+          "km": "កិច្ចព្រមព្រៀង",
+          "en": "Agreement",
+          "defKm": "លិខិតូបករណ៍ដែលមានលក្ខណៈផ្លូវការតិចជាងសន្ធិសញ្ញា ហើយមានកម្មវត្ថុចង្អៀតជាងសន្ធិសញ្ញា។",
+          "defEn": "An instrument of a less formal character than a treaty, covering subject matter narrower than that of a treaty."
+        },
+        {
+          "km": "ពិធីសា",
+          "en": "Protocol",
+          "defKm": "កិច្ចព្រមព្រៀងដែលមានលក្ខណៈជាផ្លូវការតិចជាងសន្ធិសញ្ញា ឬអនុសញ្ញា ហើយអាចប្រើសម្រាប់លិខិតូបករណ៍ប្រភេទផ្សេងៗ។",
+          "defEn": "An agreement of a less formal character than a treaty or a convention, which may be used for various kinds of instruments."
+        },
+        {
+          "km": "ពិធីសាជម្រើស",
+          "en": "Optional protocol",
+          "defKm": "ពិធីសាដែលមានលក្ខណៈឯករាជ្យពីសន្ធិសញ្ញា ហើយអាចផ្តល់សច្ចាប័នដាច់ពីសន្ធិសញ្ញា។",
+          "defEn": "A protocol that is independent of the treaty and may be ratified separately from it."
+        },
+        {
+          "km": "ពិធីសាធ្វើវិសោធនកម្ម",
+          "en": "Amendment protocol",
+          "defKm": "លិខិតូបករណ៍ដែលមានបទបញ្ញត្តិធ្វើវិសោធនកម្មលើសន្ធិសញ្ញាដើមមួយ ឬច្រើន។",
+          "defEn": "An instrument containing provisions that amend one or more original treaties."
+        },
+        {
+          "km": "អនុស្សារណៈយោគយល់គ្នា",
+          "en": "Memorandum of understanding",
+          "defKm": "លិខិតូបករណ៍អន្តរជាតិដែលមានលក្ខណៈជាកិច្ចសម្របសម្រួល និងមានទម្រង់ជាលិខិតទោល ដែលភាគីអាចជាឯកជន ឬជារដ្ឋ។",
+          "defEn": "An international instrument of a conciliatory character, in the form of a single document, whose parties may be private persons or states."
+        },
+        {
+          "km": "សច្ចាប័ន",
+          "en": "Ratification",
+          "defKm": "ការផ្តល់ការយល់ព្រមជាផ្លូវការលើលិខិតូបករណ៍ ដែលក្នុងករណីខ្លះកិច្ចព្រមព្រៀងមិនទាមទារឱ្យមានការផ្តល់សច្ចាប័នឡើយ។",
+          "defEn": "The formal expression of consent to an instrument; in some cases an agreement does not require ratification."
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើលក្ខណៈវិនិច្ឆ័យតាមផ្លូវច្បាប់របស់អនុសញ្ញាតម្រូវឱ្យមានអ្វី?",
+            "en": "What does the legal criterion of a convention require?"
+          },
+          "options": {
+            "km": [
+              "ការចូលរួមពីរដ្ឋភាគច្រើននៃសហគមន៍អន្តរជាតិទាំងមូល",
+              "ការចូលរួមពីរដ្ឋពីរ ឬរដ្ឋបីតែប៉ុណ្ណោះ",
+              "ការចូលរួមពីរដ្ឋតែមួយ",
+              "ការចូលរួមពីអង្គការមិនមែនរដ្ឋាភិបាល"
+            ],
+            "en": [
+              "Participation by many states of the entire international community",
+              "Participation by only two or three states",
+              "Participation by a single state",
+              "Participation by non-governmental organisations"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អនុសញ្ញាតម្រូវឱ្យមានការចូលរួមពីសហរដ្ឋភាគច្រើនពីសហគមន៍អន្តរជាតិទាំងមូល ហើយរដ្ឋពីរឬបីមិនអាចបង្កើតជាអនុសញ្ញាអន្តរជាតិបានទេ។",
+            "en": "A convention requires the participation of many states of the entire international community, and two or three states cannot create an international convention."
+          },
+          "page": 110
+        },
+        {
+          "q": {
+            "km": "តើពាក្យអនុសញ្ញាមានន័យទូទៅដូចគ្នានឹងពាក្យណា?",
+            "en": "The ordinary meaning of the word 'convention' is the same as that of which word?"
+          },
+          "options": {
+            "km": [
+              "សន្ធិសញ្ញា",
+              "ពិធីសា",
+              "សេចក្តីប្រកាស",
+              "អនុស្សារណៈ"
+            ],
+            "en": [
+              "Treaty",
+              "Protocol",
+              "Declaration",
+              "Memorandum"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ន័យទូទៅនៃពាក្យអនុសញ្ញាក៏ដូចគ្នានឹងន័យទូទៅនៃពាក្យសន្ធិសញ្ញាដែរ។",
+            "en": "The ordinary meaning of the word 'convention' is the same as the ordinary meaning of the word 'treaty'."
+          },
+          "page": 110
+        },
+        {
+          "q": {
+            "km": "តើពិធីសាចុះហត្ថលេខាជាអ្វី?",
+            "en": "What is a signature protocol?"
+          },
+          "options": {
+            "km": [
+              "លិខិតូបករណ៍បន្ទាប់បន្សំនៃសន្ធិសញ្ញា ដើម្បីដោះស្រាយបញ្ហាបន្ទាប់បន្សំ",
+              "លិខិតូបករណ៍ដែលធ្វើវិសោធនកម្មលើសន្ធិសញ្ញាដើម",
+              "លិខិតូបករណ៍ដែលមានលក្ខណៈឯករាជ្យពីសន្ធិសញ្ញាទាំងស្រុង",
+              "សេចក្តីប្រកាសដែលមិនចងភ្ជាប់កាតព្វកិច្ច"
+            ],
+            "en": [
+              "A subsidiary instrument of the treaty, to settle subsidiary questions",
+              "An instrument that amends the original treaty",
+              "An instrument entirely independent of the treaty",
+              "A declaration that creates no binding obligation"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ពិធីសាចុះហត្ថលេខា គឺជាលិខិតូបករណ៍បន្ទាប់បន្សំនៃសន្ធិសញ្ញា ដែលសម្រាប់ដោះស្រាយបញ្ហាបន្ទាប់បន្សំនានា។",
+            "en": "A signature protocol is a subsidiary instrument of the treaty, intended to settle subsidiary questions."
+          },
+          "page": 111
+        },
+        {
+          "q": {
+            "km": "តើពិធីសាជម្រើសមានលក្ខណៈដូចម្តេច?",
+            "en": "What is the character of an optional protocol?"
+          },
+          "options": {
+            "km": [
+              "អាចផ្តល់សច្ចាប័នដាច់ពីសន្ធិសញ្ញា ដោយមានលក្ខណៈឯករាជ្យពីសន្ធិសញ្ញា",
+              "ត្រូវតែផ្តល់សច្ចាប័នជាមួយសន្ធិសញ្ញាក្នុងពេលតែមួយ",
+              "មិនអាចបង្កើតកាតព្វកិច្ចបន្ថែមបានឡើយ",
+              "ត្រូវបានអនុម័តដោយរដ្ឋតែមួយ"
+            ],
+            "en": [
+              "It may be ratified separately from the treaty and is independent of it",
+              "It must be ratified together with the treaty at the same time",
+              "It cannot create any additional obligations",
+              "It is adopted by a single state"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ពិធីសាជម្រើសមានលក្ខណៈឯករាជ្យពីសន្ធិសញ្ញា អាចផ្តល់សច្ចាប័នដាច់ពីសន្ធិសញ្ញា និងបង្កើតរចនាសម្ព័ន្ធកាតព្វកិច្ចបន្ថែមលើសន្ធិសញ្ញា។",
+            "en": "An optional protocol is independent of the treaty, may be ratified separately from it, and creates a structure of obligations additional to those in the treaty."
+          },
+          "page": 111
+        },
+        {
+          "q": {
+            "km": "តើពិធីសាធ្វើវិសោធនកម្មឆ្នាំ១៩៤៦ ធ្វើវិសោធនកម្មលើលិខិតូបករណ៍ស្តីពីអ្វី?",
+            "en": "The 1946 amendment protocol amended instruments concerning what?"
+          },
+          "options": {
+            "km": [
+              "ថ្នាំញៀនស្រវឹង",
+              "សិទ្ធិរបស់កុមារ",
+              "ទំនាក់ទំនងការទូត",
+              "ច្បាប់សមុទ្រ"
+            ],
+            "en": [
+              "Narcotic drugs",
+              "The rights of the child",
+              "Diplomatic relations",
+              "The law of the sea"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ពិធីសាឆ្នាំ១៩៤៦ ដែលធ្វើវិសោធនកម្មលើកិច្ចព្រមព្រៀង ឬអនុសញ្ញា និងពិធីសាទាំងឡាយ ស្តីពីថ្នាំញៀនស្រវឹង។",
+            "en": "The 1946 protocol amended the agreements or conventions and protocols concerning narcotic drugs."
+          },
+          "page": 111
+        },
+        {
+          "q": {
+            "km": "តើអនុស្សារណៈនៃការយោគយល់គ្នារវាងព្រះរាជាណាចក្រកម្ពុជា និងសាធារណរដ្ឋប្រជាមានិតចិន ស្តីពីអ្វី?",
+            "en": "The memorandum of understanding between the Kingdom of Cambodia and the People's Republic of China concerned what?"
+          },
+          "options": {
+            "km": [
+              "កិច្ចសហប្រតិបត្តិការនៃការកសាងហេដ្ឋារចនាសម្ព័ន្ធផ្លូវស្ពាន",
+              "ការបង្កើតតុលាការអន្តរជាតិ",
+              "ការផ្លាស់ប្តូរទឹកដី",
+              "ការបង្កើតសម្ព័ន្ធភាពយោធា"
+            ],
+            "en": [
+              "Cooperation on building road and bridge infrastructure",
+              "The creation of an international court",
+              "An exchange of territory",
+              "The creation of a military alliance"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អនុស្សារណៈនៃការយោគយល់នោះស្តីពីកិច្ចសហប្រតិបត្តិការនៃការកសាងហេដ្ឋារចនាសម្ពន្ធ័ផ្លូវស្ពាន ចុះហត្ថលេខានៅថ្ងៃទី២៤ ខែមិថុនា ឆ្នាំ២០១០។",
+            "en": "That memorandum of understanding concerned cooperation on building road and bridge infrastructure and was signed on 24 June 2010."
+          },
+          "page": 111
+        },
+        {
+          "q": {
+            "km": "តើអនុសញ្ញាស្ដីពីការទប់ស្កាត់និងផ្ដន្ទាទោសបទឧក្រិដ្ឋប្រល័យពូជសាសន៍ ត្រូវបានអនុម័តនៅថ្ងៃណា?",
+            "en": "When was the Convention on the Prevention and Punishment of the Crime of Genocide adopted?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី៩ ខែធ្នូ ឆ្នាំ១៩៤៨",
+              "ថ្ងៃទី៧ ខែមីនា ឆ្នាំ១៩៦៦",
+              "ថ្ងៃទី១៦ ខែធ្នូ ឆ្នាំ១៩៦៦",
+              "ថ្ងៃទី២០ ខែធ្នូ ឆ្នាំ១៩៨៩"
+            ],
+            "en": [
+              "9 December 1948",
+              "7 March 1966",
+              "16 December 1966",
+              "20 December 1989"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អនុសញ្ញាស្ដីពីការទប់ស្កាត់និងផ្ដន្ទាទោសបទឧក្រិដ្ឋប្រល័យពូជសាសន៍ អនុម័តនៅក្នុងមហាសន្និបាតរបស់អង្គការសហប្រជាជាតិថ្ងៃទី៩ ខែធ្នូ ឆ្នាំ១៩៤៨។",
+            "en": "The Convention on the Prevention and Punishment of the Crime of Genocide was adopted by the UN General Assembly on 9 December 1948."
+          },
+          "page": 110
+        }
+      ]
+    },
+    {
+      "id": "ch6-l2",
+      "title": {
+        "km": "៥.៥.១ សេចក្តីប្រកាស",
+        "en": "Declarations"
+      },
+      "pages": {
+        "from": 111,
+        "to": 127
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អត្ថន័យ និងលក្ខណៈវិនិច្ឆ័យនៃសេចក្តីប្រកាស",
+          "បញ្ជាក់ពីឥទ្ធិពលនៃសេចក្តីប្រកាសលើច្បាប់អន្តរជាតិតាមទម្លាប់",
+          "រាយបញ្ជីគោលការណ៍នៃសេចក្តីថ្លែងការណ៍ស្តីពីទំនាក់ទំនងមិត្តភាព និងកិច្ចសហប្រតិបត្តិការ",
+          "ពន្យល់ខ្លឹមសារនៃសេចក្តីប្រកាសស្តីពីការមិនអនុញ្ញាតឱ្យមានអន្តរាគមន៍"
+        ],
+        "en": [
+          "Explain the meaning and the criteria of a declaration",
+          "State the effect of declarations on customary international law",
+          "List the principles of the Declaration on Friendly Relations and Cooperation",
+          "Explain the content of the Declaration on the Inadmissibility of Intervention"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "ពាក្យសេចក្តីប្រកាសត្រូវបានគេប្រើសម្រាប់លិខិតូបករណ៍អន្តរជាតិផ្សេងៗ ប៉ុន្តែរាល់សេចក្តីប្រកាសមិនអាចចងភ្ជាប់កាតព្វកិច្ចទាំងអស់នោះទេ។",
+          "សេចក្តីប្រកាសគ្រាន់តែបង្ហាញពីគោលបំណងរបស់ភាគីណាមួយ ប៉ុន្តែសេចក្តីប្រកាសខ្លះអាចមានឥទ្ធិពលលើច្បាប់អន្តរជាតិតាមទម្លាប់ ដូចជាសេចក្តីប្រកាសជាសកលឆ្នាំ១៩៤៨ ស្តីពីសិទ្ធិមនុស្ស។",
+          "សេចក្តីថ្លែងការណ៍ស្តីពីគោលការណ៍នីតិអន្តរជាតិទាក់ទងនឹងទំនាក់ទំនងមិត្តភាព ត្រូវបានអនុម័តដោយសេចក្តីសម្រេចលេខ២៦២៥ ថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៩៧០។",
+          "គោលការណ៍សំខាន់ៗរួមមាន ការមិនគំរាមកំហែង ឬប្រើប្រាស់កម្លាំង ការដោះស្រាយជម្លោះដោយសន្តិវិធី ការមិនជ្រៀតជ្រែក សមភាពប្រកបដោយអធិបតេយ្យ សិទ្ធិស្វ័យសម្រេច និងការបំពេញកាតព្វកិច្ចដោយសុចរិត។",
+          "សេចក្តីប្រកាសស្តីពីការមិនអនុញ្ញាតឱ្យមានអន្តរាគមន៍ និងការជ្រៀតជ្រែកចូលក្នុងកិច្ចការផ្ទៃក្នុងនៃបណ្ដារដ្ឋ ត្រូវបានអនុម័តនៅថ្ងៃទី៩ ខែធ្នូ ឆ្នាំ១៩៨១។",
+          "គោលការណ៍នៃធម្មនុញ្ញដែលមានចែងក្នុងសេចក្តីថ្លែងការណ៍ ជាគោលការណ៍គ្រឹះនៃច្បាប់អន្តរជាតិ។"
+        ],
+        "en": [
+          "The word 'declaration' is used for various international instruments, but not every declaration creates binding obligations.",
+          "A declaration merely makes known the intention of a party, yet some declarations may influence customary international law, such as the Universal Declaration of 1948 on human rights.",
+          "The Declaration on Principles of International Law concerning Friendly Relations was adopted by resolution 2625 of 24 October 1970.",
+          "The main principles include the non-threat or non-use of force, peaceful settlement of disputes, non-intervention, sovereign equality, self-determination and fulfilment of obligations in good faith.",
+          "The Declaration on the Inadmissibility of Intervention and Interference in the Internal Affairs of States was adopted on 9 December 1981.",
+          "The principles of the Charter set out in the Declaration are fundamental principles of international law."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "១.រាល់សេចក្តីប្រកាសមិនអាចចងភ្ជាប់កាតព្វកិច្ចទាំងអស់នោះទេ ។",
+          "en": "1. Not all declarations can create binding obligations.",
+          "page": 112
+        },
+        {
+          "km": "ចងភ្ជាប់កាតព្វកិច្ចជាច្បាប់ទម្លាប់ក្នុងដំណាក់ក្រោយមកទៀត។ ដូចជាករណីសេចក្តីប្រកាសជាសកល",
+          "en": "binding obligations as customary law at a later stage, as in the case of the Universal Declaration",
+          "page": 112
+        },
+        {
+          "km": "គ្មានរដ្ឋឬក្រុមនៃរដ្ឋណាមួយមានសិទ្ធិចូលធ្វើអន្តរាគមន៍ចំពោះឬមិនចំពោះសម្រាប់ហេតុ",
+          "en": "No state or group of states has the right to intervene, directly or indirectly, for any reason",
+          "page": 117
+        },
+        {
+          "km": "១.គ្មានរដ្ឋឬក្រុមរដ្ឋណាមានសិទ្ធិធ្វើអន្តរាគមន៍ឬជ្រៀតជ្រែកចូលក្នុងកិច្ចការផ្ទៃក្នុងនិងកិច្ចការក្រៅ",
+          "en": "1. No state or group of states has the right to intervene or interfere in the internal and external affairs",
+          "page": 123
+        }
+      ],
+      "terms": [
+        {
+          "km": "សេចក្តីប្រកាស",
+          "en": "Declaration",
+          "defKm": "លិខិតូបករណ៍អន្តរជាតិដែលបង្ហាញពីគោលបំណងរបស់ភាគី ហើយមិនចាំបាច់ចងភ្ជាប់កាតព្វកិច្ចទាំងអស់នោះទេ។",
+          "defEn": "An international instrument that makes known a party's intention and does not necessarily create binding obligations."
+        },
+        {
+          "km": "ច្បាប់អន្តរជាតិតាមទម្លាប់",
+          "en": "Customary international law",
+          "defKm": "ច្បាប់ដែលកើតចេញពីការអនុវត្ត ហើយសេចក្តីប្រកាសខ្លះអាចមានឥទ្ធិពលចំពោះវា ឬផ្តល់លក្ខណៈចងភ្ជាប់កាតព្វកិច្ចក្នុងដំណាក់ក្រោយមកទៀត។",
+          "defEn": "Law arising from practice, which some declarations may influence or come to be binding under at a later stage."
+        },
+        {
+          "km": "សមភាពប្រកបដោយអធិបតេយ្យ",
+          "en": "Sovereign equality",
+          "defKm": "គោលការណ៍ដែលគ្រប់រដ្ឋទាំងអស់ទទួលបានសមភាព មានសិទ្ធិស្មើភាពគ្នា និងមានករណីយកិច្ចស្មើគ្នា ទោះមានភាពខុសគ្នាខាងសេដ្ឋកិច្ច សង្គម ឬនយោបាយ។",
+          "defEn": "The principle that all states enjoy equality, equal rights and equal duties, despite differences of an economic, social or political character."
+        },
+        {
+          "km": "សិទ្ធិស្វ័យសម្រេចរបស់ប្រជាជន",
+          "en": "Right of peoples to self-determination",
+          "defKm": "សិទ្ធិរបស់ប្រជាជនកំណត់ដោយសេរីនូវស្ថានភាពនយោបាយរបស់ខ្លួន ដោយគ្មានការជ្រៀតជ្រែកពីខាងក្រៅ។",
+          "defEn": "The right of a people to determine freely its political status, without external interference."
+        },
+        {
+          "km": "ការមិនធ្វើអន្តរាគមន៍",
+          "en": "Non-intervention",
+          "defKm": "គោលការណ៍ដែលហាមឃាត់រដ្ឋ ឬក្រុមរដ្ឋ មិនឱ្យជ្រៀតជ្រែកចូលក្នុងកិច្ចការផ្ទៃក្នុង និងកិច្ចការក្រៅប្រទេសរបស់រដ្ឋផ្សេងទៀត ទោះក្នុងរូបភាពណាក៏ដោយ។",
+          "defEn": "The principle prohibiting a state or group of states from intervening in the internal or external affairs of another state, in any form whatsoever."
+        },
+        {
+          "km": "សន្តិវិធី",
+          "en": "Peaceful means",
+          "defKm": "វិធីដោះស្រាយជម្លោះអន្តរជាតិដូចជា ការចរចា ការអង្កេតសន្ថានកម្ម ការសម្រុះសម្រួល ការបង្រួបបង្រួម អាជ្ញាកណ្តាល និងការដោះស្រាយតាមតុលាការ។",
+          "defEn": "Methods of settling international disputes such as negotiation, enquiry, mediation, conciliation, arbitration and judicial settlement."
+        },
+        {
+          "km": "អធិបតេយ្យអចិន្ត្រៃយ៍លើធនធានធម្មជាតិ",
+          "en": "Permanent sovereignty over natural resources",
+          "defKm": "សិទ្ធិអចិន្ត្រៃយ៍របស់រដ្ឋលើធនធានធម្មជាតិរបស់ខ្លួន ដែលជាមូលដ្ឋាននៃការរក្សាសន្តិភាព និងសន្តិសុខអន្តរជាតិ។",
+          "defEn": "The permanent right of a state over its natural resources, which forms a basis for maintaining international peace and security."
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើលក្ខណៈវិនិច្ឆ័យនៃសេចក្តីប្រកាសចែងថាដូចម្តេចអំពីកាតព្វកិច្ច?",
+            "en": "What do the criteria of a declaration say about obligations?"
+          },
+          "options": {
+            "km": [
+              "រាល់សេចក្តីប្រកាសមិនអាចចងភ្ជាប់កាតព្វកិច្ចទាំងអស់នោះទេ",
+              "សេចក្តីប្រកាសតែងតែចងភ្ជាប់កាតព្វកិច្ចទាំងអស់",
+              "សេចក្តីប្រកាសមានសុពលភាពខ្ពស់ជាងធម្មនុញ្ញ",
+              "សេចក្តីប្រកាសត្រូវផ្តល់សច្ចាប័នជាដាច់ខាត"
+            ],
+            "en": [
+              "Not all declarations can create binding obligations",
+              "All declarations always create binding obligations",
+              "A declaration is superior in force to the Charter",
+              "A declaration must always be ratified"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "លក្ខណៈវិនិច្ឆ័យទី១ នៃសេចក្តីប្រកាសគឺថា រាល់សេចក្តីប្រកាសមិនអាចចងភ្ជាប់កាតព្វកិច្ចទាំងអស់នោះទេ។",
+            "en": "The first criterion of a declaration is that not all declarations can create binding obligations."
+          },
+          "page": 112
+        },
+        {
+          "q": {
+            "km": "តើអ្វីជាឧទាហរណ៍នៃសេចក្តីប្រកាសដែលអាចមានឥទ្ធិពលចំពោះច្បាប់អន្តរជាតិតាមទម្លាប់?",
+            "en": "Which is an example of a declaration that may influence customary international law?"
+          },
+          "options": {
+            "km": [
+              "សេចក្តីប្រកាសជាសកលឆ្នាំ១៩៤៨ ស្តីពីសិទ្ធិមនុស្ស",
+              "ពិធីសាស្តីពីថ្នាំញៀនស្រវឹង ឆ្នាំ១៩៤៦",
+              "អនុស្សារណៈយោគយល់គ្នារវាងកម្ពុជា និងចិន",
+              "ពិធីសាជម្រើសទាំងឡាយ"
+            ],
+            "en": [
+              "The Universal Declaration of 1948 on human rights",
+              "The 1946 protocol on narcotic drugs",
+              "The Cambodia-China memorandum of understanding",
+              "Optional protocols in general"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទលើកឡើងថា សេចក្តីប្រកាសខ្លះអាចផ្តល់លក្ខណៈចងភ្ជាប់កាតព្វកិច្ចជាច្បាប់ទម្លាប់ក្នុងដំណាក់ក្រោយមកទៀត ដូចជាករណីសេចក្តីប្រកាសជាសកលឆ្នាំ១៩៤៨ ស្តីពីសិទ្ធិមនុស្ស។",
+            "en": "The text states that some declarations may acquire binding force as customary law at a later stage, as in the case of the Universal Declaration of 1948 on human rights."
+          },
+          "page": 112
+        },
+        {
+          "q": {
+            "km": "តើសេចក្តីថ្លែងការណ៍ស្តីពីគោលការណ៍នីតិអន្តរជាតិស្តីពីទំនាក់ទំនងមិត្តភាព ត្រូវបានអនុម័តដោយសេចក្តីសម្រេចលេខណា?",
+            "en": "By which resolution was the Declaration on Principles of International Law concerning Friendly Relations adopted?"
+          },
+          "options": {
+            "km": [
+              "លេខ២៦២៥ ចុះថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៩៧០",
+              "លេខ២៧៣៤ ចុះថ្ងៃទី១៦ ខែធ្នូ ឆ្នាំ១៩៧០",
+              "លេខ២១៣១ ចុះថ្ងៃទី២១ ខែធ្នូ ឆ្នាំ១៩៦៥",
+              "លេខ៣៣១៤ ចុះថ្ងៃទី១៤ ខែធ្នូ ឆ្នាំ១៩៧៤"
+            ],
+            "en": [
+              "Resolution 2625 of 24 October 1970",
+              "Resolution 2734 of 16 December 1970",
+              "Resolution 2131 of 21 December 1965",
+              "Resolution 3314 of 14 December 1974"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទបានយោងសេចក្តីសម្រេចរបស់មហាសន្និបាតលេខ២៦២៥ ចុះថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៩៧០ ដែលមានចែងសេចក្តីប្រកាសស្តីពីគោលការណ៍នៃនីតិអន្តរជាតិស្តីពីទំនាក់ទំនងជាមិត្តភាព។",
+            "en": "The text refers to General Assembly resolution 2625 of 24 October 1970, which contains the Declaration on Principles of International Law concerning Friendly Relations."
+          },
+          "page": 121
+        },
+        {
+          "q": {
+            "km": "តើសេចក្តីប្រកាសស្តីពីការមិនអនុញ្ញាតឱ្យមានអន្តរាគមន៍ និងការជ្រៀតជ្រែក ត្រូវបានអនុម័តនៅថ្ងៃណា?",
+            "en": "When was the Declaration on the Inadmissibility of Intervention and Interference adopted?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី៩ ខែធ្នូ ឆ្នាំ១៩៨១",
+              "ថ្ងៃទី២១ ខែធ្នូ ឆ្នាំ១៩៦៥",
+              "ថ្ងៃទី១៤ ខែធ្នូ ឆ្នាំ១៩៧៤",
+              "ថ្ងៃទី១៦ ខែធ្នូ ឆ្នាំ១៩៧០"
+            ],
+            "en": [
+              "9 December 1981",
+              "21 December 1965",
+              "14 December 1974",
+              "16 December 1970"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "សេចក្តីប្រកាសនេះត្រូវបានអនុម័តដោយមហាសន្និបាតនៃអង្គការសហប្រជាជាតិ កិច្ចប្រជុំពេញអង្គលើកទី៩១ ថ្ងៃទី៩ ខែធ្នូ ឆ្នាំ១៩៨១។",
+            "en": "This declaration was adopted by the UN General Assembly at its 91st plenary meeting on 9 December 1981."
+          },
+          "page": 120
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍សមភាពប្រកបដោយអធិបតេយ្យរួមមានកត្តាមួយណា?",
+            "en": "Which of the following is a factor of sovereign equality?"
+          },
+          "options": {
+            "km": [
+              "គ្រប់រដ្ឋមានការអនុវត្តច្បាប់ស្មើៗគ្នា",
+              "រដ្ឋមហាអំណាចមានសិទ្ធិច្រើនជាងរដ្ឋតូច",
+              "រដ្ឋអាចជ្រៀតជ្រែកកិច្ចការរដ្ឋផ្សេងបាន",
+              "បូរណភាពដែនដីអាចប៉ះពាល់បាន"
+            ],
+            "en": [
+              "Every state is subject to the equal application of law",
+              "Great powers have more rights than small states",
+              "A state may intervene in another state's affairs",
+              "Territorial integrity may be infringed"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ក្នុងចំណោមកត្តានៃសមភាពអធិបតេយ្យ ក.គ្រប់រដ្ឋមានការអនុវត្តច្បាប់ស្មើៗគ្នា ហើយ ឃ.បូរណភាពដែនដីនិងឯករាជ្យនយោបាយរបស់រដ្ឋមួយទៀតមិនអាចប៉ះពាល់បាន។",
+            "en": "Among the factors of sovereign equality are that every state is subject to the equal application of law, and that the territorial integrity and political independence of another state are inviolable."
+          },
+          "page": 119
+        },
+        {
+          "q": {
+            "km": "តើសេចក្តីថ្លែងការណ៍បានលើកឡើងថា ប្រជាជនមានសិទ្ធិធ្វើអ្វីដោយសេរី?",
+            "en": "According to the Declaration, what are peoples free to do?"
+          },
+          "options": {
+            "km": [
+              "កំណត់ស្ថានភាពនយោបាយរបស់ខ្លួន និងបន្តអភិវឌ្ឍសេដ្ឋកិច្ច សង្គមកិច្ច និងវប្បធម៌របស់ខ្លួន ដោយគ្មានការជ្រៀតជ្រែកពីខាងក្រៅ",
+              "ផ្លាស់ប្តូរព្រំដែនរបស់រដ្ឋផ្សេងទៀត",
+              "បង្កើតសម្ព័ន្ធភាពយោធាប្រឆាំងរដ្ឋផ្សេង",
+              "ប្រើប្រាស់កម្លាំងដើម្បីដកហូតអត្តសញ្ញាណជាតិរបស់ប្រជាជនដទៃ"
+            ],
+            "en": [
+              "To determine their political status and to pursue their economic, social and cultural development, without external interference",
+              "To change the borders of other states",
+              "To form military alliances against other states",
+              "To use force to deprive other peoples of their national identity"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ប្រជាជនទាំងឡាយមានសិទ្ធិដោយសេរីដើម្បីកំណត់ ដោយគ្មានការជ្រៀតជ្រែកពីខាងក្រៅ នូវស្ថានភាពនយោបាយរបស់រដ្ឋនោះ និងដើម្បីបន្តអភិវឌ្ឍសេដ្ឋកិច្ច សង្គមកិច្ច និងវប្បធម៌របស់ពួកគេ។",
+            "en": "Peoples have the right, freely and without external interference, to determine the political status of their state and to pursue their economic, social and cultural development."
+          },
+          "page": 118
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍នៃធម្មនុញ្ញដែលមានចែងក្នុងសេចក្តីថ្លែងការណ៍ ត្រូវបានចាត់ទុកជាអ្វី?",
+            "en": "What are the Charter principles set out in the Declaration regarded as?"
+          },
+          "options": {
+            "km": [
+              "គោលការណ៍គ្រឹះនៃច្បាប់អន្តរជាតិ",
+              "គ្រាន់តែជាការផ្តល់អនុសាសន៍ដោយស្ម័គ្រចិត្ត",
+              "ពិធីសាធ្វើវិសោធនកម្ម",
+              "លិខិតទោលដែលមិនមានឥទ្ធិពលច្បាប់"
+            ],
+            "en": [
+              "Fundamental principles of international law",
+              "Mere voluntary recommendations",
+              "Amendment protocols",
+              "Single documents with no legal effect"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "សេចក្តីប្រកាសបន្ថែមថា គោលការណ៍នៃធម្មនុញ្ញដែលមានចែងនៅក្នុងសេចក្តីថ្លែងការណ៍ ជាគោលការណ៍គ្រឹះនៃច្បាប់អន្តរជាតិ។",
+            "en": "The Declaration adds that the Charter principles set out in it are fundamental principles of international law."
+          },
+          "page": 120
+        },
+        {
+          "q": {
+            "km": "តើរដ្ឋទាំងអស់មានករណីយកិច្ចដូចម្តេច ចំពោះការគំរាមកំហែង ឬការប្រើប្រាស់កងកម្លាំង?",
+            "en": "What duty do all states have in relation to the threat or use of force?"
+          },
+          "options": {
+            "km": [
+              "បញ្ចប់ការគំរាមកំហែង ឬការប្រើប្រាស់កងកម្លាំងប្រឆាំងនឹងបូរណភាពទឹកដី ឬឯករាជ្យខាងនយោបាយរបស់រដ្ឋណាមួយ",
+              "ប្រើប្រាស់កម្លាំងដើម្បីដោះស្រាយជម្លោះ",
+              "គំរាមកំហែងរដ្ឋដទៃឱ្យចុះសន្ធិសញ្ញា",
+              "រក្សាកងកម្លាំងបរទេសនៅក្នុងទឹកដីរដ្ឋដទៃ"
+            ],
+            "en": [
+              "To refrain from the threat or use of force against the territorial integrity or political independence of any state",
+              "To use force to settle disputes",
+              "To threaten other states into signing treaties",
+              "To keep foreign forces in the territory of another state"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "សេចក្តីថ្លែងការណ៍ចែងថា រដ្ឋទាំងឡាយត្រូវបញ្ចប់ការគំរាមកំហែង ឬការប្រើប្រាស់កងកម្លាំងប្រឆាំងនឹងបូរណភាពទឹកដី ឬឯករាជខាងនយោបាយរបស់រដ្ឋណាមួយ។",
+            "en": "The Declaration provides that states must refrain from the threat or use of force against the territorial integrity or political independence of any state."
+          },
+          "page": 115
+        }
+      ]
+    },
+    {
+      "id": "ch6-l3",
+      "title": {
+        "km": "៥.៥.២ សុពលភាព និង ៥.៥.៣ ចំណាត់ថ្នាក់នៃសន្ធិសញ្ញា",
+        "en": "Validity and Classification of Treaties"
+      },
+      "pages": {
+        "from": 127,
+        "to": 128
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់គោលការណ៍ Pacta sunt Servanda និងសុពលភាពនៃសន្ធិសញ្ញា",
+          "បញ្ជាក់មូលដ្ឋាននៃសុពលភាពនៃសន្ធិសញ្ញាអន្តរជាតិ",
+          "ចាត់ថ្នាក់សន្ធិសញ្ញាជាសន្ធិសញ្ញាកិច្ចសន្យា និងសន្ធិសញ្ញាច្បាប់",
+          "កំណត់ភាគី និងតំណាងដែលមានសមត្ថកិច្ចចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ"
+        ],
+        "en": [
+          "Explain the principle Pacta sunt servanda and the validity of treaties",
+          "State the basis of the validity of an international treaty",
+          "Classify treaties into treaty-contracts and law-making treaties",
+          "Identify the parties and representatives competent to sign an international treaty"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "អ្នកច្បាប់អុីតាលី Anzilotti មានទស្សនៈថា សុពលភាពរបស់សន្ធិសញ្ញាអន្តរជាតិយោងទៅលើគោលការណ៍ Pacta sunt Servanda។",
+          "តាមគោលការណ៍នេះ រដ្ឋត្រូវចងភ្ជាប់ទាំងស្រុងទៅនឹងកាតព្វកិច្ចនានាដែលមានចែងនៅក្នុងសន្ធិសញ្ញាដែលខ្លួនបានចុះហត្ថលេខា ហើយត្រូវរក្សាឱ្យបានខ្ជាប់នូវកិច្ចព្រមព្រៀងទាំងនោះ។",
+          "មូលដ្ឋាននៃសុពលភាពបន្ទាប់ពីគោលការណ៍ Pacta sunt Servanda គឺអនុសញ្ញាទីក្រុងវីយ៉េន ស្តីពីនីតិនៃសន្ធិសញ្ញា ឆ្នាំ១៩៦៩ ដែលត្រូវបានរៀបចំព្រាងតាំងពីឆ្នាំ១៩៤៥ ដោយគណៈកម្មការនីតិអន្តរជាតិ និងបញ្ចប់ការងារនៅឆ្នាំ១៩៦៦។",
+          "សន្ធិសញ្ញាមានការខុសប្លែកគ្នាទៅតាមកម្មវត្ថុ ៖ សន្ធិសញ្ញាកិច្ចសន្យាមានបញ្ញត្តិលើស្ថានភាពពិសេសដោយឡែក រីឯសន្ធិសញ្ញាច្បាប់លើកឡើងនូវគោលការណ៍ច្បាប់ជាទូទៅ។",
+          "សន្ធិសញ្ញាច្បាប់មានពីរប្រភេទ ៖ ទីមួយ សន្ធិសញ្ញាដែលបញ្ជាក់បទដ្ឋាននានានៃច្បាប់អន្តរជាតិជាសាកល ដូចជាធម្មនុញ្ញសហប្រជាជាតិ និងទីពីរ សន្ធិសញ្ញាដែលដាក់បញ្ចូលជាគោលការណ៍ទូទៅ ដូចជាអនុសញ្ញាទីក្រុងសឺណែវ ឆ្នាំ១៩៥៨ ស្តីពីច្បាប់សមុទ្រ។",
+          "ភាគីដែលមានសមត្ថភាពចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ គឺមានតែរដ្ឋប៉ុណ្ណោះ ដោយយោងតាមមាត្រា៦ នៃអនុសញ្ញាទីក្រុងវីយ៉េន ស្ដីពីច្បាប់សន្ធិសញ្ញា ថ្ងៃទី២៣ ខែឧសភា ឆ្នាំ១៩៦៩ ហើយប្រមុខរដ្ឋ ប្រមុខរដ្ឋាភិបាល និងរដ្ឋមន្ត្រីការបរទេស អាចចុះហត្ថលេខាលើសន្ធិសញ្ញាដោយមិនចាំបាច់ផ្តល់សិទ្ធិពីសំណាក់រដ្ឋ។"
+        ],
+        "en": [
+          "The Italian jurist Anzilotti held the view that the validity of an international treaty rests on the principle Pacta sunt servanda.",
+          "By that principle a state is fully bound by the obligations set out in a treaty it has signed, and must keep to those agreements.",
+          "The basis of validity after Pacta sunt servanda is the Vienna Convention on the Law of Treaties of 1969, drafted from 1945 by the International Law Commission and completed in 1966.",
+          "Treaties differ according to their subject matter: a treaty-contract lays down provisions for a particular situation, while a law-making treaty states general legal principles.",
+          "Law-making treaties are of two kinds: first, those setting out universal norms of international law such as the UN Charter, and second, those incorporating general principles such as the Geneva Convention of 1958 on the law of the sea.",
+          "Only states have the capacity to sign an international treaty, under Article 6 of the Vienna Convention on the Law of Treaties of 23 May 1969, and heads of State, heads of government and ministers of foreign affairs may sign without having to produce full powers from the state."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "អ្នកច្បាប់សញ្ញាតិអុីតាលីមួយរូបឈ្មោះ Anzilottiមានទស្សនៈថា សុពលភាពរបស់សន្ធិសញ្ញា",
+          "en": "An Italian jurist named Anzilotti held the view that the validity of a treaty",
+          "page": 127
+        },
+        {
+          "km": "អន្តរជាតិមួយ គឺយោងទៅលើគោលការណ៍ដ៏សំខាន់មួយដែលចែងថា Pacta  sunt Servanda។",
+          "en": "rests on an important principle which states that Pacta sunt servanda.",
+          "page": 127
+        },
+        {
+          "km": "ពិសេស ដោយឡែកណាមួយ គេឱ្យឈ្មោះថា សន្ធិសញ្ញាកិច្ចសន្យា ។ ចំពោះសន្ធិសញ្ញាដែលលើក",
+          "en": "a particular and distinct situation, it is given the name treaty-contract. As for treaties which raise",
+          "page": 128
+        },
+        {
+          "km": "ភាគីដែលមានសមត្ថភាពចុះហត្ថលេខា លើសន្ធិសញ្ញាអន្តរជាតិ គឺមានតែ រដ្ឋប៉ុណ្ណោះ។ មាត្រា",
+          "en": "The parties competent to sign an international treaty are only states. Article",
+          "page": 128
+        }
+      ],
+      "terms": [
+        {
+          "km": "Pacta sunt Servanda",
+          "en": "Pacta sunt servanda",
+          "defKm": "គោលការណ៍ដែលថា រដ្ឋត្រូវចងភ្ជាប់ទាំងស្រុងទៅនឹងកាតព្វកិច្ចនានានៅក្នុងសន្ធិសញ្ញាដែលខ្លួនបានចុះហត្ថលេខា ហើយត្រូវរក្សាកិច្ចព្រមព្រៀងទាំងនោះឱ្យបានខ្ជាប់។",
+          "defEn": "The principle that a state is fully bound by the obligations in a treaty it has signed and must keep to those agreements."
+        },
+        {
+          "km": "សុពលភាពនៃសន្ធិសញ្ញា",
+          "en": "Validity of treaties",
+          "defKm": "មូលដ្ឋានដែលធ្វើឱ្យសន្ធិសញ្ញាអន្តរជាតិមានភាពចងភ្ជាប់ គឺគោលការណ៍ Pacta sunt Servanda និងអនុសញ្ញាទីក្រុងវីយ៉េន ស្តីពីនីតិនៃសន្ធិសញ្ញា ឆ្នាំ១៩៦៩។",
+          "defEn": "The foundation which makes an international treaty binding, namely Pacta sunt servanda and the Vienna Convention on the Law of Treaties of 1969."
+        },
+        {
+          "km": "អនុសញ្ញាទីក្រុងវីយ៉េន ស្តីពីនីតិនៃសន្ធិសញ្ញា ឆ្នាំ១៩៦៩",
+          "en": "Vienna Convention on the Law of Treaties, 1969",
+          "defKm": "លិខិតូបករណ៍អន្តរជាតិដែលចែងពីនីតិស្តីពីសន្ធិសញ្ញា ហើយជាមូលដ្ឋាននៃសុពលភាពបន្ទាប់ពីគោលការណ៍ Pacta sunt Servanda។",
+          "defEn": "The international instrument setting out the law of treaties, serving as the basis of validity after the principle Pacta sunt servanda."
+        },
+        {
+          "km": "សន្ធិសញ្ញាកិច្ចសន្យា",
+          "en": "Treaty-contract",
+          "defKm": "សន្ធិសញ្ញាដែលមានបញ្ញត្តិទៅលើស្ថានភាពពិសេស ដោយឡែកណាមួយ។",
+          "defEn": "A treaty whose provisions address a particular and distinct situation."
+        },
+        {
+          "km": "សន្ធិសញ្ញាច្បាប់",
+          "en": "Law-making treaty",
+          "defKm": "សន្ធិសញ្ញាដែលលើកឡើងនូវគោលការណ៍ច្បាប់ជាទូទៅ ដែលជាប្រភពផ្ទាល់នៃច្បាប់អន្តរជាតិ។",
+          "defEn": "A treaty laying down general legal principles and forming a direct source of international law."
+        },
+        {
+          "km": "សមត្ថកិច្ចចុះហត្ថលេខា",
+          "en": "Capacity to sign",
+          "defKm": "សមត្ថភាពចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ ដែលមានតែរដ្ឋប៉ុណ្ណោះ ដោយត្រូវមានតំណាងដែលមានការផ្តល់សិទ្ធិត្រឹមត្រូវ។",
+          "defEn": "The capacity to sign an international treaty, which belongs only to states, acting through a properly authorised representative."
+        },
+        {
+          "km": "ប្រមុខរដ្ឋ",
+          "en": "Head of State",
+          "defKm": "តំណាងរដ្ឋដែលអាចចុះហត្ថលេខាលើសន្ធិសញ្ញាដោយមិនចាំបាច់ផ្តល់សិទ្ធិពីសំណាក់រដ្ឋ ដូចគ្នានឹងប្រមុខរដ្ឋាភិបាល និងរដ្ឋមន្ត្រីការបរទេស។",
+          "defEn": "A state representative who may sign a treaty without having to produce full powers, as may a head of government and a minister of foreign affairs."
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើអ្នកច្បាប់អុីតាលីរូបណាដែលមានទស្សនៈថា សុពលភាពសន្ធិសញ្ញាយោងទៅលើគោលការណ៍ Pacta sunt Servanda?",
+            "en": "Which Italian jurist held that the validity of a treaty rests on Pacta sunt servanda?"
+          },
+          "options": {
+            "km": [
+              "Anzilotti",
+              "Grotius",
+              "Vattel",
+              "Oppenheim"
+            ],
+            "en": [
+              "Anzilotti",
+              "Grotius",
+              "Vattel",
+              "Oppenheim"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា អ្នកច្បាប់សញ្ញាតិអុីតាលីមួយរូបឈ្មោះ Anzilotti មានទស្សនៈថា សុពលភាពរបស់សន្ធិសញ្ញាអន្តរជាតិគឺយោងទៅលើគោលការណ៍ Pacta sunt Servanda។",
+            "en": "The text states that an Italian jurist named Anzilotti held that the validity of an international treaty rests on the principle Pacta sunt servanda."
+          },
+          "page": 127
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍ Pacta sunt Servanda មានអត្ថន័យដូចម្តេច?",
+            "en": "What does the principle Pacta sunt servanda mean?"
+          },
+          "options": {
+            "km": [
+              "រដ្ឋត្រូវចងភ្ជាប់ទាំងស្រុងទៅនឹងកាតព្វកិច្ចក្នុងសន្ធិសញ្ញាដែលខ្លួនបានចុះហត្ថលេខា",
+              "រដ្ឋអាចដកខ្លួនពីសន្ធិសញ្ញាបានគ្រប់ពេល",
+              "សន្ធិសញ្ញាមិនចងភ្ជាប់រដ្ឋទេ",
+              "រដ្ឋអាចផ្លាស់ប្តូរសន្ធិសញ្ញាដោយឯកតោភាគី"
+            ],
+            "en": [
+              "A state is fully bound by the obligations in a treaty it has signed",
+              "A state may withdraw from a treaty at any time",
+              "Treaties do not bind states",
+              "A state may amend a treaty unilaterally"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ដោយយោងតាមគោលការណ៍នេះ រដ្ឋត្រូវចងភ្ជាប់ទាំងស្រុងទៅនឹងកាតព្វកិច្ចនានាដែលមានចែងនៅក្នុងសន្ធិសញ្ញាដែលខ្លួនបានចុះហត្ថលេខា។",
+            "en": "By this principle a state is fully bound by the obligations set out in the treaty it has signed."
+          },
+          "page": 127
+        },
+        {
+          "q": {
+            "km": "តើមូលដ្ឋាននៃសុពលភាពនៃសន្ធិសញ្ញាអន្តរជាតិ បន្ទាប់ពីគោលការណ៍ Pacta sunt Servanda គឺអ្វី?",
+            "en": "After the principle Pacta sunt servanda, what is the basis of the validity of an international treaty?"
+          },
+          "options": {
+            "km": [
+              "អនុសញ្ញាទីក្រុងវីយ៉េន ស្តីពីនីតិនៃសន្ធិសញ្ញា ឆ្នាំ១៩៦៩",
+              "អនុសញ្ញាទីក្រុងសឺណែវ ឆ្នាំ១៩៥៨",
+              "ធម្មនុញ្ញសហប្រជាជាតិ",
+              "សេចក្តីប្រកាសជាសកលឆ្នាំ១៩៤៨"
+            ],
+            "en": [
+              "The Vienna Convention on the Law of Treaties of 1969",
+              "The Geneva Convention of 1958",
+              "The Charter of the United Nations",
+              "The Universal Declaration of 1948"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "មូលដ្ឋាននៃសុពលភាពរបស់សន្ធិសញ្ញាអន្តរជាតិ បន្ទាប់ពីគោលការណ៍ Pacta sunt Servanda មក គឺអនុសញ្ញាទីក្រុងវីយ៉េន ស្តីពីនីតិនៃសន្ធិសញ្ញា ឆ្នាំ១៩៦៩។",
+            "en": "After Pacta sunt servanda, the basis of validity of an international treaty is the Vienna Convention on the Law of Treaties of 1969."
+          },
+          "page": 128
+        },
+        {
+          "q": {
+            "km": "តើនីតិស្តីសន្ធិសញ្ញាត្រូវបានបញ្ចូលទៅក្នុងសេចក្តីព្រាងតាំងពីឆ្នាំណា ហើយត្រូវបានបញ្ចប់ការងារនៅឆ្នាំណា?",
+            "en": "From which year was the law of treaties incorporated into the draft, and in which year was the work completed?"
+          },
+          "options": {
+            "km": [
+              "តាំងពីឆ្នាំ១៩៤៥ ហើយបញ្ចប់នៅឆ្នាំ១៩៦៦",
+              "តាំងពីឆ្នាំ១៩៦៩ ហើយបញ្ចប់នៅឆ្នាំ១៩៧០",
+              "តាំងពីឆ្នាំ១៩៥៨ ហើយបញ្ចប់នៅឆ្នាំ១៩៦៩",
+              "តាំងពីឆ្នាំ១៩៦៦ ហើយបញ្ចប់នៅឆ្នាំ១៩៨១"
+            ],
+            "en": [
+              "From 1945 and completed in 1966",
+              "From 1969 and completed in 1970",
+              "From 1958 and completed in 1969",
+              "From 1966 and completed in 1981"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា នីតិស្តីសន្ធិសញ្ញាត្រូវគណៈកម្មការនីតិអន្តរជាតិញែកបញ្ចូលទៅក្នុងសេចក្តីព្រាងតាំងពីឆ្នាំ១៩៤៥មក ហើយគណៈកម្មការបានបញ្ចប់ការងារនៅក្នុងឆ្នាំ១៩៦៦។",
+            "en": "The text states that the law of treaties was incorporated into the draft by the International Law Commission from 1945, and the Commission completed its work in 1966."
+          },
+          "page": 128
+        },
+        {
+          "q": {
+            "km": "តើសន្ធិសញ្ញាដែលលើកឡើងនូវគោលការណ៍ច្បាប់ជាទូទៅ គេហៅថាអ្វី?",
+            "en": "What is a treaty that sets out general legal principles called?"
+          },
+          "options": {
+            "km": [
+              "សន្ធិសញ្ញាច្បាប់",
+              "សន្ធិសញ្ញាកិច្ចសន្យា",
+              "ពិធីសាជម្រើស",
+              "អនុស្សារណៈយោគយល់គ្នា"
+            ],
+            "en": [
+              "A law-making treaty",
+              "A treaty-contract",
+              "An optional protocol",
+              "A memorandum of understanding"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ចំពោះសន្ធិសញ្ញាដែលលើកឡើងនូវគោលការណ៍ច្បាប់ជាទូទៅ គេហៅថា សន្ធិសញ្ញាច្បាប់ ដែលជាប្រភពផ្ទាល់នៃច្បាប់អន្តរជាតិតែម្តង។",
+            "en": "A treaty that lays down general legal principles is called a law-making treaty, itself a direct source of international law."
+          },
+          "page": 128
+        },
+        {
+          "q": {
+            "km": "តើសន្ធិសញ្ញាដែលមានបញ្ញត្តិទៅលើស្ថានភាពពិសេស ដោយឡែកណាមួយ គេឱ្យឈ្មោះថាអ្វី?",
+            "en": "What is a treaty whose provisions address a particular and distinct situation called?"
+          },
+          "options": {
+            "km": [
+              "សន្ធិសញ្ញាកិច្ចសន្យា",
+              "សន្ធិសញ្ញាច្បាប់",
+              "ពិធីសាធ្វើវិសោធនកម្ម",
+              "សេចក្តីប្រកាស"
+            ],
+            "en": [
+              "A treaty-contract",
+              "A law-making treaty",
+              "An amendment protocol",
+              "A declaration"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ចំពោះសន្ធិសញ្ញាដែលមានបញ្ញត្តិទៅលើស្ថានភាពពិសេស ដោយឡែកណាមួយ គេឱ្យឈ្មោះថា សន្ធិសញ្ញាកិច្ចសន្យា។",
+            "en": "A treaty whose provisions address a particular and distinct situation is called a treaty-contract."
+          },
+          "page": 128
+        },
+        {
+          "q": {
+            "km": "តើអ្នកណាមានសមត្ថភាពចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ?",
+            "en": "Who has the capacity to sign an international treaty?"
+          },
+          "options": {
+            "km": [
+              "មានតែរដ្ឋប៉ុណ្ណោះ",
+              "អង្គការអន្តរជាតិទាំងអស់",
+              "បុគ្គលឯកជន",
+              "ក្រុមហ៊ុនឆ្លងដែន"
+            ],
+            "en": [
+              "Only states",
+              "All international organisations",
+              "Private individuals",
+              "Transnational corporations"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ភាគីដែលមានសមត្ថភាពចុះហត្ថលេខាលើសន្ធិសញ្ញាអន្តរជាតិ គឺមានតែរដ្ឋប៉ុណ្ណោះ ហើយរដ្ឋត្រូវមានតំណាងដែលមានការផ្តល់សិទ្ធិត្រឹមត្រូវ។",
+            "en": "Only states have the capacity to sign an international treaty, acting through a duly authorised representative."
+          },
+          "page": 128
+        },
+        {
+          "q": {
+            "km": "តើតំណាងរដ្ឋណាខ្លះដែលអាចចុះហត្ថលេខាលើសន្ធិសញ្ញាដោយមិនចាំបាច់ផ្តល់សិទ្ធិពីសំណាក់រដ្ឋ?",
+            "en": "Which state representatives may sign a treaty without having to produce full powers?"
+          },
+          "options": {
+            "km": [
+              "ប្រមុខរដ្ឋ ប្រមុខរដ្ឋាភិបាល និងរដ្ឋមន្ត្រីការបរទេស",
+              "ឯកអគ្គរដ្ឋទូត និងកុងស៊ុល",
+              "រដ្ឋមន្ត្រីក្រសួងគមនាគមន៍",
+              "មន្ត្រីរាជការគ្រប់រូប"
+            ],
+            "en": [
+              "Heads of State, heads of government and ministers of foreign affairs",
+              "Ambassadors and consuls",
+              "Ministers of communications",
+              "Any civil servant"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "ក្នុងនីតិអន្តរជាតិ តំណាងរដ្ឋអាចមានសមត្ថកិច្ចចុះហត្ថលេខាដោយមិនចាំបាច់ផ្តល់សិទ្ធិ លុះត្រាតែបុគ្គលនោះជាប្រមុខរដ្ឋ ប្រមុខរដ្ឋាភិបាល ឬរដ្ឋមន្ត្រីការបរទេស។",
+            "en": "Under international law a state representative may sign without full powers only if that person is a head of state, a head of government or a minister of foreign affairs."
+          },
+          "page": 128
+        }
+      ]
+    }
+  ]
+}

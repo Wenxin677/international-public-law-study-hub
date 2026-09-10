@@ -1,0 +1,13 @@
+# source documents: copyrighted, never committed
+source/
+extracted/*.json
+extracted/*.md
+extracted/*.ttf
+extracted/chapters/
+render/
+site_test/
+site/data/corpus.json
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/

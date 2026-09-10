@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>International Public Law Study Hub · ច្បាប់សាធារណៈអន្តរជាតិ</title>
+<meta name="description" content="Bilingual Khmer/English study hub for public international law: lessons, quizzes and a chatbot grounded in the textbook and reference documents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;700&family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e8b44a'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='serif'>ច</text></svg>">
+</head>
+<body>
+<header class="topbar" id="topbar"></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <span class="pill gold">ច្បាប់សាធារណៈអន្តរជាតិ · Public International Law</span>
+      <h1 style="margin-top:14px"><span class="km">សិក្សា</span> <span class="gold km">ច្បាប់សាធារណៈអន្តរជាតិ</span></h1>
+      <p class="lead km" id="hero-sub"></p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
+        <a class="btn primary" href="learn.html" id="cta-learn"></a>
+        <a class="btn" href="chat.html" id="cta-ask"></a>
+        <a class="btn ghost" href="about.html" id="cta-about"></a>
+      </div>
+    </div>
+    <div class="cover-shell">
+      <img src="assets/img/cover.jpg" alt="ច្បាប់សាធារណៈអន្តរជាតិ — International Public Law (Lay Rottana, 2021)">
+    </div>
+  </section>
+
+  <div class="kbach" style="margin:8px 0 6px"></div>
+  <section class="stats" id="stats"></section>
+
+  <section class="grid cols-2" style="margin-top:8px">
+    <a class="card mode-card" href="learn.html">
+      <div class="glow"></div><div class="glyph">📚</div>
+      <h3 class="km" data-t="mode.learn.t"></h3><p class="km" data-t="mode.learn.d"></p>
+      <span class="btn sm primary" data-t="hero.cta.learn"></span>
+    </a>
+    <a class="card mode-card" href="quiz.html">
+      <div class="glow"></div><div class="glyph">🎯</div>
+      <h3 class="km" data-t="mode.quiz.t"></h3><p class="km" data-t="mode.quiz.d"></p>
+      <span class="btn sm primary" data-t="quiz.start"></span>
+    </a>
+    <a class="card mode-card" href="chat.html">
+      <div class="glow"></div><div class="glyph">🤖</div>
+      <h3 class="km" data-t="mode.chat.t"></h3><p class="km" data-t="mode.chat.d"></p>
+      <span class="btn sm primary" data-t="chat.send"></span>
+    </a>
+    <a class="card mode-card" href="glossary.html">
+      <div class="glow"></div><div class="glyph">🔖</div>
+      <h3 class="km" data-t="mode.gloss.t"></h3><p class="km" data-t="mode.gloss.d"></p>
+      <span class="btn sm primary" data-t="common.search"></span>
+    </a>
+  </section>
+
+  <section style="margin-top:30px">
+    <h2 class="km" data-t="nav.learn"></h2>
+    <div class="grid cols-2" id="chapter-strip"></div>
+  </section>
+
+  <section style="margin-top:30px" class="card pad-lg" id="progress-card"></section>
+
+  <section style="margin-top:30px" class="callout gold">
+    <b class="km">គ្រប់ចម្លើយមានទំព័រប្រភព។</b>
+    <span class="km"> សួរបញ្ហាណាមួយ ហើយប្រព័ន្ធនឹងបង្ហាញសម្រង់ពិតពីសៀវភៅ ឬឯកសារយោង ព្រមទាំងទំព័រដែលអ្នកអាចផ្ទៀងផ្ទាត់បាន។</span>
+  </section>
+</main>
+
+<footer class="footer" id="footer"></footer>
+
+<script src="assets/js/core.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="data/corpus.js"></script>
+<script src="data/lessons.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/home.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const t = window.IPL.t;
+    document.getElementById('hero-sub').textContent = t('hero.sub');
+    document.getElementById('cta-learn').textContent = t('hero.cta.learn');
+    document.getElementById('cta-ask').textContent = t('hero.cta.ask');
+    document.getElementById('cta-about').textContent = t('nav.about');
+    document.querySelectorAll('[data-t]').forEach(function (el) { el.textContent = t(el.dataset.t); });
+  });
+</script>
+</body>
+</html>

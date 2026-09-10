@@ -1,0 +1,698 @@
+{
+  "id": "ch1",
+  "num": 1,
+  "title": {
+    "km": "នីតិអន្តរជាតិសាធារណៈ",
+    "en": "Public International Law"
+  },
+  "pages": {
+    "from": 1,
+    "to": 28
+  },
+  "summary": {
+    "km": "ជំពូកនេះចាប់ផ្តើមដោយការរំលឹកទ្រឹស្តីនៃនីតិអន្តរជាតិសាធារណៈ និងភាពខុសគ្នារវាងសង្គមអន្តរជាតិ និងសង្គមជាតិ បន្ទាប់មកពន្យល់លម្អិតអំពីប្រភពនៃនីតិអន្តរជាតិ និងការវិវត្តន៍នៃនីតិសមុទ្រ ព្រមទាំងអង្គការអន្តរជាតិ និងសង្គមប្រជាជាតិ។",
+    "en": "This chapter opens with a reminder of the theory of public international law and the difference between international society and national society, then explains in detail the sources of international law and the development of the law of the sea, together with international organisations and the League of Nations."
+  },
+  "lessons": [
+    {
+      "id": "ch1-l1",
+      "title": {
+        "km": "១.១.ប្រភពនៃនីតិអន្តរជាតិ",
+        "en": "1.1 Sources of International Law"
+      },
+      "pages": {
+        "from": 1,
+        "to": 24
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អត្ថន័យនៃសង្គមអន្តរជាតិ និងភាពខុសគ្នារបស់វាពីសង្គមជាតិ",
+          "រាយប្រភពនៃនីតិអន្តរជាតិ ដូចមានចែងក្នុងមាត្រា៣៨ នៃលក្ខន្តិកៈតុលាការយុត្តិធម៌អន្តរជាតិ",
+          "ប្រៀបធៀបលក្ខណៈនៃសន្ធិសញ្ញាអន្តរជាតិ និងទំនៀមទម្លាប់អន្តរជាតិ",
+          "រៀបរាប់ការវិវត្តន៍នៃនីតិសមុទ្រ និងការចូលរួមរបស់កម្ពុជាក្នុងអនុសញ្ញាអង្គការសហប្រជាជាតិស្តីពីនីតិសមុទ្រ"
+        ],
+        "en": [
+          "Explain what international society means and how it differs from national society",
+          "List the sources of international law as set out in Article 38 of the Statute of the International Court of Justice",
+          "Compare the characteristics of international treaties and international custom",
+          "Describe the development of the law of the sea and Cambodia's participation in the United Nations Convention on the Law of the Sea"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "សង្គមអន្តរជាតិ គឺជាសង្គមដែលមានទំនាក់ទំនងរវាងតួអង្គដែលមានអធិបតេយ្យ ហើយមានន័យខុសពីសង្គមជាតិ ដែលទំនាក់ទំនងកើតឡើងតែក្នុងរដ្ឋមួយប៉ុណ្ណោះ។",
+          "អធិបតេយ្យ មានន័យថាជាអំណាចកំពូល និងអំណាចផ្តាច់មុខរបស់រដ្ឋ ដែលរដ្ឋប្រើប្រាស់គ្របដណ្តប់លើអំណាចទាំងអស់ និងមិនចំណុះរដ្ឋដទៃ។",
+          "ចំណុចផ្ដើមនៃប្រភពនៃនីតិអន្តរជាតិ គឺមាត្រា៣៨ នៃលក្ខន្តិកៈតុលាការយុត្តិធម៌អន្តរជាតិ ដែលរួមមាន សន្ធិសញ្ញាអន្តរជាតិ ទំនៀមទម្លាប់អន្តរជាតិ គោលការណ៍ទូទៅនៃច្បាប់ដែលស្គាល់ដោយអារ្យប្រជាជាតិ និងសេចក្តីសម្រេចរបស់តុលាការ។",
+          "សន្ធិសញ្ញាអន្តរជាតិ ជាប្រភពដ៏សំខាន់ ដោយសារវាជាឯកសារជាលាយលក្ខណ៍អក្សរ ដែលបង្កើតកាតព្វកិច្ចផ្លូវច្បាប់លើរដ្ឋជាហត្ថលេខី ប៉ុន្តែមិនមែនសន្ធិសញ្ញា ឬកិច្ចព្រមព្រៀងទាំងអស់សុទ្ធតែជាប្រភពនៃនីតិអន្តរជាតិនោះទេ។",
+          "នីតិអន្តរជាតិជាទំនៀមទម្លាប់កើតឡើងដោយកត្តាពីរ គឺការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋនានា និងការព្រមទទួលយកការអនុវត្តនោះថាជាកាតព្វកិច្ចតាមផ្លូវច្បាប់ ហើយមុនសង្គ្រាមលោកលើកទី១ ទំនៀមទម្លាប់ជាប្រភពសំខាន់ជាងគេ។",
+          "តុលាការយុត្តិធម៌អន្តរជាតិទទួលស្គាល់គោលការណ៍ទូទៅនៃច្បាប់ ដូចជា គោលការណ៍សុឆន្ទៈ ទំនួលខុសត្រូវ បទបញ្ញត្តិ យុត្តិធម៌ និងសមភាព ហើយមានតែរដ្ឋទេដែលអាចជាភាគីនៅចំពោះមុខតុលាការនេះ។",
+          "នីតិសមុទ្រវិវត្តពីច្បាប់សមុទ្ររ៉ូឌាន សន្ធិសញ្ញាថ័រដេសុីឡា និងការតស៊ូមតិរវាងលោក ហ៊ូហ្គោ ហ្គ្រោថឹស និងលោក ចន ស៊ែលដិន ទៅរកគោលការណ៍ចម្ងាយបាញ់កាណុងកាំភ្លើងផ្លោង ៣ មៃល៍ និងបន្តទៅសមុទ្រដែនដី ១២ មៃល៍។",
+          "ក្រោយសង្គ្រាមលោកលើកទី២ សេចក្តីប្រកាសទ្រូមែនឆ្នាំ១៩៤៥ បានជំរុញឱ្យមានការទាមទារយុត្តាធិការសមុទ្រយ៉ាងឆាប់រហ័ស ហើយនាំទៅរកសន្និសីទអង្គការសហប្រជាជាតិស្តីពីនីតិសមុទ្រ ដែលបញ្ចប់ដោយអនុសញ្ញាឆ្នាំ១៩៥៨ និងអនុសញ្ញាឆ្នាំ១៩៨២។"
+        ],
+        "en": [
+          "International society is a society whose relations take place between sovereign actors and is distinct from national society, whose relations occur only within a single state.",
+          "Sovereignty means the supreme and exclusive power of the state, covering all other powers and not subject to any other state.",
+          "The starting point for the sources of international law is Article 38 of the Statute of the International Court of Justice, which includes international treaties, international custom, general principles of law recognised by civilised nations, and judicial decisions.",
+          "International treaties are a major source because they are written instruments creating legal obligations for the signatory states, but not every treaty or agreement is a source of international law.",
+          "Customary international law arises from two factors: the actual practice of states, and acceptance of that practice as a legal obligation; before the First World War custom was the most important source.",
+          "The International Court of Justice recognises general principles of law such as good faith, responsibility, legality, justice and equality, and only states may be parties before it.",
+          "The law of the sea evolved from the Rhodian Sea Law, the Treaty of Tordesillas and the debate between Hugo Grotius and John Selden towards the cannon-shot rule and a three-mile limit, and later a twelve-mile territorial sea.",
+          "After the Second World War the Truman Proclamation of 1945 triggered rapid expansion of maritime jurisdiction and led to the United Nations conferences on the law of the sea, culminating in the 1958 and 1982 conventions."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ក.សង្គមអន្តរជាតិមានន័យថា ជាសង្គមដែលមានទំនាក់ទំនងរវាងតួអង្គដែលមានអធិបតេយ្យ",
+          "en": "(a) International society means a society whose relations are between sovereign actors.",
+          "page": 1
+        },
+        {
+          "km": "ចំណុចផ្ដើមនៃប្រភពរបស់នីតិអន្តរជាតិគឺមានចែងក្នុងមាត្រា៣៨នៃលក្ខន្តិកៈរបស់តុលាការយុត្តិធម៌អន្តរជាតិ",
+          "en": "The starting point of the sources of international law is set out in Article 38 of the Statute of the International Court of Justice.",
+          "page": 3
+        },
+        {
+          "km": "ក.ការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋនានា។ ខ.ការព្រមទទួលយកនៅការអនុវត្តន៍ជាក់ស្ដែងនោះថាជាការព្វកិច្ចទៅតាមផ្លូវច្បាប់។",
+          "en": "(a) The actual practice of states. (b) Acceptance of that actual practice as a legal obligation.",
+          "page": 5
+        },
+        {
+          "km": "លោកហ៊ូហ្គោ ហ្គ្រោថឹស បានជំទាស់ថាសេរីភាពសមុទ្រគឺជាទិដ្ឋភាពសំខាន់មួយនៅក្នុងទំនាក់ទំនងរវាងប្រជាជននិងរវាងប្រជាជាតិ។",
+          "en": "Hugo Grotius argued that the freedom of the sea is an important aspect of relations between peoples and between nations.",
+          "page": 13
+        },
+        {
+          "km": "បាតសមុទ្រ និង បាតមហាសមុទ្រ ត្រូវបានប្រកាសជា“មរតករួមរបស់មនុស្សជាតិ”",
+          "en": "The seabed and the ocean floor were declared to be the common heritage of mankind.",
+          "page": 18
+        }
+      ],
+      "terms": [
+        {
+          "km": "នីតិអន្តរជាតិសាធារណៈ",
+          "en": "Public international law",
+          "defKm": "ប្រព័ន្ធច្បាប់ដែលមានចរិកលក្ខណៈ និងទម្រង់ជាសកល ដែលគ្រប់គ្រងទំនាក់ទំនងរវាងតួអង្គដែលមានអធិបតេយ្យ។",
+          "defEn": "The body of law, universal in character and form, governing relations between sovereign actors."
+        },
+        {
+          "km": "អធិបតេយ្យ",
+          "en": "Sovereignty",
+          "defKm": "អំណាចកំពូល និងអំណាចផ្តាច់មុខរបស់រដ្ឋ ដែលរដ្ឋមួយកាន់កាប់តែម្នាក់ឯងមិនចំណុះរដ្ឋដទៃ។",
+          "defEn": "The supreme and exclusive power of the state, held alone and not subject to any other state."
+        },
+        {
+          "km": "សន្ធិសញ្ញាអន្តរជាតិ",
+          "en": "International treaty",
+          "defKm": "កិច្ចព្រមព្រៀងអន្តរជាតិដែលធ្វើឡើងរវាងរដ្ឋនិងរដ្ឋក្នុងទម្រង់ជាលាយលក្ខណ៍អក្សរ ហើយស្ថិតនៅក្រោមនីតិអន្តរជាតិ ដោយពុំអាស្រ័យលើចំនួន ឬនាមករណ៍របស់វា។",
+          "defEn": "A written international agreement concluded between states under international law, regardless of its number or name."
+        },
+        {
+          "km": "ទំនៀមទម្លាប់អន្តរជាតិ",
+          "en": "International custom",
+          "defKm": "ភស្តុតាងនៃការអនុវត្តទូទៅ ដែលប្រជាជាតិច្រើនទទួលយល់ព្រមថាជាច្បាប់អន្តរជាតិ ហើយមានចរិកជាសាកល។",
+          "defEn": "Evidence of a general practice accepted by many nations as international law and universal in character."
+        },
+        {
+          "km": "គោលការណ៍ទូទៅនៃច្បាប់",
+          "en": "General principles of law",
+          "defKm": "គោលការណ៍ទាំងឡាយដែលត្រូវបានទទួលស្គាល់ជាទូទៅក្នុងប្រព័ន្ធច្បាប់របស់រដ្ឋទាំងឡាយ ហើយត្រូវទទួលស្គាល់ដោយប្រជាជាតិមានអារ្យធម៌។",
+          "defEn": "Principles generally recognised in the legal systems of states and acknowledged by civilised nations."
+        },
+        {
+          "km": "សមុទ្រដែនដី",
+          "en": "Territorial sea",
+          "defKm": "ដែនទឹកជាប់ឆ្នេររបស់រដ្ឋឆ្នេរសមុទ្រ ដែលបច្ចុប្បន្នរដ្ឋឆ្នេរសមុទ្រទាមទារចម្ងាយ ១២ មៃល៍។",
+          "defEn": "The belt of sea adjacent to the coast which coastal states currently claim out to twelve miles."
+        },
+        {
+          "km": "មរតករួមរបស់មនុស្សជាតិ",
+          "en": "Common heritage of mankind",
+          "defKm": "ឋានៈដែលបានប្រកាសឱ្យបាតសមុទ្រ និងបាតមហាសមុទ្រ ដែលស្ថិតនៅហួសព្រំដែនយុត្តាធិការជាតិ ក្លាយជាទ្រព្យរួមរបស់មនុស្សជាតិ។",
+          "defEn": "The status declared for the seabed and ocean floor beyond national jurisdiction, making them the common property of mankind."
+        },
+        {
+          "km": "តំបន់សេដ្ឋកិច្ចផ្តាច់មុខ",
+          "en": "Exclusive economic zone",
+          "defKm": "តំបន់ដែលអាចលាតសន្ធឹងរហូតដល់ចម្ងាយ ២០០ ម៉ៃល៍ពីឆ្នេរ ហួសពីព្រំដែនសមុទ្រ ដែលមានចម្ងាយត្រឹមតែ ១២ ម៉ៃល៍។",
+          "defEn": "A zone extending up to 200 miles from the coast, beyond a territorial sea of only twelve miles."
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើប្រភពនៃនីតិអន្តរជាតិមានចែងនៅក្នុងឯកសារណាមួយ?",
+            "en": "In which instrument are the sources of international law set out?"
+          },
+          "options": {
+            "km": [
+              "អនុសញ្ញាទីក្រុងហ្សឺណែវ ឆ្នាំ១៩៤៩",
+              "សន្ធិសញ្ញាវែរសៃ ឆ្នាំ១៩១៩",
+              "មាត្រា៣៨ នៃលក្ខន្តិកៈតុលាការយុត្តិធម៌អន្តរជាតិ",
+              "ធម្មនុញ្ញអង្គការសហប្រជាជាតិ"
+            ],
+            "en": [
+              "The Geneva Conventions of 1949",
+              "The Treaty of Versailles of 1919",
+              "Article 38 of the Statute of the International Court of Justice",
+              "The Charter of the United Nations"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "ចំណុចផ្ដើមនៃប្រភពរបស់នីតិអន្តរជាតិ គឺមានចែងក្នុងមាត្រា៣៨ នៃលក្ខន្តិកៈរបស់តុលាការយុត្តិធម៌អន្តរជាតិ ដែលរាយសន្ធិសញ្ញា ទំនៀមទម្លាប់ និងគោលការណ៍ទូទៅនៃច្បាប់។",
+            "en": "The starting point of the sources of international law is Article 38 of the Statute of the International Court of Justice, which lists treaties, custom and general principles of law."
+          },
+          "page": 3
+        },
+        {
+          "q": {
+            "km": "តើប្រភពសំខាន់ទី២នៃនីតិអន្តរជាតិគឺអ្វី?",
+            "en": "What is the second most important source of international law?"
+          },
+          "options": {
+            "km": [
+              "សន្ធិសញ្ញាអន្តរជាតិ",
+              "ទំនៀមទម្លាប់អន្តរជាតិ",
+              "សេចក្តីសម្រេចរបស់តុលាការ",
+              "គោលការណ៍ទូទៅនៃច្បាប់"
+            ],
+            "en": [
+              "International treaties",
+              "International custom",
+              "Judicial decisions",
+              "General principles of law"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "តាមសៀវភៅ ប្រភពសំខាន់ទី២នៃនីតិអន្តរជាតិ គឺទំនៀមទម្លាប់។ មុនសង្គ្រាមលោកលើកទី១ ទំនៀមទម្លាប់អន្តរជាតិជាប្រភពសំខាន់ជាងគេនៃនីតិអន្តរជាតិសាធារណៈ។",
+            "en": "According to the textbook, the second important source of international law is custom. Before the First World War international custom was the most important source of public international law."
+          },
+          "page": 4
+        },
+        {
+          "q": {
+            "km": "តើសន្ធិសញ្ញាអន្តរជាតិជាអ្វី?",
+            "en": "What is an international treaty?"
+          },
+          "options": {
+            "km": [
+              "ការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋនានាតាមទម្លាប់",
+              "សេចក្តីសម្រេចរបស់តុលាការយុត្តិធម៌អន្តរជាតិ",
+              "គោលការណ៍ទូទៅដែលស្គាល់ដោយអារ្យប្រជាជាតិ",
+              "កិច្ចព្រមព្រៀងអន្តរជាតិជាលាយលក្ខណ៍អក្សររវាងរដ្ឋនិងរដ្ឋ ក្រោមនីតិអន្តរជាតិ"
+            ],
+            "en": [
+              "The actual practice of states followed by custom",
+              "A decision of the International Court of Justice",
+              "General principles recognised by civilised nations",
+              "A written international agreement between states under international law"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "សន្ធិសញ្ញាអន្តរជាតិ គឺជាកិច្ចព្រមព្រៀងអន្តរជាតិដែលធ្វើឡើងរវាងរដ្ឋនិងរដ្ឋក្នុងទម្រង់លាយលក្ខណ៍អក្សរ ហើយស្ថិតនៅក្រោមនីតិអន្តរជាតិ។",
+            "en": "An international treaty is an agreement concluded between states in written form and governed by international law."
+          },
+          "page": 4
+        },
+        {
+          "q": {
+            "km": "តើកត្តាទាំងពីរដែលបង្កើតនីតិអន្តរជាតិជាទំនៀមទម្លាប់មានអ្វីខ្លះ?",
+            "en": "What are the two factors that create customary international law?"
+          },
+          "options": {
+            "km": [
+              "ការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋ និងការព្រមទទួលយកថាជាកាតព្វកិច្ចតាមផ្លូវច្បាប់",
+              "ការចុះហត្ថលេខាលើសន្ធិសញ្ញា និងការផ្តល់សច្ចាប័ន",
+              "សេចក្តីសម្រេចរបស់តុលាការ និងមតិអ្នកច្បាប់",
+              "ការបោះឆ្នោតនៅមហាសន្និបាត និងការអនុម័តរបស់ក្រុមប្រឹក្សា"
+            ],
+            "en": [
+              "The actual practice of states and acceptance of it as a legal obligation",
+              "Signature of treaties and their ratification",
+              "Judicial decisions and the opinions of jurists",
+              "Voting in the General Assembly and adoption by the Council"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "មានកត្តាពីរដែលទាក់ទិនទៅនឹងការបង្កើតនីតិអន្តរជាតិដែលជាទំនៀមទម្លាប់ គឺ ការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋនានា និងការព្រមទទួលយកការអនុវត្តនោះថាជាកាតព្វកិច្ចទៅតាមផ្លូវច្បាប់។",
+            "en": "There are two factors in the creation of customary international law: the actual practice of states, and acceptance of that practice as a legal obligation."
+          },
+          "page": 5
+        },
+        {
+          "q": {
+            "km": "តើនរណាជាអ្នកនិពន្ធស្នាដៃឈ្មោះ “សមុទ្របើក” (Mare Liberum) នាឆ្នាំ១៦០៩?",
+            "en": "Who wrote the work entitled 'Mare Liberum' (The Free Sea) in 1609?"
+          },
+          "options": {
+            "km": [
+              "លោក ខ័រណេលីស វណ្ណ ប៊ីនស្ល៊ូក",
+              "លោក អាបេ ហ្វេណង់ដូ ហ្កាលីយ៉ានី",
+              "លោក ហ៊ូហ្គោ ហ្គ្រោថឹស",
+              "លោក ចន ស៊ែលដិន"
+            ],
+            "en": [
+              "Cornelius Van Bynkershoek",
+              "Abbe Ferdinand Galiani",
+              "Hugo Grotius",
+              "John Selden"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "ដើមសតវត្សរ៍ទី១៧ អ្នកជំនាញច្បាប់ជនជាតិដាត្ឆលោក ហ៊ូហ្គោ ហ្គ្រោថឹស បានបោះពុម្ពផ្សាយស្នាដៃនិពន្ធមានចំណងជើងថា សមុទ្របើក (Mare Liberum) នាឆ្នាំ១៦០៩ ដោយលើកឡើងពីសេរីភាពសមុទ្រ។",
+            "en": "In the early seventeenth century the Dutch jurist Hugo Grotius published a work entitled Mare Liberum (The Free Sea) in 1609, arguing for freedom of the seas."
+          },
+          "page": 13
+        },
+        {
+          "q": {
+            "km": "តើសេចក្តីប្រកាសទ្រូមែនត្រូវបានចេញនៅថ្ងៃណា?",
+            "en": "When was the Truman Proclamation issued?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី១៧ ខែសីហា ឆ្នាំ១៩៦៧",
+              "ថ្ងៃទី២៨ ខែកញ្ញា ឆ្នាំ១៩៤៥",
+              "ថ្ងៃទី២៨ ខែកញ្ញា ឆ្នាំ១៩៤៩",
+              "ថ្ងៃទី១០ ខែធ្នូ ឆ្នាំ១៩៨២"
+            ],
+            "en": [
+              "17 August 1967",
+              "28 September 1945",
+              "28 September 1949",
+              "10 December 1982"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "នាថ្ងៃទី២៨ ខែកញ្ញា ឆ្នាំ១៩៤៥ លោកប្រធានាធិបតី ហ៊ែរី ទ្រូមែន បានចេញសេចក្ដីប្រកាសពីរ ដោយប្រកាសដាក់បទប្បញ្ញត្តិលើការនេសាទ និងអះអាងយុត្តាធិការលើធនធាននៅខ្ពង់រាបបាតសមុទ្រ។",
+            "en": "On 28 September 1945 President Harry Truman issued two proclamations, regulating fishing and asserting jurisdiction over the resources of the continental shelf."
+          },
+          "page": 16
+        },
+        {
+          "q": {
+            "km": "តើសន្និសីទអង្គការសហប្រជាជាតិស្តីពីនីតិសមុទ្រ លើកទី២ នៅទីក្រុងហ្សឺណែវ ឆ្នាំ១៩៦០ មានលទ្ធផលយ៉ាងណា?",
+            "en": "What was the outcome of the second UN Conference on the Law of the Sea at Geneva in 1960?"
+          },
+          "options": {
+            "km": [
+              "មានរយៈពេលត្រឹមតែ ១១ សប្តាហ៍",
+              "បានកំណត់សមុទ្រដែនដី ១២ ម៉ៃល៍",
+              "បានអនុម័តអនុសញ្ញាថ្មីចំនួន៤",
+              "មិនទទួលបានជោគជ័យ ដោយសំណើរបស់សហរដ្ឋអាមេរិកចាញ់ ១ សម្លេង"
+            ],
+            "en": [
+              "It lasted only eleven weeks",
+              "It fixed the territorial sea at twelve miles",
+              "It adopted four new conventions",
+              "It failed, the United States proposal losing by one vote"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "សន្និសីទនេះមានរយៈពេល ៦ សប្ដាហ៍ ហើយមិនទទួលបានជោគជ័យទេ ដោយសំណើផ្សះផ្សារបស់សហរដ្ឋអាមេរិកអំពីសមុទ្រដែនដីចម្ងាយ៦ម៉ៃល៍បូកតំបន់នេសាទ ទទួលបរាជ័យដោយចាញ់ ១ សម្លេង។",
+            "en": "The conference lasted six weeks and was unsuccessful: the United States compromise proposal of a six-mile territorial sea plus a six-mile fishing zone failed by one vote."
+          },
+          "page": 17
+        },
+        {
+          "q": {
+            "km": "តើលោក អាវីដ ប៉ាដូ ជាតំណាងអចិន្ត្រៃយ៍របស់ប្រទេសណាប្រចាំអង្គការសហប្រជាជាតិ?",
+            "en": "Arvid Pardo was the permanent representative to the United Nations of which country?"
+          },
+          "options": {
+            "km": [
+              "ម៉ាល់តា",
+              "ហ្វីលីពីន",
+              "កម្ពុជា",
+              "ចាមេកា"
+            ],
+            "en": [
+              "Malta",
+              "The Philippines",
+              "Cambodia",
+              "Jamaica"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "លោក អាវីដ ប៉ាដូ តំណាងអចិន្ត្រៃយ៍ (ឯកអគ្គរដ្ឋទូត) របស់ប្រទេសម៉ាល់តា បានស្នើឱ្យដាក់បញ្ចូលចំណុចស្តីពីការប្រើប្រាស់បាតសមុទ្រ និងបាតមហាសមុទ្រសម្រាប់គោលបំណងសន្តិភាព។",
+            "en": "Arvid Pardo, the permanent representative (ambassador) of Malta, proposed adding an item on the peaceful use of the seabed and ocean floor."
+          },
+          "page": 18
+        },
+        {
+          "q": {
+            "km": "តើកម្ពុជាបានចុះហត្ថលេខាលើអនុសញ្ញាអង្គការសហប្រជាជាតិស្តីពីនីតិសមុទ្រ នៅថ្ងៃណា?",
+            "en": "When did Cambodia sign the United Nations Convention on the Law of the Sea?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី០៩ ខែកញ្ញា ឆ្នាំ១៩៧៥",
+              "ថ្ងៃទី១០ ខែធ្នូ ឆ្នាំ១៩៨២",
+              "ថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៩៤៥",
+              "ថ្ងៃទី២៨ ខែកញ្ញា ឆ្នាំ១៩៤៥"
+            ],
+            "en": [
+              "9 September 1975",
+              "10 December 1982",
+              "24 October 1945",
+              "28 September 1945"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អនុសញ្ញាអង្គការសហប្រជាជាតិស្តីពីនីតិសមុទ្រ ត្រូវបានចុះហត្ថលេខាដោយកម្ពុជាប្រជាធិបតេយ្យ នាថ្ងៃទី១០ ខែធ្នូ ឆ្នាំ១៩៨២។",
+            "en": "The United Nations Convention on the Law of the Sea was signed by Democratic Kampuchea on 10 December 1982."
+          },
+          "page": 22
+        },
+        {
+          "q": {
+            "km": "តើក្តីក្តាំរវាងហ្វីលីពីន និងចិន អំពីជម្លោះសមុទ្រចិនខាងត្បូង ត្រូវបានដាក់នៅស្ថាប័នណា?",
+            "en": "Before which body was the Philippines' case against China concerning the South China Sea brought?"
+          },
+          "options": {
+            "km": [
+              "តុលាការអន្តរជាតិនីតិសមុទ្រ",
+              "តុលាការឧក្រិដ្ឋកម្មអន្តរជាតិ",
+              "តុលាការអចិន្ត្រៃយ៍នៃអាជ្ញាកណ្តាល",
+              "តុលាការយុត្តិធម៌អន្តរជាតិ"
+            ],
+            "en": [
+              "The International Tribunal for the Law of the Sea",
+              "The International Criminal Court",
+              "The Permanent Court of Arbitration",
+              "The International Court of Justice"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "ក្តីក្តាំនេះជាក្តីក្តាំក្នុងតុលាការអចិន្ត្រៃយ៍នៃអាជ្ញាកណ្តាល មិនមែននៅក្នុងតុលាការយុត្តិធម៌អន្តរជាតិទេ ហើយស្ថាប័នទាំងពីរមានទីស្នាក់ការនៅវិមានសន្តិភាពក្នុងក្រុងឡាអេដូចគ្នា ប៉ុន្តែជាស្ថាប័នពីរដាច់ដោយឡែកពីគ្នា។",
+            "en": "The case is before the Permanent Court of Arbitration, not the International Court of Justice; although both are housed in the Peace Palace in The Hague, they are two separate bodies with two separate premises."
+          },
+          "page": 23
+        }
+      ]
+    },
+    {
+      "id": "ch1-l2",
+      "title": {
+        "km": "១.២.អង្គការអន្តរជាតិ",
+        "en": "1.2 International Organisations"
+      },
+      "pages": {
+        "from": 25,
+        "to": 26
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់អត្ថន័យនៃអង្គការអន្តរជាតិ ឬអង្គការអន្តររដ្ឋាភិបាល",
+          "រាយសិទ្ធិអំណាចទាំងពីររបស់អង្គការអន្តរជាតិ",
+          "រាយលក្ខណៈវិនិច្ឆ័យទាំងប្រាំដែលធ្វើឱ្យអង្គការមួយក្លាយជាអង្គការអន្តរជាតិ"
+        ],
+        "en": [
+          "Explain what an international organisation, or intergovernmental organisation, is",
+          "List the two powers of an international organisation",
+          "List the five criteria that make a body an international organisation"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "អង្គការអន្តរជាតិ ឬអង្គការអន្តររដ្ឋាភិបាល គឺជាអង្គការដែលបង្កើតឡើងដោយរដ្ឋអធិបតេយ្យ តិច ឬច្រើន ដូចជា សង្គមប្រជាជាតិ អង្គការសហប្រជាជាតិ សហគមន៍អឺរ៉ុប និងអាស៊ាន។",
+          "អង្គការអន្តរជាតិជានីតិបុគ្គលអន្តរជាតិ ដែលមានសិទ្ធិអំណាចពីរ៖ ទី១ មានសិទ្ធិបង្កើត និងចុះហត្ថលេខាលើអនុសញ្ញា សន្ធិសញ្ញា និងកិច្ចព្រមព្រៀងជាអន្តរជាតិ ដែលមានន័យថាមានសិទ្ធិស្មើនឹងរដ្ឋ; ទី២ មានសិទ្ធិស្មើនឹងរដ្ឋ ប៉ុន្តែមានកាតព្វកិច្ចតិចជាងរដ្ឋ។",
+          "លក្ខណៈវិនិច្ឆ័យនៃអង្គការអន្តរជាតិមាន ការចូលរួមពីរដ្ឋអធិបតេយ្យ ចរិកលក្ខណៈយូរអង្វែងមិនបណ្តោះអាសន្ន ការមានទីស្នាក់ការមួយ ការបង្កើតឡើងដោយគោលការណ៍ស្ម័គ្រចិត្ត ឬការយល់ព្រមដោយសេរី និងការមិនស្ថិតនៅក្រោមអង្គការភេរវកម្មអន្តរជាតិណាមួយ។"
+        ],
+        "en": [
+          "An international organisation, or intergovernmental organisation, is an organisation set up by sovereign states, few or many, such as the League of Nations, the United Nations, the European Community and ASEAN.",
+          "An international organisation is an international legal person with two powers: first, the right to create and sign international conventions, treaties and agreements, which means rights equal to those of states; second, rights equal to those of states but with fewer obligations than states.",
+          "The criteria of an international organisation are participation by sovereign states, a lasting rather than temporary character, a headquarters, creation on a voluntary basis or by free consent, and not being under any international terrorist organisation."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "អង្គការអន្តរជាតិ ឬអង្គការអន្តររដ្ឋភិបាល គឺជាអង្គការដែលត្រូវបង្កើតឡើងដោយរដ្ឋអធិបតេយ្យ តិចឬច្រើន",
+          "en": "An international organisation, or intergovernmental organisation, is an organisation to be set up by sovereign states, few or many.",
+          "page": 25
+        },
+        {
+          "km": "ទី២មានសិទ្ធិស្មើនឹងរដ្ឋ ប៉ុន្តែមានកាតព្វកិច្ចតិចជាងរដ្ឋ",
+          "en": "Second, it has rights equal to those of states, but fewer obligations than states.",
+          "page": 25
+        }
+      ],
+      "terms": [
+        {
+          "km": "អង្គការអន្តរជាតិ",
+          "en": "International organisation",
+          "defKm": "អង្គការដែលត្រូវបង្កើតឡើងដោយរដ្ឋអធិបតេយ្យ តិច ឬច្រើន ដូចជា អង្គការសហប្រជាជាតិ សហគមន៍អឺរ៉ុប និងអាស៊ាន។",
+          "defEn": "An organisation set up by sovereign states, few or many, such as the United Nations, the European Community and ASEAN."
+        },
+        {
+          "km": "អង្គការអន្តររដ្ឋាភិបាល",
+          "en": "Intergovernmental organisation",
+          "defKm": "ឈ្មោះហៅម្យ៉ាងទៀតនៃអង្គការអន្តរជាតិ គឺជាអង្គការដែលបង្កើតឡើងដោយរដ្ឋអធិបតេយ្យ ហើយមានលក្ខណៈយូរអង្វែង និងមានទីស្នាក់ការផ្ទាល់ខ្លួន។",
+          "defEn": "Another name for an international organisation: a body set up by sovereign states with a lasting character and its own headquarters."
+        },
+        {
+          "km": "នីតិបុគ្គលអន្តរជាតិ",
+          "en": "International legal person",
+          "defKm": "អង្គភាពដែលមានសិទ្ធិអំណាចក្នុងនីតិអន្តរជាតិ ដូចជាសិទ្ធិបង្កើត និងចុះហត្ថលេខាលើសន្ធិសញ្ញាជាអន្តរជាតិ ហើយមានសិទ្ធិស្មើនឹងរដ្ឋ តែមានកាតព្វកិច្ចតិចជាងរដ្ឋ។",
+          "defEn": "An entity with powers under international law, such as the right to create and sign international treaties, holding rights equal to states but fewer obligations."
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើអង្គការអន្តរជាតិ ឬអង្គការអន្តររដ្ឋាភិបាល ជាអង្គការដែលបង្កើតឡើងដោយអ្នកណា?",
+            "en": "By whom is an international organisation, or intergovernmental organisation, set up?"
+          },
+          "options": {
+            "km": [
+              "រដ្ឋអធិបតេយ្យ តិច ឬច្រើន",
+              "អង្គការមិនមែនរដ្ឋាភិបាល",
+              "គណបក្សនយោបាយនៅក្នុងរដ្ឋនីមួយៗ",
+              "បុគ្គលឯកជន និងក្រុមហ៊ុន"
+            ],
+            "en": [
+              "Sovereign states, few or many",
+              "Non-governmental organisations",
+              "Political parties within each state",
+              "Private individuals and companies"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អង្គការអន្តរជាតិ ឬអង្គការអង្គការអន្តររដ្ឋភិបាល គឺជាអង្គការដែលត្រូវបង្កើតឡើងដោយរដ្ឋអធិបតេយ្យ តិច ឬច្រើន ដូចជា សង្គមប្រជាជាតិ អង្គការសហប្រជាជាតិ សហគមន៍អឺរ៉ុប និងអាស៊ាន។",
+            "en": "An international organisation, or intergovernmental organisation, is one set up by sovereign states, few or many, such as the League of Nations, the United Nations, the European Community and ASEAN."
+          },
+          "page": 25
+        },
+        {
+          "q": {
+            "km": "តើអង្គការអន្តរជាតិមានសិទ្ធិអំណាចប៉ុន្មាន តាមសៀវភៅ?",
+            "en": "According to the textbook, how many powers does an international organisation have?"
+          },
+          "options": {
+            "km": [
+              "ប្រាំ",
+              "មួយ",
+              "ពីរ",
+              "បី"
+            ],
+            "en": [
+              "Five",
+              "One",
+              "Two",
+              "Three"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អង្គការអន្តរជាតិជានីតិបុគ្គលអន្តរជាតិដែលមានសិទ្ធិអំណាច ២ គឺ មានសិទ្ធិបង្កើត និងចុះហត្ថលេខាលើអនុសញ្ញា សន្ធិសញ្ញា កិច្ចព្រមព្រៀងជាអន្តរជាតិ និងមានសិទ្ធិស្មើនឹងរដ្ឋ ប៉ុន្តែមានកាតព្វកិច្ចតិចជាងរដ្ឋ។",
+            "en": "An international organisation is an international legal person with two powers: the right to create and sign international conventions, treaties and agreements, and rights equal to states but with fewer obligations."
+          },
+          "page": 25
+        },
+        {
+          "q": {
+            "km": "តើចំណុចណាមួយមិនមែនជាលក្ខណៈវិនិច្ឆ័យនៃអង្គការអន្តរជាតិ?",
+            "en": "Which of the following is NOT a criterion of an international organisation?"
+          },
+          "options": {
+            "km": [
+              "ការបង្កើតឡើងដោយគោលការណ៍ស្ម័គ្រចិត្ត ឬការយល់ព្រមដោយសេរី",
+              "ការមានកងទ័ពផ្ទាល់ខ្លួន",
+              "ការមានចរិកលក្ខណៈយូរអង្វែង មិនបណ្តោះអាសន្ន",
+              "ការមានទីស្នាក់ការមួយ"
+            ],
+            "en": [
+              "Being created on a voluntary basis or by free consent",
+              "Having its own armed forces",
+              "Having a lasting rather than temporary character",
+              "Having a headquarters"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "លក្ខណៈវិនិច្ឆ័យនៃអង្គការអន្តរជាតិ គឺការចូលរួមពីរដ្ឋអធិបតេយ្យ ចរិកលក្ខណៈយូរអង្វែង ការមានទីស្នាក់ការ ការបង្កើតឡើងដោយគោលការណ៍ស្ម័គ្រចិត្ត និងការមិនស្ថិតនៅក្រោមអង្គការភេរវកម្មអន្តរជាតិណាមួយ។ ការមានកងទ័ពផ្ទាល់ខ្លួនមិនមែនជាលក្ខណៈវិនិច្ឆ័យទេ។",
+            "en": "The criteria are participation by sovereign states, a lasting character, a headquarters, creation on a voluntary basis, and not being under any international terrorist organisation. Having its own armed forces is not among them."
+          },
+          "page": 26
+        }
+      ]
+    },
+    {
+      "id": "ch1-l3",
+      "title": {
+        "km": "១.៣.សង្គមប្រជាជាតិ",
+        "en": "1.3 The League of Nations"
+      },
+      "pages": {
+        "from": 26,
+        "to": 28
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់ពីការបង្កើតសង្គមប្រជាជាតិ ក្រោយសង្គ្រាមលោកលើកទី១",
+          "រាយគោលបំណងទាំងបួនរបស់សង្គមប្រជាជាតិ",
+          "ពន្យល់ពីរចនាសម្ព័ន្ធ និងមូលហេតុនៃការដួលរលំរបស់សង្គមប្រជាជាតិ"
+        ],
+        "en": [
+          "Explain the creation of the League of Nations after the First World War",
+          "List the four aims of the League of Nations",
+          "Explain the structure of the League and the reasons for its collapse"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "សង្គមប្រជាជាតិ ត្រូវបានបង្កើតឡើងតាមរយៈអនុសញ្ញាឆ្នាំ១៩១៩ ដែលជាផ្នែកមួយនៃសន្ធិសញ្ញាវែរសៃ ក្រោយសង្គ្រាមលោកលើកទី១ ដោយជាគំនិតផ្ដួចផ្ដើមផ្ទាល់របស់លោក Woodrow Wilson ហើយមានទីស្នាក់ការនៅទីក្រុងសឺណែវ ប្រទេសស្វីស។",
+          "គោលបំណងរបស់សង្គមប្រជាជាតិមាន ដោះស្រាយជម្លោះក្នុងចំណោមរដ្ឋនានា ទប់ស្កាត់កុំឱ្យមានសង្គ្រាម ការពារឯករាជ្យរបស់រដ្ឋនានា និងសុវត្ថិភាពព្រំដែន និងលើកទឹកចិត្តឱ្យកាត់បន្ថយគ្រឿងសព្វាវុធ។",
+          "សង្គមប្រជាជាតិមានរដ្ឋចំនួន ៦៣ ចូលរួម ដោយមានស្ថាប័នសំខាន់គឺ ក្រុមប្រឹក្សា មហាសន្និបាត និងលេខាធិការដ្ឋាន ហើយត្រូវបានរំលំដោយសារការលេបយកទឹកដីរដ្ឋដទៃ និងការដកខ្លួនចេញរបស់រដ្ឋសមាជិកជាច្រើន ប៉ុន្តែវានៅតែមានតួនាទីសំខាន់ក្នុងការកំណត់នីតិក្រម និងការពង្រីកភាពប្រាកដនិយមនៃនីតិអន្តរជាតិ។"
+        ],
+        "en": [
+          "The League of Nations was established through the 1919 Convention which formed part of the Treaty of Versailles after the First World War; it was the personal initiative of Woodrow Wilson and had its headquarters in Geneva, Switzerland.",
+          "The aims of the League of Nations were to settle disputes among states, to prevent war, to protect the independence of states and the security of their frontiers, and to encourage every country to reduce its armaments.",
+          "Sixty-three states joined the League, whose main organs were the Council, the Assembly and the Secretariat; it collapsed because states were annexed by others and because many members withdrew, yet it still played an important role in establishing legal procedure and strengthening the realism of international law."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "សង្គមប្រជាជាតិជាគំនិតផ្ដួចផ្ដើមផ្ទាល់របស់លោក Woodrow Wilson អតីតប្រធានាធិបតីសហរដ្ឋអាមេរិក",
+          "en": "The League of Nations was the personal initiative of Woodrow Wilson, former President of the United States.",
+          "page": 26
+        },
+        {
+          "km": "សង្គមប្រជាជាតិមានតួនាទីដ៏សំខាន់មួយនៅក្នុងការកំណត់នីតិក្រម និងការពង្រីកនូវភាពប្រាកដនិយមនៃនីតិអន្តរជាតិ",
+          "en": "The League of Nations played an important role in establishing legal procedure and in strengthening the realism of international law.",
+          "page": 28
+        }
+      ],
+      "terms": [
+        {
+          "km": "សង្គមប្រជាជាតិ",
+          "en": "League of Nations",
+          "defKm": "អង្គការអន្តរជាតិដែលបង្កើតឡើងក្រោយសង្គ្រាមលោកលើកទី១ តាមរយៈអនុសញ្ញាឆ្នាំ១៩១៩ ដែលជាផ្នែកមួយនៃសន្ធិសញ្ញាវែរសៃ សម្រាប់ដោះស្រាយជម្លោះរវាងរដ្ឋនានា។",
+          "defEn": "The international organisation created after the First World War by the 1919 Convention forming part of the Treaty of Versailles, in order to settle disputes between states."
+        },
+        {
+          "km": "ក្រុមប្រឹក្សា",
+          "en": "The Council",
+          "defKm": "អង្គការរក្សាសន្តិភាពដ៏សំខាន់របស់សង្គមប្រជាជាតិ ដែលចក្រភពអង់គ្លេស បារាំង អ៊ីតាលី ជប៉ុន និងសហភាពសូវៀត ជាសមាជិកមានអាសនៈអចិន្ត្រៃយ៍។",
+          "defEn": "The main peace-keeping organ of the League of Nations, in which the United Kingdom, France, Italy, Japan and the Soviet Union held permanent seats."
+        },
+        {
+          "km": "តុលាការអន្តរជាតិអចិន្ត្រៃយ៍",
+          "en": "Permanent Court of International Justice",
+          "defKm": "តុលាការដែលបង្កើតឡើងនៅទីក្រុងឡាអេ ប្រទេសហូឡង់ នៅឆ្នាំ១៩២១ តាមរយៈអនុសញ្ញាឆ្នាំ១៩១៩។",
+          "defEn": "The court created in The Hague, the Netherlands, in 1921 under the 1919 Convention."
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើសង្គមប្រជាជាតិត្រូវបានបង្កើតឡើងតាមរយៈឯកសារណា?",
+            "en": "Through which instrument was the League of Nations established?"
+          },
+          "options": {
+            "km": [
+              "កតិកាសញ្ញា Briand-Kellogg",
+              "សន្ធិសញ្ញាក្រុងថ័រដេសុីឡា",
+              "ធម្មនុញ្ញអង្គការសហប្រជាជាតិ ឆ្នាំ១៩៤៥",
+              "អនុសញ្ញាឆ្នាំ១៩១៩ ដែលជាផ្នែកមួយនៃសន្ធិសញ្ញាវែរសៃ"
+            ],
+            "en": [
+              "The Briand-Kellogg Pact",
+              "The Treaty of Tordesillas",
+              "The Charter of the United Nations of 1945",
+              "The 1919 Convention forming part of the Treaty of Versailles"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "នៅពេលសង្គ្រាមលោកលើកទី១ត្រូវបានបញ្ចប់ ពិភពលោកបង្កើតសង្គមប្រជាជាតិ តាមរយៈអនុសញ្ញាឆ្នាំ១៩១៩ ដែលជាផ្នែកមួយនៃសន្ធិសញ្ញាវែរសៃ។",
+            "en": "When the First World War ended, the world created the League of Nations through the 1919 Convention which formed part of the Treaty of Versailles."
+          },
+          "page": 26
+        },
+        {
+          "q": {
+            "km": "តើប្រទេសណាមួយមិនបានចូលរួមក្នុងសង្គមប្រជាជាតិ?",
+            "en": "Which country did NOT join the League of Nations?"
+          },
+          "options": {
+            "km": [
+              "សហរដ្ឋអាមេរិក",
+              "សហភាពសូវៀត (ចូលរួមឆ្នាំ១៩៣៤)",
+              "ចក្រភពអង់គ្លេស",
+              "បារាំង"
+            ],
+            "en": [
+              "The United States",
+              "The Soviet Union (which joined in 1934)",
+              "The United Kingdom",
+              "France"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "សហរដ្ឋអាមេរិកមិនបានចូលរួមនៅក្នុងសង្គមប្រជាជាតិទេ ខណៈសហភាពសូវៀតចូលរួមនៅឆ្នាំ១៩៣៤ ហើយអាល្លឺម៉ង់ និងជប៉ុនដកខ្លួននៅឆ្នាំ១៩៣៣។",
+            "en": "The United States did not join the League of Nations; the Soviet Union joined in 1934, while Germany and Japan withdrew in 1933."
+          },
+          "page": 26
+        },
+        {
+          "q": {
+            "km": "តើសេចក្ដីសម្រេចរបស់សង្គមប្រជាជាតិត្រូវអនុម័តដោយសម្លេងប៉ុន្មាន?",
+            "en": "By how many votes were decisions of the League of Nations adopted?"
+          },
+          "options": {
+            "km": [
+              "ដោយឯកឆន្ទៈរបស់សមាជិកទាំងអស់",
+              "ដោយសម្លេងភាគច្រើនធម្មតាតែប៉ុណ្ណោះ",
+              "ដោយសម្លេងពីរភាគបី ឬដោយសម្លេងភាគច្រើន",
+              "ដោយសម្លេងបីភាគបួន"
+            ],
+            "en": [
+              "By the unanimity of all members",
+              "By a simple majority only",
+              "By a two-thirds vote or by a majority vote",
+              "By a three-quarters vote"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "សេចក្ដីសម្រេចរបស់សង្គមប្រជាជាតិ ត្រូវអនុម័តយកសម្លេងពីរភាគបី ឬដោយសម្លេងភាគច្រើន ហើយក្នុងមហាសន្និបាត សមាជិកនីមួយៗមានសិទ្ធិបោះឆ្នោតតែមួយសម្លេងស្មើគ្នា។",
+            "en": "Decisions of the League of Nations were adopted by a two-thirds vote or by a majority vote, and in the Assembly each member had a single vote of equal weight."
+          },
+          "page": 27
+        }
+      ]
+    }
+  ]
+}

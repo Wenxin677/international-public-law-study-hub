@@ -1,0 +1,400 @@
+{
+  "id": "ch1",
+  "num": 1,
+  "title": { "km": "នីតិអន្តរជាតិសាធារណៈ", "en": "Public International Law" },
+  "pages": { "from": 26, "to": 42 },
+  "summary": {
+    "km": "ផ្នែកនេះនិយាយអំពីអង្គការសហប្រជាជាតិ និងអង្គការកម្រិតតំបន់ ដូចជា អូតង់ អាស៊ាន អង្គការសហប្រតិបត្តិការក្រុងសៀងហៃ និងក្រុមប្រឹក្សាអាក់ទិក ព្រមទាំងនិយមន័យ ចរិកលក្ខណៈ ទស្សនៈស្តីពីការបង្កើតច្បាប់ និងព្រឹត្តិការណ៍វិវត្តន៍នៃនីតិអន្តរជាតិ។",
+    "en": "This part covers the United Nations and regional organisations such as NATO, ASEAN, the Shanghai Cooperation Organisation and the Arctic Council, together with the definition, characteristics, views on law-making and the evolution of international law."
+  },
+  "lessons": [
+    {
+      "id": "ch1-l4",
+      "title": { "km": "១.៤.អង្គការសហប្រជាជាតិ និងអង្គការកម្រិតតំបន់", "en": "The United Nations and Regional Organisations" },
+      "pages": { "from": 29, "to": 42 },
+      "objectives": {
+        "km": [
+          "ពន្យល់ពីដំណើរការបង្កើតអង្គការសហប្រជាជាតិ និងគោលបំណងរបស់ខ្លួន",
+          "រៀបរាប់អង្គការកម្រិតតំបន់សំខាន់ៗ ៖ អូតង់ អាស៊ាន អង្គការសហប្រតិបត្តិការក្រុងសៀងហៃ និងក្រុមប្រឹក្សាអាក់ទិក",
+          "ប្រៀបធៀបគោលបំណង និងរចនាសម្ព័ន្ធនៃអង្គការកម្រិតតំបន់ទាំងនោះ"
+        ],
+        "en": [
+          "Explain how the United Nations was created and state its purposes",
+          "Describe the main regional organisations: NATO, ASEAN, the Shanghai Cooperation Organisation and the Arctic Council",
+          "Compare the aims and structures of those regional organisations"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "អង្គការសហប្រជាជាតិបង្កើតឡើងជាផ្លូវការនៅថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៩៤៥ បន្ទាប់ពីធម្មនុញ្ញអាត្លង់ទិចឆ្នាំ១៩៤១ មានសមាជិក ១៩៣ ប្រទេស និងទីស្នាក់ការនៅទីក្រុងញ៉ូវយ៉ក។",
+          "គោលបំណងសំខាន់ៗរបស់អង្គការសហប្រជាជាតិមាន ៖ រក្សាសន្តិភាពពិភពលោក ពង្រីកទំនាក់ទំនងជាមិត្តភាពរវាងប្រជាជាតិ ជួយប្រជាជនឱ្យមានជីវភាពប្រសើរ និងជួយប្រជាជាតិទាំងឡាយឱ្យសម្រេចគោលបំណង។",
+          "អង្គការអូតង់ ឬណាតូ បង្កើតឡើងនៅថ្ងៃទី៤ ខែមេសា ឆ្នាំ១៩៤៩ ហើយតាមមាត្រា៥ នៃសន្ធិសញ្ញាអាត្លង់ទិកខាងជើង ការវាយប្រហារលើសមាជិកមួយ ឬច្រើន ត្រូវចាត់ទុកជាការវាយប្រហារប្រឆាំងនឹងអង្គការអូតង់ទាំងមូល។",
+          "អាស៊ានបង្កើតឡើងនៅថ្ងៃទី៨ ខែសីហា ឆ្នាំ១៩៦៧ នៅទីក្រុងបាងកក ដោយប្រទេស៥ ហើយប្រទេសកម្ពុជាបានចូលជាសមាជិកទី១០ នៅថ្ងៃទី៣០ ខែមេសា ឆ្នាំ១៩៩៩។",
+          "អង្គការសហប្រតិបត្តិការក្រុងសៀងហៃ បង្កើតឡើងនៅថ្ងៃទី១៥ ខែមិថុនា ឆ្នាំ២០០១ ដោយប្រទេស៦ គឺចិន រុស្សុី កាហ្សាក់ស្ថាន កៀហ្គីសុីស្ថាន តាហ្សីគីស្ថាន និងអ៊ូសបេគីស្ថាន ហើយត្រូវបានគេមើលឃើញជាទូទៅថាជាគូប្រជែងរបស់អូតង់។",
+          "ក្រុមប្រឹក្សាអាក់ទិក បង្កើតឡើងនៅថ្ងៃទី១៩ ខែកញ្ញា ឆ្នាំ១៩៩៦ នៅទីក្រុងអូតាវ៉ា ប្រទេសកាណាដា ដោយមានសមាជិក៨ ដែលប្រជុំគ្នារៀងរាល់២ឆ្នាំម្តង។"
+        ],
+        "en": [
+          "The United Nations was officially established on 24 October 1945, after the Atlantic Charter of 1941; it has 193 member states and its headquarters are in New York.",
+          "The main purposes of the United Nations are to maintain world peace, to develop friendly relations among nations, to help peoples enjoy better living conditions, and to help nations achieve their goals.",
+          "NATO was created on 4 April 1949, and under Article 5 of the North Atlantic Treaty an attack on one or more members is treated as an attack against the whole of NATO.",
+          "ASEAN was created on 8 August 1967 in Bangkok by five states, and Cambodia became its tenth member on 30 April 1999.",
+          "The Shanghai Cooperation Organisation was created on 15 June 2001 by six states (China, Russia, Kazakhstan, Kyrgyzstan, Tajikistan and Uzbekistan) and is widely seen as a rival of NATO.",
+          "The Arctic Council was created on 19 September 1996 in Ottawa, Canada, with eight members, and its members meet every two years."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "អង្គការសហប្រជាជាតិ បង្កើតឡើងជាផ្លូវការនូវថ្ងៃទី  ២៤ ខែតុលា ឆ្នាំ១៩៤៥។",
+          "en": "The United Nations was officially established on 24 October 1945.",
+          "page": 29
+        },
+        {
+          "km": "បើផ្អែកតាមមាត្រា៥ នៃសន្ធិសញ្ញាអាត្លង់ទិកខាងជើងអូតង់បានចាត់ទុកការវាយប្រហារលើសមាជិកមួយ ឬជាច្រើនរបស់ខ្លួនថាជាការវាយប្រហារប្រឆាំងនឹងអង្គការអូតង់ទាំងមូល។",
+          "en": "Under Article 5 of the North Atlantic Treaty, NATO regards an attack on one or several of its members as an attack against the whole of NATO.",
+          "page": 31
+        },
+        {
+          "km": "អាស៊ានឬ មាគមប្រជាជាតិអាសុីអាគ្នេយ៍ បង្កើតឡើងនៅថ្ងៃទី៨ខែសីហា ឆ្នាំ១៩៦៧ ដោយប្រទេសចំនួន៥ រួមមាន ម៉ាឡេសុី ឥណ្ឌូនេសុីហ្វីលីពីន សិង្ហបុរី និងប្រទេសថៃ នាទីក្រុងបាងកក",
+          "en": "ASEAN, or the Association of Southeast Asian Nations, was created on 8 August 1967 by five states, namely Malaysia, Indonesia, the Philippines, Singapore and Thailand, in Bangkok.",
+          "page": 33
+        },
+        {
+          "km": "កន្លងមក ប្រទេសកម្ពុជាធ្លាប់ធ្វើជាប្រធានអាស៊ានបានចំនួនពីរដង គឺលើកទី១ នៅឆ្នាំ២០០២និងលើកទីពីរនៅឆ្នាំ២០១២។",
+          "en": "In the past, Cambodia has twice served as Chair of ASEAN: the first time in 2002 and the second time in 2012.",
+          "page": 35
+        }
+      ],
+      "terms": [
+        {
+          "km": "អង្គការសហប្រជាជាតិ",
+          "en": "United Nations",
+          "defKm": "អង្គការអន្តរជាតិដែលបង្កើតឡើងជាផ្លូវការនៅថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៩៤៥ មានសមាជិក១៩៣ ប្រទេស និងទីស្នាក់ការនៅទីក្រុងញ៉ូវយ៉ក។",
+          "defEn": "An international organisation officially established on 24 October 1945, with 193 member states and headquarters in New York."
+        },
+        {
+          "km": "ធម្មនុញ្ញអាត្លង់ទិច",
+          "en": "Atlantic Charter",
+          "defKm": "សេចក្តីប្រកាសរួមរវាងប្រធានាធិបតីសហរដ្ឋអាមេរិក លោក ហ្វ្រង់គ្លីន រូសីហ្វែល និងនាយករដ្ឋមន្ត្រីអង់គ្លេស វីនស្តុន ឈឺរឈីល នាខែសីហា ឆ្នាំ១៩៤១ ដើម្បីឈានទៅបង្កើតអង្គការសហប្រជាជាតិ។",
+          "defEn": "A joint declaration by US President Franklin Roosevelt and British Prime Minister Winston Churchill in August 1941, paving the way for the creation of the United Nations."
+        },
+        {
+          "km": "អង្គការអូតង់ (ណាតូ)",
+          "en": "NATO",
+          "defKm": "សម្ព័ន្ធភាពយោធាបស្ចិមលោក បង្កើតឡើងនៅថ្ងៃទី៤ ខែមេសា ឆ្នាំ១៩៤៩ ដែលតាមមាត្រា៥ ចាត់ទុកការវាយប្រហារលើសមាជិកមួយជាការវាយប្រហារលើអង្គការទាំងមូល។",
+          "defEn": "The Western military alliance created on 4 April 1949, which under Article 5 treats an attack on one member as an attack on the whole organisation."
+        },
+        {
+          "km": "អាស៊ាន",
+          "en": "ASEAN",
+          "defKm": "មាគមប្រជាជាតិអាសុីអាគ្នេយ៍ បង្កើតឡើងនៅថ្ងៃទី៨ ខែសីហា ឆ្នាំ១៩៦៧ នៅទីក្រុងបាងកក ដោយប្រទេស៥ ហើយមានសមាជិក១០ ប្រទេសនៅបច្ចុប្បន្ន។",
+          "defEn": "The Association of Southeast Asian Nations, created on 8 August 1967 in Bangkok by five states and now counting ten members."
+        },
+        {
+          "km": "សសរស្ដម្ភទាំងបី",
+          "en": "Three pillars",
+          "defKm": "សហគមន៍ទាំងបីដែលអាស៊ានផ្ដោតលើ គឺសហគមន៍សន្តិសុខនយោបាយ សហគមន៍សេដ្ឋកិច្ច និងសហគមន៍វប្បធម៌សង្គម។",
+          "defEn": "The three communities ASEAN focuses on: the Political-Security Community, the Economic Community and the Socio-Cultural Community."
+        },
+        {
+          "km": "អង្គការសហប្រតិបត្តិការក្រុងសៀងហៃ",
+          "en": "Shanghai Cooperation Organisation",
+          "defKm": "អង្គការអន្តររដ្ឋាភិបាលបង្កើតឡើងនៅថ្ងៃទី១៥ ខែមិថុនា ឆ្នាំ២០០១ ដោយប្រទេស៦ ដែលផ្ដោតលើកិច្ចសហប្រតិបត្តិការសន្តិសុខ និងត្រូវបានគេមើលឃើញជាគូប្រជែងរបស់អូតង់។",
+          "defEn": "An intergovernmental organisation created on 15 June 2001 by six states, focused on security cooperation and widely seen as a rival of NATO."
+        },
+        {
+          "km": "ក្រុមប្រឹក្សាអាក់ទិក",
+          "en": "Arctic Council",
+          "defKm": "វេទិកាអន្តររដ្ឋាភិបាលកម្រិតខ្ពស់ បង្កើតឡើងនៅថ្ងៃទី១៩ ខែកញ្ញា ឆ្នាំ១៩៩៦ នៅទីក្រុងអូតាវ៉ា ដោយមានសមាជិក៨ ដើម្បីជំរុញកិច្ចសហប្រតិបត្តិការអភិវឌ្ឍប្រកបដោយចិរភាព និងការពារបរិស្ថានក្នុងតំបន់អាកទិក។",
+          "defEn": "A high-level intergovernmental forum created on 19 September 1996 in Ottawa with eight members, to promote cooperation on sustainable development and environmental protection in the Arctic."
+        }
+      ],
+      "quiz": [
+        {
+          "q": { "km": "តើអង្គការសហប្រជាជាតិបង្កើតឡើងជាផ្លូវការនៅថ្ងៃណា?", "en": "When was the United Nations officially established?" },
+          "options": {
+            "km": ["ថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៩៤៥", "ថ្ងៃទី៨ ខែសីហា ឆ្នាំ១៩៦៧", "ថ្ងៃទី៤ ខែមេសា ឆ្នាំ១៩៤៩", "ថ្ងៃទី១៥ ខែមិថុនា ឆ្នាំ២០០១"],
+            "en": ["24 October 1945", "8 August 1967", "4 April 1949", "15 June 2001"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "យោងតាមមេរៀន អង្គការសហប្រជាជាតិបង្កើតឡើងជាផ្លូវការនៅថ្ងៃទី២៤ ខែតុលា ឆ្នាំ១៩៤៥ បន្ទាប់ពីធម្មនុញ្ញអាត្លង់ទិចឆ្នាំ១៩៤១។",
+            "en": "According to the text, the United Nations was officially established on 24 October 1945, after the Atlantic Charter of 1941."
+          },
+          "page": 29
+        },
+        {
+          "q": { "km": "តើអង្គការសហប្រជាជាតិមានសមាជិកប៉ុន្មានប្រទេស?", "en": "How many member states does the United Nations have?" },
+          "options": {
+            "km": ["១០ ប្រទេស", "២៨ ប្រទេស", "១៩៣ ប្រទេស", "៦៣ ប្រទេស"],
+            "en": ["10 states", "28 states", "193 states", "63 states"]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "តាមមេរៀន អង្គការសហប្រជាជាតិមានសមាជិកចំនួន១៩៣ ប្រទេស ហើយទីស្នាក់ការនៅទីក្រុងញ៉ូវយ៉ក។",
+            "en": "The text states that the United Nations has 193 member states, with headquarters in New York."
+          },
+          "page": 29
+        },
+        {
+          "q": { "km": "តើគោលការណ៍ណាមួយស្ថិតក្នុងចំណោមគោលច្បាប់របស់អង្គការសហប្រជាជាតិ?", "en": "Which of the following is one of the legal principles of the United Nations?" },
+          "options": {
+            "km": ["រដ្ឋជាសមាជិកទាំងអស់មានសមភាព និងអធិបតេយ្យភាព", "រដ្ឋជាសមាជិកត្រូវប្រើកម្លាំងដើម្បីដោះស្រាយជម្លោះ", "អង្គការសហប្រជាជាតិជ្រៀតជ្រែកចូលកិច្ចផ្ទៃក្នុងរដ្ឋ", "មហាអំណាចមានសិទ្ធិច្រើនជាងរដ្ឋក្រីក្រ"],
+            "en": ["All member states are equal and sovereign", "Member states must use force to settle disputes", "The United Nations intervenes in the internal affairs of states", "Great powers enjoy more rights than poor states"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "គោលច្បាប់របស់អង្គការសហប្រជាជាតិមាន សមភាពនិងអធិបតេយ្យភាពរបស់រដ្ឋសមាជិក ការគោរពធម្មនុញ្ញ ការលះបង់ការប្រើឬគំរាមប្រើកម្លាំង និងការមិនជ្រៀតជ្រែកកិច្ចផ្ទៃក្នុង។",
+            "en": "The UN legal principles include equality and sovereignty of member states, respect for the Charter, renunciation of the use or threat of force, and non-intervention in internal affairs."
+          },
+          "page": 29
+        },
+        {
+          "q": { "km": "តាមមាត្រា៥ នៃសន្ធិសញ្ញាអាត្លង់ទិកខាងជើង តើការវាយប្រហារលើសមាជិកអូតង់មួយត្រូវចាត់ទុកជាអ្វី?", "en": "Under Article 5 of the North Atlantic Treaty, an attack on one NATO member is treated as what?" },
+          "options": {
+            "km": ["ជាការវាយប្រហារប្រឆាំងនឹងអង្គការអូតង់ទាំងមូល", "ជាបញ្ហាផ្ទៃក្នុងរបស់រដ្ឋនោះតែម្នាក់ឯង", "ជាការរំលោភច្បាប់សមុទ្រ", "ជាករណីរបស់តុលាការយុត្តិធម៌អន្តរជាតិ"],
+            "en": ["An attack against the whole of NATO", "A purely internal matter of that state", "A violation of the law of the sea", "A case for the International Court of Justice"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "មេរៀនចែងថា តាមមាត្រា៥ ការវាយប្រហារលើសមាជិកមួយ ឬជាច្រើន គឺជាការវាយប្រហារប្រឆាំងនឹងអង្គការអូតង់ទាំងមូល ដូចករណីវាយប្រហារថ្ងៃទី១១ ខែកញ្ញា ឆ្នាំ២០០១។",
+            "en": "The text states that under Article 5 an attack on one or several members is an attack against the whole of NATO, as in the attacks of 11 September 2001."
+          },
+          "page": 31
+        },
+        {
+          "q": { "km": "តើអាស៊ានបង្កើតឡើងនៅទីក្រុងណា និងដោយប្រទេសប៉ុន្មាន?", "en": "Where was ASEAN created, and by how many states?" },
+          "options": {
+            "km": ["ទីក្រុងបាងកក ដោយប្រទេស៥", "ទីក្រុងហ្សាកាតា ដោយប្រទេស១០", "ទីក្រុងញ៉ូវយ៉ក ដោយប្រទេស៦", "ទីក្រុងអូតាវ៉ា ដោយប្រទេស៨"],
+            "en": ["Bangkok, by five states", "Jakarta, by ten states", "New York, by six states", "Ottawa, by eight states"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អាស៊ានបង្កើតឡើងនៅថ្ងៃទី៨ ខែសីហា ឆ្នាំ១៩៦៧ នៅទីក្រុងបាងកក ប្រទេសថៃ ដោយប្រទេស៥ គឺម៉ាឡេសុី ឥណ្ឌូនេសុី ហ្វីលីពីន សិង្ហបុរី និងថៃ។",
+            "en": "ASEAN was created on 8 August 1967 in Bangkok, Thailand, by five states: Malaysia, Indonesia, the Philippines, Singapore and Thailand."
+          },
+          "page": 33
+        },
+        {
+          "q": { "km": "តើប្រទេសកម្ពុជាបានចូលជាសមាជិកអាស៊ាននៅថ្ងៃណា?", "en": "When did Cambodia become a member of ASEAN?" },
+          "options": {
+            "km": ["ថ្ងៃទី២៨ ខែកក្កដា ឆ្នាំ១៩៩៥", "ថ្ងៃទី២៣ ខែកក្កដា ឆ្នាំ១៩៩៧", "ថ្ងៃទី៣០ ខែមេសា ឆ្នាំ១៩៩៩", "ថ្ងៃទី០៧ ខែមករា ឆ្នាំ១៩៨៤"],
+            "en": ["28 July 1995", "23 July 1997", "30 April 1999", "7 January 1984"]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "កម្ពុជាបានចូលជាសមាជិកទី១០ នៅថ្ងៃទី៣០ ខែមេសា ឆ្នាំ១៩៩៩ បន្ទាប់ពីមានស្ថិរភាពរដ្ឋាភិបាល ដោយការចូលរួមត្រូវបានពន្យារពេលពីឆ្នាំ១៩៩៧ ដោយសារបញ្ហានយោបាយផ្ទៃក្នុង។",
+            "en": "Cambodia became the tenth member on 30 April 1999 after its government stabilised; its accession had been postponed from 1997 because of internal political problems."
+          },
+          "page": 37
+        },
+        {
+          "q": { "km": "តើអង្គការសហប្រតិបត្តិការក្រុងសៀងហៃបង្កើតឡើងនៅឆ្នាំណា ដោយប្រទេសប៉ុន្មាន?", "en": "In which year was the Shanghai Cooperation Organisation created, and by how many states?" },
+          "options": {
+            "km": ["ឆ្នាំ១៩៩៦ ដោយប្រទេស៨", "ឆ្នាំ២០០១ ដោយប្រទេស៦", "ឆ្នាំ១៩៤៩ ដោយប្រទេស១២", "ឆ្នាំ១៩៦៧ ដោយប្រទេស៥"],
+            "en": ["1996, by eight states", "2001, by six states", "1949, by twelve states", "1967, by five states"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អង្គការសហប្រតិបត្តិការក្រុងសៀងហៃ បង្កើតឡើងនៅថ្ងៃទី១៥ ខែមិថុនា ឆ្នាំ២០០១ នៅទីក្រុងសៀងហៃ ដោយប្រទេស៦ គឺចិន និងប្រទេសអតីតសហភាពសូវៀតចំនួន៥។",
+            "en": "The SCO was created on 15 June 2001 in Shanghai by six states: China together with five former Soviet states."
+          },
+          "page": 38
+        }
+      ]
+    },
+    {
+      "id": "ch1-l5",
+      "title": { "km": "១.៥.នីតិអន្តរជាតិ", "en": "International Law" },
+      "pages": { "from": 43, "to": 53 },
+      "objectives": {
+        "km": [
+          "ពន្យល់និយមន័យនៃនីតិអន្តរជាតិ និងប្រភពដំបូងរបស់ខ្លួន",
+          "រៀបរាប់ចរិកលក្ខណៈទាំងបួននៃនីតិអន្តរជាតិ ព្រមទាំងទស្សនៈស្តីពីការបង្កើតច្បាប់អន្តរជាតិ",
+          "ពន្យល់ព្រឹត្តិការណ៍វិវត្តន៍នៃនីតិអន្តរជាតិ តាមរយៈឧទាហរណ៍អធិករណ៍ប្រាសាទព្រះវិហារ និងអធិករណ៍នីការ៉ាហ្គា-សហរដ្ឋអាមេរិក"
+        ],
+        "en": [
+          "Explain the definition of international law and its earliest sources",
+          "State the four characteristics of international law and the views on international law-making",
+          "Explain the evolution of international law through the Preah Vihear case and the Nicaragua v United States case"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "នីតិអន្តរជាតិ គឺជាវិធាន និងបញ្ញត្តិគ្រប់គ្រងទំនាក់ទំនងតាមផ្លូវច្បាប់រវាងប្រជាជាតិ ឬរដ្ឋ ហើយទំនៀមទម្លាប់ និងអនុសញ្ញាជាប្រភពដំបូងរបស់វា។",
+          "នីតិអន្តរជាតិមានចរិកលក្ខណៈ៤ ៖ មានអនុភាពគតិយុត្ត ដាច់ជាផ្នែកៗតាមប្រធានបទ ទទួលយកដោយរដ្ឋដោយស្ម័គ្រចិត្ត និងមិនអាចអនុវត្តតឹងរឹងបានទេ ព្រោះកម្រមានទោសបញ្ញត្តិ។",
+          "ទស្សនៈស្តីពីការបង្កើតច្បាប់ ៖ នីតិវិទូហូឡង់ លោក ហូកូក្រូទូស្សន៍ ដែលហៅថាបិតានៃនីតិអន្តរជាតិទំនើប បានសរសេរស្នាដៃ «សង្គ្រាមនិងសន្តិភាព» ឆ្នាំ១៦២៥ និង «សេរីភាពសមុទ្រ» ឆ្នាំ១៦០៩ ហើយគំនិតរបស់លោកបាននាំទៅដល់សន្ធិសញ្ញាសន្តិភាពទីក្រុងវេសប៉ាឡា។",
+          "គោលការណ៍ «ប៉ាតាសន់សេវេនដារ» មានន័យថា រាល់កិច្ចព្រមព្រៀងទាំងឡាយត្រូវតែរក្សាទុក ពោលគឺសន្ធិសញ្ញាត្រូវអនុវត្តដោយឆន្ទៈល្អ។",
+          "ការអនុវត្តនីតិអន្តរជាតិមានឧបសគ្គ ព្រោះតុលាការយុត្តិធម៌អន្តរជាតិមានសមត្ថកិច្ចតែលើរដ្ឋអធិបតេយ្យ ដែលព្រមព្រៀងគ្នា ហើយសាលក្រមគ្មានចរិតបង្ខិតបង្ខំ។",
+          "នីតិអន្តរជាតិត្រូវបានទទួលយកជាបីប្រភេទ ៖ នីតិអន្តរជាតិសាកល នីតិអន្តរជាតិទូទៅ និងនីតិអន្តរជាតិដោយឡែក ហើយរដ្ឋមានកាតព្វកិច្ចធ្វើឱ្យនីតិជាតិរបស់ខ្លួនស្របតាមវិធានអន្តរជាតិ ដូចជាច្បាប់ប្រឆាំងភេរវកម្មរបស់កម្ពុជា។"
+        ],
+        "en": [
+          "International law is the body of rules and provisions governing legal relations between nations or states; custom and convention are its earliest sources.",
+          "International law has four characteristics: it has legal effect, it is fragmented by subject matter, it is accepted voluntarily by states, and it cannot be applied strictly because it rarely attaches penalties.",
+          "On law-making: the Dutch jurist Hugo Grotius, called the father of modern international law, wrote 'War and Peace' in 1625 and 'Freedom of the Seas' in 1609, and his ideas led to the Peace of Westphalia.",
+          "The principle of pacta sunt servanda means that every agreement must be kept, i.e. treaties must be performed in good faith.",
+          "Applying international law faces obstacles because the International Court of Justice has jurisdiction only over sovereign states that consent, and its judgments have no coercive character.",
+          "International law is accepted in three types - universal, general and particular - and states have a duty to bring their national law into line with international rules, as Cambodia's anti-terrorism law illustrates."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "-នីតិអន្តរជាតិ គឺជាវិធាន និង បញ្ញាត្តិសម្រាប់គ្រប់គ្រងនៅទំនាក់ទំនងតាមផ្លូវច្បាប់ រវាងប្រជាតិ ឬរដ្ឋ ។",
+          "en": "International law is the body of rules and provisions governing legal relations between nations or states.",
+          "page": 44
+        },
+        {
+          "km": "តុលាការអន្តរជាតិបានចេញសាលដីកា នៅថ្ងៃទី១៥ ខែមិថុនា ឆ្នាំ១៩៦២ សម្រេចដោយយុត្តិធម៌ថា ប្រាសាទព្រះវិហារ ជាកម្មសិទ្ធិរបស់ប្រទេសកម្ពុជា។",
+          "en": "The International Court of Justice issued a judgment on 15 June 1962 deciding that the temple of Preah Vihear belongs to Cambodia.",
+          "page": 47
+        },
+        {
+          "km": "នីតិវិទូសញ្ជាតិហូឡង់គឺលោក ហូកូក្រូទូស្សន៍ដែលប្រវត្តិវិទូប្រសិទ្ធនាមលោកថា ជាបិតានៃនីតិអន្តរជាតិទំនើបនោះ",
+          "en": "The Dutch jurist Hugo Grotius, whom historians have named the father of modern international law,",
+          "page": 49
+        },
+        {
+          "km": "តុលាការអន្តរជាតិនៅថ្ងៃទី ២៤ ខែ វិច្ឆិកា ឆ្នាំ១៩៨៦ បានសម្រេចថា អធិករណ៍នេះជាសមត្ថកិច្ចរបស់តុលាការអន្តរជាតិ",
+          "en": "On 24 November 1986 the International Court of Justice decided that the case fell within its jurisdiction.",
+          "page": 52
+        }
+      ],
+      "terms": [
+        {
+          "km": "នីតិអន្តរជាតិ",
+          "en": "International law",
+          "defKm": "វិធាន និងបញ្ញត្តិសម្រាប់គ្រប់គ្រងទំនាក់ទំនងតាមផ្លូវច្បាប់រវាងប្រជាជាតិ ឬរដ្ឋ ដែលកើតចេញពីការទទួលយកដោយប្រជាជាតិទាំងឡាយ។",
+          "defEn": "The body of rules and provisions governing legal relations between nations or states, arising from their acceptance by nations."
+        },
+        {
+          "km": "នីតិអន្តរជាតិសាធារណៈ",
+          "en": "Public international law",
+          "defKm": "នីតិអន្តរជាតិដែលភ្ជាប់ទៅនឹងរចនាសម្ព័ន្ធ និងដំណើរការប្រព្រឹត្តទៅនៃបណ្ដារដ្ឋអធិបតេយ្យ ព្រមទាំងតួអង្គដទៃដូចជាអង្គការអន្តររដ្ឋាភិបាល និងក្រុមហ៊ុនសាជីកម្មពហុជាតិ។",
+          "defEn": "The branch of international law concerned with the structure and operation of sovereign states and with other actors such as intergovernmental organisations and multinational corporations."
+        },
+        {
+          "km": "ទំនៀមទម្លាប់អន្តរជាតិ",
+          "en": "International custom",
+          "defKm": "ប្រភពដំបូងមួយនៃនីតិអន្តរជាតិ ដែលកើតមានឡើងនៅពេលរដ្ឋទាំងឡាយសុខចិត្តគោរពតាម ដោយឆ្លងតាមការអនុវត្តជាទូទៅ និងស្របគ្នា។",
+          "defEn": "One of the earliest sources of international law, arising when states consent to follow it through general and consistent practice."
+        },
+        {
+          "km": "ប៉ាតាសន់សេវេនដារ",
+          "en": "Pacta sunt servanda",
+          "defKm": "គោលការណ៍ដែលចេញមកពីភាសាឡាតាំង មានន័យថារាល់កិច្ចព្រមព្រៀងទាំងឡាយត្រូវតែរក្សាទុក ហើយសន្ធិសញ្ញាត្រូវអនុវត្តដោយឆន្ទៈល្អ។",
+          "defEn": "The principle, expressed in Latin, that every agreement must be kept, and that treaties must be performed in good faith."
+        },
+        {
+          "km": "តុលាការយុត្តិធម៌អន្តរជាតិ",
+          "en": "International Court of Justice",
+          "defKm": "តុលាការពិភពលោកដែលមានសមត្ថកិច្ចតែលើរដ្ឋអធិបតេយ្យ ហើយរដ្ឋទាំងពីរត្រូវព្រមព្រៀងគ្នាជាមុន ទើបអាចយកអធិករណ៍មកជំនុំជម្រះបាន។",
+          "defEn": "The world court, whose jurisdiction extends only to sovereign states and only where the two states have agreed to submit the dispute to it."
+        },
+        {
+          "km": "លក្ខន្តិកៈទីក្រុងរ៉ូម",
+          "en": "Rome Statute",
+          "defKm": "លក្ខន្តិកៈស្តីពីការបង្កើតតុលាការព្រហ្មទណ្ឌអន្តរជាតិ ធ្វើឡើងនៅថ្ងៃទី១៧ ខែកក្កដា ឆ្នាំ១៩៩៨ និងចូលជាធរមានថ្ងៃទី០១ ខែកក្កដា ឆ្នាំ២០០២។",
+          "defEn": "The statute establishing the International Criminal Court, adopted on 17 July 1998 and in force from 1 July 2002."
+        },
+        {
+          "km": "នីតិអន្តរជាតិសាកល",
+          "en": "Universal international law",
+          "defKm": "វិធានទាំងឡាយដែលប្រជាជាតិនានាព្រមទទួលយកថាជានីតិអន្តរជាតិ ដូចជាបញ្ហាសន្ធិសញ្ញាដែលមិនអាចរំលោភបាន សុវត្ថិភាពឯកអគ្គរដ្ឋទូត និងយុត្តាធិការលើដែនអាកាសនិងដែនគោក។",
+          "defEn": "The rules that nations generally accept as international law, such as non-derogable treaty rules, the safety of foreign ambassadors, and jurisdiction over a state's airspace and land."
+        }
+      ],
+      "quiz": [
+        {
+          "q": { "km": "តើប្រភពដំបូងនៃនីតិអន្តរជាតិមានអ្វីខ្លះ?", "en": "What are the earliest sources of international law?" },
+          "options": {
+            "km": ["ទំនៀមទម្លាប់ និងអនុសញ្ញា", "ព្រះរាជក្រឹត្យ និងសាលក្រមជាតិ", "ច្បាប់រដ្ឋធម្មនុញ្ញ និងលក្ខន្តិកៈបក្ស", "ការសម្រេចរបស់រដ្ឋមន្ត្រីការបរទេស"],
+            "en": ["Custom and convention", "Royal decrees and national judgments", "Constitutional law and party statutes", "Decisions of foreign ministers"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "មេរៀនចែងថា ទំនៀមទម្លាប់ និងអនុសញ្ញាជាប្រភពដំបូងនៃនីតិអន្តរជាតិ ហើយទំនៀមទម្លាប់កើតមាននៅពេលរដ្ឋសុខចិត្តគោរពតាមដោយការអនុវត្តជាទូទៅ។",
+            "en": "The text states that custom and convention are the first sources of international law, custom arising when states consent through general practice."
+          },
+          "page": 44
+        },
+        {
+          "q": { "km": "តើនីតិវិទូណាដែលត្រូវបានហៅថាបិតានៃនីតិអន្តរជាតិទំនើប?", "en": "Which jurist is called the father of modern international law?" },
+          "options": {
+            "km": ["លោក ហូកូក្រូទូស្សន៍ (ជាតិហូឡង់)", "លោក ថូម៉ាស់ ហូប (ជាតិអង់គ្លេស)", "លោក ហ្យន អូស្តីន", "លោក ចក ស៊ែល"],
+            "en": ["Hugo Grotius (Dutch)", "Thomas Hobbes (English)", "John Austin", "Ch. Sal"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "មេរៀនបញ្ជាក់ថា នីតិវិទូសញ្ជាតិហូឡង់ លោក ហូកូក្រូទូស្សន៍ ត្រូវប្រវត្តិវិទូប្រសិទ្ធនាមថាជាបិតានៃនីតិអន្តរជាតិទំនើប។",
+            "en": "The text states that the Dutch jurist Hugo Grotius was named by historians as the father of modern international law."
+          },
+          "page": 49
+        },
+        {
+          "q": { "km": "តើស្នាដៃ «សង្គ្រាមនិងសន្តិភាព» របស់លោក ហូកូក្រូទូស្សន៍ ចេញផ្សាយនៅឆ្នាំណា?", "en": "In which year was Grotius's work 'War and Peace' published?" },
+          "options": {
+            "km": ["ឆ្នាំ១៦០៩", "ឆ្នាំ១៦២៥", "ឆ្នាំ១៦៤៨", "ឆ្នាំ១៩៤៨"],
+            "en": ["1609", "1625", "1648", "1948"]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "តាមមេរៀន ស្នាដៃ «សង្គ្រាមនិងសន្តិភាព» ចេញផ្សាយនៅឆ្នាំ១៦២៥ រីឯស្នាដៃ «សេរីភាពសមុទ្រ» ចេញផ្សាយនៅឆ្នាំ១៦០៩។",
+            "en": "The text states that 'War and Peace' was published in 1625, while 'Freedom of the Seas' was published in 1609."
+          },
+          "page": 49
+        },
+        {
+          "q": { "km": "តើគោលការណ៍ «ប៉ាតាសន់សេវេនដារ» មានន័យដូចម្តេច?", "en": "What does the principle of pacta sunt servanda mean?" },
+          "options": {
+            "km": ["រាល់កិច្ចព្រមព្រៀងទាំងឡាយត្រូវតែរក្សាទុក", "សន្ធិសញ្ញាអាចបោះបង់ចោលបានគ្រប់ពេល", "រដ្ឋអាចយកច្បាប់ជាតិមកប្រឈមនឹងសន្ធិសញ្ញា", "ការគំរាមប្រើកម្លាំងជាមធ្យោបាយត្រឹមត្រូវ"],
+            "en": ["Every agreement must be kept", "Treaties may be abandoned at any time", "A state may invoke its national law against a treaty", "Threatening to use force is a lawful method"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "មេរៀនពន្យល់ថា គោលការណ៍នេះចេញមកពីភាសាឡាតាំង មានន័យថារាល់កិច្ចព្រមព្រៀងទាំងឡាយត្រូវតែរក្សាទុក ហើយសន្ធិសញ្ញាត្រូវអនុវត្តដោយឆន្ទៈល្អ។",
+            "en": "The text explains that this principle comes from Latin and means that every agreement must be kept, treaties being performed in good faith."
+          },
+          "page": 49
+        },
+        {
+          "q": { "km": "តើភាគីណាខ្លះដែលអាចយកអធិករណ៍ទៅឱ្យតុលាការយុត្តិធម៌អន្តរជាតិជំនុំជម្រះបាន?", "en": "Which parties may bring a case before the International Court of Justice?" },
+          "options": {
+            "km": ["រដ្ឋអធិបតេយ្យ ដែលព្រមព្រៀងគ្នា", "បុគ្គលឯកជន គ្រប់រូប", "ក្រុមហ៊ុនឯកជនតែម្នាក់ឯង", "អង្គការមិនមែនរដ្ឋាភិបាលណាមួយ"],
+            "en": ["Sovereign states, by agreement", "Any private individual", "A private company on its own", "Any non-governmental organisation"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "មេរៀនចែងថា តុលាការយុត្តិធម៌អន្តរជាតិមិនមានសមត្ថកិច្ចលើជម្លោះឯកជន ឬបុគ្គល ឡើយ មានតែរដ្ឋអធិបតេយ្យទេ ដោយផ្អែកលើការព្រមព្រៀងរវាងរដ្ឋទាំងពីរ។",
+            "en": "The text states that the ICJ has no jurisdiction over private or individual disputes; only sovereign states may submit a case, on the basis of agreement between them."
+          },
+          "page": 50
+        },
+        {
+          "q": { "km": "តើក្នុងអធិករណ៍នីការ៉ាហ្គា-សហរដ្ឋអាមេរិក តុលាការអន្តរជាតិបានសម្រេចថាយ៉ាងណា?", "en": "In the Nicaragua v United States case, what did the International Court of Justice decide?" },
+          "options": {
+            "km": ["អធិករណ៍នេះជាសមត្ថកិច្ចរបស់តុលាការ ព្រោះមានចរិតផ្លូវច្បាប់", "អធិករណ៍នេះជាបញ្ហានយោបាយ ដូច្នេះតុលាការគ្មានសមត្ថកិច្ច", "តុលាការបានបញ្ជូនអធិករណ៍ទៅក្រុមប្រឹក្សាសន្តិសុខ", "តុលាការបានសម្រេចឱ្យនីការ៉ាហ្គាបង់សំណង"],
+            "en": ["The case was within the Court's jurisdiction because it was legal in character", "The case was political, so the Court had no jurisdiction", "The Court referred the case to the Security Council", "The Court ordered Nicaragua to pay compensation"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "នៅថ្ងៃទី២៤ ខែវិច្ឆិកា ឆ្នាំ១៩៨៦ តុលាការបានច្រានចោលអំណះអំណាងរបស់សហរដ្ឋអាមេរិក ហើយសម្រេចថាអធិករណ៍មានចរិតផ្លូវច្បាប់ មិនមែនជាអធិករណ៍ដោយអាវុធទេ។",
+            "en": "On 24 November 1986 the Court rejected the United States' arguments and held that the case was legal in character, not an armed dispute."
+          },
+          "page": 52
+        },
+        {
+          "q": { "km": "តើនីតិអន្តរជាតិត្រូវបានទទួលយកជាប៉ុន្មានប្រភេទ និងមានអ្វីខ្លះ?", "en": "In how many types is international law accepted, and what are they?" },
+          "options": {
+            "km": ["បីប្រភេទ ៖ នីតិអន្តរជាតិសាកល ទូទៅ និងដោយឡែក", "ពីរប្រភេទ ៖ សាកល និងតំបន់", "បួនប្រភេទ ៖ សាកល តំបន់ ជាតិ និងឯកជន", "មួយប្រភេទ ៖ នីតិអន្តរជាតិសាកលតែប៉ុណ្ណោះ"],
+            "en": ["Three: universal, general and particular international law", "Two: universal and regional", "Four: universal, regional, national and private", "One: universal international law only"]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "មេរៀនបែងចែកជាបីប្រភេទ ៖ នីតិអន្តរជាតិសាកល នីតិអន្តរជាតិទូទៅ និងនីតិអន្តរជាតិដោយឡែក ដែលរួមមានសន្ធិសញ្ញារវាងរដ្ឋពីរ ឬច្រើន។",
+            "en": "The text distinguishes three types: universal international law, general international law, and particular international law, the latter covering treaties between two or more states."
+          },
+          "page": 52
+        }
+      ]
+    }
+  ]
+}

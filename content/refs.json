@@ -1,0 +1,1156 @@
+[
+  {
+    "id": "ref-eccc",
+    "num": 0,
+    "title": {
+      "km": "ច្បាប់ស្តីពីការបង្កើតតុលាការពិសេសនៅក្នុងតុលាការកម្ពុជា (ច្បាប់ ECCC)",
+      "en": "Law on the Establishment of the Extraordinary Chambers in the Courts of Cambodia (ECCC Law)"
+    },
+    "pages": { "from": 1, "to": 20 },
+    "summary": {
+      "km": "ឯកសារយោងនេះគឺជាច្បាប់ស្តីពីការបង្កើតតុលាការពិសេសនៅក្នុងតុលាការកម្ពុជា ដើម្បីនាំយកទៅកាត់ទោសមេដឹកនាំជាន់ខ្ពស់នៃរបបកម្ពុជាប្រជាធិបតេយ្យ និងអ្នកដែលទទួលខុសត្រូវខ្ពស់បំផុតចំពោះឧក្រិដ្ឋកម្ម និងការបំពានធ្ងន់ធ្ងរលើច្បាប់ព្រហ្មទណ្ឌកម្ពុជា នីតិមនុស្សធម៌អន្តរជាតិ និងអនុសញ្ញាអន្តរជាតិ ដែលត្រូវបានប្រព្រឹត្តក្នុងអំឡុងពេលពីថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥ ដល់ថ្ងៃទី៦ ខែមករា ឆ្នាំ១៩៧៩។ ច្បាប់នេះកំណត់យុត្តាធិការលើឧក្រិដ្ឋកម្ម រចនាសម្ព័ន្ធតុលាការ នីតិវិធី សិទ្ធិរបស់ចុងចោទ ទោស និងការលើកលែងទោស ព្រមទាំងកិច្ចព្រមព្រៀងរវាងកម្ពុជា និងអង្គការសហប្រជាជាតិ។ (អត្ថបទដើមជាភាសាអង់គ្លេស។)",
+      "en": "This reference document is the Law on the Establishment of the Extraordinary Chambers in the Courts of Cambodia, adopted to bring to trial senior leaders of Democratic Kampuchea and those most responsible for crimes and serious violations of Cambodian penal law, international humanitarian law and custom, and international conventions recognized by Cambodia, committed from 17 April 1975 to 6 January 1979. It sets out the Chambers' jurisdiction, their composition, procedure, the rights of the accused, penalties and pardons, and the agreement with the United Nations."
+    },
+    "srcLang": "en",
+    "lessons": [
+      {
+        "id": "ref-eccc-l1",
+        "title": {
+          "km": "តុលាការពិសេស៖ រចនាសម្ព័ន្ធ និងយុត្តាធិការ",
+          "en": "ECCC: structure and jurisdiction"
+        },
+        "pages": { "from": 1, "to": 8 },
+        "objectives": {
+          "km": [
+            "ពន្យល់ពីយុត្តាធិការរបស់តុលាការពិសេសលើអំពើដែលបានប្រព្រឹត្តពីឆ្នាំ១៩៧៥ ដល់ឆ្នាំ១៩៧៩",
+            "រាយបញ្ជីឧក្រិដ្ឋកម្មដែលស្ថិតក្នុងយុត្តាធិការរបស់តុលាការពិសេស",
+            "ពន្យល់ពីរចនាសម្ព័ន្ធរបស់អង្គជំនុំជម្រះជាន់ទីមួយ និងអង្គជំនុំជម្រះកំពូល"
+          ],
+          "en": [
+            "Explain the Extraordinary Chambers' jurisdiction over acts committed between 1975 and 1979",
+            "List the crimes that fall within the jurisdiction of the Extraordinary Chambers",
+            "Explain the composition of the Trial Chamber and the Supreme Court Chamber"
+          ]
+        },
+        "keyPoints": {
+          "km": [
+            "តុលាការពិសេសត្រូវបានបង្កើតឡើងនៅក្នុងរចនាសម្ព័ន្ធតុលាការដែលមានស្រាប់ គឺសាលាជម្រះករណីដើម និងតុលាការកំពូល។",
+            "យុត្តាធិការខាងពេលវេលាគ្របដណ្តប់អំពើដែលបានប្រព្រឹត្តពីថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥ ដល់ថ្ងៃទី៦ ខែមករា ឆ្នាំ១៩៧៩។",
+            "តុលាការមានយុត្តាធិការលើឧក្រិដ្ឋកម្មក្នុងក្រមព្រហ្មទណ្ឌឆ្នាំ១៩៥៦ ឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍ ឧក្រិដ្ឋកម្មប្រឆាំងមនុស្សជាតិ ការបំពានធ្ងន់ធ្ងរលើអនុសញ្ញាហ្សឺណែវ ការបំផ្លាញទ្រព្យសម្បត្តិវប្បធម៌ និងឧក្រិដ្ឋកម្មប្រឆាំងបុគ្គលដែលមានការការពារអន្តរជាតិ។",
+            "អាណត្តិកំណត់កាត់ទោស (statute of limitations) ត្រូវបានបន្ថែម ៣០ ឆ្នាំសម្រាប់ឧក្រិដ្ឋកម្មដែលស្ថិតក្នុងយុត្តាធិការរបស់តុលាការ។",
+            "អង្គជំនុំជម្រះជាន់ទីមួយមានចៅក្រមជំនាញប្រាំរូប ក្នុងនោះបីរូបជាចៅក្រមកម្ពុជា និងពីររូបជាចៅក្រមបរទេស។",
+            "អង្គជំនុំជម្រះកំពូលមានចៅក្រមប្រាំពីររូប ក្នុងនោះបួនរូបជាចៅក្រមកម្ពុជា និងបីរូបជាចៅក្រមបរទេស ហើយដើរតួទាំងជាសាលាឧទ្ធរណ៍ និងជាតុលាការចុងក្រោយ។"
+          ],
+          "en": [
+            "The Extraordinary Chambers are established within the existing court structure, namely the trial court and the supreme court.",
+            "Temporal jurisdiction covers acts committed from 17 April 1975 to 6 January 1979.",
+            "The Chambers have jurisdiction over crimes in the 1956 Penal Code, genocide, crimes against humanity, grave breaches of the Geneva Conventions, destruction of cultural property, and crimes against internationally protected persons.",
+            "The statute of limitations is extended by an additional 30 years for the crimes within the Chambers' jurisdiction.",
+            "The Trial Chamber is composed of five professional judges, three Cambodian and two foreign.",
+            "The Supreme Court Chamber is composed of seven judges, four Cambodian and three foreign, and serves as both appellate chamber and final instance."
+          ]
+        },
+        "quotes": [
+          {
+            "en": "The purpose of this law is to bring to trial senior leaders of Democratic Kampuchea and those who were most responsible for the crimes and serious violations of Cambodian penal law, international humanitarian law and custom, and international conventions recognized by Cambodia, that were committed during the period from 17 April 1975 to 6 January 1979.",
+            "km": "គោលបំណងនៃច្បាប់នេះ គឺដើម្បីនាំយកទៅកាត់ទោសមេដឹកនាំជាន់ខ្ពស់នៃរបបកម្ពុជាប្រជាធិបតេយ្យ និងអ្នកដែលទទួលខុសត្រូវខ្ពស់បំផុតចំពោះឧក្រិដ្ឋកម្ម និងការបំពានធ្ងន់ធ្ងរលើច្បាប់ព្រហ្មទណ្ឌកម្ពុជា នីតិមនុស្សធម៌អន្តរជាតិ និងទំនៀមទម្លាប់អន្តរជាតិ និងអនុសញ្ញាអន្តរជាតិដែលកម្ពុជាទទួលស្គាល់ ដែលត្រូវបានប្រព្រឹត្តក្នុងអំឡុងពេលពីថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥ ដល់ថ្ងៃទី៦ ខែមករា ឆ្នាំ១៩៧៩។",
+            "page": 1,
+            "srcLang": "en"
+          },
+          {
+            "en": "The acts of genocide, which have no statute of limitations, mean any acts committed with the intent to destroy, in whole or in part, a national, ethnical, racial or religious group, such as:",
+            "km": "អំពើប្រល័យពូជសាសន៍ ដែលគ្មានអាណត្តិកំណត់កាត់ទោស មានន័យថាអំពើណាមួយដែលប្រព្រឹត្តដោយចេតនាបំផ្លាញ ជាតិសាសន៍ ជាតិពន្ធុ ពូជសាសន៍ ឬក្រុមសាសនា ទាំងស្រុង ឬមួយផ្នែក ដូចជា៖",
+            "page": 2,
+            "srcLang": "en"
+          },
+          {
+            "en": "The Trial Chamber shall be an Extraordinary Chamber composed of five professional judges, of whom three are Cambodian judges with one as president, and two foreign judges",
+            "km": "អង្គជំនុំជម្រះជាន់ទីមួយ គឺជាអង្គជំនុំជម្រះពិសេសដែលមានចៅក្រមជំនាញប្រាំរូប ក្នុងនោះបីរូបជាចៅក្រមកម្ពុជា ដោយមួយរូបជាប្រធាន និងពីររូបជាចៅក្រមបរទេស",
+            "page": 4,
+            "srcLang": "en"
+          },
+          {
+            "en": "The difference shall be settled forthwith by a Pre-Trial Chamber of five judges, three Cambodian judges appointed by the Supreme Council of the Magistracy, one of whom shall be President, and two foreign judges appointed by the Supreme Council of the Magistracy upon nomination by the Secretary-General of the United Nations.",
+            "km": "ការខ្វែងគំនិតគ្នានេះ ត្រូវបានដោះស្រាយភ្លាមៗដោយអង្គជំនុំជម្រះបឋមវិនិច្ឆ័យ ដែលមានចៅក្រមប្រាំរូប ក្នុងនោះបីរូបជាចៅក្រមកម្ពុជា ដែលត្រូវបានតែងតាំងដោយក្រុមប្រឹក្សាជាន់ខ្ពស់នៃតុលាការ ដោយមួយរូបជាប្រធាន និងពីររូបជាចៅក្រមបរទេស ដែលត្រូវបានតែងតាំងដោយក្រុមប្រឹក្សាជាន់ខ្ពស់នៃតុលាការ តាមការស្នើរបស់អគ្គលេខាធិការអង្គការសហប្រជាជាតិ។",
+            "page": 7,
+            "srcLang": "en"
+          }
+        ],
+        "terms": [
+          {
+            "km": "តុលាការពិសេស",
+            "en": "Extraordinary Chambers",
+            "defKm": "តុលាការដែលបង្កើតឡើងនៅក្នុងរចនាសម្ព័ន្ធតុលាការដែលមានស្រាប់ គឺសាលាជម្រះករណីដើម និងតុលាការកំពូល ដើម្បីកាត់ទោសមេដឹកនាំជាន់ខ្ពស់នៃរបបកម្ពុជាប្រជាធិបតេយ្យ និងអ្នកដែលទទួលខុសត្រូវខ្ពស់បំផុត។",
+            "defEn": "Chambers established within the existing court structure, namely the trial court and the supreme court, to try senior leaders of Democratic Kampuchea and those most responsible."
+          },
+          {
+            "km": "ជនសង្ស័យ",
+            "en": "Suspects",
+            "defKm": "ពាក្យបច្ចេកទេសក្នុងច្បាប់នេះសម្រាប់សម្គាល់មេដឹកនាំជាន់ខ្ពស់នៃរបបកម្ពុជាប្រជាធិបតេយ្យ និងអ្នកដែលទទួលខុសត្រូវខ្ពស់បំផុតចំពោះអំពើដែលស្ថិតក្នុងយុត្តាធិការរបស់តុលាការ។",
+            "defEn": "The term used in this Law to designate senior leaders of Democratic Kampuchea and those most responsible for the acts within the Chambers' jurisdiction."
+          },
+          {
+            "km": "យុត្តាធិការលើប្រភេទឧក្រិដ្ឋកម្ម",
+            "en": "Subject-matter jurisdiction",
+            "defKm": "អំណាចរបស់តុលាការក្នុងការជំនុំជម្រះប្រភេទឧក្រិដ្ឋកម្មជាក់លាក់ ដូចជា ឃាតកម្ម ការធ្វើទារុណកម្ម ការធ្វើទុក្ខបុកម្នេញផ្នែកសាសនា ឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍ និងឧក្រិដ្ឋកម្មប្រឆាំងមនុស្សជាតិ។",
+            "defEn": "The power of the Chambers to try particular categories of crimes, such as homicide, torture, religious persecution, genocide, and crimes against humanity."
+          },
+          {
+            "km": "ឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍",
+            "en": "Genocide",
+            "defKm": "អំពើដែលប្រព្រឹត្តដោយចេតនាបំផ្លាញ ជាតិសាសន៍ ជាតិពន្ធុ ពូជសាសន៍ ឬក្រុមសាសនា ទាំងស្រុង ឬមួយផ្នែក ហើយគ្មានអាណត្តិកំណត់កាត់ទោស ដូចបានកំណត់ក្នុងអនុសញ្ញាឆ្នាំ១៩៤៨ ស្តីពីការបង្ការ និងការផ្តន្ទាទោសឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍។",
+            "defEn": "Acts committed with the intent to destroy, in whole or in part, a national, ethnical, racial or religious group, as defined in the 1948 Genocide Convention, and having no statute of limitations."
+          },
+          {
+            "km": "ឧក្រិដ្ឋកម្មប្រឆាំងមនុស្សជាតិ",
+            "en": "Crimes against humanity",
+            "defKm": "អំពើដែលប្រព្រឹត្តជាផ្នែកនៃការវាយប្រហារទ្រង់ទ្រាយធំ ឬមានប្រព័ន្ធ ប្រឆាំងប្រជាជនស៊ីវិល ដោយផ្អែកលើហេតុផលជាតិ នយោបាយ ជាតិពន្ធុ ពូជសាសន៍ ឬសាសនា ដូចជា ការសម្លាប់ ការបំបិទជីវិតជាប្រព័ន្ធ ការធ្វើទារុណកម្ម និងការចាប់ដាក់គុក។",
+            "defEn": "Acts committed as part of a widespread or systematic attack directed against any civilian population on national, political, ethnical, racial or religious grounds, such as murder, extermination, enslavement, torture and imprisonment."
+          },
+          {
+            "km": "ការបំពានធ្ងន់ធ្ងរលើអនុសញ្ញាហ្សឺណែវ",
+            "en": "Grave breaches of the Geneva Conventions",
+            "defKm": "អំពើដូចជា ការសម្លាប់ដោយចេតនា ការធ្វើទារុណកម្ម ការបង្ខំអ្នកទោសសង្គ្រាមឲ្យបម្រើកងកម្លាំងខ្មៅយក និងការចាប់ជនស៊ីវិលជាចំណាប់ខ្មាំង ដែលប្រព្រឹត្តលើបុគ្គល ឬទ្រព្យសម្បត្តិដែលមានការការពារ។",
+            "defEn": "Acts such as wilful killing, torture or inhumane treatment, compelling a prisoner of war or civilian to serve a hostile power, and taking civilians as hostages, committed against protected persons or property."
+          },
+          {
+            "km": "អង្គជំនុំជម្រះបឋមវិនិច្ឆ័យ",
+            "en": "Pre-Trial Chamber",
+            "defKm": "អង្គជំនុំជម្រះដែលមានចៅក្រមប្រាំរូប ដែលដោះស្រាយការខ្វែងគំនិតរវាងព្រះរាជអាជ្ញារួម ឬចៅក្រមស៊ើបអង្កេតរួម ដោយសេចក្តីសម្រេចរបស់ខ្លួនមិនអាចប្តឹងឧទ្ធរណ៍បាន និងត្រូវការសំឡេងយល់ព្រមយ៉ាងតិចបួនរូប។",
+            "defEn": "A five-judge chamber that settles disagreements between the Co-Prosecutors or the Co-Investigating Judges; its decisions, requiring at least four affirmative votes, are not subject to appeal."
+          }
+        ],
+        "quiz": [
+          {
+            "q": {
+              "km": "តើយុត្តាធិការខាងពេលវេលារបស់តុលាការពិសេស (ECCC) គ្របដណ្តប់រយៈពេលណា?",
+              "en": "What period is covered by the temporal jurisdiction of the Extraordinary Chambers (ECCC)?"
+            },
+            "options": {
+              "km": [
+                "ពីឆ្នាំ១៩៧០ ដល់ឆ្នាំ១៩៧៥",
+                "ពីថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥ ដល់ថ្ងៃទី៦ ខែមករា ឆ្នាំ១៩៧៩",
+                "ពីឆ្នាំ១៩៧៩ ដល់ឆ្នាំ១៩៩១",
+                "ពីឆ្នាំ១៩៧៥ ដល់ឆ្នាំ១៩៨៩"
+              ],
+              "en": [
+                "1970 to 1975",
+                "17 April 1975 to 6 January 1979",
+                "1979 to 1991",
+                "1975 to 1989"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ១ និង ២ កំណត់ថាអំពើត្រូវបានប្រព្រឹត្តក្នុងអំឡុងពេលពីថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥ ដល់ថ្ងៃទី៦ ខែមករា ឆ្នាំ១៩៧៩។",
+              "en": "Articles 1 and 2 fix the period as from 17 April 1975 to 6 January 1979."
+            },
+            "page": 1
+          },
+          {
+            "q": {
+              "km": "តើអង្គជំនុំជម្រះជាន់ទីមួយមានចៅក្រមប៉ុន្មានរូប និងមានអ្នកណាខ្លះ?",
+              "en": "How many judges compose the Trial Chamber and who are they?"
+            },
+            "options": {
+              "km": [
+                "ប្រាំរូប៖ បីរូបជាចៅក្រមកម្ពុជា និងពីររូបជាចៅក្រមបរទេស",
+                "ប្រាំពីររូប៖ បួនរូបជាចៅក្រមកម្ពុជា និងបីរូបជាចៅក្រមបរទេស",
+                "បីរូប៖ ពីររូបជាចៅក្រមកម្ពុជា និងមួយរូបជាចៅក្រមបរទេស",
+                "ប្រាំបួនរូប៖ ប្រាំរូបជាចៅក្រមកម្ពុជា និងបួនរូបជាចៅក្រមបរទេស"
+              ],
+              "en": [
+                "Five judges: three Cambodian and two foreign",
+                "Seven judges: four Cambodian and three foreign",
+                "Three judges: two Cambodian and one foreign",
+                "Nine judges: five Cambodian and four foreign"
+              ]
+            },
+            "answer": 0,
+            "explain": {
+              "km": "មាតិកា ៩ ថ្មី កំណត់ថាអង្គជំនុំជម្រះជាន់ទីមួយមានចៅក្រមជំនាញប្រាំរូប ក្នុងនោះបីរូបជាចៅក្រមកម្ពុជា និងពីររូបជាចៅក្រមបរទេស។ ចំណែកអង្គជំនុំជម្រះកំពូលមានប្រាំពីររូប។",
+              "en": "Article 9 new provides that the Trial Chamber has five professional judges, three Cambodian and two foreign; the Supreme Court Chamber has seven."
+            },
+            "page": 4
+          },
+          {
+            "q": {
+              "km": "តើអាណត្តិកំណត់កាត់ទោស (statute of limitations) ត្រូវបានបន្ថែមប៉ុន្មានឆ្នាំសម្រាប់ឧក្រិដ្ឋកម្មដែលស្ថិតក្នុងយុត្តាធិការរបស់តុលាការ?",
+              "en": "By how many years is the statute of limitations extended for the crimes within the Chambers' jurisdiction?"
+            },
+            "options": {
+              "km": ["១០ ឆ្នាំ", "២០ ឆ្នាំ", "៣០ ឆ្នាំ", "៥០ ឆ្នាំ"],
+              "en": ["10 years", "20 years", "30 years", "50 years"]
+            },
+            "answer": 2,
+            "explain": {
+              "km": "មាតិកា ៣ ថ្មី កំណត់ថាអាណត្តិកំណត់កាត់ទោសក្នុងក្រមព្រហ្មទណ្ឌឆ្នាំ១៩៥៦ ត្រូវបានបន្ថែម ៣០ ឆ្នាំបន្ថែមទៀត។",
+              "en": "Article 3 new extends the statute of limitations in the 1956 Penal Code by an additional 30 years."
+            },
+            "page": 1
+          },
+          {
+            "q": {
+              "km": "តើឧក្រិដ្ឋកម្មណាមួយមិនត្រូវបានរាយបញ្ជីក្នុងមាតិកា ៣ ថ្មី ដល់ ៨ នៃច្បាប់នេះ?",
+              "en": "Which of the following crimes is NOT listed in Articles 3 new to 8 of this Law?"
+            },
+            "options": {
+              "km": [
+                "ឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍",
+                "ឧក្រិដ្ឋកម្មប្រឆាំងមនុស្សជាតិ",
+                "ការបំពានធ្ងន់ធ្ងរលើអនុសញ្ញាហ្សឺណែវ ថ្ងៃទី១២ ខែសីហា ឆ្នាំ១៩៤៩",
+                "ឧក្រិដ្ឋកម្មនៃការឈ្លានពាន (crime of aggression)"
+              ],
+              "en": [
+                "Genocide",
+                "Crimes against humanity",
+                "Grave breaches of the Geneva Conventions of 12 August 1949",
+                "The crime of aggression"
+              ]
+            },
+            "answer": 3,
+            "explain": {
+              "km": "ច្បាប់រាយឧក្រិដ្ឋកម្មក្នុងក្រមព្រហ្មទណ្ឌឆ្នាំ១៩៥៦ ឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍ ឧក្រិដ្ឋកម្មប្រឆាំងមនុស្សជាតិ ការបំពានធ្ងន់ធ្ងរលើអនុសញ្ញាហ្សឺណែវ ការបំផ្លាញទ្រព្យសម្បត្តិវប្បធម៌ និងឧក្រិដ្ឋកម្មប្រឆាំងបុគ្គលដែលមានការការពារអន្តរជាតិ តែមិនមានឧក្រិដ្ឋកម្មនៃការឈ្លានពានទេ។",
+              "en": "The Law lists crimes under the 1956 Penal Code, genocide, crimes against humanity, grave breaches of the Geneva Conventions, destruction of cultural property, and crimes against internationally protected persons; aggression is not among them."
+            },
+            "page": 3
+          },
+          {
+            "q": {
+              "km": "តើអំពើអ្វីដែលត្រូវបានចាត់ថាជាឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍ក្រោមមាតិកា ៤?",
+              "en": "What elements make acts constitute genocide under Article 4?"
+            },
+            "options": {
+              "km": [
+                "អំពើដែលប្រព្រឹត្តដោយចេតនាបំផ្លាញ ជាតិសាសន៍ ជាតិពន្ធុ ពូជសាសន៍ ឬក្រុមសាសនា ទាំងស្រុង ឬមួយផ្នែក",
+                "ការវាយប្រហារទ្រង់ទ្រាយធំប្រឆាំងប្រជាជនស៊ីវិល",
+                "ការប្រព្រឹត្តតាមបញ្ជារបស់ថ្នាក់លើ",
+                "ការប្រើប្រាស់កងកម្លាំងប្រដាប់អាវុធប្រឆាំងរដ្ឋជិតខាង"
+              ],
+              "en": [
+                "Acts committed with the intent to destroy, in whole or in part, a national, ethnical, racial or religious group",
+                "A widespread or systematic attack against a civilian population",
+                "Acting on the order of a superior",
+                "The use of armed force against a neighbouring state"
+              ]
+            },
+            "answer": 0,
+            "explain": {
+              "km": "មាតិកា ៤ កំណត់ថាអំពើប្រល័យពូជសាសន៍ គឺអំពើដែលប្រព្រឹត្តដោយចេតនាបំផ្លាញក្រុមជាតិសាសន៍ ជាតិពន្ធុ ពូជសាសន៍ ឬសាសនា ទាំងស្រុង ឬមួយផ្នែក។ ការវាយប្រហារទ្រង់ទ្រាយធំជាលក្ខណៈវិនិច្ឆ័យនៃឧក្រិដ្ឋកម្មប្រឆាំងមនុស្សជាតិ តាមមាតិកា ៥។",
+              "en": "Article 4 defines genocide as acts committed with the intent to destroy, in whole or in part, a national, ethnical, racial or religious group; the widespread or systematic attack element belongs to crimes against humanity under Article 5."
+            },
+            "page": 2
+          },
+          {
+            "q": {
+              "km": "តើសេចក្តីសម្រេចរបស់អង្គជំនុំជម្រះបឋមវិនិច្ឆ័យត្រូវការសំឡេងយល់ព្រមយ៉ាងតិចប៉ុន្មានរូប ហើយអាចប្តឹងឧទ្ធរណ៍បានឬទេ?",
+              "en": "How many affirmative votes does a decision of the Pre-Trial Chamber require, and is it appealable?"
+            },
+            "options": {
+              "km": [
+                "បីរូប ហើយអាចប្តឹងឧទ្ធរណ៍បាន",
+                "បួនរូប ហើយមិនអាចប្តឹងឧទ្ធរណ៍បាន",
+                "ប្រាំរូប ហើយអាចប្តឹងឧទ្ធរណ៍បាន",
+                "ប្រាំពីររូប ហើយមិនអាចប្តឹងឧទ្ធរណ៍បាន"
+              ],
+              "en": [
+                "Three votes, and it is appealable",
+                "Four votes, and it is not appealable",
+                "Five votes, and it is appealable",
+                "Seven votes, and it is not appealable"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "សេចក្តីសម្រេចរបស់អង្គជំនុំជម្រះបឋមវិនិច្ឆ័យ ដែលមិនអាចប្តឹងឧទ្ធរណ៍បាន ត្រូវការសំឡេងយល់ព្រមយ៉ាងតិចបួនរូប។ បើគ្មានសំឡេងភាគច្រើនតាមការកំណត់ ការចោទប្រកាន់ ឬការស៊ើបអង្កេតត្រូវបន្តទៅមុខ។",
+              "en": "A decision of the Pre-Trial Chamber, against which there is no appeal, requires the affirmative vote of at least four judges. If there is no majority, the prosecution (or investigation) proceeds."
+            },
+            "page": 8
+          }
+        ]
+      },
+      {
+        "id": "ref-eccc-l2",
+        "title": {
+          "km": "តុលាការពិសេស៖ នីតិវិធី សិទ្ធិរបស់ចុងចោទ និងតួនាទីនៃច្បាប់អន្តរជាតិ",
+          "en": "ECCC: procedure, rights of the accused and the role of international law"
+        },
+        "pages": { "from": 9, "to": 20 },
+        "objectives": {
+          "km": [
+            "ពន្យល់ពីការស៊ើបអង្កេត និងការចោទប្រកាន់នៅតុលាការពិសេស",
+            "រាយសិទ្ធិអប្បបរមារបស់ចុងចោទក្នុងអំឡុងពេលជំនុំជម្រះ",
+            "ពន្យល់ពីទោស ការលើកលែងទោស និងតួនាទីនៃកិច្ចព្រមព្រៀងជាមួយអង្គការសហប្រជាជាតិ"
+          ],
+          "en": [
+            "Explain investigations and prosecution before the Extraordinary Chambers",
+            "List the minimum guarantees of the accused during trial",
+            "Explain penalties, pardons, and the role of the agreement with the United Nations"
+          ]
+        },
+        "keyPoints": {
+          "km": [
+            "ការស៊ើបអង្កេត គឺជាការទទួលខុសត្រូវរួមរបស់ចៅក្រមស៊ើបអង្កេតរួម ម្នាក់ជាជនជាតិកម្ពុជា និងម្នាក់ជាជនបរទេស។",
+            "ជនសង្ស័យមានសិទ្ធិដោយគ្មានលក្ខខណ្ឌក្នុងការមានមេធាវីដែលខ្លួនជ្រើសរើស ការជួយផ្នែកច្បាប់ដោយឥតគិតថ្លៃ បើគ្មានលទ្ធភាពបង់ថ្លៃ ព្រមទាំងសិទ្ធិបកប្រែភាសា។",
+            "ការជំនុំជម្រះត្រូវធានាឲ្យមានភាពយុត្តិធម៌ និងរហ័ស ដោយគោរពពេញលេញនូវសិទ្ធិរបស់ចុងចោទ និងការការពារជនរងគ្រោះ និងសាក្សី។",
+            "ចុងចោទត្រូវសន្មតថាជាអ្នកបរិសុទ្ធ រហូតដល់តុលាការផ្តល់សាលក្រមចុងក្រោយ។",
+            "ទោសទាំងអស់កំណត់ត្រឹមការជាប់ពន្ធនាគារ ពីប្រាំឆ្នាំដល់អស់មួយជីវិត ហើយរាជរដ្ឋាភិបាលកម្ពុជាមិនត្រូវសុំការលើកលែងទោស ឬការអនុគ្រោះទេ។",
+            "កិច្ចព្រមព្រៀងរវាងអង្គការសហប្រជាជាតិ និងរាជរដ្ឋាភិបាលកម្ពុជា ចុះនៅភ្នំពេញ ថ្ងៃទី៦ ខែមិថុនា ឆ្នាំ២០០៣ មានអនុភាពជាច្បាប់ក្នុងព្រះរាជាណាចក្រកម្ពុជា។"
+          ],
+          "en": [
+            "Investigations are the joint responsibility of two Co-Investigating Judges, one Cambodian and one foreign.",
+            "Suspects are unconditionally entitled to counsel of their own choosing and to free legal assistance if they cannot afford it, as well as to interpretation.",
+            "Trials must be fair and expeditious, with full respect for the rights of the accused and for the protection of victims and witnesses.",
+            "The accused is presumed innocent until the court gives its definitive judgment.",
+            "All penalties are limited to imprisonment, from five years to life, and the Royal Government of Cambodia may not request an amnesty or pardon.",
+            "The Agreement between the United Nations and the Royal Government of Cambodia, done at Phnom Penh on 6 June 2003, applies as law within the Kingdom of Cambodia."
+          ]
+        },
+        "quotes": [
+          {
+            "en": "During the investigation, Suspects shall be unconditionally entitled to assistance of counsel of their own choosing, and to have legal assistance assigned to them free of charge if they cannot afford it, as well as the right to interpretation, as necessary, into and from a language they speak and understand.",
+            "km": "ក្នុងអំឡុងពេលស៊ើបអង្កេត ជនសង្ស័យមានសិទ្ធិដោយគ្មានលក្ខខណ្ឌក្នុងការទទួលបានជំនួយពីមេធាវីដែលខ្លួនជ្រើសរើស និងក្នុងការមានការជួយផ្នែកច្បាប់ចាត់ឲ្យដោយឥតគិតថ្លៃ ប្រសិនបើពួកគេគ្មានលទ្ធភាពបង់ថ្លៃ ព្រមទាំងសិទ្ធិក្នុងការបកប្រែ តាមការចាំបាច់ ចេញចូលពីភាសាដែលពួកគេនិយាយ និងយល់។",
+            "page": 10,
+            "srcLang": "en"
+          },
+          {
+            "en": "The Extraordinary Chambers of the trial court shall ensure that trials are fair and expeditious and are conducted in accordance with existing procedures in force, with full respect for the rights of the accused and for the protection of victims and witnesses.",
+            "km": "អង្គជំនុំជម្រះពិសេសនៃសាលាជម្រះករណីដើម ត្រូវធានាថាការជំនុំជម្រះមានភាពយុត្តិធម៌ និងរហ័ស ហើយត្រូវធ្វើឡើងស្របតាមនីតិវិធីដែលមានជាធរមាន ដោយគោរពពេញលេញនូវសិទ្ធិរបស់ចុងចោទ និងការការពារជនរងគ្រោះ និងសាក្សី។",
+            "page": 13,
+            "srcLang": "en"
+          },
+          {
+            "en": "The accused shall be presumed innocent as long as the court has not given its definitive judgment.",
+            "km": "ចុងចោទត្រូវបានសន្មតថាជាអ្នកបរិសុទ្ធ ដរាបណាតុលាការមិនទាន់បានផ្តល់សាលក្រមចុងក្រោយរបស់ខ្លួន។",
+            "page": 14,
+            "srcLang": "en"
+          },
+          {
+            "en": "The Royal Government of Cambodia shall not request an amnesty or pardon for any persons who may be investigated for or convicted of crimes referred to in Articles 3, 4, 5, 6, 7 and 8 of this law.",
+            "km": "រាជរដ្ឋាភិបាលកម្ពុជា មិនត្រូវសុំការលើកលែងទោស ឬការអនុគ្រោះសម្រាប់បុគ្គលណាមួយដែលអាចត្រូវបានស៊ើបអង្កេត ឬកាត់ទោសពីឧក្រិដ្ឋកម្មដែលបានយោងក្នុងមាតិកា ៣, ៤, ៥, ៦, ៧ និង ៨ នៃច្បាប់នេះ។",
+            "page": 15,
+            "srcLang": "en"
+          }
+        ],
+        "terms": [
+          {
+            "km": "ព្រះរាជអាជ្ញារួម",
+            "en": "Co-Prosecutors",
+            "defKm": "ព្រះរាជអាជ្ញាពីររូប ម្នាក់ជាជនជាតិកម្ពុជា និងម្នាក់ជាជនបរទេស ដែលធ្វើការជាមួយគ្នាដើម្បីរៀបចំសេចក្តីចោទប្រកាន់ និងមានសិទ្ធិប្តឹងឧទ្ធរណ៍លើសាលក្រម។",
+            "defEn": "Two prosecutors, one Cambodian and one foreign, who work together to prepare indictments and may appeal the Trial Chamber's verdict."
+          },
+          {
+            "km": "ចៅក្រមស៊ើបអង្កេតរួម",
+            "en": "Co-Investigating Judges",
+            "defKm": "ចៅក្រមស៊ើបអង្កេតពីររូប ម្នាក់ជាជនជាតិកម្ពុជា និងម្នាក់ជាជនបរទេស ដែលមានការទទួលខុសត្រូវរួមលើការស៊ើបអង្កេត និងមានអំណាចសាកសួរជនសង្ស័យលឺសាក្សី និងប្រមូលភស្តុតាង។",
+            "defEn": "Two investigating judges, one Cambodian and one foreign, jointly responsible for investigations, with power to question suspects, hear witnesses and collect evidence."
+          },
+          {
+            "km": "ការិយាល័យរដ្ឋបាល",
+            "en": "Office of Administration",
+            "defKm": "ស្ថាប័នដែលត្រួតពិនិត្យបុគ្គលិករបស់ចៅក្រម ចៅក្រមស៊ើបអង្កេត និងព្រះរាជអាជ្ញា ដោយមាននាយកជាជនជាតិកម្ពុជា និងនាយករងជាជនបរទេស។",
+            "defEn": "The body that supervises the staff of the judges, investigating judges and prosecutors, with a Cambodian Director and a foreign Deputy Director."
+          },
+          {
+            "km": "ការទទួលខុសត្រូវជាបុគ្គល",
+            "en": "Individual responsibility",
+            "defKm": "គោលការណ៍ដែលថាអ្នកដែលបានរៀបចំ បង្ក បញ្ជា ជួយ ឬប្រព្រឹត្តឧក្រិដ្ឋកម្ម ត្រូវទទួលខុសត្រូវដោយខ្លួនឯង ហើយមុខតំណែង ឬឋានៈ និងការធ្វើតាមបញ្ជារបស់ថ្នាក់លើ មិនដកអំពើនោះចេញពីការទទួលខុសត្រូវបានទេ។",
+            "defEn": "The principle that any person who planned, instigated, ordered, aided and abetted, or committed the crimes is individually responsible, and neither rank nor superior orders relieve responsibility."
+          },
+          {
+            "km": "ការសន្មតថាជាអ្នកបរិសុទ្ធ",
+            "en": "Presumption of innocence",
+            "defKm": "ការធានាថាចុងចោទត្រូវចាត់ទុកជាអ្នកបរិសុទ្ធ រហូតដល់តុលាការផ្តល់សាលក្រមចុងក្រោយ ព្រមទាំងសិទ្ធិអប្បបរមាដូចក្នុងមាតិកា ១៤ នៃសន្ធិសញ្ញាអន្តរជាតិស្តីពីសិទ្ធិពលរដ្ឋ និងនយោបាយ ឆ្នាំ១៩៦៦។",
+            "defEn": "The guarantee that the accused is treated as innocent until the court gives its definitive judgment, together with the minimum guarantees of Article 14 of the 1966 International Covenant on Civil and Political Rights."
+          },
+          {
+            "km": "ទោស និងការលើកលែងទោស",
+            "en": "Penalties and amnesty",
+            "defKm": "ទោសទាំងអស់កំណត់ត្រឹមការជាប់ពន្ធនាគារពីប្រាំឆ្នាំដល់អស់មួយជីវិត ជាមួយការរឹបអូសទ្រព្យសម្បត្តិដែលទទួលបានដោយខុសច្បាប់ ហើយអាណត្តិ ឬការលើកលែងទោសមុនច្បាប់នេះ ជាចំណុចដែលតុលាការត្រូវសម្រេច។",
+            "defEn": "All penalties are limited to imprisonment from five years to life, together with confiscation of unlawfully acquired property; the scope of any pre-existing amnesty or pardon is decided by the Chambers."
+          },
+          {
+            "km": "សិទ្ធិពិសេស និងអភ័យឯកសិទ្ធិ",
+            "en": "Privileges and immunities",
+            "defKm": "ចៅក្រមបរទេស ព្រះរាជអាជ្ញាបរទេស និងនាយករងនៃការិយាល័យរដ្ឋបាល ទទួលបានសិទ្ធិពិសេស និងអភ័យឯកសិទ្ធិដូចបុគ្គលិកការទូត តាមអនុសញ្ញាវីយែន ឆ្នាំ១៩៦១ ស្តីពីទំនាក់ទំនងការទូត។",
+            "defEn": "The foreign judges, foreign Co-Prosecutor and the Deputy Director enjoy the privileges and immunities of diplomatic agents under the 1961 Vienna Convention on Diplomatic Relations."
+          }
+        ],
+        "quiz": [
+          {
+            "q": {
+              "km": "តាមមាតិកា ៣៨ តើទោសទាំងអស់កំណត់ត្រឹមអ្វី?",
+              "en": "Under Article 38, what are all penalties limited to?"
+            },
+            "options": {
+              "km": [
+                "ការជាប់ពន្ធនាគារ",
+                "ទោសប្រហារជីវិត",
+                "ការដកសិទ្ធិពលរដ្ឋ",
+                "ការនិរទេសចេញពីប្រទេស"
+              ],
+              "en": [
+                "Imprisonment",
+                "The death penalty",
+                "Loss of civil rights",
+                "Deportation"
+              ]
+            },
+            "answer": 0,
+            "explain": {
+              "km": "មាតិកា ៣៨ ចែងថា ទោសទាំងអស់កំណត់ត្រឹមការជាប់ពន្ធនាគារ។",
+              "en": "Article 38 states that all penalties shall be limited to imprisonment."
+            },
+            "page": 15
+          },
+          {
+            "q": {
+              "km": "តើអ្នកដែលប្រព្រឹត្តឧក្រិដ្ឋកម្មក្នុងមាតិកា ៣ ថ្មី ដល់ ៨ អាចត្រូវទទួសទោសជាប់ពន្ធនាគារប៉ុន្មានឆ្នាំ?",
+              "en": "What prison term may be imposed on those who committed the crimes in Articles 3 new to 8?"
+            },
+            "options": {
+              "km": [
+                "ពីមួយឆ្នាំទៅដប់ឆ្នាំ",
+                "ពីប្រាំឆ្នាំទៅអស់មួយជីវិត",
+                "ពីដប់ឆ្នាំទៅសាមសិបឆ្នាំ",
+                "ការជាប់ពន្ធនាគារអស់មួយជីវិតតែប៉ុណ្ណោះ"
+              ],
+              "en": [
+                "From one year to ten years",
+                "From five years to life imprisonment",
+                "From ten years to thirty years",
+                "Life imprisonment only"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ៣៩ កំណត់ទោសជាប់ពន្ធនាគារពីប្រាំឆ្នាំទៅអស់មួយជីវិត ហើយអង្គជំនុំជម្រះជាន់ទីមួយអាចបញ្ជាឲ្យរឹបអូសទ្រព្យសម្បត្តិដែលទទួលបានដោយខុសច្បាប់ ដែលត្រូវប្រគល់ជូនរដ្ឋវិញ។",
+              "en": "Article 39 provides for a prison term from five years to life imprisonment, and the Trial Chamber may also order confiscation of property acquired unlawfully, to be returned to the State."
+            },
+            "page": 15
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ៣៥ តើចុងចោទត្រូវបានសន្មតថាជាអ្នកបរិសុទ្ធរហូតដល់ពេលណា?",
+              "en": "Under Article 35, until when is the accused presumed innocent?"
+            },
+            "options": {
+              "km": [
+                "រហូតដល់តុលាការផ្តល់សាលក្រមចុងក្រោយ",
+                "រហូតដល់បញ្ចប់ការសាកសួរជនសង្ស័យ",
+                "រហូតដល់មានសាក្សីចូលខ្លួន",
+                "មិនមានការសន្មតភាពបរិសុទ្ធទេ"
+              ],
+              "en": [
+                "Until the court gives its definitive judgment",
+                "Until the questioning of the Suspect ends",
+                "Until witnesses appear",
+                "There is no presumption of innocence"
+              ]
+            },
+            "answer": 0,
+            "explain": {
+              "km": "មាតិកា ៣៥ ចែងថាចុងចោទត្រូវសន្មតថាជាអ្នកបរិសុទ្ធ ដរាបណាតុលាការមិនទាន់ផ្តល់សាលក្រមចុងក្រោយ។",
+              "en": "Article 35 states that the accused shall be presumed innocent as long as the court has not given its definitive judgment."
+            },
+            "page": 14
+          },
+          {
+            "q": {
+              "km": "តើលក្ខខណ្ឌណាមួយមិនត្រូវបានរាយជាសិទ្ធិអប្បបរមារបស់ចុងចោទក្នុងមាតិកា ៣៥?",
+              "en": "Which of the following is NOT listed as a minimum guarantee of the accused in Article 35?"
+            },
+            "options": {
+              "km": [
+                "ការជំនុំជម្រះដោយមិនបង្អង់យូរ",
+                "ការទទួលជំនួយបកប្រែដោយឥតគិតថ្លៃ",
+                "ការមិនត្រូវបង្ខំឲ្យសារភាព ឬធ្វើសក្ខីកម្មប្រឆាំងខ្លួនឯង",
+                "ការជ្រើសរើសចៅក្រមដែលនឹងជំនុំជម្រះខ្លួន"
+              ],
+              "en": [
+                "To be tried without delay",
+                "To have the free assistance of an interpreter",
+                "Not to be compelled to testify against themselves or to confess guilt",
+                "To choose the judges who will try them"
+              ]
+            },
+            "answer": 3,
+            "explain": {
+              "km": "មាតិកា ៣៥ ធានាសិទ្ធិដូចជា ការជូនដំណឹងពីចំណងចោទ ពេលវេលាគ្រប់គ្រាន់សម្រាប់ការការពារ ការជំនុំជម្រះដោយមិនបង្អង់ ការបកប្រែដោយឥតគិតថ្លៃ និងការមិនបង្ខំឲ្យសារភាព ដោយមិនមានសិទ្ធិជ្រើសរើសចៅក្រមទេ។",
+              "en": "Article 35 guarantees prompt information of the charge, adequate time and facilities for the defence, trial without delay, free interpretation, and the right not to be compelled to confess; it does not give the accused a right to choose the judges."
+            },
+            "page": 14
+          },
+          {
+            "q": {
+              "km": "តើភាសាការងារផ្លូវការរបស់តុលាការពិសេសមានអ្វីខ្លះ?",
+              "en": "What are the official working languages of the Extraordinary Chambers?"
+            },
+            "options": {
+              "km": [
+                "ខ្មែរ និងអង់គ្លេសតែប៉ុណ្ណោះ",
+                "ខ្មែរ អង់គ្លេស និងបារាំង",
+                "ខ្មែរ អង់គ្លេស និងចិន",
+                "អង់គ្លេស និងបារាំងតែប៉ុណ្ណោះ"
+              ],
+              "en": [
+                "Khmer and English only",
+                "Khmer, English and French",
+                "Khmer, English and Chinese",
+                "English and French only"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ៤៥ ថ្មី កំណត់ថាភាសាការងារផ្លូវការរបស់តុលាការពិសេស គឺភាសាខ្មែរ អង់គ្លេស និងបារាំង។",
+              "en": "Article 45 new provides that the official working languages are Khmer, English and French."
+            },
+            "page": 18
+          },
+          {
+            "q": {
+              "km": "តើមាតិកា ៤០ ថ្មី ចែងយ៉ាងណាអំពីការលើកលែងទោស និងការអនុគ្រោះ?",
+              "en": "What does Article 40 new provide about amnesty and pardons?"
+            },
+            "options": {
+              "km": [
+                "រាជរដ្ឋាភិបាលកម្ពុជាមិនត្រូវសុំការលើកលែងទោស ឬការអនុគ្រោះសម្រាប់បុគ្គលដែលអាចត្រូវស៊ើបអង្កេត ឬកាត់ទោស",
+                "រាជរដ្ឋាភិបាលអាចសុំការលើកលែងទោសបានគ្រប់ពេល",
+                "តុលាការគ្មានសមត្ថកិច្ចលើបញ្ហាលើកលែងទោសទេ",
+                "ការលើកលែងទោសត្រូវសម្រេចដោយអង្គការសហប្រជាជាតិ"
+              ],
+              "en": [
+                "The Royal Government of Cambodia shall not request an amnesty or pardon for persons who may be investigated for or convicted of the crimes",
+                "The Royal Government may request a pardon at any time",
+                "The Chambers have no competence over amnesty questions",
+                "Amnesties are decided by the United Nations"
+              ]
+            },
+            "answer": 0,
+            "explain": {
+              "km": "មាតិកា ៤០ ថ្មី ហាមរាជរដ្ឋាភិបាលកម្ពុជាសុំការលើកលែងទោស ឬការអនុគ្រោះសម្រាប់ជនដែលអាចត្រូវស៊ើបអង្កេត ឬកាត់ទោស ហើយវិសាលភាពនៃការលើកលែងទោសដែលបានផ្តល់មុនច្បាប់នេះ ជាចំណុចឲ្យតុលាការសម្រេច។",
+              "en": "Article 40 new bars the Royal Government from requesting an amnesty or pardon for persons who may be investigated for or convicted of those crimes; the scope of any amnesty granted before the Law is for the Chambers to decide."
+            },
+            "page": 15
+          },
+          {
+            "q": {
+              "km": "តើកិច្ចព្រមព្រៀងរវាងអង្គការសហប្រជាជាតិ និងរាជរដ្ឋាភិបាលកម្ពុជាស្តីពីការកាត់ទោស ត្រូវបានចុះនៅពេលណា និងមានអនុភាពយ៉ាងណា?",
+              "en": "When was the Agreement between the United Nations and the Royal Government of Cambodia done, and what is its effect?"
+            },
+            "options": {
+              "km": [
+                "ចុះនៅភ្នំពេញ ថ្ងៃទី៦ ខែមិថុនា ឆ្នាំ២០០៣ ហើយមានអនុភាពជាច្បាប់ក្នុងព្រះរាជាណាចក្រកម្ពុជា",
+                "ចុះនៅញូវយ៉ក ថ្ងៃទី២៧ ខែតុលា ឆ្នាំ២០០៤ ហើយគ្រាន់តែជាការណែនាំ",
+                "ចុះនៅប៉ារីស ថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥ ហើយមានអនុភាពតែក្នុងអង្គការសហប្រជាជាតិ",
+                "មិនធ្លាប់មានកិច្ចព្រមព្រៀងបែបនេះទេ"
+              ],
+              "en": [
+                "Done at Phnom Penh on 6 June 2003 and it applies as law within the Kingdom of Cambodia",
+                "Done in New York on 27 October 2004 and it is only advisory",
+                "Done in Paris on 17 April 1975 and it only applies within the United Nations",
+                "No such agreement exists"
+              ]
+            },
+            "answer": 0,
+            "explain": {
+              "km": "មាតិកា ៤៧ ប៊ីស ថ្មី ចែងថាក្រោយការផ្តល់សច្ចាប័ន កិច្ចព្រមព្រៀងដែលចុះនៅភ្នំពេញ ថ្ងៃទី៦ ខែមិថុនា ឆ្នាំ២០០៣ មានអនុភាពជាច្បាប់ក្នុងព្រះរាជាណាចក្រកម្ពុជា។",
+              "en": "Article 47 bis new provides that the Agreement done at Phnom Penh on 6 June 2003 shall apply as law within the Kingdom of Cambodia following its ratification."
+            },
+            "page": 19
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ref-paris",
+    "num": 0,
+    "title": {
+      "km": "អនុសញ្ញាប៉ារីសស្តីពីការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម",
+      "en": "Paris Convention for the Protection of Industrial Property"
+    },
+    "pages": { "from": 1, "to": 20 },
+    "summary": {
+      "km": "ឯកសារយោងនេះគឺជាអនុសញ្ញាប៉ារីសស្តីពីការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម ចុះថ្ងៃទី២០ ខែមីនា ឆ្នាំ១៨៨៣ ដែលត្រូវបានកែសម្រួលនៅប្រ៊ុចសែល វ៉ាស៊ីនតោន ទីក្រុងឡាអេ ឡុងដ៍ លីសបោន និងស្តុកខូម និងធ្វើវិសោធនកម្មថ្ងៃទី២៨ ខែកញ្ញា ឆ្នាំ១៩៧៩។ អនុសញ្ញាបង្កើតសហភាពមួយសម្រាប់ការការពារប៉ាតង់ ម៉ូដែលឧបយោគ រចនាបទឧស្សាហកម្ម ម៉ាកពាណិជ្ជកម្ម និងការទប់ស្កាត់ការប្រកួតប្រជែងមិនស្មោះត្រង់។ (អត្ថបទដើមជាភាសាអង់គ្លេស។)",
+      "en": "This reference document is the Paris Convention for the Protection of Industrial Property of 20 March 1883, as revised at Brussels, Washington, The Hague, London, Lisbon and Stockholm, and as amended on 28 September 1979. It establishes a Union for the protection of patents, utility models, industrial designs, trademarks and trade names, and for the repression of unfair competition, and it organises the administrative organs of the Union."
+    },
+    "srcLang": "en",
+    "lessons": [
+      {
+        "id": "ref-paris-l1",
+        "title": {
+          "km": "អនុសញ្ញាប៉ារីស៖ វិសាលភាព ការប្រព្រឹត្តបែបជាតិ និងសិទ្ធិអាទិភាព",
+          "en": "Paris Convention: scope, national treatment and priority"
+        },
+        "pages": { "from": 1, "to": 12 },
+        "objectives": {
+          "km": [
+            "ពន្យល់ពីវិសាលភាពនៃទ្រព្យសម្បត្តិឧស្សាហកម្មតាមមាតិកា ១",
+            "ពន្យល់ពីគោលការណ៍ប្រព្រឹត្តបែបជាតិ និងការអនុវត្តចំពោះជនក្រៅសហភាព",
+            "ពន្យល់ពីសិទ្ធិអាទិភាព និងរយៈពេលរបស់វា"
+          ],
+          "en": [
+            "Explain the scope of industrial property under Article 1",
+            "Explain national treatment and its application to persons outside the Union",
+            "Explain the right of priority and its periods"
+          ]
+        },
+        "keyPoints": {
+          "km": [
+            "ប្រទេសដែលអនុសញ្ញានេះអនុវត្ត បង្កើតជាសហភាពមួយសម្រាប់ការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម។",
+            "ទ្រព្យសម្បត្តិឧស្សាហកម្មរួមមាន ប៉ាតង់ ម៉ូដែលឧបយោគ រចនាបទឧស្សាហកម្ម ម៉ាកពាណិជ្ជកម្ម ម៉ាកសេវា ឈ្មោះពាណិជ្ជកម្ម សញ្ញាប្រភពដើម និងការទប់ស្កាត់ការប្រកួតប្រជែងមិនស្មោះត្រង់។",
+            "គោលការណ៍ប្រព្រឹត្តបែបជាតិធានាឲ្យពលរដ្ឋនៃប្រទេសសមាជិកទទួលបានការការពារដូចពលរដ្ឋខ្លួន ហើយមិនអាចទាមទារលំនៅ ឬស្ថាប័នក្នុងប្រទេសនោះបានទេ។",
+            "ជនក្រៅសហភាពដែលមានលំនៅ ឬស្ថាប័នឧស្សាហកម្ម ឬពាណិជ្ជកម្មពិតប្រាកដក្នុងប្រទេសសមាជិក ត្រូវទទួលការប្រព្រឹត្តដូចពលរដ្ឋនៃប្រទេសសមាជិក។",
+            "សិទ្ធិអាទិភាពផ្តល់រយៈពេល ១២ ខែសម្រាប់ប៉ាតង់ និងម៉ូដែលឧបយោគ និង ៦ ខែសម្រាប់រចនាបទឧស្សាហកម្ម និងម៉ាកពាណិជ្ជកម្ម។",
+            "ប្រទេសសមាជិកអាចចាត់វិធានការផ្តល់អាជ្ញាបណ្ណចាំបាច់ ដើម្បីទប់ស្កាត់ការបំពានសិទ្ធិដូចជាការមិនធ្វើការ ហើយការដកហូតប៉ាតង់គឺជាវិធានការចុងក្រោយ។"
+          ],
+          "en": [
+            "The countries to which the Convention applies constitute a Union for the protection of industrial property.",
+            "Industrial property covers patents, utility models, industrial designs, trademarks, service marks, trade names, indications of source, and the repression of unfair competition.",
+            "National treatment guarantees nationals of Union countries the same protection and legal remedies enjoyed by nationals, and no requirement as to domicile or establishment may be imposed.",
+            "Nationals of countries outside the Union who are domiciled or have real and effective industrial or commercial establishments in a Union country are treated like Union nationals.",
+            "The right of priority is twelve months for patents and utility models and six months for industrial designs and trademarks.",
+            "Union countries may provide for compulsory licences to prevent abuses such as failure to work, and forfeiture of a patent is only possible where compulsory licences would not have sufficed."
+          ]
+        },
+        "quotes": [
+          {
+            "en": "The protection of industrial property has as its object patents, utility models, industrial designs, trademarks, service marks, trade names, indications of source or appellations of origin, and the repression of unfair competition.",
+            "km": "ការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម មានជាវត្ថុបំណង ប៉ាតង់ ម៉ូដែលឧបយោគ រចនាបទឧស្សាហកម្ម ម៉ាកពាណិជ្ជកម្ម ម៉ាកសេវា ឈ្មោះពាណិជ្ជកម្ម សញ្ញាប្រភពដើម ឬឈ្មោះហៅប្រភពដើម និងការទប់ស្កាត់ការប្រកួតប្រជែងមិនស្មោះត្រង់។",
+            "page": 2,
+            "srcLang": "en"
+          },
+          {
+            "en": "Nationals of any country of the Union shall, as regards the protection of industrial property, enjoy in all the other countries of the Union the advantages that their respective laws now grant, or may hereafter grant, to nationals;",
+            "km": "ពលរដ្ឋនៃប្រទេសណាមួយនៃសហភាព ចំពោះការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម ត្រូវទទួលបាននៅក្នុងប្រទេសផ្សេងៗទាំងអស់នៃសហភាព នូវអត្ថប្រយោជន៍ដែលច្បាប់របស់ប្រទេសនីមួយៗផ្តល់ជូនពលរដ្ឋខ្លួននាពេលបច្ចុប្បន្ន ឬអាចនឹងផ្តល់ជូននៅពេលក្រោយ។",
+            "page": 2,
+            "srcLang": "en"
+          },
+          {
+            "en": "Any person who has duly filed an application for a patent, or for the registration of a utility model, or of an industrial design, or of a trademark, in one of the countries of the Union, or his successor in title, shall enjoy, for the purpose of filing in the other countries, a right of priority during the periods hereinafter fixed.",
+            "km": "បុគ្គលណាដែលបានដាក់ពាក្យសុំប៉ាតង់ ឬចុះបញ្ជីម៉ូដែលឧបយោគ ឬរចនាបទឧស្សាហកម្ម ឬម៉ាកពាណិជ្ជកម្មដោយត្រឹមត្រូវ នៅក្នុងប្រទេសណាមួយនៃសហភាព ឬអ្នកស្នងសិទ្ធិរបស់គាត់ ត្រូវទទួលបាន សម្រាប់គោលបំណងនៃការដាក់ពាក្យនៅប្រទេសផ្សេងទៀត នូវសិទ្ធិអាទិភាពក្នុងរយៈពេលដែលកំណត់នៅខាងក្រោមនេះ។",
+            "page": 3,
+            "srcLang": "en"
+          },
+          {
+            "en": "A compulsory license may not be applied for on the ground of failure to work or insufficient working before the expiration of a period of four years from the date of filing of the patent application or three years from the date of the grant of the patent, whichever period expires last; it shall be refused if the patentee justifies his inaction by legitimate reasons.",
+            "km": "អាជ្ញាបណ្ណចាំបាច់ មិនអាចត្រូវបានស្នើសុំដោយហេតុផលថាមិនបានធ្វើការ ឬធ្វើការមិនគ្រប់គ្រាន់ មុនពេលផុតរយៈពេលបួនឆ្នាំពីថ្ងៃដាក់ពាក្យសុំប៉ាតង់ ឬបីឆ្នាំពីថ្ងៃផ្តល់ប៉ាតង់ ដោយយករយៈពេលណាដែលផុតក្រោយគេ។ វាត្រូវបដិសេធ ប្រសិនបើម្ចាស់ប៉ាតង់បង្ហាញហេតុផលសមស្របសម្រាប់ការមិនធ្វើសកម្មភាពរបស់ខ្លួន។",
+            "page": 5,
+            "srcLang": "en"
+          }
+        ],
+        "terms": [
+          {
+            "km": "ទ្រព្យសម្បត្តិឧស្សាហកម្ម",
+            "en": "Industrial property",
+            "defKm": "សិទ្ធិការពារលើប៉ាតង់ ម៉ូដែលឧបយោគ រចនាបទឧស្សាហកម្ម ម៉ាកពាណិជ្ជកម្ម ម៉ាកសេវា ឈ្មោះពាណិជ្ជកម្ម និងសញ្ញាប្រភពដើម ដែលត្រូវយល់ក្នុងអត្ថន័យធំទូលាយបំផុត រួមទាំងវិស័យកសិកម្ម និងឧស្សាហកម្មរុករករ៉ែ។",
+            "defEn": "Rights over patents, utility models, industrial designs, trademarks, service marks, trade names and indications of source, understood in the broadest sense and applying also to agricultural and extractive industries."
+          },
+          {
+            "km": "ការប្រព្រឹត្តបែបជាតិ",
+            "en": "National treatment",
+            "defKm": "គោលការណ៍ដែលពលរដ្ឋនៃប្រទេសសមាជិកទទួលបាននៅក្នុងប្រទេសសមាជិកដទៃ នូវអត្ថប្រយោជន៍ និងការការពារដូចពលរដ្ឋនៃប្រទេសនោះ ដោយមិនអាចទាមទារលំនៅ ឬស្ថាប័នបានទេ។",
+            "defEn": "The principle under which nationals of Union countries enjoy in the other Union countries the advantages and protection granted to nationals, without any requirement as to domicile or establishment."
+          },
+          {
+            "km": "សិទ្ធិអាទិភាព",
+            "en": "Right of priority",
+            "defKm": "សិទ្ធិដែលកើតឡើងពីការដាក់ពាក្យដំបូងក្នុងប្រទេសសមាជិកមួយ ដោយអនុញ្ញាតឲ្យដាក់ពាក្យនៅប្រទេសសមាជិកផ្សេងទៀតក្នុងរយៈពេល ១២ ខែ ឬ ៦ ខែដោយមិនបាត់បង់សិទ្ធិ។",
+            "defEn": "The right arising from a first filing in one Union country which allows filing in other Union countries within twelve or six months without losing the benefit of the first filing date."
+          },
+          {
+            "km": "ការដាក់ពាក្យជាតិជាប្រក្រតី",
+            "en": "Regular national filing",
+            "defKm": "ការដាក់ពាក្យណាមួយដែលគ្រប់គ្រាន់ក្នុងការកំណត់ថ្ងៃដាក់ពាក្យនៅប្រទេសពាក់ព័ន្ធ ទោះបីជាពាក្យសុំនោះមានជោគវាសនាអ្វីក្រោយមកក៏ដោយ។",
+            "defEn": "Any filing adequate to establish the date on which the application was filed in the country concerned, whatever the subsequent fate of the application."
+          },
+          {
+            "km": "អាជ្ញាបណ្ណចាំបាច់",
+            "en": "Compulsory license",
+            "defKm": "ការអនុញ្ញាតឲ្យបុគ្គលទីបីប្រើប្រាស់ប៉ាតង់ដោយមិនមែនជាចេតនារបស់ម្ចាស់ប៉ាតង់ ជាវិធានការដែលប្រទេសសមាជិកអាចចាត់ឡើងដើម្បីទប់ស្កាត់ការបំពានសិទ្ធិ ហើយត្រូវជាការមិនផ្តាច់មុខ និងមិនអាចផ្ទេរបាន។",
+            "defEn": "An authorisation for a third party to work the patent, which Union countries may provide to prevent abuses such as failure to work; it must be non-exclusive and not transferable."
+          },
+          {
+            "km": "ម៉ាកល្បី",
+            "en": "Well-known mark",
+            "defKm": "ម៉ាកដែលអាជ្ញាធរមានសមត្ថកិច្ចនៃប្រទេសចុះបញ្ជី ឬប្រើប្រាស់ចាត់ទុកថាល្បី ហើយត្រូវបានការពារដោយបដិសេធ ឬលុបចោលការចុះបញ្ជីម៉ាកដែលធ្វើត្រាប់ ឬធ្វើត្រាប់តាម ដែលអាចបង្កការភ័ន្តច្រឡំ។",
+            "defEn": "A mark considered well known in the country of registration or use, protected against reproduction, imitation or translation liable to create confusion, with at least five years to request cancellation."
+          },
+          {
+            "km": "ការប្រកួតប្រជែងមិនស្មោះត្រង់",
+            "en": "Unfair competition",
+            "defKm": "អំពើប្រកួតប្រជែងណាមួយដែលផ្ទុយនឹងការអនុវត្តសុចរិតក្នុងវិស័យឧស្សាហកម្ម ឬពាណិជ្ជកម្ម ដូចជាការបង្កភាពភ័ន្តច្រឡំ ការចោទប្រកាន់មិនពិត និងការបង្ហាញព័ត៌មានដែលធ្វើឲ្យសាធារណជនយល់ខុស។",
+            "defEn": "Any act of competition contrary to honest practices in industrial or commercial matters, including acts creating confusion, false allegations, and indications liable to mislead the public."
+          }
+        ],
+        "quiz": [
+          {
+            "q": {
+              "km": "តើអ្វីដែលមិនត្រូវបានរាយក្នុងមាតិកា ១(២) ជាវត្ថុបំណងនៃការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម?",
+              "en": "Which of the following is NOT listed in Article 1(2) as an object of industrial property protection?"
+            },
+            "options": {
+              "km": [
+                "ប៉ាតង់",
+                "ម៉ាកពាណិជ្ជកម្ម",
+                "សញ្ញាប្រភពដើម ឬឈ្មោះហៅប្រភពដើម",
+                "សិទ្ធិអ្នកនិពន្ធលើស្នាដៃអក្សរសិល្ប៍"
+              ],
+              "en": [
+                "Patents",
+                "Trademarks",
+                "Indications of source or appellations of origin",
+                "Copyright in literary works"
+              ]
+            },
+            "answer": 3,
+            "explain": {
+              "km": "មាតិកា ១(២) រាយប៉ាតង់ ម៉ូដែលឧបយោគ រចនាបទឧស្សាហកម្ម ម៉ាកពាណិជ្ជកម្ម ម៉ាកសេវា ឈ្មោះពាណិជ្ជកម្ម សញ្ញាប្រភពដើម និងការទប់ស្កាត់ការប្រកួតប្រជែងមិនស្មោះត្រង់។ សិទ្ធិអ្នកនិពន្ធស្ថិតក្នុងអនុសញ្ញាប៊ែរន៍ មិនមែនអនុសញ្ញាប៉ារីសទេ។",
+              "en": "Article 1(2) lists patents, utility models, industrial designs, trademarks, service marks, trade names, indications of source and the repression of unfair competition; copyright belongs to the Berne Convention."
+            },
+            "page": 2
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ២ តើប្រទេសសមាជិកមិនអាចទាមទារអ្វីពីពលរដ្ឋនៃប្រទេសសមាជិកដទៃ ដើម្បីទទួលបានសិទ្ធិទ្រព្យសម្បត្តិឧស្សាហកម្ម?",
+              "en": "Under Article 2, what may a Union country NOT require from nationals of other Union countries in order to enjoy industrial property rights?"
+            },
+            "options": {
+              "km": [
+                "ការគោរពលក្ខខណ្ឌ និងនីតិវិធីដែលកំណត់ចំពោះពលរដ្ឋខ្លួន",
+                "លំនៅ ឬស្ថាប័ននៅក្នុងប្រទេសដែលសុំការការពារ",
+                "ការបង់ថ្លៃសេវា",
+                "ការកំណត់អាសយដ្ឋានសម្រាប់ការទទួលឯកសារ"
+              ],
+              "en": [
+                "Compliance with the conditions and formalities imposed upon nationals",
+                "Domicile or establishment in the country where protection is claimed",
+                "Payment of fees",
+                "Designation of an address for service"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ២(២) ចែងថាមិនអាចដាក់លក្ខខណ្ឌអំពីលំនៅ ឬស្ថាប័ននៅក្នុងប្រទេសដែលសុំការការពារបានទេ ចំពោះពលរដ្ឋនៃប្រទេសសមាជិក។ ចំណែកលក្ខខណ្ឌ និងនីតិវិធីត្រូវគោរពដូចពលរដ្ឋខ្លួន។",
+              "en": "Article 2(2) forbids imposing any domicile or establishment requirement on Union nationals; the conditions and formalities imposed upon nationals must however be complied with."
+            },
+            "page": 2
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ៣ តើអ្នកណាត្រូវទទួលការប្រព្រឹត្តដូចពលរដ្ឋនៃប្រទេសសមាជិក?",
+              "en": "Under Article 3, who is to be treated in the same manner as nationals of Union countries?"
+            },
+            "options": {
+              "km": [
+                "មនុស្សគ្រប់រូបនៅលើពិភពលោក",
+                "ពលរដ្ឋនៃប្រទេសក្រៅសហភាព ដែលមានលំនៅ ឬស្ថាប័នឧស្សាហកម្ម ឬពាណិជ្ជកម្មពិតប្រាកដនៅក្នុងប្រទេសសមាជិក",
+                "ក្រុមហ៊ុនដែលបានចុះបញ្ជីតែក្នុងប្រទេសសមាជិកប៉ុណ្ណោះ",
+                "បុគ្គលធម្មជាតិដែលរស់នៅក្នុងប្រទេសដើមប៉ុណ្ណោះ"
+              ],
+              "en": [
+                "Every person in the world",
+                "Nationals of countries outside the Union who are domiciled or have real and effective industrial or commercial establishments in a Union country",
+                "Only companies registered in Union countries",
+                "Only natural persons residing in the country of origin"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ៣ ផ្តល់ការប្រព្រឹត្តស្មើនឹងពលរដ្ឋនៃប្រទេសសមាជិក ចំពោះពលរដ្ឋក្រៅសហភាពដែលមានលំនៅ ឬស្ថាប័នឧស្សាហកម្ម ឬពាណិជ្ជកម្មពិតប្រាកដនៅក្នុងប្រទេសសមាជិកមួយ។",
+              "en": "Article 3 assimilates to Union nationals those foreign nationals who are domiciled or have real and effective industrial or commercial establishments in the territory of a Union country."
+            },
+            "page": 3
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ៤ គ. តើរយៈពេលអាទិភាពសម្រាប់ប៉ាតង់ និងម៉ូដែលឧបយោគ និងសម្រាប់រចនាបទឧស្សាហកម្ម និងម៉ាកពាណិជ្ជកម្ម មានប៉ុន្មាន?",
+              "en": "Under Article 4 C, what are the priority periods for patents and utility models and for industrial designs and trademarks?"
+            },
+            "options": {
+              "km": [
+                "១២ ខែសម្រាប់ប៉ាតង់ និងម៉ូដែលឧបយោគ និង ៦ ខែសម្រាប់រចនាបទឧស្សាហកម្ម និងម៉ាកពាណិជ្ជកម្ម",
+                "៦ ខែសម្រាប់សិទ្ធិទាំងអស់",
+                "១២ ខែសម្រាប់សិទ្ធិទាំងអស់",
+                "១៨ ខែសម្រាប់ប៉ាតង់ និង ១២ ខែសម្រាប់ម៉ាក"
+              ],
+              "en": [
+                "Twelve months for patents and utility models, and six months for industrial designs and trademarks",
+                "Six months for all rights",
+                "Twelve months for all rights",
+                "Eighteen months for patents and twelve months for marks"
+              ]
+            },
+            "answer": 0,
+            "explain": {
+              "km": "មាតិកា ៤ គ.(១) កំណត់រយៈពេលអាទិភាព ១២ ខែសម្រាប់ប៉ាតង់ និងម៉ូដែលឧបយោគ និង ៦ ខែសម្រាប់រចនាបទឧស្សាហកម្ម និងម៉ាកពាណិជ្ជកម្ម ដោយចាប់ផ្តើមពីថ្ងៃដាក់ពាក្យដំបូង។",
+              "en": "Article 4 C(1) fixes twelve months for patents and utility models and six months for industrial designs and trademarks, running from the date of filing of the first application."
+            },
+            "page": 3
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ៥ ក. តើអាជ្ញាបណ្ណចាំបាច់អាចស្នើសុំដោយហេតុផលមិនធ្វើការ នៅពេលណា?",
+              "en": "Under Article 5 A, when may a compulsory license be applied for on the ground of failure to work?"
+            },
+            "options": {
+              "km": [
+                "ភ្លាមៗបន្ទាប់ពីការផ្តល់ប៉ាតង់",
+                "មុនផុតរយៈពេលបួនឆ្នាំពីថ្ងៃដាក់ពាក្យ ឬបីឆ្នាំពីថ្ងៃផ្តល់ប៉ាតង់ ដោយយករយៈពេលណាដែលផុតក្រោយគេ",
+                "បន្ទាប់ពីពីរឆ្នាំពីថ្ងៃផ្តល់ប៉ាតង់តែប៉ុណ្ណោះ",
+                "បន្ទាប់ពីប្រាំឆ្នាំពីថ្ងៃផ្តល់ប៉ាតង់តែប៉ុណ្ណោះ"
+              ],
+              "en": [
+                "Immediately after the grant of the patent",
+                "Not before the expiration of four years from the filing date or three years from the grant, whichever period expires last",
+                "Only after two years from the grant of the patent",
+                "Only after five years from the grant of the patent"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ៥ ក.(៤) ហាមស្នើសុំអាជ្ញាបណ្ណចាំបាច់ដោយហេតុផលមិនធ្វើការ មុនផុតបួនឆ្នាំពីថ្ងៃដាក់ពាក្យ ឬបីឆ្នាំពីថ្ងៃផ្តល់ប៉ាតង់ ដោយយករយៈពេលណាដែលផុតក្រោយគេ ហើយត្រូវបដិសេធបើម្ចាស់ប៉ាតង់បង្ហាញហេតុផលសមស្រប។ អាជ្ញាបណ្ណនេះត្រូវជាការមិនផ្តាច់មុខ និងមិនអាចផ្ទេរបាន។",
+              "en": "Article 5 A(4) bars an application for a compulsory license for failure to work before four years from filing or three years from grant, whichever expires last; it must be refused if the patentee justifies the inaction. Such a license is non-exclusive and non-transferable."
+            },
+            "page": 5
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ៦ប៊ីស(២) តើរយៈពេលប៉ុន្មានត្រូវអនុញ្ញាតសម្រាប់ការស្នើសុំលុបចោលការចុះបញ្ជីម៉ាកល្បី?",
+              "en": "Under Article 6bis(2), what period must be allowed for requesting the cancellation of a well-known mark?"
+            },
+            "options": {
+              "km": [
+                "យ៉ាងតិចមួយឆ្នាំ",
+                "យ៉ាងតិចបីឆ្នាំ",
+                "យ៉ាងតិចប្រាំឆ្នាំពីថ្ងៃចុះបញ្ជី",
+                "គ្មានកំណត់ពេលទេ"
+              ],
+              "en": [
+                "At least one year",
+                "At least three years",
+                "At least five years from the date of registration",
+                "No time limit"
+              ]
+            },
+            "answer": 2,
+            "explain": {
+              "km": "មាតិកា ៦ប៊ីស(២) អនុញ្ញាតរយៈពេលយ៉ាងតិចប្រាំឆ្នាំពីថ្ងៃចុះបញ្ជី សម្រាប់ការស្នើសុំលុបចោលម៉ាកល្បី តែមានករណីលើកលែងសម្រាប់ម៉ាកដែលចុះបញ្ជី ឬប្រើប្រាស់ដោយចេតនាអាក្រក់ ដែលគ្មានកំណត់ពេល។",
+              "en": "Article 6bis(2) allows at least five years from registration to request cancellation; no time limit applies in cases of bad faith, which is dealt with in paragraph (3)."
+            },
+            "page": 7
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ៨ តើឈ្មោះពាណិជ្ជកម្មត្រូវបានការពារយ៉ាងណា?",
+              "en": "Under Article 8, how is a trade name protected?"
+            },
+            "options": {
+              "km": [
+                "លុះត្រាតែវាជាផ្នែកនៃម៉ាកពាណិជ្ជកម្ម",
+                "នៅក្នុងប្រទេសទាំងអស់នៃសហភាព ដោយគ្មានកាតព្វកិច្ចដាក់ពាក្យ ឬចុះបញ្ជី",
+                "លុះត្រាតែបានចុះបញ្ជីជាមុន",
+                "លុះត្រាតែវាជាម៉ាកល្បី"
+              ],
+              "en": [
+                "Only if it forms part of a trademark",
+                "In all the countries of the Union without the obligation of filing or registration",
+                "Only after it has been registered",
+                "Only if it is a well-known mark"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ៨ ចែងថាឈ្មោះពាណិជ្ជកម្មត្រូវបានការពារនៅក្នុងប្រទេសទាំងអស់នៃសហភាព ដោយគ្មានកាតព្វកិច្ចដាក់ពាក្យ ឬចុះបញ្ជី ទោះបីជាវាជាផ្នែកនៃម៉ាកពាណិជ្ជកម្ម ឬមិនមែនក៏ដោយ។",
+              "en": "Article 8 protects a trade name in all Union countries without any obligation of filing or registration, whether or not it forms part of a trademark."
+            },
+            "page": 10
+          }
+        ]
+      },
+      {
+        "id": "ref-paris-l2",
+        "title": {
+          "km": "អនុសញ្ញាប៉ារីស៖ ការគ្រប់គ្រង ការកែសម្រួល និងវិធានការដាក់ទណ្ឌកម្ម",
+          "en": "Paris Convention: administration, revision and sanctions"
+        },
+        "pages": { "from": 13, "to": 20 },
+        "objectives": {
+          "km": [
+            "ពន្យល់ពីតួនាទីរបស់មហាសន្និបាត និងគណៈកម្មាធិការប្រតិបត្តិនៃសហភាព",
+            "រៀបរាប់ពីលក្ខខណ្ឌនៃការធ្វើវិសោធនកម្ម និងការកែសម្រួលអនុសញ្ញា",
+            "ពន្យល់ពីការដោះស្រាយវិវាទ ការបដិសេធចោល និងបទប្បញ្ញត្តិចុងក្រោយ"
+          ],
+          "en": [
+            "Explain the role of the Assembly and the Executive Committee of the Union",
+            "Describe the conditions for amending and revising the Convention",
+            "Explain dispute settlement, denunciation and the final provisions"
+          ]
+        },
+        "keyPoints": {
+          "km": [
+            "សហភាពមានមហាសន្និបាតមួយ ដែលរួមមានប្រទេសសមាជិកដែលចងខ្លួនដោយមាតិកា ១៣ ដល់ ១៧ ហើយប្រទេសមួយមានសំឡេងមួយ។",
+            "គណៈកម្មាធិការប្រតិបត្តិមានសមាជិកស្មើនឹងមួយភាគបួននៃចំនួនប្រទេសសមាជិកមហាសន្និបាត។",
+            "ការិយាល័យអន្តរជាតិ (International Bureau) បំពេញកិច្ចការរដ្ឋបាល និងជាលេខាធិការដ្ឋានរបស់សហភាព ដោយមានអគ្គនាយកជានាយកប្រតិបត្តិ។",
+            "មាតិកា ១៣ ដល់ ១៧ អាចកែប្រែដោយមហាសន្និបាត ដោយត្រូវការសំឡេងបីភាគបួន និងបួនភាគប្រាំសម្រាប់ការកែមាតិកា ១៣ និងកថាខណ្ឌនោះ។",
+            "អនុសញ្ញាមានអនុភាពដោយគ្មានកំណត់ពេល ហើយប្រទេសណាមួយអាចបដិសេធចោលដោយសេចក្តីជូនដំណឹង ដែលមានប្រសិទ្ធភាពក្រោយមួយឆ្នាំ ប៉ុន្តែមិនអាចធ្វើក្នុងរយៈពេលប្រាំឆ្នាំដំបូងនៃសមាជិកភាពទេ។",
+            "វិវាទអំពីការបកស្រាយ ឬការអនុវត្តអនុសញ្ញាអាចនាំទៅតុលាការយុត្តិធម៌អន្តរជាតិ តែប្រទេសអាចប្រកាសមិនចងខ្លួនលើបទប្បញ្ញត្តិនេះ ហើយអាចដកការប្រកាសនោះវិញបាន។"
+          ],
+          "en": [
+            "The Union has an Assembly consisting of those countries bound by Articles 13 to 17, and each member country has one vote.",
+            "The Executive Committee consists of a number of countries equal to one-fourth of the number of countries members of the Assembly.",
+            "The International Bureau performs the administrative tasks of the Union and provides its secretariat, with the Director General as chief executive.",
+            "Articles 13 to 17 may be amended by the Assembly, requiring three-fourths of the votes cast, and four-fifths for an amendment to Article 13 and to that paragraph.",
+            "The Convention remains in force without limitation as to time; denunciation takes effect one year after notification and may not be exercised during the first five years of membership.",
+            "Disputes on interpretation or application may be brought before the International Court of Justice, but a country may declare that it does not consider itself bound and may withdraw that declaration at any time."
+          ]
+        },
+        "quotes": [
+          {
+            "en": "Countries of the Union not members of the Assembly shall be admitted to the meetings of the latter as observers.",
+            "km": "ប្រទេសនៃសហភាពដែលមិនមែនជាសមាជិកមហាសន្និបាត ត្រូវបានអនុញ្ញាតឲ្យចូលរួមកិច្ចប្រជុំរបស់មហាសន្និបាត ក្នុងឋានៈជាអ្នកសង្កេតការណ៍។",
+            "page": 13,
+            "srcLang": "en"
+          },
+          {
+            "en": "The International Bureau shall publish a monthly periodical.",
+            "km": "ការិយាល័យអន្តរជាតិ ត្រូវបោះពុម្ពផ្សាយទស្សនាវដ្តីប្រចាំខែមួយ។",
+            "page": 15,
+            "srcLang": "en"
+          },
+          {
+            "en": "This Convention shall be submitted to revision with a view to the introduction of amendments designed to improve the system of the Union.",
+            "km": "អនុសញ្ញានេះ ត្រូវបានដាក់ជូនការកែសម្រួល ដោយមានគោលបំណងណែនាំវិសោធនកម្មដែលត្រូវបានរៀបចំឡើងដើម្បីកែលម្អប្រព័ន្ធនៃសហភាព។",
+            "page": 17,
+            "srcLang": "en"
+          },
+          {
+            "en": "Each country may, at the time it signs this Act or deposits its instrument of ratification or accession, declare that it does not consider itself bound by the provisions of paragraph (1).",
+            "km": "ប្រទេសនីមួយៗ នៅពេលចុះហត្ថលេខាលើច្បាប់នេះ ឬដាក់សារតាំងសច្ចាប័ន ឬការចូលជាភាគី អាចប្រកាសថាខ្លួនមិនចាត់ទុកខ្លួនជាអ្នកចងខ្លួនដោយបទប្បញ្ញត្តិនៃកថាខណ្ឌ (១)។",
+            "page": 20,
+            "srcLang": "en"
+          }
+        ],
+        "terms": [
+          {
+            "km": "មហាសន្និបាតនៃសហភាព",
+            "en": "Assembly of the Union",
+            "defKm": "អង្គការដែលរួមមានប្រទេសនៃសហភាពដែលចងខ្លួនដោយមាតិកា ១៣ ដល់ ១៧ ដោយប្រទេសមួយមានសំឡេងមួយ និងជាអ្នកសម្រេចលើកម្មវិធី ថវិកា និងវិសោធនកម្ម។",
+            "defEn": "The body composed of the Union countries bound by Articles 13 to 17, in which each country has one vote and which decides on the programme, budget and amendments."
+          },
+          {
+            "km": "គណៈកម្មាធិការប្រតិបត្តិ",
+            "en": "Executive Committee",
+            "defKm": "គណៈកម្មាធិការដែលជ្រើសរើសដោយមហាសន្និបាត ដោយមានសមាជិកស្មើមួយភាគបួននៃចំនួនប្រទេសសមាជិកមហាសន្និបាត និងមានតួនាទីរៀបចំរបៀបវារៈ និងពិនិត្យរបាយការណ៍។",
+            "defEn": "The committee elected by the Assembly, whose membership corresponds to one-fourth of the countries members of the Assembly, and which prepares the agenda and examines reports."
+          },
+          {
+            "km": "ការិយាល័យអន្តរជាតិ",
+            "en": "International Bureau",
+            "defKm": "ស្ថាប័នដែលបំពេញកិច្ចការរដ្ឋបាលនៃសហភាព ជាលេខាធិការដ្ឋានរបស់អង្គការនានា ប្រមូល និងផ្សព្វផ្សាយព័ត៌មានស្តីពីការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម។",
+            "defEn": "The body performing the administrative tasks of the Union, providing the secretariat of its organs, and assembling and publishing information on the protection of industrial property."
+          },
+          {
+            "km": "អគ្គនាយក",
+            "en": "Director General",
+            "defKm": "នាយកប្រតិបត្តិរបស់សហភាព ដែលតំណាងសហភាព និងជាលេខាធិការនៃអង្គការនានាដោយឋានៈ។",
+            "defEn": "The chief executive of the Union, who represents it and is ex officio secretary of its bodies."
+          },
+          {
+            "km": "ការកែសម្រួលអនុសញ្ញា",
+            "en": "Revision of the Convention",
+            "defKm": "ដំណើរការដែលអនុសញ្ញាត្រូវបានដាក់ជូនការកែសម្រួលតាមរយៈសន្និសីទនៃគណៈប្រតិភូប្រទេសសមាជិក ដើម្បីកែលម្អប្រព័ន្ធនៃសហភាព។",
+            "defEn": "The process by which the Convention is submitted to revision through conferences of delegates of the Union countries in order to improve the system of the Union."
+          },
+          {
+            "km": "ការបដិសេធចោលសន្ធិសញ្ញា",
+            "en": "Denunciation",
+            "defKm": "ការដកខ្លួនរបស់ប្រទេសមួយចេញពីអនុសញ្ញា ដោយសេចក្តីជូនដំណឹងទៅអគ្គនាយក ដែលមានប្រសិទ្ធភាពក្រោយមួយឆ្នាំ និងមិនអាចធ្វើក្នុងរយៈពេលប្រាំឆ្នាំដំបូងនៃសមាជិកភាព។",
+            "defEn": "The withdrawal of a country from the Convention by notification to the Director General, taking effect one year later and not available during the first five years of membership."
+          },
+          {
+            "km": "កិច្ចព្រមព្រៀងពិសេស",
+            "en": "Special agreements",
+            "defKm": "កិច្ចព្រមព្រៀងដែលប្រទេសនៃសហភាពមានសិទ្ធិធ្វើឡើងដោយឡែកពីគ្នាសម្រាប់ការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម ដរាបណាវាមិនផ្ទុយនឹងអនុសញ្ញានេះ។",
+            "defEn": "Agreements which Union countries may conclude separately among themselves for the protection of industrial property, provided they do not contravene the Convention."
+          }
+        ],
+        "quiz": [
+          {
+            "q": {
+              "km": "តាមមាតិកា ១៣(៤)(ឃ) តើសេចក្តីសម្រេចរបស់មហាសន្និបាតត្រូវការសំឡេងប៉ុន្មាន?",
+              "en": "Under Article 13(4)(d), what majority do decisions of the Assembly require?"
+            },
+            "options": {
+              "km": [
+                "សំឡេងភាគច្រើនសាមញ្ញ",
+                "សំឡេងពីរភាគបីនៃសំឡេងដែលបានបោះ",
+                "សំឡេងបីភាគបួននៃសំឡេងដែលបានបោះ",
+                "សំឡេងឯកច្ឆន្ទ"
+              ],
+              "en": [
+                "A simple majority",
+                "Two-thirds of the votes cast",
+                "Three-fourths of the votes cast",
+                "Unanimity"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ១៣(៤)(ឃ) កំណត់ថាសេចក្តីសម្រេចរបស់មហាសន្និបាតត្រូវការសំឡេងពីរភាគបីនៃសំឡេងដែលបានបោះ ដោយការមិនបោះសំឡេងមិនរាប់ជាសំឡេង។",
+              "en": "Article 13(4)(d) requires two-thirds of the votes cast for Assembly decisions, subject to Article 17(2), and abstentions are not counted as votes."
+            },
+            "page": 13
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ១៤(៣) តើចំនួនសមាជិកគណៈកម្មាធិការប្រតិបត្តិស្មើនឹងប៉ុន្មាននៃចំនួនប្រទេសសមាជិកមហាសន្និបាត?",
+              "en": "Under Article 14(3), to what fraction of the number of countries members of the Assembly does the Executive Committee's membership correspond?"
+            },
+            "options": {
+              "km": [
+                "មួយភាគពីរ",
+                "មួយភាគបួន",
+                "មួយភាគបី",
+                "ប្រទេសទាំងអស់នៃសហភាព"
+              ],
+              "en": [
+                "One-half",
+                "One-fourth",
+                "One-third",
+                "All countries of the Union"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ១៤(៣) ចែងថាចំនួនប្រទេសសមាជិកគណៈកម្មាធិការប្រតិបត្តិ ស្មើនឹងមួយភាគបួននៃចំនួនប្រទេសសមាជិកមហាសន្និបាត ហើយចំនួនសល់ពីការចែកនឹងបួនត្រូវបោះបង់ចោល។",
+              "en": "Article 14(3) sets the number of Executive Committee members at one-fourth of the number of countries members of the Assembly, remainders after division by four being disregarded."
+            },
+            "page": 13
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ១៥ តើអ្នកណាជានាយកប្រតិបត្តិនៃសហភាព និងជាអ្នកតំណាងសហភាព?",
+              "en": "Under Article 15, who is the chief executive of the Union and represents it?"
+            },
+            "options": {
+              "km": [
+                "ប្រធានគណៈកម្មាធិការប្រតិបត្តិ",
+                "អគ្គនាយកនៃអង្គការ",
+                "ប្រធានមហាសន្និបាត",
+                "រដ្ឋាភិបាលដែលជាអ្នកទទួលរក្សាទុកឯកសារ"
+              ],
+              "en": [
+                "The Chairman of the Executive Committee",
+                "The Director General of the Organization",
+                "The President of the Assembly",
+                "The depositary Government"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ១៥(១)(គ) ចែងថាអគ្គនាយកនៃអង្គការ ជានាយកប្រតិបត្តិនៃសហភាព និងជាអ្នកតំណាងសហភាព ហើយការិយាល័យអន្តរជាតិជាលេខាធិការដ្ឋានរបស់អង្គការនានា។",
+              "en": "Article 15(1)(c) provides that the Director General of the Organization is the chief executive of the Union and represents it, the International Bureau providing the secretariat."
+            },
+            "page": 14
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ១៧(២) តើការធ្វើវិសោធនកម្មលើមាតិកា ១៣ និងលើកថាខណ្ឌនោះ ត្រូវការសំឡេងប៉ុន្មាន?",
+              "en": "Under Article 17(2), what majority is required for an amendment to Article 13 and to that paragraph?"
+            },
+            "options": {
+              "km": [
+                "សំឡេងពីរភាគបីនៃសំឡេងដែលបានបោះ",
+                "សំឡេងបីភាគបួននៃសំឡេងដែលបានបោះ",
+                "សំឡេងបួនភាគប្រាំនៃសំឡេងដែលបានបោះ",
+                "សំឡេងភាគច្រើនសាមញ្ញ"
+              ],
+              "en": [
+                "Two-thirds of the votes cast",
+                "Three-fourths of the votes cast",
+                "Four-fifths of the votes cast",
+                "A simple majority"
+              ]
+            },
+            "answer": 2,
+            "explain": {
+              "km": "មាតិកា ១៧(២) កំណត់ថាការអនុម័តត្រូវការសំឡេងបីភាគបួននៃសំឡេងដែលបានបោះ ប៉ុន្តែការធ្វើវិសោធនកម្មលើមាតិកា ១៣ និងលើកថាខណ្ឌនេះ ត្រូវការសំឡេងបួនភាគប្រាំ។",
+              "en": "Article 17(2) requires three-fourths of the votes cast for amendments, but four-fifths for any amendment to Article 13 and to that paragraph itself."
+            },
+            "page": 16
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ២៦ តើការបដិសេធចោលអនុសញ្ញាមានប្រសិទ្ធភាពនៅពេលណា?",
+              "en": "Under Article 26, when does denunciation of the Convention take effect?"
+            },
+            "options": {
+              "km": [
+                "ភ្លាមៗនៅពេលជូនដំណឹង",
+                "មួយឆ្នាំក្រោយថ្ងៃដែលអគ្គនាយកទទួលសេចក្តីជូនដំណឹង",
+                "បីឆ្នាំក្រោយថ្ងៃជូនដំណឹង",
+                "មិនអាចបដិសេធចោលបានទេ"
+              ],
+              "en": [
+                "Immediately upon notification",
+                "One year after the day on which the Director General received the notification",
+                "Three years after notification",
+                "The Convention cannot be denounced"
+              ]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ២៦(៣) ចែងថាការបដិសេធចោលមានប្រសិទ្ធភាពមួយឆ្នាំក្រោយថ្ងៃដែលអគ្គនាយកទទួលសេចក្តីជូនដំណឹង ហើយតាមកថាខណ្ឌ (៤) មិនអាចអនុវត្តសិទ្ធិនេះក្នុងរយៈពេលប្រាំឆ្នាំដំបូងនៃសមាជិកភាពទេ។",
+              "en": "Article 26(3) makes denunciation effective one year after the Director General receives the notification, and paragraph (4) prevents its exercise before five years of membership."
+            },
+            "page": 19
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ២៨ តើប្រទេសមួយអាចធ្វើអ្វីបានចំពោះបទប្បញ្ញត្តិស្តីពីវិវាទនៅតុលាការយុត្តិធម៌អន្តរជាតិ?",
+              "en": "Under Article 28, what may a country do in respect of the provisions on disputes before the International Court of Justice?"
+            },
+            "options": {
+              "km": [
+                "ប្រកាសនៅពេលចុះហត្ថលេខា ឬដាក់សារតាំង ថាខ្លួនមិនចាត់ទុកខ្លួនជាអ្នកចងខ្លួន ហើយអាចដកការប្រកាសនោះវិញពេលណាក៏បាន",
+                "គ្មានសិទ្ធិធ្វើអ្វីទេ ព្រោះបទប្បញ្ញត្តិនេះជាកាតព្វកិច្ចដាច់ខាត",
+                "អាចផ្លាស់ប្តូរតុលាការដោយសេចក្តីសម្រេចឯកតោភាគី",
+                "អាចបដិសេធចោលការជូនដំណឹងទាំងអស់ពីការិយាល័យអន្តរជាតិ"
+              ],
+              "en": [
+                "Declare, when signing or depositing its instrument, that it does not consider itself bound, and withdraw that declaration at any time",
+                "Nothing, because the provision is absolutely binding",
+                "Change the court unilaterally",
+                "Refuse all notifications from the International Bureau"
+              ]
+            },
+            "answer": 0,
+            "explain": {
+              "km": "មាតិកា ២៨(២) អនុញ្ញាតឲ្យប្រទេសប្រកាសថាមិនចាត់ទុកខ្លួនជាអ្នកចងខ្លួនដោយកថាខណ្ឌ (១) ហើយកថាខណ្ឌ (៣) អនុញ្ញាតឲ្យដកការប្រកាសនោះវិញដោយសេចក្តីជូនដំណឹងទៅអគ្គនាយក។",
+              "en": "Article 28(2) allows a country to declare that it does not consider itself bound by paragraph (1), and Article 28(3) allows it to withdraw that declaration by notification to the Director General."
+            },
+            "page": 20
+          },
+          {
+            "q": {
+              "km": "តាមមាតិកា ២៩(១)(គ) តើអត្ថបទភាសាណាមានអាទិភាព ករណីមានភាពខុសគ្នានៃការបកស្រាយ?",
+              "en": "Under Article 29(1)(c), which text prevails in case of differences of opinion on interpretation?"
+            },
+            "options": {
+              "km": ["អត្ថបទភាសាអង់គ្លេស", "អត្ថបទភាសាបារាំង", "អត្ថបទភាសាអាល្លឺម៉ង់", "អត្ថបទភាសាអេស្ប៉ាញ"],
+              "en": ["The English text", "The French text", "The German text", "The Spanish text"]
+            },
+            "answer": 1,
+            "explain": {
+              "km": "មាតិកា ២៩(១)(គ) ចែងថាករណីមានភាពខុសគ្នានៃមតិអំពីការបកស្រាយអត្ថបទផ្សេងៗ អត្ថបទភាសាបារាំងមានអាទិភាព ដោយច្បាប់នេះចុះជាភាសាបារាំងតែមួយច្បាប់។",
+              "en": "Article 29(1)(c) provides that, in case of differences of opinion on the interpretation of the various texts, the French text prevails; the Act is signed in a single copy in French."
+            },
+            "page": 20
+          }
+        ]
+      }
+    ]
+  }
+]

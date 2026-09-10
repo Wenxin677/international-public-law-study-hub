@@ -1,0 +1,969 @@
+{
+  "id": "ch3",
+  "num": 3,
+  "title": {
+    "km": "ទំនាក់ទំនងរវាងរដ្ឋ និងនីតិអន្តរជាតិ",
+    "en": "Relations between the State and International Law"
+  },
+  "pages": {
+    "from": 67,
+    "to": 77
+  },
+  "summary": {
+    "km": "ជំពូកនេះពន្យល់អំពីនិយមន័យ និងលក្ខណៈវិនិច្ឆ័យនៃរដ្ឋ សិទ្ធិ និងកាតព្វកិច្ចរបស់រដ្ឋ ទំនាក់ទំនងរវាងរដ្ឋ និងប្រជាជាតិ សញ្ជាតិ ទម្រង់នៃរដ្ឋាភិបាល ទម្រង់នៃរដ្ឋ ព្រមទាំងការទទួលស្គាល់រដ្ឋ និងរដ្ឋាភិបាល។",
+    "en": "This chapter explains the definition and criteria of a state, the rights and duties of states, the relations between the state and the nation, nationality, the forms of government, the forms of the state, and the recognition of states and governments."
+  },
+  "lessons": [
+    {
+      "id": "ch3-l1",
+      "title": {
+        "km": "សិទ្ធិ និងកាតព្វកិច្ចរបស់រដ្ឋ",
+        "en": "Rights and Duties of States"
+      },
+      "pages": {
+        "from": 67,
+        "to": 70
+      },
+      "objectives": {
+        "km": [
+          "ពន្យល់ពីនិយមន័យនៃរដ្ឋ តាមច្បាប់អន្តរជាតិទំនើប",
+          "រាយលក្ខណៈវិនិច្ឆ័យនៃរដ្ឋ និងកត្តានៃប្រព័ន្ធរដ្ឋទំនើប",
+          "សង្ខេបសិទ្ធិ និងកាតព្វកិច្ចសំខាន់ៗរបស់រដ្ឋ តាមសេចក្តីប្រកាសស្តីពីសិទ្ធិនិងករណីកិច្ចរបស់រដ្ឋ"
+        ],
+        "en": [
+          "Explain the definition of a state under modern international law",
+          "List the criteria of statehood and the factors of the modern state system",
+          "Summarise the main rights and duties of states under the Declaration on the Rights and Duties of States"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "រដ្ឋ គឺជាក្រុមមនុស្សដែលរស់នៅក្នុងទឹកដីណាមួយ ក្រោមអំណាចច្បាប់ និងអំណាចនយោបាយរួមមួយ ហើយពាក្យរដ្ឋរួមទាំងរដ្ឋាភិបាលផង។",
+          "លក្ខណៈវិនិច្ឆ័យនៃរដ្ឋមានបួន៖ ប្រជាពលរដ្ឋអចិន្ត្រៃយ៍ ទឹកដីជាកំណត់ រដ្ឋាភិបាល និងសមត្ថកិច្ចក្នុងទំនាក់ទំនងជាមួយរដ្ឋដទៃ។",
+          "អនុសញ្ញាម៉ង់តេវិដដេអូ ជាសន្ធិសញ្ញាស្តីពីសិទ្ធិនិងកាតព្វកិច្ចរបស់បណ្តារដ្ឋនៅក្នុងតំបន់អាមេរិច ដែលកំណត់លក្ខណៈវិនិច្ឆ័យនៃរដ្ឋ។",
+          "ប្រព័ន្ធរដ្ឋទំនើបមានកត្តាបី៖ ធម្មានុរូប អធិបតេយ្យ និងកាតព្វកិច្ចគោរពអធិបតេយ្យភាព និងភាពស្របច្បាប់របស់រដ្ឋដទៃ។",
+          "សេចក្តីប្រកាសស្តីពីសិទ្ធិនិងករណីកិច្ចរបស់រដ្ឋ ចែងពីសិទ្ធិឯករាជ្យ យុត្តាធិការ ស្មើភាព និងការពារខ្លួន ព្រមទាំងកាតព្វកិច្ចមិនធ្វើអន្តរាគមន៍។",
+          "រដ្ឋមានកាតព្វកិច្ចអនុវត្តដោយស្មោះត្រង់នូវកាតព្វកិច្ចដែលកើតចេញពីសន្ធិសញ្ញា ហើយមិនអាចលើកឡើងនូវបទបញ្ញត្តិក្នុងរដ្ឋធម្មនុញ្ញ ឬច្បាប់របស់ខ្លួនជាលេស (មាត្រា១៣)។"
+        ],
+        "en": [
+          "A state is a group of people living in a given territory under a common legal and political authority; the term 'state' also includes the government.",
+          "There are four criteria of statehood: a permanent population, a defined territory, a government, and the capacity to enter into relations with other states.",
+          "The Montevideo Convention is the treaty on the rights and duties of states in the American region, and it sets out the criteria of statehood.",
+          "The modern state system has three factors: it is constitutional, it is sovereign, and it has a duty to respect the sovereignty and the legal personality of other states.",
+          "The Declaration on the Rights and Duties of States sets out the rights of independence, jurisdiction, equality and self-defence, together with the duty not to intervene.",
+          "States must fulfil in good faith the obligations arising from treaties, and may not invoke their constitution or domestic law as an excuse (Article 13)."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "រដ្ឋជាទូទៅ គឺជាក្រុមមនុស្សដែលរស់នៅក្នុងទឹកដីណាមួយ និងរស់នៅក្រោមអំណាចច្បាប់ និងអំណាចនយោបាយរួមមួយ",
+          "en": "A state is generally a group of people living in a given territory and under a common legal and political authority.",
+          "page": 67
+        },
+        {
+          "km": "អធិបតេយ្យភាពគឺជាអំណាចខ្ពស់បំផុតរបស់រដ្ឋដែលមិនអាចប៉ះពាល់បានឡើយ។",
+          "en": "Sovereignty is the supreme authority of the state, which cannot be violated.",
+          "page": 67
+        },
+        {
+          "km": "រដ្ឋទាំងអស់មានសិទ្ធិស្មើភាពគ្នាក្នុងផ្លូវច្បាប់ជាមួយគ្រប់រដ្ឋដទៃទៀត។",
+          "en": "All states have the right to equality in law with every other state.",
+          "page": 69
+        },
+        {
+          "km": "រដ្ឋទាំងអស់មានសិទ្ធិការពារខ្លួនជាបុគ្គលឬជាសមូហភាពប្រឆាំងនឹងការវាយលុកដោយប្រដាប់អាវុធ។",
+          "en": "All states have the right of individual or collective self-defence against armed attack.",
+          "page": 70
+        }
+      ],
+      "terms": [
+        {
+          "km": "រដ្ឋ",
+          "en": "State",
+          "defKm": "ក្រុមមនុស្សដែលរស់នៅក្នុងទឹកដីណាមួយ និងរស់នៅក្រោមអំណាចច្បាប់ និងអំណាចនយោបាយរួមមួយ",
+          "defEn": "A group of people living in a given territory and under a common legal and political authority"
+        },
+        {
+          "km": "អធិបតេយ្យភាព",
+          "en": "Sovereignty",
+          "defKm": "អំណាចខ្ពស់បំផុតរបស់រដ្ឋដែលមិនអាចប៉ះពាល់បានឡើយ",
+          "defEn": "The supreme authority of the state, which cannot be violated"
+        },
+        {
+          "km": "លក្ខណៈវិនិច្ឆ័យនៃរដ្ឋ",
+          "en": "Criteria of statehood",
+          "defKm": "ប្រជាពលរដ្ឋអចិន្ត្រៃយ៍ ទឹកដីជាកំណត់ រដ្ឋាភិបាល និងសមត្ថកិច្ចនៅក្នុងទំនាក់ទំនងជាមួយរដ្ឋដទៃ",
+          "defEn": "A permanent population, a defined territory, a government, and the capacity to enter into relations with other states"
+        },
+        {
+          "km": "អនុសញ្ញាម៉ង់តេវិដដេអូ",
+          "en": "Montevideo Convention",
+          "defKm": "សន្ធិសញ្ញាស្តីពីសិទ្ធិនិងកាតព្វកិច្ចរបស់បណ្តារដ្ឋនៅក្នុងតំបន់អាមេរិច ដែលបានកំណត់លក្ខណៈវិនិច្ឆ័យនៃរដ្ឋ",
+          "defEn": "The treaty on the rights and duties of states in the American region which laid down the criteria of statehood"
+        },
+        {
+          "km": "សន្ធិសញ្ញាវៃប៉ាយ៉េ",
+          "en": "Treaty of Westphalia",
+          "defKm": "សន្ធិសញ្ញាឆ្នាំ១៦៤៨ ដែលកំណត់អំពីការកកើតរដ្ឋ និងប្រព័ន្ធរដ្ឋទំនើប",
+          "defEn": "The 1648 treaty which set out the birth of states and of the modern state system"
+        },
+        {
+          "km": "នីតិបុគ្គលអន្តរជាតិ",
+          "en": "International legal person",
+          "defKm": "ឋានៈរបស់រដ្ឋក្នុងនាមជាបុគ្គលនៃច្បាប់អន្តរជាតិ ដែលមានលក្ខណៈវិនិច្ឆ័យពេញលេញ",
+          "defEn": "The status of a state as a person of international law meeting the full criteria"
+        },
+        {
+          "km": "យុត្តាធិការ",
+          "en": "Jurisdiction",
+          "defKm": "សិទ្ធិរបស់រដ្ឋក្នុងការអនុវត្តអំណាចលើទឹកដីរបស់ខ្លួន និងលើបុគ្គលទាំងអស់",
+          "defEn": "The right of a state to exercise authority over its territory and over all persons"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើអនុសញ្ញាណាដែលបានកំណត់លក្ខណៈវិនិច្ឆ័យនៃរដ្ឋ?",
+            "en": "Which convention set out the criteria of statehood?"
+          },
+          "options": {
+            "km": [
+              "សន្ធិសញ្ញាវៃប៉ាយ៉េ",
+              "អនុសញ្ញាម៉ង់តេវិដដេអូ",
+              "អនុសញ្ញាវីយែន",
+              "អនុសញ្ញាហ្សឺណែវ"
+            ],
+            "en": [
+              "The Treaty of Westphalia",
+              "The Montevideo Convention",
+              "The Vienna Convention",
+              "The Geneva Convention"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អនុសញ្ញាម៉ង់តេវិដដេអូបានកំណត់ថា រដ្ឋនៅក្នុងឋានៈជានីតិបុគ្គលអន្តរជាតិត្រូវមានលក្ខណៈវិនិច្ឆ័យបួន។",
+            "en": "The Montevideo Convention laid down the four criteria that a state must meet as an international legal person."
+          },
+          "page": 67
+        },
+        {
+          "q": {
+            "km": "តើលក្ខណៈវិនិច្ឆ័យទាំងបួននៃរដ្ឋរួមមានអ្វីខ្លះ?",
+            "en": "Which of the following are the four criteria of statehood?"
+          },
+          "options": {
+            "km": [
+              "ប្រជាពលរដ្ឋអចិន្ត្រៃយ៍ ទឹកដីជាកំណត់ រដ្ឋាភិបាល និងសមត្ថកិច្ចទំនាក់ទំនងជាមួយរដ្ឋដទៃ",
+              "ប្រជាពលរដ្ឋ ទឹកដី កងទ័ព និងធនាគារជាតិ",
+              "រដ្ឋាភិបាល សភា តុលាការ និងកងទ័ព",
+              "ទឹកដី ព្រំដែន រដ្ឋធម្មនុញ្ញ និងរដ្ឋាភិបាល"
+            ],
+            "en": [
+              "A permanent population, a defined territory, a government and the capacity to enter into relations with other states",
+              "A population, a territory, an army and a national bank",
+              "A government, a parliament, courts and an army",
+              "A territory, borders, a constitution and a government"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា រដ្ឋត្រូវមានប្រជាពលរដ្ឋអចិន្ត្រៃយ៍ ទឹកដីមួយជាកំណត់ រដ្ឋាភិបាល និងសមត្ថកិច្ចនៅក្នុងទំនាក់ទំនងជាមួយរដ្ឋដទៃ។",
+            "en": "The text states that a state must have a permanent population, a defined territory, a government and the capacity to enter into relations with other states."
+          },
+          "page": 67
+        },
+        {
+          "q": {
+            "km": "តើប្រព័ន្ធរដ្ឋទំនើបមានកត្តាប៉ុន្មាន តាមអត្ថបទ?",
+            "en": "According to the text, how many factors does the modern state system have?"
+          },
+          "options": {
+            "km": [
+              "២",
+              "៣",
+              "៤",
+              "៥"
+            ],
+            "en": [
+              "Two",
+              "Three",
+              "Four",
+              "Five"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា ប្រព័ន្ធរដ្ឋទំនើបមានកត្តា៣៖ ធម្មានុរូប អធិបតេយ្យ និងកាតព្វកិច្ចគោរពអធិបតេយ្យភាព និងភាពស្របច្បាប់រដ្ឋដទៃ។",
+            "en": "The text states that the modern state system has three factors: constitutional, sovereign, and the duty to respect the sovereignty and legality of other states."
+          },
+          "page": 68
+        },
+        {
+          "q": {
+            "km": "តើសង្គ្រាមពីឆ្នាំ១៦១៨ ដល់ឆ្នាំ១៦៤៨ នៅទ្វីបអឺរ៉ុប មានឈ្មោះអ្វី?",
+            "en": "What is the name of the war fought in Europe from 1618 to 1648?"
+          },
+          "options": {
+            "km": [
+              "សង្គ្រាម៣០ឆ្នាំ",
+              "សង្គ្រាមលោកលើកទី១",
+              "សង្គ្រាមលោកលើកទី២",
+              "សង្គ្រាមត្រជាក់"
+            ],
+            "en": [
+              "The Thirty Years' War",
+              "The First World War",
+              "The Second World War",
+              "The Cold War"
+            ]
+          },
+          "answer": 0,
+          "explain": {
+            "km": "អត្ថបទចែងថា ពីឆ្នាំ១៦១៨ ដល់ឆ្នាំ១៦៤៨ ទ្វីបអឺរ៉ុបបានជួបប្រទះនឹងសង្គ្រាមដែលមានឈ្មោះថា សង្គ្រាម៣០ឆ្នាំ។",
+            "en": "The text states that from 1618 to 1648 Europe faced the war known as the Thirty Years' War."
+          },
+          "page": 68
+        },
+        {
+          "q": {
+            "km": "តើមាត្រា៥ នៃសេចក្តីប្រកាសស្តីពីសិទ្ធិនិងករណីកិច្ចរបស់រដ្ឋ ចែងអំពីអ្វី?",
+            "en": "What does Article 5 of the Declaration on the Rights and Duties of States provide?"
+          },
+          "options": {
+            "km": [
+              "សិទ្ធិការពារខ្លួន",
+              "សិទ្ធិស្មើភាពគ្នាក្នុងផ្លូវច្បាប់",
+              "កាតព្វកិច្ចមិនធ្វើអន្តរាគមន៍",
+              "កាតព្វកិច្ចដោះស្រាយជម្លោះ"
+            ],
+            "en": [
+              "The right of self-defence",
+              "The right to equality in law with every other state",
+              "The duty not to intervene",
+              "The duty to settle disputes"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "មាត្រា៥ ចែងថា រដ្ឋទាំងអស់មានសិទ្ធិស្មើភាពគ្នាក្នុងផ្លូវច្បាប់ជាមួយគ្រប់រដ្ឋដទៃទៀត។",
+            "en": "Article 5 provides that all states have the right to equality in law with every other state."
+          },
+          "page": 69
+        },
+        {
+          "q": {
+            "km": "តើមាត្រា៣ នៃសេចក្តីប្រកាស ចែងពីកាតព្វកិច្ចអ្វី?",
+            "en": "What duty does Article 3 of the Declaration set out?"
+          },
+          "options": {
+            "km": [
+              "ទប់ស្កាត់ការបង្កើតសង្គ្រាមសុីវិល",
+              "ទប់ស្កាត់ការទទួលស្គាល់ទឹកដីដែលដណ្តើមយក",
+              "ទប់ស្កាត់មិនធ្វើអន្តរាគមន៍ក្នុងកិច្ចការផ្ទៃក្នុង ឬកិច្ចការខាងក្រៅរបស់រដ្ឋណាមួយ",
+              "ទប់ស្កាត់ការផ្តល់ជំនួយទៅឱ្យរដ្ឋដែលធ្វើផ្ទុយមាត្រា៩"
+            ],
+            "en": [
+              "Refraining from fomenting civil war",
+              "Refraining from recognising territory acquired by force",
+              "Refraining from intervening in the internal or external affairs of any state",
+              "Refraining from giving assistance to a state acting contrary to Article 9"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "មាត្រា៣ ចែងថា រដ្ឋទាំងអស់មានកាតព្វកិច្ចទប់ស្កាត់មិនធ្វើអន្តរាគមន៍ក្នុងកិច្ចការផ្ទៃក្នុង ឬកិច្ចការខាងក្រៅរបស់រដ្ឋណាមួយឡើយ។",
+            "en": "Article 3 provides that all states have the duty to refrain from intervening in the internal or external affairs of any other state."
+          },
+          "page": 69
+        },
+        {
+          "q": {
+            "km": "តើមាត្រាណាដែលចែងពីសិទ្ធិការពារខ្លួនប្រឆាំងនឹងការវាយលុកដោយប្រដាប់អាវុធ?",
+            "en": "Which article provides for the right of self-defence against armed attack?"
+          },
+          "options": {
+            "km": [
+              "មាត្រា៥",
+              "មាត្រា៨",
+              "មាត្រា១២",
+              "មាត្រា១៤"
+            ],
+            "en": [
+              "Article 5",
+              "Article 8",
+              "Article 12",
+              "Article 14"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "មាត្រា១២ ចែងថា រដ្ឋទាំងអស់មានសិទ្ធិការពារខ្លួនជាបុគ្គល ឬជាសមូហភាព ប្រឆាំងនឹងការវាយលុកដោយប្រដាប់អាវុធ។",
+            "en": "Article 12 provides that all states have the right of individual or collective self-defence against armed attack."
+          },
+          "page": 70
+        },
+        {
+          "q": {
+            "km": "តើតាមមាត្រា១៣ រដ្ឋមិនអាចលើកឡើងនូវអ្វី ដើម្បីជាលេសមិនគោរពកាតព្វកិច្ចរបស់ខ្លួន?",
+            "en": "Under Article 13, what may a state not invoke as an excuse for failing to honour its obligations?"
+          },
+          "options": {
+            "km": [
+              "ទំនៀមទម្លាប់អន្តរជាតិ",
+              "បទបញ្ញត្តិក្នុងរដ្ឋធម្មនុញ្ញ ឬច្បាប់របស់ខ្លួន",
+              "សន្ធិសញ្ញាដែលបានចុះហត្ថលេខា",
+              "សេចក្តីសម្រេចរបស់អង្គការសហប្រជាជាតិ"
+            ],
+            "en": [
+              "International custom",
+              "Provisions of its own constitution or laws",
+              "A treaty it has signed",
+              "A decision of the United Nations"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "មាត្រា១៣ ចែងថា រដ្ឋមិនត្រូវលើកឡើងនូវបទបញ្ញត្តិក្នុងរដ្ឋធម្មនុញ្ញ ឬច្បាប់របស់ខ្លួន ដើម្បីជាលេសមិនគោរពតាមកាតព្វកិច្ចនោះទេ។",
+            "en": "Article 13 states that a state may not invoke provisions of its constitution or laws as an excuse for failing to comply with that obligation."
+          },
+          "page": 70
+        }
+      ]
+    },
+    {
+      "id": "ch3-l2",
+      "title": {
+        "km": "រដ្ឋ និងប្រជាជាតិ",
+        "en": "The State and the Nation"
+      },
+      "pages": {
+        "from": 70,
+        "to": 75
+      },
+      "objectives": {
+        "km": [
+          "ប្រៀបធៀបប្រជាជាតិ និងរដ្ឋ",
+          "ពន្យល់ពីទំនាក់ទំនងរវាងរដ្ឋ និងប្រជាជាតិ",
+          "ពន្យល់ពីការទទួលបានសញ្ជាតិ និងទម្រង់នៃរដ្ឋាភិបាល"
+        ],
+        "en": [
+          "Compare the nation and the state",
+          "Explain the relations between the state and the nation",
+          "Explain the acquisition of nationality and the forms of government"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "ប្រជាជាតិ គឺជាសហគមន៍ជាតិសាស្ត្រដែលមានវប្បធម៌ ប្រពៃណី ទំនៀមទម្លាប់ និងប្រវត្តិសាស្ត្ររួមគ្នា ព្រមទាំងឆន្ទៈចង់រស់នៅជាមួយគ្នា។",
+          "ប្រជាជាតិមិនមានអត្ថន័យខាងផ្លូវច្បាប់ ចំណែករដ្ឋមានអត្ថន័យខាងផ្លូវច្បាប់ និងមានចរិកជាអ្នករៀបចំ។",
+          "ទំនាក់ទំនងរវាងរដ្ឋ និងប្រជាជាតិមានបួនបែប៖ រដ្ឋមួយប្រជាជាតិច្រើន ប្រជាជាតិមួយមានរដ្ឋច្រើន ប្រជាជាតិមួយគ្មានរដ្ឋ និងប្រជាជាតិច្រើនមានរដ្ឋច្រើន។",
+          "សញ្ជាតិ គឺសមាជិកភាពរបស់ប្រជាជាតិមួយ ឬរដ្ឋអធិបតេយ្យមួយ ដោយមានតែរដ្ឋទេដែលអាចផ្តល់សញ្ជាតិ ហើយអាចទទួលបានតាមគោលការណ៍សាច់សាលោហិត ឬតាមការតាំងទីលំនៅ។",
+          "ច្បាប់ស្តីពីសញ្ជាតិនៃព្រះរាជាណាចក្រកម្ពុជា (២០ ខែសីហា ឆ្នាំ១៩៩៦) ចែងថាប្រជាពលរដ្ឋខ្មែរមិនបាត់បង់សញ្ជាតិដោយសាររៀបការជាមួយជនបរទេស ហើយតម្រូវលំនៅ ៧ ឆ្នាំសម្រាប់សញ្ជាតូបនីយកម្ម។",
+          "ទម្រង់នៃរដ្ឋាភិបាលមាន៖ សាធារណរដ្ឋប្រជាធិបតេយ្យ សាធារណរដ្ឋប្រធានាធិបតី សាធារណរដ្ឋឯកបក្ស រាជានិយមអាស្រ័យសភា រាជាធិបតេយ្យផ្ដាច់ការ និងរបបផ្តាច់ការ។"
+        ],
+        "en": [
+          "A nation is a national community sharing a culture, traditions, customs and a common history, together with the will to live together.",
+          "A nation has no legal meaning, whereas the state has a legal meaning and an organising character.",
+          "The relations between the state and the nation take four forms: one state with many nations; one nation with many states; one nation with no state; and many nations with many states.",
+          "Nationality is membership of a nation or of a sovereign state; only the state may grant it, and it can be acquired by descent (jus sanguinis) or by residence (jus soli).",
+          "The Law on Nationality of the Kingdom of Cambodia (20 August 1996) provides that a Cambodian citizen does not lose Khmer nationality by marrying a foreigner, and requires seven years of residence for naturalization.",
+          "The forms of government are: democratic republic, presidential republic, single-party republic, parliamentary monarchy, absolute monarchy and dictatorship."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "ប្រជាជាតិ មានន័យថាសហគមន៍ជាតិសាស្ត្រមួយដែលប្រមូលផ្តុំនូវវប្បធម៌ ប្រពៃណី ទំនៀមទម្លាប់ដូចគ្នាហើយមានប្រវត្តិសាស្ត្ររួមគ្នា ហើយមានឆន្ទៈចង់រស់នៅជាមួយគ្នា។",
+          "en": "A nation is a national community that brings together the same culture, traditions and customs, has a common history, and has the will to live together.",
+          "page": 71
+        },
+        {
+          "km": "ចំណែករដ្ឋមានអត្តន័យខាងផ្លូវច្បាប់ ហើយមានចរិកជាអ្នករៀបចំ",
+          "en": "The state, by contrast, has a legal meaning and an organising character.",
+          "page": 71
+        },
+        {
+          "km": "សញ្ជាតិ គឺសមាជិកភាពរបស់ប្រជាជាតិមួយ ឬរដ្ឋអធិបតេយ្យមួយ ដែលរដ្ឋដើរតួនាទីយ៉ាងសំខាន់នៅក្នុងការគ្រប់គ្រងនិងផ្ដល់សញ្ជាតិ ។",
+          "en": "Nationality is membership of a nation or of a sovereign state, in which the state plays an important role in its administration and in granting nationality.",
+          "page": 72
+        },
+        {
+          "km": "ជនបរទេសអាចចូលសញ្ជាតិខ្មែរបាន ដោយសញ្ជាតូបនីយកម្ម Nationalization ។",
+          "en": "A foreigner may acquire Khmer nationality through naturalization (Nationalization).",
+          "page": 73
+        }
+      ],
+      "terms": [
+        {
+          "km": "ប្រជាជាតិ",
+          "en": "Nation",
+          "defKm": "សហគមន៍ជាតិសាស្ត្រមួយដែលមានវប្បធម៌ ប្រពៃណី ទំនៀមទម្លាប់ដូចគ្នា ប្រវត្តិសាស្ត្ររួមគ្នា និងឆន្ទៈចង់រស់នៅជាមួយគ្នា",
+          "defEn": "A national community sharing culture, traditions, customs, a common history and the will to live together"
+        },
+        {
+          "km": "សញ្ជាតិ",
+          "en": "Nationality",
+          "defKm": "សមាជិកភាពរបស់ប្រជាជាតិមួយ ឬរដ្ឋអធិបតេយ្យមួយ ដែលរដ្ឋជាអ្នកគ្រប់គ្រង និងផ្តល់ឱ្យ",
+          "defEn": "Membership of a nation or of a sovereign state, which the state administers and grants"
+        },
+        {
+          "km": "គោលការណ៍សាច់សាលោហិត",
+          "en": "Jus sanguinis (descent)",
+          "defKm": "គោលការណ៍ដែលឱ្យបុគ្គលទទួលសញ្ជាតិដោយស្វ័យប្រវត្តិពីឪពុក ឬម្តាយរបស់ខ្លួន",
+          "defEn": "The principle by which a person acquires nationality automatically from his or her father or mother"
+        },
+        {
+          "km": "គោលការណ៍សិទ្ធិតាំងទីលំនៅ",
+          "en": "Jus soli (residence)",
+          "defKm": "គោលការណ៍ដែលឱ្យបុគ្គលទទួលបានសញ្ជាតិតាមរយៈការតាំងលំនៅជាយូរឆ្នាំក្នុងទឹកដីនៃរដ្ឋមួយ",
+          "defEn": "The principle by which a person acquires nationality through long residence in the territory of a state"
+        },
+        {
+          "km": "សញ្ជាតូបនីយកម្ម",
+          "en": "Naturalization",
+          "defKm": "ការអនុគ្រោះរបស់រដ្ឋក្នុងការផ្តល់សញ្ជាតិឱ្យជនបរទេស ដែលមិនមែនជាសិទ្ធិរបស់អ្នកស្នើសុំឡើយ",
+          "defEn": "A grant by which the state confers its nationality on a foreigner; it is not a right of the applicant"
+        },
+        {
+          "km": "សាធារណរដ្ឋប្រជាធិបតេយ្យ",
+          "en": "Democratic republic",
+          "defKm": "ទម្រង់រដ្ឋាភិបាលផ្អែកលើគោលការណ៍អធិបតេយ្យភាពប្រជាប្រិយ ដោយគ្មានស្តេច ឬព្រះមហាក្សត្រិយានី",
+          "defEn": "A form of government based on popular sovereignty, without a king or queen"
+        },
+        {
+          "km": "រាជានិយមអាស្រ័យសភា",
+          "en": "Parliamentary monarchy",
+          "defKm": "ទម្រង់រដ្ឋាភិបាលដែលមានស្តេច ឬព្រះមហាក្សត្រិយានីជាប្រមុខរដ្ឋ ប៉ុន្តែអំណាចរបស់ព្រះអង្គមានកម្រិត",
+          "defEn": "A form of government in which a king or queen is head of state but whose powers are limited"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើលក្ខណៈណាមួយដែលបង្ហាញភាពខុសគ្នារវាងប្រជាជាតិ និងរដ្ឋ?",
+            "en": "Which feature distinguishes a nation from a state?"
+          },
+          "options": {
+            "km": [
+              "ប្រជាជាតិមានអត្ថន័យខាងផ្លូវច្បាប់ជាងរដ្ឋ",
+              "ប្រជាជាតិមិនមានអត្ថន័យខាងផ្លូវច្បាប់ ហើយផ្សារភ្ជាប់នឹងមនោសញ្ចេតនា ទឹកដី",
+              "ប្រជាជាតិត្រូវមានរដ្ឋាភិបាលជានិច្ច",
+              "ប្រជាជាតិត្រូវមានទឹកដីជាកំណត់ជានិច្ច"
+            ],
+            "en": [
+              "A nation has more of a legal meaning than a state",
+              "A nation has no legal meaning and is tied to sentiment and territory",
+              "A nation must always have a government",
+              "A nation must always have defined territory"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា ប្រជាជាតិមិនមានអត្ថន័យខាងផ្លូវច្បាប់ ហើយផ្សារភ្ជាប់នឹងមនោសញ្ចេតនា ទឹកដី ចំណែករដ្ឋមានអត្ថន័យខាងផ្លូវច្បាប់។",
+            "en": "The text states that a nation has no legal meaning and is tied to sentiment and territory, whereas the state has a legal meaning."
+          },
+          "page": 71
+        },
+        {
+          "q": {
+            "km": "តើទំនាក់ទំនងរវាងរដ្ឋ និងប្រជាជាតិណាមួយ ដែលមិនមានចែងក្នុងអត្ថបទ?",
+            "en": "Which relation between state and nation is NOT listed in the text?"
+          },
+          "options": {
+            "km": [
+              "រដ្ឋមួយប្រជាជាតិច្រើន",
+              "ប្រជាជាតិមួយមានរដ្ឋច្រើន",
+              "ប្រជាជាតិមួយគ្មានរដ្ឋ",
+              "រដ្ឋមួយគ្មានប្រជាជាតិសោះ"
+            ],
+            "en": [
+              "One state with many nations",
+              "One nation with many states",
+              "One nation with no state",
+              "One state with no nation at all"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទចែងតែបួនបែប៖ រដ្ឋមួយប្រជាជាតិច្រើន ប្រជាជាតិមួយមានរដ្ឋច្រើន ប្រជាជាតិមួយគ្មានរដ្ឋ និងប្រជាជាតិច្រើនមានរដ្ឋច្រើន។",
+            "en": "The text lists only four: one state with many nations, one nation with many states, one nation with no state, and many nations with many states."
+          },
+          "page": 71
+        },
+        {
+          "q": {
+            "km": "តើច្បាប់ស្តីពីសញ្ជាតិនៃព្រះរាជាណាចក្រកម្ពុជា ត្រូវបានរដ្ឋសភាអនុម័តនៅថ្ងៃណា?",
+            "en": "When did the National Assembly adopt the Law on Nationality of the Kingdom of Cambodia?"
+          },
+          "options": {
+            "km": [
+              "ថ្ងៃទី២៦ ខែធ្នូ ឆ្នាំ១៩៣៣",
+              "ថ្ងៃទី២០ ខែសីហា ឆ្នាំ១៩៩៦",
+              "ថ្ងៃទី២៤ ខែកញ្ញា ឆ្នាំ១៩៩៣",
+              "ថ្ងៃទី១០ ខែធ្នូ ឆ្នាំ១៩៤៨"
+            ],
+            "en": [
+              "26 December 1933",
+              "20 August 1996",
+              "24 September 1993",
+              "10 December 1948"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា ច្បាប់ស្តីពីសញ្ជាតិត្រូវបានរដ្ឋសភាអនុម័តកាលពីថ្ងៃទី ២០ ខែសីហា ឆ្នាំ ១៩៩៦ នាសម័យប្រជុំវិសាមញ្ញនីតិកាលទី ១។",
+            "en": "The text states that the Law on Nationality was adopted by the National Assembly on 20 August 1996 at the first legislature's extraordinary session."
+          },
+          "page": 73
+        },
+        {
+          "q": {
+            "km": "តើតាមមាត្រា៨ ជនបរទេសដែលសុំសញ្ជាតូបនីយកម្ម ត្រូវមានលិខិតបញ្ជាក់ទីលំនៅនៅកម្ពុជារយៈពេលប៉ុន្មានឆ្នាំ?",
+            "en": "Under Article 8, for how many years must a foreigner applying for naturalization hold a certificate of residence in Cambodia?"
+          },
+          "options": {
+            "km": [
+              "៣ ឆ្នាំ",
+              "៥ ឆ្នាំ",
+              "៧ ឆ្នាំ",
+              "១០ ឆ្នាំ"
+            ],
+            "en": [
+              "Three years",
+              "Five years",
+              "Seven years",
+              "Ten years"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "មាត្រា៨ តម្រូវឱ្យមានលិខិតបញ្ជាក់ទីលំនៅនៃប្រទេសកម្ពុជា រយៈពេល ៧ ឆ្នាំ តាមច្បាប់អន្តោប្រវេសន៍។",
+            "en": "Article 8 requires a certificate of residence in Cambodia for a period of seven years under the immigration law."
+          },
+          "page": 74
+        },
+        {
+          "q": {
+            "km": "តើគោលការណ៍ណាដែលឱ្យបុគ្គលទទួលសញ្ជាតិដោយស្វ័យប្រវត្តិពីឪពុក ឬម្តាយ?",
+            "en": "Which principle gives a person nationality automatically from his or her father or mother?"
+          },
+          "options": {
+            "km": [
+              "គោលការណ៍សិទ្ធិតាំងទីលំនៅ",
+              "គោលការណ៍សាច់សាលោហិត",
+              "សញ្ជាតូបនីយកម្ម",
+              "ការទទួលស្គាល់ដោយស្ងាត់ស្ងៀម"
+            ],
+            "en": [
+              "The principle of residence (jus soli)",
+              "The principle of descent (jus sanguinis)",
+              "Naturalization",
+              "Tacit recognition"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "គោលការណ៍សាច់សាលោហិត មានន័យថាបុគ្គលអាចបានទទួលសញ្ជាតិដោយស្វ័យប្រវត្តិពីឪពុក ឬម្តាយរបស់ខ្លួន។",
+            "en": "Under the principle of jus sanguinis, a person may acquire nationality automatically from his or her father or mother."
+          },
+          "page": 72
+        },
+        {
+          "q": {
+            "km": "តើទម្រង់រដ្ឋាភិបាលណាដែលផ្អែកលើគណបក្សនយោបាយតែមួយ?",
+            "en": "Which form of government is based on the existence of a single political party?"
+          },
+          "options": {
+            "km": [
+              "សាធារណរដ្ឋប្រជាធិបតេយ្យ",
+              "សាធារណរដ្ឋប្រធានាធិបតី",
+              "សាធារណរដ្ឋឯកបក្ស",
+              "រាជានិយមអាស្រ័យសភា"
+            ],
+            "en": [
+              "Democratic republic",
+              "Presidential republic",
+              "Single-party republic",
+              "Parliamentary monarchy"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា ទម្រង់បែបបទនៃរដ្ឋាភិបាលនៃសាធារណរដ្ឋឯកបក្ស គឺផ្អែកលើអត្ថិភាពនៃគណបក្សនយោបាយតែមួយ។",
+            "en": "The text states that the single-party republic is based on the existence of only one political party."
+          },
+          "page": 74
+        },
+        {
+          "q": {
+            "km": "តើតាមអត្ថបទ នៅក្នុងរបបរាជានិយមដាច់ខាត ព្រះមហាក្សត្រមានអំណាចបែបណា?",
+            "en": "According to the text, what powers does the monarch have in an absolute monarchy?"
+          },
+          "options": {
+            "km": [
+              "មានអំណាចកម្រិតដោយសភា",
+              "គ្មានអំណាចសោះ គ្រាន់តែជានិមិត្តរូប",
+              "មានអំណាចដាច់ខាតស្ទើរតែទាំងស្រុង",
+              "ត្រូវបានបោះឆ្នោតដោយផ្ទាល់"
+            ],
+            "en": [
+              "Power limited by parliament",
+              "No power at all, purely symbolic",
+              "Almost entirely absolute power",
+              "Elected by direct vote"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា នៅក្នុងរបបរាជានិយមដាច់ខាត ព្រះមហាក្សត្រ ឬមហាក្សត្រីមានអំណាចដាច់ខាតស្ទើរតែទាំងស្រុង។",
+            "en": "The text states that in an absolute monarchy the king or queen holds almost entirely absolute power."
+          },
+          "page": 75
+        },
+        {
+          "q": {
+            "km": "តើតាមមាត្រា៦ នៃច្បាប់សញ្ជាតិកម្ពុជា ប្រជាពលរដ្ឋខ្មែរមានស្ថានភាពយ៉ាងណា នៅពេលរៀបការជាមួយជនបរទេស?",
+            "en": "Under Article 6 of the Cambodian Law on Nationality, what happens to a Cambodian citizen who marries a foreigner?"
+          },
+          "options": {
+            "km": [
+              "បាត់បង់សញ្ជាតិខ្មែរ",
+              "មិនបាត់បង់សញ្ជាតិខ្មែរ",
+              "ត្រូវសុំសញ្ជាតិឡើងវិញ",
+              "ត្រូវទទួលយកសញ្ជាតិរបស់ជនបរទេសនោះតែមួយ"
+            ],
+            "en": [
+              "He or she loses Khmer nationality",
+              "He or she does not lose Khmer nationality",
+              "He or she must reapply for nationality",
+              "He or she must take only the foreign spouse's nationality"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "មាត្រា៦ ចែងថា ប្រជាពលរដ្ឋខ្មែរមិនបាត់បង់សញ្ជាតិខ្មែរ ដោយសាររៀបអាពាហ៍ពិពាហ៍ជាមួយជនបរទេស។",
+            "en": "Article 6 provides that a Cambodian citizen does not lose Khmer nationality by reason of marriage to a foreigner."
+          },
+          "page": 73
+        }
+      ]
+    },
+    {
+      "id": "ch3-l3",
+      "title": {
+        "km": "ការទទួលស្គាល់រដ្ឋ និងរដ្ឋាភិបាល",
+        "en": "Recognition of States and Governments"
+      },
+      "pages": {
+        "from": 75,
+        "to": 77
+      },
+      "objectives": {
+        "km": [
+          "ចាត់ថ្នាក់ទម្រង់នៃរដ្ឋ",
+          "ពន្យល់ពីការទទួលស្គាល់រដ្ឋ និងរដ្ឋាភិបាល",
+          "ប្រៀបធៀបការទទួលស្គាល់តាមហេតុការណ៍ និងតាមផ្លូវច្បាប់ ព្រមទាំងទ្រឹស្តី Estrada និង Tobar"
+        ],
+        "en": [
+          "Classify the forms of the state",
+          "Explain the recognition of states and governments",
+          "Compare de facto and de jure recognition and the Estrada and Tobar doctrines"
+        ]
+      },
+      "keyPoints": {
+        "km": [
+          "ទម្រង់រដ្ឋមានច្រើនបែប ក្នុងនោះរដ្ឋទោល ដូចជា កម្ពុជា ឡាវ វៀតណាម ថៃ និងរដ្ឋសហព័ន្ធ ដូចជា សហរដ្ឋអាមេរិក ស្វីស ឥណ្ឌា។",
+          "រដ្ឋសហព័ន្ធកើតឡើងដោយរដ្ឋអធិបតេយ្យជាច្រើន ហើយជានីតិបុគ្គលអន្តរជាតិ ដោយកិច្ចការបរទេសជាសមត្ថកិច្ចផ្តាច់មុខរបស់សហព័ន្ធ។",
+          "យុត្តាធិការសហធិបតេយ្យ គឺការគ្រប់គ្រងដែនដីរួមគ្នាដោយប្រទេសមហាអំណាចពីរបី ឬច្រើន ចំណែកយុត្តាធិការអាណានិគមន៍ស្ទើរតែបាត់ស្រមោលទៅហើយ។",
+          "ការទទួលស្គាល់ គឺជាលំនាំដោយស្ម័គ្រចិត្តរបស់រដ្ឋអធិបតេយ្យ ដោយគ្មានបញ្ញត្តិនៃច្បាប់អន្តរជាតិណាមួយដែលបង្ខំឱ្យទទួលស្គាល់រដ្ឋមួយទៀតឡើយ ហើយមានបែបបទពីរ៖ ការទទួលស្គាល់រដ្ឋដែលទើបនឹងកើតថ្មី និងការទទួលស្គាល់រដ្ឋាភិបាលដែលទើបនឹងបង្កើតថ្មី។",
+          "ការទទួលស្គាល់តាមហេតុការណ៍ (de facto) មិនមានទំនាក់ទំនងខាងផ្លូវការទូត ហើយហៅថាការទទួលស្គាល់ដោយស្ងាត់ស្ងៀម ចំណែកការទទួលស្គាល់តាមផ្លូវច្បាប់ (de jure) តម្រូវឱ្យមានការផ្លាស់ប្តូរឯកអគ្គរដ្ឋទូត និងមានលក្ខណៈយូរអង្វែង។",
+          "ទ្រឹស្តី Estrada ទទួលស្គាល់តែរដ្ឋាភិបាល ដោយមិនគិតពីធម្មារូបភាពរបស់រដ្ឋាភិបាលនោះ ចំណែកទ្រឹស្តី Tobar ទទួលស្គាល់តែរដ្ឋដែលចូលកាន់អំណាចដោយស្របច្បាប់។"
+        ],
+        "en": [
+          "There are several forms of state: a unitary state, such as Cambodia, Laos, Vietnam and Thailand, and a federal state, such as the United States, Switzerland and India.",
+          "A federal state is formed by several sovereign states and is an international legal person, foreign affairs being generally an exclusive competence of the federation.",
+          "Condominium (shared jurisdiction) is the joint rule of one territory by two or more great powers, whereas colonial jurisdiction has almost entirely disappeared.",
+          "Recognition is a voluntary act of sovereign states; no rule of international law compels a state to recognise another, and there are two procedures: recognition of a newly created state and recognition of a newly established government.",
+          "De facto recognition involves no official diplomatic relations and is also called tacit recognition, whereas de jure recognition requires an exchange of ambassadors and is of a lasting character.",
+          "The Estrada Doctrine recognises only governments, regardless of their form, while the Tobar Doctrine recognises only states or governments that came to power lawfully."
+        ]
+      },
+      "quotes": [
+        {
+          "km": "គឺជារដ្ឋមានលក្ខណៈតែឯង ពោលគឺ មិនមែនជារដ្ឋសហព័ន្ធ ដូចជា កម្ពុជា ឡាវ វៀតណាម",
+          "en": "It is a state with a single character, that is, it is not a federal state, such as Cambodia, Laos and Vietnam.",
+          "page": 76
+        },
+        {
+          "km": "យោងតាមនីតិអន្តរជាតិ រដ្ឋសហព័ន្ធគឺជា នីតិបុគ្គលអន្តរជាតិ ។",
+          "en": "According to international law, a federal state is an international legal person.",
+          "page": 76
+        },
+        {
+          "km": "នៅក្នុងពិភពលោកនេះមិន មានបញ្ញត្តិនៃច្បាប់អន្តរជាតិណាមួយដែលបង្ខំឱ្យរដ្ឋមួយទទួលស្គាល់រដ្ឋមួយទៀតឡើយ ។",
+          "en": "In this world there is no provision of international law that compels one state to recognise another state.",
+          "page": 76
+        },
+        {
+          "km": "ការទទួលស្គាល់តាមផ្លូវច្បាប់គឺ ជាការទទួលស្គាល់រវាងរដ្ឋ និងរដ្ឋហើយការទទួលស្គាល់នេះ តម្រូវឱ្យមានការផ្លាស់ប្តូរឯកអគ្គរដ្ឋទូតហើយការទទួលស្គាល់នេះ គឺមានលក្ខណៈយូរអង្វែង ។",
+          "en": "Recognition by law (de jure recognition) is recognition between state and state; it requires an exchange of ambassadors and is of a lasting character.",
+          "page": 77
+        }
+      ],
+      "terms": [
+        {
+          "km": "រដ្ឋទោល",
+          "en": "Unitary state",
+          "defKm": "រដ្ឋដែលមានលក្ខណៈតែឯង មិនមែនជារដ្ឋសហព័ន្ធ ដូចជា កម្ពុជា ឡាវ វៀតណាម ថៃ",
+          "defEn": "A single state that is not a federation, such as Cambodia, Laos, Vietnam and Thailand"
+        },
+        {
+          "km": "រដ្ឋសហព័ន្ធ",
+          "en": "Federal state",
+          "defKm": "រដ្ឋដែលកើតឡើងដោយមានរដ្ឋអធិបតេយ្យជាច្រើន ហើយជានីតិបុគ្គលអន្តរជាតិ ដូចជា សហរដ្ឋអាមេរិក ស្វីស ឥណ្ឌា",
+          "defEn": "A state formed by several sovereign states which is an international legal person, such as the United States, Switzerland and India"
+        },
+        {
+          "km": "យុត្តាធិការសហធិបតេយ្យ",
+          "en": "Condominium (shared jurisdiction)",
+          "defKm": "ការគ្រប់គ្រងលើដែនដីរួមគ្នាតែមួយ ដោយប្រទេសមហាអំណាចពីរបី ឬច្រើន",
+          "defEn": "Joint rule over a single territory by two or more great powers"
+        },
+        {
+          "km": "ការទទួលស្គាល់រដ្ឋ",
+          "en": "Recognition of a state",
+          "defKm": "លំនាំដោយស្ម័គ្រចិត្តរបស់រដ្ឋអធិបតេយ្យភាពមួយចំនួនចំពោះរដ្ឋមួយទៀត",
+          "defEn": "A voluntary act by some sovereign states in respect of another state"
+        },
+        {
+          "km": "ការទទួលស្គាល់តាមហេតុការណ៍ (De facto)",
+          "en": "De facto recognition",
+          "defKm": "ការទទួលស្គាល់រដ្ឋមួយក្នុងលក្ខណៈបណ្តោះអាសន្ន ដោយគ្មានទំនាក់ទំនងខាងផ្លូវការទូត ហៅថាការទទួលស្គាល់ដោយស្ងាត់ស្ងៀម",
+          "defEn": "Provisional recognition of a state without official diplomatic relations, also called tacit recognition"
+        },
+        {
+          "km": "ការទទួលស្គាល់តាមផ្លូវច្បាប់ (De jure)",
+          "en": "De jure recognition",
+          "defKm": "ការទទួលស្គាល់រវាងរដ្ឋ និងរដ្ឋ ដែលតម្រូវឱ្យមានការផ្លាស់ប្តូរឯកអគ្គរដ្ឋទូត និងមានលក្ខណៈយូរអង្វែង",
+          "defEn": "Recognition between state and state which requires an exchange of ambassadors and is of a lasting character"
+        },
+        {
+          "km": "ទ្រឹស្តី Estrada និងទ្រឹស្តី Tobar",
+          "en": "The Estrada and Tobar Doctrines",
+          "defKm": "ទ្រឹស្តី Estrada ទទួលស្គាល់តែរដ្ឋាភិបាល ដោយមិនគិតពីធម្មារូបភាពរបស់រដ្ឋាភិបាលនោះ រីឯទ្រឹស្តី Tobar ទទួលស្គាល់តែរដ្ឋដែលចូលកាន់អំណាចដោយស្របច្បាប់",
+          "defEn": "The Estrada Doctrine recognises only governments regardless of their form, while the Tobar Doctrine recognises only governments that came to power lawfully"
+        }
+      ],
+      "quiz": [
+        {
+          "q": {
+            "km": "តើប្រទេសណាដែលអត្ថបទលើកជាឧទាហរណ៍នៃរដ្ឋទោល?",
+            "en": "Which country does the text give as an example of a unitary state?"
+          },
+          "options": {
+            "km": [
+              "សហរដ្ឋអាមេរិក",
+              "ស្វីស",
+              "កម្ពុជា",
+              "ឥណ្ឌា"
+            ],
+            "en": [
+              "The United States",
+              "Switzerland",
+              "Cambodia",
+              "India"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា រដ្ឋទោលគឺជារដ្ឋមានលក្ខណៈតែឯង ដូចជា កម្ពុជា ឡាវ វៀតណាម ថៃ។",
+            "en": "The text states that a unitary state is a single state, such as Cambodia, Laos, Vietnam and Thailand."
+          },
+          "page": 76
+        },
+        {
+          "q": {
+            "km": "តើរដ្ឋសហព័ន្ធ នៅក្នុងនីតិអន្តរជាតិសាធារណៈ មានលក្ខណៈដូចម្តេច?",
+            "en": "What is the character of a federal state in public international law?"
+          },
+          "options": {
+            "km": [
+              "ជារដ្ឋដែលគ្មានរដ្ឋធម្មនុញ្ញ",
+              "ជារដ្ឋមួយដែលកើតឡើងដោយមានរដ្ឋអធិបតេយ្យជាច្រើន និងជានីតិបុគ្គលអន្តរជាតិ",
+              "ជារដ្ឋដែលមានសមត្ថកិច្ចតែខាងកិច្ចការផ្ទៃក្នុង",
+              "ជាទឹកដីអាណានិគម"
+            ],
+            "en": [
+              "A state without a constitution",
+              "A state formed by several sovereign states and which is an international legal person",
+              "A state with competence only in internal affairs",
+              "A colonial territory"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា រដ្ឋសហព័ន្ធគឺជារដ្ឋមួយដែលកើតឡើងដោយមានរដ្ឋអធិបតេយ្យជាច្រើន ហើយយោងតាមនីតិអន្តរជាតិ គឺជានីតិបុគ្គលអន្តរជាតិ។",
+            "en": "The text states that a federal state is formed by several sovereign states and, under international law, is an international legal person."
+          },
+          "page": 76
+        },
+        {
+          "q": {
+            "km": "តើយុត្តាធិការសហធិបតេយ្យ មានន័យដូចម្តេច?",
+            "en": "What does condominium (shared jurisdiction) mean?"
+          },
+          "options": {
+            "km": [
+              "ការគ្រប់គ្រងដោយរដ្ឋអធិបតេយ្យមួយតែឯង",
+              "ការគ្រប់គ្រងលើដែនដីរួមគ្នាតែមួយ ដោយប្រទេសមហាអំណាចពីរបី ឬច្រើន",
+              "ការគ្រប់គ្រងដោយអង្គការសហប្រជាជាតិ",
+              "ការគ្រប់គ្រងដោយរដ្ឋសមាជិកនីមួយៗដោយឡែកពីគ្នា"
+            ],
+            "en": [
+              "Rule by one sovereign state alone",
+              "Joint rule over a single shared territory by two or more great powers",
+              "Rule by the United Nations",
+              "Rule by each member state separately"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា រដ្ឋសហអធិបតេយ្យមានន័យថា រដ្ឋជាទូទៅច្រើនជាប្រទេសមហាអំណាចពីរបី ឬច្រើន គ្រប់គ្រងលើដែនដីរួមគ្នាតែមួយ។",
+            "en": "The text states that states with shared sovereignty are generally two or more great powers governing a single shared territory."
+          },
+          "page": 76
+        },
+        {
+          "q": {
+            "km": "តើការទទួលស្គាល់រដ្ឋ ជាអ្វី?",
+            "en": "What is recognition of a state?"
+          },
+          "options": {
+            "km": [
+              "កាតព្វកិច្ចដែលច្បាប់អន្តរជាតិបង្ខំឱ្យរដ្ឋត្រូវអនុវត្ត",
+              "លំនាំដោយស្ម័គ្រចិត្តរបស់រដ្ឋអធិបតេយ្យភាពមួយចំនួនចំពោះរដ្ឋមួយទៀត",
+              "សិទ្ធិរបស់រដ្ឋដែលទើបនឹងកើតថ្មី",
+              "កិច្ចព្រមព្រៀងស្តីពីព្រំដែនរវាងរដ្ឋពីរ"
+            ],
+            "en": [
+              "A duty which international law obliges a state to perform",
+              "A voluntary act by some sovereign states in respect of another state",
+              "A right of a newly created state",
+              "A border agreement between two states"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការទទួលស្គាល់ គឺជាលំនាំដោយស្ម័គ្រចិត្តរបស់រដ្ឋអធិបតេយ្យភាពមួយចំនួនចំពោះរដ្ឋមួយទៀត ហើយគ្មានបញ្ញត្តិច្បាប់ណាមួយបង្ខំឱ្យទទួលស្គាល់ឡើយ។",
+            "en": "The text states that recognition is a voluntary act by some sovereign states in respect of another state, and no rule of law compels recognition."
+          },
+          "page": 76
+        },
+        {
+          "q": {
+            "km": "តើប្រទេសណាបានប្រកាសទទួលស្គាល់រដ្ឋកម្ពុជាជាឯកតោភាគីនៅឆ្នាំ១៩៨២?",
+            "en": "Which country declared unilateral recognition of the Cambodian state in 1982?"
+          },
+          "options": {
+            "km": [
+              "ប្រទេសបារាំង",
+              "សហរដ្ឋអាមេរិក",
+              "ប្រទេសចិន",
+              "ប្រទេសឥណ្ឌា"
+            ],
+            "en": [
+              "France",
+              "The United States",
+              "China",
+              "India"
+            ]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "អត្ថបទលើកឧទាហរណ៍ថា ប្រទេសឥណ្ឌាបានប្រកាសទទួលស្គាល់រដ្ឋកម្ពុជាជាឯកតោភាគីនៅឆ្នាំ១៩៨២។",
+            "en": "The text gives the example that India declared unilateral recognition of the Cambodian state in 1982."
+          },
+          "page": 76
+        },
+        {
+          "q": {
+            "km": "តើទ្រឹស្តី Estrada ទទួលស្គាល់អ្វី?",
+            "en": "What does the Estrada Doctrine recognise?"
+          },
+          "options": {
+            "km": [
+              "ទទួលស្គាល់តែរដ្ឋដែលចូលកាន់អំណាចដោយស្របច្បាប់",
+              "ទទួលស្គាល់តែរដ្ឋាភិបាល ដោយមិនគិតពីធម្មារូបភាពរបស់រដ្ឋាភិបាលនោះ",
+              "ទទួលស្គាល់តែទឹកដីដែលដណ្តើមយក",
+              "មិនទទួលស្គាល់រដ្ឋាភិបាលណាមួយឡើយ"
+            ],
+            "en": [
+              "It recognises only states that came to power lawfully",
+              "It recognises only governments, regardless of the form of that government",
+              "It recognises only territory acquired by force",
+              "It recognises no government at all"
+            ]
+          },
+          "answer": 1,
+          "explain": {
+            "km": "អត្ថបទចែងថា ទ្រឹស្តី Estrada ទទួលស្គាល់តែរដ្ឋាភិបាល ដោយមិនគិតពីធម្មារូបភាពរបស់រដ្ឋាភិបាលនោះឡើយ។",
+            "en": "The text states that the Estrada Doctrine recognises only governments, without regard to the form of that government."
+          },
+          "page": 77
+        },
+        {
+          "q": {
+            "km": "តើការទទួលស្គាល់តាមផ្លូវច្បាប់ (de jure) តម្រូវឱ្យមានអ្វី និងមានលក្ខណៈដូចម្តេច?",
+            "en": "What does de jure recognition require, and of what character is it?"
+          },
+          "options": {
+            "km": [
+              "គ្មានទំនាក់ទំនងការទូត និងជាបណ្តោះអាសន្ន",
+              "ធ្វើឡើងដោយស្ងាត់ស្ងៀម",
+              "តម្រូវឱ្យមានការផ្លាស់ប្តូរឯកអគ្គរដ្ឋទូត និងមានលក្ខណៈយូរអង្វែង",
+              "តម្រូវឱ្យមានការបោះឆ្នោតជាតិ"
+            ],
+            "en": [
+              "No diplomatic relations, and provisional in character",
+              "Made tacitly and silently",
+              "It requires an exchange of ambassadors and is of a lasting character",
+              "It requires a national election"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការទទួលស្គាល់តាមផ្លូវច្បាប់ តម្រូវឱ្យមានការផ្លាស់ប្តូរឯកអគ្គរដ្ឋទូត ហើយការទទួលស្គាល់នេះមានលក្ខណៈយូរអង្វែង។",
+            "en": "The text states that de jure recognition requires an exchange of ambassadors and is of a lasting character."
+          },
+          "page": 77
+        },
+        {
+          "q": {
+            "km": "តើការទទួលស្គាល់តាមហេតុការណ៍ (de facto) មានលក្ខណៈដូចម្តេច?",
+            "en": "What characterises de facto recognition?"
+          },
+          "options": {
+            "km": [
+              "មានការផ្លាស់ប្តូរឯកអគ្គរដ្ឋទូតភ្លាមៗ",
+              "មានលក្ខណៈយូរអង្វែងជាអចិន្ត្រៃយ៍",
+              "មិនមានទំនាក់ទំនងខាងផ្លូវការទូត ហើយហៅថាការទទួលស្គាល់ដោយស្ងាត់ស្ងៀម",
+              "ត្រូវបានធ្វើឡើងដោយអង្គការសហប្រជាជាតិ"
+            ],
+            "en": [
+              "It involves an immediate exchange of ambassadors",
+              "It is lasting and permanent in character",
+              "It involves no official diplomatic relations and is called tacit recognition",
+              "It is carried out by the United Nations"
+            ]
+          },
+          "answer": 2,
+          "explain": {
+            "km": "អត្ថបទចែងថា ការទទួលស្គាល់តាម de facto មិនមានទំនាក់ទំនងខាងផ្លូវការទូតទេ ហើយគេឱ្យឈ្មោះថា ជាការទទួលស្គាល់ដោយស្ងាត់ស្ងៀម។",
+            "en": "The text states that de facto recognition involves no official diplomatic relations and is called tacit recognition."
+          },
+          "page": 77
+        }
+      ]
+    }
+  ]
+}

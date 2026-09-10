@@ -1,0 +1,56 @@
+{
+  "_readme": "TEMPLATE for one chapter file. Copy the structure exactly. Every 'km' quote must be copied VERBATIM from the decoded chapter text file (a substring of it, you may trim leading/trailing spaces and drop newlines). Keep page numbers as integers = the BOOK page (the '<!-- pdf page N | book page M -->' marker gives M).",
+  "id": "ch3",
+  "num": 3,
+  "title": { "km": "ទំនាក់ទំនងរវាងរដ្ឋ និងនីតិអន្តរជាតិ", "en": "Relations between the State and International Law" },
+  "pages": { "from": 67, "to": 77 },
+  "summary": {
+    "km": "ជំពូកនេះពន្យល់អំពីលក្ខណៈវិនិច្ឆ័យនៃរដ្ឋ អធិបតេយ្យភាព និងការទទួលស្គាល់រដ្ឋនៅក្នុងច្បាប់អន្តរជាតិ។",
+    "en": "This chapter explains the criteria of statehood, sovereignty, and recognition of states in international law."
+  },
+  "lessons": [
+    {
+      "id": "ch3-l1",
+      "title": { "km": "រដ្ឋ និងលក្ខណៈវិនិច្ឆ័យរបស់រដ្ឋ", "en": "The State and the Criteria of Statehood" },
+      "pages": { "from": 67, "to": 70 },
+      "objectives": {
+        "km": ["ពន្យល់ពីអត្ថន័យនៃរដ្ឋ", "រាយលក្ខណៈវិនិច្ឆ័យទាំងបួននៃរដ្ឋ"],
+        "en": ["Explain what a state is", "List the four criteria of statehood"]
+      },
+      "keyPoints": {
+        "km": ["រដ្ឋត្រូវមានទឹកដីជាកំណត់ និងប្រជាជនរស់នៅជាអចិន្ត្រៃយ៍", "រដ្ឋត្រូវមានរដ្ឋាភិបាល និងសមត្ថកិច្ចទំនាក់ទំនងជាមួយរដ្ឋដទៃ"],
+        "en": ["A state needs a defined territory and a permanent population", "A state needs a government and the capacity to conduct relations with other states"]
+      },
+      "quotes": [
+        {
+          "km": "រដ្ឋ គឺជាទឹកដីជាកំណត់",
+          "en": "A state is a defined territory",
+          "page": 67
+        }
+      ],
+      "terms": [
+        {
+          "km": "អធិបតេយ្យភាព",
+          "en": "Sovereignty",
+          "defKm": "អំណាចខ្ពស់បំផុតរបស់រដ្ឋដែលមិនអាចប៉ះពាល់បាន",
+          "defEn": "The supreme authority of a state which cannot be overridden"
+        }
+      ],
+      "quiz": [
+        {
+          "q": { "km": "តើលក្ខណៈវិនិច្ឆ័យណាមួយមិនមែនជាលក្ខណៈវិនិច្ឆ័យនៃរដ្ឋ?", "en": "Which of the following is NOT a criterion of statehood?" },
+          "options": {
+            "km": ["ប្រជាពលរដ្ឋអចិន្ត្រៃយ៍", "ទឹកដីជាកំណត់", "រដ្ឋាភិបាល", "ធនាគារជាតិ"],
+            "en": ["Permanent population", "Defined territory", "Government", "A national bank"]
+          },
+          "answer": 3,
+          "explain": {
+            "km": "លក្ខណៈវិនិច្ឆ័យនៃរដ្ឋមាន ប្រជាពលរដ្ឋ ទឹកដី រដ្ឋាភិបាល និងសមត្ថកិច្ចទំនាក់ទំនងអន្តរជាតិ។",
+            "en": "The criteria are population, territory, government, and capacity for international relations."
+          },
+          "page": 67
+        }
+      ]
+    }
+  ]
+}

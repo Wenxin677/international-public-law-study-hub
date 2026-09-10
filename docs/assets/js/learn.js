@@ -117,7 +117,7 @@
       I.toast(pr.lessons[l.id] ? '+10 XP · ' + t('learn.marked') : '—');
     });
     I.qs('#cite-btn', host).addEventListener('click', function () {
-      I.copyText('ឡាយ រតតនា, ច្បាប់សាធារណៈអន្តរជាតិ (២០២១), pp. ' +
+      I.copyText('ឡាយ រត្តនា, ច្បាប់សាធារណៈអន្តរជាតិ (២០២១), pp. ' +
         (l.pages ? l.pages.from + '–' + l.pages.to : '') + ' — ' + (l.title.km || ''));
     });
     I.qsa('[data-go]', host).forEach(function (b) {

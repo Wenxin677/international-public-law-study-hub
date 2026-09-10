@@ -4,7 +4,7 @@ The **code** in this repository is MIT-licensed (see `LICENSE`). The **texts quo
 are not**, and are used here under educational-quotation terms. Please read this before reusing
 or redistributing the data files.
 
-## 1. ច្បាប់សាធារណៈអន្តរជាតិ / International Public Law — ឡាយ រតតនា (Lay Rottana), 2021
+## 1. ច្បាប់សាធារណៈអន្តរជាតិ / International Public Law — ឡាយ រត្តនា (Lay Rottana), 2021
 
 * Copyright remains with the author (and any publisher/institution holding rights).
 * The app quotes this textbook: verbatim passages with page numbers, lesson summaries, key points,

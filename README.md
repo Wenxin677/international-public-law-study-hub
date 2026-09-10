@@ -4,7 +4,7 @@ A bilingual **Khmer / English** study web app for public international law, buil
 
 | # | Source | Language | What it is |
 |---|--------|----------|------------|
-| 1 | **ច្បាប់សាធារណៈអន្តរជាតិ** — *International Public Law*, ឡាយ រតតនា (Lay Rottana), 2021 | Khmer | 193-page textbook: the international community, states, sources of international law, the use of force, treaties, conventions, the 1991 Paris Peace Agreements |
+| 1 | **ច្បាប់សាធារណៈអន្តរជាតិ** — *International Public Law*, ឡាយ រត្តនា (Lay Rottana), 2021 | Khmer | 193-page textbook: the international community, states, sources of international law, the use of force, treaties, conventions, the 1991 Paris Peace Agreements |
 | 2 | **Law on the Establishment of the Extraordinary Chambers** (ECCC Law, as amended 27 Oct 2004) | English | Legal basis of the Khmer Rouge tribunal |
 | 3 | **Paris Convention for the Protection of Industrial Property** (WIPO, 1883 as revised) | English | National treatment, priority, patents, marks, the Union |
 
@@ -85,7 +85,7 @@ Every quote must be a verbatim substring of the decoded source, otherwise the bu
 
 * **Code** (HTML/CSS/JS/Python in this repository): MIT — see `LICENSE`.
 * **Quoted texts**: they are **not** MIT-licensed. The Khmer textbook remains the property of
-  its author, ឡាយ រតតនា (2021); the ECCC Law and the Paris Convention are public legal
+  its author, ឡាយ រត្តនា (2021); the ECCC Law and the Paris Convention are public legal
   instruments (WIPO / UN). Quotations are included, with page references, for educational study.
   See `NOTICE.md` — and if you are a rights holder and want something removed, open an issue.
 * This is a **study aid, not legal advice**.

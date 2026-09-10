@@ -7,7 +7,7 @@
   const t = I.t, esc = I.esc;
 
   const SOURCE = {
-    textbook: { km: 'សៀវភៅសិក្សា', en: 'Textbook', cite: 'ឡាយ រតតនា, ច្បាប់សាធារណៈអន្តរជាតិ (២០២១)' , citeEn: 'Lay Rottana, International Public Law (2021)' },
+    textbook: { km: 'សៀវភៅសិក្សា', en: 'Textbook', cite: 'ឡាយ រត្តនា, ច្បាប់សាធារណៈអន្តរជាតិ (២០២១)' , citeEn: 'Lay Rottana, International Public Law (2021)' },
     eccc: { km: 'ច្បាប់អង្គការតុលាការពិសេស', en: 'ECCC Law', cite: 'Law on the Establishment of the Extraordinary Chambers (2004)', citeEn: 'ECCC Law (2004)' },
     paris: { km: 'អនុសញ្ញាប៉ារីស', en: 'Paris Convention', cite: 'Paris Convention for the Protection of Industrial Property (1883/1979)', citeEn: 'Paris Convention (1883/1979)' }
   };

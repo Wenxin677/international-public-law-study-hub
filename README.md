@@ -30,7 +30,7 @@ Extras: Khmer / English / **both** language modes, dark & light themes, `Ctrl/�
 Open `index.html` in a browser — that is all. To serve it locally:
 
 ```bash
-cd site && python -m http.server 8000     # then http://localhost:8000
+cd docs && python -m http.server 8000     # then http://localhost:8000
 ```
 
 ## 🧠 How the Khmer textbook text was recovered
@@ -51,7 +51,7 @@ The textbook PDF was produced with MS Word 2000 and a legacy KhmerOS font. Its e
    written before its base, split vowels (េ+ា → ោ, េ+ី → ើ, …), vowel signs typed before subscripts.
 3. **`decode_all.py`**, **`build_corpus.py`** — decode all 205 PDF pages, split the book into
    chapter files and build the searchable corpus.
-4. **`build_site_data.py`** — merge the lesson JSON in `content/` into `site/data/` and, crucially,
+4. **`build_site_data.py`** — merge the lesson JSON in `content/` into `docs/data/` and, crucially,
    **verify every quote verbatim against the decoded source** (currently 128/128) so no lesson text
    is invented.
 
@@ -60,7 +60,7 @@ Reproducing it needs `pymupdf`, `fonttools`, the KhmerOS fonts installed on Wind
 ## 📁 Layout
 
 ```
-site/                     the published app (static, no build step)
+docs/                     the published app (GitHub Pages: main /docs) (static, no build step)
   index.html learn.html quiz.html chat.html glossary.html about.html
   assets/css/style.css    design system
   assets/js/              core (i18n/progress), search (BM25), data, per-page scripts
@@ -75,7 +75,7 @@ content/                  the lesson content sources (JSON)
 Lessons live in `content/*.json` following `content/_TEMPLATE.json`. After editing:
 
 ```bash
-python tools/build_site_data.py     # merges content → site/data + verifies quotes
+python tools/build_site_data.py     # merges content → docs/data + verifies quotes
 node tools/search_test.js "your question"    # checks the chatbot retrieval
 ```
 

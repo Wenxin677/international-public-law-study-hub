@@ -8,7 +8,7 @@ window.IPL_CHAPTERS = [
 "en": "Public International Law"
 },
 "pages": {
-"from": 26,
+"from": 1,
 "to": 42
 },
 "summary": {

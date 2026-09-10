@@ -4,7 +4,7 @@ import json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "content"
-SITE = ROOT / "site"
+SITE = ROOT / "docs"
 DATA = SITE / "data"
 DATA.mkdir(parents=True, exist_ok=True)
 
@@ -48,9 +48,13 @@ for path in files:
             base["lessons"].extend(obj.get("lessons", []))
             if not base.get("summary", {}).get("km") and obj.get("summary"):
                 base["summary"] = obj["summary"]
-            for key in ("pages",):
-                if obj.get(key):
-                    base[key] = obj[key]
+            # page range = union of all fragments
+            if obj.get("pages"):
+                bp, op = base.get("pages") or {}, obj["pages"]
+                base["pages"] = {
+                    "from": min([v for v in [bp.get("from"), op.get("from")] if v is not None] or [None]),
+                    "to": max([v for v in [bp.get("to"), op.get("to")] if v is not None] or [None])
+                }
         else:
             chapters[cid] = obj
 
@@ -80,7 +84,7 @@ ordered = [chapters[k] for k in sorted(chapters, key=lambda c: ORDER.get(c, 99))
     "window.IPL_CHAPTERS = " + json.dumps(ordered, ensure_ascii=False, indent=0) + ";\n",
     encoding="utf-8")
 
-corpus_path = ROOT / "site" / "data" / "corpus.json"
+corpus_path = ROOT / "docs" / "data" / "corpus.json"
 if "--quotes-only" in sys.argv:
     # reduced, quotation-only corpus: lesson quotes, key points and terms with page refs
     reduced = []

@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const SITE = path.join(ROOT, 'site');
+const SITE = path.join(ROOT, 'docs');
 
 // minimal browser shims
 global.window = global;

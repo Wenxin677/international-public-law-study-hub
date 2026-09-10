@@ -3,7 +3,7 @@ import json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 EX = ROOT / "extracted"
-DATA = ROOT / "site" / "data"
+DATA = ROOT / "docs" / "data"
 DATA.mkdir(parents=True, exist_ok=True)
 CHAPTERS_DIR = ROOT / "extracted" / "chapters"
 CHAPTERS_DIR.mkdir(exist_ok=True)

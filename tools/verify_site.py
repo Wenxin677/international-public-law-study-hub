@@ -1,7 +1,7 @@
 """Static site verification: referenced local files exist, CSS balances, data sane."""
 import json, pathlib, re, sys
 
-SITE = pathlib.Path(__file__).resolve().parents[1] / "site"
+SITE = pathlib.Path(__file__).resolve().parents[1] / "docs"
 problems, notes = [], []
 
 pages = sorted(SITE.glob("*.html"))

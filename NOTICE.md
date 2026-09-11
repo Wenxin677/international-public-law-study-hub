@@ -74,7 +74,16 @@ cited page.
   failed attempt / sign-out also sends the **username, event type, device, browser string and
   timestamp** to the destination the owner chose — a Google Sheet
   (`tools/google-sheet-collector.gs`) or a Supabase table (`tools/supabase.sql`). The sign-up
-  form shows users a notice as soon as a collector is active. **The password and its hash are
-  never sent anywhere** — verification happens entirely inside the visitor's browser.
+  form shows users a notice as soon as a collector is active. The collector never receives the
+  password or its hash — only the event.
+* If the owner configures an **account database** (`docs/data/config.js` →
+  `window.ROBOCL_DB`, created with `tools/supabase-accounts.sql`), sign-up and sign-in happen
+  there instead: the browser sends the username and password to that database over HTTPS, and the
+  database stores a **bcrypt hash** — never the password itself, and never in a form anyone can
+  reverse. The tables are locked with Row Level Security and no policies, so no hash can be
+  fetched from the site; only three functions (sign up, sign in, log out) can be called.
+  Consequence: with a database connected, the password leaves the visitor's device (as on any
+  website with accounts), but it is never stored or readable in plain text. Where no database is
+  configured, passwords never leave the browser at all.
 * The admin page shows only what the current browser recorded; the collected rows live in the
   owner's own sheet/database, under the owner's account.

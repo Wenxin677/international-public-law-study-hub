@@ -78,6 +78,46 @@ not cover a question it says so instead of guessing.
 
 ---
 
+## Accounts in a real database (recommended once you have users)
+
+By default accounts live in each visitor's browser. Point the app at a database and every device
+shares the same accounts — a student can sign up on a phone and sign in on a laptop.
+
+```
+tools/supabase-accounts.sql   →  the schema, the security rules and three functions
+docs/data/config.js           →  window.ROBOCL_DB = { url, key, adminSecret }
+```
+
+What that SQL sets up:
+
+* `robo_accounts` — username, **bcrypt password hash**, created, last sign-in, sign-in count,
+  failed attempts, language. `robo_events` — every signup / signin / failed attempt / signout.
+* **Row Level Security with no policies**: the browser (holding only the public anon key) cannot
+  read or write either table. No password hash can be downloaded from the site.
+* Three `SECURITY DEFINER` functions do all the work — `robo_signup`, `robo_login`, `robo_logout` —
+  plus `robo_admin_accounts` (secret-protected) which returns usernames and activity, never hashes.
+* Passwords are verified inside the database; nobody, including the owner, can read one. A lost
+  password can only be reset, never recovered.
+
+The site keeps working if the database is unreachable: sign-up and sign-in fall back to the
+on-device account, and database-backed accounts say plainly that a connection is needed.
+
+`admin.html` shows whether a database is connected, and **Load every account from the database**
+renders the whole user table with CSV export.
+
+## Sheet collector vs database
+
+They do different jobs and can run together:
+
+| | Google Sheet (`ROBOCL_SHEET`) | Database (`ROBOCL_DB`) |
+|---|---|---|
+| Stores | a log of events | the accounts themselves |
+| Sign-in on a new device | needs an account there already | works anywhere |
+| Passwords | never | bcrypt hash, service-side |
+| You read it | in Google Sheets | in `admin.html` or the Supabase dashboard |
+
+---
+
 ## Repository layout
 
 ```

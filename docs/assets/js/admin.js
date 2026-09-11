@@ -6,13 +6,20 @@
 
   function gate() {
     qs('#admin-body').innerHTML =
-      '<div class="card" style="max-width:460px">' +
+      '<div class="card" style="max-width:560px">' +
       '<h3>' + esc(t('admin.code')) + '</h3>' +
       '<div class="field"><input class="input" id="code" type="password" placeholder="••••••" autocomplete="off"></div>' +
       '<button class="btn primary block" id="go">' + esc(t('admin.enter')) + '</button>' +
+      '<div class="notice" style="margin:16px 0 0">' + esc(I.state.lang === 'km'
+        ? 'ទំព័រនេះបង្ហាញតែគណនីដែលបានបង្កើតនៅក្នុងកម្មវិធីរុករកនេះប៉ុណ្ណោះ។ ព័ត៌មាននៅក្នុងកម្មវិធីរុករកផ្សេង ឬទូរស័ព្ទ មិនឃើញនៅទីនេះទេ។'
+        : 'This page only shows the accounts created in THIS browser. Sign-ups made in another browser or on a phone do not appear here.') + '</div>' +
+      '<div class="small faint" style="margin-top:12px">' + esc(I.state.lang === 'km'
+        ? 'កូដស្ថិតនៅក្នុង docs/data/config.js (អ្នកអាចប្តូរវាបាន)។ ចង់ប្រមូលពីគ្រប់ឧបករណ៍ សូមភ្ជាប់ Supabase — មើលប្រអប់ខាងក្រោម។'
+        : 'The code lives in docs/data/config.js (change it there). To collect sign-ups from every device, connect Supabase — see the note below.') + '</div>' +
       '<div class="small faint" style="margin-top:10px">' + esc(I.state.lang === 'km'
-        ? 'កូដលំនាំដើមគឺ panha2026 — អ្នកអាចប្តូរបានក្នុង docs/data/config.js'
-        : 'Default code is panha2026 — change it in docs/data/config.js') + '</div></div>';
+        ? 'លេខសម្ងាត់មិនត្រូវបានរក្សាទុកទេ — មានតែកូដហាស (hash) ដែលមើលមិនយល់។'
+        : 'Passwords are never stored — only an unreadable hash, so no password can be recovered from here.') + '</div>' +
+      '</div>';
     qs('#go').addEventListener('click', tryOpen);
     qs('#code').addEventListener('keydown', function (e) { if (e.key === 'Enter') tryOpen(); });
   }
@@ -69,7 +76,8 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    if (!I.guard()) return;
+    /* No account needed: this page only ever shows the data stored in THIS browser,
+       so the owner code alone is the gate. */
     I.renderChrome('admin.html');
     if (sessionStorage.getItem('robo.admin') === '1') render(); else gate();
   });

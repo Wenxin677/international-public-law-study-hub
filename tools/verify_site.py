@@ -98,13 +98,20 @@ for page, script in [("dashboard.html", "home.js"), ("learn.html", "learn.js"), 
     if "config.js" not in s:
         problems.append(f"{page}: data/config.js missing (needed before auth.js)")
 
-# app pages must guard the content behind the account
-for page in ["dashboard.html", "learn.html", "quiz.html", "teacher.html", "library.html", "glossary.html", "admin.html"]:
+# app pages must guard the content behind the account (admin.html is gated by the
+# owner code instead — it only ever reads this browser's own data)
+for page in ["dashboard.html", "learn.html", "quiz.html", "teacher.html", "library.html", "glossary.html"]:
     js = {"dashboard.html": "home.js", "learn.html": "learn.js", "quiz.html": "quiz.js",
           "teacher.html": "teacher.js", "library.html": "library.js",
-          "glossary.html": "glossary.js", "admin.html": "admin.js"}[page]
+          "glossary.html": "glossary.js"}[page]
     if "gu" + "ard()" not in (SITE / "assets/js" / js).read_text(encoding="utf-8"):
         problems.append(f"{js}: does not call IPL.guard() — page would be open without an account")
+
+admin_js = (SITE / "assets/js/admin.js").read_text(encoding="utf-8")
+if "adminCode" not in admin_js or "sessionStorage.getItem('robo.admin')" not in admin_js:
+    problems.append("admin.js: no owner-code gate")
+if "panha2026" in admin_js:
+    problems.append("admin.js: still prints the default code on screen")
 
 print("\n".join(notes))
 print()

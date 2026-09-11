@@ -8,17 +8,36 @@ import json, pathlib, sys
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 LOG = pathlib.Path(__file__).resolve().parent / "collector_log.jsonl"
+REPORT = pathlib.Path(__file__).resolve().parent / "selftest_report.txt"
 
 
 class Handler(BaseHTTPRequestHandler):
+    def _cors(self):
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Headers", "content-type")
+        self.send_header("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
+
+    def do_OPTIONS(self):
+        self.send_response(204)
+        self._cors()
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+
     def do_POST(self):
         n = int(self.headers.get("Content-Length") or 0)
         body = self.rfile.read(n).decode("utf-8", "replace")
-        with LOG.open("a", encoding="utf-8") as fh:
-            fh.write(body.strip() + "\n")
-        print("collector got:", body[:160], flush=True)
+        if self.path.startswith("/report"):
+            # a browser test harness posting its PASS/FAIL report
+            REPORT.write_text(body, encoding="utf-8")
+            print(f"report received: {len(body)} chars -> {REPORT}", flush=True)
+        else:
+            with LOG.open("a", encoding="utf-8") as fh:
+                fh.write(body.strip() + "\n")
+            print("collector got:", body[:120], flush=True)
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
+        self._cors()
+        self.send_header("Content-Length", "11")
         self.end_headers()
         self.wfile.write(b'{"ok":true}')
 

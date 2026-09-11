@@ -35,6 +35,39 @@ window.ROBOCL_CONFIG = {
    automatically as soon as one of these options is filled in.
    ========================================================================== */
 
+/* ==========================================================================
+   ACCOUNT DATABASE  (optional, recommended once you have real users)
+
+   A static site cannot keep accounts by itself, so point the app at a
+   PostgreSQL database you own. Supabase gives you one free in a couple of
+   minutes, and the SQL is ready in tools/supabase-accounts.sql:
+
+     1. create a project at supabase.com
+     2. SQL editor → paste tools/supabase-accounts.sql → Run
+        (that file also asks you to invent an admin secret — put the same value
+         in adminSecret below)
+     3. Project settings → API → copy the "Project URL" and the "anon public" key
+     4. paste them below, then commit + push the site
+
+   With this filled in, sign-up and sign-in happen in the database:
+     · passwords are bcrypt-hashed inside it — never stored as text, never
+       readable by you or anyone else
+     · the browser only ever calls three functions (sign up, sign in, log out),
+       so no password hash can be downloaded from the site
+     · every device shares the same accounts; sign-in works on any phone
+   Without it, accounts stay in each visitor's own browser (which also keeps
+   working as an offline fallback even when this is configured).
+   ========================================================================== */
+
+window.ROBOCL_DB = null;
+/* example:
+window.ROBOCL_DB = {
+  url: 'https://xxxxxxxxxxxx.supabase.co',
+  key: 'eyJhbGciOi...anon-public-key...',
+  adminSecret: 'the-same-long-secret-you-put-in-the-sql-file'
+};
+*/
+
 window.ROBOCL_SHEET = {
   url: 'https://script.google.com/macros/s/AKfycbwzfS6SnL59jVnPTkaKbYngi2aa1WXmGCNOsiPz8QWtu5boEwsZiRrZ6LAUmWco6LcWLQ/exec'
 };

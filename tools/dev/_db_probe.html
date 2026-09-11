@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>db probe</title>
+<style>body{font:13px/1.55 ui-monospace,monospace;background:#0b1120;color:#dfe7ff;padding:14px}pre{white-space:pre-wrap}</style>
+</head><body><pre id="out">…</pre>
+<script>
+/* Drives sign-up / sign-in through the real page against the RPC stub or a dead
+   endpoint (to prove the offline fallback). Dev only. */
+const lines = [];
+const out = document.getElementById('out');
+const log = s => { lines.push(s); out.textContent = lines.join('\n'); };
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+(async () => {
+  try { localStorage.clear(); sessionStorage.clear(); } catch (e) {}
+  const f = document.createElement('iframe');
+  f.style.cssText = 'width:900px;height:600px;position:fixed;left:-9999px';
+  f.src = 'signin.html?_t=' + Date.now();
+  document.body.appendChild(f);
+  await new Promise(r => setTimeout(r, 1800));
+  const A = f.contentWindow.IPLAuth;
+  log('dbReady: ' + A.dbReady());
+  const up = await A.signup('dbuser1', 'test1234', 'test1234');
+  log('signup       -> ' + JSON.stringify(up));
+  const dup = await A.signup('dbuser1', 'test1234', 'test1234');
+  log('duplicate    -> ' + JSON.stringify(dup));
+  const bad = await A.signin('dbuser1', 'wrongpass', true);
+  log('bad password -> ' + JSON.stringify(bad));
+  const good = await A.signin('dbuser1', 'test1234', true);
+  log('signin       -> ' + JSON.stringify(good));
+  const local = A.accounts().dbuser1 || {};
+  log('browser copy -> has hash? ' + ('hash' in local) + ' | server flag: ' + !!local.server + ' | algo: ' + (local.algo || '-'));
+  const adm = await A.dbAccounts();
+  log('dbAccounts   -> ok=' + adm.ok + ' accounts=' + ((adm.accounts || []).length) + ' events=' + ((adm.events || []).length) + (adm.error ? ' error=' + adm.error : ''));
+  const badSecret = await A.dbAccounts.call ? null : null;
+  log('session user -> ' + JSON.stringify((A.session() || {}).u));
+  log('done');
+  try { localStorage.clear(); sessionStorage.clear(); } catch (e) {}
+})();
+</script></body></html>

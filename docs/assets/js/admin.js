@@ -40,6 +40,8 @@
       '<span class="pill">' + r.accounts.length + ' ' + esc(t('admin.users')) + '</span>' +
       '<span class="pill gold">' + r.events.length + ' ' + esc(t('admin.events')) + '</span>' +
       '<span class="pill ' + (st.kind !== 'local' ? 'ok' : '') + '">' + (st.kind !== 'local' ? '☁ ' : '💾 ') + esc(collectLabel) + '</span>' +
+      '<span class="pill ' + (A.dbReady() ? 'ok' : '') + '">' + (A.dbReady() ? '🗄 ' : '📴 ') +
+      esc(A.dbReady() ? t('admin.dbOn') : t('admin.dbOff')) + '</span>' +
       '<span class="spacer"></span>' +
       (st.kind !== 'local' ? '<button class="btn sm" id="testrow">📨 ' + esc(t('admin.test')) + '</button>' : '') +
       (st.kind !== 'local' && st.kind === 'sheet' ? '<a class="btn sm" id="opencollector" href="' + esc(st.url) + '" target="_blank" rel="noopener">🔗 ' + esc(t('admin.opencollector')) + '</a>' : '') +
@@ -70,6 +72,14 @@
           esc(e.type) + (e.reason ? ' <span class="faint">(' + esc(e.reason) + ')</span>' : '') + '</td><td>' + esc(e.device || '—') + '</td></tr>';
       }).join('') : '<tr><td colspan="4" class="muted">—</td></tr>') +
       '</tbody></table></div></div>' +
+      '<div class="card" id="db-card" style="margin-top:16px">' +
+      '<h3>' + esc(t('admin.db')) + '</h3>' +
+      (A.dbReady()
+        ? '<p class="muted small">' + esc(t('admin.dbnote')) + '</p>' +
+          '<button class="btn sm primary" id="loaddb">⬇ ' + esc(t('admin.loadacc')) + '</button>' +
+          '<div id="db-out" style="margin-top:14px"></div>'
+        : '<p class="muted small">' + esc(t('admin.localonly')) + '</p>') +
+      '</div>' +
       '<div class="notice warn" style="margin-top:16px">' + esc(t('admin.localonly')) + '</div>';
     qs('#csv').addEventListener('click', function () {
       I.download('robocl-users-' + new Date().toISOString().slice(0, 10) + '.csv', A.toCSV(), 'text/csv;charset=utf-8');
@@ -82,6 +92,56 @@
       const sent = A.testCollector();
       I.toast(sent ? t('admin.tested') : t('admin.notest'));
     });
+    const lb = qs('#loaddb');
+    if (lb) lb.addEventListener('click', loadDb);
+  }
+
+  function fmt(v) { return v ? I.fmtDate(v) : '—'; }
+
+  /* pull every account out of the database (usernames + activity, no hashes) */
+  async function loadDb() {
+    const out = qs('#db-out'), btn = qs('#loaddb');
+    btn.disabled = true;
+    out.innerHTML = '<div class="skel" style="height:70px"></div>';
+    const d = await A.dbAccounts();
+    btn.disabled = false;
+    if (!d.ok) {
+      out.innerHTML = '<div class="notice bad">' + esc(t('admin.dbfail')) + ' — ' + esc(d.error || '') + '</div>';
+      return;
+    }
+    const accs = d.accounts || [], evs = d.events || [];
+    out.innerHTML =
+      '<div class="row" style="margin-bottom:10px">' +
+      '<span class="pill">' + accs.length + ' ' + esc(t('admin.users')) + '</span>' +
+      '<span class="pill gold">' + evs.length + ' ' + esc(t('admin.events')) + '</span>' +
+      '<span class="spacer"></span><button class="btn sm" id="dbcsv">⬇ ' + esc(t('admin.export')) + '</button></div>' +
+      '<div class="scroll-x"><table class="tbl"><thead><tr><th>#</th><th>' + esc(I.state.lang === 'km' ? 'ឈ្មោះ' : 'Username') +
+      '</th><th>' + esc(I.state.lang === 'km' ? 'បង្កើត' : 'Created') + '</th><th>' + esc(I.state.lang === 'km' ? 'ចូលចុងក្រោយ' : 'Last sign-in') +
+      '</th><th>' + esc(I.state.lang === 'km' ? 'ចំនួនចូល' : 'Sign-ins') + '</th><th>' + esc(I.state.lang === 'km' ? 'បរាជ័យ' : 'Failed') + '</th><th>Lang</th></tr></thead><tbody>' +
+      (accs.length ? accs.map(function (a, i) {
+        return '<tr><td>' + (i + 1) + '</td><td><b>' + esc(a.username) + '</b></td><td class="nowrap">' + esc(fmt(a.created)) +
+          '</td><td class="nowrap">' + esc(fmt(a.last_login)) + '</td><td>' + (a.logins || 0) + '</td><td>' + (a.failed || 0) +
+          '</td><td>' + esc(a.lang || '') + '</td></tr>';
+      }).join('') : '<tr><td colspan="7" class="muted">' + esc(t('admin.none')) + '</td></tr>') +
+      '</tbody></table></div>' +
+      (evs.length ? '<h4 style="margin:16px 0 8px">' + esc(t('admin.events')) + '</h4><div class="scroll-x"><table class="tbl">' +
+        '<thead><tr><th>' + esc(t('admin.events')) + '</th><th>' + esc(I.state.lang === 'km' ? 'ឈ្មោះ' : 'Username') +
+        '</th><th>' + esc(I.state.lang === 'km' ? 'សកម្មភាព' : 'Action') + '</th><th>' + esc(I.state.lang === 'km' ? 'ឧបករណ៍' : 'Device') + '</th></tr></thead><tbody>' +
+        evs.slice(0, 200).map(function (e) {
+          return '<tr><td class="nowrap">' + esc(fmt(e.created)) + '</td><td>' + esc(e.username || '') + '</td><td>' + esc(e.type) +
+            (e.reason ? ' <span class="faint">(' + esc(e.reason) + ')</span>' : '') + '</td><td>' + esc(e.device || '') + '</td></tr>';
+        }).join('') + '</tbody></table></div>' : '');
+    qs('#dbcsv').addEventListener('click', function () {
+      const lines = ['type,username,created,last_login,logins,failed,device,lang'];
+      accs.forEach(function (a) {
+        lines.push(['account', a.username, a.created || '', a.last_login || '', a.logins || 0, a.failed || 0, '', a.lang || ''].join(','));
+      });
+      evs.forEach(function (e) {
+        lines.push([e.type, e.username || '', e.created || '', '', '', '', e.device || '', ''].join(','));
+      });
+      I.download('robocl-accounts-' + new Date().toISOString().slice(0, 10) + '.csv', lines.join('\n'), 'text/csv;charset=utf-8');
+    });
+    I.toast(t('admin.loaded') + ' ' + accs.length + ' ' + t('admin.users'));
   }
 
   document.addEventListener('DOMContentLoaded', function () {

@@ -134,6 +134,7 @@
       'auth.localnote': 'គណនីត្រូវបានរក្សាទុកនៅក្នុងកម្មវិធីរុករកនេះ ដោយលេខសម្ងាត់ធ្វើកូដសុវត្ថិភាព (PBKDF2)។',
       'auth.consent': 'ឈ្មោះអ្នកប្រើ និងពេលវេលាចូលប្រើរបស់អ្នក ត្រូវបានកត់ត្រាទុកសម្រាប់ម្ចាស់វេបសាយ (លេខសម្ងាត់មិនត្រូវបានកត់ត្រាទេ)។',
       'auth.consent.short': 'ព័ត៌មានចូលប្រើត្រូវបានកត់ត្រា',
+      'auth.err.offline': 'គណនីនេះស្ថិតក្នុងមូលដ្ឋានទិន្នន័យអនឡាញ — ត្រូវការអ៊ីនធឺណិតដើម្បីចូលប្រើ។',
 
       'dash.hi': 'សូមស្វាគមន៍',
       'dash.sub': 'នេះជាវឌ្ឍនភាពរបស់អ្នកថ្ងៃនេះ។',
@@ -303,6 +304,13 @@
       'admin.tested': 'បានផ្ញើ! សូមពិនិត្យ Google Sheet របស់អ្នក',
       'admin.notest': 'មិនទាន់ភ្ជាប់ការប្រមូលទិន្នន័យទេ',
       'admin.opencollector': 'បើកតារាងទិន្នន័យ',
+      'admin.db': 'មូលដ្ឋានទិន្នន័យគណនី',
+      'admin.dbOn': 'ភ្ជាប់មូលដ្ឋានទិន្នន័យរួចរាល់',
+      'admin.dbOff': 'មិនទាន់ភ្ជាប់មូលដ្ឋានទិន្នន័យ',
+      'admin.loadacc': 'ទាញយកគណនីទាំងអស់ពីមូលដ្ឋានទិន្នន័យ',
+      'admin.dbfail': 'មិនអាចភ្ជាប់មូលដ្ឋានទិន្នន័យបានទេ',
+      'admin.dbnote': 'គណនីទាំងអស់ពីគ្រប់ឧបករណ៍ស្ថិតក្នុងមូលដ្ឋានទិន្នន័យ។ លេខសម្ងាត់ត្រូវបានធ្វើកូដ bcrypt នៅក្នុងមូលដ្ឋានទិន្នន័យ ហើយមិនអាចមើលឃើញឡើយ។',
+      'admin.loaded': 'បានទាញយក',
       'admin.localonly': 'ទិន្នន័យខាងក្រោមមកពីកម្មវិធីរុករកនេះតែប៉ុណ្ណោះ។ ដើម្បីប្រមូលពីគ្រប់ឧបករណ៍ (ទូរស័ព្ទ កុំព្យូទ័រ) ត្រូវភ្ជាប់ Google Sheet ឬ Supabase — មើល tools/google-sheet-collector.gs និង docs/data/config.js។',
 
       'common.page': 'ទំព័រ',
@@ -437,6 +445,7 @@
       'auth.localnote': 'Accounts are kept in this browser, with passwords hashed using PBKDF2.',
       'auth.consent': 'Your username and sign-in times are recorded for the site owner (your password is not recorded).',
       'auth.consent.short': 'Sign-ins are recorded',
+      'auth.err.offline': 'This account lives in the online database — an internet connection is needed to sign in.',
 
       'dash.hi': 'Welcome',
       'dash.sub': 'Here is where you are today.',
@@ -606,6 +615,13 @@
       'admin.tested': 'Sent! Check your Google Sheet.',
       'admin.notest': 'No collector connected yet',
       'admin.opencollector': 'Open the collected data',
+      'admin.db': 'Account database',
+      'admin.dbOn': 'Account database connected',
+      'admin.dbOff': 'No account database',
+      'admin.loadacc': 'Load every account from the database',
+      'admin.dbfail': 'Could not reach the database',
+      'admin.dbnote': 'Every account from every device lives in the database. Passwords are bcrypt-hashed inside it and cannot be read by anyone.',
+      'admin.loaded': 'Loaded',
       'admin.localonly': 'The table below comes from THIS browser only. To collect sign-ups from every device (phones, other computers), connect a Google Sheet or Supabase — see tools/google-sheet-collector.gs and docs/data/config.js.',
 
       'common.page': 'Page',

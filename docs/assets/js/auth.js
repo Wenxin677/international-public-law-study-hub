@@ -20,6 +20,46 @@
 
   const CLOUD = window.ROBOCL_CLOUD || null;
   const SHEET = window.ROBOCL_SHEET || null;
+  const DB = window.ROBOCL_DB || null;
+
+  /* ---------------------------------------------------------------- database */
+  function dbReady() { return !!(DB && DB.url && DB.key); }
+  function lang() { return (window.IPL && window.IPL.state && window.IPL.state.lang) || 'km'; }
+  function deviceInfo() { return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'mobile' : 'desktop'; }
+  function userAgent() { return navigator.userAgent.slice(0, 180); }
+
+  async function rpc(fn, args) {
+    const url = String(DB.url).replace(/\/+$/, '') + '/rest/v1/rpc/' + fn;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': DB.key,
+        'Authorization': 'Bearer ' + DB.key
+      },
+      body: JSON.stringify(args || {})
+    });
+    if (!res.ok) throw new Error('database ' + res.status);
+    const txt = await res.text();
+    return txt ? JSON.parse(txt) : {};
+  }
+
+  /* a database account is remembered here by name only — no hash, because the
+     password hash stays in the database and is never sent to a browser */
+  function cacheServerAccount(username) {
+    const accs = accounts();
+    const key = String(username).toLowerCase();
+    const prev = accs[key] || {};
+    accs[key] = {
+      u: username, server: true, created: prev.created || Date.now(),
+      lastLogin: Date.now(), logins: (prev.logins || 0) + 1, algo: 'bcrypt (database)'
+    };
+    writeJSON(STORE.accounts, accs);
+  }
+  function isServerAccount(username) {
+    const rec = accounts()[String(username || '').toLowerCase()];
+    return !!(rec && rec.server);
+  }
 
   /* ---------------------------------------------------------------- hashing */
   function bytesToHex(b) {
@@ -225,6 +265,26 @@
     username = String(username || '').trim();
     const v = validate(username, password, confirm, true);
     if (!v.ok) return { ok: false, msg: v.msg };
+
+    /* the database is the source of truth when it is configured */
+    if (dbReady()) {
+      try {
+        const d = await rpc('robo_signup', {
+          p_username: username, p_password: password, p_lang: lang(),
+          p_device: deviceInfo(), p_ua: userAgent()
+        });
+        if (!d || !d.ok) {
+          return { ok: false, msg: d && d.error === 'taken' ? 'auth.err.taken' : 'auth.err.short.user' };
+        }
+        cacheServerAccount(d.username);
+        logEvent('signup', d.username, { algo: 'bcrypt (database)' });
+        startSession(d.username, true);
+        return { ok: true, msg: 'auth.created', user: d.username, db: true };
+      } catch (e) {
+        /* no connection → fall back to the on-device account below */
+      }
+    }
+
     const accs = accounts();
     if (accs[username.toLowerCase()]) return { ok: false, msg: 'auth.err.taken' };
     const algo = canPBKDF2 ? 'pbkdf2' : 'sha256';
@@ -244,9 +304,31 @@
   async function signin(username, password, remember) {
     username = String(username || '').trim();
     if (!username || !password) return { ok: false, msg: 'auth.err.empty' };
+
+    if (dbReady()) {
+      try {
+        const d = await rpc('robo_login', {
+          p_username: username, p_password: password, p_device: deviceInfo(),
+          p_ua: userAgent(), p_lang: lang()
+        });
+        if (d && d.ok) {
+          cacheServerAccount(d.username);
+          logEvent('signin', d.username, { algo: 'bcrypt (database)' });
+          startSession(d.username, remember !== false);
+          return { ok: true, msg: 'auth.signedin', user: d.username, db: true };
+        }
+        logEvent('signin_failed', username, { reason: 'bad_password' });
+        return { ok: false, msg: 'auth.err.bad' };
+      } catch (e) {
+        if (isServerAccount(username)) return { ok: false, msg: 'auth.err.offline' };
+        /* otherwise fall through and try an on-device account */
+      }
+    }
+
     const accs = accounts();
     const rec = accs[username.toLowerCase()];
     if (!rec) { logEvent('signin_failed', username, { reason: 'no_account' }); return { ok: false, msg: 'auth.err.bad' }; }
+    if (rec.server) return { ok: false, msg: 'auth.err.offline' };
     const hash = await derive(password, rec.salt, rec.iter, rec.algo);
     if (hash !== rec.hash) { logEvent('signin_failed', username, { reason: 'bad_password' }); return { ok: false, msg: 'auth.err.bad' }; }
     rec.lastLogin = Date.now();
@@ -275,11 +357,32 @@
 
   function signout() {
     const s = session();
-    if (s) logEvent('signout', s.u, {});
+    if (s) {
+      logEvent('signout', s.u, {});
+      if (dbReady()) {
+        try {
+          rpc('robo_logout', { p_username: s.u, p_device: deviceInfo() }).catch(function () {});
+        } catch (e) {}
+      }
+    }
     try { sessionStorage.removeItem(STORE.session); } catch (e) {}
     localStorage.removeItem(STORE.session);
     if (window.IPL) window.IPL.toast(window.IPL.t('auth.signedout'));
     setTimeout(function () { location.href = 'index.html'; }, 420);
+  }
+
+  /* ---------------------------------------------------------------- database admin */
+  /** every account in the database: usernames + activity, never password hashes */
+  async function dbAccounts() {
+    if (!dbReady()) return { ok: false, error: 'no_database' };
+    const secret = (DB.adminSecret || '').toString();
+    if (!secret) return { ok: false, error: 'no_secret' };
+    try {
+      const d = await rpc('robo_admin_accounts', { p_secret: secret });
+      return d && d.ok ? d : { ok: false, error: (d && d.error) || 'error' };
+    } catch (e) {
+      return { ok: false, error: String(e.message || e) };
+    }
   }
 
   /* admin: everything the owner needs, from this browser */
@@ -316,6 +419,7 @@
     accounts: accounts, events: events, report: report, toCSV: toCSV,
     config: CFG, cloudEnabled: !!((CLOUD && CLOUD.url && CLOUD.key) || (SHEET && SHEET.url)),
     collectorStatus: collectorStatus, testCollector: testCollector,
+    dbReady: dbReady, dbAccounts: dbAccounts, isServerAccount: isServerAccount,
     engine: canPBKDF2 ? 'PBKDF2-SHA256 (120k rounds)' : 'SHA-256 iterated (offline fallback)'
   };
 })();

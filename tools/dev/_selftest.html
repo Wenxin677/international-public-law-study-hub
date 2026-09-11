@@ -267,6 +267,12 @@ async function waitFor(fn, ms, step) {
   log('');
   log(fail ? ('RESULT: ' + pass + ' passed, ' + fail + ' FAILED') : ('RESULT: all ' + pass + ' checks passed'));
   log('done');
+  /* post the report to the local stub so it survives a preview pane that cannot
+     read the page back (tools/dev/collector_stub.py writes selftest_report.txt) */
+  try {
+    await fetch('http://127.0.0.1:8098/report', { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: lines.join('
+') });
+  } catch (e) { log('(report POST failed: ' + e.message + ')'); }
   try { localStorage.clear(); sessionStorage.clear(); } catch (e) {}
 })();
 </script>

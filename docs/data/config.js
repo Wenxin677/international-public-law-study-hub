@@ -17,7 +17,7 @@ window.ROBOCL_CONFIG = {
      shut (it will show setup instructions instead). With a database configured,
      admin.html asks for your account password instead — stronger, and nothing
      has to live in this file at all. */
-  adminCodeHash: ''
+  adminCodeHash: 'pbkdf2$120000$c1fea35780954683b52092bd82ba625a$8da8c2b171f82d0424a359c7367462850c3efca78e782926384d1f5771fa664f'
 };
 
 /* ==========================================================================

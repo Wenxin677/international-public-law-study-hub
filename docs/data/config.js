@@ -35,12 +35,11 @@ window.ROBOCL_CONFIG = {
    automatically as soon as one of these options is filled in.
    ========================================================================== */
 
-window.ROBOCL_SHEET = null;
-/* example:
 window.ROBOCL_SHEET = {
-  url: 'https://script.google.com/macros/s/AKfycb.../exec'
+  url: 'https://script.google.com/macros/s/AKfycbwzfS6SnL59jVnPTkaKbYngi2aa1WXmGCNOsiPz8QWtu5boEwsZiRrZ6LAUmWco6LcWLQ/exec'
 };
-*/
+/* verified working 2026-09-11: GET returns "RoboCL collector is running" and an
+   anonymous POST is accepted (302 → echo), which appends a row to the sheet. */
 
 window.ROBOCL_CLOUD = null;
 /* example:

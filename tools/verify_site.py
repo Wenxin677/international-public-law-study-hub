@@ -108,10 +108,61 @@ for page in ["dashboard.html", "learn.html", "quiz.html", "teacher.html", "libra
         problems.append(f"{js}: does not call IPL.guard() — page would be open without an account")
 
 admin_js = (SITE / "assets/js/admin.js").read_text(encoding="utf-8")
-if "adminCode" not in admin_js or "sessionStorage.getItem('robo.admin')" not in admin_js:
-    problems.append("admin.js: no owner-code gate")
+if "adminCodeHash" not in admin_js:
+    problems.append("admin.js: does not check the hashed owner code")
 if "panha2026" in admin_js:
-    problems.append("admin.js: still prints the default code on screen")
+    problems.append("admin.js: still prints a default code on screen")
+if "dbAccounts" not in admin_js:
+    problems.append("admin.js: no database panel")
+
+auth_js = (SITE / "assets/js/auth.js").read_text(encoding="utf-8")
+# the published config and code must never carry a plaintext owner code
+for f in [SITE / "data/config.js"] + list((SITE / "assets/js").glob("*.js")):
+    text = f.read_text(encoding="utf-8")
+    if "adminCode:" in text:
+        problems.append(f"{f.name}: plaintext adminCode is back — use adminCodeHash")
+# hardening that must stay in place
+for needle, msg in [("Content-Security-Policy", "pages are missing the CSP meta tag"),
+                    ("MIN_PASS = 8", "password minimum is not 8"),
+                    ("lockedOut", "no brute-force lockout in auth.js"),
+                    ("mode: 'no-cors'", "collector fetch is not CORS-safe")]:
+    if needle == "Content-Security-Policy":
+        if not all(needle in p.read_text(encoding="utf-8") for p in html_files):
+            problems.append(msg)
+    elif needle not in auth_js:
+        problems.append(msg)
+
+# --- security rules that must never regress ---------------------------------
+ROOT = SITE.parent
+admin_js = (SITE / "assets/js/admin.js").read_text(encoding="utf-8")
+sql = (ROOT / "tools/supabase-accounts.sql").read_text(encoding="utf-8")
+core_js = (SITE / "assets/js/core.js").read_text(encoding="utf-8")
+teacher_js = (SITE / "assets/js/teacher.js").read_text(encoding="utf-8")
+
+for needle, msg in [("verifyCode", "admin.js no longer verifies the hashed owner code"),
+                    ("codeLocked", "admin.js has no lockout on wrong owner codes")]:
+    if needle not in admin_js:
+        problems.append(msg)
+for needle, msg in [("admin_denied", "the account list has no lockout in the SQL"),
+                    ("drop function if exists public.robo_admin_accounts(text)",
+                     "re-running the SQL would leave the old admin function callable"),
+                    ("length(p_password) < 8", "the SQL does not enforce the 8-character minimum")]:
+    if needle not in sql:
+        problems.append(msg)
+if "openSettings" in teacher_js or "api-key" in teacher_js:
+    problems.append("teacher.js still offers to store an API key")
+for needle, msg in [("admin.setup", "no owner-code setup instructions"),
+                    ("admin.codelocked", "no lockout message for wrong owner codes")]:
+    if needle not in core_js:
+        problems.append(msg)
+
+# a published owner code is the one secret that must never appear again
+for f in [ROOT / "README.md", ROOT / "NOTICE.md", ROOT / "tools/desktop-readme.txt",
+          SITE / "data/config.js", SITE / "assets/js/auth.js", SITE / "assets/js/admin.js"]:
+    if f.exists() and "panha2026" in f.read_text(encoding="utf-8"):
+        problems.append(f"{f.name}: the old plaintext owner code is back in the repo")
+if "adminSecret" in (ROOT / "README.md").read_text(encoding="utf-8"):
+    problems.append("README.md still documents a removed adminSecret setting")
 
 print("\n".join(notes))
 print()

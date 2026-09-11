@@ -22,7 +22,7 @@ WHAT IS INSIDE
   glossary.html   193 Khmer–English legal terms
   about.html      Who made it and how
   admin.html      Owner page: the accounts and sign-ins recorded on this computer
-                  (code: panha2026 — change it in data/config.js)
+                  (ask Sok Panha for the owner code — it is not stored in the files)
 
 TIPS
   • Switch Khmer / English with the buttons at the top right (there are only two).

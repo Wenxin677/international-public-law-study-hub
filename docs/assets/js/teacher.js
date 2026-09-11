@@ -563,35 +563,6 @@
     });
   }
 
-  /* ---------------------------------------------------------------- optional LLM */
-  function getApi() { try { return JSON.parse(localStorage.getItem(I.STORE.api) || 'null'); } catch (e) { return null; } }
-  function setApi(cfg) {
-    if (cfg && cfg.key) localStorage.setItem(I.STORE.api, JSON.stringify(cfg));
-    else localStorage.removeItem(I.STORE.api);
-  }
-  function openSettings() {
-    const cfg = getApi() || {};
-    I.modal(I.state.lang === 'km' ? 'ភ្ជាប់គំរូ AI (ជាជម្រើស)' : 'Connect an AI model (optional)',
-      '<div class="notice">' + esc(I.state.lang === 'km'
-        ? 'RoboCL ដំណើរការបានល្អដោយខ្លួនឯង ដោយស្វែងរកក្នុងសៀវភៅ។ បើអ្នកចង់បានចម្លើយបែបសរសេរបន្ថែម អ្នកអាចភ្ជាប់ API key ផ្ទាល់ខ្លួន។ Key រក្សាទុកក្នុងកម្មវិធីរុករកតែប៉ុណ្ណោះ។'
-        : 'RoboCL works on its own by retrieving from the book. If you want extra written answers you can connect your own API key. The key is stored only in this browser.') + '</div>' +
-      '<div class="field"><label>' + esc(I.state.lang === 'km' ? 'អាសយដ្ឋាន API' : 'API base URL') + '</label><input class="input" id="api-base" placeholder="https://api.openai.com/v1" value="' + esc(cfg.baseUrl || '') + '"></div>' +
-      '<div class="field"><label>' + esc(I.state.lang === 'km' ? 'ឈ្មោះម៉ូដែល' : 'Model') + '</label><input class="input" id="api-model" placeholder="gpt-4o-mini" value="' + esc(cfg.model || '') + '"></div>' +
-      '<div class="field"><label>API key</label><input class="input" id="api-key" type="password" value="' + esc(cfg.key || '') + '"></div>' +
-      '<div class="row" style="margin-top:14px"><button class="btn primary sm" id="api-save">' + esc(t('common.save')) + '</button>' +
-      '<button class="btn sm" id="api-clear">' + esc(I.state.lang === 'km' ? 'លុប key' : 'Clear key') + '</button></div>');
-    qs('#api-save').addEventListener('click', function () {
-      setApi({
-        baseUrl: qs('#api-base').value.trim() || 'https://api.openai.com/v1',
-        model: qs('#api-model').value.trim() || 'gpt-4o-mini',
-        key: qs('#api-key').value.trim()
-      });
-      I.toast(t('common.saved'));
-      I.closeModal();
-    });
-    qs('#api-clear').addEventListener('click', function () { setApi(null); I.toast(t('common.saved')); I.closeModal(); });
-  }
-
   /* ---------------------------------------------------------------- init */
   function init() {
     const side = qs('#chat-side');
@@ -601,9 +572,7 @@
         '<button class="btn primary block" id="new-chat">＋ ' + esc(t('teacher.newchat')) + '</button>' +
         '<div class="small faint" style="margin:8px 4px 2px">' + esc(t('teacher.history')) + '</div>' +
         '<div class="chat-list" id="chat-list"></div>' +
-        '<hr><button class="btn ghost block sm" id="settings-btn" style="justify-content:flex-start">⚙ ' +
-        esc(I.state.lang === 'km' ? 'ការកំណត់ AI' : 'AI settings') + '</button>' +
-        '<a class="btn ghost block sm" href="library.html" style="justify-content:flex-start">📚 ' + esc(t('nav.library')) + '</a>';
+        '<hr><a class="btn ghost block sm" href="library.html" style="justify-content:flex-start">📚 ' + esc(t('nav.library')) + '</a>';
     }
     const back = I.el('div', { class: 'drawer-backdrop', id: 'side-back' });
     document.body.appendChild(back);
@@ -614,7 +583,6 @@
     emptyState();
 
     qs('#new-chat').addEventListener('click', newChat);
-    qs('#settings-btn').addEventListener('click', openSettings);
     const sideToggle = qs('#side-toggle');
     if (sideToggle) sideToggle.addEventListener('click', function () { toggleSide(!qs('#chat-side').classList.contains('open')); });
 

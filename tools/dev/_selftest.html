@@ -236,13 +236,18 @@ async function waitFor(fn, ms, step) {
   f.remove();
 
   f = await open('admin.html'); w = f.contentWindow; d = f.contentDocument;
-  check('admin asks for the code first', !!d.getElementById('code'));
-  d.getElementById('code').value = 'panha2026';
-  d.getElementById('go').click();
-  await sleep(300);
-  const adminTxt = d.getElementById('admin-body').textContent;
-  check('admin shows the account list after the code', /student1/.test(adminTxt), adminTxt.replace(/\s+/g, ' ').slice(0, 90));
-  check('admin offers CSV export', !!d.getElementById('csv') && !!d.getElementById('copy'));
+  const adminTxt = (d.getElementById('admin-body') || {}).textContent || '';
+  check('admin shows nothing until the owner code is set', !d.getElementById('code') || !d.getElementById('admin-tables'));
+  check('admin explains how to set an owner code', /admin_code\.py/.test(adminTxt) || !!d.getElementById('code'), adminTxt.replace(/\s+/g, ' ').slice(0, 90));
+  check('admin.js verifies the code with PBKDF2, not a bare compare', typeof w.IPLAuth.verifyCode === 'function' && w.IPLAuth.verifyCode.toString().indexOf('pbkdf2') > -1);
+  check('a wrong owner code is refused', (await w.IPLAuth.verifyCode('nope', 'pbkdf2$1000$00$ff')) === false);
+  check('five wrong codes lock the gate', (function () {
+    w.IPLAuth.clearCodeFailures();
+    for (let i = 0; i < 5; i++) w.IPLAuth.noteCodeFailure();
+    const locked = w.IPLAuth.codeLocked();
+    w.IPLAuth.clearCodeFailures();
+    return locked === true;
+  })());
   f.remove();
 
   /* ---------------------------------------------------------- language */

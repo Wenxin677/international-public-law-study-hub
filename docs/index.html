@@ -3,32 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.supabase.co; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>RoboCL · Public International Law Study Hub</title>
 <meta name="description" content="RoboCL — an AI teacher and study hub for public international law, built from the Khmer textbook, the ECCC Law and the Paris Convention. 33 lessons, 238 quiz questions, bilingual Khmer/English.">
 <meta name="theme-color" content="#0b1120">
 <meta property="og:title" content="RoboCL — Public International Law Study Hub">
 <meta property="og:description" content="An AI teacher that answers from the textbook, with the page number.">
 <meta property="og:image" content="assets/img/logo.png">
-<link rel="icon" href="assets/img/favicon.png?v=20260911b">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=20260911b">
+<link rel="icon" href="assets/img/favicon.png?v=20260911c">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=20260911c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20260911b">
-<script>
-  /* paint in the right theme and language before first paint (no flash) */
-  try {
-    var th = localStorage.getItem('robo.theme') || 'dark';
-    var lg = localStorage.getItem('robo.lang') === 'en' ? 'en' : 'km';
-    document.documentElement.dataset.theme = th;
-    document.documentElement.lang = lg;
-    document.documentElement.dataset.bootlang = lg;
-  } catch (e) {}
-</script>
+<link rel="stylesheet" href="assets/css/style.css?v=20260911c">
+<script src="assets/js/boot.js?v=20260911c"></script>
 </head>
 <body data-lang="km">
 
-<div id="splash"><div class="slogo"><img src="assets/img/logo.png?v=20260911b" alt="RoboCL"><span class="ring"></span></div><div class="lbl">RoboCL</div></div>
+<div id="splash"><div class="slogo"><img src="assets/img/logo.png?v=20260911c" alt="RoboCL"><span class="ring"></span></div><div class="lbl">RoboCL</div></div>
 
 <header class="topbar" id="topbar"></header>
 
@@ -56,7 +49,7 @@
         </div>
       </div>
       <div class="hero-logo">
-        <img src="assets/img/logo-glow.png?v=20260911b" alt="RoboCL — an astronaut reading a law book beside the scales of justice">
+        <img src="assets/img/logo-glow.png?v=20260911c" alt="RoboCL — an astronaut reading a law book beside the scales of justice">
       </div>
     </div>
     <div class="wrap" style="margin-top:34px"><div class="marquee" id="kw-marquee"></div></div>
@@ -140,9 +133,9 @@
 
 <footer class="site" id="footer"></footer>
 
-<script src="data/config.js?v=20260911b" defer></script>
-<script src="assets/js/core.js?v=20260911b" defer></script>
-<script src="assets/js/auth.js?v=20260911b" defer></script>
-<script src="assets/js/landing.js?v=20260911b" defer></script>
+<script src="data/config.js?v=20260911c" defer></script>
+<script src="assets/js/core.js?v=20260911c" defer></script>
+<script src="assets/js/auth.js?v=20260911c" defer></script>
+<script src="assets/js/landing.js?v=20260911c" defer></script>
 </body>
 </html>

@@ -67,6 +67,21 @@ const check = (name, cond, extra) => {
   const srv = await A.signin('dbonly', 'whatever', true);
   check('database account offline gives a clear message', srv.ok === false && srv.msg === 'auth.err.offline', JSON.stringify(srv));
 
-  console.log(`\nRESULT: ${pass} passed, ${fail} failed`);
+  console.log('owner code (no adminSecret in the published files)');
+const stored = 'pbkdf2$120000$' + 'a'.repeat(32) + '$' + 'b'.repeat(64);
+check('the PBKDF2 owner-code format is parsed, not just compared',
+  (await A.verifyCode('wrong', stored)) === false);
+check('a legacy plain SHA-256 hash still works', (await A.verifyCode('mycode', A.sha256Hex('mycode'))) === true);
+check('a wrong code against a SHA-256 hash is refused', (await A.verifyCode('other', A.sha256Hex('mycode'))) === false);
+A.clearCodeFailures();
+for (let i = 0; i < 5; i++) A.noteCodeFailure();
+check('five wrong owner codes lock the gate for a while', A.codeLocked() === true);
+A.clearCodeFailures();
+check('clearing resets the lock', A.codeLocked() === false);
+
+const rep = JSON.stringify(A.report());
+check('the admin export carries no password hashes', rep.indexOf('"hash"') === -1);
+
+console.log(`\nRESULT: ${pass} passed, ${fail} failed`);
   process.exit(fail ? 1 : 0);
 })();

@@ -46,8 +46,10 @@ not cover a question it says so instead of guessing.
   (opening the files directly from disk in some browsers) it falls back to iterated SHA-256.
 * Every app page is behind `IPL.guard()`: without a session you are sent to `signin.html`.
 * Sign-up / sign-in / sign-in-failure / sign-out events are recorded locally so the owner can
-  see who used the site. `admin.html` (code `panha2026`, change it in `docs/data/config.js`)
-  lists them and exports CSV or JSON.
+  see who used the site. `admin.html` lists them and exports CSV or JSON. It is opened with an
+  **owner code** that is only stored as a PBKDF2 hash in `docs/data/config.js` — make your own
+  with `python tools/admin_code.py "your code"`. With a database connected the page asks for your
+  own account password instead, and nothing secret is in the file at all.
 * **Collecting this from every visitor's device needs somewhere to send it** — a static site has
   nowhere to put it by itself. Two ready-made options, both one setting in
   [`docs/data/config.js`](docs/data/config.js):
@@ -78,6 +80,37 @@ not cover a question it says so instead of guessing.
 
 ---
 
+## Security
+
+What the site does to protect the people using it:
+
+| Area | Measure |
+|---|---|
+| Passwords | bcrypt inside the database (or PBKDF2-SHA256, 120k rounds, on the device when no database is set up) — never stored, never logged, never sent to the sheet collector |
+| Password rules | minimum 8 characters, with a strength meter; usernames limited to `a–z 0–9 _ .` |
+| Brute force | 8 failed attempts for a username in 15 minutes locks it out in the database, plus a 5-attempt / 10-minute lock in the browser |
+| Database exposure | Row Level Security with no policies: the public key cannot read or write the tables; only four functions are callable |
+| Account list | requires an `is_admin` account **and** its real password — no shared secret is published |
+| Owner code (no database) | compared against a **SHA-256 hash** in `config.js`, so the code is not in the repository (`tools/admin_code.py`) |
+| Script injection | strict `Content-Security-Policy` on every page (`script-src 'self'`, no inline scripts), all user text HTML-escaped, `object-src`/`base-uri` locked, `target=_blank` links carry `rel=noopener` |
+| Collecting data | only the username, event, device, browser string and time; the sign-up form tells users when collection is on |
+| Sessions | 14-day expiry, fresh token per sign-in, "don't remember me" keeps the session in the tab only |
+
+What is **not** protected, honestly:
+
+* **Page guards are convenience, not security.** The app pages are static files; anyone can read
+  the study content directly. The real protection is that *account data* lives in the database and
+  passwords are hashed — not that a page is hidden.
+* **The collector URL is public** (it has to be, so visitors' browsers can post to it). A stranger
+  who reads the source could add junk rows. The optional `token` in `config.js`/the Apps Script
+  raises the bar; if the sheet is abused, redeploy the Apps Script for a new URL. With a database
+  connected, events have a better home (server-side, RLS-protected).
+* **No server-side rate limiting on the static host.** Lockouts are enforced in the database and in
+  the browser; a determined attacker can still open many connections.
+* **GitHub Pages cannot send security headers** (HSTS, X-Frame-Options, Permissions-Policy). The CSP
+  is delivered by meta tag, which covers most of the practical risk. A custom domain + Cloudflare
+  in front would let you add the rest.
+
 ## Accounts in a real database (recommended once you have users)
 
 By default accounts live in each visitor's browser. Point the app at a database and every device
@@ -85,7 +118,7 @@ shares the same accounts — a student can sign up on a phone and sign in on a l
 
 ```
 tools/supabase-accounts.sql   →  the schema, the security rules and three functions
-docs/data/config.js           →  window.ROBOCL_DB = { url, key, adminSecret }
+docs/data/config.js           →  window.ROBOCL_DB = { url, key }
 ```
 
 What that SQL sets up:

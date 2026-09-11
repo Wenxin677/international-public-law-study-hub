@@ -37,6 +37,14 @@
 var SHEET_NAME = 'signins';          // tab name; created automatically
 var HEADERS = ['time', 'username', 'event', 'device', 'user agent', 'language', 'received'];
 
+/**
+ * Optional shared token. Leave it empty to accept every post (as before), or set
+ * it to a random string AND put the same value in docs/data/config.js → token.
+ * It is not real security (the value is visible in the site's source), but it
+ * makes junk posts from strangers who merely found the URL pointless.
+ */
+var TOKEN = '';
+
 function doGet() {
   return ContentService.createTextOutput('RoboCL collector is running');
 }
@@ -51,6 +59,9 @@ function doPost(e) {
   try {
     var raw = (e && e.postData && e.postData.contents) || '{}';
     var data = JSON.parse(raw);
+    if (TOKEN && String(data.token || '') !== TOKEN) {
+      return json({ ok: false, error: 'token' });        // not from our site
+    }
     var row = [
       data.ts ? new Date(Number(data.ts)) : new Date(),
       String(data.username || ''),

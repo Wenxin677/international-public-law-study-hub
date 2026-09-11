@@ -63,11 +63,14 @@ cited page.
 
 * Accounts are created with a **username and password only**. No email address, name or other
   personal data is requested or collected.
-* Passwords are **never stored and never transmitted**. The browser derives a PBKDF2-SHA256 hash
-  (120 000 rounds, random 16-byte salt) via the Web Crypto API and stores only that hash; a
-  pure-JS iterated SHA-256 path is used when `crypto.subtle` is unavailable (e.g. `file://`).
-  This is a study tool's convenience login — it is not a bank, and it is not built to protect
-  valuable secrets. Do not reuse an important password.
+* Passwords are **never stored and never transmitted** where no database is configured: the
+  browser derives a PBKDF2-SHA256 hash (120 000 rounds, random 16-byte salt) via the Web Crypto
+  API and stores only that hash; a pure-JS iterated SHA-256 path is used when `crypto.subtle` is
+  unavailable (e.g. `file://`). Passwords must be at least 8 characters. This is a study tool's
+  convenience login — it is not a bank, and it is not built to protect valuable secrets. Do not
+  reuse an important password.
+* Repeated wrong passwords are throttled: the browser stops after 5 failures for a username for
+  10 minutes, and the database locks a username for 15 minutes after 8 failures.
 * By default, accounts and the sign-up/sign-in record live **in the visitor's own browser**
   (localStorage). The owner can export them from `admin.html` on that device.
 * If the owner configures a collector (`docs/data/config.js`), each sign-up / sign-in /

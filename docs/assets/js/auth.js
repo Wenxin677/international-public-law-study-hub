@@ -14,8 +14,10 @@
   const ITER_FALLBACK = 8000;      // pure-JS SHA-256 is slower per round
 
   const CFG = Object.assign({
-    adminUsers: ['panha', 'sokpanha', 'sok_panha', 'admin'],
-    adminCode: 'panha2026'
+    /* no defaults that could be mistaken for security: the owner sets these in
+       docs/data/config.js (adminCodeHash, never a plaintext code) */
+    adminUsers: [],
+    adminCodeHash: ''
   }, window.ROBOCL_CONFIG || {});
 
   const CLOUD = window.ROBOCL_CLOUD || null;
@@ -168,21 +170,31 @@
   }
 
   function cloud(table, payload) {
+    /* throttle per event type: a sign-up immediately followed by a sign-in should
+       still produce two rows, while a stuck loop cannot flood the collector */
+    const kind = (payload && payload.type) || 'event';
+    const now = Date.now();
+    cloud._last = cloud._last || {};
+    if (cloud._last[kind] && now - cloud._last[kind] < 700) return false;
+    cloud._last[kind] = now;
+
     /* Google Sheets collector (Apps Script Web App).  Sent as text/plain so the
        browser does not send a CORS preflight, which Apps Script cannot answer.
        mode:'no-cors' makes it a fire-and-forget write — the row still lands. */
     if (SHEET && SHEET.url) {
       try {
+        const body = Object.assign({}, payload);
+        if (SHEET.token) body.token = SHEET.token;
         fetch(SHEET.url, {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(body),
           keepalive: true
         }).catch(function () {});
       } catch (e) {}
     }
-    if (!CLOUD || !CLOUD.url || !CLOUD.key) return;
+    if (!CLOUD || !CLOUD.url || !CLOUD.key) return true;
     const url = String(CLOUD.url).replace(/\/+$/, '') + '/rest/v1/' + (CLOUD.table || 'robo_users');
     try {
       fetch(url, {
@@ -196,6 +208,7 @@
         body: JSON.stringify(payload)
       }).catch(function () {});
     } catch (e) {}
+    return true;
   }
 
   /* what the collector sends: the username, the event and the device — never a
@@ -222,9 +235,51 @@
   function testCollector() {
     const st = collectorStatus();
     if (st.kind === 'local') return false;
-    cloud('collector', collectorPayload('test', 'test-row'));
-    return true;
+    /* bypass the throttle: this is an explicit one-off from the owner */
+    cloud._last = {};
+    return !!cloud('collector', collectorPayload('test', 'test-row'));
   }
+
+  /* ---------------------------------------------------------------- owner code */
+  /** constant-time compare, so the gate cannot be timed */
+  function sameSecret(a, b) {
+    a = String(a || ''); b = String(b || '');
+    if (a.length !== b.length) return false;
+    let diff = 0;
+    for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+    return diff === 0;
+  }
+  /** Check the owner code against what config.js holds. Prefers the slow PBKDF2
+   *  format written by tools/admin_code.py ("pbkdf2$<iter>$<salt>$<hash>"),
+   *  and still accepts a plain SHA-256 hex if someone made one that way. */
+  async function verifyCode(code, stored) {
+    if (!stored || !code) return false;
+    const parts = String(stored).split('$');
+    if (parts.length === 4 && parts[0] === 'pbkdf2') {
+      const iter = parseInt(parts[1], 10) || ITER_PBKDF2;
+      const got = await derive(code, parts[2], iter, 'pbkdf2');
+      const want = parts[3];
+      return !!got && sameSecret(got, want);
+    }
+    return sameSecret(sha256(code), String(stored));
+  }
+  const CODE_AFTER = 5;                 // wrong owner codes before a pause
+  const CODE_LOCK_MS = 5 * 60 * 1000;
+  function codeFailures() { return readJSON('robo.codefails', { count: 0, until: 0 }); }
+  function codeLocked() {
+    const rec = codeFailures();
+    if (rec.until && rec.until < Date.now()) { writeJSON('robo.codefails', { count: 0, until: 0 }); return false; }
+    return !!(rec.until && rec.until > Date.now());
+  }
+  function noteCodeFailure() {
+    const rec = codeFailures();
+    if (rec.until && rec.until < Date.now()) { rec.count = 0; rec.until = 0; }
+    rec.count = (rec.count || 0) + 1;
+    if (rec.count >= CODE_AFTER) { rec.until = Date.now() + CODE_LOCK_MS; rec.count = 0; }
+    writeJSON('robo.codefails', rec);
+    return rec;
+  }
+  function clearCodeFailures() { writeJSON('robo.codefails', { count: 0, until: 0 }); }
 
   /* ---------------------------------------------------------------- session */
   function session() {
@@ -243,17 +298,51 @@
 
   /* ---------------------------------------------------------------- validation */
   const USER_RE = /^[a-zA-Z0-9_.]{3,20}$/;
+  const MIN_PASS = 8;                 // was 6 — short passwords are the easiest to guess
+  const LOCK_AFTER = 5;               // failed attempts before a temporary lock
+  const LOCK_MS = 10 * 60 * 1000;     // 10 minutes
+
   function validate(username, password, confirm, isNew) {
     if (!username || !password) return { ok: false, msg: 'auth.err.empty' };
     if (!USER_RE.test(username)) return { ok: false, msg: 'auth.err.short.user' };
-    if (password.length < 6) return { ok: false, msg: 'auth.err.short.pass' };
+    if (password.length < MIN_PASS) return { ok: false, msg: 'auth.err.short.pass' };
     if (isNew && confirm != null && password !== confirm) return { ok: false, msg: 'auth.err.match' };
     return { ok: true };
   }
+
+  /* ---- brute-force protection for on-device accounts (the database does its own) */
+  function failures(username) {
+    const all = readJSON('robo.fails', {});
+    const rec = all[String(username || '').toLowerCase()];
+    if (!rec) return { count: 0, first: 0, until: 0 };
+    if (rec.until && rec.until < Date.now()) { delete all[String(username || '').toLowerCase()]; writeJSON('robo.fails', all); return { count: 0, first: 0, until: 0 }; }
+    return rec;
+  }
+  function noteFailure(username) {
+    const key = String(username || '').toLowerCase();
+    const all = readJSON('robo.fails', {});
+    const now = Date.now();
+    const rec = all[key] || { count: 0, first: now, until: 0 };
+    if (now - rec.first > LOCK_MS) { rec.count = 0; rec.first = now; }
+    rec.count++;
+    if (rec.count >= LOCK_AFTER) { rec.until = now + LOCK_MS; rec.count = 0; rec.first = now; }
+    all[key] = rec;
+    writeJSON('robo.fails', all);
+    return rec;
+  }
+  function lockedOut(username) {
+    const rec = failures(username);
+    return !!(rec.until && rec.until > Date.now());
+  }
+  function clearFailures(username) {
+    const all = readJSON('robo.fails', {});
+    delete all[String(username || '').toLowerCase()];
+    writeJSON('robo.fails', all);
+  }
   function strength(pw) {
     let s = 0;
-    if (pw.length >= 6) s += 30;
-    if (pw.length >= 10) s += 20;
+    if (pw.length >= 8) s += 30;
+    if (pw.length >= 12) s += 20;
     if (/[A-Z]/.test(pw) && /[a-z]/.test(pw)) s += 20;
     if (/[0-9]/.test(pw)) s += 15;
     if (/[^A-Za-z0-9]/.test(pw)) s += 15;
@@ -304,6 +393,7 @@
   async function signin(username, password, remember) {
     username = String(username || '').trim();
     if (!username || !password) return { ok: false, msg: 'auth.err.empty' };
+    if (lockedOut(username)) return { ok: false, msg: 'auth.err.locked' };
 
     if (dbReady()) {
       try {
@@ -313,9 +403,14 @@
         });
         if (d && d.ok) {
           cacheServerAccount(d.username);
+          clearFailures(d.username);
           logEvent('signin', d.username, { algo: 'bcrypt (database)' });
           startSession(d.username, remember !== false);
           return { ok: true, msg: 'auth.signedin', user: d.username, db: true };
+        }
+        if (d && d.error === 'locked') {
+          logEvent('signin_failed', username, { reason: 'locked' });
+          return { ok: false, msg: 'auth.err.locked' };
         }
         /* Not in the database — but if this browser already holds a valid account
            from before the database existed, move it across instead of locking the
@@ -333,6 +428,7 @@
               });
               if (moved && moved.ok) {
                 cacheServerAccount(moved.username);
+                clearFailures(moved.username);
                 logEvent('signin', moved.username, { migrated: true });
                 startSession(moved.username, remember !== false);
                 return { ok: true, msg: 'auth.signedin', user: moved.username, db: true, migrated: true };
@@ -340,6 +436,7 @@
             } catch (e) { /* keep the on-device account below */ }
           }
         }
+        noteFailure(username);
         logEvent('signin_failed', username, { reason: 'bad_password' });
         return { ok: false, msg: 'auth.err.bad' };
       } catch (e) {
@@ -350,29 +447,30 @@
 
     const accs = accounts();
     const rec = accs[username.toLowerCase()];
-    if (!rec) { logEvent('signin_failed', username, { reason: 'no_account' }); return { ok: false, msg: 'auth.err.bad' }; }
+    if (!rec) { noteFailure(username); logEvent('signin_failed', username, { reason: 'no_account' }); return { ok: false, msg: 'auth.err.bad' }; }
     if (rec.server) return { ok: false, msg: 'auth.err.offline' };
     const hash = await derive(password, rec.salt, rec.iter, rec.algo);
-    if (hash !== rec.hash) { logEvent('signin_failed', username, { reason: 'bad_password' }); return { ok: false, msg: 'auth.err.bad' }; }
+    if (hash !== rec.hash) { noteFailure(username); logEvent('signin_failed', username, { reason: 'bad_password' }); return { ok: false, msg: 'auth.err.bad' }; }
     rec.lastLogin = Date.now();
     rec.logins = (rec.logins || 1) + 1;
     writeJSON(STORE.accounts, accs);
+    clearFailures(username);
     logEvent('signin', rec.u, {});
     startSession(rec.u, remember !== false);
     return { ok: true, msg: 'auth.signedin', user: rec.u };
   }
 
   function startSession(username, remember) {
-    const s = { u: username, t: newToken(), ts: Date.now(), exp: Date.now() + 1000 * 60 * 60 * 24 * 30 };
-    writeJSON(STORE.session, s);
-    try { sessionStorage.setItem(STORE.session, JSON.stringify(s)); } catch (e) {}
-    if (!remember) {
-      // keep it for this tab only: drop the durable copy after the tab closes is
-      // not expressible with storage alone, so shorten the window instead
-      s.exp = Date.now() + 1000 * 60 * 60 * 12;
-      writeJSON(STORE.session, s);
+    const s = { u: username, t: newToken(), ts: Date.now(), exp: Date.now() + 1000 * 60 * 60 * 24 * 14 };
+    if (remember) {
+      writeJSON(STORE.session, s);                 // durable: this device remembers you
+      try { sessionStorage.setItem(STORE.session, JSON.stringify(s)); } catch (e) {}
+    } else {
+      /* "don't remember me" means the session dies with the tab: sessionStorage
+         only, and the durable copy is removed */
+      localStorage.removeItem(STORE.session);
+      try { sessionStorage.setItem(STORE.session, JSON.stringify(s)); } catch (e) {}
     }
-    // remember the language this account last used
     const accs = accounts();
     if (accs[username.toLowerCase()]) { accs[username.toLowerCase()].lang = (window.IPL && window.IPL.state.lang) || 'km'; writeJSON(STORE.accounts, accs); }
     return s;
@@ -395,13 +493,16 @@
   }
 
   /* ---------------------------------------------------------------- database admin */
-  /** every account in the database: usernames + activity, never password hashes */
-  async function dbAccounts() {
+  /** every account in the database — verified by the owner's own password
+   *  (the SQL checks that the account is flagged is_admin), so no shared secret
+   *  has to be published in this repository. */
+  async function dbAccounts(ownerUsername, ownerPassword) {
     if (!dbReady()) return { ok: false, error: 'no_database' };
-    const secret = (DB.adminSecret || '').toString();
-    if (!secret) return { ok: false, error: 'no_secret' };
+    if (!ownerUsername || !ownerPassword) return { ok: false, error: 'need_credentials' };
     try {
-      const d = await rpc('robo_admin_accounts', { p_secret: secret });
+      const d = await rpc('robo_admin_accounts', {
+        p_username: String(ownerUsername).trim(), p_password: ownerPassword
+      });
       return d && d.ok ? d : { ok: false, error: (d && d.error) || 'error' };
     } catch (e) {
       return { ok: false, error: String(e.message || e) };
@@ -416,7 +517,7 @@
         const a = accs[k];
         return {
           username: a.u, created: a.created, lastLogin: a.lastLogin, logins: a.logins || 0,
-          admin: !!a.admin, algo: a.algo, hash: (a.hash || '').slice(0, 12) + '…'
+          admin: !!a.admin, algo: a.algo, onDevice: !a.server
         };
       }),
       events: evs.slice().reverse(),
@@ -443,6 +544,8 @@
     config: CFG, cloudEnabled: !!((CLOUD && CLOUD.url && CLOUD.key) || (SHEET && SHEET.url)),
     collectorStatus: collectorStatus, testCollector: testCollector,
     dbReady: dbReady, dbAccounts: dbAccounts, isServerAccount: isServerAccount,
+    sha256Hex: sha256, lockedOut: lockedOut,
+    verifyCode: verifyCode, codeLocked: codeLocked, noteCodeFailure: noteCodeFailure, clearCodeFailures: clearCodeFailures,
     engine: canPBKDF2 ? 'PBKDF2-SHA256 (120k rounds)' : 'SHA-256 iterated (offline fallback)'
   };
 })();

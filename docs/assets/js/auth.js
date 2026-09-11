@@ -317,6 +317,29 @@
           startSession(d.username, remember !== false);
           return { ok: true, msg: 'auth.signedin', user: d.username, db: true };
         }
+        /* Not in the database — but if this browser already holds a valid account
+           from before the database existed, move it across instead of locking the
+           person out. The local password must verify first, so a wrong password
+           can never create an account, and a name that is already taken in the
+           database is refused by robo_signup. */
+        const local = accounts()[username.toLowerCase()];
+        if (local && !local.server && local.hash) {
+          const check = await derive(password, local.salt, local.iter, local.algo);
+          if (check === local.hash) {
+            try {
+              const moved = await rpc('robo_signup', {
+                p_username: local.u || username, p_password: password, p_lang: lang(),
+                p_device: deviceInfo(), p_ua: userAgent()
+              });
+              if (moved && moved.ok) {
+                cacheServerAccount(moved.username);
+                logEvent('signin', moved.username, { migrated: true });
+                startSession(moved.username, remember !== false);
+                return { ok: true, msg: 'auth.signedin', user: moved.username, db: true, migrated: true };
+              }
+            } catch (e) { /* keep the on-device account below */ }
+          }
+        }
         logEvent('signin_failed', username, { reason: 'bad_password' });
         return { ok: false, msg: 'auth.err.bad' };
       } catch (e) {

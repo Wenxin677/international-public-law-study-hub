@@ -10,7 +10,7 @@ problems, notes = [], []
 html_files = sorted(SITE.glob("*.html"))
 for f in html_files:
     s = f.read_text(encoding="utf-8")
-    for m in re.finditer(r'(?:src|href)="([^"#?:]+)"', s):
+    for m in re.finditer(r'(?:src|href)="([^"#?:]+)(?:\?[^"]*)?"', s):
         ref = m.group(1)
         if ref.startswith(("http", "mailto:", "data:", "//")) or not ref:
             continue

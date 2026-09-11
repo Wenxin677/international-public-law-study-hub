@@ -8,8 +8,8 @@ window.ROBOCL_CONFIG = {
   adminUsers: ['panha', 'sokpanha', 'sok_panha'],
 
   /* The admin page (admin.html) asks for a code. Nothing secret is published any
-     more: this is the SHA-256 hash of your code, so reading this file does not
-     reveal it. Make your own with:
+     more: this is the PBKDF2-SHA256 hash of your code (120 000 rounds), so
+     reading this file does not reveal it. Make your own with:
 
          python tools/admin_code.py "your long code here"
 

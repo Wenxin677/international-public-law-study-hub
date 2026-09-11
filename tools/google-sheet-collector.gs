@@ -36,6 +36,8 @@
 
 var SHEET_NAME = 'signins';          // tab name; created automatically
 var HEADERS = ['time', 'username', 'event', 'device', 'user agent', 'language', 'received'];
+/* only these event names may be written; anything else is stored as "other" */
+var EVENT_TYPES = ['signup', 'signin', 'signin_failed', 'signout', 'test'];
 
 /**
  * Optional shared token. Leave it empty to accept every post (as before), or set
@@ -58,17 +60,28 @@ function doPost(e) {
   }
   try {
     var raw = (e && e.postData && e.postData.contents) || '{}';
+    if (raw.length > 4000) {
+      return json({ ok: false, error: 'too-big' });
+    }
     var data = JSON.parse(raw);
     if (TOKEN && String(data.token || '') !== TOKEN) {
       return json({ ok: false, error: 'token' });        // not from our site
     }
+    if (!underQuota()) {
+      return json({ ok: false, error: 'busy' });         // flood guard
+    }
+    /* The /exec URL is public by design, so every field is treated as hostile:
+       length-capped, control characters stripped, and a leading = + - @ prefixed
+       with an apostrophe so it can never become a live spreadsheet formula. */
+    var type = safe(data.type, 24);
+    if (EVENT_TYPES.indexOf(type) < 0) type = 'other';
     var row = [
       data.ts ? new Date(Number(data.ts)) : new Date(),
-      String(data.username || ''),
-      String(data.type || ''),
-      String(data.device || ''),
-      String(data.user_agent || ''),
-      String(data.lang || ''),
+      safe(data.username, 60),
+      type,
+      safe(data.device, 20),
+      safe(data.user_agent, 180),
+      safe(data.lang, 8),
       new Date()
     ];
     appendRow(row);
@@ -77,6 +90,33 @@ function doPost(e) {
     return json({ ok: false, error: String(err) });
   } finally {
     try { lock.releaseLock(); } catch (e2) {}
+  }
+}
+
+/** hostile input -> short, plain, non-formula text */
+function safe(v, max) {
+  var s = String(v == null ? '' : v);
+  var out = '';
+  var cap = max || 120;
+  for (var i = 0; i < s.length && out.length < cap; i++) {
+    var c = s.charCodeAt(i);
+    out += (c < 32 || c === 127) ? ' ' : s.charAt(i);
+  }
+  var first = out.charAt(0);
+  if (first === '=' || first === '+' || first === '-' || first === '@') out = "'" + out;
+  return out;
+}
+
+/** cheap flood guard: at most 150 rows a minute, whoever is posting */
+function underQuota() {
+  try {
+    var cache = CacheService.getScriptCache();
+    var n = Number(cache.get('writes') || 0);
+    if (n >= 150) return false;
+    cache.put('writes', String(n + 1), 60);
+    return true;
+  } catch (err) {
+    return true;   // never block real traffic because of a cache hiccup
   }
 }
 

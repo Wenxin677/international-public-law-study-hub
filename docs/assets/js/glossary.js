@@ -22,14 +22,22 @@
       host.className = 'flip-grid';
       host.innerHTML = rows.slice(0, 240).map(function (g, i) {
         const def = I.state.lang === 'km' ? (g.defKm || g.defEn) : (g.defEn || g.defKm);
-        return '<div class="flip" data-i="' + i + '"><div class="inner">' +
+        return '<div class="flip" data-i="' + i + '" role="button" tabindex="0" aria-pressed="false"><div class="inner">' +
           '<div class="face"><b>' + esc(g.km) + '</b><span class="muted small">' + esc(g.en) + '</span></div>' +
           '<div class="face back">' + esc(I.truncate(def || '—', 240)) +
           '<span class="faint small">' + esc(t('common.page')) + ' ' + (g.page || '—') + '</span></div>' +
           '</div></div>';
       }).join('');
+      /* a card you can only flip with a mouse is not a card — make it a button */
       I.qsa('.flip', host).forEach(function (f) {
-        f.addEventListener('click', function () { f.classList.toggle('on'); });
+        const toggle = function () {
+          const on = f.classList.toggle('on');
+          f.setAttribute('aria-pressed', on ? 'true' : 'false');
+        };
+        f.addEventListener('click', toggle);
+        f.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); toggle(); }
+        });
       });
       return;
     }
@@ -39,12 +47,17 @@
       esc(t('gloss.def')) + '</th><th>' + esc(t('common.page')) + '</th></tr></thead><tbody>' +
       rows.slice(0, 400).map(function (g, i) {
         const def = I.state.lang === 'km' ? (g.defKm || g.defEn) : (g.defEn || g.defKm);
-        return '<tr class="gloss-row" data-i="' + i + '"><td class="gloss-term">' + esc(g.km) + '</td>' +
+        return '<tr class="gloss-row" data-i="' + i + '" tabindex="0" role="button"><td class="gloss-term">' + esc(g.km) + '</td>' +
           '<td>' + esc(g.en) + '</td><td class="gloss-def">' + esc(I.truncate(def || '—', 150)) + '</td>' +
           '<td class="nowrap">p.' + (g.page || '—') + '</td></tr>';
       }).join('') + '</tbody></table></div></div>';
+    /* rows open a detail panel on click — they must answer Enter/Space too */
     I.qsa('.gloss-row', host).forEach(function (r) {
-      r.addEventListener('click', function () { detail(rows[+r.dataset.i]); });
+      const open = function () { detail(rows[+r.dataset.i]); };
+      r.addEventListener('click', open);
+      r.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); open(); }
+      });
     });
   }
 
@@ -64,6 +77,9 @@
   document.addEventListener('DOMContentLoaded', function () {
     if (!I.guard()) return;
     I.renderChrome('glossary.html');
+    qs('#gsearch').setAttribute('aria-label', t('common.search'));
+    const gc = qs('#gcount');
+    if (gc) gc.setAttribute('aria-live', 'polite');
     qs('#gsearch').addEventListener('input', function () { render(); });
     I.qsa('[data-mode]').forEach(function (b) {
       b.addEventListener('click', function () {

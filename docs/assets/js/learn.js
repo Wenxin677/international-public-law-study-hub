@@ -17,19 +17,23 @@
           esc(I.pick(l.title)) + '</span></a>';
       }).join('');
       return '<div class="ch' + open + '" data-ch="' + ch.id + '">' +
-        '<button data-toggle="' + ch.id + '"><span class="n">' + (ch.num || '•') + '</span>' +
+        '<button data-toggle="' + ch.id + '" aria-expanded="' + (open ? 'true' : 'false') + '"><span class="n">' + (ch.num || '•') + '</span>' +
         '<span style="flex:1">' + esc(I.pick(ch.title)) + '</span><span class="faint small">' + ch.lessons.length + '</span></button>' +
         '<div class="ls">' + items + '</div></div>';
     }).join('');
     I.qsa('[data-toggle]', host).forEach(function (b) {
-      b.addEventListener('click', function () { qs('[data-ch="' + b.dataset.toggle + '"]', host).classList.toggle('open'); });
+      b.addEventListener('click', function () {
+        const box = qs('[data-ch="' + b.dataset.toggle + '"]', host);
+        const isOpen = box.classList.toggle('open');
+        b.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
     });
   }
 
   function flipCard(term) {
     const def = I.state.lang === 'km' ? (term.defKm || term.defEn) : (term.defEn || term.defKm);
     const other = I.state.lang === 'km' ? (term.defEn || '') : (term.defKm || '');
-    return '<div class="flip"><div class="inner"><div class="face"><b>' + esc(term.km) + '</b>' +
+    return '<div class="flip" role="button" tabindex="0" aria-pressed="false"><div class="inner"><div class="face"><b>' + esc(term.km) + '</b>' +
       '<span class="muted small">' + esc(term.en) + '</span></div>' +
       '<div class="face back">' + esc(I.truncate(def || '—', 300)) +
       (other && other !== def ? '<span class="faint small">' + esc(I.truncate(other, 160)) + '</span>' : '') +
@@ -86,7 +90,7 @@
         '<div class="flip-grid">' + terms.map(flipCard).join('') + '</div></div>' : '') +
 
       '<div class="lesson-block"><h2>' + esc(t('learn.notes')) + '</h2>' +
-      '<textarea class="input notes-area" id="notes" placeholder="' + esc(t('learn.notes.ph')) + '">' + esc(I.getNotes(l.id)) + '</textarea>' +
+      '<textarea class="input notes-area" id="notes" aria-label="' + esc(t('learn.notes')) + '" placeholder="' + esc(t('learn.notes.ph')) + '">' + esc(I.getNotes(l.id)) + '</textarea>' +
       '<div class="row" style="margin-top:8px"><button class="btn sm" id="save-notes">' + esc(t('common.save')) + '</button>' +
       '<span class="small faint" id="notes-state"></span></div></div>' +
 
@@ -102,7 +106,14 @@
       '</div>';
 
     I.qsa('.flip', qs('#lesson')).forEach(function (f) {
-      f.addEventListener('click', function () { f.classList.toggle('on'); });
+      const toggle = function () {
+        const on = f.classList.toggle('on');
+        f.setAttribute('aria-pressed', on ? 'true' : 'false');
+      };
+      f.addEventListener('click', toggle);
+      f.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); toggle(); }
+      });
     });
     I.qsa('[data-copy]', qs('#lesson')).forEach(function (b) {
       b.addEventListener('click', function () { I.copyText(b.dataset.copy); });
@@ -129,6 +140,8 @@
     renderRail();
     render();
     qs('#rail-wrap').classList.remove('open');
+    const rt = qs('#rail-toggle');
+    if (rt) rt.setAttribute('aria-expanded', 'false');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -139,7 +152,14 @@
     show(m);
     window.addEventListener('hashchange', function () { show(location.hash.replace('#', '')); });
     const rb = qs('#rail-toggle');
-    if (rb) rb.addEventListener('click', function () { qs('#rail-wrap').classList.toggle('open'); });
+    if (rb) {
+      rb.setAttribute('aria-expanded', 'false');
+      rb.setAttribute('aria-controls', 'rail-wrap');
+      rb.addEventListener('click', function () {
+        const open = qs('#rail-wrap').classList.toggle('open');
+        rb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
     if (D.lessons.length) {
       I.commandPalette(function () {
         return D.lessons.map(function (l) {

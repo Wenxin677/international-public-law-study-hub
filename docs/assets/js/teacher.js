@@ -349,18 +349,23 @@
     const shortP = qs('.lead', tmp);
 
     node.classList.add('streaming');
+    node.setAttribute('aria-busy', 'true');
     let k = 0;
+    let typed = false;
     const reveal = function () {
       if (k >= secs.length) {
         node.classList.remove('streaming');
+        node.setAttribute('aria-busy', 'false');
         wireAnswer(node);
         if (done) done();
         return;
       }
       const sec = secs[k++];
       host.appendChild(sec);
-      /* type out the first paragraph of the short-answer section only */
-      if (k === 1 && shortP && sec.contains(shortP)) {
+      /* type out the short-answer paragraph wherever it lands: follow-ups put a
+         hint section in front of it, so "first section" is not good enough */
+      if (!typed && shortP && sec.contains(shortP)) {
+        typed = true;
         const target = qs('.lead', sec);
         const text = target.textContent;
         target.textContent = '';
@@ -471,7 +476,8 @@
 
   function followUp(kind, query) {
     if (!query) return;
-    ask(query, { kind: kind });
+    /* the question is already in the thread — don't repeat it as a new turn */
+    ask(query, { kind: kind, silent: true });
   }
 
   function quizMe() {
@@ -542,6 +548,18 @@
     const side = qs('#chat-side'), back = qs('#side-back');
     if (side) side.classList.toggle('open', v);
     if (back) back.classList.toggle('open', v);
+    const tgl = qs('#side-toggle');
+    if (tgl) tgl.setAttribute('aria-expanded', v ? 'true' : 'false');
+    /* the panel is off-canvas when closed: keep it out of the tab order and of
+       the accessibility tree so focus cannot land on something invisible */
+    if (side) {
+      side.setAttribute('aria-hidden', v ? 'false' : 'true');
+      if (window.matchMedia && window.matchMedia('(max-width: 860px)').matches) {
+        side.style.visibility = v ? 'visible' : 'hidden';
+      } else {
+        side.style.visibility = '';
+      }
+    }
   }
 
   /* ---------------------------------------------------------------- empty state */
@@ -584,10 +602,23 @@
 
     qs('#new-chat').addEventListener('click', newChat);
     const sideToggle = qs('#side-toggle');
-    if (sideToggle) sideToggle.addEventListener('click', function () { toggleSide(!qs('#chat-side').classList.contains('open')); });
+    if (sideToggle) {
+      sideToggle.setAttribute('aria-expanded', 'false');
+      sideToggle.setAttribute('aria-controls', 'chat-side');
+      sideToggle.addEventListener('click', function () { toggleSide(!qs('#chat-side').classList.contains('open')); });
+    }
+    /* announce the conversation, and let Escape close the history panel */
+    const threadEl = qs('#thread');
+    if (threadEl) threadEl.setAttribute('aria-live', 'polite');
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && qs('#chat-side') && qs('#chat-side').classList.contains('open')) toggleSide(false);
+    });
+    toggleSide(false);
 
     const ta = qs('#chat-text');
     const send = qs('#send-btn');
+    ta.setAttribute('aria-label', t('teacher.placeholder'));
+    send.setAttribute('aria-label', t('teacher.send'));
     const grow = function () { ta.style.height = 'auto'; ta.style.height = Math.min(190, ta.scrollHeight) + 'px'; };
     ta.addEventListener('input', grow);
     ta.addEventListener('keydown', function (e) {

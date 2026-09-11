@@ -62,15 +62,17 @@
     else if (id.indexOf('ch:') === 0) items = shuffle(D.quizForChapter(id.slice(3)).slice()).slice(0, 12);
     else if (id.indexOf('ls:') === 0) items = D.quizForLesson(id.slice(3)).map(function (q, i) { return { q: q, lesson: D.lessonById(id.slice(3)), index: i }; });
     if (!items.length) { I.toast(t('quiz.noquiz')); return; }
-    /* shuffle the options of each question so the correct key is not always first */
+    /* Shuffle a COPY of the options per run: the canonical question objects in
+       IPL_DATA must never be rewritten in place. */
     items.forEach(function (it) {
       const q = it.q;
+      const km = (q.options && q.options.km) || [];
+      const en = (q.options && q.options.en) || [];
       const pairs = [];
-      (q.options.km || []).forEach(function (o, i) { pairs.push({ km: o, en: (q.options.en || [])[i] || '', right: i === q.answer }); });
+      km.forEach(function (o, i) { pairs.push({ km: o, en: en[i] || '', right: i === q.answer }); });
       shuffle(pairs);
-      q.options.km = pairs.map(function (p) { return p.km; });
-      q.options.en = pairs.map(function (p) { return p.en; });
-      q.answer = pairs.findIndex(function (p) { return p.right; });
+      it.opts = { km: pairs.map(function (p) { return p.km; }), en: pairs.map(function (p) { return p.en; }) };
+      it.answer = pairs.findIndex(function (p) { return p.right; });
     });
     run.list = items; run.i = 0; run.right = 0; run.wrong = []; run.id = id; run.answered = false;
     qs('#setup-wrap').hidden = true;
@@ -84,7 +86,8 @@
     const it = run.list[run.i];
     const q = it.q;
     const L = I.state.lang;
-    const opts = (q.options && (q.options[L] || q.options.en || q.options.km)) || [];
+    const src = it.opts || (q.options || {});
+    const opts = src[L] || src.en || src.km || [];
     run.answered = false;
     qs('#run-wrap').innerHTML =
       '<div class="q-card">' +
@@ -99,7 +102,7 @@
       opts.map(function (o, i) {
         return '<button class="option" data-opt="' + i + '"><span class="key">' + (i + 1) + '</span><span>' + esc(o) + '</span></button>';
       }).join('') + '</div>' +
-      '<div id="fb"></div>' +
+      '<div id="fb" aria-live="polite"></div>' +
       '<div class="row" style="margin-top:16px"><span class="spacer"></span>' +
       '<button class="btn primary" id="next" disabled>' + (run.i === run.list.length - 1 ? esc(t('quiz.finish')) : esc(t('quiz.next'))) + '</button></div>' +
       '</div>';
@@ -120,12 +123,11 @@
     const it = run.list[run.i], q = it.q;
     const L = I.state.lang;
     const btns = I.qsa('#opts .option');
-    const right = q.answer;
+    const right = (it.answer != null ? it.answer : q.answer);
     btns.forEach(function (b) { b.disabled = true; });
     if (choice === right) {
       btns[choice].classList.add('correct');
       run.right++;
-      I.addXP(4);
     } else {
       btns[choice].classList.add('wrong');
       btns[right].classList.add('reveal');
@@ -149,6 +151,11 @@
     const total = run.list.length;
     const pct = Math.round((run.right / total) * 100);
     const saved = I.saveQuizResult(run.id, run.right, total, run.wrong.map(function (w) { return w.q; }));
+    /* XP for a run is paid once, and only when the record improves, so replaying
+       the same quiz cannot farm rank */
+    const bonus = saved.better ? (run.right * 4 + 6) : 0;
+    if (bonus) I.addXP(bonus);
+    const earned = saved.gained + bonus;
     qs('#run-wrap').hidden = true;
     qs('#result-wrap').hidden = false;
     const msg = pct >= 90 ? t('quiz.perfect') : (pct >= 60 ? t('quiz.good') : t('quiz.keep'));
@@ -158,7 +165,8 @@
       '<h2 style="margin:0">' + pct + '%</h2>' +
       '<div class="muted">' + esc(msg) + '</div>' +
       (saved.better ? '<div class="pill ok" style="margin-top:10px">★ ' + esc(t('quiz.best')) + ' ' + run.right + '/' + total + '</div>' : '') +
-      '<div class="pill gold" style="margin-top:10px">+' + saved.gained + ' XP</div>' +
+      (earned ? '<div class="pill gold" style="margin-top:10px">+' + earned + ' XP</div>'
+        : '<div class="muted small" style="margin-top:10px">' + esc(t('quiz.repeat')) + '</div>') +
       '</div>' +
       '<div class="row" style="justify-content:center;margin-bottom:18px">' +
       '<button class="btn primary" id="again">↻ ' + esc(t('quiz.again')) + '</button>' +
@@ -179,7 +187,6 @@
       }).join('') : '') +
       '</div>';
     qs('#again').addEventListener('click', function () { start(run.id); });
-    I.addXP(6);
   }
 
   function backToSetup() {
@@ -194,6 +201,7 @@
     if (!I.guard()) return;
     I.renderChrome('quiz.html');
     setup();
+    qs('#qsearch').setAttribute('aria-label', t('common.search'));
     qs('#qsearch').addEventListener('input', setup);
     const m = location.hash.match(/(?:#|&)(lesson|chapter)=([^&]+)/);
     if (m) {

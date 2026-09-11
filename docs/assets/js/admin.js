@@ -5,9 +5,11 @@
      · a database is configured → the owner signs in with their own account
        password (verified inside the database; the account must be flagged
        is_admin). Nothing secret is published in the repository.
-     · no database → the owner code is checked against a SHA-256 hash in
+     · no database → the owner code is checked against a PBKDF2 hash in
        docs/data/config.js (make one with tools/admin_code.py), so the code
        itself never appears in the published source.
+   Note: with no database this gate is a convenience only — the rows it reveals
+   live in the visitor's own browser, never anywhere else.
    ========================================================================== */
 (function () {
   'use strict';
@@ -31,7 +33,7 @@
         '<div class="field"><label>' + esc(t('auth.password')) + '</label>' +
         '<input class="input" id="owner-pass" type="password" autocomplete="current-password"></div>' +
         '<button class="btn primary block" id="go">' + esc(t('admin.enter')) + '</button>' +
-        '<div class="notice bad" id="gate-err" hidden></div>' +
+        '<div class="notice bad" id="gate-err" role="alert" hidden></div>' +
         '<div class="small faint" style="margin-top:12px">' + esc(t('admin.ownerhint')) + '</div>' +
         '</div>';
       const submit = function () {
@@ -58,9 +60,9 @@
     body.innerHTML =
       '<div class="card" style="max-width:560px">' +
       '<h3>' + esc(t('admin.code')) + '</h3>' +
-      '<div class="field"><input class="input" id="code" type="password" placeholder="••••••••" autocomplete="off"></div>' +
+      '<div class="field"><input class="input" id="code" type="password" aria-label="' + esc(t('admin.code')) + '" placeholder="••••••••" autocomplete="off"></div>' +
       '<button class="btn primary block" id="go">' + esc(t('admin.enter')) + '</button>' +
-      '<div class="notice bad" id="gate-err" hidden></div>' +
+      '<div class="notice bad" id="gate-err" role="alert" hidden></div>' +
       '<div class="notice" style="margin:16px 0 0">' + esc(t('admin.localonly')) + '</div>' +
       '<div class="small faint" style="margin-top:12px">' + esc(t('admin.hashnote')) + '</div>' +
       '</div>';
@@ -147,12 +149,13 @@
         }).join('') + '</tbody></table></div>' : '');
     const csv = qs('#dbcsv');
     if (csv) csv.addEventListener('click', function () {
-      const lines = ['type,username,created,last_login,logins,failed,device,lang'];
+      const row = I.csvRow ? I.csvRow : function (c) { return c.join(','); };
+      const lines = [row(['type', 'username', 'created', 'last_login', 'logins', 'failed', 'device', 'lang'])];
       accs.forEach(function (a) {
-        lines.push(['account', a.username, a.created || '', a.last_login || '', a.logins || 0, a.failed || 0, '', a.lang || ''].join(','));
+        lines.push(row(['account', a.username, a.created || '', a.last_login || '', a.logins || 0, a.failed || 0, '', a.lang || '']));
       });
       evs.forEach(function (e) {
-        lines.push([e.type, e.username || '', e.created || '', '', '', '', e.device || '', ''].join(','));
+        lines.push(row([e.type, e.username || '', e.created || '', '', '', '', e.device || '', '']));
       });
       I.download('robocl-accounts-' + new Date().toISOString().slice(0, 10) + '.csv', lines.join('\n'), 'text/csv;charset=utf-8');
     });
@@ -226,7 +229,9 @@
     });
     const tr = qs('#testrow');
     if (tr) tr.addEventListener('click', function () {
-      I.toast(A.testCollector() ? t('admin.tested') : t('admin.notest'));
+      /* the browser cannot read the Apps Script reply (no-cors), so never claim
+         the row definitely landed — point the owner at the sheet instead */
+      I.toast(A.testCollector() ? t('admin.testsent') : t('admin.notest'), 4200);
     });
     const lb = qs('#loaddb');
     if (lb) lb.addEventListener('click', loadDatabase);

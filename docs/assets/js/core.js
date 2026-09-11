@@ -18,11 +18,43 @@
     seen: 'robo.seen'
   };
 
-  /* language set once on load; two options only */
+  /* Every storage touch goes through these. Blocked or denied storage (private
+     browsing, sandboxed iframes, storage turned off) must degrade to defaults —
+     an exception here would kill the shell before window.IPL exists. */
+  function sGet(key, dflt) {
+    try { const v = localStorage.getItem(key); return v == null ? (dflt === undefined ? null : dflt) : v; }
+    catch (e) { return dflt === undefined ? null : dflt; }
+  }
+  function sSet(key, val) {
+    try { localStorage.setItem(key, val); return true; } catch (e) { return false; }
+  }
+  function sDel(key) { try { localStorage.removeItem(key); } catch (e) {} }
+  function sJSON(key, dflt) {
+    try { const v = JSON.parse(sGet(key, 'null')); return v == null ? dflt : v; }
+    catch (e) { return dflt; }
+  }
+
+  /* the language for THIS page: an explicit ?_l= wins (so shared and deep links
+     actually work), then the remembered choice */
+  function bootLang() {
+    try {
+      const q = new URLSearchParams(location.search).get('_l');
+      if (q === 'en' || q === 'km') return q;
+    } catch (e) {}
+    return sGet(STORE.lang, 'km') === 'en' ? 'en' : 'km';
+  }
   const state = {
-    lang: localStorage.getItem(STORE.lang) === 'en' ? 'en' : 'km',
-    theme: localStorage.getItem(STORE.theme) || 'dark'
+    lang: bootLang(),
+    theme: sGet(STORE.theme, 'dark') === 'light' ? 'light' : 'dark'
   };
+  /* ?_l= has been consumed — keep the address bar and the Back button clean */
+  try {
+    const _u = new URL(location.href);
+    if (_u.searchParams.has('_l') && window.history && history.replaceState) {
+      _u.searchParams.delete('_l');
+      history.replaceState(null, '', _u.pathname + (_u.search || '') + _u.hash);
+    }
+  } catch (e) {}
 
   /* ------------------------------------------------------------ i18n */
   const I18N = {
@@ -199,6 +231,7 @@
       'quiz.page': 'ទំព័រ',
       'quiz.ask': 'សួរគ្រូ AI ពីសំណួរនេះ',
       'quiz.best': 'ល្អបំផុត',
+      'quiz.repeat': 'លទ្ធផលមិនប្រសើរជាងមុន — មិនបាន XP ថ្មីទេ។ ខិតខំឲ្យលើសកំណត់ចាស់ដើម្បីទទួលបានបន្ថែម។',
       'quiz.again': 'តេស្តម្តងទៀត',
       'quiz.perfect': 'ល្អឥតខ្ចោះ! អ្នកពូកែណាស់។',
       'quiz.good': 'ល្អណាស់! បន្តបែបនេះ។',
@@ -322,7 +355,7 @@
       'admin.setup': 'កំណត់កូដអ្នកគ្រប់គ្រងជាមុន',
       'admin.setuptext': 'ដើម្បីការពារទំព័រនេះ សូមបង្កើតកូដផ្ទាល់ខ្លួន រួចដាក់តែកូដហាស (hash) ក្នុងឯកសារកំណត់។',
       'admin.setupwhy': 'ដូច្នេះកូដពិតមិនបង្ហាញនៅក្នុងកូដប្រភពដែលគេមើលឃើញទេ។',
-      'admin.hashnote': 'កូដអ្នកគ្រប់គ្រងត្រូវបានផ្ទៀងផ្ទាត់តាមកូដហាស។ លេខសម្ងាត់អ្នកប្រើមិនអាចមើលឃើញឡើយ។',
+      'admin.hashnote': 'កូដអ្នកគ្រប់គ្រងត្រូវបានផ្ទៀងផ្ទាត់តាមកូដហាស។ នេះជាការការពារជាមូលដ្ឋានប៉ុណ្ណោះ មិនមែនជាសុវត្ថិភាពពិតប្រាកដទេ — ទិន្នន័យដែលបង្ហាញស្ថិតក្នុងកម្មវិធីរុករកនេះតែប៉ុណ្ណោះ។ សម្រាប់ទិន្នន័យសំខាន់ សូមប្រើប្រព័ន្ធទិន្នន័យ។ លេខសម្ងាត់អ្នកប្រើមិនអាចមើលឃើញឡើយ។',
       'admin.localonly': 'ទិន្នន័យខាងក្រោមមកពីកម្មវិធីរុករកនេះតែប៉ុណ្ណោះ។ ដើម្បីប្រមូលពីគ្រប់ឧបករណ៍ (ទូរស័ព្ទ កុំព្យូទ័រ) ត្រូវភ្ជាប់ Google Sheet ឬ Supabase — មើល tools/google-sheet-collector.gs និង docs/data/config.js។',
 
       'common.page': 'ទំព័រ',
@@ -346,6 +379,20 @@
       'foot.rights': 'ឧបករណ៍សិក្សាសម្រាប់ការសិក្សាប៉ុណ្ណោះ។ អត្ថបទទាំងអស់ជាកម្មសិទ្ធិរបស់អ្នកនិពន្ធ។',
       'foot.made': 'បង្កើតដោយ',
       'foot.with': 'ជាមួយ AI',
+      'a11y.skip': 'លោតទៅខ្លឹមសារសំខាន់',
+      'err.msg': 'មានបញ្ហាបច្ចេកទេសមួយ។ សូមផ្ទុកទំព័រឡើងវិញ បើទំព័រមិនដំណើរការត្រឹមត្រូវ។',
+      'err.storage': 'មិនអាចរក្សាទុកបានទេ — ទំហំផ្ទុកក្នុងកម្មវិធីរុករកពេញ ឬត្រូវបានបិទ។',
+      'auth.err.user.chars': 'ឈ្មោះអ្នកប្រើត្រូវមាន ៣–២០ តួអក្សរ ហើយប្រើបានតែអក្សរ លេខ ចំណុច និងសញ្ញា _ ប៉ុណ្ណោះ។',
+      'auth.forgot': 'ភ្លេចលេខសម្ងាត់?',
+      'auth.forgot.t': 'គណនីដែលភ្លេចលេខសម្ងាត់',
+      'auth.forgot.d': 'គណនីនៅលើឧបករណ៍នេះមិនអាចដូរលេខសម្ងាត់ដោយស្វ័យប្រវត្តិបានទេ ព្រោះលេខសម្ងាត់មិនត្រូវបានរក្សាទុក។ បើអ្នកមិនអាចចូលប្រើបាន សូមបង្កើតគណនីថ្មី ឬសម្អាតទិន្នន័យឧបករណ៍នេះ (ប្រវត្តិសិក្សាទាំងអស់នឹងត្រូវលុប)។',
+      'auth.forgot.clear': 'សម្អាតគណនី និងប្រវត្តិក្នុងឧបករណ៍នេះ',
+      'auth.forgot.confirm': 'លុបគណនី និងប្រវត្តិសិក្សាទាំងអស់ក្នុងឧបករណ៍នេះមែនទេ?',
+      'auth.forgot.done': 'ទិន្នន័យឧបករណ៍នេះត្រូវបានសម្អាតរួចរាល់។',
+      'auth.engine.db': 'គណនីរួមគ្នាតាមពពក',
+      'auth.engine.sheet': 'ព័ត៌មានចូលប្រើត្រូវបានកត់ត្រា',
+      'auth.engine.local': 'រក្សាទុកក្នុងឧបករណ៍នេះ',
+      'admin.testsent': 'បានផ្ញើទៅឧបករណ៍ប្រមូលហើយ — កម្មវិធីរុករកមិនអាចបញ្ជាក់បានទេ សូមបើក Google Sheet ដើម្បីផ្ទៀងផ្ទាត់។',
       'cmd.hint': 'វាយដើម្បីស្វែងរកមេរៀន ពាក្យ ឬទំព័រ',
       'cmd.none': 'រកមិនឃើញទេ'
     },
@@ -522,6 +569,7 @@
       'quiz.page': 'Page',
       'quiz.ask': 'Ask the AI teacher about this',
       'quiz.best': 'Best',
+      'quiz.repeat': 'No new XP — this run did not beat your best. Improve on it to earn more.',
       'quiz.again': 'Retake',
       'quiz.perfect': 'Perfect! Well done.',
       'quiz.good': 'Good work — keep going.',
@@ -643,9 +691,9 @@
       'admin.ownerhint': 'The account must be flagged is_admin in the database. See tools/supabase-accounts.sql.',
       'admin.ownerdenied': 'That account is not an owner account.',
       'admin.setup': 'Set an owner code first',
-      'admin.setuptext': 'To protect this page, make up your own code and put only its SHA-256 hash into the settings file.',
+      'admin.setuptext': 'To protect this page, make up your own code and put only its PBKDF2 hash into the settings file.',
       'admin.setupwhy': 'That way the real code never appears in the published source.',
-      'admin.hashnote': 'The owner code is checked against a hash. User passwords are never readable.',
+      'admin.hashnote': 'The owner code is checked against a hash. It is a convenience gate only, not real security — the data shown lives in this browser. Use the database for anything sensitive. User passwords are never readable.',
       'admin.localonly': 'The table below comes from THIS browser only. To collect sign-ups from every device (phones, other computers), connect a Google Sheet or Supabase — see tools/google-sheet-collector.gs and docs/data/config.js.',
 
       'common.page': 'Page',
@@ -669,6 +717,20 @@
       'foot.rights': 'A study tool for learning only. All quoted text remains the property of its authors.',
       'foot.made': 'Made by',
       'foot.with': 'with AI',
+      'a11y.skip': 'Skip to content',
+      'err.msg': 'Something went wrong. Reload the page if it stops working.',
+      'err.storage': 'Could not save — this browser’s storage is full or turned off.',
+      'auth.err.user.chars': 'Username must be 3–20 characters, using only letters, numbers, dot and underscore.',
+      'auth.forgot': 'Forgot your password?',
+      'auth.forgot.t': 'Forgotten password',
+      'auth.forgot.d': 'Accounts on this device cannot have their password changed for you, because the password itself is never stored. If you cannot sign in, create a new account — or clear this device’s data (all study progress will be deleted).',
+      'auth.forgot.clear': 'Clear the accounts and history on this device',
+      'auth.forgot.confirm': 'Delete every account and all study progress on this device?',
+      'auth.forgot.done': 'This device’s data has been cleared.',
+      'auth.engine.db': 'Accounts shared in the cloud',
+      'auth.engine.sheet': 'Sign-ins are collected',
+      'auth.engine.local': 'Stored on this device',
+      'admin.testsent': 'Sent to the collector — the browser cannot confirm it; open the Google Sheet to check.',
       'cmd.hint': 'Type to search lessons, terms or pages',
       'cmd.none': 'Nothing found'
     }
@@ -707,14 +769,43 @@
   function blankProgress() {
     return { lessons: {}, quiz: {}, xp: 0, streak: 0, lastDay: null, notes: {} };
   }
+  /* progress belongs to the account, not to the browser: two students on one
+     device must never see each other's marks, notes or scores */
+  function progressKey() {
+    let u = 'guest';
+    try {
+      const s = window.IPLAuth && window.IPLAuth.session ? window.IPLAuth.session() : null;
+      if (s && s.u) u = String(s.u).toLowerCase();
+    } catch (e) {}
+    return STORE.progress + '.' + u;
+  }
   function getProgress() {
-    try { return Object.assign(blankProgress(), JSON.parse(localStorage.getItem(STORE.progress) || '{}')); }
-    catch (e) { return blankProgress(); }
+    const raw = sJSON(progressKey(), {});
+    const p = Object.assign(blankProgress(), raw && typeof raw === 'object' ? raw : {});
+    /* never trust the shape of long-lived storage: one bad value must not
+       disable lessons, quizzes or notes for ever */
+    if (!p.lessons || typeof p.lessons !== 'object') p.lessons = {};
+    if (!p.quiz || typeof p.quiz !== 'object') p.quiz = {};
+    if (!p.notes || typeof p.notes !== 'object') p.notes = {};
+    p.xp = Number(p.xp) || 0;
+    p.streak = Number(p.streak) || 0;
+    return p;
   }
   function saveProgress(p) {
-    localStorage.setItem(STORE.progress, JSON.stringify(p));
+    /* a silent failure here would make "saved" a lie — say so instead */
+    if (!sSet(progressKey(), JSON.stringify(p))) toast(t('err.storage'), 4000);
     document.dispatchEvent(new CustomEvent('progress:changed', { detail: p }));
     return p;
+  }
+  /* one-time: adopt the old single-slot progress for whoever is signed in */
+  function migrateProgress() {
+    const legacy = sGet(STORE.progress, null);
+    if (!legacy) return;
+    let signedIn = false;
+    try { signedIn = !!(window.IPLAuth && window.IPLAuth.session && window.IPLAuth.session()); } catch (e) {}
+    if (!signedIn) return;                     /* wait until we know where it belongs */
+    if (sGet(progressKey(), null) == null) sSet(progressKey(), legacy);
+    sDel(STORE.progress);
   }
   function addXP(n) {
     const p = getProgress();
@@ -737,14 +828,17 @@
     if (!p.lessons[id]) { p.lessons[id] = { ts: Date.now() }; p.xp = (p.xp || 0) + 10; saveProgress(p); }
     return p;
   }
+  /* XP is earned by improving, not by grinding the same quiz again */
   function saveQuizResult(id, best, total, wrong) {
     const p = getProgress();
     const prev = p.quiz[id];
+    const better = !prev || best > prev.best;
     p.quiz[id] = { best: Math.max(best, prev ? prev.best : 0), total: total, ts: Date.now(), wrong: wrong || [] };
-    const gained = Math.round((best / Math.max(1, total)) * 20);
+    let gained = 0;
+    if (better) gained = Math.round((best / Math.max(1, total)) * 20);
     p.xp = (p.xp || 0) + gained;
     saveProgress(p);
-    return { gained: gained, better: !prev || best > prev.best };
+    return { gained: gained, better: better };
   }
   function getNotes(id) { return (getProgress().notes || {})[id] || ''; }
   function setNotes(id, text) {
@@ -774,9 +868,31 @@
     return n;
   }
   function truncate(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n - 1) + '…' : s; }
+  /* RFC-4180 cell: quote when needed and neutralise spreadsheet formulas, so an
+     exported CSV cannot execute anything when it is opened in Excel/Sheets */
+  function csvCell(v) {
+    let s = String(v == null ? '' : v);
+    const c0 = s.charCodeAt(0);
+    // spreadsheet-formula guard: = + - @ TAB
+    if (c0 === 61 || c0 === 43 || c0 === 45 || c0 === 64 || c0 === 9) s = "'" + s;
+    // RFC-4180: quote when the cell contains a quote, comma or line break
+    let needsQuote = false;
+    for (let i = 0; i < s.length; i++) {
+      const c = s.charCodeAt(i);
+      if (c === 34 || c === 44 || c === 10 || c === 13) { needsQuote = true; break; }
+    }
+    if (needsQuote) s = '"' + s.replace(/"/g, '""') + '"';
+    return s;
+  }
+  function csvRow(cells) { return cells.map(csvCell).join(','); }
   function toast(msg, ms) {
     let node = qs('.toast');
-    if (!node) { node = el('div', { class: 'toast' }); document.body.appendChild(node); }
+    if (!node) {
+      node = el('div', { class: 'toast' });
+      node.setAttribute('role', 'status');
+      node.setAttribute('aria-live', 'polite');
+      document.body.appendChild(node);
+    }
     node.textContent = msg;
     node.classList.add('show');
     clearTimeout(node._t);
@@ -796,7 +912,10 @@
     ta.remove();
   }
   function download(name, text, mime) {
-    const blob = new Blob([text], { type: mime || 'text/plain;charset=utf-8' });
+    const type = mime || 'text/plain;charset=utf-8';
+    /* Excel reads a BOM-less CSV as ANSI, which turns Khmer text into mojibake */
+    const body = /csv/.test(type) ? '\uFEFF' + text : text;
+    const blob = new Blob([body], { type: type });
     const a = el('a', { href: URL.createObjectURL(blob), download: name });
     document.body.appendChild(a); a.click();
     setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 400);
@@ -856,30 +975,57 @@
   }
 
   /* ------------------------------------------------------------ modal */
+  let modalReturnFocus = null;
+  function modalFocusables(wrap) {
+    return qsa('a[href],button:not([disabled]),input:not([disabled]),select,textarea,[tabindex]:not([tabindex="-1"])', wrap)
+      .filter(function (n) { return n.getClientRects().length > 0; });
+  }
   function modal(title, bodyHtml, footHtml) {
     let wrap = qs('#modal-backdrop');
     if (!wrap) {
       wrap = el('div', { class: 'modal-backdrop', id: 'modal-backdrop' });
-      wrap.innerHTML = '<div class="modal" role="dialog" aria-modal="true"><header><h3></h3><span class="spacer"></span>' +
-        '<button class="icon-btn" data-close aria-label="close">✕</button></header><div class="body"></div><div class="foot" hidden></div></div>';
+      wrap.innerHTML = '<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">' +
+        '<header><h3 id="modal-title"></h3><span class="spacer"></span>' +
+        '<button class="icon-btn" data-close></button></header><div class="body"></div><div class="foot" hidden></div></div>';
       document.body.appendChild(wrap);
+      qs('[data-close]', wrap).setAttribute('aria-label', t('common.close'));
       wrap.addEventListener('click', function (e) {
-        if (e.target === wrap || e.target.closest('[data-close]')) close();
+        if (e.target === wrap || e.target.closest('[data-close]')) closeModal();
       });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+      document.addEventListener('keydown', function (e) {
+        if (!wrap.classList.contains('open')) return;
+        if (e.key === 'Escape') { closeModal(); return; }
+        if (e.key !== 'Tab') return;
+        /* keep the keyboard inside the dialog while it is open */
+        const f = modalFocusables(wrap);
+        if (!f.length) return;
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      });
     }
-    function close() { wrap.classList.remove('open'); document.body.style.overflow = ''; }
     qs('header h3', wrap).textContent = title;
     qs('.body', wrap).innerHTML = bodyHtml;
     const foot = qs('.foot', wrap);
     if (footHtml) { foot.innerHTML = footHtml; foot.hidden = false; } else { foot.innerHTML = ''; foot.hidden = true; }
+    if (!wrap.classList.contains('open')) modalReturnFocus = document.activeElement;
     wrap.classList.add('open');
     document.body.style.overflow = 'hidden';
+    /* move focus into the dialog so keyboard/SR users land in the right place */
+    setTimeout(function () {
+      const f = modalFocusables(wrap);
+      const target = f.filter(function (n) { return !n.hasAttribute('data-close'); })[0] || f[0];
+      if (target) target.focus();
+    }, 30);
     return wrap;
   }
   function closeModal() {
     const w = qs('#modal-backdrop');
-    if (w) { w.classList.remove('open'); document.body.style.overflow = ''; }
+    if (!w) return;
+    w.classList.remove('open');
+    document.body.style.overflow = '';
+    if (modalReturnFocus && modalReturnFocus.focus) { try { modalReturnFocus.focus(); } catch (e) {} }
+    modalReturnFocus = null;
   }
 
   /* ------------------------------------------------------------ shell */
@@ -895,7 +1041,7 @@
   function setLang(L) {
     if (L !== 'km' && L !== 'en') return;
     if (L === state.lang) return;
-    localStorage.setItem(STORE.lang, L);
+    sSet(STORE.lang, L);
     state.lang = L;
     const url = new URL(location.href);
     url.searchParams.set('_l', L);
@@ -982,7 +1128,7 @@
     const tb = qs('#theme-btn');
     if (tb) tb.addEventListener('click', function () {
       state.theme = state.theme === 'dark' ? 'light' : 'dark';
-      localStorage.setItem(STORE.theme, state.theme);
+      sSet(STORE.theme, state.theme);
       document.documentElement.dataset.theme = state.theme;
       tb.textContent = state.theme === 'dark' ? '☀' : '☾';
     });
@@ -1011,7 +1157,9 @@
   /* pages that need an account: call IPL.guard() at the top of the page script */
   function guard() {
     const auth = window.IPLAuth;
-    if (!auth) return true;
+    /* fail closed: without the auth module we cannot know who this is, so send
+       them to the sign-in page instead of rendering an unprotected shell */
+    if (!auth) { location.replace('signin.html'); return false; }
     if (auth.session()) return true;
     const next = location.pathname.split('/').pop() + location.search + location.hash;
     location.replace('signin.html?next=' + encodeURIComponent(next));
@@ -1019,15 +1167,38 @@
   }
 
   /* ------------------------------------------------------------ command palette */
+  let cmdProvider = null;
+  /* the shell ships a provider of its own so Ctrl+K works on EVERY page, not
+     just the three that used to register one */
+  function defaultCmdItems() {
+    const D = window.IPL_DATA || {};
+    const items = [];
+    (D.lessons || []).forEach(function (l) {
+      items.push({ kind: t('quiz.lesson'), text: pick(l.title), href: 'learn.html#' + l.id });
+    });
+    (D.glossary || []).forEach(function (g) {
+      items.push({ kind: t('nav.glossary'), text: (g.km || '') + ' — ' + (g.en || ''), href: 'glossary.html#t=' + encodeURIComponent(g.km || '') });
+    });
+    (D.chapters || []).forEach(function (c) {
+      items.push({ kind: t('nav.quiz'), text: pick(c.title), href: 'quiz.html#chapter=' + c.id });
+    });
+    NAV.forEach(function (n) { items.push({ kind: t('common.all'), text: t(n[1]), href: n[0] }); });
+    return items;
+  }
   function commandPalette(getItems) {
+    if (typeof getItems === 'function') cmdProvider = getItems;
+    if (!cmdProvider) cmdProvider = defaultCmdItems;
     let host = qs('#cmd-palette');
     if (!host) {
       host = el('div', { class: 'modal-backdrop', id: 'cmd-palette' });
-      host.innerHTML = '<div class="modal" style="max-width:640px"><header><h3>' + esc(t('common.search')) +
-        '</h3><span class="spacer"></span><button class="icon-btn" data-close>✕</button></header>' +
-        '<div class="body"><input class="input" id="cmd-input" placeholder="' + esc(t('cmd.hint')) + '" autocomplete="off">' +
-        '<div class="cmd-results" id="cmd-results"></div></div></div>';
+      host.innerHTML = '<div class="modal" role="dialog" aria-modal="true" aria-labelledby="cmd-title" style="max-width:640px">' +
+        '<header><h3 id="cmd-title">' + esc(t('common.search')) +
+        '</h3><span class="spacer"></span><button class="icon-btn" data-close></button></header>' +
+        '<div class="body"><input class="input" id="cmd-input" aria-label="' + esc(t('common.search')) +
+        '" placeholder="' + esc(t('cmd.hint')) + '" autocomplete="off">' +
+        '<div class="cmd-results" id="cmd-results" role="list"></div></div></div>';
       document.body.appendChild(host);
+      qs('[data-close]', host).setAttribute('aria-label', t('common.close'));
       host.addEventListener('click', function (e) {
         if (e.target === host || e.target.closest('[data-close]')) host.classList.remove('open');
       });
@@ -1036,37 +1207,73 @@
           e.preventDefault();
           host.classList.toggle('open');
           const inp = qs('#cmd-input', host);
-          if (host.classList.contains('open')) { render(''); setTimeout(function () { inp.focus(); }, 30); }
+          if (host.classList.contains('open')) {
+            /* start from a clean query: the results must always match what is shown */
+            inp.value = '';
+            render('');
+            setTimeout(function () { inp.focus(); }, 30);
+          }
         }
         if (e.key === 'Escape') host.classList.remove('open');
       });
     }
     const input = qs('#cmd-input', host), results = qs('#cmd-results', host);
     function render(q) {
-      const items = (getItems() || []);
+      const items = (cmdProvider() || []);
+      const needle = (q || '').toLowerCase();
       const list = items.filter(function (it) {
-        if (!q) return true;
-        return (it.text || '').toLowerCase().indexOf(q.toLowerCase()) >= 0;
+        if (!needle) return true;
+        return (it.text || '').toLowerCase().indexOf(needle) >= 0;
       }).slice(0, 30);
       results.innerHTML = list.map(function (it) {
-        return '<a href="' + it.href + '"><span class="pill">' + esc(it.kind) + '</span><span>' + esc(it.text) + '</span></a>';
+        return '<a href="' + esc(it.href) + '" role="listitem"><span class="pill">' + esc(it.kind) + '</span><span>' + esc(it.text) + '</span></a>';
       }).join('') || '<div class="muted small" style="padding:10px">' + esc(t('cmd.none')) + '</div>';
     }
-    input.addEventListener('input', function () { render(input.value.trim()); });
-    render('');
+    commandPalette.render = render;
+    if (!input._wired) {
+      input.addEventListener('input', function () { render(input.value.trim()); });
+      input._wired = true;
+    }
+    render(input.value.trim());
   }
 
   /* ------------------------------------------------------------ global error bar */
   window.addEventListener('error', function (e) {
     try {
+      /* genuine uncaught script errors only — a missing image or font must not
+         tell the visitor the page is broken */
+      const src = e.filename || (e.target && e.target.tagName === 'SCRIPT' ? (e.target.src || '') : '');
+      const msg = e.message || (e.error && e.error.message);
+      if (!src || !msg) return;
       let bar = document.getElementById('err-bar');
-      if (!bar) { bar = el('div', { id: 'err-bar' }); document.body.appendChild(bar); }
-      bar.textContent = 'Script error: ' + (e.message || e.error) + ' — reload if the page misbehaves.';
+      if (!bar) {
+        bar = el('div', { id: 'err-bar' });
+        bar.setAttribute('role', 'alert');
+        document.body.appendChild(bar);
+      }
+      bar.textContent = t('err.msg');
+      bar.setAttribute('title', String(msg));
     } catch (x) {}
   });
 
+  /* keyboard users should be able to skip the navigation on every page */
+  function skipLink() {
+    const main = qs('main');
+    if (!main || qs('#skip-link')) return;
+    if (!main.id) main.id = 'main';
+    const a = el('a', { class: 'sr-only skip-link', href: '#main', id: 'skip-link', text: t('a11y.skip') });
+    document.body.insertBefore(a, document.body.firstChild);
+  }
+
   /* hide the splash as soon as the page is usable — no artificial delay */
-  document.addEventListener('DOMContentLoaded', function () { splashOff(); });
+  document.addEventListener('DOMContentLoaded', function () {
+    splashOff();
+    skipLink();
+    migrateProgress();
+    /* Ctrl+K on every page: the shell supplies a default item list, and a page
+       can upgrade it by calling commandPalette() with its own */
+    commandPalette();
+  });
   window.addEventListener('load', splashOff);
   setTimeout(splashOff, 900);
 
@@ -1074,6 +1281,8 @@
     state: state, t: t, pick: pick, T: T, Tboth: Tboth, I18N: I18N, STORE: STORE, NAV: NAV,
     esc: esc, qs: qs, qsa: qsa, el: el, toast: toast, copyText: copyText, download: download,
     truncate: truncate, fmtDate: fmtDate, modal: modal, closeModal: closeModal,
+    csvCell: csvCell, csvRow: csvRow,
+    sGet: sGet, sSet: sSet, sDel: sDel,
     getProgress: getProgress, saveProgress: saveProgress, addXP: addXP, rankFor: rankFor, RANKS: RANKS,
     markStudied: markStudied, saveQuizResult: saveQuizResult, getNotes: getNotes, setNotes: setNotes,
     reveal: reveal, counters: counters, stagger: stagger, splashOff: splashOff,

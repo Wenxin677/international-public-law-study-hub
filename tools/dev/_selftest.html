@@ -256,7 +256,9 @@ async function waitFor(fn, ms, step) {
   const kmText = d.getElementById('greet').textContent;
   w.IPL.setLang('en');
   await sleep(200);
-  check('setLang navigates with _l=en', /_l=en/.test(w.location.href), w.location.href.split('/').pop());
+  check('setLang switches the language', (function () {
+    try { return localStorage.getItem('robo.lang') === 'en'; } catch (e) { return false; }
+  })(), 'robo.lang=' + (function () { try { return localStorage.getItem('robo.lang'); } catch (e) { return '-'; } })());
   f.remove();
   f = await open('teacher.html?_l=en'); w = f.contentWindow; d = f.contentDocument;
   check('English UI renders (RoboCL title)', /AI Teacher/.test(d.title) || /teacher/i.test(d.title), d.title);
@@ -275,8 +277,8 @@ async function waitFor(fn, ms, step) {
   /* post the report to the local stub so it survives a preview pane that cannot
      read the page back (tools/dev/collector_stub.py writes selftest_report.txt) */
   try {
-    await fetch('http://127.0.0.1:8098/report', { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: lines.join('
-') });
+    var _body = lines.join(String.fromCharCode(10));
+    await fetch('http://127.0.0.1:8098/report', { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: _body });
   } catch (e) { log('(report POST failed: ' + e.message + ')'); }
   try { localStorage.clear(); sessionStorage.clear(); } catch (e) {}
 })();

@@ -304,7 +304,10 @@
 
   function validate(username, password, confirm, isNew) {
     if (!username || !password) return { ok: false, msg: 'auth.err.empty' };
-    if (!USER_RE.test(username)) return { ok: false, msg: 'auth.err.short.user' };
+    if (!USER_RE.test(username)) {
+      /* say what is actually wrong: the length or the characters */
+      return { ok: false, msg: String(username).length < 3 ? 'auth.err.short.user' : 'auth.err.user.chars' };
+    }
     if (password.length < MIN_PASS) return { ok: false, msg: 'auth.err.short.pass' };
     if (isNew && confirm != null && password !== confirm) return { ok: false, msg: 'auth.err.match' };
     return { ok: true };
@@ -487,7 +490,7 @@
       }
     }
     try { sessionStorage.removeItem(STORE.session); } catch (e) {}
-    localStorage.removeItem(STORE.session);
+    try { localStorage.removeItem(STORE.session); } catch (e) {}
     if (window.IPL) window.IPL.toast(window.IPL.t('auth.signedout'));
     setTimeout(function () { location.href = 'index.html'; }, 420);
   }
@@ -527,12 +530,15 @@
   }
   function toCSV() {
     const r = report();
-    const lines = ['type,username,when,device,detail'];
+    const row = (window.IPL && window.IPL.csvRow) ? window.IPL.csvRow : function (cells) {
+      return cells.map(function (v) { return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"'; }).join(',');
+    };
+    const lines = [row(['type', 'username', 'when', 'device', 'detail'])];
     r.accounts.forEach(function (a) {
-      lines.push(['account', a.username, new Date(a.created).toISOString(), '', 'logins=' + a.logins + ' admin=' + a.admin].join(','));
+      lines.push(row(['account', a.username, new Date(a.created).toISOString(), '', 'logins=' + a.logins + ' admin=' + a.admin]));
     });
     r.events.forEach(function (e) {
-      lines.push([e.type, e.u, new Date(e.ts).toISOString(), e.device || '', (e.reason || '')].join(','));
+      lines.push(row([e.type, e.u, new Date(e.ts).toISOString(), e.device || '', e.reason || '']));
     });
     return lines.join('\n');
   }

@@ -64,11 +64,11 @@
         '<div class="row" style="justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px">' +
         '<div class="pager">' +
         '<button class="btn sm" id="prev-pg"' + (page <= 1 ? ' disabled' : '') + '>← ' + esc(t('lib.prev')) + '</button>' +
-        '<input type="range" id="pg-range" min="1" max="' + s.pages.length + '" value="' + page + '">' +
+        '<input type="range" id="pg-range" aria-label="' + esc(t('lib.page')) + '" min="1" max="' + s.pages.length + '" value="' + page + '">' +
         '<button class="btn sm" id="next-pg"' + (page >= s.pages.length ? ' disabled' : '') + '> ' + esc(t('lib.next')) + ' →</button>' +
         '</div>' +
         '<div class="row"><span class="pill">' + esc(t('lib.page')) + ' ' + page + ' ' + esc(t('lib.of')) + ' ' + s.pages.length + '</span>' +
-        '<input class="input" id="goto" type="number" min="1" max="' + s.pages.length + '" placeholder="' + esc(t('lib.gotopage')) + '" style="width:130px;min-height:38px">' +
+        '<input class="input" id="goto" type="number" aria-label="' + esc(t('lib.gotopage')) + '" min="1" max="' + s.pages.length + '" placeholder="' + esc(t('lib.gotopage')) + '" style="width:130px;min-height:38px">' +
         '</div></div>' : '') +
       body +
       '</div>';

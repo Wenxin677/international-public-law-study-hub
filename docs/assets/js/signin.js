@@ -76,8 +76,14 @@
       bar.style.background = s < 40 ? 'var(--bad)' : (s < 70 ? 'var(--gold)' : 'var(--ok)');
     });
     qs('#engine-note').textContent = A.engine + ' · ' + (A.cloudEnabled
-      ? (I.state.lang === 'km' ? 'ភ្ជាប់ពពករួចរាល់' : 'cloud sync on')
+      ? (I.state.lang === 'km' ? 'ភ្ជាប់ពពករួចរាល់' : 'sign-ins are collected')
       : (I.state.lang === 'km' ? 'រក្សាទុកក្នុងឧបករណ៍នេះ' : 'stored on this device'));
+    /* be straight with users when the owner collects sign-in records */
+    if (A.cloudEnabled && A.collectorStatus && A.collectorStatus().kind !== 'local') {
+      const box = I.el('div', { class: 'notice warn', html: esc(t('auth.consent')) });
+      const alt = qs('#swap');
+      if (alt) alt.parentNode.insertBefore(box, alt);
+    }
     setMode(location.hash === '#signup' ? 'signup' : 'signin');
     I.reveal();
   });

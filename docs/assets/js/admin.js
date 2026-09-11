@@ -32,13 +32,17 @@
 
   function render() {
     const r = A.report();
+    const st = A.collectorStatus ? A.collectorStatus() : { kind: 'local', url: '' };
+    const collectLabel = st.kind === 'sheet' ? t('admin.collector.sheet') : (st.kind === 'supabase' ? t('admin.collector.supabase') : t('admin.collector.local'));
     const host = qs('#admin-body');
     host.innerHTML =
       '<div class="row" style="margin-bottom:14px">' +
       '<span class="pill">' + r.accounts.length + ' ' + esc(t('admin.users')) + '</span>' +
       '<span class="pill gold">' + r.events.length + ' ' + esc(t('admin.events')) + '</span>' +
-      '<span class="pill ' + (r.cloud ? 'ok' : '') + '">' + (r.cloud ? '☁ ' + esc(t('admin.cloud')) : '💾 ' + esc(I.state.lang === 'km' ? 'ក្នុងឧបករណ៍' : 'local')) + '</span>' +
+      '<span class="pill ' + (st.kind !== 'local' ? 'ok' : '') + '">' + (st.kind !== 'local' ? '☁ ' : '💾 ') + esc(collectLabel) + '</span>' +
       '<span class="spacer"></span>' +
+      (st.kind !== 'local' ? '<button class="btn sm" id="testrow">📨 ' + esc(t('admin.test')) + '</button>' : '') +
+      (st.kind !== 'local' && st.kind === 'sheet' ? '<a class="btn sm" id="opencollector" href="' + esc(st.url) + '" target="_blank" rel="noopener">🔗 ' + esc(t('admin.opencollector')) + '</a>' : '') +
       '<button class="btn sm" id="copy">⧉ ' + esc(t('admin.copy')) + '</button>' +
       '<button class="btn sm primary" id="csv">⬇ ' + esc(t('admin.export')) + '</button>' +
       '</div>' +
@@ -72,6 +76,11 @@
     });
     qs('#copy').addEventListener('click', function () {
       I.copyText(JSON.stringify(A.report(), null, 2));
+    });
+    const tr = qs('#testrow');
+    if (tr) tr.addEventListener('click', function () {
+      const sent = A.testCollector();
+      I.toast(sent ? t('admin.tested') : t('admin.notest'));
     });
   }
 

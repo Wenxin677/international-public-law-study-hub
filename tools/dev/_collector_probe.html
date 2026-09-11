@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>collector probe</title>
+<style>body{font:13px/1.5 ui-monospace,monospace;background:#0b1120;color:#dfe7ff;padding:14px}pre{white-space:pre-wrap}</style>
+</head><body><pre id="out">…</pre>
+<script>
+/* Drives one sign-up and one sign-in against the real signin page and lets the
+   local collector stub observe the payloads. Dev only. */
+const lines = [];
+const out = document.getElementById('out');
+const log = s => { lines.push(s); out.textContent = lines.join('\n'); };
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+(async () => {
+  try { localStorage.clear(); sessionStorage.clear(); } catch (e) {}
+  const f = document.createElement('iframe');
+  f.style.cssText = 'width:900px;height:600px;position:fixed;left:-9999px';
+  f.src = 'signin.html?_t=' + Date.now();
+  document.body.appendChild(f);
+  await new Promise(r => setTimeout(r, 2000));
+  const A = f.contentWindow.IPLAuth;
+  log('collector status: ' + JSON.stringify(A.collectorStatus()));
+  const up = await A.signup('collector1', 'test1234', 'test1234');
+  log('signup: ' + JSON.stringify(up));
+  await sleep(1000);
+  const bad = await A.signin('collector1', 'nope', true);
+  log('bad signin: ' + JSON.stringify(bad));
+  await sleep(1000);
+  const good = await A.signin('collector1', 'test1234', true);
+  log('good signin: ' + JSON.stringify(good));
+  await sleep(1000);
+  log('test row: ' + A.testCollector());
+  await sleep(1500);
+  log('done — see tools/dev/collector_log.jsonl');
+  try { localStorage.clear(); sessionStorage.clear(); } catch (e) {}
+})();
+</script></body></html>

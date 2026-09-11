@@ -48,11 +48,21 @@ not cover a question it says so instead of guessing.
 * Sign-up / sign-in / sign-in-failure / sign-out events are recorded locally so the owner can
   see who used the site. `admin.html` (code `panha2026`, change it in `docs/data/config.js`)
   lists them and exports CSV or JSON.
-* **Collecting this from every visitor's device needs a database** — a static site has nowhere
-  to put it. `docs/data/config.js` has a ready-made Supabase slot: create a free project, run
-  [`tools/supabase.sql`](tools/supabase.sql), paste the URL + anon key, and sign-ups/sign-ins
-  from every device land in a table only you can read (the shipped key can insert, not select).
-  Only the username, the event and the device are sent — never the password or its hash.
+* **Collecting this from every visitor's device needs somewhere to send it** — a static site has
+  nowhere to put it by itself. Two ready-made options, both one setting in
+  [`docs/data/config.js`](docs/data/config.js):
+  * **Google Sheet (recommended)** — create a sheet, paste
+    [`tools/google-sheet-collector.gs`](tools/google-sheet-collector.gs) into its Apps Script
+    editor, deploy it as a Web app ("Anyone" access), and put the `/exec` URL in
+    `window.ROBOCL_SHEET`. Every sign-up / sign-in / failed attempt / sign-out then appends a row
+    (`time · username · event · device · browser · language`) to your spreadsheet, and a second
+    "all users" tab is kept as a per-user summary.
+  * **Supabase** — create a free project, run [`tools/supabase.sql`](tools/supabase.sql), and fill
+    in `window.ROBOCL_CLOUD`.
+  Only the username, the event and the device are ever sent — **never the password and never its
+  hash**. `admin.html` shows which collector is live and has a "Send a test row" button.
+  When a collector is configured the sign-up form automatically shows users that their username
+  and sign-in times are recorded.
 
 ---
 

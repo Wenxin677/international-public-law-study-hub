@@ -70,8 +70,11 @@ cited page.
   valuable secrets. Do not reuse an important password.
 * By default, accounts and the sign-up/sign-in record live **in the visitor's own browser**
   (localStorage). The owner can export them from `admin.html` on that device.
-* If the owner configures the optional Supabase integration (`docs/data/config.js` +
-  `tools/supabase.sql`), each sign-up/sign-in also sends the **username, event type, device and
-  timestamp** to that database — never the password and never its hash. The shipped anon key can
-  insert rows but cannot read the table back, so the collected data is visible to the project
-  owner only.
+* If the owner configures a collector (`docs/data/config.js`), each sign-up / sign-in /
+  failed attempt / sign-out also sends the **username, event type, device, browser string and
+  timestamp** to the destination the owner chose — a Google Sheet
+  (`tools/google-sheet-collector.gs`) or a Supabase table (`tools/supabase.sql`). The sign-up
+  form shows users a notice as soon as a collector is active. **The password and its hash are
+  never sent anywhere** — verification happens entirely inside the visitor's browser.
+* The admin page shows only what the current browser recorded; the collected rows live in the
+  owner's own sheet/database, under the owner's account.

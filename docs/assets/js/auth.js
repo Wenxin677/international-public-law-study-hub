@@ -19,6 +19,7 @@
   }, window.ROBOCL_CONFIG || {});
 
   const CLOUD = window.ROBOCL_CLOUD || null;
+  const SHEET = window.ROBOCL_SHEET || null;
 
   /* ---------------------------------------------------------------- hashing */
   function bytesToHex(b) {
@@ -122,11 +123,25 @@
     }, extra || {}));
     while (list.length > 400) list.shift();
     writeJSON(STORE.events, list);
-    cloud('events', { username: username, type: type, device: device, user_agent: navigator.userAgent.slice(0, 180) });
+    cloud('events', collectorPayload(type, username));
     return list;
   }
 
   function cloud(table, payload) {
+    /* Google Sheets collector (Apps Script Web App).  Sent as text/plain so the
+       browser does not send a CORS preflight, which Apps Script cannot answer.
+       mode:'no-cors' makes it a fire-and-forget write — the row still lands. */
+    if (SHEET && SHEET.url) {
+      try {
+        fetch(SHEET.url, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload),
+          keepalive: true
+        }).catch(function () {});
+      } catch (e) {}
+    }
     if (!CLOUD || !CLOUD.url || !CLOUD.key) return;
     const url = String(CLOUD.url).replace(/\/+$/, '') + '/rest/v1/' + (CLOUD.table || 'robo_users');
     try {
@@ -141,6 +156,34 @@
         body: JSON.stringify(payload)
       }).catch(function () {});
     } catch (e) {}
+  }
+
+  /* what the collector sends: the username, the event and the device — never a
+     password and never its hash */
+  function collectorPayload(type, username) {
+    return {
+      username: username,
+      type: type,
+      ts: Date.now(),
+      device: /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
+      user_agent: navigator.userAgent.slice(0, 180),
+      lang: (window.IPL && window.IPL.state && window.IPL.state.lang) || 'km'
+    };
+  }
+
+  /** status for the admin page: which collector, if any, is configured */
+  function collectorStatus() {
+    if (SHEET && SHEET.url) return { kind: 'sheet', url: SHEET.url };
+    if (CLOUD && CLOUD.url && CLOUD.key) return { kind: 'supabase', url: CLOUD.url };
+    return { kind: 'local', url: '' };
+  }
+
+  /** send one row so the owner can confirm the sheet is receiving */
+  function testCollector() {
+    const st = collectorStatus();
+    if (st.kind === 'local') return false;
+    cloud('collector', collectorPayload('test', 'test-row'));
+    return true;
   }
 
   /* ---------------------------------------------------------------- session */
@@ -194,7 +237,6 @@
     };
     writeJSON(STORE.accounts, accs);
     logEvent('signup', username, { algo: algo });
-    cloud('accounts', { username: username, created_at: new Date().toISOString(), device: /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'mobile' : 'desktop' });
     startSession(username, true);
     return { ok: true, msg: 'auth.created', user: username };
   }
@@ -272,7 +314,8 @@
     session: session, signup: signup, signin: signin, signout: signout,
     isAdmin: isAdmin, validate: validate, strength: strength,
     accounts: accounts, events: events, report: report, toCSV: toCSV,
-    config: CFG, cloudEnabled: !!(CLOUD && CLOUD.url && CLOUD.key),
+    config: CFG, cloudEnabled: !!((CLOUD && CLOUD.url && CLOUD.key) || (SHEET && SHEET.url)),
+    collectorStatus: collectorStatus, testCollector: testCollector,
     engine: canPBKDF2 ? 'PBKDF2-SHA256 (120k rounds)' : 'SHA-256 iterated (offline fallback)'
   };
 })();

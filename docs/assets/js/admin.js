@@ -14,8 +14,8 @@
         ? 'ទំព័រនេះបង្ហាញតែគណនីដែលបានបង្កើតនៅក្នុងកម្មវិធីរុករកនេះប៉ុណ្ណោះ។ ព័ត៌មាននៅក្នុងកម្មវិធីរុករកផ្សេង ឬទូរស័ព្ទ មិនឃើញនៅទីនេះទេ។'
         : 'This page only shows the accounts created in THIS browser. Sign-ups made in another browser or on a phone do not appear here.') + '</div>' +
       '<div class="small faint" style="margin-top:12px">' + esc(I.state.lang === 'km'
-        ? 'កូដស្ថិតនៅក្នុង docs/data/config.js (អ្នកអាចប្តូរវាបាន)។ ចង់ប្រមូលពីគ្រប់ឧបករណ៍ សូមភ្ជាប់ Supabase — មើលប្រអប់ខាងក្រោម។'
-        : 'The code lives in docs/data/config.js (change it there). To collect sign-ups from every device, connect Supabase — see the note below.') + '</div>' +
+        ? 'កូដស្ថិតនៅក្នុង docs/data/config.js (អ្នកអាចប្តូរវាបាន)។ ចង់ប្រមូលពីគ្រប់ឧបករណ៍ សូមភ្ជាប់ Google Sheet ឬ Supabase — មើល tools/google-sheet-collector.gs។'
+        : 'The code lives in docs/data/config.js (change it there). To collect sign-ups from every device, connect a Google Sheet or Supabase — see tools/google-sheet-collector.gs.') + '</div>' +
       '<div class="small faint" style="margin-top:10px">' + esc(I.state.lang === 'km'
         ? 'លេខសម្ងាត់មិនត្រូវបានរក្សាទុកទេ — មានតែកូដហាស (hash) ដែលមើលមិនយល់។'
         : 'Passwords are never stored — only an unreadable hash, so no password can be recovered from here.') + '</div>' +

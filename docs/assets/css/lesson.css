@@ -413,7 +413,7 @@
   color: var(--lk-ink);
   padding: 13px;
   font: inherit;
-  font-size: .92rem;
+  font-size: 1rem;
   line-height: 1.6;
   resize: vertical;
 }

@@ -26,7 +26,7 @@
     if (A.dbReady()) {
       body.innerHTML =
         '<div class="card" style="max-width:560px">' +
-        '<h3>' + esc(t('admin.owner')) + '</h3>' +
+        '<h2 class="card-h">' + esc(t('admin.owner')) + '</h2>' +
         '<p class="muted small">' + esc(t('admin.ownernote')) + '</p>' +
         '<div class="field"><label>' + esc(t('auth.username')) + '</label>' +
         '<input class="input" id="owner-user" autocomplete="username"></div>' +
@@ -49,7 +49,7 @@
     if (!(A.config && A.config.adminCodeHash)) {
       body.innerHTML =
         '<div class="card" style="max-width:620px">' +
-        '<h3>' + esc(t('admin.setup')) + '</h3>' +
+        '<h2 class="card-h">' + esc(t('admin.setup')) + '</h2>' +
         '<p class="muted small">' + esc(t('admin.setuptext')) + '</p>' +
         '<pre class="reader-page" style="background:var(--bg-soft);padding:12px;border-radius:10px;white-space:pre-wrap">python tools/admin_code.py "your own code"\n\n→ paste the printed hash into\ndocs/data/config.js  →  adminCodeHash</pre>' +
         '<p class="muted small">' + esc(t('admin.setupwhy')) + '</p>' +
@@ -59,7 +59,7 @@
 
     body.innerHTML =
       '<div class="card" style="max-width:560px">' +
-      '<h3>' + esc(t('admin.code')) + '</h3>' +
+      '<h2 class="card-h">' + esc(t('admin.code')) + '</h2>' +
       '<div class="field"><input class="input" id="code" type="password" aria-label="' + esc(t('admin.code')) + '" placeholder="••••••••" autocomplete="off"></div>' +
       '<button class="btn primary block" id="go">' + esc(t('admin.enter')) + '</button>' +
       '<div class="notice bad" id="gate-err" role="alert" hidden></div>' +
@@ -227,7 +227,7 @@
       '<button class="btn sm" id="lock">🔒 ' + esc(t('admin.lock')) + '</button>' +
       '</div>' +
       '<div class="card" style="margin-bottom:16px">' +
-      '<h3>' + esc(t('admin.users')) + '</h3>' +
+      '<h2 class="card-h">' + esc(t('admin.users')) + '</h2>' +
       '<p class="muted small">' + esc(t('admin.localonly')) + '</p>' +
       (r.accounts.length
         ? '<div class="scroll-x"><table class="tbl"><thead><tr><th>#</th><th>Username</th><th>' +
@@ -242,7 +242,7 @@
         : '<div class="muted">' + esc(t('admin.none')) + '</div>') +
       '</div>' +
       '<div class="card">' +
-      '<h3>' + esc(t('admin.events')) + '</h3>' +
+      '<h2 class="card-h">' + esc(t('admin.events')) + '</h2>' +
       '<div class="scroll-x"><table class="tbl"><thead><tr><th>' + esc(I.state.lang === 'km' ? 'ពេលវេលា' : 'When') +
       '</th><th>' + esc(I.state.lang === 'km' ? 'ឈ្មោះ' : 'Username') + '</th><th>' + esc(I.state.lang === 'km' ? 'សកម្មភាព' : 'Action') +
       '</th><th>' + esc(I.state.lang === 'km' ? 'ឧបករណ៍' : 'Device') + '</th></tr></thead><tbody>' +
@@ -253,7 +253,7 @@
       '</tbody></table></div></div>' +
       (A.dbReady()
         ? '<div class="card" id="db-card" style="margin-top:16px">' +
-          '<h3>' + esc(t('admin.db')) + '</h3>' +
+          '<h2 class="card-h">' + esc(t('admin.db')) + '</h2>' +
           '<p class="muted small">' + esc(t('admin.dbnote')) + '</p>' +
           '<button class="btn sm primary" id="loaddb">⬇ ' + esc(t('admin.loadacc')) + '</button>' +
           '<div id="db-out" style="margin-top:14px"></div></div>'

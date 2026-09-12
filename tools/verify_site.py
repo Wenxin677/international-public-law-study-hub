@@ -282,6 +282,34 @@ for needle, msg in (("type: 'long'", "the teacher has no longer explanation"),
         problems.append(f"teacher.js: {msg}")
 notes.append(f"  lessons: {lesson_count} checked · chapter PDFs: {len(chapters)} · lesson PDFs: {lesson_count}")
 
+# ------------------------------------------------- 9. accessibility invariants
+# The full audit runs in tools/dev/a11y_check.mjs (real Chrome, 390px, all pages).
+# These are the invariants that must never silently regress in the shipped files.
+html_text = {f.name: f.read_text(encoding="utf-8") for f in html_files}
+
+for name, html in html_text.items():
+    if 'class="skip-link"' not in html:
+        problems.append(f"{name}: no skip-to-content link (WCAG 2.2 2.4.1)")
+    if '<main id="main"' not in html:
+        problems.append(f"{name}: <main> has no id for the skip link to target")
+
+STYLE_CSS = (SITE / "assets/css/style.css").read_text(encoding="utf-8")
+if ":focus-visible" not in STYLE_CSS:
+    problems.append("style.css: no :focus-visible rule — keyboard focus would be invisible (2.4.7)")
+if "outline: 2px solid var(--focus)" not in STYLE_CSS:
+    problems.append("style.css: the focus ring is missing or too faint (1.4.11 needs 3:1)")
+if "font-size: 16px" not in STYLE_CSS:
+    problems.append("style.css: form fields must be >=16px or iOS zooms the page on focus")
+
+img_total = 0
+for name, html in html_text.items():
+    for m in re.finditer(r"<img\b[^>]*>", html):
+        img_total += 1
+        if "alt=" not in m.group(0):
+            problems.append(f"{name}: <img> without alt — {m.group(0)[:60]}")
+
+notes.append(f"  a11y: {len(html_files)} pages · skip links + main ids · focus ring · {img_total} images with alt")
+
 print("\n".join(notes))
 print()
 if problems:

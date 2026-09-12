@@ -81,9 +81,16 @@ const MEASURE = `(() => {
   const hero = document.querySelector('.dash-3 > .hero');
   const cards = [...document.querySelectorAll('.dash-3 > .sec-card')].map((c) => Math.round(c.getBoundingClientRect().width));
   const wrap = document.querySelector('main .wrap') || document.querySelector('main');
+  const widest = [...document.querySelectorAll('body *')]
+    .filter((e) => { const r = e.getBoundingClientRect(); return r.width > 0 && r.height > 0 && getComputedStyle(e).position !== 'fixed'; })
+    .map((e) => ({ w: Math.round(e.getBoundingClientRect().width), right: Math.round(e.getBoundingClientRect().right),
+      sel: e.tagName.toLowerCase() + '.' + String(e.className || '').trim().split(/\s+/).slice(0, 2).join('.') }))
+    .sort((a, b) => b.right - a.right).slice(0, 5);
   return JSON.stringify({
     url: location.pathname.split('/').pop(),
     wrapChildren: wrap ? wrap.children.length : 0,
+    layoutViewport: document.documentElement.clientWidth,
+    widest,
     vw, scrollWidth: de.scrollWidth, scrollHeight: de.scrollHeight,
     overflowCount: out.length, overflow: out.slice(0, 6),
     dashCols: cols('.dash-3'), heroOrder: hero ? getComputedStyle(hero).order : null,
@@ -108,10 +115,14 @@ const QUIZ_PROBE = `(() => {
   const gaps = rects.slice(1).map((r, i) => Math.round(r.top - rects[i].bottom));
   const next = d.getElementById('next');
   const head = d.querySelector('.qhead .pill');
+  const card = d.querySelector('.q-card');
+  const wrap = d.querySelector('.qwrap');
   return JSON.stringify({
     questions: d.querySelectorAll('.q-text').length,
     options: opts.length,
     minOptW: rects.length ? Math.round(Math.min(...rects.map((r) => r.width))) : 0,
+    cardW: card ? Math.round(card.getBoundingClientRect().width) : 0,
+    wrapW: wrap ? Math.round(wrap.getBoundingClientRect().width) : 0,
     minGap: gaps.length ? Math.min(...gaps) : null,
     nextDisabled: next ? next.disabled : null,
     nextLabel: next ? next.textContent.trim() : null,
@@ -154,7 +165,13 @@ try {
     const file = 'file:///' + path.join(SITE, page).replace(/\\/g, '/');
     await send('Page.navigate', { url: file });
     await sleep(700);
-    await send('Runtime.evaluate', { expression: SEED });   /* file:// shares one origin here */
+    /* signin.html bounces a signed-in visitor to the dashboard, so audit it
+       the way a real new visitor sees it */
+    await send('Runtime.evaluate', {
+      expression: page === 'signin.html'
+        ? "localStorage.removeItem('robo.session'); 'cleared'"
+        : SEED
+    });
     await sleep(200);
     for (const w of WIDTHS) {
       await send('Emulation.setDeviceMetricsOverride', { width: w, height: 900, deviceScaleFactor: 1, mobile: w < 700 });
@@ -163,12 +180,18 @@ try {
       const r = await send('Runtime.evaluate', { expression: MEASURE, returnByValue: true });
       const v = JSON.parse(r.result.value);
       const landed = v.url === page;
-      const bad = !landed || v.scrollWidth > v.vw + 1 || v.overflowCount > 0;
+      /* On a phone, Chrome widens the layout viewport when content refuses to
+         shrink — so a viewport wider than the one we asked for IS the overflow,
+         just hidden from scrollWidth. */
+      const fits = Math.abs(v.vw - w) <= 1;
+      const bad = !landed || !fits || v.scrollWidth > v.vw + 1 || v.overflowCount > 0;
       if (bad) failures++;
-      console.log(`${bad ? 'OVERFLOW' : '     ok '} ${page.padEnd(16)} ${String(w).padStart(4)}px  ` +
-        (landed ? '' : `LANDED ON ${v.url} (no session?) · `) +
-        `viewport ${v.vw} · scrollWidth ${v.scrollWidth} · height ${v.scrollHeight} · blocks ${v.wrapChildren}` +
+      console.log(`${bad ? 'PROBLEM ' : '     ok '} ${page.padEnd(16)} ${String(w).padStart(4)}px  ` +
+        (landed ? '' : `LANDED ON ${v.url} · `) +
+        (fits ? '' : `VIEWPORT FORCED TO ${v.vw}px · `) +
+        `scrollWidth ${v.scrollWidth} · height ${v.scrollHeight} · blocks ${v.wrapChildren}` +
         (v.dashCols ? ` · cols ${v.dashCols} · hero ${v.heroWidth}px order ${v.heroOrder} · cards [${v.cardWidths}]` : ''));
+      if (!fits) v.widest.forEach((x) => console.log(`            └ widest: ${x.w}px right=${x.right}  ${x.sel}`));
       if (v.overflow.length) v.overflow.forEach((o) => console.log('            └ ' + o));
 
       /* the dashboard has a shape we can assert, not just eyeball */
@@ -192,7 +215,7 @@ try {
         const want = new Map([
           ['one question on screen', qv.questions === 1],
           ['four answer cards', qv.options === 4],
-          ['cards fill the reading column', qv.minOptW >= Math.min(qv.vw - 70, 640)],
+          ['cards fill the reading column', qv.minOptW >= (qv.cardW ? qv.cardW - 52 : Math.min(qv.vw - 70, 640))],
           ['cards are not crammed together', qv.minGap >= 8],
           ['Next starts disabled', qv.nextDisabled === true],
           ['Next says Check answer', /Check answer|ពិនិត្យចម្លើយ/.test(qv.nextLabel || '')],
@@ -202,7 +225,7 @@ try {
         ]);
         for (const [name, ok] of want) {
           if (!ok) failures++;
-          console.log(`            ${ok ? '✓' : '✗'} ${name}${name === 'cards fill the reading column' ? ` (${qv.minOptW}px of ${qv.vw}px, gap ${qv.minGap}px)` : ''}`);
+          console.log(`            ${ok ? '✓' : '✗'} ${name}${name === 'cards fill the reading column' ? ` (${qv.minOptW}px of a ${qv.cardW}px card, gap ${qv.minGap}px, viewport ${qv.vw}px)` : ''}`);
         }
       }
 

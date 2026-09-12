@@ -1406,11 +1406,14 @@
     } catch (x) {}
   });
 
-  /* keyboard users should be able to skip the navigation on every page */
+  /* keyboard users should be able to skip the navigation on every page.
+     The static HTML already carries the link (so it exists before any script
+     runs); this only fills in for a page that forgot it. */
   function skipLink() {
     const main = qs('main');
-    if (!main || qs('#skip-link')) return;
+    if (!main) return;
     if (!main.id) main.id = 'main';
+    if (qs('.skip-link')) return;
     const a = el('a', { class: 'sr-only skip-link', href: '#main', id: 'skip-link', text: t('a11y.skip') });
     document.body.insertBefore(a, document.body.firstChild);
   }

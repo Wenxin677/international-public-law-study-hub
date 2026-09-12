@@ -68,7 +68,7 @@
 .qset > summary::after { content: "▾"; margin-left: auto; color: var(--g1); transition: transform .25s; }
 .qset[open] > summary::after { transform: rotate(180deg); }
 .qset:hover { border-color: var(--g1); }
-.qset .n { flex: none; width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; background: var(--g-grad); color: #0b0f22; font-size: .82rem; font-weight: 800; }
+.qset .n { flex: none; width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; background: var(--g-grad); color: #05091a; font-size: .82rem; font-weight: 800; }
 .qset .ls-body { padding: 2px 12px 12px; display: grid; gap: 6px; }
 .qset .ls-body button {
   text-align: left; padding: 11px 13px; border-radius: 12px; border: 1px solid var(--border);
@@ -77,7 +77,7 @@
 }
 @media (hover: hover) { .qset .ls-body button:hover { transform: translateX(3px); border-color: var(--g1); color: var(--fg); } }
 .qset.mixed { border-color: transparent; background: var(--g-grad); }
-.qset.mixed .qset-head { color: #0b0f22; }
+.qset.mixed .qset-head { color: #05091a; }
 .qset.mixed .qset-head .sub { display: block; font-weight: 500; font-size: .82rem; opacity: .82; }
 
 /* -------------------------------------------------------- quiz: questions */

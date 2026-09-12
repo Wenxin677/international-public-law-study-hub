@@ -110,10 +110,15 @@ const AUDIT = `(() => {
     const tag = el.tagName.toLowerCase();
     if (['a', 'button', 'input', 'select', 'textarea', 'summary', '[role="button"]'].includes(tag) || el.getAttribute('role') === 'button') {
       const r = el.getBoundingClientRect();
-      const inlineLink = tag === 'a' && el.parentElement && /^(P|LI|SPAN|EM|STRONG|TD)$/.test(el.parentElement.tagName);
+      /* WCAG 2.5.8 exempts targets "in a sentence or block of text" — an anchor
+         with sibling text in the same block is inline, not a button */
+      const inlineText = (el) => [...(el.parentElement ? el.parentElement.childNodes : [])]
+        .some((n) => n.nodeType === 3 && n.textContent.trim().length > 2);
+      const inlineLink = tag === 'a' && (inlineText(el) || (el.parentElement && /^(P|LI|SPAN|EM|STRONG|TD)$/.test(el.parentElement.tagName)));
       if (inlineLink) return;
       const w = Math.round(r.width), h = Math.round(r.height);
-      if (w < 24 || h < 24) smallTargets.push({ sel: tag + '.' + String(el.className || '').split(' ')[0], w, h });
+      if (w < 24 || h < 24) smallTargets.push({ sel: tag + '.' + String(el.className || '').split(' ')[0], w, h,
+        txt: (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 24), href: el.getAttribute('href') || '' });
       else if (w < 44 || h < 44) tinyTargets.push({ sel: tag + '.' + String(el.className || '').split(' ')[0], w, h });
     }
   });
@@ -126,14 +131,10 @@ const AUDIT = `(() => {
   const skips = [];
   for (let i = 1; i < heads.length; i++) if (heads[i].lvl - heads[i - 1].lvl > 1) skips.push(heads[i - 1].lvl + '->' + heads[i].lvl);
 
-  /* focus ring on the first real control */
-  let focusRing = null;
-  const first = [...document.querySelectorAll('a[href], button:not([disabled]), input, summary')].filter(visible)[0];
-  if (first) {
-    first.focus();
-    const fs = getComputedStyle(first);
-    focusRing = { outline: fs.outlineStyle + ' ' + fs.outlineWidth, shadow: fs.boxShadow !== 'none' };
-  }
+  /* The keyboard focus ring is tested over CDP with real Tab presses (see
+     keyboardTabs below) — programmatic focus() does not trigger :focus-visible,
+     so measuring it in-page would report a false failure. */
+  const focusRing = null;
 
   const smallInputs = [...document.querySelectorAll('input, select, textarea')].filter(visible)
     .filter((i) => parseFloat(getComputedStyle(i).fontSize) < 16)
@@ -167,7 +168,7 @@ const AUDIT = `(() => {
     lang: document.documentElement.getAttribute('lang') || null,
     viewport: vp ? vp.getAttribute('content') : null,
     landmarks: { main: document.querySelectorAll('main').length, header: document.querySelectorAll('header').length, nav: document.querySelectorAll('nav').length, footer: document.querySelectorAll('footer').length },
-    skipLink: !!document.querySelector('a[href^="#"]') && /skip|រំលង/i.test(document.querySelector('a[href^="#"]') ? document.querySelector('a[href^="#"]').textContent : ''),
+    skipLink: !!document.querySelector('.skip-link'),
     lowContrast: lowContrast.slice(0, 12), lowContrastCount: lowContrast.length,
     unmeasured: unmeasured.slice(0, 4), unmeasuredCount: unmeasured.length,
     smallTargets: smallTargets.slice(0, 8), smallTargetCount: smallTargets.length,
@@ -178,6 +179,48 @@ const AUDIT = `(() => {
     text: document.body.innerText.length
   });
 })()`;
+
+/* what the keyboard focus lands on, and whether that is visible */
+const FOCUS_PROBE = `(() => {
+  const el = document.activeElement;
+  if (!el || el === document.body) return JSON.stringify({ none: true });
+  const cs = getComputedStyle(el);
+  const r = el.getBoundingClientRect();
+  const ring = (cs.outlineStyle !== 'none' && parseFloat(cs.outlineWidth) >= 2) || cs.boxShadow !== 'none';
+  let obscured = false;
+  if (r.width > 1 && r.height > 1) {
+    const top = document.elementFromPoint(r.left + r.width / 2, Math.min(r.top + r.height / 2, innerHeight - 2));
+    obscured = !!(top && top !== el && !el.contains(top) && !top.contains(el));
+  }
+  return JSON.stringify({
+    tag: el.tagName.toLowerCase(), cls: String(el.className || '').slice(0, 40),
+    txt: (el.textContent || '').replace(/\\s+/g, ' ').trim().slice(0, 28),
+    outline: cs.outlineStyle + ' ' + cs.outlineWidth + ' ' + cs.outlineColor,
+    ring, obscured, w: Math.round(r.width), h: Math.round(r.height)
+  });
+})()`;
+
+async function keyboardTabs(n) {
+  await send('Emulation.setFocusEmulationEnabled', { enabled: true });
+  /* Move the sequential focus starting point back to the top of the document.
+     A plain blur() is not enough: if the page auto-focused something on load,
+     the next Tab continues from there and the skip link looks unreachable. */
+  await send('Runtime.evaluate', { expression: `(() => {
+    const b = document.body;
+    b.setAttribute('tabindex', '-1'); b.focus(); b.removeAttribute('tabindex');
+    return 'start of document';
+  })()` });
+  const stops = [];
+  for (let i = 0; i < n; i++) {
+    for (const type of ['rawKeyDown', 'keyUp']) {
+      await send('Input.dispatchKeyEvent', { type, key: 'Tab', code: 'Tab', windowsVirtualKeyCode: 9, nativeVirtualKeyCode: 9 });
+    }
+    await sleep(70);
+    const r = await send('Runtime.evaluate', { expression: FOCUS_PROBE, returnByValue: true });
+    stops.push(JSON.parse(r.result.value));
+  }
+  return stops;
+}
 
 let ws, id = 0;
 const pending = new Map();
@@ -224,6 +267,11 @@ try {
     await sleep(1500);
     const r = await send('Runtime.evaluate', { expression: AUDIT, returnByValue: true });
     const v = JSON.parse(r.result.value);
+    const tabs = await keyboardTabs(3);
+    const firstStop = tabs[0] || {};
+    const ringless = tabs.filter((t) => !t.none && !t.ring);
+    const obscured = tabs.filter((t) => t.obscured);
+
     const fails = [];
     if (v.lowContrastCount) { fails.push(`${v.lowContrastCount} low-contrast text`); totals.contrast += v.lowContrastCount; }
     if (v.smallTargetCount) { fails.push(`${v.smallTargetCount} targets under 24px`); totals.targets += v.smallTargetCount; }
@@ -231,16 +279,19 @@ try {
     if (v.h1 !== 1) { fails.push(`${v.h1} h1 elements`); totals.heads++; }
     if (v.skipped.length) { fails.push('skipped heading level ' + v.skipped.join(',')); totals.heads++; }
     if (v.smallInputs.length) { fails.push(`${v.smallInputs.length} inputs under 16px`); totals.inputs += v.smallInputs.length; }
-    if (!v.focusRing || /none/.test(v.focusRing.outline) && !v.focusRing.shadow) { fails.push('no visible focus ring'); totals.focus++; }
+    if (!(firstStop.cls || '').includes('skip-link')) { fails.push('first tab stop is not the skip link'); totals.focus++; }
+    if (ringless.length) { fails.push(`${ringless.length} focus stop(s) without a visible ring`); totals.focus += ringless.length; }
+    if (obscured.length) { fails.push(`${obscured.length} focus stop(s) hidden behind other content`); totals.focus += obscured.length; }
     if (!v.lang) { fails.push('no lang attribute'); totals.lang++; }
     failures += fails.length;
 
     console.log(`\n${fails.length ? '✗' : '✓'} ${page}  (${v.headings} headings, ${v.imgs} images, ${v.text} chars)`);
     console.log(`   lang=${v.lang} · viewport=${v.viewport ? (/(user-scalable=no|maximum-scale=1)/.test(v.viewport) ? 'ZOOM BLOCKED' : 'ok') : 'missing'} · landmarks m${v.landmarks.main}/h${v.landmarks.header}/n${v.landmarks.nav}/f${v.landmarks.footer} · skip-link=${v.skipLink}`);
-    console.log(`   focus ring on first control: ${v.focusRing ? v.focusRing.outline : 'n/a'}`);
+    tabs.forEach((t, i) => console.log(`   tab ${i + 1}: ${t.none ? 'nothing focusable' : `${t.tag}.${t.cls.split(' ')[0]} "${t.txt}" — ${t.outline}${t.ring ? '' : '  <-- NO RING'}${t.obscured ? '  <-- OBSCURED' : ''}`}`));
     if (fails.length) console.log('   ' + style('FAIL') + ': ' + fails.join(' · '));
     if (v.lowContrast.length) v.lowContrast.forEach((c) => console.log(`     · contrast ${c.ratio}:1 (needs ${c.need}) ${c.size}px  ${c.sel}  "${c.text}"`));
-    if (v.smallTargetCount) console.log('     · ' + v.smallTargets.map((t) => `${t.sel} ${t.w}x${t.h}`).join(' · '));
+    if (v.smallTargetCount) console.log('     · ' + v.smallTargets.map((t) => `${t.sel} ${t.w}x${t.h} "${t.txt}"${t.href ? ' -> ' + t.href : ''}`).join(' · '));
+    if (v.smallInputs.length) console.log('     · small inputs: ' + v.smallInputs.map((i) => `${i.name} ${i.size}px`).join(', '));
     if (v.unmeasuredCount) console.log(`     · ${v.unmeasuredCount} text runs sit on a gradient/image — contrast unmeasurable there`);
     if (v.tinyTargetCount) console.log(`     · ${v.tinyTargetCount} targets between 24 and 44px (mobile practice)`);
     if (v.nameless.length) console.log(`     · buttons with no accessible name: ${v.nameless.length}`);

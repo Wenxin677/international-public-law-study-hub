@@ -1,50 +1,54 @@
-/* quiz.js — setup, question loop, results and review */
+/* quiz.js — choose a quiz, answer one question at a time, then a results screen
+
+   Structure the student sees
+     1. pick a quiz      — one clean list (mixed, or a chapter you open)
+     2. the questions    — one at a time, "Question X of Y" + a progress bar,
+                           answers as cards, Next only once you have chosen
+     3. the results      — score ring, correct/wrong counts, then what you missed
+   Everything is rendered from IPL_DATA, so a question only ever has to be added
+   to the lesson JSON.
+*/
 (function () {
   'use strict';
   const I = window.IPL, D = window.IPL_DATA;
   const t = I.t, esc = I.esc, qs = I.qs;
 
-  const run = { list: [], i: 0, right: 0, wrong: [], id: '', answered: false, timed: false };
+  const run = { list: [], i: 0, right: 0, wrong: [], id: '', answered: false };
 
   /* ------------------------------------------------------------- setup */
   function setup() {
     const host = qs('#setup');
-    const filter = qs('#qsearch').value.trim().toLowerCase();
-    const chs = D.chapters.filter(function (c) {
-      if (!filter) return true;
-      return I.pick(c.title).toLowerCase().indexOf(filter) >= 0;
-    });
+    if (!host) return;
+    const km = I.state.lang === 'km';
     host.innerHTML =
-      '<div class="card hoverable" data-mixed style="cursor:pointer;background:linear-gradient(135deg,rgba(111,155,240,.18),rgba(232,180,74,.14))">' +
-      '<div class="row"><div class="av" style="font-size:1.3rem">🎲</div><div style="flex:1">' +
-      '<h3 style="margin:0 0 4px">' + esc(t('quiz.mixed')) + '</h3>' +
-      '<div class="muted small">' + esc(t('quiz.mixed.d')) + '</div></div><span class="pill gold">10</span></div></div>' +
-      chs.map(function (ch) {
-        const n = D.quizForChapter(ch.id).length;
-        return '<div class="card hoverable quiz-setup" data-ch="' + ch.id + '">' +
-          '<div class="row"><span class="badge-num">' + ch.num + '</span><div style="flex:1;min-width:0">' +
-          '<b>' + esc(I.pick(ch.title)) + '</b>' +
-          '<div class="muted small">' + ch.lessons.length + ' ' + esc(t('quiz.lesson')) + ' · p.' + ch.pages.from + '–' + ch.pages.to + '</div>' +
-          '</div><span class="pill">' + n + ' ' + esc(t('quiz.title')) + '</span></div>' +
-          '<div class="lesson-strip" style="margin-top:12px">' +
-          ch.lessons.map(function (l) {
-            return '<button class="btn sm" data-ls="' + l.id + '">' + esc(I.truncate(I.pick(l.title), 30)) + '</button>';
-          }).join('') +
-          '</div></div>';
-      }).join('');
-    host.classList.add('grid', 'g2');
+      '<div class="quiz-pick">' +
+        '<button class="qset mixed" id="mixed-btn" type="button">' +
+          '<span class="qset-head">🎲 <span>' + esc(t('quiz.mixed')) +
+          '<span class="sub">' + esc(t('quiz.mixed.d')) + '</span></span>' +
+          '<span class="pill">10</span></span>' +
+        '</button>' +
+        D.chapters.map(function (ch) {
+          const n = D.quizForChapter(ch.id).length;
+          return '<details class="qset" data-ch="' + ch.id + '">' +
+            '<summary><span class="n">' + esc(String(ch.num)) + '</span>' +
+              '<span>' + esc(I.pick(ch.title)) +
+              '<span class="small muted" style="display:block;font-weight:500">' + ch.lessons.length + ' ' +
+              esc(t('quiz.lesson')) + ' · ' + n + ' ' + esc(t('quiz.title')) + '</span></span></summary>' +
+            '<div class="ls-body">' +
+              '<button type="button" data-ch-all="' + ch.id + '">▸ ' + esc(t('quiz.wholeChapter')) + ' · ' + n + '</button>' +
+              ch.lessons.map(function (l) {
+                return '<button type="button" data-ls="' + l.id + '">' + esc(I.truncate(I.pick(l.title), 46)) + '</button>';
+              }).join('') +
+            '</div></details>';
+        }).join('') +
+      '</div>';
 
-    I.qsa('[data-mixed]', host).forEach(function (n) {
-      n.addEventListener('click', function () { start('mixed'); });
-    });
-    I.qsa('[data-ch]', host).forEach(function (n) {
-      n.addEventListener('click', function (e) {
-        if (e.target.closest('[data-ls]')) return;
-        start('ch:' + n.dataset.ch);
-      });
+    qs('#mixed-btn').addEventListener('click', function () { start('mixed'); });
+    I.qsa('[data-ch-all]', host).forEach(function (b) {
+      b.addEventListener('click', function () { start('ch:' + b.dataset.chAll); });
     });
     I.qsa('[data-ls]', host).forEach(function (b) {
-      b.addEventListener('click', function (e) { e.stopPropagation(); start('ls:' + b.dataset.ls); });
+      b.addEventListener('click', function () { start('ls:' + b.dataset.ls); });
     });
   }
 
@@ -75,36 +79,44 @@
       it.answer = pairs.findIndex(function (p) { return p.right; });
     });
     run.list = items; run.i = 0; run.right = 0; run.wrong = []; run.id = id; run.answered = false;
+    document.body.classList.add('quiz-mode');
     qs('#setup-wrap').hidden = true;
-    qs('#run-wrap').hidden = false;
     qs('#result-wrap').hidden = true;
+    qs('#run-wrap').hidden = false;
     question();
   }
 
   /* ------------------------------------------------------------- questions */
   function question() {
     const it = run.list[run.i];
-    const q = it.q;
     const L = I.state.lang;
-    const src = it.opts || (q.options || {});
+    const src = it.opts || (it.q.options || {});
     const opts = src[L] || src.en || src.km || [];
+    const last = run.i === run.list.length - 1;
     run.answered = false;
     qs('#run-wrap').innerHTML =
-      '<div class="q-card">' +
-      '<div class="q-top">' +
-      '<span class="pill">' + esc(t('quiz.question')) + ' ' + (run.i + 1) + ' ' + esc(t('quiz.of')) + ' ' + run.list.length + '</span>' +
-      '<span class="pill gold">' + esc(I.truncate(I.pick(it.lesson.title), 40)) + '</span>' +
-      '<span class="spacer"></span><button class="btn sm ghost" id="quit">✕ ' + esc(t('common.close')) + '</button>' +
-      '</div>' +
-      '<div class="q-bar"><i style="width:' + ((run.i) / run.list.length * 100) + '%"></i></div>' +
-      '<div class="q-text">' + I.T(q.q) + '</div>' +
-      '<div class="options" id="opts">' +
-      opts.map(function (o, i) {
-        return '<button class="option" data-opt="' + i + '"><span class="key">' + (i + 1) + '</span><span>' + esc(o) + '</span></button>';
-      }).join('') + '</div>' +
-      '<div id="fb" aria-live="polite"></div>' +
-      '<div class="row" style="margin-top:16px"><span class="spacer"></span>' +
-      '<button class="btn primary" id="next" disabled>' + (run.i === run.list.length - 1 ? esc(t('quiz.finish')) : esc(t('quiz.next'))) + '</button></div>' +
+      '<div class="qwrap">' +
+        '<div class="qhead">' +
+          '<span class="pill">' + esc(t('quiz.question')) + ' <b>' + (run.i + 1) + '</b> ' +
+            esc(t('quiz.of')) + ' ' + run.list.length + '</span>' +
+          '<span class="pill gold">' + esc(I.truncate(I.pick(it.lesson.title), 40)) + '</span>' +
+          '<button class="btn sm ghost quit" id="quit" type="button">✕ ' + esc(t('common.close')) + '</button>' +
+        '</div>' +
+        '<div class="sec-bar"><i style="width:' + Math.round((run.i / run.list.length) * 100) + '%"></i></div>' +
+        '<div class="q-card">' +
+          '<div class="q-text">' + I.T(it.q.q) + '</div>' +
+          '<div class="options" id="opts">' +
+            opts.map(function (o, i) {
+              return '<button class="option" type="button" data-opt="' + i + '">' +
+                '<span class="key">' + (i + 1) + '</span><span>' + esc(o) + '</span></button>';
+            }).join('') +
+          '</div>' +
+          '<div id="fb" aria-live="polite"></div>' +
+          '<div class="qfoot"><span class="spacer"></span>' +
+            '<button class="btn primary" id="next" type="button" disabled>' +
+              (last ? esc(t('quiz.finish')) : esc(t('quiz.next'))) + ' →</button>' +
+          '</div>' +
+        '</div>' +
       '</div>';
     qs('#quit').addEventListener('click', backToSetup);
     I.qsa('#opts .option').forEach(function (b) {
@@ -121,7 +133,6 @@
     if (run.answered) return;
     run.answered = true;
     const it = run.list[run.i], q = it.q;
-    const L = I.state.lang;
     const btns = I.qsa('#opts .option');
     const right = (it.answer != null ? it.answer : q.answer);
     btns.forEach(function (b) { b.disabled = true; });
@@ -131,19 +142,20 @@
     } else {
       btns[choice].classList.add('wrong');
       btns[right].classList.add('reveal');
-      run.wrong.push({ lesson: it.lesson, q: q, chosen: choice });
+      run.wrong.push({ lesson: it.lesson, q: q, chosen: choice, answer: right });
     }
     const page = q.page ? ' <a class="cite" href="library.html#textbook=' + q.page + '">📖 ' + esc(t('quiz.page')) + ' ' + q.page + '</a>' : '';
     qs('#fb').innerHTML = '<div class="explain">' +
-      '<b style="color:' + (choice === right ? 'var(--ok)' : 'var(--bad)') + '">' +
+      '<b class="' + (choice === right ? 'ok-text' : 'bad-text') + '">' +
       esc(choice === right ? '✓ ' + t('quiz.correct') : '✕ ' + t('quiz.wrong')) + '</b>' +
       '<div style="margin-top:8px"><b>' + esc(t('quiz.explain')) + ':</b> ' + I.T(q.explain || '') + '</div>' +
       '<div class="cite-list" style="margin-top:10px">' + page +
       '<a class="cite" href="teacher.html?q=' + encodeURIComponent(qs('.q-text').textContent.trim()) + '">🤖 ' + esc(t('quiz.ask')) + '</a>' +
       '<a class="cite" href="learn.html#' + it.lesson.id + '">📘 ' + esc(I.truncate(I.pick(it.lesson.title), 34)) + '</a>' +
       '</div></div>';
-    qs('#next').disabled = false;
-    qs('#next').focus();
+    const n = qs('#next');
+    n.disabled = false;
+    n.focus();
   }
 
   /* ------------------------------------------------------------- result */
@@ -156,40 +168,57 @@
     const bonus = saved.better ? (run.right * 4 + 6) : 0;
     if (bonus) I.addXP(bonus);
     const earned = saved.gained + bonus;
+    const L = I.state.lang;
+    document.body.classList.remove('quiz-mode');
     qs('#run-wrap').hidden = true;
     qs('#result-wrap').hidden = false;
     const msg = pct >= 90 ? t('quiz.perfect') : (pct >= 60 ? t('quiz.good') : t('quiz.keep'));
     qs('#result-wrap').innerHTML =
-      '<div class="q-card card">' +
-      '<div class="result-hero"><div class="result-ring" style="--p:' + pct + '"><i>' + run.right + '/' + total + '</i></div>' +
-      '<h2 style="margin:0">' + pct + '%</h2>' +
-      '<div class="muted">' + esc(msg) + '</div>' +
-      (saved.better ? '<div class="pill ok" style="margin-top:10px">★ ' + esc(t('quiz.best')) + ' ' + run.right + '/' + total + '</div>' : '') +
-      (earned ? '<div class="pill gold" style="margin-top:10px">+' + earned + ' XP</div>'
-        : '<div class="muted small" style="margin-top:10px">' + esc(t('quiz.repeat')) + '</div>') +
-      '</div>' +
-      '<div class="row" style="justify-content:center;margin-bottom:18px">' +
-      '<button class="btn primary" id="again">↻ ' + esc(t('quiz.again')) + '</button>' +
-      '<a class="btn" href="dashboard.html">🏠 ' + esc(t('nav.dashboard')) + '</a>' +
-      '<a class="btn gold" href="teacher.html">🤖 ' + esc(t('nav.teacher')) + '</a>' +
-      '</div>' +
-      (run.wrong.length ? '<h3>' + esc(t('quiz.review')) + '</h3>' + run.wrong.map(function (w) {
-        const L = I.state.lang;
-        const opts = (w.q.options && (w.q.options[L] || []) ) || [];
-        return '<div class="card" style="margin-bottom:12px">' +
-          '<b>' + esc(I.pick(w.lesson.title)) + '</b>' +
-          '<div style="margin:8px 0">' + I.T(w.q.q) + '</div>' +
-          '<div class="notice ok" style="margin:0">✓ ' + esc(opts[w.q.answer] || '') + '</div>' +
-          '<div class="small muted" style="margin-top:8px">' + I.T(w.q.explain || '') + '</div>' +
-          (w.q.page ? '<div class="cite-list" style="margin-top:8px"><a class="cite" href="library.html#textbook=' + w.q.page + '">📖 p.' + w.q.page + '</a>' +
-            '<a class="cite" href="learn.html#' + w.lesson.id + '">📘 ' + esc(t('learn.title')) + '</a></div>' : '') +
-          '</div>';
-      }).join('') : '') +
+      '<div class="qwrap">' +
+        '<div class="q-card result">' +
+          '<div class="result-hero">' +
+            '<div class="result-ring" style="--p:' + pct + '"><i>' + run.right + '/' + total + '</i></div>' +
+            '<h2 style="margin:8px 0 0;font-size:2.4rem">' + pct + '%</h2>' +
+            '<div class="muted">' + esc(msg) + '</div>' +
+          '</div>' +
+          '<div class="result-facts">' +
+            '<div class="fact ok"><b>' + run.right + '</b><span>' + esc(t('quiz.rightCount')) + '</span></div>' +
+            '<div class="fact bad"><b>' + run.wrong.length + '</b><span>' + esc(t('quiz.wrongCount')) + '</span></div>' +
+            '<div class="fact"><b>' + total + '</b><span>' + esc(t('quiz.questions')) + '</span></div>' +
+            (earned ? '<div class="fact"><b>+' + earned + '</b><span>XP</span></div>' : '') +
+          '</div>' +
+          (saved.better ? '<div class="sec-row" style="justify-content:center;margin-bottom:14px">' +
+            '<span class="pill ok">★ ' + esc(t('quiz.best')) + ' ' + run.right + '/' + total + '</span></div>'
+            : '<div class="sec-row" style="justify-content:center;margin-bottom:14px"><span class="muted small">' +
+              esc(t('quiz.repeat')) + '</span></div>') +
+          '<div class="sec-row" style="justify-content:center">' +
+            '<button class="btn primary" id="again" type="button">↻ ' + esc(t('quiz.again')) + '</button>' +
+            '<a class="btn" href="dashboard.html">🏠 ' + esc(t('nav.dashboard')) + '</a>' +
+            '<a class="btn gold" href="teacher.html">🤖 ' + esc(t('nav.teacher')) + '</a>' +
+          '</div>' +
+        '</div>' +
+        (run.wrong.length
+          ? '<details class="fold" open><summary>✕ ' + esc(t('quiz.review')) + ' (' + run.wrong.length + ')</summary>' +
+            '<div class="fold-body">' + run.wrong.map(function (w) {
+              const opts = (w.q.options && (w.q.options[L] || w.q.options.en || [])) || [];
+              return '<div class="sec-card">' +
+                '<b>' + esc(I.pick(w.lesson.title)) + '</b>' +
+                '<div style="margin:8px 0">' + I.T(w.q.q) + '</div>' +
+                '<div class="notice ok" style="margin:0">✓ ' + esc(opts[w.q.answer] || '') + '</div>' +
+                '<div class="small muted" style="margin-top:8px">' + I.T(w.q.explain || '') + '</div>' +
+                (w.q.page ? '<div class="cite-list" style="margin-top:8px">' +
+                  '<a class="cite" href="library.html#textbook=' + w.q.page + '">📖 p.' + w.q.page + '</a>' +
+                  '<a class="cite" href="learn.html#' + w.lesson.id + '">📘 ' + esc(t('learn.title')) + '</a></div>' : '') +
+                '</div>';
+            }).join('') + '</div></details>'
+          : '<div class="sec-card"><b>✓ ' + esc(t('quiz.noWrong')) + '</b></div>') +
       '</div>';
     qs('#again').addEventListener('click', function () { start(run.id); });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function backToSetup() {
+    document.body.classList.remove('quiz-mode');
     qs('#run-wrap').hidden = true;
     qs('#result-wrap').hidden = true;
     qs('#setup-wrap').hidden = false;
@@ -201,8 +230,11 @@
     if (!I.guard()) return;
     I.renderChrome('quiz.html');
     setup();
-    qs('#qsearch').setAttribute('aria-label', t('common.search'));
-    qs('#qsearch').addEventListener('input', setup);
+    const search = qs('#qsearch');
+    if (search) {
+      search.setAttribute('aria-label', t('common.search'));
+      search.addEventListener('input', setup);
+    }
     const m = location.hash.match(/(?:#|&)(lesson|chapter)=([^&]+)/);
     if (m) {
       const id = m[1] === 'lesson' ? 'ls:' + m[2] : 'ch:' + m[2];
@@ -210,6 +242,8 @@
     }
     document.addEventListener('keydown', function (e) {
       if (qs('#run-wrap').hidden) return;
+      const tag = (e.target && e.target.tagName) || '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA') return;
       if (/^[1-4]$/.test(e.key)) {
         const b = I.qsa('#opts .option')[+e.key - 1];
         if (b && !b.disabled) b.click();

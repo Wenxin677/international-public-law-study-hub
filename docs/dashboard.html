@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css?v=20260912e">
+<link rel="stylesheet" href="assets/css/sections.css?v=20260912e">
 <script src="assets/js/boot.js?v=20260912e"></script>
 </head>
 <body data-lang="km">
@@ -25,27 +26,29 @@
       <p class="sub" id="greet-sub"></p>
     </div>
 
-    <div class="grid" style="gap:18px">
-      <div class="card" id="prog-card"></div>
-
-      <div class="card" id="continue-card" style="background:linear-gradient(135deg,rgba(111,155,240,.14),rgba(232,180,74,.1))"></div>
-
-      <div>
-        <h2 style="font-size:1.15rem" data-t="dash.quick"></h2>
-        <div class="grid g4" id="quick"></div>
-      </div>
-
-      <div>
-        <h2 style="font-size:1.15rem" data-t="dash.chapters"></h2>
-        <div class="grid g2" id="chapters"></div>
-      </div>
-
-      <div id="notes-card" class="card"></div>
-
-      <div class="row" style="justify-content:flex-end">
-        <button class="btn ghost sm" id="reset-btn" data-t="dash.reset"></button>
-      </div>
+    <div class="dash-3">
+      <div class="sec-card" id="prog-card"></div>
+      <div class="sec-card" id="continue-card"></div>
+      <div class="sec-card" id="stat-card"></div>
     </div>
+
+    <details class="fold" style="margin-top:var(--gap-card)">
+      <summary>➕ <span data-t="dash.more"></span></summary>
+      <div class="fold-body">
+        <div class="sec-card">
+          <h2 class="sec-head" data-t="dash.quick"></h2>
+          <div class="grid g4" id="quick"></div>
+        </div>
+        <div class="sec-card">
+          <h2 class="sec-head" data-t="dash.chapters"></h2>
+          <div class="grid g2" id="chapters"></div>
+        </div>
+        <div class="sec-card" id="notes-card"></div>
+        <div class="sec-row" style="justify-content:flex-end">
+          <button class="btn ghost sm" id="reset-btn" data-t="dash.reset"></button>
+        </div>
+      </div>
+    </details>
   </div>
 </main>
 

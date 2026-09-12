@@ -34,19 +34,29 @@
     const avg = bestN ? Math.round(bestSum / bestN) : 0;
 
     qs('#prog-card').innerHTML =
-      '<div class="continue">' +
-      '<div class="progress-ring" style="--p:' + pct + '"><i>' + pct + '%</i></div>' +
-      '<div style="flex:1;min-width:200px">' +
-      '<h3 style="margin:0 0 4px">' + esc(t('dash.progress')) + '</h3>' +
-      '<div class="muted small">' + done + ' / ' + total + ' ' + esc(t('dash.studied')) + '</div>' +
-      '<div class="grid g3" style="margin-top:14px">' +
-      tile('🔥', (p.streak || 0), t('dash.streak')) +
-      tile('⭐', (p.xp || 0), I.pick(rank)) +
-      tile('🎯', avg + '%', t('dash.best')) +
-      '</div></div></div>';
+      '<h2 class="sec-head">' + esc(t('dash.progress')) + '</h2>' +
+      '<div class="sec-row" style="align-items:center;gap:18px">' +
+        '<div class="progress-ring" style="--p:' + pct + '"><i>' + pct + '%</i></div>' +
+        '<div style="flex:1;min-width:150px">' +
+          '<div class="muted small">' + done + ' / ' + total + ' ' + esc(t('dash.studied')) + '</div>' +
+          '<div class="sec-row" style="margin-top:10px">' +
+            '<span class="pill">🔥 ' + (p.streak || 0) + ' ' + esc(t('dash.streak')) + '</span>' +
+            '<span class="pill gold">⭐ ' + (p.xp || 0) + ' XP</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
 
-    function tile(ico, val, label) {
-      return '<div class="tile"><div class="av">' + ico + '</div><div><b>' + esc(String(val)) + '</b><span>' + esc(label) + '</span></div></div>';
+    /* card 3: the one number worth showing on its own */
+    const stat = qs('#stat-card');
+    if (stat) {
+      stat.innerHTML =
+        '<h2 class="sec-head">' + esc(t('dash.avg')) + '</h2>' +
+        '<div class="stat-big grad">' + (bestN ? avg + '%' : '—') + '</div>' +
+        '<div class="muted small" style="margin-top:6px">' +
+          esc(bestN ? t('dash.avgOf') + ' ' + bestN + ' ' + t('quiz.title') : t('dash.avgNone')) + '</div>' +
+        '<div class="sec-row" style="margin-top:14px">' +
+          '<a class="btn sm primary" href="quiz.html">🎯 ' + esc(t('quiz.title')) + '</a>' +
+        '</div>';
     }
   }
 
@@ -55,17 +65,14 @@
     const st = lessonState(l);
     const label = st === 'done' ? (I.state.lang === 'km' ? 'មេរៀនបន្ទាប់ដែលគួរអាន' : 'Next lesson for you') : t('dash.pickup');
     qs('#continue-card').innerHTML =
-      '<div class="continue">' +
-      '<div style="flex:1;min-width:230px">' +
-      '<span class="pill">' + esc(t('dash.continue')) + '</span>' +
-      '<h2 style="margin:10px 0 4px;font-size:1.3rem">' + esc(I.pick(l.title)) + '</h2>' +
-      '<div class="muted small">' + esc(label) + ' · ' + esc(t('learn.pages')) + ' ' + l.pages.from + '–' + l.pages.to +
-      ' · ' + esc(I.pick(l.chapter.title)) + '</div>' +
-      '<div class="row" style="margin-top:14px">' +
-      '<a class="btn primary" href="learn.html#' + l.id + '">📘 ' + esc(t('learn.title')) + '</a>' +
-      '<a class="btn" href="quiz.html#lesson=' + l.id + '">🎯 ' + esc(t('quiz.title')) + '</a>' +
-      '</div></div>' +
-      '<img class="thumb" src="assets/img/cover.jpg" alt="" style="width:110px;height:150px;object-fit:cover;border-radius:12px;border:1px solid var(--border)">' +
+      '<h2 class="sec-head">' + esc(t('dash.continue')) + '</h2>' +
+      '<span class="pill">' + esc(label) + '</span>' +
+      '<h3 style="margin:12px 0 4px;font-size:1.2rem">' + esc(I.pick(l.title)) + '</h3>' +
+      '<div class="muted small">' + esc(I.pick(l.chapter.title)) + ' · ' + esc(t('learn.pages')) +
+        ' ' + l.pages.from + '–' + l.pages.to + ' · ' + (l.pages.to - l.pages.from + 1) + ' ' + esc(t('learn.slides')) + '</div>' +
+      '<div class="sec-row" style="margin-top:14px">' +
+        '<a class="btn primary" href="learn.html#' + l.id + '">📘 ' + esc(t('learn.title')) + '</a>' +
+        '<a class="btn" href="quiz.html#lesson=' + l.id + '">🎯 ' + esc(t('quiz.title')) + '</a>' +
       '</div>';
   }
 

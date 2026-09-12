@@ -239,6 +239,17 @@ for ch in chapters:
     for les in ch.get("lessons", []):
         lesson_count += 1
         lid = les.get("id", "?")
+        # the lesson's own slides: exactly its page range
+        lpdf = SITE / "library/lessons" / f"{lid}.pdf"
+        lwant = les["pages"]["to"] - les["pages"]["from"] + 1
+        if not lpdf.exists():
+            problems.append(f"missing lesson PDF: library/lessons/{lid}.pdf")
+        elif have_pdf_lib:
+            with pymupdf.open(lpdf) as doc:
+                if doc.page_count != lwant:
+                    problems.append(f"{lid}.pdf has {doc.page_count} pages, the lesson says {lwant}")
+        if lpdf.exists() and lpdf.stat().st_size / 1024 < 8:
+            problems.append(f"{lid}.pdf looks empty")
         obj = (les.get("objectives") or {}).get("en") or []
         plain = (les.get("plain") or {}).get("en") or []
         if not 3 <= len(obj) <= 5:
@@ -255,7 +266,21 @@ for ch in chapters:
             v = les.get(pair) or {}
             if not v.get("km") or not v.get("en"):
                 problems.append(f"{lid}: {pair} is not in both languages")
-notes.append(f"  lessons: {lesson_count} checked · chapter PDFs: {len(chapters)}")
+
+# the guided walk-through and the rail must use the markup the shell styles
+for needle, msg in (("lk-guide", "learn.js has no guided walk-through"),
+                    ("data-ch=", "learn.js does not build the chapter accordion the rail styles expect"),
+                    ('<div class="ls">', "learn.js does not render the rail lesson list"),
+                    ("library/lessons/", "the lesson viewer does not point at the lesson's own PDF")):
+    if needle not in LESSON_JS:
+        problems.append(f"learn.js: {msg}")
+TEACHER_JS = (SITE / "assets/js/teacher.js").read_text(encoding="utf-8")
+for needle, msg in (("type: 'long'", "the teacher has no longer explanation"),
+                    ("function clean(", "the teacher does not tidy the text it prints"),
+                    ("bar stepping", "the thinking bar does not show real progress")):
+    if needle not in TEACHER_JS:
+        problems.append(f"teacher.js: {msg}")
+notes.append(f"  lessons: {lesson_count} checked · chapter PDFs: {len(chapters)} · lesson PDFs: {lesson_count}")
 
 print("\n".join(notes))
 print()

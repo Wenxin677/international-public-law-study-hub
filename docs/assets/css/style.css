@@ -640,6 +640,15 @@ ul.point-list li::before { content: "◆"; color: var(--gold); flex: none; font-
 .thinking li.now .st { animation: pulse 1s infinite; }
 .thinking .bar { height: 4px; border-radius: 999px; background: rgba(140,170,225,.18); overflow: hidden; }
 .thinking .bar i { display: block; height: 100%; width: 34%; border-radius: 999px; background: linear-gradient(90deg, transparent, var(--accent), transparent); animation: slide 1.2s linear infinite; }
+/* while the steps advance, the bar shows real progress instead of a sweep */
+.thinking .bar.stepping i {
+  width: 0;
+  animation: none;
+  background: linear-gradient(90deg, var(--accent), var(--gold, #d9b451));
+  transition: width .5s cubic-bezier(.22, 1, .36, 1);
+}
+/* the longer form of an answer reads a little quieter than the short one */
+.wrapanswer .detail { color: var(--muted); line-height: 1.75; }
 .answer-actions { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 12px; }
 .answer-actions button {
   padding: 10px 14px; min-height: 40px; border-radius: 999px; border: 1px solid var(--border); background: var(--panel);

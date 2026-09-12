@@ -461,10 +461,75 @@ body.lk-open .page-head { display: none; }
 @media (min-width: 981px) { #lk-rail-toggle { display: none; } }
 
 /* --------------------------------------------------------- the rail */
-.lesson-page .rail .item { border-radius: 14px; }
-.lesson-page .rail .item.active {
+/* the shell already styles .rail .ch / .ls / .dot — this only tints the active
+   lesson with the lesson accent so it reads at a glance */
+.lesson-page .rail .ls a { border-radius: 12px; }
+.lesson-page .rail .ls a.active {
   background: var(--lk-grad);
   color: #0b0f22;
-  border-color: transparent;
+  font-weight: 700;
 }
-.lesson-page .rail .item.active * { color: inherit; }
+.lesson-page .rail .ls a.active .dot { background: rgba(11, 15, 34, .55); }
+.lesson-page .rail .ch { border-radius: 16px; }
+
+/* ------------------------------------------------- guided walk-through */
+.lk-guide {
+  position: relative;
+  border-radius: var(--lk-radius);
+  border: 1px solid var(--lk-line);
+  background: var(--lk-card);
+  box-shadow: var(--lk-shadow);
+  padding: 20px;
+  overflow: hidden;
+}
+.lk-guide::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--lk-grad);
+}
+.lk-guide-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.lk-guide-title { font-family: 'Space Grotesk', 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; }
+.lk-guide-count {
+  margin-left: auto;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--lk-dim);
+}
+.lk-guide-count b { color: var(--lk-ink); font-size: 1.15rem; }
+.lk-guide-stage { min-height: 132px; display: grid; align-items: center; }
+.lk-guide-card {
+  border-radius: 18px;
+  border: 1px solid var(--lk-line);
+  background: rgba(255, 255, 255, .03);
+  padding: 18px;
+  animation: lkSlideIn .38s cubic-bezier(.22, 1, .36, 1) both;
+}
+@keyframes lkSlideIn { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+.lk-guide-card p {
+  margin: 0;
+  font-size: clamp(1.02rem, 3.4vw, 1.22rem);
+  line-height: 1.65;
+  font-weight: 500;
+}
+.lk-guide-kind {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: var(--lk-grad);
+  color: #0b0f22;
+}
+.lk-guide-card.kind-explanation { border-color: rgba(34, 211, 238, .4); }
+.lk-guide-card.kind-keypoint { border-color: rgba(236, 72, 153, .4); }
+.lk-guide-bar { height: 6px; border-radius: 999px; background: rgba(139, 92, 246, .16); overflow: hidden; margin: 16px 0 12px; }
+.lk-guide-bar i { display: block; height: 100%; width: 0; background: var(--lk-grad); transition: width .45s cubic-bezier(.22, 1, .36, 1); }
+.lk-guide-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.lk-guide-hint { font-size: .74rem; color: var(--lk-dim); }
+.lk-btn.done { border-color: transparent; background: var(--lk-grad); color: #0b0f22; }

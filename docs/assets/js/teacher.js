@@ -28,6 +28,7 @@
   const VOICE = {
     km: {
       short: 'ជាសង្ខេប',
+      long: 'ពន្យល់បន្ថែម',
       why: 'ហេតុអ្វីបានជាដូច្នេះ',
       book: 'អត្ថបទដើមពីសៀវភៅ',
       remember: 'ចាំចំណុចនេះ',
@@ -46,6 +47,7 @@
     },
     en: {
       short: 'In short',
+      long: 'In more detail',
       why: 'Why this is so',
       book: 'Original text from the book',
       remember: 'Remember this',
@@ -100,6 +102,17 @@
     return { passages: passages, docs: docs, strong: strongEnough(passages) };
   }
 
+  /** one place that tidies text: the sources arrive with stray newlines, double
+      spaces and page-break gaps, and an answer full of holes reads as broken */
+  function clean(s) {
+    return String(s == null ? '' : s).replace(/\s+/g, ' ').replace(/\s+([,.;:។])/g, '$1').trim();
+  }
+  /** the sentences of a passage, keeping the Khmer full stop with its sentence */
+  function sentences(text, n) {
+    const parts = String(text || '').match(/[^។.!?]+[។.!?]?/g) || [];
+    return parts.map(clean).filter(function (x) { return x.length > 12; }).slice(0, n);
+  }
+
   /* split a passage into the sentences that answer the question best */
   function evidenceFrom(passage, query, n) {
     return S.bestSentences(passage.chunk.text, query, n || 3).join(' ').trim();
@@ -141,12 +154,25 @@
     if (!short && ctx.passages.length) {
       short = evidenceFrom(ctx.passages[0], query, 2);
     }
+    short = clean(short);
     if (short) out.sections.push({ type: 'short', label: V.short, text: short });
     else out.sections.push({ type: 'say', text: V.closest });
 
-    /* 2. why / explanation, from authored key points */
+    /* 2. the longer answer: the book's own sentences gathered into one paragraph,
+       plus the lesson's first key point. More detail, still nothing invented. */
     if (kind !== 'example') {
-      const pts = lesson ? ((L === 'km' ? lesson.keyPoints.km : lesson.keyPoints.en) || []).slice(0, 4) : [];
+      const bits = [];
+      ctx.passages.slice(0, 2).forEach(function (p) {
+        sentences(evidenceFrom(p, query, 3), 2).forEach(function (sn) { bits.push(sn); });
+      });
+      if (lesson) { const first = pts0(lesson, L)[0]; if (first) bits.push(clean(first)); }
+      const longText = clean(bits.filter(Boolean).slice(0, 4).join(' '));
+      if (longText && longText !== short) out.sections.push({ type: 'long', label: V.long, text: longText });
+    }
+
+    /* 3. why / explanation, from authored key points (kept short and tidy) */
+    if (kind !== 'example') {
+      const pts = (lesson ? pts0(lesson, L) : []).slice(0, 3).map(clean).filter(Boolean);
       if (pts.length) out.sections.push({ type: 'points', label: V.why, items: pts, lesson: lesson });
     }
 
@@ -209,14 +235,17 @@
     if (!sec) return '';
     const L = I.state.lang;
     if (sec.type === 'short') {
-      return '<h4>' + esc(sec.label) + '</h4><p class="lead" data-type="' + esc(sec.label) + '">' + esc(sec.text) + '</p>';
+      return '<h4>' + esc(sec.label) + '</h4><p class="lead" data-type="' + esc(sec.label) + '">' + esc(clean(sec.text)) + '</p>';
+    }
+    if (sec.type === 'long') {
+      return '<h4>' + esc(sec.label) + '</h4><p class="detail">' + esc(clean(sec.text)) + '</p>';
     }
     if (sec.type === 'say') {
-      return (sec.label ? '<h4>' + esc(sec.label) + '</h4>' : '') + '<p>' + esc(sec.text) + '</p>';
+      return (sec.label ? '<h4>' + esc(sec.label) + '</h4>' : '') + '<p>' + esc(clean(sec.text)) + '</p>';
     }
     if (sec.type === 'points') {
       let h = '<h4>' + esc(sec.label) + '</h4><ul>';
-      sec.items.forEach(function (p) { h += '<li>' + esc(p) + '</li>'; });
+      sec.items.filter(Boolean).forEach(function (p) { h += '<li>' + esc(clean(p)) + '</li>'; });
       h += '</ul>';
       if (sec.lesson) h += '<div class="cite-list"><a class="cite" href="learn.html#' + sec.lesson.id + '">' +
         esc(t('teacher.fromLesson')) + ' ' + esc(I.pick(sec.lesson.title)) + '</a></div>';
@@ -225,7 +254,7 @@
     if (sec.type === 'evidence') {
       let h = '<h4>' + esc(sec.label) + '</h4>';
       sec.items.forEach(function (e) {
-        h += '<div class="quote">' + esc(I.truncate(e.text, 620)) +
+        h += '<div class="quote">' + esc(I.truncate(clean(e.text), 620)) +
           '<span class="src">' + esc(srcLabel(e.src)) + ' · ' + pageLabel(e.page) + '</span></div>';
         h += '<div class="cite-list">' + citeBtn(e.src, e.page) +
           '<button class="cite" data-full="' + esc(e.src) + '" data-page="' + e.page + '">' + esc(t('teacher.showtext')) + '</button></div>';
@@ -234,7 +263,7 @@
     }
     if (sec.type === 'remember') {
       let h = '<h4>' + esc(sec.label) + '</h4><ul>';
-      sec.items.forEach(function (p) { h += '<li>' + esc(p) + '</li>'; });
+      sec.items.filter(Boolean).forEach(function (p) { h += '<li>' + esc(clean(p)) + '</li>'; });
       return h + '</ul>';
     }
     if (sec.type === 'check' && sec.quiz) {
@@ -305,7 +334,7 @@
       '<div class="th-head"><span>' + esc(t('teacher.thinking')) + '</span><span class="dots"><i></i><i></i><i></i></span></div>' +
       '<ol>' + steps.map(function (s, i) {
         return '<li data-step="' + i + '"><span class="st">' + (i === 0 ? '◐' : '○') + '</span><span data-label="' + s + '">' + esc(t(s)) + '</span></li>';
-      }).join('') + '</ol><div class="bar"><i></i></div></div>';
+      }).join('') + '</ol><div class="bar stepping"><i></i></div></div>';
     const node = push('bot', html);
     return node;
   }
@@ -329,7 +358,11 @@
         lab.textContent = t('teacher.step2') + ' · ' + ctx.hits + ' ' + (I.state.lang === 'km' ? 'កន្លែង' : 'passages');
       }
       i++;
-      state.stepTimer = setTimeout(next, i === 1 ? 280 : 210);
+      /* slow enough to be read: each step is a visible beat, and the bar fills
+         with it, so "thinking" is something the student actually sees */
+      const bar = qs('.bar i', node);
+      if (bar) bar.style.width = Math.round((i / (list.length + 0.4)) * 100) + '%';
+      state.stepTimer = setTimeout(next, i >= 2 ? 780 : (i === 1 ? 900 : 640));
     };
     next();
   }

@@ -68,25 +68,35 @@ check('the hero title is the lesson title', (d.querySelector('.lk-title') || {})
   (d.querySelector('.lk-title') || {}).textContent.trim().slice(0, 40));
 check('the generic page heading is replaced', d.body.classList.contains('lk-open'));
 check('the rail lists all chapters and lessons',
-  d.querySelectorAll('#rail .rail-ch').length === data.length &&
+  d.querySelectorAll('#rail .ch').length === data.length &&
   d.querySelectorAll('#rail [data-lesson]').length === data.reduce((n, c) => n + c.lessons.length, 0),
   d.querySelectorAll('#rail [data-lesson]').length + ' lessons');
 
-console.log('\n— the chapter PDF —');
+console.log('\n— the lesson slides —');
 const frame = d.querySelector('#lk-pdf iframe');
 check('the PDF viewer is embedded', !!frame);
 const src = frame ? (frame.getAttribute('src') || frame.getAttribute('data-src') || '') : '';
-check('it points at this chapter\'s PDF', /library\/chapters\/ch1\.pdf/.test(src), src);
-check('it opens at the lesson\'s first page', new RegExp('page=' + lesson.pages.from + '\\b').test(src), src.slice(src.indexOf('#')));
+const slides = lesson.pages.to - lesson.pages.from + 1;
+check('it shows the lesson\'s own slides, not the whole chapter',
+  new RegExp('library/lessons/' + lesson.id + '\\.pdf').test(src), src.split('#')[0]);
+check('it opens at the first slide of the lesson', /#page=1\b/.test(src), src.slice(src.indexOf('#')));
+check('the lesson file really holds that many pages', (function () {
+  const p = path.join(SITE, 'library/lessons', lesson.id + '.pdf');
+  if (!fs.existsSync(p)) return false;
+  const raw = fs.readFileSync(p, 'latin1');
+  const m = raw.match(/\/Count\s+(\d+)/);
+  return m ? Math.max(...raw.match(/\/Count\s+(\d+)/g).map((x) => parseInt(x.replace(/\D/g, ''), 10))) === slides : false;
+})(), slides + ' slides expected');
 check('the viewer is lazy-loaded (src is put in place by script, not markup)',
   /data-src=/.test(fs.readFileSync(path.join(SITE, 'assets/js/learn.js'), 'utf8')) &&
-  (frame ? frame.hasAttribute('data-src') || frame.getAttribute('src') === frame.getAttribute('data-src') : false),
-  frame ? 'data-src=' + (frame.getAttribute('data-src') || '').slice(0, 40) : '');
+  (frame ? frame.hasAttribute('data-src') || frame.getAttribute('src') === frame.getAttribute('data-src') : false));
 const pdfPath = path.join(SITE, src.split('#')[0]);
 check('the file it points at really exists', fs.existsSync(pdfPath),
   fs.existsSync(pdfPath) ? (fs.statSync(pdfPath).size / 1024).toFixed(0) + ' KB' : pdfPath);
-check('the page counter shows the book page', (d.querySelector('#lk-bookpage') || {}).textContent === String(lesson.pages.from),
-  (d.querySelector('#lk-bookpage') || {}).textContent);
+check('the counter shows slide 1 and its book page',
+  (d.querySelector('#lk-slide') || {}).textContent === '1' &&
+  (d.querySelector('#lk-bookpage') || {}).textContent === String(lesson.pages.from),
+  (d.querySelector('.lk-pageno') || {}).textContent);
 
 console.log('\n— the content cards —');
 check('objectives are listed', d.querySelectorAll('.lk-obj li').length === objCount,
@@ -111,20 +121,70 @@ check('it tracks five parts', d.querySelectorAll('#lk-dots span').length === 5,
 check('it starts with a score', /\d+%/.test((d.querySelector('#lk-pct') || {}).textContent || ''),
   (d.querySelector('#lk-pct') || {}).textContent);
 
-console.log('\n— page navigation —');
-const before = d.querySelector('#lk-bookpage').textContent;
+console.log('\n— slide navigation (inside the lesson only) —');
+const before = d.querySelector('#lk-slide').textContent;
 d.querySelector('#lk-next').dispatchEvent(new window.Event('click', { bubbles: true }));
-const after = d.querySelector('#lk-bookpage').textContent;
-check('the next-page button moves the viewer',
-  Number(after) === Number(before) + 1 && new RegExp('page=' + after + '\\b').test(d.querySelector('#lk-pdf iframe').getAttribute('src') || ''),
-  before + ' → ' + after);
-d.querySelector('#lk-start').dispatchEvent(new window.Event('click', { bubbles: true }));
-check('the "start of the lesson" button jumps back',
-  d.querySelector('#lk-bookpage').textContent === String(lesson.pages.from),
+const after = d.querySelector('#lk-slide').textContent;
+check('Next moves the viewer one slide',
+  Number(after) === Number(before) + 1 &&
+  new RegExp('page=' + after + '\\b').test(d.querySelector('#lk-pdf iframe').getAttribute('src') || ''),
+  'slide ' + before + ' → ' + after);
+check('the book page follows the slide',
+  d.querySelector('#lk-bookpage').textContent === String(lesson.pages.from + Number(after) - 1),
   d.querySelector('#lk-bookpage').textContent);
-check('moving through pages raises the progress score',
-  parseInt(d.querySelector('#lk-pct').textContent, 10) > 0,
-  d.querySelector('#lk-pct').textContent);
+d.querySelector('#lk-prev').dispatchEvent(new window.Event('click', { bubbles: true }));
+d.querySelector('#lk-prev').dispatchEvent(new window.Event('click', { bubbles: true }));
+check('it cannot go back past the first slide of the lesson',
+  d.querySelector('#lk-slide').textContent === '1', 'slide ' + d.querySelector('#lk-slide').textContent);
+check('moving through slides raises the progress score',
+  parseInt(d.querySelector('#lk-pct').textContent, 10) > 30, d.querySelector('#lk-pct').textContent);
+
+console.log('\n— the guided walk-through (click to continue) —');
+const stepCount = (lesson.objectives.en || []).length + (lesson.plain.en || []).length +
+                  Math.min(5, (lesson.keyPoints.en || []).length);
+check('the guided lesson exists', !!d.querySelector('#lk-guide'));
+check('it holds every point of the lesson',
+  d.querySelector('.lk-guide-count').textContent.replace(/\s/g, '') === '1/' + stepCount,
+  d.querySelector('.lk-guide-count').textContent.trim());
+const firstPoint = (d.querySelector('.lk-guide-card p') || {}).textContent || '';
+check('the first point is shown', firstPoint.length > 15, firstPoint.slice(0, 46));
+const firstKind = (d.querySelector('.lk-guide-kind') || {}).textContent || '';
+check('it says what kind of point this is', /Objective|គោលបំណង/.test(firstKind), firstKind);
+d.querySelector('#lk-gnext').dispatchEvent(new window.Event('click', { bubbles: true }));
+const secondPoint = (d.querySelector('.lk-guide-card p') || {}).textContent || '';
+check('clicking Next moves to the next point', secondPoint !== firstPoint && secondPoint.length > 15, secondPoint.slice(0, 46));
+check('the step counter follows', /2\//.test(d.querySelector('.lk-guide-count').textContent));
+check('the walk-through bar fills up', /%/.test(d.querySelector('#lk-gfill').style.width || ''), d.querySelector('#lk-gfill').style.width);
+d.querySelector('#lk-gprev').dispatchEvent(new window.Event('click', { bubbles: true }));
+check('Back goes to the previous point', (d.querySelector('.lk-guide-card p') || {}).textContent === firstPoint);
+for (let i = 0; i < stepCount + 2; i++) d.querySelector('#lk-gnext').dispatchEvent(new window.Event('click', { bubbles: true }));
+check('finishing the walk-through marks the lesson studied',
+  d.querySelector('#mark-btn').disabled === true &&
+  /Marked as studied|បានរៀនរួច/.test(d.querySelector('#mark-btn').textContent),
+  d.querySelector('#mark-btn').textContent.trim());
+
+console.log('\n— the left rail (the bit that was broken) —');
+check('chapters render as the accordion the stylesheet expects',
+  d.querySelectorAll('#rail .ch').length === data.length, d.querySelectorAll('#rail .ch').length + ' chapters');
+check('each chapter has a numbered header button',
+  d.querySelectorAll('#rail .ch > button .n').length === data.length);
+check('lessons live in the .ls list the stylesheet shows/hides',
+  d.querySelectorAll('#rail .ls').length === data.length);
+check('the current chapter is open',
+  d.querySelectorAll('#rail .ch.open').length === 1 &&
+  d.querySelector('#rail .ch.open .ls a.active') !== null);
+check('the open lesson is the one on screen',
+  (d.querySelector('#rail .ls a.active') || {}).getAttribute('href') === '#' + lesson.id,
+  (d.querySelector('#rail .ls a.active') || {}).getAttribute('href'));
+check('every lesson is listed with its dot marker',
+  d.querySelectorAll('#rail .ls a .dot').length === data.reduce((n, c) => n + c.lessons.length, 0));
+check('clicking a chapter header collapses it', (function () {
+  const btn = d.querySelector('#rail .ch.open > button');
+  btn.dispatchEvent(new window.Event('click', { bubbles: true }));
+  const closed = d.querySelectorAll('#rail .ch.open').length === 0;
+  btn.dispatchEvent(new window.Event('click', { bubbles: true }));
+  return closed;
+})());
 
 console.log('\n— both languages —');
 /* the shell switches language by reloading the page, which jsdom cannot do, so

@@ -411,6 +411,8 @@ begin
   if (select count(*) from robo_events
         where lower(username) = lower(v_name)
           and type = 'admin_denied'
+          and reason = 'forbidden'          -- only real password failures count:
+                                            -- retrying while locked must not extend the lock
           and created_at > now() - interval '15 minutes') >= 8 then
     insert into robo_events (username, type, reason) values (v_name, 'admin_denied', 'locked');
     return jsonb_build_object('ok', false, 'error', 'locked');
@@ -465,6 +467,8 @@ begin
   if (select count(*) from robo_events
         where lower(username) = lower(v_name)
           and type = 'admin_denied'
+          and reason = 'forbidden'          -- only real password failures count:
+                                            -- retrying while locked must not extend the lock
           and created_at > now() - interval '15 minutes') >= 8 then
     return jsonb_build_object('ok', false, 'error', 'locked');
   end if;

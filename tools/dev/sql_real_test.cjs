@@ -126,6 +126,15 @@ const val = async (db, sql, params) => one((await db.query(sql, params)).rows);
   for (let i = 0; i < 8; i++) await rpc('robo_admin_accounts', 'panha', 'bad');
   check('repeated wrong owner passwords are throttled too',
     (await rpc('robo_admin_accounts', 'panha', 'test1234')).error === 'locked');
+  /* the bug this fixes: retrying while locked used to log another countable
+     failure, so the owner could never get back in */
+  const fails = () => val(db, "select count(*) from robo_events where type='admin_denied' and reason='forbidden'").then(Number);
+  const before = await fails();
+  for (let i = 0; i < 4; i++) await rpc('robo_admin_accounts', 'panha', 'bad' + i);
+  check('retrying while locked does not extend the lockout', (await fails()) === before, before + ' failures before and after 4 more tries');
+  check('and it is still locked', (await rpc('robo_admin_accounts', 'panha', 'test1234')).error === 'locked');
+  await db.exec("delete from robo_events where type in ('admin_denied','signin_failed','signin_locked')");
+  check('clearing the rows unlocks it again', (await rpc('robo_admin_accounts', 'panha', 'test1234')).ok === true);
 
   console.log('\n— re-running the file (she will, when it is updated) —');
   let again = true, err2 = '';
@@ -142,8 +151,16 @@ const val = async (db, sql, params) => one((await db.query(sql, params)).rows);
   check('after the reset the new password works', re.ok === true, JSON.stringify(re).slice(0, 80));
   check('the old password stops working after a reset',
     (await rpc('robo_login', 'probe', 'probe12345', 'web', 'ua', 'km')).error === 'bad_credentials');
-  check('a locked account stays locked until the window passes (recovery is by time, not by reset)',
+  /* a lockout is ended by time or by clearing the rows — never by a reset, and a
+     retry while locked must not extend it either */
+  for (let i = 0; i < 8; i++) await rpc('robo_login', 'panha', 'wrong' + i, 'web', 'ua', 'km');
+  check('8 wrong passwords lock the account', (await rpc('robo_login', 'panha', 'test1234', 'web', 'ua', 'km')).error === 'locked');
+  await db.exec("update robo_accounts set pwhash = crypt('newpassword', gen_salt('bf',10)) where username_lower='panha'");
+  check('a password reset does not clear the lockout',
     (await rpc('robo_login', 'panha', 'newpassword', 'web', 'ua', 'km')).error === 'locked');
+  await db.exec("delete from robo_events where type in ('signin_failed','signin_locked')");
+  check('clearing the failed rows lets the new password work',
+    (await rpc('robo_login', 'panha', 'newpassword', 'web', 'ua', 'km')).ok === true);
 
   console.log('\n— sessions: the token is what identifies a student —');
   const su = await rpc('robo_signup', 'alice', 'alicepass1', 'en', 'phone', 'Safari');

@@ -92,13 +92,25 @@
   }
 
   /* ---------------------------------------------------------------- database */
+  /** turn a database answer into something a person can act on: "locked" is not
+      a connection problem, and "forbidden" is not a wrong password */
+  function dbError(code) {
+    const km = I.state.lang === 'km';
+    if (code === 'locked') return t('admin.dblocked');
+    if (code === 'forbidden') return t('admin.ownerdenied');
+    if (code === 'need_credentials') return t('admin.needcreds');
+    if (code === 'no_database') return t('admin.nodb');
+    if (code === 'unreachable') return t('admin.dbfail') + ' — ' + (km ? 'ការតភ្ជាប់បរាជ័យ' : 'the request failed');
+    return t('admin.dbfail') + ' — ' + (code || '');
+  }
+
   async function openWithCredentials(username, password) {
     const btn = qs('#go');
     if (btn) { btn.disabled = true; btn.textContent = t('common.loading'); }
     const d = await A.dbAccounts(username, password);
     if (btn) { btn.disabled = false; btn.textContent = t('admin.enter'); }
     if (!d.ok) {
-      gateError(d.error === 'forbidden' ? t('admin.ownerdenied') : t('admin.dbfail') + ' — ' + (d.error || ''));
+      gateError(dbError(d.error));
       return;
     }
     owner = { u: username, p: password };
@@ -114,7 +126,7 @@
     if (out) out.innerHTML = '<div class="skel" style="height:70px"></div>';
     const d = await A.dbAccounts(owner.u, owner.p);
     if (!d.ok) {
-      if (out) out.innerHTML = '<div class="notice bad">' + esc(t('admin.dbfail')) + ' — ' + esc(d.error || '') + '</div>';
+      if (out) out.innerHTML = '<div class="notice bad">' + esc(dbError(d.error)) + '</div>';
       return;
     }
     dbData = d;
@@ -131,7 +143,7 @@
     const d = await A.dbClass(owner.u, owner.p);
     if (!d.ok) {
       out.innerHTML = '<h4 style="margin:0 0 8px">' + esc(km ? 'ការរៀនរបស់សិស្ស' : 'How the class is doing') + '</h4>' +
-        '<div class="notice bad">' + esc(t('admin.dbfail')) + ' — ' + esc(d.error || '') + '</div>';
+        '<div class="notice bad">' + esc(dbError(d.error)) + '</div>';
       return;
     }
     const rows = d.students || [];

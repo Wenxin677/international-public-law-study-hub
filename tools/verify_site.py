@@ -164,6 +164,26 @@ for f in [ROOT / "README.md", ROOT / "NOTICE.md", ROOT / "tools/desktop-readme.t
 if "adminSecret" in (ROOT / "README.md").read_text(encoding="utf-8"):
     problems.append("README.md still documents a removed adminSecret setting")
 
+# --- the client and the database must agree on the function signatures -------
+# (a Node stub accepts any arguments, so only a real engine catches a drift)
+sql_text = (SITE.parent / "tools/supabase-accounts.sql").read_text(encoding="utf-8")
+sig = {}
+for m in re.finditer(r"create or replace function public\.(robo_\w+)\((.*?)\)\s*returns", sql_text, re.S):
+    sig[m.group(1)] = re.findall(r"\b(p_\w+)\b", m.group(2))
+for fn in ["robo_signup", "robo_login", "robo_logout", "robo_admin_accounts"]:
+    if fn not in sig:
+        problems.append(f"supabase-accounts.sql: {fn} is missing")
+        continue
+    block = re.search(r"async function " + ("signup" if fn == "robo_signup" else "signin" if fn == "robo_login" else "signout" if fn == "robo_logout" else "dbAccounts") + r"\(.*?\n  \}", auth_js, re.S)
+    if not block:
+        continue
+    sent = set(re.findall(r"\b(p_\w+)\s*:", block.group(0)))
+    if sent and not sent.issubset(set(sig[fn])):
+        problems.append(f"auth.js sends {sorted(sent - set(sig[fn]))} to {fn}, which the SQL does not accept")
+    missing = set(sig[fn]) - sent
+    if sent and missing and fn != "robo_login":      # login's older callers pass fewer names
+        notes.append(f"  note: {fn} also has optional params never sent: {sorted(missing)}")
+
 print("\n".join(notes))
 print()
 if problems:

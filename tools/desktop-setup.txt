@@ -1,0 +1,121 @@
+========================================================================
+SETUP — where your site's data goes
+International Public Law Study Hub (RoboCL)
+========================================================================
+
+There are two separate things, and only ONE of them still needs you:
+
+  PART 1  Account database  .............  NOT SET UP YET — 5 minutes, do this
+  PART 2  Google Sheet collector ........  ALREADY LIVE — nothing to do
+                                          (optional token upgrade at the end)
+
+
+------------------------------------------------------------------------
+PART 1 — The account database (Supabase).  About 5 minutes.
+------------------------------------------------------------------------
+Why: right now an account only exists in the one browser that made it. With
+this database, one account works on every phone and laptop, and passwords are
+stored as bcrypt hashes inside the database (never readable by anyone).
+
+STEP 1.  Open  supabase.com  →  "Start your project"
+         Sign in with Google (or email). No credit card, free plan is enough.
+
+STEP 2.  "New project"
+           Name:              RoboCL
+           Database Password: click "Generate a password" and just leave it.
+                              (Our website never uses it — it talks to the
+                              database with a key, not a direct connection.)
+           Region:            Southeast Asia (Singapore)  ← closest to Cambodia
+           Plan:              Free
+         Create, then wait about 2 minutes until the project finishes setting up.
+
+STEP 3.  Run the database code.
+           - Left sidebar → "SQL Editor" → "New query"
+           - Open this file (same folder as this one, or from the website
+             project at tools/supabase-accounts.sql):
+                 "Account database - run this in Supabase.sql"
+           - Select everything in it → Copy → paste into the SQL Editor
+           - Press  Run  (Ctrl + Enter)
+         You should see:  "Success. No rows returned"
+         That creates two locked tables (robo_accounts, robo_events) and the
+         four functions the website calls.
+
+         (This exact file was test-run against a real PostgreSQL 18 with
+         pgcrypto before you were given it: 42 checks — tables locked against
+         the public key, passwords stored as bcrypt, wrong passwords refused,
+         8 failures locking a username, the owner list refusing without an
+         admin password, and re-running the file safely replacing the old
+         version. So it should just work; if Supabase prints any error, send me
+         the message.)
+
+STEP 4.  Copy two values and send them to me (in the chat):
+           - Project Settings (the gear icon) → "API" or "API Keys"
+           - "Project URL"                → copy
+           - "anon public"  (on newer projects it is called
+             "Publishable key", starting with sb_publishable_)  → copy
+         These two are safe to share — they are meant to be public, and they
+         live in the website's code anyway. The tables stay locked: that key
+         cannot read or write them, it can only call the sign-in functions.
+
+         → I will put them into docs/data/config.js, upload, and then create a
+           real test account against YOUR database to prove it works. I'll tell
+           you the result either way.
+
+STEP 5.  Make yourself the owner (after I confirm it works):
+           - Sign up on the website with your own username and a password of
+             8+ characters (e.g. username: panha)
+           - Back in the SQL Editor, run this line with your username:
+                 update robo_accounts set is_admin = true where username_lower = 'panha';
+           - Now open admin.html → "Load every account from the database"
+             and sign in with YOUR username + password. That shows every
+             account: created, last sign-in, how many times, failed attempts.
+             (There is a "Load every account" button and CSV export.)
+
+
+------------------------------------------------------------------------
+PART 2 — The Google Sheet collector:  already done and working.
+------------------------------------------------------------------------
+I tested it today with your live site's endpoint, it answered
+"RoboCL collector is running", and a test row was accepted.
+
+What it records (into the tab "signins" of your Google Sheet):
+     time · username · event (signup / signin / signin_failed / signout)
+     · device · browser · language
+
+What it never records: your password, or any hash of it.
+
+Check it yourself:  admin.html → "Send a test row to the sheet".
+
+OPTIONAL 5-minute upgrade (makes junk posts from strangers pointless):
+  1. Open your Google Sheet → Extensions → Apps Script
+  2. In the line  var TOKEN = '';  put some random words, e.g.
+         var TOKEN = 'khmer-law-9182-bluebird';
+  3. Deploy → Manage deployments → pencil (edit) → Version: "New version"
+     → Deploy
+  4. Send me that same word. I put it in docs/data/config.js, upload, and then
+     only posts carrying it are written to the sheet.
+  (It is not real security — the word is visible in the website's code — it
+  only stops blind junk. The database in Part 1 is the real protection.)
+
+
+------------------------------------------------------------------------
+Honest limits — please know these
+------------------------------------------------------------------------
+· Passwords cannot be read back, not even by you, by design. If someone forgets
+  one, reset it (SQL Editor):
+      update robo_accounts set pwhash = crypt('newpassword', gen_salt('bf',10))
+      where username_lower = 'theirname';
+· I will never ask for, type, or accept your Google password or any password.
+  Steps 1 and 5 are yours to click; everything after them is mine.
+· Supabase's free projects pause after 7 days with no activity. If sign-in ever
+  says it cannot reach the database, open the Supabase dashboard and wake the
+  project (one click).
+· The Supabase key is public by design, which is why the tables are locked with
+  Row Level Security and everything goes through the four functions.
+
+
+------------------------------------------------------------------------
+Send me, when you are ready
+------------------------------------------------------------------------
+  Part 1:  the Project URL  +  the anon/publishable key   (STEP 4)
+  Part 2:  nothing, unless you did the optional token (then: the word)

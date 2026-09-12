@@ -121,6 +121,33 @@
     paintDb(d);
   }
 
+  /** who is actually studying: lessons marked, quiz scores, last activity */
+  async function loadClass() {
+    const out = qs('#class-out');
+    if (!out || !owner) return;
+    const km = I.state.lang === 'km';
+    out.innerHTML = '<h4 style="margin:0 0 8px">' + esc(km ? 'ការរៀនរបស់សិស្ស' : 'How the class is doing') + '</h4>' +
+      '<div class="skel" style="height:60px"></div>';
+    const d = await A.dbClass(owner.u, owner.p);
+    if (!d.ok) {
+      out.innerHTML = '<h4 style="margin:0 0 8px">' + esc(km ? 'ការរៀនរបស់សិស្ស' : 'How the class is doing') + '</h4>' +
+        '<div class="notice bad">' + esc(t('admin.dbfail')) + ' — ' + esc(d.error || '') + '</div>';
+      return;
+    }
+    const rows = d.students || [];
+    out.innerHTML = '<h4 style="margin:0 0 8px">' + esc(km ? 'ការរៀនរបស់សិស្ស' : 'How the class is doing') + '</h4>' +
+      '<div class="scroll-x"><table class="tbl"><thead><tr><th>' + esc(km ? 'ឈ្មោះ' : 'Username') +
+      '</th><th>' + esc(km ? 'មេរៀនបានរៀន' : 'Lessons studied') + '</th><th>' + esc(km ? 'កម្រងសំណួរ' : 'Quizzes') +
+      '</th><th>' + esc(km ? 'ចម្លើយត្រូវ' : 'Correct') + '</th><th>' + esc(km ? 'ភាគរយ' : 'Score') +
+      '</th><th>' + esc(km ? 'រៀនចុងក្រោយ' : 'Last studied') + '</th></tr></thead><tbody>' +
+      (rows.length ? rows.map(function (s) {
+        return '<tr><td><b>' + esc(s.username) + '</b></td><td>' + (s.studied || 0) + '</td><td>' + (s.quizzes || 0) +
+          '</td><td>' + (s.correct || 0) + ' / ' + (s.answered || 0) + '</td><td>' +
+          (s.percent == null ? '—' : s.percent + '%') + '</td><td class="nowrap">' + esc(fmt(s.last_study)) + '</td></tr>';
+      }).join('') : '<tr><td colspan="6" class="muted">' + esc(t('admin.none')) + '</td></tr>') +
+      '</tbody></table></div>';
+  }
+
   function paintDb(d) {
     const out = qs('#db-out');
     if (!out) return;
@@ -133,13 +160,16 @@
       '<div class="scroll-x"><table class="tbl"><thead><tr><th>#</th><th>' + esc(I.state.lang === 'km' ? 'ឈ្មោះ' : 'Username') +
       '</th><th>' + esc(I.state.lang === 'km' ? 'បង្កើត' : 'Created') + '</th><th>' + esc(I.state.lang === 'km' ? 'ចូលចុងក្រោយ' : 'Last sign-in') +
       '</th><th>' + esc(I.state.lang === 'km' ? 'ចំនួនចូល' : 'Sign-ins') + '</th><th>' + esc(I.state.lang === 'km' ? 'បរាជ័យ' : 'Failed') +
-      '</th><th>Lang</th></tr></thead><tbody>' +
+      '</th><th>' + esc(I.state.lang === 'km' ? 'មេរៀន' : 'Lessons') + '</th><th>' + esc(I.state.lang === 'km' ? 'កម្រងសំណួរ' : 'Quizzes') +
+      '</th><th>' + esc(I.state.lang === 'km' ? 'កំណត់ត្រា' : 'Notes') + '</th><th>Lang</th></tr></thead><tbody>' +
       (accs.length ? accs.map(function (a, i) {
         return '<tr><td>' + (i + 1) + '</td><td><b>' + esc(a.username) + '</b></td><td class="nowrap">' + esc(fmt(a.created)) +
           '</td><td class="nowrap">' + esc(fmt(a.last_login)) + '</td><td>' + (a.logins || 0) + '</td><td>' + (a.failed || 0) +
+          '</td><td>' + (a.studied || 0) + '</td><td>' + (a.quizzes || 0) + '</td><td>' + (a.notes || 0) +
           '</td><td>' + esc(a.lang || '') + '</td></tr>';
-      }).join('') : '<tr><td colspan="7" class="muted">' + esc(t('admin.none')) + '</td></tr>') +
+      }).join('') : '<tr><td colspan="10" class="muted">' + esc(t('admin.none')) + '</td></tr>') +
       '</tbody></table></div>' +
+      '<div id="class-out" style="margin-top:20px"></div>' +
       (evs.length ? '<h4 style="margin:16px 0 8px">' + esc(t('admin.events')) + '</h4><div class="scroll-x"><table class="tbl">' +
         '<thead><tr><th>' + esc(I.state.lang === 'km' ? 'ពេលវេលា' : 'When') + '</th><th>' + esc(I.state.lang === 'km' ? 'ឈ្មោះ' : 'Username') +
         '</th><th>' + esc(I.state.lang === 'km' ? 'សកម្មភាព' : 'Action') + '</th><th>' + esc(I.state.lang === 'km' ? 'ឧបករណ៍' : 'Device') + '</th></tr></thead><tbody>' +
@@ -150,16 +180,18 @@
     const csv = qs('#dbcsv');
     if (csv) csv.addEventListener('click', function () {
       const row = I.csvRow ? I.csvRow : function (c) { return c.join(','); };
-      const lines = [row(['type', 'username', 'created', 'last_login', 'logins', 'failed', 'device', 'lang'])];
+      const lines = [row(['type', 'username', 'created', 'last_login', 'logins', 'failed', 'studied', 'quizzes', 'notes', 'device', 'lang'])];
       accs.forEach(function (a) {
-        lines.push(row(['account', a.username, a.created || '', a.last_login || '', a.logins || 0, a.failed || 0, '', a.lang || '']));
+        lines.push(row(['account', a.username, a.created || '', a.last_login || '', a.logins || 0, a.failed || 0,
+                        a.studied || 0, a.quizzes || 0, a.notes || 0, '', a.lang || '']));
       });
       evs.forEach(function (e) {
-        lines.push(row([e.type, e.username || '', e.created || '', '', '', '', e.device || '', '']));
+        lines.push(row([e.type, e.username || '', e.created || '', '', '', '', '', '', '', e.device || '', '']));
       });
       I.download('robocl-accounts-' + new Date().toISOString().slice(0, 10) + '.csv', lines.join('\n'), 'text/csv;charset=utf-8');
     });
     I.toast(t('admin.loaded') + ' ' + accs.length + ' ' + t('admin.users'));
+    loadClass();          // and the class picture, once the account table is up
   }
 
   /* ---------------------------------------------------------------- view */

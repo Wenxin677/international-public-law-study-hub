@@ -385,7 +385,7 @@
         }
         cacheServerAccount(d.username);
         logEvent('signup', d.username, { algo: 'bcrypt (database)' });
-        startSession(d.username, true);
+        startSession(d.username, true, d.token);
         return { ok: true, msg: 'auth.created', user: d.username, db: true };
       } catch (e) {
         /* no connection → fall back to the on-device account below */
@@ -423,7 +423,7 @@
           cacheServerAccount(d.username);
           clearFailures(d.username);
           logEvent('signin', d.username, { algo: 'bcrypt (database)' });
-          startSession(d.username, remember !== false);
+          startSession(d.username, remember !== false, d.token);
           return { ok: true, msg: 'auth.signedin', user: d.username, db: true };
         }
         if (d && d.error === 'locked') {
@@ -448,7 +448,7 @@
                 cacheServerAccount(moved.username);
                 clearFailures(moved.username);
                 logEvent('signin', moved.username, { migrated: true });
-                startSession(moved.username, remember !== false);
+                startSession(moved.username, remember !== false, moved.token);
                 return { ok: true, msg: 'auth.signedin', user: moved.username, db: true, migrated: true };
               }
             } catch (e) { /* keep the on-device account below */ }
@@ -478,8 +478,9 @@
     return { ok: true, msg: 'auth.signedin', user: rec.u };
   }
 
-  function startSession(username, remember) {
+  function startSession(username, remember, token) {
     const s = { u: username, t: newToken(), ts: Date.now(), exp: Date.now() + 1000 * 60 * 60 * 24 * 14 };
+    if (token) s.token = token;        // the database's session token, when there is one
     if (remember) {
       writeJSON(STORE.session, s);                 // durable: this device remembers you
       try { sessionStorage.setItem(STORE.session, JSON.stringify(s)); } catch (e) {}
@@ -494,13 +495,28 @@
     return s;
   }
 
+  /** the database session token for this browser, if the account is a database one */
+  function sessionToken() {
+    const s = session();
+    return (s && s.token) || null;
+  }
+  /** ask the database whether this session is still good (not signed out, not expired) */
+  async function dbSession() {
+    const t = sessionToken();
+    if (!dbReady() || !t) return null;
+    try {
+      const d = await rpc('robo_session_check', { p_token: t });
+      return d && d.ok ? d : null;
+    } catch (e) { return null; }
+  }
+
   function signout() {
     const s = session();
     if (s) {
       logEvent('signout', s.u, {});
       if (dbReady()) {
         try {
-          rpc('robo_logout', { p_username: s.u, p_device: deviceInfo() }).catch(function () {});
+          rpc('robo_logout', { p_username: s.u, p_token: s.token || null, p_device: deviceInfo() }).catch(function () {});
         } catch (e) {}
       }
     }
@@ -508,6 +524,18 @@
     try { localStorage.removeItem(STORE.session); } catch (e) {}
     if (window.IPL) window.IPL.toast(window.IPL.t('auth.signedout'));
     setTimeout(function () { location.href = 'index.html'; }, 420);
+  }
+
+  /** the class picture — who is studying and how they are scoring (owner only) */
+  async function dbClass(ownerUsername, ownerPassword) {
+    if (!dbReady()) return { ok: false, error: 'no_database' };
+    if (!ownerUsername || !ownerPassword) return { ok: false, error: 'need_credentials' };
+    try {
+      const d = await rpc('robo_admin_progress', { p_username: ownerUsername, p_password: ownerPassword });
+      return d || { ok: false, error: 'bad_response' };
+    } catch (e) {
+      return { ok: false, error: 'unreachable' };
+    }
   }
 
   /* ---------------------------------------------------------------- database admin */
@@ -565,6 +593,7 @@
     config: CFG, cloudEnabled: !!((CLOUD && CLOUD.url && CLOUD.key) || (SHEET && SHEET.url)),
     collectorStatus: collectorStatus, testCollector: testCollector,
     dbReady: dbReady, dbAccounts: dbAccounts, isServerAccount: isServerAccount,
+    sessionToken: sessionToken, dbSession: dbSession, call: rpc, dbClass: dbClass,
     sha256Hex: sha256, lockedOut: lockedOut,
     verifyCode: verifyCode, codeLocked: codeLocked, noteCodeFailure: noteCodeFailure, clearCodeFailures: clearCodeFailures,
     engine: canPBKDF2 ? 'PBKDF2-SHA256 (120k rounds)' : 'SHA-256 iterated (offline fallback)'

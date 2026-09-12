@@ -25,13 +25,25 @@ global.document = {
   createElement: () => ({ style: {}, dataset: {}, classList: { add: noop, remove: noop, toggle: noop }, setAttribute: noop, appendChild: noop, remove: noop }),
   body: { appendChild: noop, dataset: {} }, documentElement: { dataset: {} }
 };
-global.window.IPL = { state: { lang: 'km' }, t: (k) => k, toast: noop };
+global.window.IPL = {
+  state: { lang: 'km' }, t: (k) => k, toast: noop,
+  /* the same local store core.js keeps, so progress.js has something to merge with */
+  getProgress: () => (global.__local || (global.__local = { xp: 0, lessons: {}, quiz: {}, notes: {} })),
+  saveProgress: (p) => { global.__local = p; return true; }
+};
 
 /* -------------------------------------------- RPC server (= supabase SQL file) */
 const accounts = new Map();     // username_lower -> record
 const events = [];
+const sessions = new Map();     // token -> username_lower
+const progress = new Map();     // username_lower -> { lesson: {...} }
+const notes = new Map();        // username_lower -> { lesson: body }
 const bcryptish = (pw, salt) => crypto.createHash('sha256').update(salt + '|' + pw).digest('hex');
 const failsIn15 = (name) => events.filter((e) => e.type === 'signin_failed' && (e.username || '').toLowerCase() === name.toLowerCase()).length;
+const newToken = () => crypto.randomBytes(32).toString('hex');
+const whoami = (t) => sessions.get(String(t || '')) || null;
+const progFor = (u) => progress.get(u) || (progress.set(u, {}), progress.get(u));
+const notesFor = (u) => notes.get(u) || (notes.set(u, {}), notes.get(u));
 
 function rpcResult(fn, a) {
   const key = String(a.p_username || '').toLowerCase();
@@ -43,7 +55,9 @@ function rpcResult(fn, a) {
     accounts.set(key, { username: a.p_username, salt, hash: bcryptish(a.p_password, salt),
                         created: new Date().toISOString(), logins: 1, failed: 0, lang: a.p_lang || 'km', is_admin: false });
     events.push({ username: a.p_username, type: 'signup' });
-    return { ok: true, username: a.p_username };
+    const t = newToken();
+    sessions.set(t, key);
+    return { ok: true, username: a.p_username, token: t, expires_days: 14 };
   }
   if (fn === 'robo_login') {
     if (failsIn15(key) >= 8) { events.push({ username: a.p_username, type: 'signin_locked' }); return { ok: false, error: 'locked' }; }
@@ -52,13 +66,77 @@ function rpcResult(fn, a) {
     if (acc.hash === bcryptish(a.p_password || '', acc.salt)) {
       acc.logins++;
       events.push({ username: acc.username, type: 'signin' });
-      return { ok: true, username: acc.username, logins: acc.logins, created: acc.created };
+      const t = newToken();
+      sessions.set(t, key);
+      return { ok: true, username: acc.username, logins: acc.logins, created: acc.created, admin: acc.is_admin, token: t };
     }
     acc.failed++;
     events.push({ username: acc.username, type: 'signin_failed', reason: 'bad_password' });
     return { ok: false, error: 'bad_credentials' };
   }
-  if (fn === 'robo_logout') { events.push({ username: a.p_username, type: 'signout' }); return { ok: true }; }
+  if (fn === 'robo_logout') {
+    if (a.p_token) sessions.delete(a.p_token);
+    events.push({ username: a.p_username, type: 'signout' });
+    return { ok: true };
+  }
+  if (fn === 'robo_session_check') {
+    const u = whoami(a.p_token);
+    if (!u) return { ok: false, error: 'no_session' };
+    return { ok: true, username: accounts.get(u).username, admin: accounts.get(u).is_admin };
+  }
+  if (fn === 'robo_progress_get') {
+    const u = whoami(a.p_token);
+    if (!u) return { ok: false, error: 'no_session' };
+    const rows = Object.keys(progFor(u)).map((l) => Object.assign({ lesson: l }, progFor(u)[l]));
+    return { ok: true, progress: rows };
+  }
+  if (fn === 'robo_progress_put') {
+    const u = whoami(a.p_token);
+    if (!u) return { ok: false, error: 'no_session' };
+    const l = String(a.p_lesson || '').trim();
+    if (!l || l.length > 40) return { ok: false, error: 'bad_lesson' };
+    const row = progFor(u)[l] || { studied: false, quiz_best: null, quiz_total: null, attempts: 0 };
+    if (a.p_studied != null) row.studied = !!a.p_studied;
+    if (a.p_best != null) {
+      row.quiz_best = Math.max(Number(a.p_best), row.quiz_best == null ? 0 : row.quiz_best);
+      row.quiz_total = a.p_total != null ? Number(a.p_total) : row.quiz_total;
+      row.attempts += 1;
+    }
+    progFor(u)[l] = row;
+    return { ok: true, lesson: l, studied: row.studied, best: row.quiz_best, total: row.quiz_total, attempts: row.attempts };
+  }
+  if (fn === 'robo_notes_get') {
+    const u = whoami(a.p_token);
+    if (!u) return { ok: false, error: 'no_session' };
+    const one = String(a.p_lesson || '').trim();
+    const rows = Object.keys(notesFor(u))
+      .filter((l) => !one || l === one)
+      .map((l) => ({ lesson: l, body: notesFor(u)[l] }));
+    return { ok: true, notes: rows };
+  }
+  if (fn === 'robo_notes_put') {
+    const u = whoami(a.p_token);
+    if (!u) return { ok: false, error: 'no_session' };
+    const l = String(a.p_lesson || '').trim();
+    if (!l || l.length > 40) return { ok: false, error: 'bad_lesson' };
+    notesFor(u)[l] = String(a.p_body || '').slice(0, 20000);
+    return { ok: true, lesson: l, length: notesFor(u)[l].length };
+  }
+  if (fn === 'robo_admin_progress') {
+    const acc = accounts.get(key);
+    if (!acc || !acc.is_admin || acc.hash !== bcryptish(a.p_password || '', acc.salt)) {
+      return { ok: false, error: 'forbidden' };
+    }
+    const students = [...accounts.entries()].map(([k2, x]) => {
+      const rows = Object.values(progFor(k2));
+      const answered = rows.reduce((n, r) => n + (r.quiz_total || 0), 0);
+      const correct = rows.reduce((n, r) => n + (r.quiz_best || 0), 0);
+      return { username: x.username, studied: rows.filter((r) => r.studied).length,
+               quizzes: rows.filter((r) => r.quiz_best != null).length,
+               answered, correct, percent: answered ? Math.round((100 * correct) / answered) : null };
+    });
+    return { ok: true, students };
+  }
   if (fn === 'robo_admin_accounts') {
     const acc = accounts.get(key);
     if (!acc || !acc.is_admin || acc.hash !== bcryptish(a.p_password || '', acc.salt)) {
@@ -162,6 +240,52 @@ server.listen(0, '127.0.0.1', async () => {
   check('admin with the right password gets the list', listed.ok === true && listed.accounts.length >= 1, (listed.accounts || []).length + ' accounts');
   check('the list contains no password hashes', JSON.stringify(listed).indexOf('hash') === -1);
   check('the list view is logged', events.some((e) => e.type === 'admin_view'));
+
+  console.log('progress and notes through the app (create / read / update)');
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  require(path.resolve(__dirname, '../../docs/assets/js/progress.js'));
+  const P = global.window.IPLProgress;
+  check('the progress layer loads', !!P && typeof P.pull === 'function');
+  const tok = A.sessionToken();
+  check('the session carries the database token', typeof tok === 'string' && tok.length === 64, (tok || '').slice(0, 8) + '…');
+
+  P.push('studied', { lesson: 'ch1-l1' });
+  P.push('quiz', { lesson: 'ch1-l1', best: 7, total: 10 });
+  P.push('notes', { lesson: 'ch1-l1', body: 'Article 38 note' });
+  await sleep(200);
+  check('marking a lesson studied reaches the database', progFor('dbuser')['ch1-l1'].studied === true);
+  check('a quiz result reaches the database', progFor('dbuser')['ch1-l1'].quiz_best === 7);
+  check('a note reaches the database', notesFor('dbuser')['ch1-l1'] === 'Article 38 note');
+
+  console.log('a second student cannot touch the first student\'s rows');
+  const other = await A.signup('other2', 'otherpass1', 'otherpass1');
+  check('a second account signs up through the app', other.ok === true && other.db === true);
+  const tok2 = A.sessionToken();
+  P.push('studied', { lesson: 'ch9-l9' });
+  P.push('notes', { lesson: 'ch9-l9', body: 'my own note' });
+  await sleep(200);
+  check('the second student\'s rows are their own', !!progFor('other2')['ch9-l9'] && !progFor('dbuser')['ch9-l9']);
+  check('the first student\'s rows are untouched', progFor('dbuser')['ch1-l1'].quiz_best === 7 && !notesFor('dbuser')['ch9-l9']);
+
+  console.log('a new device pulls the work back down');
+  global.__local = { xp: 0, lessons: {}, quiz: {}, notes: {} };
+  const synced = await P.pull();
+  const loc = global.window.IPL.getProgress();
+  check('pull reports success', synced === true);
+  check('the studied mark comes back', !!loc.lessons['ch9-l9']);
+  check('the note comes back', loc.notes['ch9-l9'] === 'my own note');
+  check('nothing from the other student came with it', !loc.notes['ch1-l1'] && !loc.lessons['ch1-l1']);
+
+  console.log('signing out ends the session for real');
+  A.signout();
+  await sleep(200);
+  check('the token is gone from this browser', A.sessionToken() === null);
+  check('the database no longer accepts it', whoami(tok2) === null);
+  P.push('studied', { lesson: 'ch9-l10' });
+  await sleep(200);
+  check('after sign-out nothing more is written', !progFor('other2')['ch9-l10']);
+  const cls = await A.dbClass('dbuser', 'test1234');
+  check('the owner class view answers', cls.ok === true && (cls.students || []).length >= 2, (cls.students || []).length + ' students');
 
   console.log('migration when the database comes back');
   const live = global.window.ROBOCL_DB.url;

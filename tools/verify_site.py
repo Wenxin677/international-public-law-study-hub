@@ -165,24 +165,33 @@ if "adminSecret" in (ROOT / "README.md").read_text(encoding="utf-8"):
     problems.append("README.md still documents a removed adminSecret setting")
 
 # --- the client and the database must agree on the function signatures -------
-# (a Node stub accepts any arguments, so only a real engine catches a drift)
+# (a Node stub accepts any arguments, so only a real engine catches a drift; and
+#  PostgREST matches by name, so a rename on either side fails only on the live
+#  project — check every call site in the shipped code)
 sql_text = (SITE.parent / "tools/supabase-accounts.sql").read_text(encoding="utf-8")
 sig = {}
 for m in re.finditer(r"create or replace function public\.(robo_\w+)\((.*?)\)\s*returns", sql_text, re.S):
     sig[m.group(1)] = re.findall(r"\b(p_\w+)\b", m.group(2))
-for fn in ["robo_signup", "robo_login", "robo_logout", "robo_admin_accounts"]:
-    if fn not in sig:
-        problems.append(f"supabase-accounts.sql: {fn} is missing")
-        continue
-    block = re.search(r"async function " + ("signup" if fn == "robo_signup" else "signin" if fn == "robo_login" else "signout" if fn == "robo_logout" else "dbAccounts") + r"\(.*?\n  \}", auth_js, re.S)
-    if not block:
-        continue
-    sent = set(re.findall(r"\b(p_\w+)\s*:", block.group(0)))
-    if sent and not sent.issubset(set(sig[fn])):
-        problems.append(f"auth.js sends {sorted(sent - set(sig[fn]))} to {fn}, which the SQL does not accept")
-    missing = set(sig[fn]) - sent
-    if sent and missing and fn != "robo_login":      # login's older callers pass fewer names
-        notes.append(f"  note: {fn} also has optional params never sent: {sorted(missing)}")
+progress_js = (SITE / "assets/js/progress.js").read_text(encoding="utf-8")
+call_sites = 0
+for src, name in ((auth_js, "auth.js"), (progress_js, "progress.js")):
+    for m in re.finditer(r"(?:rpc|call)\(\s*'(robo_\w+)'\s*,\s*\{(.*?)\}\s*\)", src, re.S):
+        fn, body = m.group(1), m.group(2)
+        call_sites += 1
+        if fn not in sig:
+            problems.append(f"{name} calls {fn}, which the SQL does not define")
+            continue
+        sent = set(re.findall(r"\b(p_\w+)\s*:", body))
+        extra = sent - set(sig[fn])
+        if extra:
+            problems.append(f"{name} sends {sorted(extra)} to {fn}, which the SQL does not accept")
+if call_sites < 8:
+    problems.append(f"only {call_sites} database calls found in the shipped code — expected the account, session, progress and owner calls")
+for fn in sig:
+    if fn.startswith("robo_") and fn not in ("robo_token_hash", "robo_uid_for_token", "robo_new_session", "robo_session_purge"):
+        if f"grant execute on function public.{fn}" not in sql_text:
+            problems.append(f"the SQL never grants execute on {fn} to anon — the site cannot call it")
+notes.append(f"  database: {len(sig)} functions defined, {call_sites} call sites checked against them")
 
 print("\n".join(notes))
 print()

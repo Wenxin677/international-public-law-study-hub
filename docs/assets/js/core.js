@@ -875,9 +875,15 @@
     RANKS.forEach(function (x) { if (xp >= x.xp) r = x; });
     return r;
   }
+  /* every write also goes to the database when the student is signed in to one;
+     progress.js owns that, and a failure there never blocks the local save */
+  function sync(kind, payload) {
+    try { if (window.IPLProgress) window.IPLProgress.push(kind, payload); } catch (e) {}
+  }
   function markStudied(id) {
     const p = getProgress();
     if (!p.lessons[id]) { p.lessons[id] = { ts: Date.now() }; p.xp = (p.xp || 0) + 10; saveProgress(p); }
+    sync('studied', { lesson: id });
     return p;
   }
   /* XP is earned by improving, not by grinding the same quiz again */
@@ -890,6 +896,7 @@
     if (better) gained = Math.round((best / Math.max(1, total)) * 20);
     p.xp = (p.xp || 0) + gained;
     saveProgress(p);
+    sync('quiz', { lesson: id, best: p.quiz[id].best, total: total });
     return { gained: gained, better: better };
   }
   function getNotes(id) { return (getProgress().notes || {})[id] || ''; }
@@ -898,6 +905,7 @@
     p.notes = p.notes || {};
     if (text) p.notes[id] = text; else delete p.notes[id];
     saveProgress(p);
+    sync('notes', { lesson: id, body: text || '' });
   }
 
   /* ------------------------------------------------------------ utils */
@@ -1325,6 +1333,14 @@
     /* Ctrl+K on every page: the shell supplies a default item list, and a page
        can upgrade it by calling commandPalette() with its own */
     commandPalette();
+    /* signed in to a database account? bring this device's progress together with
+       the database's copy, then tell the page so it can re-read if it shows stats */
+    if (window.IPLProgress) {
+      window.IPLProgress.pull().then(function (synced) {
+        if (!synced) return;
+        try { document.dispatchEvent(new CustomEvent('robo:progress')); } catch (e) {}
+      });
+    }
   });
   window.addEventListener('load', splashOff);
   setTimeout(splashOff, 900);

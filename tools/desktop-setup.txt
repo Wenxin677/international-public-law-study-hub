@@ -40,6 +40,23 @@ STEP 3.  Run the database code.
          That creates two locked tables (robo_accounts, robo_events) and the
          four functions the website calls.
 
+         What that creates (and why it matters):
+           robo_accounts  one row per person: username, bcrypt password hash,
+                          created, last sign-in, sign-in count, failed attempts
+           robo_events    the log: every sign-up, sign-in, failed attempt,
+                          lockout, sign-out, and owner view
+           robo_sessions  one row per signed-in browser (only a hash of its
+                          token is stored)
+           robo_progress  per person, per lesson: studied, best quiz score,
+                          attempts — this is what makes progress follow a
+                          student from their phone to a laptop
+           robo_notes     per person, per lesson: their own notes
+         Every table is locked (Row Level Security on, no policies) and the
+         public key has no rights to any of them: the site can only reach the
+         functions, and each function works out whose rows to touch from the
+         browser's session token. So a student can never see another student's
+         notes or scores — they cannot even ask.
+
          (This exact file was test-run against a real PostgreSQL 18 with
          pgcrypto before you were given it: 42 checks — tables locked against
          the public key, passwords stored as bcrypt, wrong passwords refused,
@@ -68,8 +85,10 @@ STEP 5.  Make yourself the owner (after I confirm it works):
                  update robo_accounts set is_admin = true where username_lower = 'panha';
            - Now open admin.html → "Load every account from the database"
              and sign in with YOUR username + password. That shows every
-             account: created, last sign-in, how many times, failed attempts.
-             (There is a "Load every account" button and CSV export.)
+             account (created, last sign-in, sign-ins, failed attempts,
+             lessons studied, quizzes taken, notes written), the event log,
+             a "How the class is doing" table (lessons studied, correct
+             answers, score %, last studied), and CSV export.
 
 
 ------------------------------------------------------------------------

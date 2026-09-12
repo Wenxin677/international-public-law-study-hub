@@ -31,7 +31,7 @@
         '<div class="field"><label>' + esc(t('auth.username')) + '</label>' +
         '<input class="input" id="owner-user" autocomplete="username"></div>' +
         '<div class="field"><label>' + esc(t('auth.password')) + '</label>' +
-        '<input class="input" id="owner-pass" type="password" autocomplete="current-password"></div>' +
+        '<input class="input" id="owner-pass" type="password" maxlength="128" autocomplete="current-password"></div>' +
         '<button class="btn primary block" id="go">' + esc(t('admin.enter')) + '</button>' +
         '<div class="notice bad" id="gate-err" role="alert" hidden></div>' +
         '<div class="small faint" style="margin-top:12px">' + esc(t('admin.ownerhint')) + '</div>' +
@@ -177,7 +177,7 @@
       esc(A.dbReady() ? t('admin.dbOn') : t('admin.dbOff')) + '</span>' +
       '<span class="spacer"></span>' +
       (st.kind !== 'local' ? '<button class="btn sm" id="testrow">📨 ' + esc(t('admin.test')) + '</button>' : '') +
-      (st.kind === 'sheet' ? '<a class="btn sm" href="' + esc(st.url) + '" target="_blank" rel="noopener">🔗 ' + esc(t('admin.opencollector')) + '</a>' : '') +
+      (st.kind === 'sheet' ? '<a class="btn sm" href="' + esc(st.url) + '" target="_blank" rel="noopener noreferrer">🔗 ' + esc(t('admin.opencollector')) + '</a>' : '') +
       '<button class="btn sm" id="copy">⧉ ' + esc(t('admin.copy')) + '</button>' +
       '<button class="btn sm primary" id="csv">⬇ ' + esc(t('admin.export')) + '</button>' +
       '<button class="btn sm" id="lock">🔒 ' + esc(t('admin.lock')) + '</button>' +
@@ -241,6 +241,9 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     I.renderChrome('admin.html');
+    /* never leave the owner's credentials sitting in memory after the page is
+       left (or restored from the back/forward cache) */
+    window.addEventListener('pagehide', function () { owner = null; dbData = null; });
     /* An open session shows the panel; the database credentials are never kept
        anywhere except in memory for the length of this page. */
     if (sessionStorage.getItem('robo.admin') === '1' && !A.dbReady()) render();

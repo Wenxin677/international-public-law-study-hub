@@ -33,6 +33,39 @@
     }
   }
 
+  /* ---- the hero preview: a small looped "RoboCL answers" demo -------------- */
+  function demo() {
+    const typed = I.qs('#demo-typed');
+    const think = I.qs('#demo-think');
+    const cite = I.qs('#demo-cite');
+    if (!typed) return;
+    const text = I.t('landing.demo.a');
+    const calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (calm) {
+      typed.textContent = text;
+      if (think) think.hidden = true;
+      if (cite) cite.classList.add('show');
+      return;
+    }
+    let i = 0;
+    const type = function () {
+      if (think) think.hidden = true;
+      typed.textContent = text.slice(0, i);
+      if (cite) cite.classList.toggle('show', i >= text.length);
+      i += 2;
+      if (i <= text.length + 1) setTimeout(type, 20);
+      else setTimeout(restart, 5600);
+    };
+    const restart = function () {
+      typed.textContent = '';
+      if (cite) cite.classList.remove('show');
+      if (think) think.hidden = false;
+      i = 0;
+      setTimeout(type, 1400);
+    };
+    setTimeout(type, 1100);
+  }
+
   function faq() {
     const host = I.qs('#faq');
     if (!host) return;
@@ -48,9 +81,10 @@
     marquee();
     faq();
     ctas();
+    demo();
     I.reveal();
     I.counters();
-    ['#tour-grid', '#steps', '#feature-sources'].forEach(function (sel) {
+    ['#tour-grid', '#steps', '#feature-sources', '#quick-grid'].forEach(function (sel) {
       const n = I.qs(sel);
       if (n) I.stagger(n);
     });

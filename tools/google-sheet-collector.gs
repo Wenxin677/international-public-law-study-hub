@@ -45,7 +45,7 @@ var EVENT_TYPES = ['signup', 'signin', 'signin_failed', 'signout', 'test'];
  * It is not real security (the value is visible in the site's source), but it
  * makes junk posts from strangers who merely found the URL pointless.
  */
-var TOKEN = '';
+var TOKEN = 'robo-28ac899bc782fc37ad93';
 
 function doGet() {
   return ContentService.createTextOutput('RoboCL collector is running');

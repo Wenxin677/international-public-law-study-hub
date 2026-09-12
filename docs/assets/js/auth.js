@@ -152,7 +152,20 @@
     try { localStorage.setItem(key, JSON.stringify(value)); return true; }
     catch (e) { return false; }
   }
-  function accounts() { return readJSON(STORE.accounts, {}); }
+  function accounts() {
+    const raw = readJSON(STORE.accounts, {});
+    /* never trust the stored shape: drop anything that is not an account record,
+       so a hand-edited or corrupted blob cannot break sign-in for everyone */
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
+    const out = {};
+    Object.keys(raw).forEach(function (k) {
+      const v = raw[k];
+      if (!v || typeof v !== 'object' || Array.isArray(v)) return;
+      if (!v.u || typeof v.u !== 'string') return;
+      out[k] = v;
+    });
+    return out;
+  }
   function events() { return readJSON(STORE.events, []); }
 
   function logEvent(type, username, extra) {
@@ -299,6 +312,7 @@
   /* ---------------------------------------------------------------- validation */
   const USER_RE = /^[a-zA-Z0-9_.]{3,20}$/;
   const MIN_PASS = 8;                 // was 6 — short passwords are the easiest to guess
+  const MAX_PASS = 128;               // refuse absurd input instead of hashing megabytes
   const LOCK_AFTER = 5;               // failed attempts before a temporary lock
   const LOCK_MS = 10 * 60 * 1000;     // 10 minutes
 
@@ -309,6 +323,7 @@
       return { ok: false, msg: String(username).length < 3 ? 'auth.err.short.user' : 'auth.err.user.chars' };
     }
     if (password.length < MIN_PASS) return { ok: false, msg: 'auth.err.short.pass' };
+    if (password.length > MAX_PASS) return { ok: false, msg: 'auth.err.long.pass' };
     if (isNew && confirm != null && password !== confirm) return { ok: false, msg: 'auth.err.match' };
     return { ok: true };
   }

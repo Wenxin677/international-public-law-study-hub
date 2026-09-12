@@ -122,6 +122,7 @@
       const s = e.target.closest('[data-swap]');
       if (s) { e.preventDefault(); setMode(s.dataset.swap); }
     });
+    qs('#pw-eye').setAttribute('aria-label', t('auth.showpass'));
     qs('#pw-eye').addEventListener('click', function () {
       const p = qs('#password');
       p.type = p.type === 'password' ? 'text' : 'password';

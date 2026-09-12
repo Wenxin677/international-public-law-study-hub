@@ -400,7 +400,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 23
 }
+],
+"plain": {
+"km": [
+"សង្គមអន្តរជាតិ គឺទំនាក់ទំនងរវាងរដ្ឋអធិបតេយ្យ ខុសពីសង្គមជាតិ ដែលទំនាក់ទំនងកើតឡើងក្នុងរដ្ឋតែមួយ។",
+"អធិបតេយ្យ គឺអំណាចកំពូល និងផ្តាច់មុខរបស់រដ្ឋ ដែលមិនចំណុះរដ្ឋដទៃ។",
+"មាត្រា៣៨ នៃលក្ខន្តិកៈតុលាការយុត្តិធម៌អន្តរជាតិ រាយប្រភពច្បាប់៖ សន្ធិសញ្ញាជាលាយលក្ខណ៍អក្សរ ទំនៀមទម្លាប់ពីការអនុវត្តរបស់រដ្ឋ គោលការណ៍ទូទៅ និងសេចក្តីសម្រេចរបស់តុលាការ។",
+"នីតិសមុទ្រវិវត្តពីច្បាប់សមុទ្រចាស់ ទៅរកសមុទ្រដែនដី ១២ មៃល៍ និងអនុសញ្ញាអង្គការសហប្រជាជាតិ ដែលកម្ពុជាបានចុះហត្ថលេខា។"
+],
+"en": [
+"International society is relations between sovereign states; national society is relations inside a single state.",
+"Sovereignty means the state's supreme, exclusive power, held alone and subject to no other state.",
+"Article 38 of the ICJ Statute lists the sources: written treaties, custom from state practice, general principles, judicial decisions.",
+"The law of the sea grew from early sea customs to a twelve-mile territorial sea and UN conventions Cambodia signed."
 ]
+}
 },
 {
 "id": "ch1-l2",
@@ -547,7 +561,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 26
 }
+],
+"plain": {
+"km": [
+"អង្គការអន្តរជាតិ គឺអង្គការដែលបង្កើតឡើងដោយរដ្ឋអធិបតេយ្យ តិច ឬច្រើន ដូចជាអង្គការសហប្រជាជាតិ សហគមន៍អឺរ៉ុប និងអាស៊ាន។",
+"អង្គការអន្តរជាតិជានីតិបុគ្គលអន្តរជាតិ ដែលមានសិទ្ធិបង្កើត និងចុះហត្ថលេខាលើអនុសញ្ញា និងសន្ធិសញ្ញាជាអន្តរជាតិ។",
+"សិទ្ធិរបស់អង្គការអន្តរជាតិស្មើនឹងរដ្ឋ ប៉ុន្តែកាតព្វកិច្ចរបស់វាតិចជាងរដ្ឋ។",
+"លក្ខណៈវិនិច្ឆ័យមាន៖ ការចូលរួមពីរដ្ឋអធិបតេយ្យ ចរិកលក្ខណៈយូរអង្វែង ការមានទីស្នាក់ការ ការបង្កើតដោយស្ម័គ្រចិត្ត និងមិនស្ថិតក្រោមអង្គការភេរវកម្មអន្តរជាតិ។"
+],
+"en": [
+"An international organisation is set up by sovereign states, few or many — the UN, the European Community and ASEAN.",
+"It is an international legal person: it can create and sign international conventions, treaties and agreements.",
+"Its rights are equal to those of a state, but its obligations are fewer than a state's.",
+"The criteria: sovereign-state participation, lasting character, a headquarters, free consent, and not being under a terrorist organisation."
 ]
+}
 },
 {
 "id": "ch1-l3",
@@ -694,7 +722,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 27
 }
+],
+"plain": {
+"km": [
+"ក្រោយសង្គ្រាមលោកលើកទី១ សង្គមប្រជាជាតិត្រូវបានបង្កើតឡើងតាមអនុសញ្ញាឆ្នាំ១៩១៩ ដែលជាផ្នែកមួយនៃសន្ធិសញ្ញាវែរសៃ។",
+"វាជាគំនិតផ្ដួចផ្ដើមផ្ទាល់របស់លោក Woodrow Wilson ហើយមានទីស្នាក់ការនៅទីក្រុងសឺណែវ ប្រទេសស្វីស។",
+"គោលបំណងគឺ៖ ដោះស្រាយជម្លោះរវាងរដ្ឋ ទប់ស្កាត់សង្គ្រាម ការពារឯករាជ្យ និងសុវត្ថិភាពព្រំដែន និងលើកទឹកចិត្តកាត់បន្ថយគ្រឿងសព្វាវុធ។",
+"មានរដ្ឋ ៦៣ ចូលរួម ដោយមានក្រុមប្រឹក្សា មហាសន្និបាត និងលេខាធិការដ្ឋាន ហើយវាដួលរលំព្រោះរដ្ឋត្រូវលេបយក និងសមាជិកដកខ្លួន។"
+],
+"en": [
+"The 1919 Convention, part of the Treaty of Versailles, created the League of Nations after the First World War.",
+"It was Woodrow Wilson's own initiative, and it had its headquarters in Geneva, Switzerland.",
+"Its aims: settle disputes between states, prevent war, protect independence and frontiers, and encourage cutting armaments.",
+"Sixty-three states joined, with a Council, Assembly and Secretariat; it collapsed as states were annexed and members withdrew."
 ]
+}
 },
 {
 "id": "ch1-l4",
@@ -985,7 +1027,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 38
 }
+],
+"plain": {
+"km": [
+"ក្នុងឆ្នាំ១៩៤៥ បន្ទាប់ពីធម្មនុញ្ញអាត្លង់ទិចឆ្នាំ១៩៤១ រដ្ឋនានាបានបង្កើតអង្គការសហប្រជាជាតិ ដែលមានសមាជិក១៩៣ ប្រទេស និងទីស្នាក់ការនៅទីក្រុងញ៉ូវយ៉ក។",
+"គោលបំណងរបស់ខ្លួនគឺរក្សាសន្តិភាពពិភពលោក ពង្រីកទំនាក់ទំនងជាមិត្តភាពរវាងប្រជាជាតិ និងជួយប្រជាជនឱ្យមានជីវភាពប្រសើរ។",
+"អូតង់ចាត់ទុកការវាយប្រហារលើសមាជិកមួយជាការវាយប្រហារប្រឆាំងនឹងអង្គការទាំងមូល ហើយអង្គការសហប្រតិបត្តិការក្រុងសៀងហៃ ត្រូវបានគេមើលឃើញជាគូប្រជែងរបស់វា។",
+"អាស៊ានបង្កើតឡើងនៅទីក្រុងបាងកកឆ្នាំ១៩៦៧ ដោយប្រទេស៥ ហើយកម្ពុជាបានចូលជាសមាជិកទី១០ នៅឆ្នាំ១៩៩៩ រីឯក្រុមប្រឹក្សាអាក់ទិកមានសមាជិក៨។"
+],
+"en": [
+"States created the United Nations in 1945, after the Atlantic Charter of 1941; it now has 193 members.",
+"Its purposes are to keep world peace, build friendly ties between nations, and help people live better.",
+"NATO treats an attack on one member as an attack on all, and the Shanghai Cooperation Organisation is seen as its rival.",
+"ASEAN began in Bangkok in 1967 with five states; Cambodia joined as the tenth member in 1999, and the Arctic Council has eight members."
 ]
+}
 },
 {
 "id": "ch1-l5",
@@ -1276,7 +1332,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 52
 }
+],
+"plain": {
+"km": [
+"នីតិអន្តរជាតិ គឺជាវិធានគ្រប់គ្រងទំនាក់ទំនងតាមផ្លូវច្បាប់រវាងរដ្ឋ ហើយទំនៀមទម្លាប់ និងអនុសញ្ញាជាប្រភពដំបូងរបស់វា។",
+"វាមានចរិកលក្ខណៈ៤ ៖ មានអនុភាពគតិយុត្ត ដាច់ជាផ្នែកៗតាមប្រធានបទ រដ្ឋទទួលយកដោយស្ម័គ្រចិត្ត ហើយកម្រមានទោសបញ្ញត្តិ។",
+"នីតិវិទូហូឡង់ លោក ហូកូក្រូទូស្សន៍ ត្រូវគេហៅថាបិតានៃនីតិអន្តរជាតិទំនើប រីឯគោលការណ៍ «ប៉ាតាសន់សេវេនដារ» មានន័យថាកិច្ចព្រមព្រៀងត្រូវតែរក្សាទុក។",
+"តុលាការយុត្តិធម៌អន្តរជាតិជំនុំជម្រះតែរដ្ឋអធិបតេយ្យដែលព្រមព្រៀងគ្នា ដូចជាអធិករណ៍ប្រាសាទព្រះវិហារ និងអធិករណ៍នីការ៉ាហ្គា-សហរដ្ឋអាមេរិក ហើយសាលក្រមរបស់វាគ្មានចរិតបង្ខិតបង្ខំ។"
+],
+"en": [
+"International law is the rules governing legal relations between states; custom and convention are its earliest sources.",
+"It has four features: it has legal effect, it is split by topic, states accept it voluntarily, and penalties are rare.",
+"Hugo Grotius is called the father of modern international law; 'pacta sunt servanda' means agreements must be kept.",
+"The ICJ hears only sovereign states that agree, as in the Preah Vihear and Nicaragua cases, and cannot enforce its rulings."
 ]
+}
 }
 ]
 },
@@ -1605,7 +1675,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 47
 }
+],
+"plain": {
+"km": [
+"នីតិអន្តរជាតិ គឺជាវិធានសម្រាប់គ្រប់គ្រងទំនាក់ទំនងតាមផ្លូវច្បាប់រវាងប្រជាជាតិ ឬរដ្ឋ។",
+"នៅសតវត្សទី២០ គេទទួលស្គាល់វាថាជាច្បាប់នៃប្រទេសជាតិទាំងឡាយ ឬជាច្បាប់របស់សហគមន៍អន្តរជាតិ។",
+"ប្រភពដំបូងរបស់វាគឺទំនៀមទម្លាប់ និងអនុសញ្ញា ដែលទំនៀមទម្លាប់កើតឡើងពេលរដ្ឋអនុវត្តស្របគ្នាជាទូទៅ។",
+"វាមានអនុភាពគតិយុត្ត ហើយរដ្ឋទទួលយកមកអនុវត្តដោយស្ម័គ្រចិត្ត ប៉ុន្តែគ្មានលក្ខណៈជាការចាប់បង្ខំ។"
+],
+"en": [
+"International law is the set of rules that govern legal relations between nations or states.",
+"In the twentieth century it came to be recognized as the law of nations, or of the international community.",
+"Its primary sources are custom and convention: custom grows when states follow a practice generally and consistently.",
+"It has legal force and states accept it voluntarily, but it is not coercive in nature."
 ]
+}
 },
 {
 "id": "ch2-l2",
@@ -1896,7 +1980,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 49
 }
+],
+"plain": {
+"km": [
+"នីតិអន្តរជាតិទំនើបកើតឡើងអាស្រ័យដោយការទទួលយកគំនិតដែលផ្តោតលើអធិបតេយ្យភាពរបស់រដ្ឋ។",
+"នីតិវិទូហូឡង់ លោក ហូកូក្រូទូស្សន៍ ជាបិតានៃនីតិអន្តរជាតិទំនើប ដោយសរសេរស្នាដៃ សង្គ្រាមនិងសន្តិភាព។",
+"គោលការណ៍ប៉ាតាសន់សេវេនដារ មានន័យថារាល់កិច្ចព្រមព្រៀងត្រូវតែរក្សាទុក ហើយសន្ធិសញ្ញាត្រូវអនុវត្តដោយឆន្ទៈល្អ។",
+"នីតិវិទូដទៃទៀតក៏បានរួមចំណែក គឺលោក ខនីលីសវ៉ាន់ប័រគើសុខ ខាងនីតិសមុទ្រ និងលោក អីមីរ៉េចដេវិលទ័រ ដែលសរសេរ នីតិប្រជាជាតិ។"
+],
+"en": [
+"Modern international law came about by accepting ideas centred on the sovereignty of states.",
+"Hugo Grotius, the Dutch jurist called the father of modern international law, wrote On the Law of War and Peace.",
+"Pacta sunt servanda means every agreement must be kept; a treaty in force binds the parties in good faith.",
+"Other jurists helped too: Bynkershoek on the law of the sea, and Vattel, who wrote The Law of Nations."
 ]
+}
 },
 {
 "id": "ch2-l3",
@@ -2215,7 +2313,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 57
 }
+],
+"plain": {
+"km": [
+"ការដោះស្រាយអធិករណ៍តាមតុលាការនៅលើឆាកអន្តរជាតិ មានភាពស្មុគស្មាញជាងក្នុងរដ្ឋ ដោយមានកត្តាសំខាន់បី។",
+"តុលាការយុត្តិធម៌អន្តរជាតិ កាត់សេចក្ដីតែអធិករណ៍រវាងរដ្ឋអធិបតេយ្យ មិនទទួលរឿងបុគ្គល ឬក្រុមហ៊ុនឯកជនទេ។",
+"យុត្តាធិការ និងសាលក្រមរបស់តុលាការនេះគ្មានចរិតចាប់បង្ខំ ហើយនីតិអន្តរជាតិបែងចែកជាបីប្រភេទ គឺសាកល ទូទៅ និងដោយឡែក។",
+"ការប្រើប្រាស់កម្លាំងស្របច្បាប់ មានតែការពារខ្លួន សកម្មភាពក្នុងក្របខណ្ឌអង្គការសហប្រជាជាតិ និងការថែរក្សាសន្តិភាពក្នុងតំបន់។"
+],
+"en": [
+"Settling disputes by a court is more complex internationally than inside a state, and rests on three main factors.",
+"The International Court of Justice decides only disputes between sovereign states, not those of private individuals or companies.",
+"Its jurisdiction and judgments carry no coercive character, and international law has three types: universal, general and particular.",
+"Force is lawful only in self-defence, in action within the United Nations framework, or in regional peacekeeping."
 ]
+}
 },
 {
 "id": "ch2-l4",
@@ -2534,7 +2646,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 66
 }
+],
+"plain": {
+"km": [
+"រដ្ឋចាប់កំណើតឡើងរវាងគ.ស ១២៨០ ដល់ ១៣៦០ នៅពេលទ្វីបអឺរ៉ុបពោរពេញទៅដោយសង្គ្រាម ហើយព្រះមហាក្សត្រកំណត់ដែនដីនគររបស់ខ្លួន។",
+"លោក ដង់ អាលីយេរី ជាអ្នកប្រាជ្ញមុនគេដែលលើកទស្សនាទានអំពីរដ្ឋ ហើយលោក នីកូឡា ម៉ាឆេយ៉ាវេលី ប្រើពាក្យ រដ្ឋ ជាលើកដំបូង។",
+"លោក ថូម៉ាស ហប យល់ថារដ្ឋកើតពីកិច្ចសន្យារវាងមនុស្ស រីឯលោក ចន ឡក់ បែងចែកអំណាចជាបី ហើយអធិបតេយ្យភាពនៅជាមួយប្រជាជន។",
+"លោក ម៉ុងតែសគ្យើ ចាត់ទុកច្បាប់ជាទំនាក់ទំនងចេញពីធម្មជាតិ ហើយបែងចែករបបគ្រប់គ្រងរដ្ឋជាបីប្រភេទ។"
+],
+"en": [
+"The state came into being between 1280 and 1360 CE, when war filled Europe and monarchs fixed their own borders.",
+"Dante first set out a doctrine of the state, and Machiavelli first used the word 'state' in The Prince.",
+"Hobbes saw the state as a contract; Locke split power three ways and put sovereignty with the people.",
+"Montesquieu treated law as a necessary relation arising from nature, and named three kinds of government."
 ]
+}
 }
 ]
 },
@@ -2869,7 +2995,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 70
 }
+],
+"plain": {
+"km": [
+"រដ្ឋ គឺជាក្រុមមនុស្សដែលរស់នៅក្នុងទឹកដីមួយ ក្រោមអំណាចច្បាប់ និងអំណាចនយោបាយរួមគ្នា។",
+"រដ្ឋមួយត្រូវមានលក្ខណៈវិនិច្ឆ័យបួន៖ ប្រជាពលរដ្ឋអចិន្ត្រៃយ៍ ទឹកដីជាកំណត់ រដ្ឋាភិបាល និងសមត្ថកិច្ចទំនាក់ទំនងជាមួយរដ្ឋដទៃ។",
+"អនុសញ្ញាម៉ង់តេវិដដេអូ គឺជាសន្ធិសញ្ញាដែលកំណត់លក្ខណៈវិនិច្ឆ័យទាំងនោះ។",
+"រដ្ឋមានសិទ្ធិឯករាជ្យ យុត្តាធិការ ស្មើភាព និងការពារខ្លួន ហើយត្រូវគោរពសន្ធិសញ្ញាដោយស្មោះត្រង់ និងមិនធ្វើអន្តរាគមន៍ក្នុងកិច្ចការរដ្ឋដទៃ។"
+],
+"en": [
+"A state is a group of people living in one territory under a shared legal and political authority.",
+"Four criteria make a state: a permanent population, a defined territory, a government, and capacity to deal with other states.",
+"The Montevideo Convention set out these criteria for statehood.",
+"States are equal, may defend themselves, must keep treaty promises in good faith, and must not intervene in other states' affairs."
 ]
+}
 },
 {
 "id": "ch3-l2",
@@ -3186,7 +3326,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 73
 }
+],
+"plain": {
+"km": [
+"ប្រជាជាតិ គឺជាសហគមន៍ដែលមានវប្បធម៌ ប្រពៃណី និងប្រវត្តិសាស្ត្ររួមគ្នា តែគ្មានអត្ថន័យខាងផ្លូវច្បាប់ដូចរដ្ឋទេ។",
+"ទំនាក់ទំនងរវាងរដ្ឋ និងប្រជាជាតិមានបួនបែប ដូចជា រដ្ឋមួយប្រជាជាតិច្រើន ឬប្រជាជាតិមួយគ្មានរដ្ឋ។",
+"មានតែរដ្ឋទេដែលផ្តល់សញ្ជាតិ ដោយសាច់សាលោហិត ឬការតាំងទីលំនៅ ហើយប្រជាពលរដ្ឋខ្មែរមិនបាត់សញ្ជាតិពេលរៀបការជាមួយជនបរទេស។",
+"រដ្ឋាភិបាលមានទម្រង់ច្រើន ដូចជា សាធារណរដ្ឋប្រជាធិបតេយ្យ រាជានិយមអាស្រ័យសភា និងរបបផ្តាច់ការ។"
+],
+"en": [
+"A nation is a community sharing culture, traditions and a common history; unlike the state, it has no legal meaning.",
+"State and nation relate in four ways, such as one state with many nations, or one nation with no state.",
+"Only a state grants nationality, by descent or residence, and a Cambodian keeps it after marrying a foreigner.",
+"Governments come in many forms, such as a democratic republic, a parliamentary monarchy, or a dictatorship."
 ]
+}
 },
 {
 "id": "ch3-l3",
@@ -3503,7 +3657,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 77
 }
+],
+"plain": {
+"km": [
+"ទម្រង់រដ្ឋមានច្រើន ដូចជា រដ្ឋទោល ដូចជាកម្ពុជា រដ្ឋសហព័ន្ធ ដូចជាសហរដ្ឋអាមេរិក និងការគ្រប់គ្រងដែនដីរួមគ្នាដោយមហាអំណាចពីរបី។",
+"ការទទួលស្គាល់គឺជាលំនាំដោយស្ម័គ្រចិត្ត ហើយគ្មានច្បាប់អន្តរជាតិណាបង្ខំឱ្យរដ្ឋមួយទទួលស្គាល់រដ្ឋមួយទៀតឡើយ។",
+"ការទទួលស្គាល់តាមហេតុការណ៍ គឺដោយស្ងាត់ស្ងៀម គ្មានទំនាក់ទំនងផ្លូវការទូត ចំណែកការទទួលស្គាល់តាមផ្លូវច្បាប់ តម្រូវឱ្យមានការផ្លាស់ប្តូរឯកអគ្គរដ្ឋទូត និងមានលក្ខណៈយូរអង្វែង។",
+"ទ្រឹស្តី Estrada ទទួលស្គាល់តែរដ្ឋាភិបាល ចំណែកទ្រឹស្តី Tobar ទទួលស្គាល់តែរដ្ឋាភិបាលដែលចូលកាន់អំណាចដោយស្របច្បាប់។"
+],
+"en": [
+"States can be unitary, like Cambodia, federal, like the United States, or a condominium ruled jointly by great powers.",
+"Recognition is a voluntary act; no rule of international law forces one state to recognise another.",
+"De facto recognition is tacit, with no official diplomatic relations, while de jure recognition requires exchanging ambassadors and is lasting.",
+"The Estrada Doctrine recognises only governments, whatever their form, while the Tobar Doctrine recognises only those that came to power lawfully."
 ]
+}
 }
 ]
 },
@@ -3812,7 +3980,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 80
 }
+],
+"plain": {
+"km": [
+"ច្បាប់អន្តរជាតិកើតចេញពីប្រភព ដែលមានចែងក្នុងមាត្រា៣៨ នៃលក្ខន្តិកៈនៃតុលាការយុត្តិធម៌អន្តរជាតិ។",
+"ប្រភពទាំងបួនមាន៖ សន្ធិសញ្ញាអន្តរជាតិ ទំនៀមទម្លាប់អន្តរជាតិ គោលការណ៍ទូទៅនៃច្បាប់ និងសេចក្តីសម្រេចរបស់តុលាការ។",
+"សន្ធិសញ្ញាជាប្រភពដ៏សំខាន់ និងជាលិខិតដ៏សំខាន់បំផុតធ្វើឱ្យនីតិអន្តរជាតិសាធារណៈរីកចម្រើន។",
+"ទំនៀមទម្លាប់កើតឡើងពីការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋ និងការទទួលយកការអនុវត្តន៍នោះថាជាកាតព្វកិច្ចផ្លូវច្បាប់។"
+],
+"en": [
+"International law comes from sources, and Article 38 of the ICJ Statute is where they are set out.",
+"There are four: treaties, custom, general principles of law, and judicial decisions.",
+"Treaties are written and may be called a covenant, an agreement or a convention.",
+"Custom is the second source: it grows from what states actually do and accept as law."
 ]
+}
 },
 {
 "id": "ch4-l2",
@@ -4075,7 +4257,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 85
 }
+],
+"plain": {
+"km": [
+"សេចក្តីសម្រេចរបស់តុលាការ ឬសាលាជំនុំជម្រះ ជាធាតុសំខាន់ក្នុងការបង្កើតនីតិសហគមន៍អន្តរជាតិ។",
+"តុលាការយុត្តិធម៌អន្តរជាតិមិនមានសមត្ថកិច្ចលើជម្លោះឯកជន ហើយមានតែរដ្ឋទេដែលអាចជាភាគី។",
+"សេចក្តីសម្រេចរបស់តុលាការនេះពុំមានលក្ខណៈបង្ខិតបង្ខំ ហើយមានកត្តាបីធ្វើឱ្យការដោះស្រាយអធិករណ៍ស្មុគស្មាញ។",
+"ក្នុងអធិករណ៍នីការ៉ាហ្គា និងសហរដ្ឋអាមេរិក តុលាការសម្រេចថាខ្លួនមានសមត្ថកិច្ច ហើយសហរដ្ឋអាមេរិកបំពានទំនៀមទម្លាប់អន្តរជាតិ។"
+],
+"en": [
+"Decisions of courts and tribunals help form the law of the international community.",
+"Only states can be parties before the ICJ; private and individual disputes are outside its reach.",
+"Its decisions carry no coercive force, which is one reason settling disputes is complex.",
+"In Nicaragua v. United States, the Court found it had jurisdiction and the United States broke customary law."
 ]
+}
 },
 {
 "id": "ch4-l3",
@@ -4394,7 +4590,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 86
 }
+],
+"plain": {
+"km": [
+"នីតិអន្តរជាតិត្រូវបានបែងចែកជាបីប្រភេទ គឺ នីតិអន្តរជាតិសាកល នីតិអន្តរជាតិទូទៅ និងនីតិអន្តរជាតិដោយឡែក។",
+"រដ្ឋមានកាតព្វកិច្ចធ្វើឱ្យច្បាប់ជាតិរបស់ខ្លួនស្របទៅតាមវិធាននានានៃនីតិអន្តរជាតិ។",
+"មាត្រា៥១ នៃធម្មនុញ្ញសហប្រជាជាតិ ទទួលស្គាល់សិទ្ធិរបស់រដ្ឋក្នុងការពារខ្លួន នៅពេលមានការវាយប្រហារដោយកម្លាំងប្រដាប់អាវុធ។",
+"សន្ធិសញ្ញាវ៉េស្តផលឡា បាននាំមកនូវអធិបតេយ្យភាព សិទ្ធិសម្រេចជោគវាសនាដោយខ្លួនឯង សមភាពរវាងរដ្ឋ និងការមិនជ្រៀតជ្រែក។"
+],
+"en": [
+"International law is divided into three types: universal, general and particular.",
+"Each state must bring its national law into line with the rules of international law.",
+"When an armed attack happens, Article 51 recognises a state's right to defend itself.",
+"From the Peace of Westphalia come sovereignty, self-determination, equality of states and non-intervention."
 ]
+}
 },
 {
 "id": "ch4-l4",
@@ -4713,7 +4923,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 97
 }
+],
+"plain": {
+"km": [
+"ធម្មនុញ្ញសហប្រជាជាតិ ចែងឱ្យសមាជិកចៀសវាងការគំរាមកំហែង និងការប្រើកម្លាំង ហើយការប្រើកម្លាំងស្របច្បាប់មានលក្ខខណ្ឌបី។",
+"ក្រុមប្រឹក្សាសន្តិសុខអាចដាក់ទណ្ឌកម្មសេដ្ឋកិច្ច ឬប្រើកម្លាំងយោធា តាមមាត្រា៤១ និង៤២។",
+"វិធានការសងសឹកក្រៅផ្លូវច្បាប់ ត្រូវមានសកម្មភាពផ្ទុយនឹងនីតិអន្តរជាតិពីមុន ការទាមទារសំណងមិនជោគជ័យ និងការគិតគូរចំពោះការខូចខាត។",
+"អន្តរាគមន៍មានបីប្រភេទ៖ ការធ្វើអន្តរាគមន៍ក្នុងប្រទេស ក្រៅប្រទេស និងដោយដាក់ទណ្ឌកម្ម។"
+],
+"en": [
+"Members must not use force against another state, and lawful force means self-defence, UN action or regional peacekeeping.",
+"The Security Council may impose economic sanctions or use military force under Articles 41 and 42.",
+"Unlawful reprisals need a prior breach of international law, a failed claim for reparation and harm to weigh.",
+"Intervention comes in three types: inside a state, outside a state, and by imposing sanctions."
 ]
+}
 }
 ]
 },
@@ -5016,7 +5240,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 103
 }
+],
+"plain": {
+"km": [
+"គណៈកម្មាធិការនីតិអន្តរជាតិរបស់អង្គការសហប្រជាជាតិ បានចាប់ផ្ដើមព្រាងអនុសញ្ញានេះនៅឆ្នាំ១៩៤៩ ហើយបញ្ចប់នៅឆ្នាំ១៩៦៩។",
+"វាត្រូវបានអនុម័តនៅថ្ងៃទី២២ ខែឧសភា ឆ្នាំ១៩៦៩ នៅសន្និសីទការទូតរបស់អង្គការសហប្រជាជាតិ ក្នុងទីក្រុងវីយ៉េន ប្រទេសអូទ្រីស។",
+"បន្ទាប់មក វាត្រូវបានបើកឱ្យចុះហត្ថលេខានៅថ្ងៃទី២៣ ខែឧសភា ឆ្នាំ១៩៦៩ និងចូលជាធរមាននៅថ្ងៃទី២៧ ខែមករា ឆ្នាំ១៩៨០ ដោយមានរដ្ឋ១១០ផ្ដល់សច្ចាប័នមកទល់ខែតុលា ឆ្នាំ២០០៩។",
+"ក្រៅពីនេះ នៅមានអនុសញ្ញាទីក្រុងវីយ៉េនឆ្នាំ១៩៧៨ និងឆ្នាំ១៩៨៦ ហើយសូម្បីរដ្ឋដែលមិនបានផ្ដល់សច្ចាប័ន ក៏ទទួលស្គាល់វាជាគោលការណ៍នៃនីតិទំនៀមទម្លាប់។"
+],
+"en": [
+"The UN's International Law Commission began drafting it in 1949 and finished in 1969.",
+"It was adopted on 22 May 1969 in Vienna, Austria, and opened for signature on 23 May 1969.",
+"It entered into force on 27 January 1980, and 110 states had ratified it by October 2009.",
+"Two other Vienna Conventions followed in 1978 and 1986; even non-ratifying states treat it as customary law."
 ]
+}
 },
 {
 "id": "ch5-l2",
@@ -5307,7 +5545,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 104
 }
+],
+"plain": {
+"km": [
+"សន្ធិសញ្ញាអន្តរជាតិ គឺជាកិច្ចព្រមព្រៀងជាលាយលក្ខណ៍អក្សររវាងរដ្ឋនិងរដ្ឋ ដែលស្ថិតនៅក្រោមនីតិអន្តរជាតិ។",
+"លោក អូផែនហុីម ពន្យល់ថា វាជាកិច្ចព្រមព្រៀងដែលមានចរិតជាកិច្ចសន្យា រវាងរដ្ឋនិងរដ្ឋ ឬអង្គការរបស់រដ្ឋ។",
+"គោលបំណងរបស់វាគឺបង្កើតសិទ្ធិ និងកាតព្វកិច្ចផ្លូវច្បាប់រវាងភាគី ដែលអាចជារដ្ឋពីរ ឬរដ្ឋច្រើន។",
+"បច្ចុប្បន្ន ពាក្យសន្ធិសញ្ញារួមបញ្ចូលលិខិតផ្សេងៗទៀត ដូចជា អនុសញ្ញា កិច្ចព្រមព្រៀង សេចក្តីប្រកាស ធម្មនុញ កតិកាសញ្ញា ច្បាប់ចុងក្រោយ ច្បាប់ទូទៅ និងកិច្ចសន្យាស្ថាប័នសាសនា។"
+],
+"en": [
+"An international treaty is a written agreement between states, and it is governed by international law.",
+"Oppenheim calls it an agreement of a contractual character, made between states or organisations of states.",
+"Its purpose is to create legal rights and obligations between the parties, who may be two or more states.",
+"Today the word also covers other instruments, such as conventions, agreements, declarations, charters, covenants and final acts."
 ]
+}
 },
 {
 "id": "ch5-l3",
@@ -5598,7 +5850,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 105
 }
+],
+"plain": {
+"km": [
+"សន្ធិសញ្ញាអន្តរជាតិទាំងអស់ស្ថិតនៅក្រោមអនុសញ្ញាទីក្រុងវីយ៉េន ហើយមានពីរទម្រង់ គឺទ្វេភាគី និងពហុភាគី។",
+"គោលការណ៍យល់ព្រមស្ម័គ្រចិត្តដោយសេរី និងសុឆន្ទៈល្អ (Bona Fide) ហាមមិនឱ្យមានការគំរាមកំហែង ឬការប្រើកម្លាំង។",
+"តាមគោលការណ៍ Pacta sunt Servanda សន្ធិសញ្ញាត្រូវតែគោរព ហើយមានចំណងលើតែរដ្ឋភាគី មិនអាចចងភ្ជាប់រដ្ឋទីបីឡើយ។",
+"ចំណែកគោលការណ៍ Rebus sic Stantibus មានន័យថាការផ្លាស់ប្តូរមាត្រា ឬខ អាចធ្វើឱ្យសន្ធិសញ្ញាឈានទៅដល់ការបញ្ចប់។"
+],
+"en": [
+"All international treaties are governed by the Vienna Convention, and they take two forms: bilateral and multilateral.",
+"Free consent and good faith (bona fide) ban any threat or use of force when a treaty is concluded.",
+"Pacta sunt servanda means a treaty must be respected, and it binds the parties only, never a third state.",
+"Rebus sic stantibus means a change in an article or paragraph of a treaty may bring it to termination."
 ]
+}
 }
 ]
 },
@@ -5909,7 +6175,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 110
 }
+],
+"plain": {
+"km": [
+"អនុសញ្ញាមានន័យទូទៅដូចសន្ធិសញ្ញា ប៉ុន្តែត្រូវការរដ្ឋជាច្រើននៃសហគមន៍អន្តរជាតិចូលរួម។",
+"រដ្ឋពីរ ឬបី មិនអាចបង្កើតអនុសញ្ញាបានទេ ព្រោះប្រធានបទត្រូវជាបញ្ហារួមរបស់ពិភពលោក។",
+"កិច្ចព្រមព្រៀងមានលក្ខណៈផ្លូវការតិចជាងសន្ធិសញ្ញា ហើយពិធីសាមានបីប្រភេទ៖ ចុះហត្ថលេខា ជម្រើស និងធ្វើវិសោធនកម្ម។",
+"អនុសញ្ញាត្រូវរដ្ឋអធិបតេយ្យជាច្រើនរៀបចំ ហើយអនុស្សារណៈយោគយល់គ្នាជាលិខិតទោលដែលបត់បែន។"
+],
+"en": [
+"A convention has the same ordinary meaning as a treaty, but it needs many states of the whole international community.",
+"Two or three states cannot create a convention, because its subject must be a common problem of the world.",
+"An agreement is less formal than a treaty, and protocols come in three kinds: signature, optional and amendment.",
+"Many sovereign states draw up conventions, and a memorandum of understanding is a single, flexible document."
 ]
+}
 },
 {
 "id": "ch6-l2",
@@ -6228,7 +6508,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 115
 }
+],
+"plain": {
+"km": [
+"សេចក្តីប្រកាសត្រូវគេប្រើសម្រាប់លិខិតូបករណ៍ច្រើនបែប ប៉ុន្តែមិនមែនគ្រប់សេចក្តីប្រកាសចងភ្ជាប់កាតព្វកិច្ចទេ។",
+"សេចក្តីប្រកាសគ្រាន់តែបង្ហាញគោលបំណងរបស់ភាគី ប៉ុន្តែខ្លះដូចជាឆ្នាំ១៩៤៨ ស្តីពីសិទ្ធិមនុស្ស អាចមានឥទ្ធិពលលើច្បាប់អន្តរជាតិតាមទម្លាប់។",
+"សេចក្តីថ្លែងការណ៍ឆ្នាំ១៩៧០ ស្តីពីទំនាក់ទំនងមិត្តភាព មានគោលការណ៍ដូចជា មិនប្រើកម្លាំង សន្តិវិធី មិនជ្រៀតជ្រែក សមភាពអធិបតេយ្យ និងសិទ្ធិស្វ័យសម្រេច។",
+"សេចក្តីប្រកាសឆ្នាំ១៩៨១ ហាមរដ្ឋជ្រៀតជ្រែកកិច្ចការរដ្ឋផ្សេង ហើយគោលការណ៍ធម្មនុញ្ញជាគោលការណ៍គ្រឹះនៃច្បាប់អន្តរជាតិ។"
+],
+"en": [
+"A declaration is used for many kinds of international instrument, but not every declaration creates binding obligations.",
+"A declaration makes known a party's intention, but some, like the 1948 human rights declaration, influence customary law.",
+"The 1970 Friendly Relations declaration lists principles like no use of force, non-intervention, sovereign equality and self-determination.",
+"The 1981 declaration forbids interference in another state's affairs, and its Charter principles are fundamental to international law."
 ]
+}
 },
 {
 "id": "ch6-l3",
@@ -6547,7 +6841,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 128
 }
+],
+"plain": {
+"km": [
+"អ្នកច្បាប់អុីតាលី Anzilotti យល់ថា សុពលភាពសន្ធិសញ្ញាយោងលើគោលការណ៍ Pacta sunt servanda។",
+"តាមគោលការណ៍នេះ រដ្ឋចងភ្ជាប់ទាំងស្រុងនឹងកាតព្វកិច្ចក្នុងសន្ធិសញ្ញាដែលខ្លួនបានចុះហត្ថលេខា ហើយមូលដ្ឋានបន្ទាប់គឺអនុសញ្ញាទីក្រុងវីយ៉េនឆ្នាំ១៩៦៩។",
+"សន្ធិសញ្ញាកិច្ចសន្យាកំណត់ស្ថានភាពពិសេស រីឯសន្ធិសញ្ញាច្បាប់លើកគោលការណ៍ទូទៅ ដូចជាធម្មនុញ្ញសហប្រជាជាតិ។",
+"មានតែរដ្ឋទេដែលអាចចុះហត្ថលេខា ហើយប្រមុខរដ្ឋ ប្រមុខរដ្ឋាភិបាល និងរដ្ឋមន្ត្រីការបរទេសមិនចាំបាច់ផ្តល់សិទ្ធិ។"
+],
+"en": [
+"Anzilotti, an Italian jurist, held a treaty is valid under the principle Pacta sunt servanda: agreements must be kept.",
+"A state is fully bound by a treaty it signed, and the 1969 Vienna Convention is the other basis.",
+"A treaty-contract addresses a particular situation; a law-making treaty states general principles, like the UN Charter.",
+"Only states can sign a treaty; heads of State, heads of government and foreign ministers need no full powers."
 ]
+}
 }
 ]
 },
@@ -6843,7 +7151,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 129
 }
+],
+"plain": {
+"km": [
+"ពាក្យ \"ធម្មនុញ្ញ\" មានប្រភពមកពីពាក្យ Magna Carta ជាភាសាឡាតាំង ដែលមានន័យថា Great Charter ។",
+"Magna Carta ជាឯកសារមួយដែលបានប្រថាប់ត្រាដោយព្រះមហាក្សត្រនៃចក្រភណអង់គ្លេស ព្រះនាម ចន នៅថ្ងៃទី ១៥ ខែមិថុនា ឆ្នាំ ១២១៥ ។",
+"គោលបំណងនៃឯកសារនេះ គឺធានាសិទ្ធិអំណាច និងអភ័យឯកសិទ្ធិរបស់ព្រះមហាក្សត្រនៅក្នុងប្រទេសអង់គ្លេស ។",
+"ឥទ្ធិពលនៃ Magna Carta រីករាលដាលទៅបណ្ដាប្រទេសដែលទទួលឥទ្ធិពលពីទំនៀមទម្លាប់ប្រពៃណីរបស់ប្រទេសអង់គ្លេស ។"
+],
+"en": [
+"The word \"charter\" comes from Magna Carta, which is Latin for \"Great Charter\".",
+"Magna Carta is a document sealed by the English monarch, King John, on 15 June 1215.",
+"The document was made to guarantee the rights, powers and privileges of the monarch in England.",
+"Its influence spread to the countries influenced by English custom and tradition."
 ]
+}
 },
 {
 "id": "ch7-l2",
@@ -7154,7 +7476,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 130
 }
+],
+"plain": {
+"km": [
+"កតិកាសញ្ញា មានន័យស្មើនឹងកិច្ចព្រមព្រៀងជាអន្តរជាតិ ។",
+"គេប្រើពាក្យកតិកាសញ្ញាជាទូទៅសម្រាប់ប្រធានបទដែលមានចរិកនយោបាយ យោធា ឬបក្សសម្ព័ន្ធ ។",
+"លក្ខណៈវិនិច្ឆ័យតាមផ្លូវច្បាប់របស់វា គឺធ្វើឡើងដោយរដ្ឋពីរ ឬច្រើនរួមគ្នា ។",
+"ឧទាហរណ៍៖ កតិកាសញ្ញាទីក្រុងប៉ារីស ឆ្នាំ ១៩២៨ ដើម្បីលុបបំបាត់សង្គ្រាម, ចំណែកកតិកាសញ្ញាវ៉ាសូវី បង្កើតឆ្នាំ ១៩៥៤ និងរលាយឆ្នាំ ១៩៩១ ។"
+],
+"en": [
+"A covenant means the same thing as an international agreement.",
+"The word covenant is generally used for subjects of a political, military or alliance character.",
+"Its legal criterion is that it is made by two or more states together.",
+"The 1928 Pact of Paris aimed to end war, and the Warsaw Pact ran from 1954 to 1991."
 ]
+}
 },
 {
 "id": "ch7-l3",
@@ -7473,7 +7809,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 137
 }
+],
+"plain": {
+"km": [
+"អនុស្សារណៈយោគយល់គ្នា ជាលិខិតូបករណ៍អន្តរជាតិបែបសម្របសម្រួល និងមានទម្រង់ជាលិខិតទោល ។",
+"សន្ធិសញ្ញាមានសុពលភាព ព្រោះគោលការណ៍សន្ធិសញ្ញាត្រូវថែរក្សា តែគ្មានសុពលភាពបើផ្ទុយនឹងវិធាននីតិអន្តរជាតិដែលមានរួចហើយ ។",
+"មានតែរដ្ឋទេដែលមានសមត្ថកិច្ចចុះហត្ថលេខា (មាត្រា ៦ នៃអនុសញ្ញាទីក្រុងវីយ៉េន ១៩៦៩), តែប្រមុខរដ្ឋ និងរដ្ឋមន្ត្រីការបរទេស ចុះបានដោយមិនចាំបាច់លិខិតផ្តល់សិទ្ធិ ។",
+"សន្ធិសញ្ញាទ្វេភាគី និងពហុភាគី ឆ្លងកាត់ការចរចា ចុះហត្ថលេខា និងការផ្តល់សច្ចាប័ន ។"
+],
+"en": [
+"A memorandum of understanding is an international instrument of a facilitative kind, written as a single document.",
+"A treaty is valid under the principle that treaties must be kept, unless it conflicts with existing international law.",
+"Only states may sign a treaty (Article 6, Vienna Convention 1969), but some top officials sign without full powers.",
+"Bilateral and multilateral treaties pass through negotiation, signature and ratification."
 ]
+}
 }
 ]
 },
@@ -7810,7 +8160,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 148
 }
+],
+"plain": {
+"km": [
+"កងកម្លាំងរក្សាសន្តិភាពអាចចូលប្រទេសមួយបាន លុះត្រាតែប្រទេសនោះយល់ព្រម ហើយវាក៏អាចសុំឱ្យពួកគេចាកចេញវិញបានដែរ។",
+"នៅឆ្នាំ១៩៩២ អ.ស.ប បានកំណត់តួនាទីបួន គឺ ការពង្រឹងសន្តិភាព ការបង្កើតសន្តិភាព ការថែរក្សាសន្តិភាព និងការកសាងក្រោយជម្លោះ។",
+"ការថែរក្សាសន្តិភាពសព្វថ្ងៃឈរលើគោលការណ៍បី គឺ ការយល់ព្រមពីភាគី ភាពមិនលម្អៀង និងការមិនប្រើកម្លាំង លើកលែងករណីការពារខ្លួន។",
+"អ៊ុនតាក់មានភារកិច្ចត្រួតពិនិត្យការឈប់បាញ់ ដកអាវុធពីគ្រប់ភាគី នាំជនភៀសខ្លួនត្រឡប់មកវិញ និងរៀបចំការបោះឆ្នោតដោយសេរី។"
+],
+"en": [
+"Peacekeepers may enter a country only if that country agrees, and it can also ask them to leave.",
+"In 1992 the UN set out four roles: peace enforcement, peacemaking, peacekeeping and post-conflict peacebuilding.",
+"Peacekeeping today rests on three rules: consent of the parties, impartiality, and force only in self-defence.",
+"UNTAC watched the ceasefire, disarmed all parties, brought refugees home and organized free elections."
 ]
+}
 },
 {
 "id": "ch8-l2",
@@ -8129,7 +8493,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 154
 }
+],
+"plain": {
+"km": [
+"សិទ្ធិមនុស្សជាសសរស្តម្ភមួយក្នុងចំណោមសសរស្តម្ភបីរបស់ អ.ស.ប រួមជាមួយសន្តិសុខ និងការអភិវឌ្ឍន៍។",
+"សិទ្ធិមនុស្សកើតឡើងបន្តិចម្តងៗ ចាប់ពីម៉ាកណា ខាតា ឆ្នាំ១២១៥ ដល់សេចក្តីប្រកាសជាសកលស្តីពីសិទ្ធិមនុស្ស ឆ្នាំ១៩៤៨។",
+"កម្ពុជាបានផ្តល់សច្ចាប័នលើអនុសញ្ញាស្តីពីការធ្វើទារុណកម្ម សិទ្ធិសុីវិល និងនយោបាយ ស្ត្រី និងកុមារ។",
+"នៅឆ្នាំ២០១៥ ពិភពលោកបានដាក់គោលដៅអភិវឌ្ឍដោយចីរភាព១៧ សម្រាប់ឆ្នាំ២០៣០ ហើយកម្ពុជាបន្ថែមគោលដៅដោះមីនជាគោលដៅទី១៨។"
+],
+"en": [
+"Human rights is one of the UN's three pillars, along with security and development.",
+"Rights grew over centuries, from Magna Carta in 1215 to the Universal Declaration of Human Rights in 1948.",
+"Cambodia ratified treaties on torture, civil and political rights, women and children, and hosts a UN rights office.",
+"In 2015 the world set 17 Sustainable Development Goals for 2030, and Cambodia added mine clearance as goal 18."
 ]
+}
 },
 {
 "id": "ch8-l3",
@@ -8422,7 +8800,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 174
 }
+],
+"plain": {
+"km": [
+"អ៊ុនតាក់កាន់អំណាចចាំបាច់ដើម្បីអនុវត្តកិច្ចព្រមព្រៀង រីឯ អេសអិនសុី ដែលមានសម្តេចនរោត្តម សីហនុ ជាប្រធាន ផ្តល់មតិណែនាំ។",
+"ក្រសួងសំខាន់ៗ ដូចជាការបរទេស ការពារជាតិ ហិរញ្ញវត្ថុ និងសន្តិសុខសាធារណៈ ត្រូវដាក់ក្រោមការត្រួតពិនិត្យផ្ទាល់របស់អ៊ុនតាក់។",
+"ផ្នែកយោធា អ៊ុនតាក់ត្រួតពិនិត្យការឈប់បាញ់ ដកអាវុធ បោសសំអាតមីន និងរំសាយកងកម្លាំងយ៉ាងតិច៧០ភាគរយ។",
+"ការបោះឆ្នោតជ្រើសសមាជិកសភាធម្មនុញ្ញ១២០នាក់ ដោយសន្លឹកឆ្នោតសំងាត់ ហើយរដ្ឋធម្មនុញ្ញថ្មីត្រូវអនុម័តដោយសម្លេងពីរភាគបី។"
+],
+"en": [
+"UNTAC held the powers needed to carry out the agreement, while the SNC under Norodom Sihanouk advised it.",
+"Key ministries such as foreign affairs, defence, finance and public security came under UNTAC's direct control.",
+"In the military field UNTAC monitored the ceasefire, collected weapons, cleared mines and demobilized at least 70% of forces.",
+"The election chose a 120-member constituent assembly by secret ballot, and the new constitution needed two-thirds support."
 ]
+}
 },
 {
 "id": "ch8-l4",
@@ -8715,7 +9107,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 188
 }
+],
+"plain": {
+"km": [
+"កិច្ចព្រមព្រៀងទី១ គឺជាដំណោះស្រាយនយោបាយរួម ដោយផ្អែកលើឯកសារក្របខ័ណ្ឌ ថ្ងៃទី២៧ ខែសីហា ឆ្នាំ១៩៩០។",
+"វាស្វាគមន៍ក្រុមប្រឹក្សាជាតិជាន់ខ្ពស់ក្រោមប្រធានសម្តេចនរោត្តម សីហនុ និងស្នើឱ្យក្រុមប្រឹក្សាសន្តិសុខបង្កើតអ៊ុនតាក់។",
+"កិច្ចព្រមព្រៀងទី២ សន្យាថែរក្សាអធិបតេយ្យភាព ឯករាជ្យ បូរណភាពដែនដី អព្យាក្រឹតភាព និងឯកភាពជាតិរបស់កម្ពុជា។",
+"កិច្ចព្រមព្រៀងទី៣ ស្តីពីការកសាងប្រទេសឡើងវិញ ដោយប្រជាជនកម្ពុជាទទួលខុសត្រូវជាសំខាន់ និងមានគណៈកម្មាធិការ ICORC សម្របសម្រួលជំនួយ។"
+],
+"en": [
+"Agreement 1 is the comprehensive political settlement of the Cambodia conflict, built on the framework document of 27 August 1990.",
+"It welcomed the Supreme National Council under President Norodom Sihanouk and asked the Security Council to create UNTAC.",
+"Agreement 2 promises to maintain Cambodia's sovereignty, independence, territorial integrity, neutrality and national unity.",
+"Agreement 3 covers reconstruction: Cambodians hold primary responsibility, and an international committee, ICORC, coordinates aid."
 ]
+}
 }
 ]
 },
@@ -9003,7 +9409,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 8
 }
+],
+"plain": {
+"km": [
+"តុលាការពិសេសត្រូវបានបង្កើតឡើងនៅក្នុងរចនាសម្ព័ន្ធតុលាការដែលមានស្រាប់ គឺសាលាជម្រះករណីដើម និងតុលាការកំពូល។",
+"តុលាការនេះមានយុត្តាធិការលើអំពើដែលប្រព្រឹត្តពីថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥ ដល់ថ្ងៃទី៦ ខែមករា ឆ្នាំ១៩៧៩ ហើយអាណត្តិកំណត់កាត់ទោសត្រូវបានបន្ថែម ៣០ ឆ្នាំ។",
+"ឧក្រិដ្ឋកម្មក្នុងយុត្តាធិការមាន ឧក្រិដ្ឋកម្មក្នុងក្រមព្រហ្មទណ្ឌឆ្នាំ១៩៥៦ ឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍ ឧក្រិដ្ឋកម្មប្រឆាំងមនុស្សជាតិ ការបំពានធ្ងន់ធ្ងរលើអនុសញ្ញាហ្សឺណែវ ការបំផ្លាញទ្រព្យសម្បត្តិវប្បធម៌ និងឧក្រិដ្ឋកម្មប្រឆាំងបុគ្គលដែលមានការការពារអន្តរជាតិ។",
+"អង្គជំនុំជម្រះជាន់ទីមួយមានចៅក្រមជំនាញប្រាំរូប បីរូបជាចៅក្រមកម្ពុជា និងពីររូបជាចៅក្រមបរទេស រីឯអង្គជំនុំជម្រះកំពូលមានប្រាំពីររូប ហើយជាតុលាការចុងក្រោយ។"
+],
+"en": [
+"The Extraordinary Chambers sit inside Cambodia's existing courts, the trial court and the supreme court.",
+"They cover acts from 17 April 1975 to 6 January 1979, and the time limit is extended by 30 years.",
+"Their crimes include the 1956 Penal Code, genocide, crimes against humanity, Geneva grave breaches, cultural property and protected persons.",
+"The Trial Chamber has five judges (three Cambodian, two foreign); the Supreme Court Chamber has seven and hears final appeals."
 ]
+}
 },
 {
 "id": "ref-eccc-l2",
@@ -9298,7 +9718,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 19
 }
+],
+"plain": {
+"km": [
+"ការស៊ើបអង្កេតជាការទទួលខុសត្រូវរួមរបស់ចៅក្រមស៊ើបអង្កេតរួមពីររូប ម្នាក់ជាជនជាតិកម្ពុជា និងម្នាក់ជាជនបរទេស។",
+"ជនសង្ស័យមានសិទ្ធិជ្រើសរើសមេធាវីដោយខ្លួនឯង ទទួលជំនួយផ្នែកច្បាប់ដោយឥតគិតថ្លៃ បើគ្មានលទ្ធភាពបង់ថ្លៃ និងមានសិទ្ធិបកប្រែភាសា។",
+"ការជំនុំជម្រះត្រូវមានភាពយុត្តិធម៌ និងរហ័ស ដោយគោរពសិទ្ធិចុងចោទ ការពារជនរងគ្រោះ និងសាក្សី ហើយចុងចោទត្រូវសន្មតថាជាអ្នកបរិសុទ្ធរហូតដល់មានសាលក្រមចុងក្រោយ។",
+"ទោសកំណត់ត្រឹមការជាប់ពន្ធនាគារពីប្រាំឆ្នាំដល់អស់មួយជីវិត រាជរដ្ឋាភិបាលកម្ពុជាមិនត្រូវសុំការលើកលែងទោស ហើយកិច្ចព្រមព្រៀងឆ្នាំ២០០៣ ជាមួយអង្គការសហប្រជាជាតិ មានអនុភាពជាច្បាប់ក្នុងប្រទេសកម្ពុជា។"
+],
+"en": [
+"Two Co-Investigating Judges, one Cambodian and one foreign, share responsibility for investigations.",
+"Suspects may choose their own lawyer, get free legal help if they cannot pay, and get interpretation.",
+"Trials must be fair and quick, respecting the accused's rights and protecting victims and witnesses.",
+"Penalties are prison from five years to life, Cambodia may not ask amnesty, and the 2003 UN Agreement is law."
 ]
+}
 }
 ]
 },
@@ -9612,7 +10046,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 10
 }
+],
+"plain": {
+"km": [
+"ប្រទេសដែលអនុសញ្ញានេះអនុវត្ត បង្កើតជាសហភាពមួយសម្រាប់ការការពារ ប៉ាតង់ ម៉ូដែលឧបយោគ រចនាបទឧស្សាហកម្ម ម៉ាកពាណិជ្ជកម្ម ឈ្មោះពាណិជ្ជកម្ម និងការទប់ស្កាត់ការប្រកួតប្រជែងមិនស្មោះត្រង់។",
+"តាមគោលការណ៍ប្រព្រឹត្តបែបជាតិ ពលរដ្ឋនៃប្រទេសសមាជិក ទទួលបានការការពារដូចពលរដ្ឋខ្លួន ដោយមិនអាចទាមទារឲ្យមានលំនៅ ឬស្ថាប័នបានទេ។",
+"ជនក្រៅសហភាពដែលមានលំនៅ ឬស្ថាប័នឧស្សាហកម្ម ឬពាណិជ្ជកម្មពិតប្រាកដនៅក្នុងប្រទេសសមាជិក ត្រូវទទួលការប្រព្រឹត្តដូចពលរដ្ឋនៃប្រទេសសមាជិក។",
+"សិទ្ធិអាទិភាពមានរយៈពេល ១២ ខែសម្រាប់ប៉ាតង់ និងម៉ូដែលឧបយោគ និង ៦ ខែសម្រាប់រចនាបទឧស្សាហកម្ម និងម៉ាកពាណិជ្ជកម្ម។"
+],
+"en": [
+"The Convention countries form a Union protecting patents, utility models, designs, trademarks, trade names and unfair competition.",
+"Under national treatment, Union nationals get the protection locals enjoy, with no domicile requirement.",
+"Non-Union nationals domiciled or doing real business in a Union country are treated as Union nationals.",
+"Priority runs twelve months for patents and utility models and six months for designs and trademarks."
 ]
+}
 },
 {
 "id": "ref-paris-l2",
@@ -9907,7 +10355,21 @@ window.IPL_CHAPTERS = [
 },
 "page": 20
 }
+],
+"plain": {
+"km": [
+"សេចក្តីសម្រេចរបស់សហភាព ធ្វើឡើងដោយមហាសន្និបាត ដែលរួមមានប្រទេសចងខ្លួនដោយមាតិកា ១៣ ដល់ ១៧ ហើយប្រទេសមួយមានសំឡេងមួយ។",
+"គណៈកម្មាធិការប្រតិបត្តិមានសមាជិកស្មើមួយភាគបួននៃចំនួនប្រទេសសមាជិកមហាសន្និបាត ហើយការិយាល័យអន្តរជាតិបំពេញកិច្ចការរដ្ឋបាល។",
+"ការធ្វើវិសោធនកម្មត្រូវការសំឡេងបីភាគបួននៃសំឡេងដែលបានបោះ ហើយបួនភាគប្រាំសម្រាប់មាតិកា ១៣។",
+"វិវាទអំពីការបកស្រាយ ឬការអនុវត្តអនុសញ្ញា អាចនាំទៅតុលាការយុត្តិធម៌អន្តរជាតិបាន ហើយការបដិសេធចោលមានប្រសិទ្ធភាពក្រោយមួយឆ្នាំ។"
+],
+"en": [
+"The Assembly consists of the Union countries bound by Articles 13 to 17, each country having one vote.",
+"The Executive Committee has one-fourth as many countries as the Assembly, and the International Bureau runs administration.",
+"Amendments need three-fourths of the votes cast, and four-fifths for Article 13.",
+"Disputes may go to the International Court of Justice, and leaving the Convention takes effect one year after notice."
 ]
+}
 }
 ]
 }

@@ -303,7 +303,21 @@
           },
           "page": 80
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "ច្បាប់អន្តរជាតិកើតចេញពីប្រភព ដែលមានចែងក្នុងមាត្រា៣៨ នៃលក្ខន្តិកៈនៃតុលាការយុត្តិធម៌អន្តរជាតិ។",
+          "ប្រភពទាំងបួនមាន៖ សន្ធិសញ្ញាអន្តរជាតិ ទំនៀមទម្លាប់អន្តរជាតិ គោលការណ៍ទូទៅនៃច្បាប់ និងសេចក្តីសម្រេចរបស់តុលាការ។",
+          "សន្ធិសញ្ញាជាប្រភពដ៏សំខាន់ និងជាលិខិតដ៏សំខាន់បំផុតធ្វើឱ្យនីតិអន្តរជាតិសាធារណៈរីកចម្រើន។",
+          "ទំនៀមទម្លាប់កើតឡើងពីការអនុវត្តន៍ជាក់ស្ដែងរបស់រដ្ឋ និងការទទួលយកការអនុវត្តន៍នោះថាជាកាតព្វកិច្ចផ្លូវច្បាប់។"
+        ],
+        "en": [
+          "International law comes from sources, and Article 38 of the ICJ Statute is where they are set out.",
+          "There are four: treaties, custom, general principles of law, and judicial decisions.",
+          "Treaties are written and may be called a covenant, an agreement or a convention.",
+          "Custom is the second source: it grows from what states actually do and accept as law."
+        ]
+      }
     },
     {
       "id": "ch4-l2",
@@ -566,7 +580,21 @@
           },
           "page": 85
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "សេចក្តីសម្រេចរបស់តុលាការ ឬសាលាជំនុំជម្រះ ជាធាតុសំខាន់ក្នុងការបង្កើតនីតិសហគមន៍អន្តរជាតិ។",
+          "តុលាការយុត្តិធម៌អន្តរជាតិមិនមានសមត្ថកិច្ចលើជម្លោះឯកជន ហើយមានតែរដ្ឋទេដែលអាចជាភាគី។",
+          "សេចក្តីសម្រេចរបស់តុលាការនេះពុំមានលក្ខណៈបង្ខិតបង្ខំ ហើយមានកត្តាបីធ្វើឱ្យការដោះស្រាយអធិករណ៍ស្មុគស្មាញ។",
+          "ក្នុងអធិករណ៍នីការ៉ាហ្គា និងសហរដ្ឋអាមេរិក តុលាការសម្រេចថាខ្លួនមានសមត្ថកិច្ច ហើយសហរដ្ឋអាមេរិកបំពានទំនៀមទម្លាប់អន្តរជាតិ។"
+        ],
+        "en": [
+          "Decisions of courts and tribunals help form the law of the international community.",
+          "Only states can be parties before the ICJ; private and individual disputes are outside its reach.",
+          "Its decisions carry no coercive force, which is one reason settling disputes is complex.",
+          "In Nicaragua v. United States, the Court found it had jurisdiction and the United States broke customary law."
+        ]
+      }
     },
     {
       "id": "ch4-l3",
@@ -885,7 +913,21 @@
           },
           "page": 86
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "នីតិអន្តរជាតិត្រូវបានបែងចែកជាបីប្រភេទ គឺ នីតិអន្តរជាតិសាកល នីតិអន្តរជាតិទូទៅ និងនីតិអន្តរជាតិដោយឡែក។",
+          "រដ្ឋមានកាតព្វកិច្ចធ្វើឱ្យច្បាប់ជាតិរបស់ខ្លួនស្របទៅតាមវិធាននានានៃនីតិអន្តរជាតិ។",
+          "មាត្រា៥១ នៃធម្មនុញ្ញសហប្រជាជាតិ ទទួលស្គាល់សិទ្ធិរបស់រដ្ឋក្នុងការពារខ្លួន នៅពេលមានការវាយប្រហារដោយកម្លាំងប្រដាប់អាវុធ។",
+          "សន្ធិសញ្ញាវ៉េស្តផលឡា បាននាំមកនូវអធិបតេយ្យភាព សិទ្ធិសម្រេចជោគវាសនាដោយខ្លួនឯង សមភាពរវាងរដ្ឋ និងការមិនជ្រៀតជ្រែក។"
+        ],
+        "en": [
+          "International law is divided into three types: universal, general and particular.",
+          "Each state must bring its national law into line with the rules of international law.",
+          "When an armed attack happens, Article 51 recognises a state's right to defend itself.",
+          "From the Peace of Westphalia come sovereignty, self-determination, equality of states and non-intervention."
+        ]
+      }
     },
     {
       "id": "ch4-l4",
@@ -1204,7 +1246,21 @@
           },
           "page": 97
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "ធម្មនុញ្ញសហប្រជាជាតិ ចែងឱ្យសមាជិកចៀសវាងការគំរាមកំហែង និងការប្រើកម្លាំង ហើយការប្រើកម្លាំងស្របច្បាប់មានលក្ខខណ្ឌបី។",
+          "ក្រុមប្រឹក្សាសន្តិសុខអាចដាក់ទណ្ឌកម្មសេដ្ឋកិច្ច ឬប្រើកម្លាំងយោធា តាមមាត្រា៤១ និង៤២។",
+          "វិធានការសងសឹកក្រៅផ្លូវច្បាប់ ត្រូវមានសកម្មភាពផ្ទុយនឹងនីតិអន្តរជាតិពីមុន ការទាមទារសំណងមិនជោគជ័យ និងការគិតគូរចំពោះការខូចខាត។",
+          "អន្តរាគមន៍មានបីប្រភេទ៖ ការធ្វើអន្តរាគមន៍ក្នុងប្រទេស ក្រៅប្រទេស និងដោយដាក់ទណ្ឌកម្ម។"
+        ],
+        "en": [
+          "Members must not use force against another state, and lawful force means self-defence, UN action or regional peacekeeping.",
+          "The Security Council may impose economic sanctions or use military force under Articles 41 and 42.",
+          "Unlawful reprisals need a prior breach of international law, a failed claim for reparation and harm to weigh.",
+          "Intervention comes in three types: inside a state, outside a state, and by imposing sanctions."
+        ]
+      }
     }
   ]
 }

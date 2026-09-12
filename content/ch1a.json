@@ -398,7 +398,21 @@
           },
           "page": 23
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "សង្គមអន្តរជាតិ គឺទំនាក់ទំនងរវាងរដ្ឋអធិបតេយ្យ ខុសពីសង្គមជាតិ ដែលទំនាក់ទំនងកើតឡើងក្នុងរដ្ឋតែមួយ។",
+          "អធិបតេយ្យ គឺអំណាចកំពូល និងផ្តាច់មុខរបស់រដ្ឋ ដែលមិនចំណុះរដ្ឋដទៃ។",
+          "មាត្រា៣៨ នៃលក្ខន្តិកៈតុលាការយុត្តិធម៌អន្តរជាតិ រាយប្រភពច្បាប់៖ សន្ធិសញ្ញាជាលាយលក្ខណ៍អក្សរ ទំនៀមទម្លាប់ពីការអនុវត្តរបស់រដ្ឋ គោលការណ៍ទូទៅ និងសេចក្តីសម្រេចរបស់តុលាការ។",
+          "នីតិសមុទ្រវិវត្តពីច្បាប់សមុទ្រចាស់ ទៅរកសមុទ្រដែនដី ១២ មៃល៍ និងអនុសញ្ញាអង្គការសហប្រជាជាតិ ដែលកម្ពុជាបានចុះហត្ថលេខា។"
+        ],
+        "en": [
+          "International society is relations between sovereign states; national society is relations inside a single state.",
+          "Sovereignty means the state's supreme, exclusive power, held alone and subject to no other state.",
+          "Article 38 of the ICJ Statute lists the sources: written treaties, custom from state practice, general principles, judicial decisions.",
+          "The law of the sea grew from early sea customs to a twelve-mile territorial sea and UN conventions Cambodia signed."
+        ]
+      }
     },
     {
       "id": "ch1-l2",
@@ -545,7 +559,21 @@
           },
           "page": 26
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "អង្គការអន្តរជាតិ គឺអង្គការដែលបង្កើតឡើងដោយរដ្ឋអធិបតេយ្យ តិច ឬច្រើន ដូចជាអង្គការសហប្រជាជាតិ សហគមន៍អឺរ៉ុប និងអាស៊ាន។",
+          "អង្គការអន្តរជាតិជានីតិបុគ្គលអន្តរជាតិ ដែលមានសិទ្ធិបង្កើត និងចុះហត្ថលេខាលើអនុសញ្ញា និងសន្ធិសញ្ញាជាអន្តរជាតិ។",
+          "សិទ្ធិរបស់អង្គការអន្តរជាតិស្មើនឹងរដ្ឋ ប៉ុន្តែកាតព្វកិច្ចរបស់វាតិចជាងរដ្ឋ។",
+          "លក្ខណៈវិនិច្ឆ័យមាន៖ ការចូលរួមពីរដ្ឋអធិបតេយ្យ ចរិកលក្ខណៈយូរអង្វែង ការមានទីស្នាក់ការ ការបង្កើតដោយស្ម័គ្រចិត្ត និងមិនស្ថិតក្រោមអង្គការភេរវកម្មអន្តរជាតិ។"
+        ],
+        "en": [
+          "An international organisation is set up by sovereign states, few or many — the UN, the European Community and ASEAN.",
+          "It is an international legal person: it can create and sign international conventions, treaties and agreements.",
+          "Its rights are equal to those of a state, but its obligations are fewer than a state's.",
+          "The criteria: sovereign-state participation, lasting character, a headquarters, free consent, and not being under a terrorist organisation."
+        ]
+      }
     },
     {
       "id": "ch1-l3",
@@ -692,7 +720,21 @@
           },
           "page": 27
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "ក្រោយសង្គ្រាមលោកលើកទី១ សង្គមប្រជាជាតិត្រូវបានបង្កើតឡើងតាមអនុសញ្ញាឆ្នាំ១៩១៩ ដែលជាផ្នែកមួយនៃសន្ធិសញ្ញាវែរសៃ។",
+          "វាជាគំនិតផ្ដួចផ្ដើមផ្ទាល់របស់លោក Woodrow Wilson ហើយមានទីស្នាក់ការនៅទីក្រុងសឺណែវ ប្រទេសស្វីស។",
+          "គោលបំណងគឺ៖ ដោះស្រាយជម្លោះរវាងរដ្ឋ ទប់ស្កាត់សង្គ្រាម ការពារឯករាជ្យ និងសុវត្ថិភាពព្រំដែន និងលើកទឹកចិត្តកាត់បន្ថយគ្រឿងសព្វាវុធ។",
+          "មានរដ្ឋ ៦៣ ចូលរួម ដោយមានក្រុមប្រឹក្សា មហាសន្និបាត និងលេខាធិការដ្ឋាន ហើយវាដួលរលំព្រោះរដ្ឋត្រូវលេបយក និងសមាជិកដកខ្លួន។"
+        ],
+        "en": [
+          "The 1919 Convention, part of the Treaty of Versailles, created the League of Nations after the First World War.",
+          "It was Woodrow Wilson's own initiative, and it had its headquarters in Geneva, Switzerland.",
+          "Its aims: settle disputes between states, prevent war, protect independence and frontiers, and encourage cutting armaments.",
+          "Sixty-three states joined, with a Council, Assembly and Secretariat; it collapsed as states were annexed and members withdrew."
+        ]
+      }
     }
   ]
 }

@@ -27,7 +27,7 @@ and 624 searchable passages — is derived from those documents only.
 | `learn.html` | **Lessons** — chapter rail + lesson with objectives, key points, verbatim quotes (with page numbers), term flashcards, your notes, mark-as-studied, print. |
 | `quiz.html` | **Quizzes** — per lesson, per chapter (12 questions) or mixed (10 random), instant explanations, page references, review of your mistakes, best-score memory. Keys `1–4` / `Enter`. |
 | `teacher.html` | **RoboCL, the AI teacher** — a Claude-style chat. Shows its work ("reading the question → searching the book → comparing passages → building the answer → checking pages"), streams the answer, and always cites the page. |
-| `library.html` | **Textbook & sources** — read the textbook page by page, open the reference PDFs in an embedded viewer, see real page samples. |
+| `library.html` | **Textbook & sources** — read any of the three documents page by page: the real PDF pages (turn, jump, zoom, open in a new tab) plus the searchable text and page samples. |
 | `glossary.html` | **Glossary** — 193 Khmer–English legal terms, table or flashcards. |
 | `about.html` | **About / credits** — who built it, how, and the rights note. |
 | `admin.html` | **User data** (owner) — the accounts and sign-in records on this device, with CSV / JSON export. |
@@ -77,8 +77,9 @@ not cover a question it says so instead of guessing.
   authors, and `NOTICE.md` invites a takedown request from any rights holder.
 * The textbook ships as a full-text index (the owner's choice). To publish a reduced
   quotes-only build instead: `python tools/build_site_data.py --quotes-only`.
-* The textbook PDF itself is **not** published; the Library reads the text recovered from it.
-  The two reference documents are public legal texts and are included for the PDF viewer.
+* The textbook PDF itself **is** published now (the owner's decision), so the Library can show
+  its real pages; the text recovered from it stays available in the same page-by-page reader.
+  The two reference documents are public legal texts and are included the same way.
 
 ---
 
@@ -194,11 +195,11 @@ stops guarding its content.
 ```bash
 cp tools/dev/*.html docs/            # they must be served from docs/ to be same-origin
 python -m http.server 8099 --bind 127.0.0.1   # from docs/
-# open http://127.0.0.1:8099/_selftest.html   -> 69 flow checks (auth, lessons, quiz, RoboCL, library, admin, EN/KM)
+# open http://127.0.0.1:8099/_selftest.html   -> 72 flow checks (auth, lessons, quiz, RoboCL, library, admin, EN/KM)
 # open http://127.0.0.1:8099/_audit.html      -> horizontal-overflow audit at 360 / 390 / 768 px
 ```
 
-Last run: **69/69 checks passed**, no horizontal overflow on any page at 360 px.
+Last run: **72/72 checks passed**, no horizontal overflow on any page at 360 px.
 
 ## Method note
 

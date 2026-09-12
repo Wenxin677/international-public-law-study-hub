@@ -329,7 +329,21 @@
           },
           "page": 70
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "រដ្ឋ គឺជាក្រុមមនុស្សដែលរស់នៅក្នុងទឹកដីមួយ ក្រោមអំណាចច្បាប់ និងអំណាចនយោបាយរួមគ្នា។",
+          "រដ្ឋមួយត្រូវមានលក្ខណៈវិនិច្ឆ័យបួន៖ ប្រជាពលរដ្ឋអចិន្ត្រៃយ៍ ទឹកដីជាកំណត់ រដ្ឋាភិបាល និងសមត្ថកិច្ចទំនាក់ទំនងជាមួយរដ្ឋដទៃ។",
+          "អនុសញ្ញាម៉ង់តេវិដដេអូ គឺជាសន្ធិសញ្ញាដែលកំណត់លក្ខណៈវិនិច្ឆ័យទាំងនោះ។",
+          "រដ្ឋមានសិទ្ធិឯករាជ្យ យុត្តាធិការ ស្មើភាព និងការពារខ្លួន ហើយត្រូវគោរពសន្ធិសញ្ញាដោយស្មោះត្រង់ និងមិនធ្វើអន្តរាគមន៍ក្នុងកិច្ចការរដ្ឋដទៃ។"
+        ],
+        "en": [
+          "A state is a group of people living in one territory under a shared legal and political authority.",
+          "Four criteria make a state: a permanent population, a defined territory, a government, and capacity to deal with other states.",
+          "The Montevideo Convention set out these criteria for statehood.",
+          "States are equal, may defend themselves, must keep treaty promises in good faith, and must not intervene in other states' affairs."
+        ]
+      }
     },
     {
       "id": "ch3-l2",
@@ -646,7 +660,21 @@
           },
           "page": 73
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "ប្រជាជាតិ គឺជាសហគមន៍ដែលមានវប្បធម៌ ប្រពៃណី និងប្រវត្តិសាស្ត្ររួមគ្នា តែគ្មានអត្ថន័យខាងផ្លូវច្បាប់ដូចរដ្ឋទេ។",
+          "ទំនាក់ទំនងរវាងរដ្ឋ និងប្រជាជាតិមានបួនបែប ដូចជា រដ្ឋមួយប្រជាជាតិច្រើន ឬប្រជាជាតិមួយគ្មានរដ្ឋ។",
+          "មានតែរដ្ឋទេដែលផ្តល់សញ្ជាតិ ដោយសាច់សាលោហិត ឬការតាំងទីលំនៅ ហើយប្រជាពលរដ្ឋខ្មែរមិនបាត់សញ្ជាតិពេលរៀបការជាមួយជនបរទេស។",
+          "រដ្ឋាភិបាលមានទម្រង់ច្រើន ដូចជា សាធារណរដ្ឋប្រជាធិបតេយ្យ រាជានិយមអាស្រ័យសភា និងរបបផ្តាច់ការ។"
+        ],
+        "en": [
+          "A nation is a community sharing culture, traditions and a common history; unlike the state, it has no legal meaning.",
+          "State and nation relate in four ways, such as one state with many nations, or one nation with no state.",
+          "Only a state grants nationality, by descent or residence, and a Cambodian keeps it after marrying a foreigner.",
+          "Governments come in many forms, such as a democratic republic, a parliamentary monarchy, or a dictatorship."
+        ]
+      }
     },
     {
       "id": "ch3-l3",
@@ -963,7 +991,21 @@
           },
           "page": 77
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "ទម្រង់រដ្ឋមានច្រើន ដូចជា រដ្ឋទោល ដូចជាកម្ពុជា រដ្ឋសហព័ន្ធ ដូចជាសហរដ្ឋអាមេរិក និងការគ្រប់គ្រងដែនដីរួមគ្នាដោយមហាអំណាចពីរបី។",
+          "ការទទួលស្គាល់គឺជាលំនាំដោយស្ម័គ្រចិត្ត ហើយគ្មានច្បាប់អន្តរជាតិណាបង្ខំឱ្យរដ្ឋមួយទទួលស្គាល់រដ្ឋមួយទៀតឡើយ។",
+          "ការទទួលស្គាល់តាមហេតុការណ៍ គឺដោយស្ងាត់ស្ងៀម គ្មានទំនាក់ទំនងផ្លូវការទូត ចំណែកការទទួលស្គាល់តាមផ្លូវច្បាប់ តម្រូវឱ្យមានការផ្លាស់ប្តូរឯកអគ្គរដ្ឋទូត និងមានលក្ខណៈយូរអង្វែង។",
+          "ទ្រឹស្តី Estrada ទទួលស្គាល់តែរដ្ឋាភិបាល ចំណែកទ្រឹស្តី Tobar ទទួលស្គាល់តែរដ្ឋាភិបាលដែលចូលកាន់អំណាចដោយស្របច្បាប់។"
+        ],
+        "en": [
+          "States can be unitary, like Cambodia, federal, like the United States, or a condominium ruled jointly by great powers.",
+          "Recognition is a voluntary act; no rule of international law forces one state to recognise another.",
+          "De facto recognition is tacit, with no official diplomatic relations, while de jure recognition requires exchanging ambassadors and is lasting.",
+          "The Estrada Doctrine recognises only governments, whatever their form, while the Tobar Doctrine recognises only those that came to power lawfully."
+        ]
+      }
     }
   ]
 }

@@ -180,8 +180,18 @@ async function waitFor(fn, ms, step) {
   log('library.html');
   f = await open('library.html'); w = f.contentWindow; d = f.contentDocument;
   check('lists 3 sources', d.querySelectorAll('#lib-list .lib-src').length === 3);
+  /* the Library now opens each document as real PDF pages; the recovered text
+     is one tab away, so the contract is: PDF by default, text still readable */
+  const libFrame = d.getElementById('pdf-frame');
+  check('textbook opens as the real PDF', !!libFrame && /#page=1/.test(libFrame.getAttribute('src') || ''),
+        libFrame ? libFrame.getAttribute('src').split('/').pop() : 'no frame');
+  d.querySelector('[data-view="text"]').click();
+  await sleep(400);
   const pageText = d.querySelector('.reader-page');
-  check('textbook opens as text', !!pageText, 'page chars=' + (pageText ? pageText.textContent.length : 0));
+  check('recovered text still readable', !!pageText && pageText.textContent.length > 40,
+        'page chars=' + (pageText ? pageText.textContent.length : 0));
+  d.querySelector('[data-view="pdf"]').click();
+  await sleep(400);
   d.getElementById('next-pg').click();
   await sleep(200);
   check('pager advances', /2/.test((d.querySelector('.pager') ? d.querySelector('.pager').parentElement : d.querySelector('.viewer-body')).textContent) && /205/.test(d.querySelector('.viewer-body').textContent));

@@ -47,8 +47,10 @@ window.ROBOCL_CONFIG = {
 
 window.ROBOCL_SHEET = {
   url: 'https://script.google.com/macros/s/AKfycbwzfS6SnL59jVnPTkaKbYngi2aa1WXmGCNOsiPz8QWtu5boEwsZiRrZ6LAUmWco6LcWLQ/exec',
-  /* optional shared token — keep the same value in the Apps Script (TOKEN) */
-  token: ''
+  /* shared token — the same value is in tools/google-sheet-collector.gs (TOKEN).
+     It is visible in this file, so it only filters blind junk posts; it is NOT a
+     password and is not a substitute for the Apps Script's own checks. */
+  token: 'robo-28ac899bc782fc37ad93'
 };
 /* verified working 2026-09-11: GET returns "RoboCL collector is running" and an
    anonymous POST is accepted (302 → echo), which appends a row to the sheet. */

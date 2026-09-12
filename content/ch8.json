@@ -331,7 +331,21 @@
           },
           "page": 148
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "កងកម្លាំងរក្សាសន្តិភាពអាចចូលប្រទេសមួយបាន លុះត្រាតែប្រទេសនោះយល់ព្រម ហើយវាក៏អាចសុំឱ្យពួកគេចាកចេញវិញបានដែរ។",
+          "នៅឆ្នាំ១៩៩២ អ.ស.ប បានកំណត់តួនាទីបួន គឺ ការពង្រឹងសន្តិភាព ការបង្កើតសន្តិភាព ការថែរក្សាសន្តិភាព និងការកសាងក្រោយជម្លោះ។",
+          "ការថែរក្សាសន្តិភាពសព្វថ្ងៃឈរលើគោលការណ៍បី គឺ ការយល់ព្រមពីភាគី ភាពមិនលម្អៀង និងការមិនប្រើកម្លាំង លើកលែងករណីការពារខ្លួន។",
+          "អ៊ុនតាក់មានភារកិច្ចត្រួតពិនិត្យការឈប់បាញ់ ដកអាវុធពីគ្រប់ភាគី នាំជនភៀសខ្លួនត្រឡប់មកវិញ និងរៀបចំការបោះឆ្នោតដោយសេរី។"
+        ],
+        "en": [
+          "Peacekeepers may enter a country only if that country agrees, and it can also ask them to leave.",
+          "In 1992 the UN set out four roles: peace enforcement, peacemaking, peacekeeping and post-conflict peacebuilding.",
+          "Peacekeeping today rests on three rules: consent of the parties, impartiality, and force only in self-defence.",
+          "UNTAC watched the ceasefire, disarmed all parties, brought refugees home and organized free elections."
+        ]
+      }
     },
     {
       "id": "ch8-l2",
@@ -650,7 +664,21 @@
           },
           "page": 154
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "សិទ្ធិមនុស្សជាសសរស្តម្ភមួយក្នុងចំណោមសសរស្តម្ភបីរបស់ អ.ស.ប រួមជាមួយសន្តិសុខ និងការអភិវឌ្ឍន៍។",
+          "សិទ្ធិមនុស្សកើតឡើងបន្តិចម្តងៗ ចាប់ពីម៉ាកណា ខាតា ឆ្នាំ១២១៥ ដល់សេចក្តីប្រកាសជាសកលស្តីពីសិទ្ធិមនុស្ស ឆ្នាំ១៩៤៨។",
+          "កម្ពុជាបានផ្តល់សច្ចាប័នលើអនុសញ្ញាស្តីពីការធ្វើទារុណកម្ម សិទ្ធិសុីវិល និងនយោបាយ ស្ត្រី និងកុមារ។",
+          "នៅឆ្នាំ២០១៥ ពិភពលោកបានដាក់គោលដៅអភិវឌ្ឍដោយចីរភាព១៧ សម្រាប់ឆ្នាំ២០៣០ ហើយកម្ពុជាបន្ថែមគោលដៅដោះមីនជាគោលដៅទី១៨។"
+        ],
+        "en": [
+          "Human rights is one of the UN's three pillars, along with security and development.",
+          "Rights grew over centuries, from Magna Carta in 1215 to the Universal Declaration of Human Rights in 1948.",
+          "Cambodia ratified treaties on torture, civil and political rights, women and children, and hosts a UN rights office.",
+          "In 2015 the world set 17 Sustainable Development Goals for 2030, and Cambodia added mine clearance as goal 18."
+        ]
+      }
     },
     {
       "id": "ch8-l3",
@@ -943,7 +971,21 @@
           },
           "page": 174
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "អ៊ុនតាក់កាន់អំណាចចាំបាច់ដើម្បីអនុវត្តកិច្ចព្រមព្រៀង រីឯ អេសអិនសុី ដែលមានសម្តេចនរោត្តម សីហនុ ជាប្រធាន ផ្តល់មតិណែនាំ។",
+          "ក្រសួងសំខាន់ៗ ដូចជាការបរទេស ការពារជាតិ ហិរញ្ញវត្ថុ និងសន្តិសុខសាធារណៈ ត្រូវដាក់ក្រោមការត្រួតពិនិត្យផ្ទាល់របស់អ៊ុនតាក់។",
+          "ផ្នែកយោធា អ៊ុនតាក់ត្រួតពិនិត្យការឈប់បាញ់ ដកអាវុធ បោសសំអាតមីន និងរំសាយកងកម្លាំងយ៉ាងតិច៧០ភាគរយ។",
+          "ការបោះឆ្នោតជ្រើសសមាជិកសភាធម្មនុញ្ញ១២០នាក់ ដោយសន្លឹកឆ្នោតសំងាត់ ហើយរដ្ឋធម្មនុញ្ញថ្មីត្រូវអនុម័តដោយសម្លេងពីរភាគបី។"
+        ],
+        "en": [
+          "UNTAC held the powers needed to carry out the agreement, while the SNC under Norodom Sihanouk advised it.",
+          "Key ministries such as foreign affairs, defence, finance and public security came under UNTAC's direct control.",
+          "In the military field UNTAC monitored the ceasefire, collected weapons, cleared mines and demobilized at least 70% of forces.",
+          "The election chose a 120-member constituent assembly by secret ballot, and the new constitution needed two-thirds support."
+        ]
+      }
     },
     {
       "id": "ch8-l4",
@@ -1236,7 +1278,21 @@
           },
           "page": 188
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "កិច្ចព្រមព្រៀងទី១ គឺជាដំណោះស្រាយនយោបាយរួម ដោយផ្អែកលើឯកសារក្របខ័ណ្ឌ ថ្ងៃទី២៧ ខែសីហា ឆ្នាំ១៩៩០។",
+          "វាស្វាគមន៍ក្រុមប្រឹក្សាជាតិជាន់ខ្ពស់ក្រោមប្រធានសម្តេចនរោត្តម សីហនុ និងស្នើឱ្យក្រុមប្រឹក្សាសន្តិសុខបង្កើតអ៊ុនតាក់។",
+          "កិច្ចព្រមព្រៀងទី២ សន្យាថែរក្សាអធិបតេយ្យភាព ឯករាជ្យ បូរណភាពដែនដី អព្យាក្រឹតភាព និងឯកភាពជាតិរបស់កម្ពុជា។",
+          "កិច្ចព្រមព្រៀងទី៣ ស្តីពីការកសាងប្រទេសឡើងវិញ ដោយប្រជាជនកម្ពុជាទទួលខុសត្រូវជាសំខាន់ និងមានគណៈកម្មាធិការ ICORC សម្របសម្រួលជំនួយ។"
+        ],
+        "en": [
+          "Agreement 1 is the comprehensive political settlement of the Cambodia conflict, built on the framework document of 27 August 1990.",
+          "It welcomed the Supreme National Council under President Norodom Sihanouk and asked the Security Council to create UNTAC.",
+          "Agreement 2 promises to maintain Cambodia's sovereignty, independence, territorial integrity, neutrality and national unity.",
+          "Agreement 3 covers reconstruction: Cambodians hold primary responsibility, and an international committee, ICORC, coordinates aid."
+        ]
+      }
     }
   ]
 }

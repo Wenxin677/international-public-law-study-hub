@@ -44,20 +44,21 @@
         <div class="field">
           <label for="username" data-t="auth.username"></label>
           <input class="input" id="username" name="username" type="text" autocomplete="username"
+                 autocapitalize="none" autocorrect="off" spellcheck="false"
                  minlength="3" maxlength="20" required data-t-ph="auth.username.ph">
         </div>
         <div class="field">
           <label for="password" data-t="auth.password"></label>
           <div class="pw-wrap">
             <input class="input" id="password" name="password" type="password" autocomplete="current-password"
-                   minlength="8" required data-t-ph="auth.password.ph">
+                   minlength="8" maxlength="128" required data-t-ph="auth.password.ph">
             <button type="button" class="icon-btn eye" id="pw-eye" data-t-title="auth.showpass" aria-label="show">👁</button>
           </div>
           <div class="strength" id="pw-strength" hidden><i id="pw-bar"></i></div>
         </div>
         <div class="field" id="field-confirm" hidden>
           <label for="confirm" data-t="auth.confirm"></label>
-          <input class="input" id="confirm" type="password" autocomplete="new-password" minlength="8">
+          <input class="input" id="confirm" type="password" autocomplete="new-password" minlength="8" maxlength="128">
         </div>
         <label class="check" style="margin-bottom:14px">
           <input type="checkbox" id="remember" checked><span data-t="auth.remember"></span>

@@ -47,6 +47,7 @@
     const done = !!p.lessons[l.id];
     const objectives = (l.objectives && l.objectives[L]) || [];
     const points = (l.keyPoints && l.keyPoints[L]) || [];
+    const plain = (l.plain && l.plain[L]) || [];
     const quotes = (l.quotes || []).filter(Boolean);
     const terms = (l.terms || []).filter(function (x) { return x && x.km; });
     const idx = D.lessons.indexOf(l);
@@ -64,6 +65,16 @@
       '<button class="btn sm" id="mark-btn">' + (done ? '✓ ' + esc(t('learn.marked')) : '＋ ' + esc(t('learn.mark'))) + '</button>' +
       '<button class="btn sm" id="print-btn">🖨 ' + esc(t('learn.print')) + '</button>' +
       '</div></div>' +
+
+      /* the plain-language explanation comes FIRST: the quick read, then the detail */
+      (plain.length ? '<div class="inshort">' +
+        '<div class="inshort-head"><span class="inshort-badge" aria-hidden="true">💡</span><div>' +
+        '<h2>' + esc(t('learn.inshort')) + '</h2>' +
+        '<div class="small faint">' + esc(t('learn.inshort.sub')) + '</div></div></div>' +
+        '<ul class="inshort-list">' + plain.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' +
+        '<a class="btn sm" href="teacher.html?q=' + encodeURIComponent(t('learn.inshort.ask') + I.pick(l.title)) + '">🤖 ' +
+        esc(t('learn.explainsimple')) + '</a>' +
+        '</div>' : '') +
 
       '<div class="lesson-block"><h2>' + esc(t('learn.objectives')) + '</h2>' +
       (objectives.length ? '<ul class="point-list">' + objectives.map(function (o) { return '<li>' + esc(o) + '</li>'; }).join('') + '</ul>'

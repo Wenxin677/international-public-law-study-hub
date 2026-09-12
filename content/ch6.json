@@ -305,7 +305,21 @@
           },
           "page": 110
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "អនុសញ្ញាមានន័យទូទៅដូចសន្ធិសញ្ញា ប៉ុន្តែត្រូវការរដ្ឋជាច្រើននៃសហគមន៍អន្តរជាតិចូលរួម។",
+          "រដ្ឋពីរ ឬបី មិនអាចបង្កើតអនុសញ្ញាបានទេ ព្រោះប្រធានបទត្រូវជាបញ្ហារួមរបស់ពិភពលោក។",
+          "កិច្ចព្រមព្រៀងមានលក្ខណៈផ្លូវការតិចជាងសន្ធិសញ្ញា ហើយពិធីសាមានបីប្រភេទ៖ ចុះហត្ថលេខា ជម្រើស និងធ្វើវិសោធនកម្ម។",
+          "អនុសញ្ញាត្រូវរដ្ឋអធិបតេយ្យជាច្រើនរៀបចំ ហើយអនុស្សារណៈយោគយល់គ្នាជាលិខិតទោលដែលបត់បែន។"
+        ],
+        "en": [
+          "A convention has the same ordinary meaning as a treaty, but it needs many states of the whole international community.",
+          "Two or three states cannot create a convention, because its subject must be a common problem of the world.",
+          "An agreement is less formal than a treaty, and protocols come in three kinds: signature, optional and amendment.",
+          "Many sovereign states draw up conventions, and a memorandum of understanding is a single, flexible document."
+        ]
+      }
     },
     {
       "id": "ch6-l2",
@@ -624,7 +638,21 @@
           },
           "page": 115
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "សេចក្តីប្រកាសត្រូវគេប្រើសម្រាប់លិខិតូបករណ៍ច្រើនបែប ប៉ុន្តែមិនមែនគ្រប់សេចក្តីប្រកាសចងភ្ជាប់កាតព្វកិច្ចទេ។",
+          "សេចក្តីប្រកាសគ្រាន់តែបង្ហាញគោលបំណងរបស់ភាគី ប៉ុន្តែខ្លះដូចជាឆ្នាំ១៩៤៨ ស្តីពីសិទ្ធិមនុស្ស អាចមានឥទ្ធិពលលើច្បាប់អន្តរជាតិតាមទម្លាប់។",
+          "សេចក្តីថ្លែងការណ៍ឆ្នាំ១៩៧០ ស្តីពីទំនាក់ទំនងមិត្តភាព មានគោលការណ៍ដូចជា មិនប្រើកម្លាំង សន្តិវិធី មិនជ្រៀតជ្រែក សមភាពអធិបតេយ្យ និងសិទ្ធិស្វ័យសម្រេច។",
+          "សេចក្តីប្រកាសឆ្នាំ១៩៨១ ហាមរដ្ឋជ្រៀតជ្រែកកិច្ចការរដ្ឋផ្សេង ហើយគោលការណ៍ធម្មនុញ្ញជាគោលការណ៍គ្រឹះនៃច្បាប់អន្តរជាតិ។"
+        ],
+        "en": [
+          "A declaration is used for many kinds of international instrument, but not every declaration creates binding obligations.",
+          "A declaration makes known a party's intention, but some, like the 1948 human rights declaration, influence customary law.",
+          "The 1970 Friendly Relations declaration lists principles like no use of force, non-intervention, sovereign equality and self-determination.",
+          "The 1981 declaration forbids interference in another state's affairs, and its Charter principles are fundamental to international law."
+        ]
+      }
     },
     {
       "id": "ch6-l3",
@@ -943,7 +971,21 @@
           },
           "page": 128
         }
-      ]
+      ],
+      "plain": {
+        "km": [
+          "អ្នកច្បាប់អុីតាលី Anzilotti យល់ថា សុពលភាពសន្ធិសញ្ញាយោងលើគោលការណ៍ Pacta sunt servanda។",
+          "តាមគោលការណ៍នេះ រដ្ឋចងភ្ជាប់ទាំងស្រុងនឹងកាតព្វកិច្ចក្នុងសន្ធិសញ្ញាដែលខ្លួនបានចុះហត្ថលេខា ហើយមូលដ្ឋានបន្ទាប់គឺអនុសញ្ញាទីក្រុងវីយ៉េនឆ្នាំ១៩៦៩។",
+          "សន្ធិសញ្ញាកិច្ចសន្យាកំណត់ស្ថានភាពពិសេស រីឯសន្ធិសញ្ញាច្បាប់លើកគោលការណ៍ទូទៅ ដូចជាធម្មនុញ្ញសហប្រជាជាតិ។",
+          "មានតែរដ្ឋទេដែលអាចចុះហត្ថលេខា ហើយប្រមុខរដ្ឋ ប្រមុខរដ្ឋាភិបាល និងរដ្ឋមន្ត្រីការបរទេសមិនចាំបាច់ផ្តល់សិទ្ធិ។"
+        ],
+        "en": [
+          "Anzilotti, an Italian jurist, held a treaty is valid under the principle Pacta sunt servanda: agreements must be kept.",
+          "A state is fully bound by a treaty it signed, and the 1969 Vienna Convention is the other basis.",
+          "A treaty-contract addresses a particular situation; a law-making treaty states general principles, like the UN Charter.",
+          "Only states can sign a treaty; heads of State, heads of government and foreign ministers need no full powers."
+        ]
+      }
     }
   ]
 }

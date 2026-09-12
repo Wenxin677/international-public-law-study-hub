@@ -11,3 +11,6 @@ __pycache__/
 *.pyc
 .DS_Store
 node_modules/
+
+# working notes for the lesson explainers (merged into content/*.json)
+content/plain/

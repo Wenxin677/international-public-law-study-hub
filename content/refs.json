@@ -6,7 +6,10 @@
       "km": "ច្បាប់ស្តីពីការបង្កើតតុលាការពិសេសនៅក្នុងតុលាការកម្ពុជា (ច្បាប់ ECCC)",
       "en": "Law on the Establishment of the Extraordinary Chambers in the Courts of Cambodia (ECCC Law)"
     },
-    "pages": { "from": 1, "to": 20 },
+    "pages": {
+      "from": 1,
+      "to": 20
+    },
     "summary": {
       "km": "ឯកសារយោងនេះគឺជាច្បាប់ស្តីពីការបង្កើតតុលាការពិសេសនៅក្នុងតុលាការកម្ពុជា ដើម្បីនាំយកទៅកាត់ទោសមេដឹកនាំជាន់ខ្ពស់នៃរបបកម្ពុជាប្រជាធិបតេយ្យ និងអ្នកដែលទទួលខុសត្រូវខ្ពស់បំផុតចំពោះឧក្រិដ្ឋកម្ម និងការបំពានធ្ងន់ធ្ងរលើច្បាប់ព្រហ្មទណ្ឌកម្ពុជា នីតិមនុស្សធម៌អន្តរជាតិ និងអនុសញ្ញាអន្តរជាតិ ដែលត្រូវបានប្រព្រឹត្តក្នុងអំឡុងពេលពីថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥ ដល់ថ្ងៃទី៦ ខែមករា ឆ្នាំ១៩៧៩។ ច្បាប់នេះកំណត់យុត្តាធិការលើឧក្រិដ្ឋកម្ម រចនាសម្ព័ន្ធតុលាការ នីតិវិធី សិទ្ធិរបស់ចុងចោទ ទោស និងការលើកលែងទោស ព្រមទាំងកិច្ចព្រមព្រៀងរវាងកម្ពុជា និងអង្គការសហប្រជាជាតិ។ (អត្ថបទដើមជាភាសាអង់គ្លេស។)",
       "en": "This reference document is the Law on the Establishment of the Extraordinary Chambers in the Courts of Cambodia, adopted to bring to trial senior leaders of Democratic Kampuchea and those most responsible for crimes and serious violations of Cambodian penal law, international humanitarian law and custom, and international conventions recognized by Cambodia, committed from 17 April 1975 to 6 January 1979. It sets out the Chambers' jurisdiction, their composition, procedure, the rights of the accused, penalties and pardons, and the agreement with the United Nations."
@@ -19,7 +22,10 @@
           "km": "តុលាការពិសេស៖ រចនាសម្ព័ន្ធ និងយុត្តាធិការ",
           "en": "ECCC: structure and jurisdiction"
         },
-        "pages": { "from": 1, "to": 8 },
+        "pages": {
+          "from": 1,
+          "to": 8
+        },
         "objectives": {
           "km": [
             "ពន្យល់ពីយុត្តាធិការរបស់តុលាការពិសេសលើអំពើដែលបានប្រព្រឹត្តពីឆ្នាំ១៩៧៥ ដល់ឆ្នាំ១៩៧៩",
@@ -179,8 +185,18 @@
               "en": "By how many years is the statute of limitations extended for the crimes within the Chambers' jurisdiction?"
             },
             "options": {
-              "km": ["១០ ឆ្នាំ", "២០ ឆ្នាំ", "៣០ ឆ្នាំ", "៥០ ឆ្នាំ"],
-              "en": ["10 years", "20 years", "30 years", "50 years"]
+              "km": [
+                "១០ ឆ្នាំ",
+                "២០ ឆ្នាំ",
+                "៣០ ឆ្នាំ",
+                "៥០ ឆ្នាំ"
+              ],
+              "en": [
+                "10 years",
+                "20 years",
+                "30 years",
+                "50 years"
+              ]
             },
             "answer": 2,
             "explain": {
@@ -267,7 +283,21 @@
             },
             "page": 8
           }
-        ]
+        ],
+        "plain": {
+          "km": [
+            "តុលាការពិសេសត្រូវបានបង្កើតឡើងនៅក្នុងរចនាសម្ព័ន្ធតុលាការដែលមានស្រាប់ គឺសាលាជម្រះករណីដើម និងតុលាការកំពូល។",
+            "តុលាការនេះមានយុត្តាធិការលើអំពើដែលប្រព្រឹត្តពីថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥ ដល់ថ្ងៃទី៦ ខែមករា ឆ្នាំ១៩៧៩ ហើយអាណត្តិកំណត់កាត់ទោសត្រូវបានបន្ថែម ៣០ ឆ្នាំ។",
+            "ឧក្រិដ្ឋកម្មក្នុងយុត្តាធិការមាន ឧក្រិដ្ឋកម្មក្នុងក្រមព្រហ្មទណ្ឌឆ្នាំ១៩៥៦ ឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍ ឧក្រិដ្ឋកម្មប្រឆាំងមនុស្សជាតិ ការបំពានធ្ងន់ធ្ងរលើអនុសញ្ញាហ្សឺណែវ ការបំផ្លាញទ្រព្យសម្បត្តិវប្បធម៌ និងឧក្រិដ្ឋកម្មប្រឆាំងបុគ្គលដែលមានការការពារអន្តរជាតិ។",
+            "អង្គជំនុំជម្រះជាន់ទីមួយមានចៅក្រមជំនាញប្រាំរូប បីរូបជាចៅក្រមកម្ពុជា និងពីររូបជាចៅក្រមបរទេស រីឯអង្គជំនុំជម្រះកំពូលមានប្រាំពីររូប ហើយជាតុលាការចុងក្រោយ។"
+          ],
+          "en": [
+            "The Extraordinary Chambers sit inside Cambodia's existing courts, the trial court and the supreme court.",
+            "They cover acts from 17 April 1975 to 6 January 1979, and the time limit is extended by 30 years.",
+            "Their crimes include the 1956 Penal Code, genocide, crimes against humanity, Geneva grave breaches, cultural property and protected persons.",
+            "The Trial Chamber has five judges (three Cambodian, two foreign); the Supreme Court Chamber has seven and hears final appeals."
+          ]
+        }
       },
       {
         "id": "ref-eccc-l2",
@@ -275,7 +305,10 @@
           "km": "តុលាការពិសេស៖ នីតិវិធី សិទ្ធិរបស់ចុងចោទ និងតួនាទីនៃច្បាប់អន្តរជាតិ",
           "en": "ECCC: procedure, rights of the accused and the role of international law"
         },
-        "pages": { "from": 9, "to": 20 },
+        "pages": {
+          "from": 9,
+          "to": 20
+        },
         "objectives": {
           "km": [
             "ពន្យល់ពីការស៊ើបអង្កេត និងការចោទប្រកាន់នៅតុលាការពិសេស",
@@ -559,7 +592,21 @@
             },
             "page": 19
           }
-        ]
+        ],
+        "plain": {
+          "km": [
+            "ការស៊ើបអង្កេតជាការទទួលខុសត្រូវរួមរបស់ចៅក្រមស៊ើបអង្កេតរួមពីររូប ម្នាក់ជាជនជាតិកម្ពុជា និងម្នាក់ជាជនបរទេស។",
+            "ជនសង្ស័យមានសិទ្ធិជ្រើសរើសមេធាវីដោយខ្លួនឯង ទទួលជំនួយផ្នែកច្បាប់ដោយឥតគិតថ្លៃ បើគ្មានលទ្ធភាពបង់ថ្លៃ និងមានសិទ្ធិបកប្រែភាសា។",
+            "ការជំនុំជម្រះត្រូវមានភាពយុត្តិធម៌ និងរហ័ស ដោយគោរពសិទ្ធិចុងចោទ ការពារជនរងគ្រោះ និងសាក្សី ហើយចុងចោទត្រូវសន្មតថាជាអ្នកបរិសុទ្ធរហូតដល់មានសាលក្រមចុងក្រោយ។",
+            "ទោសកំណត់ត្រឹមការជាប់ពន្ធនាគារពីប្រាំឆ្នាំដល់អស់មួយជីវិត រាជរដ្ឋាភិបាលកម្ពុជាមិនត្រូវសុំការលើកលែងទោស ហើយកិច្ចព្រមព្រៀងឆ្នាំ២០០៣ ជាមួយអង្គការសហប្រជាជាតិ មានអនុភាពជាច្បាប់ក្នុងប្រទេសកម្ពុជា។"
+          ],
+          "en": [
+            "Two Co-Investigating Judges, one Cambodian and one foreign, share responsibility for investigations.",
+            "Suspects may choose their own lawyer, get free legal help if they cannot pay, and get interpretation.",
+            "Trials must be fair and quick, respecting the accused's rights and protecting victims and witnesses.",
+            "Penalties are prison from five years to life, Cambodia may not ask amnesty, and the 2003 UN Agreement is law."
+          ]
+        }
       }
     ]
   },
@@ -570,7 +617,10 @@
       "km": "អនុសញ្ញាប៉ារីសស្តីពីការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម",
       "en": "Paris Convention for the Protection of Industrial Property"
     },
-    "pages": { "from": 1, "to": 20 },
+    "pages": {
+      "from": 1,
+      "to": 20
+    },
     "summary": {
       "km": "ឯកសារយោងនេះគឺជាអនុសញ្ញាប៉ារីសស្តីពីការការពារទ្រព្យសម្បត្តិឧស្សាហកម្ម ចុះថ្ងៃទី២០ ខែមីនា ឆ្នាំ១៨៨៣ ដែលត្រូវបានកែសម្រួលនៅប្រ៊ុចសែល វ៉ាស៊ីនតោន ទីក្រុងឡាអេ ឡុងដ៍ លីសបោន និងស្តុកខូម និងធ្វើវិសោធនកម្មថ្ងៃទី២៨ ខែកញ្ញា ឆ្នាំ១៩៧៩។ អនុសញ្ញាបង្កើតសហភាពមួយសម្រាប់ការការពារប៉ាតង់ ម៉ូដែលឧបយោគ រចនាបទឧស្សាហកម្ម ម៉ាកពាណិជ្ជកម្ម និងការទប់ស្កាត់ការប្រកួតប្រជែងមិនស្មោះត្រង់។ (អត្ថបទដើមជាភាសាអង់គ្លេស។)",
       "en": "This reference document is the Paris Convention for the Protection of Industrial Property of 20 March 1883, as revised at Brussels, Washington, The Hague, London, Lisbon and Stockholm, and as amended on 28 September 1979. It establishes a Union for the protection of patents, utility models, industrial designs, trademarks and trade names, and for the repression of unfair competition, and it organises the administrative organs of the Union."
@@ -583,7 +633,10 @@
           "km": "អនុសញ្ញាប៉ារីស៖ វិសាលភាព ការប្រព្រឹត្តបែបជាតិ និងសិទ្ធិអាទិភាព",
           "en": "Paris Convention: scope, national treatment and priority"
         },
-        "pages": { "from": 1, "to": 12 },
+        "pages": {
+          "from": 1,
+          "to": 12
+        },
         "objectives": {
           "km": [
             "ពន្យល់ពីវិសាលភាពនៃទ្រព្យសម្បត្តិឧស្សាហកម្មតាមមាតិកា ១",
@@ -867,7 +920,21 @@
             },
             "page": 10
           }
-        ]
+        ],
+        "plain": {
+          "km": [
+            "ប្រទេសដែលអនុសញ្ញានេះអនុវត្ត បង្កើតជាសហភាពមួយសម្រាប់ការការពារ ប៉ាតង់ ម៉ូដែលឧបយោគ រចនាបទឧស្សាហកម្ម ម៉ាកពាណិជ្ជកម្ម ឈ្មោះពាណិជ្ជកម្ម និងការទប់ស្កាត់ការប្រកួតប្រជែងមិនស្មោះត្រង់។",
+            "តាមគោលការណ៍ប្រព្រឹត្តបែបជាតិ ពលរដ្ឋនៃប្រទេសសមាជិក ទទួលបានការការពារដូចពលរដ្ឋខ្លួន ដោយមិនអាចទាមទារឲ្យមានលំនៅ ឬស្ថាប័នបានទេ។",
+            "ជនក្រៅសហភាពដែលមានលំនៅ ឬស្ថាប័នឧស្សាហកម្ម ឬពាណិជ្ជកម្មពិតប្រាកដនៅក្នុងប្រទេសសមាជិក ត្រូវទទួលការប្រព្រឹត្តដូចពលរដ្ឋនៃប្រទេសសមាជិក។",
+            "សិទ្ធិអាទិភាពមានរយៈពេល ១២ ខែសម្រាប់ប៉ាតង់ និងម៉ូដែលឧបយោគ និង ៦ ខែសម្រាប់រចនាបទឧស្សាហកម្ម និងម៉ាកពាណិជ្ជកម្ម។"
+          ],
+          "en": [
+            "The Convention countries form a Union protecting patents, utility models, designs, trademarks, trade names and unfair competition.",
+            "Under national treatment, Union nationals get the protection locals enjoy, with no domicile requirement.",
+            "Non-Union nationals domiciled or doing real business in a Union country are treated as Union nationals.",
+            "Priority runs twelve months for patents and utility models and six months for designs and trademarks."
+          ]
+        }
       },
       {
         "id": "ref-paris-l2",
@@ -875,7 +942,10 @@
           "km": "អនុសញ្ញាប៉ារីស៖ ការគ្រប់គ្រង ការកែសម្រួល និងវិធានការដាក់ទណ្ឌកម្ម",
           "en": "Paris Convention: administration, revision and sanctions"
         },
-        "pages": { "from": 13, "to": 20 },
+        "pages": {
+          "from": 13,
+          "to": 20
+        },
         "objectives": {
           "km": [
             "ពន្យល់ពីតួនាទីរបស់មហាសន្និបាត និងគណៈកម្មាធិការប្រតិបត្តិនៃសហភាព",
@@ -1139,8 +1209,18 @@
               "en": "Under Article 29(1)(c), which text prevails in case of differences of opinion on interpretation?"
             },
             "options": {
-              "km": ["អត្ថបទភាសាអង់គ្លេស", "អត្ថបទភាសាបារាំង", "អត្ថបទភាសាអាល្លឺម៉ង់", "អត្ថបទភាសាអេស្ប៉ាញ"],
-              "en": ["The English text", "The French text", "The German text", "The Spanish text"]
+              "km": [
+                "អត្ថបទភាសាអង់គ្លេស",
+                "អត្ថបទភាសាបារាំង",
+                "អត្ថបទភាសាអាល្លឺម៉ង់",
+                "អត្ថបទភាសាអេស្ប៉ាញ"
+              ],
+              "en": [
+                "The English text",
+                "The French text",
+                "The German text",
+                "The Spanish text"
+              ]
             },
             "answer": 1,
             "explain": {
@@ -1149,7 +1229,21 @@
             },
             "page": 20
           }
-        ]
+        ],
+        "plain": {
+          "km": [
+            "សេចក្តីសម្រេចរបស់សហភាព ធ្វើឡើងដោយមហាសន្និបាត ដែលរួមមានប្រទេសចងខ្លួនដោយមាតិកា ១៣ ដល់ ១៧ ហើយប្រទេសមួយមានសំឡេងមួយ។",
+            "គណៈកម្មាធិការប្រតិបត្តិមានសមាជិកស្មើមួយភាគបួននៃចំនួនប្រទេសសមាជិកមហាសន្និបាត ហើយការិយាល័យអន្តរជាតិបំពេញកិច្ចការរដ្ឋបាល។",
+            "ការធ្វើវិសោធនកម្មត្រូវការសំឡេងបីភាគបួននៃសំឡេងដែលបានបោះ ហើយបួនភាគប្រាំសម្រាប់មាតិកា ១៣។",
+            "វិវាទអំពីការបកស្រាយ ឬការអនុវត្តអនុសញ្ញា អាចនាំទៅតុលាការយុត្តិធម៌អន្តរជាតិបាន ហើយការបដិសេធចោលមានប្រសិទ្ធភាពក្រោយមួយឆ្នាំ។"
+          ],
+          "en": [
+            "The Assembly consists of the Union countries bound by Articles 13 to 17, each country having one vote.",
+            "The Executive Committee has one-fourth as many countries as the Assembly, and the International Bureau runs administration.",
+            "Amendments need three-fourths of the votes cast, and four-fifths for Article 13.",
+            "Disputes may go to the International Court of Justice, and leaving the Convention takes effect one year after notice."
+          ]
+        }
       }
     ]
   }

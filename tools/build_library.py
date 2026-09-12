@@ -43,6 +43,11 @@ def clean(text):
 sources = []
 
 # ---------------------------------------------------------------- the textbook
+# The owner chose to publish the textbook PDF as well, so the Library can show
+# the real pages. It is credited to its author, and NOTICE.md invites a rights
+# holder to ask for its removal. File name is kept URL-clean (no spaces).
+TB_PDF_SRC = ROOT / "source" / "11 International Public Law Textbook.pdf"
+TB_PDF_NAME = "11_International_Public_Law_Textbook.pdf"
 raw = json.loads((ROOT / "extracted" / "textbook_decoded.json").read_text(encoding="utf-8"))
 tb_pages = []
 for k in sorted(raw.keys(), key=lambda x: int(x)):
@@ -73,11 +78,15 @@ sources.append({
     "author": {"km": "ឡាយ រត្តនា", "en": "Lay Rottana"},
     "year": "2021",
     "note": {
-        "km": "សៀវភៅសិក្សាដើម (ភាសាខ្មែរ) — អត្ថបទត្រូវបានសង្គ្រោះចេញពីឯកសារ PDF ដើម។",
-        "en": "The original Khmer textbook. Text recovered from the source PDF page by page."
+        "km": "សៀវភៅសិក្សាដើម (ភាសាខ្មែរ) — អានជាអត្ថបទ ឬមើលទំព័រ PDF ដើម។",
+        "en": "The original Khmer textbook — read the recovered text, or view the real PDF pages."
+    },
+    "rights": {
+        "km": "សៀវភៅនេះជាកម្មសិទ្ធិរបស់អ្នកនិពន្ធ។ រួមបញ្ចូលសម្រាប់ការសិក្សាប៉ុណ្ណោះ — បើអ្នកកាន់សិទ្ធិសុំដក យើងនឹងដកចេញភ្លាម។",
+        "en": "Copyright belongs to the author. Included for study only — a rights holder can ask us to remove it and we will."
     },
     "pages": tb_pages,
-    "pdf": None,
+    "pdf": "library/" + TB_PDF_NAME if (ROOT / "source" / TB_PDF_NAME).exists() or (ROOT / "source" / "11 International Public Law Textbook.pdf").exists() else None,
     "images": []
 })
 
@@ -92,6 +101,11 @@ REFS = [
 
 lib_dir = DOCS / "library"
 lib_dir.mkdir(parents=True, exist_ok=True)
+
+# publish the textbook PDF too, under a URL-clean file name
+if TB_PDF_SRC.exists():
+    shutil.copy2(TB_PDF_SRC, lib_dir / TB_PDF_NAME)
+    print(f"copied {TB_PDF_NAME} -> docs/library/ ({(lib_dir / TB_PDF_NAME).stat().st_size/1024/1024:.1f} MB)")
 
 for sid, jf, title, author, cite, year, pdfname in REFS:
     j = json.loads((ROOT / "extracted" / jf).read_text(encoding="utf-8"))

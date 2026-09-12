@@ -158,6 +158,7 @@
 }
 .stat-big { font-family: 'Space Grotesk', 'Poppins', sans-serif; font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; line-height: 1; }
 .stat-big.grad { background: var(--g-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stat-big.muted { color: var(--muted); font-size: clamp(1.7rem, 4.6vw, 2.3rem); }
 
 /* the one card that should catch the eye: gradient ring + soft glow */
 .sec-card.hero {

@@ -51,7 +51,7 @@
     if (stat) {
       stat.innerHTML =
         '<h2 class="sec-head">' + esc(t('dash.avg')) + '</h2>' +
-        '<div class="stat-big grad">' + (bestN ? avg + '%' : '—') + '</div>' +
+        '<div class="stat-big' + (bestN ? ' grad' : ' muted') + '">' + (bestN ? avg + '%' : '—') + '</div>' +
         '<div class="muted small" style="margin-top:6px">' +
           esc(bestN ? t('dash.avgOf') + ' ' + bestN + ' ' + t('quiz.title') : t('dash.avgNone')) + '</div>' +
         '<div class="sec-row" style="margin-top:14px">' +

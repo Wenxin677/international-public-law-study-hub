@@ -161,6 +161,9 @@ const val = async (db, sql, params) => one((await db.query(sql, params)).rows);
   await db.exec("delete from robo_events where type in ('signin_failed','signin_locked')");
   check('clearing the failed rows lets the new password work',
     (await rpc('robo_login', 'panha', 'newpassword', 'web', 'ua', 'km')).ok === true);
+  /* put the password back: the rest of the suite signs in as panha with it */
+  await db.exec("update robo_accounts set pwhash = crypt('test1234', gen_salt('bf',10)) where username_lower='panha'");
+  check('the password can be set back', (await rpc('robo_login', 'panha', 'test1234', 'web', 'ua', 'km')).ok === true);
 
   console.log('\n— sessions: the token is what identifies a student —');
   const su = await rpc('robo_signup', 'alice', 'alicepass1', 'en', 'phone', 'Safari');

@@ -276,7 +276,7 @@
   function msgNode(role, html, opts) {
     const wrap = I.el('div', { class: 'msg ' + role });
     if (role === 'bot') {
-      wrap.innerHTML = '<div class="av"><img src="assets/img/logo.png" alt="RoboCL"></div><div class="body">' +
+      wrap.innerHTML = '<div class="av"><img src="assets/img/logo.png?v=20260912b" alt="RoboCL"></div><div class="body">' +
         '<div class="who-line">RoboCL</div>' + (html || '') + '</div>';
     } else {
       const s = window.IPLAuth && window.IPLAuth.session();
@@ -568,7 +568,7 @@
     const sug = SUGGEST[I.state.lang] || SUGGEST.en;
     thread.innerHTML =
       '<div class="empty-chat">' +
-      '<img src="assets/img/logo.png" alt="RoboCL">' +
+      '<img src="assets/img/logo.png?v=20260912b" alt="RoboCL">' +
       '<h2>' + esc(t('teacher.title')) + '</h2>' +
       '<p>' + esc(t('teacher.intro')) + '</p>' +
       '<div class="suggest-row" style="justify-content:center">' +
@@ -586,7 +586,7 @@
     const side = qs('#chat-side');
     if (side) {
       side.innerHTML =
-        '<div class="side-top"><img class="robo" src="assets/img/logo.png" alt=""><div class="who"><b>RoboCL</b><span>' + esc(t('teacher.sub')) + '</span></div></div>' +
+        '<div class="side-top"><img class="robo" src="assets/img/logo.png?v=20260912b" alt=""><div class="who"><b>RoboCL</b><span>' + esc(t('teacher.sub')) + '</span></div></div>' +
         '<button class="btn primary block" id="new-chat">＋ ' + esc(t('teacher.newchat')) + '</button>' +
         '<div class="small faint" style="margin:8px 4px 2px">' + esc(t('teacher.history')) + '</div>' +
         '<div class="chat-list" id="chat-list"></div>' +

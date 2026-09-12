@@ -1124,7 +1124,7 @@
       top.innerHTML =
         '<button class="icon-btn" id="nav-burger" aria-label="menu">☰</button>' +
         '<a class="brand" href="' + (sess ? 'dashboard.html' : 'index.html') + '">' +
-        '<img src="assets/img/logo.png" alt="RoboCL"><span class="txt"><b>' + esc(t('app.name')) + '</b><small>' + esc(t('app.sub')) + '</small></span></a>' +
+        '<img src="assets/img/logo.png?v=20260912b" alt="RoboCL"><span class="txt"><b>' + esc(t('app.name')) + '</b><small>' + esc(t('app.sub')) + '</small></span></a>' +
         '<span class="spacer"></span>' +
         '<nav class="topnav">' + navHtml + '</nav>' +
         '<div class="lang-toggle" role="group" aria-label="' + esc(t('lang.label')) + '">' +
@@ -1152,7 +1152,7 @@
     if (top && !qs('#drawer')) {
       const back = el('div', { class: 'drawer-backdrop', id: 'drawer-backdrop' });
       const dr = el('div', { class: 'drawer', id: 'drawer' });
-      dr.innerHTML = '<div class="row" style="margin-bottom:14px"><img src="assets/img/logo.png" alt="" style="width:38px;border-radius:50%">' +
+      dr.innerHTML = '<div class="row" style="margin-bottom:14px"><img src="assets/img/logo.png?v=20260912b" alt="" style="width:38px;border-radius:50%">' +
         '<div><b>' + esc(t('app.name')) + '</b><div class="small faint">' + esc(t('app.sub')) + '</div></div></div>' +
         NAV.map(function (x) {
           return '<a href="' + x[0] + '"' + (active === x[0] ? ' class="active"' : '') + '>' + x[2] + ' ' + esc(t(x[1])) + '</a>';
@@ -1173,7 +1173,7 @@
     const foot = qs('#footer');
     if (foot) {
       foot.innerHTML = '<div class="wrap">' +
-        '<div class="footbrand"><img src="assets/img/logo.png" alt=""><div><b>' + esc(t('app.name')) + '</b>' +
+        '<div class="footbrand"><img src="assets/img/logo.png?v=20260912b" alt=""><div><b>' + esc(t('app.name')) + '</b>' +
         '<div class="small">© ' + new Date().getFullYear() + ' · ' + esc(t('app.sub')) + '</div></div></div>' +
         '<span class="spacer"></span>' +
         '<span class="made-by">' + esc(t('foot.made')) + ' <b>Sok Panha</b> <span class="spark">✦</span> ' + esc(t('foot.with')) + '</span>' +

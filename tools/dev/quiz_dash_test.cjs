@@ -123,14 +123,28 @@ check('card 3 is one key stat', !!d2.getElementById('stat-card').querySelector('
 check('the stat card links to the quiz', !!d2.querySelector('#stat-card a[href^="quiz.html"]'));
 check('the old three-tile stat block is gone', d2.querySelectorAll('#prog-card .tile').length === 0);
 
-console.log('\n— everything else is folded —');
-const fold = d2.querySelector('details.fold');
-check('there is one fold', !!fold);
+console.log('\n— the continue CTA leads —');
+const hero = d2.getElementById('continue-card');
+check('the continue card is the hero card', hero.classList.contains('hero'));
+check('it carries a big primary call to action', !!hero.querySelector('a.btn.primary.lg[href^="learn.html#"]'),
+  (hero.querySelector('a.btn.primary.lg') || {}).textContent);
+check('no other card is a hero', d2.querySelectorAll('.dash-3 > .sec-card.hero').length === 1);
+check('the hero pairs the CTA with the quiz for that lesson', !!hero.querySelector('a[href^="quiz.html#lesson="]'));
+
+console.log('\n— secondary stats are folded away —');
+const fold = d2.querySelector('#more-stats');
+check('there is one fold', !!fold && fold.tagName === 'DETAILS');
 check('it is closed by default', fold && fold.open === false);
-check('the quick actions are inside it', !!fold.querySelector('#quick'));
-check('the chapter list is inside it', !!fold.querySelector('#chapters'));
-check('notes and reset are inside it', !!fold.querySelector('#notes-card') && !!fold.querySelector('#reset-btn'));
+check('it is labelled More stats', /More stats|ស្ថិតិបន្ថែម/.test(fold.querySelector('summary').textContent),
+  fold.querySelector('summary').textContent.trim());
+check('it holds the detailed stats', fold.querySelectorAll('#more-facts .fact').length === 5,
+  fold.querySelectorAll('#more-facts .fact').length + ' stats');
+check('the chapter breakdown is inside it', !!fold.querySelector('#chapters'));
+check('notes and quick actions are inside it', !!fold.querySelector('#notes-card') && !!fold.querySelector('#quick'));
+check('the reset button is still reachable', !!fold.querySelector('#reset-btn'));
+check('none of that is in the main view', d2.querySelectorAll('.dash-3 .mini-grid, .dash-3 .fact').length === 0);
 check('the main page is not a dense grid any more', d2.querySelectorAll('main > .wrap > .grid').length === 0);
+check('no untranslated keys are left showing', !/\b(dash|quiz|learn)\.[a-zA-Z]/.test(d2.body.textContent));
 check('no script errors on the dashboard', errors2.length === 0, errors2.slice(0, 2).join(' | '));
 
 console.log(`\nRESULT: ${pass} passed, ${fail} failed`);

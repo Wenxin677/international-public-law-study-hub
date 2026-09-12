@@ -66,14 +66,42 @@
     const label = st === 'done' ? (I.state.lang === 'km' ? 'មេរៀនបន្ទាប់ដែលគួរអាន' : 'Next lesson for you') : t('dash.pickup');
     qs('#continue-card').innerHTML =
       '<h2 class="sec-head">' + esc(t('dash.continue')) + '</h2>' +
-      '<span class="pill">' + esc(label) + '</span>' +
-      '<h3 style="margin:12px 0 4px;font-size:1.2rem">' + esc(I.pick(l.title)) + '</h3>' +
+      '<span class="pill gold">' + esc(label) + '</span>' +
+      '<h3 class="hero-title">' + esc(I.pick(l.title)) + '</h3>' +
       '<div class="muted small">' + esc(I.pick(l.chapter.title)) + ' · ' + esc(t('learn.pages')) +
         ' ' + l.pages.from + '–' + l.pages.to + ' · ' + (l.pages.to - l.pages.from + 1) + ' ' + esc(t('learn.slides')) + '</div>' +
-      '<div class="sec-row" style="margin-top:14px">' +
-        '<a class="btn primary" href="learn.html#' + l.id + '">📘 ' + esc(t('learn.title')) + '</a>' +
-        '<a class="btn" href="quiz.html#lesson=' + l.id + '">🎯 ' + esc(t('quiz.title')) + '</a>' +
+      '<div class="sec-row hero-cta">' +
+        '<a class="btn primary lg" href="learn.html#' + l.id + '">▶ ' + esc(t('dash.cta')) + '</a>' +
+        '<a class="btn sm" href="quiz.html#lesson=' + l.id + '">🎯 ' + esc(t('quiz.title')) + '</a>' +
       '</div>';
+  }
+
+  /* the numbers that used to crowd the top, now behind the More stats fold */
+  function renderMoreStats() {
+    const host = qs('#more-facts');
+    if (!host) return;
+    const p = I.getProgress();
+    const rank = I.rankFor(p.xp || 0);
+    let best = 0, taken = 0, sum = 0;
+    Object.keys(p.quiz).forEach(function (k) {
+      const q = p.quiz[k];
+      if (!q || !q.total) return;
+      taken++;
+      sum += (q.best / q.total) * 100;
+      best = Math.max(best, Math.round((q.best / q.total) * 100));
+    });
+    const notes = Object.keys(p.notes || {}).filter(function (k) { return (p.notes[k] || '').trim(); }).length;
+    const facts = [
+      ['⭐', (p.xp || 0), I.pick(rank)],
+      ['🏆', best ? best + '%' : '—', t('dash.bestScore')],
+      ['🎯', taken, t('dash.quizzes')],
+      ['📝', notes, t('dash.notesCount')],
+      ['📈', taken ? Math.round(sum / taken) + '%' : '—', t('dash.avg')]
+    ];
+    host.innerHTML = facts.map(function (f) {
+      return '<div class="fact"><b>' + esc(String(f[1])) + '</b><span>' + esc(f[2]) + '</span>' +
+        '<i class="ico">' + f[0] + '</i></div>';
+    }).join('');
   }
 
   function renderQuick() {
@@ -110,11 +138,11 @@
     const withNotes = Object.keys(p.notes || {}).filter(function (k) { return (p.notes[k] || '').trim(); });
     const host = qs('#notes-card');
     if (!withNotes.length) {
-      host.innerHTML = '<h3>' + esc(t('dash.notes')) + '</h3><div class="muted small">' +
+      host.innerHTML = '<h2 class="sec-head">' + esc(t('dash.notes')) + '</h2><div class="muted small">' +
         esc(I.state.lang === 'km' ? 'មិនទាន់មានកំណត់សម្គាល់ទេ — អ្នកអាចសរសេរនៅក្នុងមេរៀននីមួយៗ។' : 'No notes yet — you can write them inside any lesson.') + '</div>';
       return;
     }
-    host.innerHTML = '<h3>' + esc(t('dash.notes')) + '</h3>' + withNotes.slice(0, 6).map(function (id) {
+    host.innerHTML = '<h2 class="sec-head">' + esc(t('dash.notes')) + '</h2>' + withNotes.slice(0, 6).map(function (id) {
       const l = D.lessonById(id);
       if (!l) return '';
       return '<a class="card hoverable" href="learn.html#' + id + '" style="display:block;text-decoration:none;color:inherit;margin-bottom:10px">' +
@@ -146,6 +174,7 @@
 
     renderProgress();
     renderContinue();
+    renderMoreStats();
     renderQuick();
     renderChapters();
     renderNotes();

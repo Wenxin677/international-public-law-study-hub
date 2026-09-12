@@ -63,33 +63,55 @@ check('answers are clickable cards with a number key', opts.length >= 3 && !!opt
 check('Next is disabled until an answer is chosen', d.getElementById('next').disabled === true);
 check('no explanation is shown before answering', !d.querySelector('#fb .explain'));
 
-console.log('\n— answering —');
+console.log('\n— choosing before you commit (click or 1–4) —');
 click(w, opts[0]);
-check('the chosen card is marked', opts[0].classList.contains('correct') || opts[0].classList.contains('wrong'),
+check('the picked card is marked as selected', opts[0].classList.contains('sel'),
   opts[0].className.replace('option', '').trim());
-check('the right answer is shown when you miss', (function () {
+check('nothing is graded yet',
+  !d.querySelector('#fb .explain') && d.querySelectorAll('.option.correct, .option.wrong').length === 0);
+check('you can still change your mind',
+  Array.from(d.querySelectorAll('.option')).every((o) => o.disabled === false));
+check('Next is enabled now there is a selection', d.getElementById('next').disabled === false);
+const key = (k) => d.dispatchEvent(new w.KeyboardEvent('keydown', { key: k, bubbles: true }));
+key('3');
+check('a number key selects that option',
+  d.querySelectorAll('.options .option')[2].classList.contains('sel') &&
+  d.querySelectorAll('.option.sel').length === 1);
+key('1');
+check('another number key changes the selection',
+  d.querySelectorAll('.options .option')[0].classList.contains('sel') &&
+  d.querySelectorAll('.option.sel').length === 1);
+
+console.log('\n— Enter checks the answer —');
+key('Enter');
+check('Enter grades it and reveals the explanation', !!d.querySelector('#fb .explain'));
+check('the choice is marked right or wrong',
+  d.querySelectorAll('.option.correct, .option.wrong').length >= 1);
+check('the right answer is revealed when you miss', (function () {
   const wrong = d.querySelectorAll('.option.wrong').length;
   const reveal = d.querySelectorAll('.option.reveal').length;
   return (wrong && reveal) || (!wrong && !reveal);
 })());
-check('an explanation appears', !!d.querySelector('#fb .explain'));
-check('the cards are locked after answering',
+check('the cards are locked after checking',
   Array.from(d.querySelectorAll('.option')).every((o) => o.disabled === true));
-check('Next is now enabled and focused', d.getElementById('next').disabled === false);
+check('the button now offers to move on',
+  /Next|Finish|បន្ទាប់|បញ្ចប់/.test(d.getElementById('next').textContent),
+  d.getElementById('next').textContent.trim());
 
 console.log('\n— working through to the results —');
-click(w, d.getElementById('next'));
-check('Next moves to question 2', /2\b/.test((d.querySelector('.qhead .pill') || {}).textContent || ''),
+key('Enter');
+check('Enter again moves to question 2', /2\b/.test((d.querySelector('.qhead .pill') || {}).textContent || ''),
   (d.querySelector('.qhead .pill') || {}).textContent);
 check('still only one question on screen', d.querySelectorAll('.q-text').length === 1);
-/* answer the rest, always picking the first option, until the results appear */
+/* pick, check, move on — until the results appear */
 let guard = 0;
 while (guard++ < 40 && d.getElementById('result-wrap').hidden) {
   const o = d.querySelector('.options .option');
   if (!o) break;
   click(w, o);
+  click(w, d.getElementById('next'));
   const n = d.getElementById('next');
-  click(w, n);
+  if (n && !n.disabled) click(w, n);
 }
 check('the run reaches the results screen', d.getElementById('result-wrap').hidden === false);
 check('the question screen is gone', d.getElementById('run-wrap').hidden === true);
@@ -118,8 +140,9 @@ const cards = d2.querySelectorAll('.dash-3 > .sec-card');
 check('exactly three cards', cards.length === 3, cards.length + ' cards');
 check('card 1 is overall progress', !!d2.getElementById('prog-card').querySelector('.progress-ring'));
 check('card 2 is the next lesson', !!d2.querySelector('#continue-card a[href^="learn.html#"]'));
-check('card 3 is one key stat', !!d2.getElementById('stat-card').querySelector('.stat-big'),
-  (d2.querySelector('#stat-card .stat-big') || {}).textContent);
+check('card 3 is one key stat',
+  !!d2.querySelector('#stat-card .stat-big') || /No quizzes taken yet|មិនទាន់ធ្វើកម្រងសំណួរ/.test(d2.getElementById('stat-card').textContent),
+  (d2.querySelector('#stat-card .stat-big') || {}).textContent || d2.getElementById('stat-card').textContent.trim().slice(0, 40));
 check('the stat card links to the quiz', !!d2.querySelector('#stat-card a[href^="quiz.html"]'));
 check('the old three-tile stat block is gone', d2.querySelectorAll('#prog-card .tile').length === 0);
 

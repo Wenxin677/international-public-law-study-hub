@@ -51,10 +51,12 @@
     if (stat) {
       stat.innerHTML =
         '<h2 class="sec-head">' + esc(t('dash.avg')) + '</h2>' +
-        '<div class="stat-big' + (bestN ? ' grad' : ' muted') + '">' + (bestN ? avg + '%' : '—') + '</div>' +
-        '<div class="muted small" style="margin-top:6px">' +
-          esc(bestN ? t('dash.avgOf') + ' ' + bestN + ' ' + t('quiz.title') : t('dash.avgNone')) + '</div>' +
-        '<div class="sec-row" style="margin-top:14px">' +
+        (bestN
+          ? '<div class="stat-big grad">' + avg + '%</div>' +
+            '<div class="muted small" style="margin-top:6px">' +
+              esc(t('dash.avgOf') + ' ' + bestN + ' ' + t('quiz.title')) + '</div>'
+          : '<div class="muted small" style="margin:6px 0 0">' + esc(t('dash.avgNone')) + '</div>') +
+        '<div class="sec-row push-down" style="margin-top:14px">' +
           '<a class="btn sm primary" href="quiz.html">🎯 ' + esc(t('quiz.title')) + '</a>' +
         '</div>';
     }
@@ -70,7 +72,7 @@
       '<h3 class="hero-title">' + esc(I.pick(l.title)) + '</h3>' +
       '<div class="muted small">' + esc(I.pick(l.chapter.title)) + ' · ' + esc(t('learn.pages')) +
         ' ' + l.pages.from + '–' + l.pages.to + ' · ' + (l.pages.to - l.pages.from + 1) + ' ' + esc(t('learn.slides')) + '</div>' +
-      '<div class="sec-row hero-cta">' +
+      '<div class="sec-row hero-cta push-down">' +
         '<a class="btn primary lg" href="learn.html#' + l.id + '">▶ ' + esc(t('dash.cta')) + '</a>' +
         '<a class="btn sm" href="quiz.html#lesson=' + l.id + '">🎯 ' + esc(t('quiz.title')) + '</a>' +
       '</div>';

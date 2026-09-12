@@ -13,7 +13,7 @@
   const I = window.IPL, D = window.IPL_DATA;
   const t = I.t, esc = I.esc, qs = I.qs;
 
-  const run = { list: [], i: 0, right: 0, wrong: [], id: '', answered: false };
+  const run = { list: [], i: 0, right: 0, wrong: [], id: '', answered: false, picked: null };
 
   /* ------------------------------------------------------------- setup */
   function setup() {
@@ -92,8 +92,8 @@
     const L = I.state.lang;
     const src = it.opts || (it.q.options || {});
     const opts = src[L] || src.en || src.km || [];
-    const last = run.i === run.list.length - 1;
     run.answered = false;
+    run.picked = null;
     qs('#run-wrap').innerHTML =
       '<div class="qwrap">' +
         '<div class="qhead">' +
@@ -105,37 +105,50 @@
         '<div class="sec-bar"><i style="width:' + Math.round((run.i / run.list.length) * 100) + '%"></i></div>' +
         '<div class="q-card">' +
           '<div class="q-text">' + I.T(it.q.q) + '</div>' +
-          '<div class="options" id="opts">' +
+          '<div class="options" id="opts" role="group" aria-label="' + esc(t('quiz.answer')) + '">' +
             opts.map(function (o, i) {
-              return '<button class="option" type="button" data-opt="' + i + '">' +
+              return '<button class="option" type="button" data-opt="' + i + '" aria-pressed="false">' +
                 '<span class="key">' + (i + 1) + '</span><span>' + esc(o) + '</span></button>';
             }).join('') +
           '</div>' +
           '<div id="fb" aria-live="polite"></div>' +
-          '<div class="qfoot"><span class="spacer"></span>' +
+          '<div class="qfoot">' +
+            '<span class="small faint" id="qhint">' + esc(t('quiz.hint')) + '</span>' +
+            '<span class="spacer"></span>' +
             '<button class="btn primary" id="next" type="button" disabled>' +
-              (last ? esc(t('quiz.finish')) : esc(t('quiz.next'))) + ' →</button>' +
+              esc(t('quiz.check')) + '</button>' +
           '</div>' +
         '</div>' +
       '</div>';
     qs('#quit').addEventListener('click', backToSetup);
     I.qsa('#opts .option').forEach(function (b) {
-      b.addEventListener('click', function () { answer(+b.dataset.opt); });
+      b.addEventListener('click', function () { select(+b.dataset.opt); });
     });
-    qs('#next').addEventListener('click', function () {
-      if (run.i === run.list.length - 1) result();
-      else { run.i++; question(); }
-    });
+    qs('#next').addEventListener('click', advance);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function answer(choice) {
+  /* step 1 — choosing: the card lights up, nothing is graded yet */
+  function select(pick) {
     if (run.answered) return;
+    run.picked = pick;
+    I.qsa('#opts .option').forEach(function (b, k) {
+      b.classList.toggle('sel', k === pick);
+      b.setAttribute('aria-pressed', k === pick ? 'true' : 'false');
+    });
+    const n = qs('#next');
+    if (n) { n.disabled = false; n.focus(); }
+  }
+
+  /* step 2 — submitting: only now do we grade and reveal */
+  function submit() {
+    if (run.answered || run.picked == null) return;
     run.answered = true;
     const it = run.list[run.i], q = it.q;
     const btns = I.qsa('#opts .option');
     const right = (it.answer != null ? it.answer : q.answer);
-    btns.forEach(function (b) { b.disabled = true; });
+    const choice = run.picked;
+    btns.forEach(function (b) { b.disabled = true; b.classList.remove('sel'); });
     if (choice === right) {
       btns[choice].classList.add('correct');
       run.right++;
@@ -153,9 +166,19 @@
       '<a class="cite" href="teacher.html?q=' + encodeURIComponent(qs('.q-text').textContent.trim()) + '">🤖 ' + esc(t('quiz.ask')) + '</a>' +
       '<a class="cite" href="learn.html#' + it.lesson.id + '">📘 ' + esc(I.truncate(I.pick(it.lesson.title), 34)) + '</a>' +
       '</div></div>';
+    const hint = qs('#qhint');
+    if (hint) hint.textContent = '';
     const n = qs('#next');
     n.disabled = false;
+    n.textContent = (run.i === run.list.length - 1 ? t('quiz.finish') : t('quiz.next')) + ' →';
     n.focus();
+  }
+
+  /* one button, two jobs: check the answer, then move on */
+  function advance() {
+    if (!run.answered) { submit(); return; }
+    if (run.i === run.list.length - 1) result();
+    else { run.i++; question(); }
   }
 
   /* ------------------------------------------------------------- result */
@@ -246,10 +269,10 @@
       if (tag === 'INPUT' || tag === 'TEXTAREA') return;
       if (/^[1-4]$/.test(e.key)) {
         const b = I.qsa('#opts .option')[+e.key - 1];
-        if (b && !b.disabled) b.click();
+        if (b && !b.disabled) b.click();          /* 1-4 picks an answer */
       } else if (e.key === 'Enter') {
-        const n = qs('#next');
-        if (n && !n.disabled) n.click();
+        e.preventDefault();
+        advance();                                 /* Enter checks, then advances */
       }
     });
   });

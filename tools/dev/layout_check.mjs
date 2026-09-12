@@ -20,7 +20,7 @@ const WIDTHS = (widthsArg > -1 ? argv[widthsArg + 1] : '360,768,1280').split(','
 const shotIdx = argv.indexOf('--shots');
 const SHOT_DIR = shotIdx > -1 ? argv[shotIdx + 1] : null;
 const SHOT_WIDTHS = [412, 1280];
-const SHOT_PAGE = 'dashboard.html';
+const SHOT_PAGES = ['dashboard.html', 'quiz.html'];
 const PAGES = argv.filter((a, i) => !a.startsWith('--') &&
   i !== widthsArg + 1 && !(shotIdx > -1 && i === shotIdx + 1));
 if (!PAGES.length) PAGES.push('dashboard.html', 'quiz.html', 'learn.html');
@@ -98,6 +98,31 @@ const SEED = `localStorage.setItem('robo.session', JSON.stringify({
   u: 'layoutcheck', t: 'tok', ts: Date.now(), exp: Date.now() + 864e5
 })); 'seeded'`;
 
+/* the question screen itself, measured in a real browser */
+const QUIZ_PROBE = `(() => {
+  const d = document;
+  const mixed = d.getElementById('mixed-btn');
+  if (mixed) mixed.click();
+  const opts = [...d.querySelectorAll('.options .option')];
+  const rects = opts.map((o) => o.getBoundingClientRect());
+  const gaps = rects.slice(1).map((r, i) => Math.round(r.top - rects[i].bottom));
+  const next = d.getElementById('next');
+  const head = d.querySelector('.qhead .pill');
+  return JSON.stringify({
+    questions: d.querySelectorAll('.q-text').length,
+    options: opts.length,
+    minOptW: rects.length ? Math.round(Math.min(...rects.map((r) => r.width))) : 0,
+    minGap: gaps.length ? Math.min(...gaps) : null,
+    nextDisabled: next ? next.disabled : null,
+    nextLabel: next ? next.textContent.trim() : null,
+    head: head ? head.textContent.trim() : null,
+    hasBar: !!d.querySelector('.sec-bar > i'),
+    scrollWidth: d.documentElement.scrollWidth,
+    vw: window.innerWidth,
+    offRight: rects.some((r) => r.right > window.innerWidth + 1)
+  });
+})()`;
+
 let ws, id = 0;
 const pending = new Map();
 function send(method, params = {}, sessionId) {
@@ -160,8 +185,29 @@ try {
         console.log(`            ${okShape ? '✓' : '✗'} ${want[0]} (cards ${cw.join('/')}px${single ? '' : ''})`);
       }
 
+      /* the question screen: one question, four full-width cards, even spacing */
+      if (page === 'quiz.html') {
+        const q = await send('Runtime.evaluate', { expression: QUIZ_PROBE, returnByValue: true });
+        const qv = JSON.parse(q.result.value);
+        const want = new Map([
+          ['one question on screen', qv.questions === 1],
+          ['four answer cards', qv.options === 4],
+          ['cards fill the reading column', qv.minOptW >= Math.min(qv.vw - 70, 640)],
+          ['cards are not crammed together', qv.minGap >= 8],
+          ['Next starts disabled', qv.nextDisabled === true],
+          ['Next says Check answer', /Check answer|ពិនិត្យចម្លើយ/.test(qv.nextLabel || '')],
+          ['the X of Y indicator is there', /1\b/.test(qv.head || '')],
+          ['there is a progress bar', qv.hasBar],
+          ['nothing sticks out to the right', !qv.offRight && qv.scrollWidth <= qv.vw + 1]
+        ]);
+        for (const [name, ok] of want) {
+          if (!ok) failures++;
+          console.log(`            ${ok ? '✓' : '✗'} ${name}${name === 'cards fill the reading column' ? ` (${qv.minOptW}px of ${qv.vw}px, gap ${qv.minGap}px)` : ''}`);
+        }
+      }
+
       /* optional: pictures of the real page, for a human to look at */
-      if (SHOT_DIR && page === SHOT_PAGE && SHOT_WIDTHS.includes(w)) {
+      if (SHOT_DIR && SHOT_PAGES.includes(page) && SHOT_WIDTHS.includes(w)) {
         const cap = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true });
         mkdirSync(SHOT_DIR, { recursive: true });
         const file = path.join(SHOT_DIR, `${page.replace('.html', '')}-${w}.png`);

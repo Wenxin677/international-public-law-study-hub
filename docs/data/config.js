@@ -80,7 +80,16 @@ window.ROBOCL_SHEET = {
    as an offline fallback even when this is configured).
    ========================================================================== */
 
-window.ROBOCL_DB = null;
+window.ROBOCL_DB = {
+  url: 'https://jygvtsvrwzssfizejrme.supabase.co',
+  /* publishable key — public by design, and the tables are locked, so this can
+     only call the sign-in / progress functions, never read the tables */
+  key: 'sb_publishable_LvRDYHOwATnR2nK4yDxRfw_3nojIDes'
+};
+/* verified end-to-end against this project: sign-up, sign-in, wrong password,
+   session check, progress + notes write/read, one student unable to reach
+   another's rows, revoked token refused, and the public key denied direct table
+   access (19/19 — tools/dev/live_db_check.js). */
 /* example:
 window.ROBOCL_DB = {
   url: 'https://xxxxxxxxxxxx.supabase.co',

@@ -1,10 +1,12 @@
 # RoboCL — Public International Law Study Hub
 
+![RoboCL logo](docs/assets/img/logo.png)
+
 **Live site:** https://wenxin677.github.io/international-public-law-study-hub/
 **Built by Sok Panha, with AI.**
 
-A bilingual **Khmer / English** study app for public international law, made from three
-source documents and one AI teacher that never invents an answer.
+A bilingual **Khmer / English** study app for public international law, built from three
+source documents, with an AI teacher that answers only from those documents.
 
 | # | Source | Language | Pages |
 |---|---|---|---|
@@ -17,198 +19,138 @@ and 624 searchable passages — is derived from those documents only.
 
 ---
 
-## What is in it
+## Features
 
 | Page | What it does |
 |---|---|
-| `index.html` | **Homepage / tutorial** — what the site is, the five study tools, four steps to start, FAQ, and the sources. Public (no account needed). |
-| `signin.html` | **Sign in / create account** — username + password only. |
-| `dashboard.html` | **Dashboard** — progress ring, streak, XP and rank, best quiz scores, continue-where-you-stopped, all 10 chapters, your notes. |
-| `learn.html` | **Lessons** — chapter rail + lesson with objectives, key points, verbatim quotes (with page numbers), term flashcards, your notes, mark-as-studied, print. |
-| `quiz.html` | **Quizzes** — per lesson, per chapter (12 questions) or mixed (10 random), instant explanations, page references, review of your mistakes, best-score memory. Keys `1–4` / `Enter`. |
-| `teacher.html` | **RoboCL, the AI teacher** — a Claude-style chat. Shows its work ("reading the question → searching the book → comparing passages → building the answer → checking pages"), streams the answer, and always cites the page. |
-| `library.html` | **Textbook & sources** — read any of the three documents page by page: the real PDF pages (turn, jump, zoom, open in a new tab) plus the searchable text and page samples. |
-| `glossary.html` | **Glossary** — 193 Khmer–English legal terms, table or flashcards. |
-| `about.html` | **About / credits** — who built it, how, and the rights note. |
-| `admin.html` | **User data** (owner) — the accounts and sign-in records on this device, with CSV / JSON export. |
+| `index.html` | Homepage and tutorial: what the site is, the study tools, how to start, FAQ, sources. No account needed. |
+| `signin.html` | Create an account or sign in — **username and password only**. |
+| `dashboard.html` | Progress ring, streak, XP and rank, best quiz scores, continue-where-you-stopped, all chapters, your notes. |
+| `learn.html` | Lessons: read the real textbook pages inline, plus learning objectives, key points, verbatim quotes with page numbers, key terms and your own notes. |
+| `quiz.html` | Quizzes per lesson, per chapter or mixed, with instant explanations and page references, mistake review and best-score memory. |
+| `teacher.html` | **RoboCL**, the AI teacher: a chat that shows its steps, streams the answer and always cites the page it used. |
+| `library.html` | Read any of the three source documents page by page, with the searchable text beside the real pages. |
+| `glossary.html` | 193 Khmer–English legal terms, as a table or flashcards. |
+| `about.html` | Who built it, how, and the rights note. |
 
-RoboCL answers are **retrieval-grounded**: the engine finds the passages, then composes an
-answer from quoted text, the authored key points and the term definitions. When the sources do
-not cover a question it says so instead of guessing.
+RoboCL's answers are **retrieval-grounded**: it finds the relevant passages first, then answers
+from quoted text, the authored key points and the term definitions. When the sources do not
+cover a question it says so instead of guessing.
+
+**Languages:** Khmer and English, switchable anywhere (only those two, by design).
 
 ---
 
-## Accounts
+## Tech stack
 
-* Sign-up needs **only a username and a password** — no email, no payment, no personal data.
-* The password is never stored. The browser derives a **PBKDF2-SHA256 hash (120 000 rounds,
-  random salt)** with `crypto.subtle` and keeps only that. Where `crypto.subtle` is unavailable
-  (opening the files directly from disk in some browsers) it falls back to iterated SHA-256.
-* Every app page is behind `IPL.guard()`: without a session you are sent to `signin.html`.
-* Sign-up / sign-in / sign-in-failure / sign-out events are recorded locally so the owner can
-  see who used the site. `admin.html` lists them and exports CSV or JSON. It is opened with an
-  **owner code** that is only stored as a PBKDF2 hash (120 000 rounds) in `docs/data/config.js` —
-  make your own with `python tools/admin_code.py "your code"`. With a database connected the page
-  asks for your own account password instead, and nothing secret is in the file at all. Without a
-  database this gate is a convenience only: it hides the panel from casual visitors, and the rows
-  it shows live in that visitor's own browser.
-* **Collecting this from every visitor's device needs somewhere to send it** — a static site has
-  nowhere to put it by itself. Two ready-made options, both one setting in
-  [`docs/data/config.js`](docs/data/config.js):
-  * **Google Sheet (recommended)** — create a sheet, paste
-    [`tools/google-sheet-collector.gs`](tools/google-sheet-collector.gs) into its Apps Script
-    editor, deploy it as a Web app ("Anyone" access), and put the `/exec` URL in
-    `window.ROBOCL_SHEET`. Every sign-up / sign-in / failed attempt / sign-out then appends a row
-    (`time · username · event · device · browser · language`) to your spreadsheet, and a second
-    "all users" tab is kept as a per-user summary.
-  * **Supabase** — create a free project, run [`tools/supabase.sql`](tools/supabase.sql), and fill
-    in `window.ROBOCL_CLOUD`.
-  Only the username, the event and the device are ever sent — **never the password and never its
-  hash**. `admin.html` shows which collector is live and has a "Send a test row" button.
-  When a collector is configured the sign-up form automatically shows users that their username
-  and sign-in times are recorded.
+* **Vanilla HTML, CSS and JavaScript** — no framework, no bundler, no build step required to run.
+* **Static hosting** — the published site is plain files, served by GitHub Pages.
+* **Optional backend** — accounts, progress and notes can be kept in a database you own, so a
+  student's work follows them between devices. Until you connect one, accounts live in each
+  visitor's browser and the app works completely offline.
+* **Fonts** from Google Fonts. No trackers, no analytics, no ad networks.
+
+---
+
+## Run it locally
+
+There is nothing to install. Either open the site directly:
+
+```
+docs/index.html
+```
+
+…or serve the folder (needed if you want a local sign-in to be remembered):
+
+```bash
+cd docs
+python -m http.server 8000
+# then open http://127.0.0.1:8000/
+```
+
+---
+
+## Publish your own copy
+
+1. Fork or copy this repository.
+2. In **Settings → Pages**, choose **Deploy from a branch**, then branch `main` and folder
+   **`/docs`**.
+3. Your site appears at `https://<your-username>.github.io/<your-repo>/`.
+
+---
+
+## Accounts, progress and privacy
+
+* Sign-up asks for **a username and a password only** — no email address, no payment, no
+  personal details.
+* Passwords are **not stored in any readable form**. Nobody — the site owner included — can look
+  up a password; a forgotten one has to be reset.
+* Study progress and notes are private to the account that made them.
+* Sign-in activity (username, event, time, device) is recorded so the owner can see how the site
+  is being used, and is shown to users on the sign-up form. The full privacy and rights wording
+  is in [`NOTICE.md`](NOTICE.md).
+
+If you want accounts and progress to work across devices, point the app at a database of your own
+and fill in the settings file [`docs/data/config.js`](docs/data/config.js) with your own values:
+
+```js
+window.YOUR_BACKEND = {
+  url: 'YOUR_BACKEND_URL_HERE',
+  key: 'YOUR_PUBLIC_KEY_HERE'
+};
+```
+
+The repository ships the SQL you can run in your own project, and an optional Google Sheet
+collector for the sign-in log — see the comments inside `docs/data/config.js`. **Nothing works
+until you add your own credentials; no real keys or URLs are committed here.**
 
 ---
 
 ## Sources, rights and honesty
 
-* The **code** is MIT (see `LICENSE`).
+* The **code** is MIT (see [`LICENSE`](LICENSE)).
 * The **texts are not ours**. They are quoted with page numbers for study, credited to their
-  authors, and `NOTICE.md` invites a takedown request from any rights holder.
+  authors, and [`NOTICE.md`](NOTICE.md) invites a takedown request from any rights holder.
 * The textbook ships as a full-text index (the owner's choice). To publish a reduced
   quotes-only build instead: `python tools/build_site_data.py --quotes-only`.
-* The textbook PDF itself **is** published now (the owner's decision), so the Library can show
-  its real pages; the text recovered from it stays available in the same page-by-page reader.
-  The two reference documents are public legal texts and are included the same way.
+* The textbook PDF itself is published (the owner's decision) so the Library can show real pages.
+  The two reference documents are public legal texts.
 
 ---
 
-## Security
+## Rebuilding the data
 
-What the site does to protect the people using it:
-
-| Area | Measure |
-|---|---|
-| Passwords | bcrypt inside the database (or PBKDF2-SHA256, 120k rounds, on the device when no database is set up) — never stored, never logged, never sent to the sheet collector |
-| Password rules | minimum 8 characters, with a strength meter; usernames limited to `a–z 0–9 _ .` |
-| Brute force | 8 failed attempts for a username in 15 minutes locks it out in the database, plus a 5-attempt / 10-minute lock in the browser |
-| Database exposure | Row Level Security with no policies: the public key cannot read or write the tables; only four functions are callable |
-| Account list | requires an `is_admin` account **and** its real password — no shared secret is published |
-| Owner code (no database) | compared against a **PBKDF2-SHA256 hash** (120 000 rounds) in `config.js`, so the code is not in the repository (`tools/admin_code.py`) |
-| Script injection | strict `Content-Security-Policy` on every page (`script-src 'self'`, no inline scripts), all user text HTML-escaped, `object-src`/`base-uri` locked, `target=_blank` links carry `rel=noopener` |
-| Collecting data | only the username, event, device, browser string and time; the sign-up form tells users when collection is on |
-| Sessions | 14-day expiry, fresh token per sign-in, "don't remember me" keeps the session in the tab only |
-
-What is **not** protected, honestly:
-
-* **Page guards are convenience, not security.** The app pages are static files; anyone can read
-  the study content directly. The real protection is that *account data* lives in the database and
-  passwords are hashed — not that a page is hidden.
-* **The collector URL is public** (it has to be, so visitors' browsers can post to it). A stranger
-  who reads the source could add junk rows. The Apps Script sanitises every field (length caps,
-  control characters stripped, a leading `=`/`+`/`-`/`@` neutralised so a post can never become a
-  live spreadsheet formula) and refuses more than ~150 rows a minute, and the optional `token` in
-  `config.js`/the Apps Script makes posts without it pointless; if the sheet is still abused,
-  redeploy the Apps Script for a new URL. With a database connected, events have a better home
-  (server-side, RLS-protected).
-* **No server-side rate limiting on the static host.** Lockouts are enforced in the database and in
-  the browser; a determined attacker can still open many connections.
-* **GitHub Pages cannot send security headers** (HSTS, X-Frame-Options, Permissions-Policy). The CSP
-  is delivered by meta tag, which covers most of the practical risk. A custom domain + Cloudflare
-  in front would let you add the rest.
-
-## Accounts in a real database (recommended once you have users)
-
-By default accounts live in each visitor's browser. Point the app at a database and every device
-shares the same accounts — a student can sign up on a phone and sign in on a laptop.
-
-```
-tools/supabase-accounts.sql   →  the schema, the security rules and three functions
-docs/data/config.js           →  window.ROBOCL_DB = { url, key }
-```
-
-What that SQL sets up:
-
-* `robo_accounts` — username, **bcrypt password hash**, created, last sign-in, sign-in count,
-  failed attempts, language. `robo_events` — every signup / signin / failed attempt / signout.
-* **Row Level Security with no policies**: the browser (holding only the public anon key) cannot
-  read or write either table. No password hash can be downloaded from the site.
-* Three `SECURITY DEFINER` functions do all the work — `robo_signup`, `robo_login`, `robo_logout` —
-  plus `robo_admin_accounts` (secret-protected) which returns usernames and activity, never hashes.
-* Passwords are verified inside the database; nobody, including the owner, can read one. A lost
-  password can only be reset, never recovered.
-
-The site keeps working if the database is unreachable: sign-up and sign-in fall back to the
-on-device account, and database-backed accounts say plainly that a connection is needed.
-
-`admin.html` shows whether a database is connected, and **Load every account from the database**
-renders the whole user table with CSV export.
-
-## Sheet collector vs database
-
-They do different jobs and can run together:
-
-| | Google Sheet (`ROBOCL_SHEET`) | Database (`ROBOCL_DB`) |
-|---|---|---|
-| Stores | a log of events | the accounts themselves |
-| Sign-in on a new device | needs an account there already | works anywhere |
-| Passwords | never | bcrypt hash, service-side |
-| You read it | in Google Sheets | in `admin.html` or the Supabase dashboard |
-
----
-
-## Repository layout
-
-```
-docs/                     the published site (GitHub Pages, main → /docs)
-  index.html … admin.html the ten pages
-  assets/css/style.css    design system (dark/light, animations, mobile)
-  assets/js/              core · auth · data · search · teacher · learn · quiz · glossary · library · home · landing · signin · admin
-  assets/img/             RoboCL logo set + look-inside page samples
-  data/lessons.js         10 chapters, 33 lessons, quizzes, terms  (generated)
-  data/corpus.js          624 passages for retrieval                (generated)
-  data/library.js         245 pages of source text for the reader   (generated)
-  data/config.js          owner settings: admin code, optional Supabase cloud
-  library/*.pdf           the two public reference documents
-content/                  authored lesson JSON (the editorial source)
-tools/                    the pipeline that builds everything above
-tools/dev/                browser self-test + responsive audit harnesses
-```
-
-## Rebuilding
+The generated files under `docs/data/` come from the `content/` and `tools/` folders:
 
 ```bash
 python tools/build_corpus.py        # chapter text -> retrieval corpus
-python tools/build_library.py       # per-page reading data + look-inside images
-python tools/build_site_data.py     # merge content/ -> docs/data/*.js, verify every quote
-python tools/verify_site.py         # links, i18n coverage, data consistency, guards
+python tools/build_library.py       # per-page reading data
+python tools/build_site_data.py     # authored content -> site data, quotes verified
+python tools/verify_site.py         # links, translations, data consistency
 ```
 
-`tools/verify_site.py` fails if any internal link is broken, if a translation key is missing
-from either language, if the landing-page numbers drift from the built data, or if an app page
-stops guarding its content.
+`tools/verify_site.py` fails if a link is broken, a translation is missing from either language,
+or the numbers on the landing page drift from the built data.
 
-## Testing the real pages
+### Method note
 
-`tools/dev/_selftest.html` and `tools/dev/_audit.html` drive the actual pages in a browser:
-
-```bash
-cp tools/dev/*.html docs/            # they must be served from docs/ to be same-origin
-python -m http.server 8099 --bind 127.0.0.1   # from docs/
-# open http://127.0.0.1:8099/_selftest.html   -> 72 flow checks (auth, lessons, quiz, RoboCL, library, admin, EN/KM)
-# open http://127.0.0.1:8099/_audit.html      -> horizontal-overflow audit at 360 / 390 / 768 px
-```
-
-Last run: **72/72 checks passed**, no horizontal overflow on any page at 360 px.
-
-## Method note
-
-The Khmer PDF's text layer is corrupt (a Word 2000 font whose ToUnicode map points at the wrong
-glyphs), so extractors return scrambled text. `tools/recover.py` recovers it exactly by matching
-each embedded glyph outline against the KhmerOS fonts installed on the machine, then
-`tools/khmer_order.py` rebuilds Khmer logical order from the display order. Every quote in the
-app is checked to be a verbatim substring of that recovered text — 128/128 verified.
+The Khmer PDF's text layer is corrupt (a legacy font whose character map points at the wrong
+glyphs), so ordinary extractors return scrambled text. `tools/recover.py` recovers it by matching
+each embedded glyph outline against the same Khmer fonts, and `tools/khmer_order.py` rebuilds
+Khmer logical order. Every quote in the app is then checked to be a verbatim substring of that
+recovered text.
 
 ---
 
-Study tool only — not legal advice. Questions: open an issue on the repository.
+## Contributing
+
+Issues and pull requests are welcome. If you spot a wrong translation, a mis-cited page or a bug,
+please open an issue with the page and a screenshot if you can.
+
+## License
+
+MIT — see [`LICENSE`](LICENSE). The source texts keep their own rights; see [`NOTICE.md`](NOTICE.md).
+
+---
+
+Study tool only — **not legal advice**.

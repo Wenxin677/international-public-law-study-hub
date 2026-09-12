@@ -193,6 +193,70 @@ for fn in sig:
             problems.append(f"the SQL never grants execute on {fn} to anon — the site cannot call it")
 notes.append(f"  database: {len(sig)} functions defined, {call_sites} call sites checked against them")
 
+# --- the lesson template (PDF per chapter, and the content it must show) ------
+LESSON_JS = (SITE / "assets/js/learn.js").read_text(encoding="utf-8")
+LESSON_HTML = (SITE / "learn.html").read_text(encoding="utf-8")
+try:
+    chapters = json.loads((SITE / "data/lessons.js").read_text(encoding="utf-8")
+                          .split("=", 1)[1].rsplit(";", 1)[0].strip())
+except Exception as e:
+    chapters = []
+    problems.append(f"data/lessons.js is not readable: {e}")
+
+if "IPL_DATA" not in LESSON_JS:
+    problems.append("learn.js does not render from the built data (IPL_DATA)")
+if re.search(r"['\"](?:ch\d+|ref-\w+)-l\d+['\"]", LESSON_JS):
+    problems.append("learn.js hard-codes a lesson id — lessons must come from the data")
+if "assets/css/lesson.css" not in LESSON_HTML:
+    problems.append("learn.html does not load the lesson stylesheet")
+if "Space+Grotesk" not in LESSON_HTML:
+    problems.append("learn.html does not load the display font")
+for needle, msg in (("data-src", "the PDF is not lazy-loaded"),
+                    ("IntersectionObserver", "no lazy/scroll observer in learn.js"),
+                    ("lk-progress", "no progress bar in the lesson template")):
+    if needle not in LESSON_JS:
+        problems.append(f"learn.js: {msg}")
+
+try:
+    import pymupdf
+    have_pdf_lib = True
+except Exception:
+    have_pdf_lib = False
+
+lesson_count = 0
+for ch in chapters:
+    pdf = SITE / "library/chapters" / f"{ch['id']}.pdf"
+    want = ch["pages"]["to"] - ch["pages"]["from"] + 1
+    if not pdf.exists():
+        problems.append(f"missing chapter PDF: library/chapters/{ch['id']}.pdf")
+    elif have_pdf_lib:
+        with pymupdf.open(pdf) as doc:
+            if doc.page_count != want:
+                problems.append(f"{ch['id']}.pdf has {doc.page_count} pages, chapter says {want}")
+    kb = pdf.stat().st_size / 1024 if pdf.exists() else 0
+    if pdf.exists() and kb < 20:
+        problems.append(f"{ch['id']}.pdf looks empty ({kb:.0f} KB)")
+    for les in ch.get("lessons", []):
+        lesson_count += 1
+        lid = les.get("id", "?")
+        obj = (les.get("objectives") or {}).get("en") or []
+        plain = (les.get("plain") or {}).get("en") or []
+        if not 3 <= len(obj) <= 5:
+            problems.append(f"{lid}: {len(obj)} learning objectives (the template asks for 3–5)")
+        if len(les.get("terms") or []) < 3:
+            problems.append(f"{lid}: fewer than 3 key terms")
+        if len(plain) < 3:
+            problems.append(f"{lid}: fewer than 3 plain-language points")
+        if len(les.get("quotes") or []) < 1:
+            problems.append(f"{lid}: no quotes")
+        if not les.get("quiz"):
+            problems.append(f"{lid}: no quiz questions")
+        for pair in ("objectives", "plain", "keyPoints"):
+            v = les.get(pair) or {}
+            if not v.get("km") or not v.get("en"):
+                problems.append(f"{lid}: {pair} is not in both languages")
+notes.append(f"  lessons: {lesson_count} checked · chapter PDFs: {len(chapters)}")
+
 print("\n".join(notes))
 print()
 if problems:

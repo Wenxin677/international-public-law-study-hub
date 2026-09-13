@@ -16,7 +16,8 @@ const outIdx = argv.indexOf('--out');
 const OUT = outIdx > -1 ? argv[outIdx + 1] : null;
 const wIdx = argv.indexOf('--width');
 const WIDTH = wIdx > -1 ? Number(argv[wIdx + 1]) : 1280;
-const [page, selector] = argv.filter((a, i) => !a.startsWith('--') && i !== outIdx + 1 && i !== wIdx + 1);
+const [page, selector] = argv.filter((a, i) => !a.startsWith('--') &&
+  !(outIdx > -1 && i === outIdx + 1) && !(wIdx > -1 && i === wIdx + 1));
 if (!page || !selector) { console.error('usage: rect_probe.mjs <page> <selector> [--out DIR] [--width N]'); process.exit(2); }
 
 const CHROME = [

@@ -189,6 +189,17 @@
   }
 
   /* ---------------------------------------------------------------- viewer */
+  /** expand a viewer to the whole screen; the same button brings you back */
+  function wireFullscreen(btnSel, stageSel) {
+    const b = qs(btnSel), s = qs(stageSel);
+    if (!b || !s) return;
+    b.addEventListener('click', function () {
+      if (document.fullscreenElement) { if (document.exitFullscreen) document.exitFullscreen(); return; }
+      const req = s.requestFullscreen || s.webkitRequestFullscreen;
+      if (req) { try { req.call(s); } catch (e) { /* the browser refused; nothing to do */ } }
+    });
+  }
+
   function pdfCard() {
     const c = current.chapter, l = current.lesson;
     return '<section class="lk-card lk-pdf-card lk-reveal" data-sec="pdf" id="lk-pdf">' +
@@ -199,6 +210,7 @@
         '<button class="lk-btn" id="lk-open" type="button">↗ ' + esc(t('lib.open')) + '</button>' +
       '</div>' +
       '<div class="lk-pdf-stage" id="lk-stage">' +
+        '<button class="lk-fs" id="lk-fs" type="button" title="' + esc(t('learn.expand')) + '" aria-label="' + esc(t('learn.expand')) + '">⤢</button>' +
         '<div class="lk-skel" id="lk-skel">📕<br>' + esc(t('lib.loading')) + '</div>' +
         '<iframe data-src="' + slideUrl(ui.slide) + '" title="' + esc(pick(l.title)) + '" loading="lazy"></iframe>' +
       '</div>' +
@@ -307,7 +319,9 @@
           }).join('') + '</ol>' +
         '</div>' +
         '<div class="wk-panel">' +
-          '<div class="wk-stage"><iframe id="wk-pdf" title="' + esc(t('wk.slides')) + '" loading="lazy"></iframe></div>' +
+          '<div class="wk-stage">' +
+            '<button class="lk-fs" id="wk-fs" type="button" title="' + esc(t('learn.expand')) + '" aria-label="' + esc(t('learn.expand')) + '">⤢</button>' +
+            '<iframe id="wk-pdf" title="' + esc(t('wk.slides')) + '" loading="lazy"></iframe></div>' +
           '<div class="wk-sum">' +
             '<div class="wk-bar">' +
               '<span class="pill" id="wk-count"></span>' +
@@ -363,6 +377,7 @@
     });
     qs('#wk-prev').addEventListener('click', function () { wkStep(-1); });
     qs('#wk-next').addEventListener('click', function () { wkStep(1); });
+    wireFullscreen('#wk-fs', '.wk-stage');
     const rt = qs('#lk-rail-toggle');
     if (rt) rt.addEventListener('click', function () {
       const wrap = qs('#rail-wrap');
@@ -414,6 +429,7 @@
 
     qs('#lk-prev').addEventListener('click', function () { goto(ui.slide - 1); });
     qs('#lk-next').addEventListener('click', function () { goto(ui.slide + 1); });
+    wireFullscreen('#lk-fs', '#lk-stage');
     qs('#lk-open').addEventListener('click', function () { window.open(slideUrl(ui.slide), '_blank', 'noopener'); });
     qs('#lk-chapter').addEventListener('click', function () { window.open(chapterPdf(current.chapter), '_blank', 'noopener'); });
 

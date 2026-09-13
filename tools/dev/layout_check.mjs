@@ -20,9 +20,9 @@ const WIDTHS = (widthsArg > -1 ? argv[widthsArg + 1] : '360,768,1280').split(','
 const shotIdx = argv.indexOf('--shots');
 const SHOT_DIR = shotIdx > -1 ? argv[shotIdx + 1] : null;
 const SHOT_WIDTHS = [412, 1280];
-const SHOT_PAGES = ['dashboard.html', 'quiz.html', 'learn.html'];
+const SHOT_PAGES = ['dashboard.html', 'quiz.html', 'learn.html', 'library.html'];
 const PAGES = argv.filter((a, i) => !a.startsWith('--') &&
-  i !== widthsArg + 1 && !(shotIdx > -1 && i === shotIdx + 1));
+  !(widthsArg > -1 && i === widthsArg + 1) && !(shotIdx > -1 && i === shotIdx + 1));
 if (!PAGES.length) PAGES.push('dashboard.html', 'quiz.html', 'learn.html');
 
 const CHROME = [

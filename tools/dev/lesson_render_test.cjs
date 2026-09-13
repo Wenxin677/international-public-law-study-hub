@@ -75,6 +75,7 @@ check('the rail lists all chapters and lessons',
 console.log('\n— the lesson slides —');
 const frame = d.querySelector('#lk-pdf iframe');
 check('the PDF viewer is embedded', !!frame);
+check('the viewer can be expanded to full screen', !!d.querySelector('#lk-fs'));
 const src = frame ? (frame.getAttribute('src') || frame.getAttribute('data-src') || '') : '';
 const slides = lesson.pages.to - lesson.pages.from + 1;
 check('it shows the lesson\'s own slides, not the whole chapter',

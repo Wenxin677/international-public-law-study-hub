@@ -58,6 +58,7 @@ check('no Khmer label carries the source PDF artefacts',
 
 console.log('\n— the view —');
 check('the split view rendered', !!d.querySelector('.wk-split'));
+check('the slide can be expanded to full screen', !!d.querySelector('#wk-fs'));
 check('the slide list has one entry per slide',
   d.querySelectorAll('#wk-list button').length === week.slides.length,
   d.querySelectorAll('#wk-list button').length + ' entries');

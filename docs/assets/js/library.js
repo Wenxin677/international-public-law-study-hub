@@ -242,6 +242,8 @@
   document.addEventListener('DOMContentLoaded', function () {
     if (!I.guard()) return;
     I.renderChrome('library.html');
+    /* lets the stylesheet give the document viewer a wider page on big screens */
+    document.body.classList.add('lib-open');
     if (!LIB.sources.length) {
       qs('#viewer').innerHTML = '<div class="viewer-body muted">' + esc(t('common.loading')) + '</div>';
       return;

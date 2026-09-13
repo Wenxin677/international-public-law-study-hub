@@ -25,7 +25,7 @@ const SITE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../d
 const argv = process.argv.slice(2);
 const wIdx = argv.indexOf('--width');
 const WIDTH = wIdx > -1 ? Number(argv[wIdx + 1]) : 390;
-const PAGES = argv.filter((a, i) => !a.startsWith('--') && i !== wIdx + 1);
+const PAGES = argv.filter((a, i) => !a.startsWith('--') && !(wIdx > -1 && i === wIdx + 1));
 if (!PAGES.length) {
   PAGES.push('index.html', 'signin.html', 'dashboard.html', 'learn.html', 'quiz.html',
     'teacher.html', 'library.html', 'glossary.html', 'about.html', 'admin.html');

@@ -162,8 +162,11 @@
 
 /* ----------------------------------------------------------- the grid */
 .lk-grid { display: grid; gap: 18px; }
+/* the slide viewer is the point of this page: it gets most of the width, and on
+   the lesson routes the page itself is allowed to use a wide screen */
+body.lk-open .wrap { max-width: min(1640px, 96vw); }
 @media (min-width: 900px) {
-  .lk-grid.split { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: start; }
+  .lk-grid.split { grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); align-items: start; }
   .lk-grid.split > .lk-pdf-card { position: sticky; top: calc(var(--lk-stick, 56px) + 74px); }
 }
 
@@ -246,11 +249,21 @@
   overflow: hidden;
   border: 1px solid var(--lk-line);
   background: #0d1020;
-  height: 68vh;
-  min-height: 340px;
+  height: 78vh;
+  min-height: 440px;
 }
-@media (max-width: 640px) { .lk-pdf-stage { height: 58vh; min-height: 300px; } }
+@media (max-width: 640px) { .lk-pdf-stage { height: 64vh; min-height: 340px; } }
 .lk-pdf-stage iframe { width: 100%; height: 100%; border: 0; display: block; }
+/* one-click expand for every viewer */
+.lk-fs {
+  position: absolute; right: 10px; top: 10px; z-index: 4;
+  display: inline-grid; place-items: center; width: 40px; min-width: 40px; height: 40px;
+  border-radius: 11px; border: 1px solid var(--lk-line); background: rgba(11, 15, 34, .78);
+  color: #eaf0ff; font-size: 1rem; cursor: pointer; backdrop-filter: blur(4px);
+}
+.lk-fs:hover { border-color: var(--lk-1); }
+.lk-pdf-stage:fullscreen, .wk-stage:fullscreen { height: 100%; width: 100%; border-radius: 0; aspect-ratio: auto; min-height: 0; background: #0d1020; }
+.lk-pdf-stage:fullscreen iframe, .wk-stage:fullscreen iframe { height: 100%; }
 .lk-skel {
   position: absolute;
   inset: 0;
@@ -412,7 +425,7 @@
 .wk-note { color: var(--lk-dim); font-size: .86rem; margin: 0; }
 .wk-split { display: grid; gap: 16px; }
 @media (min-width: 900px) {
-  .wk-split { grid-template-columns: 300px minmax(0, 1fr); align-items: start; }
+  .wk-split { grid-template-columns: 220px minmax(0, 1fr); align-items: start; }
 }
 .wk-listwrap {
   border: 1px solid var(--lk-line); border-radius: 18px; background: var(--lk-card);
@@ -437,8 +450,13 @@
 .wk-list button.active .n { background: var(--lk-grad); color: #05091a; }
 .wk-panel { display: grid; gap: 14px; min-width: 0; }
 .wk-stage {
-  border: 1px solid var(--lk-line); border-radius: 18px; overflow: hidden; background: #fff;
-  aspect-ratio: 16 / 9;
+  position: relative;
+  border: 1px solid var(--lk-line); border-radius: 18px; overflow: hidden;
+  background: #0d1020;                       /* dark surround, like the lesson viewer */
+  /* An explicit height, NOT aspect-ratio + min-height: with both, the box derives
+     its own width from the height (522px -> 928px wide) and overflows every column. */
+  width: 100%;
+  height: clamp(340px, 58vh, 720px);
 }
 .wk-stage iframe { width: 100%; height: 100%; border: 0; display: block; }
 .wk-sum {

@@ -570,7 +570,8 @@ ul.point-list li::before { content: "◆"; color: var(--gold); flex: none; font-
 .reader-page.km { font-family: var(--font-km); line-height: 2.05; }
 .pager { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .pager input[type="range"] { flex: 1; min-width: 130px; accent-color: var(--accent); }
-.pdf-frame { width: 100%; height: min(78dvh, 900px); border: 0; background: #525659; }
+.pdf-frame { width: 100%; height: min(86dvh, 1040px); border: 0; background: #525659; }
+body.lib-open .wrap { max-width: min(1600px, 96vw); }
 /* page viewer: pager row, display picker, loading veil, fallback card */
 .lib-pager { justify-content: space-between; margin-bottom: 14px; gap: 10px; }
 .lib-pager .input#goto { width: 132px; min-height: 44px; }

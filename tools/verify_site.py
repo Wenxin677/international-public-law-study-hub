@@ -310,6 +310,38 @@ for name, html in html_text.items():
 
 notes.append(f"  a11y: {len(html_files)} pages · skip links + main ids · focus ring · {img_total} images with alt")
 
+# ----------------------------------------------------------- 10. weekly classes
+WEEKLY_JS = SITE / "data/weekly.js"
+if not WEEKLY_JS.exists():
+    problems.append("data/weekly.js is missing — run tools/build_weekly.py")
+else:
+    wj = WEEKLY_JS.read_text(encoding="utf-8")
+    wdata = json.loads(re.search(r"window\.IPL_WEEKLY\s*=\s*(\{.*\});?\s*$", wj, re.S).group(1))
+    # the deck's own text layer is corrupt, so a Khmer label carrying one of the
+    # source artefacts would ship visibly broken Khmer
+    artefacts = ["អនតរ", "កនុង", "ដលែ", "ដដ្យ", "ប្ប", "សប្ា", "នន", "ចាប់កនុង", "រឋែ"]
+    wk_slides = 0
+    for w in wdata.get("weeks", []):
+        deck = SITE / w["deck"]
+        if not deck.exists():
+            problems.append(f"weekly {w['id']}: deck missing at {w['deck']}")
+        else:
+            import pymupdf
+            with pymupdf.open(str(deck)) as doc:
+                if doc.page_count != w["pages"]:
+                    problems.append(f"weekly {w['id']}: deck has {doc.page_count} pages, data says {w['pages']}")
+        want = [n for n in range(1, w["pages"] + 1) if n not in (w.get("skip") or [])]
+        if [s["n"] for s in w["slides"]] != want:
+            problems.append(f"weekly {w['id']}: slides do not cover the deck (skipped {w.get('skip')})")
+        for s in w["slides"]:
+            wk_slides += 1
+            if len((s.get("summary") or "").strip()) < 40:
+                problems.append(f"weekly {w['id']} slide {s['n']}: summary missing")
+            bad = [a for a in artefacts if a in (s.get("km") or "")]
+            if bad:
+                problems.append(f"weekly {w['id']} slide {s['n']}: Khmer label carries source artefacts {bad}")
+    notes.append(f"  weekly: {len(wdata.get('weeks', []))} deck(s) · {wk_slides} slides with summaries · labels clean")
+
 print("\n".join(notes))
 print()
 if problems:

@@ -9,10 +9,12 @@
    ========================================================================== */
 
 :root {
-  --g1: #8b5cf6;          /* electric violet */
-  --g2: #ec4899;          /* hot pink */
-  --g3: #22d3ee;          /* cyan */
-  --g-grad: linear-gradient(100deg, var(--g1), var(--g2) 55%, var(--g3));
+  /* dashboard/quiz accents come from the site's own palette (sky + gold) so the
+     sections read as one product; the lessons keep their own violet accent */
+  --g1: var(--sky-400);
+  --g2: var(--sky-500);
+  --g3: var(--sky-300);
+  --g-grad: linear-gradient(100deg, var(--sky-300), var(--sky-500));
   --r-card: 20px;
   --pad-card: clamp(16px, 3vw, 24px);
   --gap-sec: clamp(16px, 2.6vw, 26px);
@@ -167,13 +169,16 @@
 .stat-big.grad { background: var(--g-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .stat-big.muted { color: var(--muted); font-size: clamp(1.7rem, 4.6vw, 2.3rem); }
 
-/* the one card that should catch the eye: gradient ring + soft glow */
+/* the one card that should catch the eye: a gradient ring and a soft glow.
+   The inner layer must be OPAQUE — a translucent panel let the ring's gradient
+   bleed through the whole card (it measured rgb(106,94,122) instead of the site
+   navy) and dropped the gold pill inside it to 3.52:1, under AA. */
 .sec-card.hero {
-  background-image: linear-gradient(var(--panel), var(--panel)), var(--g-grad);
+  background-image: linear-gradient(var(--bg-soft), var(--bg-soft)), var(--grad);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   border: 2px solid transparent;
-  box-shadow: 0 16px 40px rgba(139, 92, 246, .22);
+  box-shadow: 0 16px 40px rgba(74, 125, 219, .26);
 }
 .hero-title { font-family: 'Space Grotesk', 'Poppins', sans-serif; font-size: clamp(1.25rem, 3.4vw, 1.7rem); font-weight: 700; margin: 12px 0 6px; letter-spacing: -.01em; }
 .hero-cta { margin-top: 18px; }

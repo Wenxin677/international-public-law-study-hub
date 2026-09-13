@@ -68,7 +68,7 @@ check('the hero title is the lesson title', (d.querySelector('.lk-title') || {})
   (d.querySelector('.lk-title') || {}).textContent.trim().slice(0, 40));
 check('the generic page heading is replaced', d.body.classList.contains('lk-open'));
 check('the rail lists all chapters and lessons',
-  d.querySelectorAll('#rail .ch').length === data.length &&
+  d.querySelectorAll('#rail .ch:not(.wk-group)').length === data.length &&
   d.querySelectorAll('#rail [data-lesson]').length === data.reduce((n, c) => n + c.lessons.length, 0),
   d.querySelectorAll('#rail [data-lesson]').length + ' lessons');
 
@@ -164,24 +164,27 @@ check('finishing the walk-through marks the lesson studied',
   d.querySelector('#mark-btn').textContent.trim());
 
 console.log('\n— the left rail (the bit that was broken) —');
+/* the rail now opens with a Weekly Classes group, so chapter assertions are
+   scoped with :not(.wk-group) — the group itself is covered by weekly_test.cjs */
 check('chapters render as the accordion the stylesheet expects',
-  d.querySelectorAll('#rail .ch').length === data.length, d.querySelectorAll('#rail .ch').length + ' chapters');
+  d.querySelectorAll('#rail .ch:not(.wk-group)').length === data.length,
+  d.querySelectorAll('#rail .ch:not(.wk-group)').length + ' chapters');
 check('each chapter has a numbered header button',
-  d.querySelectorAll('#rail .ch > button .n').length === data.length);
+  d.querySelectorAll('#rail .ch:not(.wk-group) > button .n').length === data.length);
 check('lessons live in the .ls list the stylesheet shows/hides',
-  d.querySelectorAll('#rail .ls').length === data.length);
+  d.querySelectorAll('#rail .ch:not(.wk-group) .ls').length === data.length);
 check('the current chapter is open',
-  d.querySelectorAll('#rail .ch.open').length === 1 &&
-  d.querySelector('#rail .ch.open .ls a.active') !== null);
+  d.querySelectorAll('#rail .ch:not(.wk-group).open').length === 1 &&
+  d.querySelector('#rail .ch:not(.wk-group).open .ls a.active') !== null);
 check('the open lesson is the one on screen',
   (d.querySelector('#rail .ls a.active') || {}).getAttribute('href') === '#' + lesson.id,
   (d.querySelector('#rail .ls a.active') || {}).getAttribute('href'));
 check('every lesson is listed with its dot marker',
-  d.querySelectorAll('#rail .ls a .dot').length === data.reduce((n, c) => n + c.lessons.length, 0));
+  d.querySelectorAll('#rail .ch:not(.wk-group) .ls a .dot').length === data.reduce((n, c) => n + c.lessons.length, 0));
 check('clicking a chapter header collapses it', (function () {
-  const btn = d.querySelector('#rail .ch.open > button');
+  const btn = d.querySelector('#rail .ch:not(.wk-group).open > button');
   btn.dispatchEvent(new window.Event('click', { bubbles: true }));
-  const closed = d.querySelectorAll('#rail .ch.open').length === 0;
+  const closed = d.querySelectorAll('#rail .ch:not(.wk-group).open').length === 0;
   btn.dispatchEvent(new window.Event('click', { bubbles: true }));
   return closed;
 })());

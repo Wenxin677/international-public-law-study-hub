@@ -22,6 +22,8 @@
   /* docs/assets/js/data.js assembles the generated files into this object */
   const D = window.IPL_DATA || {};
   const chapters = D.chapters || [];
+  const W = window.IPL_WEEKLY || { weeks: [] };
+  const weeks = W.weeks || [];
 
   let current = null;          // { chapter, lesson }
   let ui = null;               // per-lesson view state
@@ -38,7 +40,16 @@
     const rail = qs('#rail');
     if (!rail) return;
     const done = I.getProgress().lessons || {};
-    rail.innerHTML = chapters.map(function (c) {
+    /* the weekly classes sit above the chapters: they are the newest material */
+    const wkHtml = weeks.length ? '<div class="ch wk-group open">' +
+      '<button type="button" data-ch="weekly"><span class="n">★</span>' +
+      '<span class="ct">' + esc(t('wk.title')) + '</span></button>' +
+      '<div class="ls">' + weeks.map(function (w) {
+        const active = ui && ui.week === w.id;
+        return '<a href="#w=' + w.id + '" data-week="' + w.id + '" class="' + (active ? 'active' : '') + '">' +
+          '<span class="dot"></span><span class="tt">' + esc(pick(w.title)) + '</span></a>';
+      }).join('') + '</div></div>' : '';
+    rail.innerHTML = wkHtml + chapters.map(function (c) {
       const open = current && current.chapter.id === c.id;
       const items = (c.lessons || []).map(function (l) {
         const active = current && current.lesson.id === l.id;
@@ -56,6 +67,9 @@
     });
     qsa('[data-lesson]', rail).forEach(function (a) {
       a.addEventListener('click', function (e) { e.preventDefault(); location.hash = '#' + a.dataset.lesson; });
+    });
+    qsa('[data-week]', rail).forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); location.hash = '#w=' + a.dataset.week; });
     });
     const active = qs('.ls a.active', rail);
     if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest' });
@@ -268,6 +282,115 @@
       '<button class="lk-btn" id="print-btn" type="button">🖨 ' + esc(t('common.print')) + '</button></div>';
   }
 
+  /* ---------------------------------------------------------- weekly classes
+     A week is a slide deck: pick a slide on the left, read its summary on the
+     right while the real slide is shown above it. Labels and summaries come from
+     content/weekly/*.json via tools/build_weekly.py. */
+  function wkSlideList(w) { return (w.slides || []).slice(); }
+
+  function weeklyHtml(w) {
+    const list = wkSlideList(w);
+    return '<div class="wk">' +
+      '<div class="wk-head">' +
+        '<span class="pill gold">★ ' + esc(t('wk.title')) + '</span>' +
+        '<h1>' + esc(pick(w.title)) + '</h1>' +
+        '<p class="wk-topic">' + esc(pick(w.topic)) + '</p>' +
+        (w.note ? '<p class="wk-note">' + esc(pick(w.note)) + '</p>' : '') +
+      '</div>' +
+      '<div class="wk-split">' +
+        '<div class="wk-listwrap">' +
+          '<div class="wk-listhead">' + esc(t('wk.pick')) + ' · ' + w.pages + ' ' + esc(t('wk.slides')) + '</div>' +
+          '<ol class="wk-list" id="wk-list">' + list.map(function (s) {
+            return '<li><button type="button" data-slide="' + s.n + '">' +
+              '<span class="n">' + s.n + '</span>' +
+              '<span class="lb">' + esc(I.state.lang === 'km' && s.km ? s.km : s.en) + '</span></button></li>';
+          }).join('') + '</ol>' +
+        '</div>' +
+        '<div class="wk-panel">' +
+          '<div class="wk-stage"><iframe id="wk-pdf" title="' + esc(t('wk.slides')) + '" loading="lazy"></iframe></div>' +
+          '<div class="wk-sum">' +
+            '<div class="wk-bar">' +
+              '<span class="pill" id="wk-count"></span>' +
+              '<span class="spacer"></span>' +
+              '<button class="lk-btn" id="wk-prev" type="button" aria-label="' + esc(t('wk.prev')) + '">← ' + esc(t('wk.prev')) + '</button>' +
+              '<button class="lk-btn" id="wk-next" type="button" aria-label="' + esc(t('wk.next')) + '">' + esc(t('wk.next')) + ' →</button>' +
+            '</div>' +
+            '<h2 id="wk-title"></h2>' +
+            '<p id="wk-summary"></p>' +
+            '<div class="wk-actions"><a class="cite" id="wk-open" target="_blank" rel="noopener">📄 ' + esc(t('wk.openPdf')) + '</a></div>' +
+          '</div>' +
+        '</div>' +
+      '</div></div>';
+  }
+
+  function wkShow(w, n) {
+    const list = wkSlideList(w);
+    const s = list.filter(function (x) { return x.n === n; })[0] || list[0];
+    if (!s) return;
+    ui.slide = s.n;
+    I.sSet('wk:' + w.id, String(s.n));
+    qsa('#wk-list button').forEach(function (b) {
+      b.classList.toggle('active', +b.dataset.slide === s.n);
+    });
+    const frame = qs('#wk-pdf');
+    const url = w.deck + '#page=' + s.n + '&zoom=page-width&view=FitH';
+    if (frame && frame.getAttribute('src') !== url) frame.setAttribute('src', url);
+    const count = qs('#wk-count');
+    if (count) count.textContent = t('wk.slide') + ' ' + s.n + ' ' + t('quiz.of') + ' ' + w.pages;
+    const title = qs('#wk-title');
+    if (title) title.textContent = I.state.lang === 'km' && s.km ? s.km : s.en;
+    const sum = qs('#wk-summary');
+    if (sum) sum.textContent = s.summary;
+    const open = qs('#wk-open');
+    if (open) open.setAttribute('href', w.deck + '#page=' + s.n);
+    renderRail();
+  }
+
+  function wkStep(delta) {
+    const w = weeks.filter(function (x) { return ui && x.id === ui.week; })[0];
+    if (!w) return;
+    const list = wkSlideList(w);
+    const i = list.findIndex ? list.findIndex(function (s) { return s.n === ui.slide; })
+                             : list.map(function (s) { return s.n; }).indexOf(ui.slide);
+    const next = Math.max(0, Math.min(list.length - 1, i + delta));
+    if (list[next]) wkShow(w, list[next].n);
+  }
+
+  function wireWeekly(w) {
+    stickyOffset();
+    qsa('#wk-list button').forEach(function (b) {
+      b.addEventListener('click', function () { wkShow(w, +b.dataset.slide); });
+    });
+    qs('#wk-prev').addEventListener('click', function () { wkStep(-1); });
+    qs('#wk-next').addEventListener('click', function () { wkStep(1); });
+    const rt = qs('#lk-rail-toggle');
+    if (rt) rt.addEventListener('click', function () {
+      const wrap = qs('#rail-wrap');
+      if (wrap) wrap.classList.toggle('open');
+    });
+    const wrap = qs('#rail-wrap');
+    if (wrap) wrap.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('.ls a')) wrap.classList.remove('open');
+    });
+  }
+
+  function renderWeekly(w) {
+    const host = qs('#lesson');
+    if (!host) return;
+    current = null;
+    const list = wkSlideList(w);
+    const saved = parseInt(I.sGet('wk:' + w.id, ''), 10);
+    const start = list.filter(function (s) { return s.n === saved; })[0] || list[0];
+    ui = { week: w.id, slide: start ? start.n : 0, step: 0, guided: false, seen: {}, marked: false };
+    document.body.classList.add('lk-open');
+    host.className = 'lesson-body lesson-page';
+    host.innerHTML = weeklyHtml(w);
+    wireWeekly(w);
+    wkShow(w, ui.slide);
+    renderRail();
+    document.title = pick(w.title) + ' · RoboCL';
+  }
+
   /* ----------------------------------------------------------------- view */
   function render() {
     const host = qs('#lesson');
@@ -322,8 +445,8 @@
     });
     qs('#print-btn').addEventListener('click', function () { window.print(); });
 
-    /* arrow keys walk the guided lesson, unless you are typing in the notes */
-    document.addEventListener('keydown', onKey);
+    /* arrow keys walk the guided lesson, unless you are typing in the notes.
+       Registered once in the page init, because both views need it. */
     if (I.commandPalette) {
       I.commandPalette(chapters.flatMap(function (c) {
         return c.lessons.map(function (l) { return { kind: t('learn.title'), text: pick(l.title), href: '#' + l.id }; });
@@ -335,6 +458,11 @@
   function onKey(e) {
     const tag = (e.target && e.target.tagName) || '';
     if (tag === 'TEXTAREA' || tag === 'INPUT') return;
+    if (ui && ui.week) {                       /* weekly view: arrows walk the slides */
+      if (e.key === 'ArrowRight') { e.preventDefault(); wkStep(1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); wkStep(-1); }
+      return;
+    }
     if (e.key === 'ArrowRight') { guideGo(1); }
     else if (e.key === 'ArrowLeft') { guideGo(-1); }
   }
@@ -433,7 +561,14 @@
     return null;
   }
 
-  function show(id) {
+  function show(hash) {
+    /* the weekly classes are routed by '#w=<week id>' */
+    const m = /^w=(.+)$/.exec(hash || '');
+    if (m) {
+      const w = weeks.filter(function (x) { return x.id === m[1]; })[0];
+      if (w) { renderWeekly(w); return; }
+    }
+    const id = hash;
     const found = findLesson(id) || (chapters[0] && chapters[0].lessons[0] && findLesson(chapters[0].lessons[0].id));
     if (!found) return;
     current = found;
@@ -453,8 +588,11 @@
   document.addEventListener('DOMContentLoaded', function () {
     I.guard();
     I.renderChrome('learn.html');
-    const id = location.hash.replace('#', '') || (chapters[0] && chapters[0].lessons[0] && chapters[0].lessons[0].id);
-    show(id);
+    /* one keyboard handler for both views: it branches on the current one */
+    document.addEventListener('keydown', onKey);
+    const initial = location.hash.replace('#', '') ||
+      (chapters[0] && chapters[0].lessons[0] && chapters[0].lessons[0].id);
+    show(initial);
     window.addEventListener('hashchange', function () { show(location.hash.replace('#', '')); });
     window.addEventListener('resize', stickyOffset);
   });

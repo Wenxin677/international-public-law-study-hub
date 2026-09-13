@@ -20,7 +20,7 @@ const WIDTHS = (widthsArg > -1 ? argv[widthsArg + 1] : '360,768,1280').split(','
 const shotIdx = argv.indexOf('--shots');
 const SHOT_DIR = shotIdx > -1 ? argv[shotIdx + 1] : null;
 const SHOT_WIDTHS = [412, 1280];
-const SHOT_PAGES = ['dashboard.html', 'quiz.html'];
+const SHOT_PAGES = ['dashboard.html', 'quiz.html', 'learn.html'];
 const PAGES = argv.filter((a, i) => !a.startsWith('--') &&
   i !== widthsArg + 1 && !(shotIdx > -1 && i === shotIdx + 1));
 if (!PAGES.length) PAGES.push('dashboard.html', 'quiz.html', 'learn.html');
@@ -162,13 +162,15 @@ try {
   await send('Runtime.enable');
 
   for (const page of PAGES) {
-    const file = 'file:///' + path.join(SITE, page).replace(/\\/g, '/');
+    /* a page may carry a route, e.g. 'learn.html#w=week1' */
+    const [pageName, hash] = page.split('#');
+    const file = 'file:///' + path.join(SITE, pageName).replace(/\\/g, '/') + (hash ? '#' + hash : '');
     await send('Page.navigate', { url: file });
     await sleep(700);
     /* signin.html bounces a signed-in visitor to the dashboard, so audit it
        the way a real new visitor sees it */
     await send('Runtime.evaluate', {
-      expression: page === 'signin.html'
+      expression: pageName === 'signin.html'
         ? "localStorage.removeItem('robo.session'); 'cleared'"
         : SEED
     });
@@ -179,7 +181,7 @@ try {
       await sleep(1500); /* let the page scripts render */
       const r = await send('Runtime.evaluate', { expression: MEASURE, returnByValue: true });
       const v = JSON.parse(r.result.value);
-      const landed = v.url === page;
+      const landed = v.url === pageName;
       /* On a phone, Chrome widens the layout viewport when content refuses to
          shrink — so a viewport wider than the one we asked for IS the overflow,
          just hidden from scrollWidth. */
@@ -195,7 +197,7 @@ try {
       if (v.overflow.length) v.overflow.forEach((o) => console.log('            └ ' + o));
 
       /* the dashboard has a shape we can assert, not just eyeball */
-      if (page === 'dashboard.html' && v.dashCols) {
+      if (pageName === 'dashboard.html' && v.dashCols) {
         const cw = v.cardWidths;
         const equal = cw.length === 3 && Math.max(...cw) - Math.min(...cw) <= 3;
         const single = cw.length === 3 && Math.abs(cw[0] - (v.vw - 28)) <= 40 && equal;
@@ -209,7 +211,7 @@ try {
       }
 
       /* the question screen: one question, four full-width cards, even spacing */
-      if (page === 'quiz.html') {
+      if (pageName === 'quiz.html') {
         const q = await send('Runtime.evaluate', { expression: QUIZ_PROBE, returnByValue: true });
         const qv = JSON.parse(q.result.value);
         const want = new Map([
@@ -230,10 +232,10 @@ try {
       }
 
       /* optional: pictures of the real page, for a human to look at */
-      if (SHOT_DIR && SHOT_PAGES.includes(page) && SHOT_WIDTHS.includes(w)) {
+      if (SHOT_DIR && SHOT_PAGES.includes(pageName) && SHOT_WIDTHS.includes(w)) {
         const cap = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true });
         mkdirSync(SHOT_DIR, { recursive: true });
-        const file = path.join(SHOT_DIR, `${page.replace('.html', '')}-${w}.png`);
+        const file = path.join(SHOT_DIR, `${page.replace('.html', '').replace(/#/g, '-')}-${w}.png`);
         writeFileSync(file, Buffer.from(cap.data, 'base64'));
         console.log(`            📷 ${file}`);
       }

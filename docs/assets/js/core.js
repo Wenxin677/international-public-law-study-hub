@@ -234,6 +234,13 @@
       'learn.inChapter': 'ក្នុងជំពូក',
       'learn.studied': 'បានរៀនរួច',
       'learn.keypoints': 'ចំណុចសំខាន់',
+      'wk.title': 'ថ្នាក់ប្រចាំសប្តាហ៍',
+      'wk.pick': 'ជ្រើសស្លាយ',
+      'wk.slides': 'ស្លាយ',
+      'wk.slide': 'ស្លាយ',
+      'wk.prev': 'មុន',
+      'wk.next': 'បន្ទាប់',
+      'wk.openPdf': 'បើកឯកសារដើម',
       'learn.quotes': 'សម្រង់ពីសៀវភៅ',
       'learn.terms': 'ពាក្យបច្ចេកទេស',
       'learn.quiz': 'ធ្វើតេស្តមេរៀននេះ',
@@ -643,6 +650,13 @@
       'learn.inChapter': 'in this chapter',
       'learn.studied': 'Marked as studied',
       'learn.keypoints': 'Key points',
+      'wk.title': 'Weekly Classes',
+      'wk.pick': 'Pick a slide',
+      'wk.slides': 'slides',
+      'wk.slide': 'Slide',
+      'wk.prev': 'Previous',
+      'wk.next': 'Next',
+      'wk.openPdf': 'Open the original deck',
       'learn.quotes': 'Quotes from the book',
       'learn.terms': 'Key terms',
       'learn.quiz': 'Quiz this lesson',
@@ -1017,7 +1031,20 @@
     if (html != null) n.innerHTML = html;
     return n;
   }
-  function truncate(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n - 1) + '…' : s; }
+  /* Truncating by character count can cut a Khmer cluster in half: a trailing
+     coeng or dependent vowel then renders as a dotted circle, which a student
+     reads as garbled text (the quiz titles hit this). Never end on a mark. */
+  function isKhmerMark(ch) {
+    const c = ch.charCodeAt(0);
+    return c === 0x17D2 || (c >= 0x17B4 && c <= 0x17D3) || c === 0x17DD;
+  }
+  function truncate(s, n) {
+    s = String(s || '');
+    if (s.length <= n) return s;
+    let cut = s.slice(0, n - 1);
+    while (cut.length && isKhmerMark(cut[cut.length - 1])) cut = cut.slice(0, -1);
+    return cut + '…';
+  }
   /* RFC-4180 cell: quote when needed and neutralise spreadsheet formulas, so an
      exported CSV cannot execute anything when it is opened in Excel/Sheets */
   function csvCell(v) {

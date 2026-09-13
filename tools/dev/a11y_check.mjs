@@ -259,7 +259,9 @@ try {
 
   const totals = { contrast: 0, targets: 0, alt: 0, heads: 0, inputs: 0, focus: 0, lang: 0 };
   for (const page of PAGES) {
-    const file = 'file:///' + path.join(SITE, page).replace(/\\/g, '/');
+    /* a page may carry a route, e.g. 'learn.html#w=week1' */
+    const [pageName, hash] = page.split('#');
+    const file = 'file:///' + path.join(SITE, pageName).replace(/\\/g, '/') + (hash ? '#' + hash : '');
     await send('Page.navigate', { url: file });
     await sleep(700);
     await send('Runtime.evaluate', { expression: SEED });

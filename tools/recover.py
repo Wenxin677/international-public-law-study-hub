@@ -23,6 +23,10 @@ SYS_FONTS = {
     "KhmerOSSiemreap": r"C:\Windows\Fonts\KhmerOS_siemreap.ttf",
     "KhmerOSMuolLight": r"C:\Windows\Fonts\KhmerOS_muollight.ttf",
     "KhmerOSbattambang": r"C:\Windows\Fonts\KhmerOS_battambang.ttf",
+    # the slide decks are set in KhmerOS Content; without it table_for() fell back
+    # to Siemreap and every body span decoded to the wrong glyphs
+    "KhmerOSContent": r"C:\Windows\Fonts\KhmerOS_content.ttf",
+    "KhmerOSContentBold": r"C:\Windows\Fonts\KhmerOSContent-Bold.ttf",
 }
 KH_CONS = "\u1780-\u17A2"
 COENG = "\u17D2"
@@ -97,10 +101,18 @@ class Recover:
         self.tables = {k: GlyphTable(v, k) for k, v in SYS_FONTS.items() if pathlib.Path(v).exists()}
 
     def table_for(self, basefont):
-        for key in self.tables:
-            if key.replace("KhmerOS", "").lower() in basefont.lower():
-                return self.tables[key]
-        return self.tables["KhmerOSSiemreap"]
+        """Pick the table by name, preferring the most specific match: the subset
+        names look like 'BCDGEE+Content-Bold', which must not fall back to the
+        regular weight's glyph order (or to another family entirely)."""
+        norm = re.sub(r"[^a-z0-9]", "", basefont.lower())
+        best = None
+        for key, tab in self.tables.items():
+            k = re.sub(r"[^a-z0-9]", "", key.replace("KhmerOS", "").lower())
+            if k and k in norm and (best is None or len(k) > best[0]):
+                best = (len(k), tab)
+        if best:
+            return best[1]
+        return self.tables.get("KhmerOSSiemreap") or list(self.tables.values())[0]
 
     def page_lines(self, pno):
         page = self.doc[pno]

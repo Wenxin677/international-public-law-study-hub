@@ -423,31 +423,31 @@ body.lk-open .wrap { max-width: min(1640px, 96vw); }
 .wk-head h1 { margin: 10px 0 4px; font-size: clamp(1.5rem, 4vw, 2.2rem); }
 .wk-topic { color: var(--lk-ink); opacity: .9; margin: 0 0 4px; }
 .wk-note { color: var(--lk-dim); font-size: .86rem; margin: 0; }
-.wk-split { display: grid; gap: 16px; }
-@media (min-width: 900px) {
-  .wk-split { grid-template-columns: 220px minmax(0, 1fr); align-items: start; }
+
+/* the slide strip: one row above the viewer, so the viewer owns the full width.
+   It scrolls sideways with a hidden scrollbar instead of nesting a scroll area. */
+.wk-stripwrap { display: grid; gap: 8px; }
+.wk-striphead { font-size: .78rem; text-transform: uppercase; letter-spacing: .07em; color: var(--lk-dim); }
+.wk-strip {
+  list-style: none; margin: 0; padding: 4px 2px 6px; display: flex; gap: 8px;
+  overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x proximity;
 }
-.wk-listwrap {
-  border: 1px solid var(--lk-line); border-radius: 18px; background: var(--lk-card);
-  padding: 12px; position: relative;
+.wk-strip::-webkit-scrollbar { display: none; }
+.wk-strip li { flex: 0 0 auto; scroll-snap-align: start; }
+.wk-strip button {
+  display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px 0 8px;
+  border-radius: 12px; border: 1px solid var(--lk-line); background: var(--lk-card);
+  color: var(--lk-ink); font: inherit; font-size: .88rem; white-space: nowrap; cursor: pointer;
+  transition: border-color .18s, background .18s, transform .18s;
 }
-@media (min-width: 900px) { .wk-listwrap { position: sticky; top: 76px; max-height: calc(100vh - 120px); overflow: auto; } }
-.wk-listhead { font-size: .78rem; text-transform: uppercase; letter-spacing: .07em; color: var(--lk-dim); padding: 2px 6px 10px; }
-.wk-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.wk-list button {
-  display: flex; align-items: flex-start; gap: 10px; width: 100%; text-align: left;
-  padding: 10px 12px; border-radius: 12px; border: 1px solid transparent;
-  background: rgba(255, 255, 255, .02); color: var(--lk-ink); font: inherit; font-size: .9rem;
-  cursor: pointer; transition: transform .18s, border-color .18s, background .18s;
-}
-.wk-list button .n {
-  flex: none; min-width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center;
+.wk-strip button .n {
+  flex: none; width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center;
   background: rgba(139, 92, 246, .18); font-size: .8rem; font-weight: 700;
 }
-.wk-list button .lb { min-width: 0; }
-@media (hover: hover) { .wk-list button:hover { transform: translateX(3px); border-color: var(--lk-1); } }
-.wk-list button.active { border-color: var(--lk-1); background: rgba(139, 92, 246, .14); }
-.wk-list button.active .n { background: var(--lk-grad); color: #05091a; }
+.wk-strip button .lb { max-width: 30ch; overflow: hidden; text-overflow: ellipsis; }
+@media (hover: hover) { .wk-strip button:hover { transform: translateY(-2px); border-color: var(--lk-1); } }
+.wk-strip button.active { border-color: var(--lk-1); background: rgba(139, 92, 246, .16); }
+.wk-strip button.active .n { background: var(--lk-grad); color: #05091a; }
 .wk-panel { display: grid; gap: 14px; min-width: 0; }
 .wk-stage {
   position: relative;
@@ -456,7 +456,7 @@ body.lk-open .wrap { max-width: min(1640px, 96vw); }
   /* An explicit height, NOT aspect-ratio + min-height: with both, the box derives
      its own width from the height (522px -> 928px wide) and overflows every column. */
   width: 100%;
-  height: clamp(340px, 58vh, 720px);
+  height: clamp(460px, 74vh, 900px);         /* the viewer is the point of this page */
 }
 .wk-stage iframe { width: 100%; height: 100%; border: 0; display: block; }
 .wk-sum {
@@ -468,8 +468,8 @@ body.lk-open .wrap { max-width: min(1640px, 96vw); }
 .wk-sum p { margin: 0 0 10px; line-height: 1.65; }
 .wk-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 @media (max-width: 640px) {
-  .wk-list { max-height: 260px; overflow: auto; }
-  .wk-list button { font-size: .86rem; }
+  .wk-strip button .lb { max-width: 18ch; }
+  .wk-stage { height: clamp(400px, 66vh, 620px); }
 }
 
 /* -------------------------------------------------------------- notes */

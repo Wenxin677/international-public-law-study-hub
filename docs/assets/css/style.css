@@ -478,6 +478,8 @@ footer.site a { color: var(--muted); padding: 4px 2px; display: inline-block; }
 .rail .ch > button { width: 100%; display: flex; gap: 10px; align-items: center; padding: 12px; border: 0; background: transparent; color: var(--fg); font: inherit; font-weight: 700; cursor: pointer; text-align: left; font-size: .92rem; }
 .rail .ch > button:hover { background: rgba(111,155,240,.1); }
 .rail .ch .n { flex: none; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-size: .78rem; background: rgba(111,155,240,.16); color: var(--sky-300); }
+/* one line per chapter: long titles used to wrap and make the rail a wall of text */
+.rail .ch .ct { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rail .ls { display: none; padding: 2px 8px 8px; }
 .rail .ch.open .ls { display: block; animation: fadeIn .2s ease both; }
 .rail .ls a { display: flex; gap: 9px; align-items: flex-start; padding: 9px 10px; border-radius: 9px; color: var(--muted); font-size: .88rem; text-decoration: none; }

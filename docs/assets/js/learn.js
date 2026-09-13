@@ -32,7 +32,10 @@
   const slidesOf = (lesson) => lesson.pages.to - lesson.pages.from + 1;
   const lessonPdf = (lesson) => 'library/lessons/' + lesson.id + '.pdf';
   const chapterPdf = (chapter) => 'library/chapters/' + chapter.id + '.pdf';
-  const slideUrl = (n) => lessonPdf(current.lesson) + '#page=' + n + '&zoom=page-width&view=FitH';
+  /* toolbar=0 & navpanes=0: the browser's PDF chrome (page box, zoom row,
+     thumbnail sidebar) costs real width and height, and both viewers carry their
+     own controls plus an expand button */
+  const slideUrl = (n) => lessonPdf(current.lesson) + '#page=' + n + '&zoom=page-width&view=FitH&toolbar=0&navpanes=0';
   const bookPage = () => current.lesson.pages.from + ui.slide - 1;
 
   /* ------------------------------------------------------------------ rail */
@@ -309,16 +312,17 @@
         '<p class="wk-topic">' + esc(pick(w.topic)) + '</p>' +
         (w.note ? '<p class="wk-note">' + esc(pick(w.note)) + '</p>' : '') +
       '</div>' +
-      '<div class="wk-split">' +
-        '<div class="wk-listwrap">' +
-          '<div class="wk-listhead">' + esc(t('wk.pick')) + ' · ' + w.pages + ' ' + esc(t('wk.slides')) + '</div>' +
-          '<ol class="wk-list" id="wk-list">' + list.map(function (s) {
-            return '<li><button type="button" data-slide="' + s.n + '">' +
-              '<span class="n">' + s.n + '</span>' +
-              '<span class="lb">' + esc(I.state.lang === 'km' && s.km ? s.km : s.en) + '</span></button></li>';
-          }).join('') + '</ol>' +
-        '</div>' +
-        '<div class="wk-panel">' +
+      /* one horizontal strip of slides instead of a second sidebar: the viewer
+         then owns the full width of the content column */
+      '<div class="wk-stripwrap">' +
+        '<span class="wk-striphead">' + esc(t('wk.pick')) + ' · ' + w.pages + ' ' + esc(t('wk.slides')) + '</span>' +
+        '<ol class="wk-strip" id="wk-list">' + list.map(function (s) {
+          return '<li><button type="button" data-slide="' + s.n + '">' +
+            '<span class="n">' + s.n + '</span>' +
+            '<span class="lb">' + esc(I.state.lang === 'km' && s.km ? s.km : s.en) + '</span></button></li>';
+        }).join('') + '</ol>' +
+      '</div>' +
+      '<div class="wk-panel">' +
           '<div class="wk-stage">' +
             '<button class="lk-fs" id="wk-fs" type="button" title="' + esc(t('learn.expand')) + '" aria-label="' + esc(t('learn.expand')) + '">⤢</button>' +
             '<iframe id="wk-pdf" title="' + esc(t('wk.slides')) + '" loading="lazy"></iframe></div>' +
@@ -334,7 +338,7 @@
             '<div class="wk-actions"><a class="cite" id="wk-open" target="_blank" rel="noopener">📄 ' + esc(t('wk.openPdf')) + '</a></div>' +
           '</div>' +
         '</div>' +
-      '</div></div>';
+      '</div>';
   }
 
   function wkShow(w, n) {
@@ -347,8 +351,11 @@
       b.classList.toggle('active', +b.dataset.slide === s.n);
     });
     const frame = qs('#wk-pdf');
-    const url = w.deck + '#page=' + s.n + '&zoom=page-width&view=FitH';
+    const url = w.deck + '#page=' + s.n + '&zoom=page-width&view=FitH&toolbar=0&navpanes=0';
     if (frame && frame.getAttribute('src') !== url) frame.setAttribute('src', url);
+    /* keep the active slide visible in the strip */
+    const activeBtn = qsa('#wk-list button').filter(function (x) { return +x.dataset.slide === s.n; })[0];
+    if (activeBtn && activeBtn.scrollIntoView) activeBtn.scrollIntoView({ block: 'nearest', inline: 'center' });
     const count = qs('#wk-count');
     if (count) count.textContent = t('wk.slide') + ' ' + s.n + ' ' + t('quiz.of') + ' ' + w.pages;
     const title = qs('#wk-title');

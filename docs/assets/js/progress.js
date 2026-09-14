@@ -14,7 +14,11 @@
    ========================================================================== */
 (function () {
   'use strict';
-  const A = window.IPLAuth;
+  /* NB: window.IPLAuth must be resolved when a function RUNS, not when this file
+     loads. progress.js is loaded before auth.js on some pages, and capturing it
+     here left `A` undefined, so every page threw
+     "Cannot read properties of undefined (reading 'sessionToken')". */
+  const auth = () => window.IPLAuth || null;
 
   /** local progress may be ahead of the database: merge, never overwrite */
   function mergeRows(rows) {
@@ -47,7 +51,8 @@
 
   /** push one change up; silently a no-op when there is no database session */
   function push(kind, payload) {
-    const token = A.sessionToken ? A.sessionToken() : null;
+    const A = auth();
+    const token = A && A.sessionToken ? A.sessionToken() : null;
     if (!token || !A.dbReady || !A.dbReady()) return false;
     try {
       if (kind === 'studied') {
@@ -63,7 +68,8 @@
 
   /** bring this device's picture together with the database's */
   async function pull() {
-    const token = A.sessionToken ? A.sessionToken() : null;
+    const A = auth();
+    const token = A && A.sessionToken ? A.sessionToken() : null;
     if (!token || !A.dbReady || !A.dbReady()) return false;
     try {
       const prog = await A.call('robo_progress_get', { p_token: token });

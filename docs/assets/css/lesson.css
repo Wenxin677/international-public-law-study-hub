@@ -20,7 +20,7 @@
   --lk-radius: 22px;
   --lk-shadow: 0 18px 50px rgba(6, 8, 24, .55), 0 2px 0 rgba(255, 255, 255, .04) inset;
   color: var(--lk-ink);
-  font-family: 'Poppins', var(--font-body, system-ui), sans-serif;
+  font-family: 'Poppins', var(--font-body, system-ui), var(--font-km), sans-serif;
 }
 :root[data-theme="light"] .lesson-page {
   --lk-ink: #131629;
@@ -68,7 +68,7 @@
 .lk-title {
   position: relative;
   margin: 0 0 14px;
-  font-family: 'Space Grotesk', 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', 'Poppins', var(--font-km), sans-serif;
   font-weight: 700;
   font-size: clamp(1.9rem, 7.2vw, 4.2rem);
   line-height: 1.02;
@@ -82,7 +82,7 @@
   color: transparent;
 }
 .lk-chapter-title {
-  font-family: 'Space Grotesk', 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', 'Poppins', var(--font-km), sans-serif;
   font-size: clamp(1rem, 3.4vw, 1.35rem);
   font-weight: 600;
   color: var(--lk-dim);
@@ -129,7 +129,7 @@
   margin-bottom: 8px;
 }
 .lk-progress-top b { color: var(--lk-ink); }
-.lk-progress-top .lk-pct { margin-left: auto; font-family: 'Space Grotesk', sans-serif; }
+.lk-progress-top .lk-pct { margin-left: auto; font-family: 'Space Grotesk', var(--font-km), sans-serif; }
 .lk-bar {
   height: 7px;
   border-radius: 999px;
@@ -201,7 +201,7 @@ body.lk-open .wrap { max-width: min(1640px, 96vw); }
 }
 .lk-card h2,
 .lk-card h3 {
-  font-family: 'Space Grotesk', 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', 'Poppins', var(--font-km), sans-serif;
   font-weight: 700;
   letter-spacing: -.01em;
   margin: 0 0 14px;
@@ -311,7 +311,7 @@ body.lk-open .wrap { max-width: min(1640px, 96vw); }
   border-radius: 9px;
   display: grid;
   place-items: center;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', var(--font-km), sans-serif;
   font-size: .85rem;
   font-weight: 700;
   color: #0b0f22;
@@ -343,7 +343,7 @@ body.lk-open .wrap { max-width: min(1640px, 96vw); }
 .lk-term > summary::after {
   content: "+";
   margin-left: auto;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', var(--font-km), sans-serif;
   font-weight: 700;
   color: var(--lk-1);
   transition: transform .25s;
@@ -395,7 +395,7 @@ body.lk-open .wrap { max-width: min(1640px, 96vw); }
   cursor: pointer;
   list-style: none;
   padding: 16px 20px;
-  font-family: 'Space Grotesk', 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', 'Poppins', var(--font-km), sans-serif;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -559,10 +559,10 @@ body.lk-open .page-head { display: none; }
   background: var(--lk-grad);
 }
 .lk-guide-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-.lk-guide-title { font-family: 'Space Grotesk', 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; }
+.lk-guide-title { font-family: 'Space Grotesk', 'Poppins', var(--font-km), sans-serif; font-weight: 700; font-size: 1.1rem; }
 .lk-guide-count {
   margin-left: auto;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', var(--font-km), sans-serif;
   font-weight: 700;
   font-size: .95rem;
   color: var(--lk-dim);

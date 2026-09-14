@@ -21,7 +21,8 @@ KEEP = {"assets/img/logo.png", "assets/img/favicon.png", "assets/img/apple-touch
 
 def referenced_text() -> str:
     parts = []
-    for p in list(SITE.glob("*.html")) + list((SITE / "assets/js").glob("*.js")) + list((SITE / "assets/css").glob("*.css")):
+    for p in list(SITE.glob("*.html")) + list((SITE / "assets/js").glob("*.js")) + \
+            list((SITE / "assets/css").glob("*.css")) + list((SITE / "data").glob("*.js")):
         parts.append(p.read_text(encoding="utf-8", errors="replace"))
     return "\n".join(parts)
 

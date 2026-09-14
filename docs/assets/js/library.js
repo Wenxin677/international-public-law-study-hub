@@ -7,11 +7,15 @@
   const I = window.IPL;
   const t = I.t, esc = I.esc, qs = I.qs;
   const LIB = window.IPL_LIBRARY || { sources: [] };
-  /* view: 'pdf' | 'text' | 'shots'; page is the BOOK page == the PDF page */
+  /* view: 'pdf' | 'text' | 'shots'; page is the BOOK page (PDF page = book + offset) */
   const state = { id: null, view: 'pdf', page: 1, fit: 'FitH' };
 
   function src(id) { return LIB.sources.filter(function (s) { return s.id === id; })[0] || LIB.sources[0]; }
   function total(s) { return (s.pages || []).length; }
+  /* The textbook PDF opens with 11 front-matter sheets, so its printed page 1 is
+     sheet 12. Lessons and quizzes cite BOOK pages, so every link into the file has
+     to add that offset or it opens 11 pages early. */
+  function offsetOf(s) { return (s && s.offset) || 0; }
 
   /* Some browsers cannot show a PDF inside a page (iOS Safari above all, and
      Firefox on Android). Detect it so we can offer the file instead of a blank. */
@@ -24,7 +28,7 @@
   }
 
   function pdfUrl(s, page, fit) {
-    let frag = '#page=' + page;
+    let frag = '#page=' + (page + offsetOf(s));
     if (fit === 'FitH' || fit === 'FitV') frag += '&view=' + fit;
     else if (fit && fit.indexOf('zoom:') === 0) frag += '&zoom=' + fit.slice(5);
     return s.pdf + frag;

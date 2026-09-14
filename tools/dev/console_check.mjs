@@ -75,30 +75,44 @@ try {
   await send('Log.enable');
   await send('Network.enable');
   await send('Emulation.setDeviceMetricsOverride', { width: 390, height: 900, deviceScaleFactor: 1, mobile: true });
-  await send('Runtime.evaluate', { expression: `localStorage.setItem('robo.session', JSON.stringify({u:'audit',t:'t',ts:Date.now(),exp:Date.now()+864e5})); 'ok'`, url: BASE });
-  await sleep(200);
-  await send('Emulation.setDeviceMetricsOverride', { width: 390, height: 900, deviceScaleFactor: 1, mobile: true });
+  /* Seed the session ON the target origin first: evaluating localStorage from
+     about:blank writes nothing, which is why the first version of this harness
+     silently measured the sign-in page for every route. */
+  await send('Page.navigate', { url: `${BASE}/index.html` });
+  await sleep(3000);
+  await send('Runtime.evaluate', {
+    expression: `localStorage.setItem('robo.session', JSON.stringify({u:'audit',t:'tok',ts:Date.now(),exp:Date.now()+864e5})); 'seeded'`,
+    returnByValue: true
+  });
 
   for (const page of PAGES) {
     events.length = 0;
-    await send('Page.navigate', { url: `${BASE}/${page}` });
-    await sleep(2600);
-    const r = await send('Runtime.evaluate', {
-      expression: `JSON.stringify({ title: document.title, h1: (document.querySelector('h1')||{}).textContent || '',
-        body: document.body.innerText.length, url: location.pathname.split('/').pop() })`,
-      returnByValue: true
-    });
-    const v = JSON.parse(r.result.value);
-    const errs = events.filter((e) => e.kind === 'error' || e.kind === 'netfail' || /^http[45]/.test(e.kind));
-    const warns = events.filter((e) => e.kind === 'warning');
-    const landed = v.url === page;
-    if (errs.length || !landed) failures++;
-    console.log(`\n${errs.length || !landed ? '✗' : '✓'} ${page}  title="${v.title.slice(0, 42)}" · ${v.body} chars of text` +
-      (landed ? '' : `  LANDED ON ${v.url}`));
-    if (v.h1 === '') console.log('   · no <h1> text rendered (scripts may not have run)');
-    errs.forEach((e) => console.log(`   ${e.kind.toUpperCase()}: ${e.text.slice(0, 170)}`));
-    warns.slice(0, 4).forEach((e) => console.log(`   warn: ${e.text.slice(0, 150)}`));
-    if (!errs.length && !warns.length) console.log('   no console errors, no failed requests');
+    try {
+      await send('Page.navigate', { url: `${BASE}/${page}` });
+      await sleep(3200);
+      const r = await send('Runtime.evaluate', {
+        expression: `JSON.stringify({ title: document.title, h1: (document.querySelector('h1')||{}).textContent || '',
+          body: ((document.body || {}).innerText || '').length, url: location.pathname.split('/').pop(),
+          signedIn: !!document.querySelector('.acct, #rail, .dash-3') })`,
+        returnByValue: true
+      });
+      if (r.exceptionDetails) throw new Error('probe threw: ' + (r.exceptionDetails.text || '') + ' ' +
+        ((r.exceptionDetails.exception || {}).description || '').slice(0, 120));
+      const v = JSON.parse(r.result.value);
+      const errs = events.filter((e) => e.kind === 'error' || e.kind === 'netfail' || /^http[45]/.test(e.kind));
+      const warns = events.filter((e) => e.kind === 'warning');
+      const landed = v.url === page;
+      if (errs.length || !landed) failures++;
+      console.log(`\n${errs.length || !landed ? '✗' : '✓'} ${page}  title="${v.title.slice(0, 42)}" · ${v.body} chars of text${v.signedIn ? '' : '  (NOT SIGNED IN: app content hidden)'}` +
+        (landed ? '' : `  LANDED ON ${v.url}`));
+      if (v.h1 === '') console.log('   · no <h1> text rendered (scripts may not have run)');
+      errs.forEach((e) => console.log(`   ${e.kind.toUpperCase()}: ${e.text.slice(0, 170)}`));
+      warns.slice(0, 4).forEach((e) => console.log(`   warn: ${e.text.slice(0, 150)}`));
+      if (!errs.length && !warns.length) console.log('   no console errors, no failed requests');
+    } catch (e) {
+      failures++;
+      console.log(`\n✗ ${page}: ${e.message.slice(0, 160)}`);
+    }
   }
 } catch (e) {
   console.error('console check failed:', e.message);

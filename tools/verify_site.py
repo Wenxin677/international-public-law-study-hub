@@ -342,6 +342,33 @@ else:
                 problems.append(f"weekly {w['id']} slide {s['n']}: Khmer label carries source artefacts {bad}")
     notes.append(f"  weekly: {len(wdata.get('weeks', []))} deck(s) · {wk_slides} slides with summaries · labels clean")
 
+# ------------------------------------------------- 10. book pages vs PDF pages
+# The textbook PDF has 11 front-matter sheets, so printed page 1 is sheet 12.
+# Lessons, quizzes and the Library all speak in BOOK pages, and every link into a
+# PDF file must add that offset. Getting it wrong shows the wrong pages while the
+# page COUNT still looks right, so the slices are compared sheet-by-sheet.
+LIBJS = (SITE / "assets/js/library.js").read_text(encoding="utf-8")
+LIBDATA = (SITE / "data/library.js").read_text(encoding="utf-8")
+PAGE_MAP = (pathlib.Path(__file__).resolve().parent / "page_map.py").read_text(encoding="utf-8")
+if "TEXTBOOK_OFFSET = 11" not in PAGE_MAP:
+    problems.append("tools/page_map.py: the textbook's front-matter offset is not 11")
+if 'offsetOf(s)' not in LIBJS or 'page + offsetOf(s)' not in LIBJS:
+    problems.append("assets/js/library.js: page links do not add the source's page offset")
+if '"id":"textbook"' in LIBDATA and '"offset":11' not in LIBDATA:
+    problems.append("data/library.js: the textbook source carries no page offset")
+if '"offset":0' not in LIBDATA:
+    problems.append("data/library.js: the reference sources carry no page offset")
+audit = pathlib.Path(__file__).resolve().parent / "dev" / "pdf_page_audit.py"
+if audit.exists():
+    import subprocess
+    r = subprocess.run([sys.executable, str(audit)], capture_output=True, text=True, encoding="utf-8")
+    if r.returncode != 0:
+        problems.append("pdf page audit failed:\n     " + (r.stdout or r.stderr or "").strip().replace("\n", "\n     "))
+    else:
+        notes.append("  page map: every lesson/chapter extract holds the book pages it claims (43 sheet-level checks)")
+else:
+    problems.append("tools/dev/pdf_page_audit.py is missing")
+
 print("\n".join(notes))
 print()
 if problems:

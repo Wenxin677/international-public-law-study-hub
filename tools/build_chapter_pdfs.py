@@ -12,6 +12,9 @@ import sys
 
 import fitz  # pymupdf
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from page_map import pdf_page  # noqa: E402
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SITE = ROOT / "docs"
 LIB = SITE / "library"
@@ -31,11 +34,14 @@ total = 0
 print(f"{'chapter':10s} {'pages':>9s}  {'file':22s} {'size':>9s}  pdf pages")
 for ch in chapters:
     cid = ch["id"]
+    src_id = cid if cid in SOURCE_OF else "textbook"
     src_path = SOURCE_OF.get(cid) or SOURCE_OF["textbook"]
     first, last = ch["pages"]["from"], ch["pages"]["to"]
+    # the chapter range is BOOK pages: the textbook PDF is offset by its front matter
+    first_pdf, last_pdf = pdf_page(src_id, first), pdf_page(src_id, last)
     src = fitz.open(src_path)
     part = fitz.open()
-    part.insert_pdf(src, from_page=first - 1, to_page=last - 1)
+    part.insert_pdf(src, from_page=first_pdf - 1, to_page=last_pdf - 1)
     title = ch["title"]["en"]
     part.set_metadata({"title": f"{cid} — {title}", "producer": "RoboCL chapter extract"})
     dest = OUT / f"{cid}.pdf"

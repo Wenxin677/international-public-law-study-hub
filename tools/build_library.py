@@ -9,6 +9,9 @@ Sources:
 import json, pathlib, re, shutil, sys
 import fitz  # pymupdf
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from page_map import book_page, front_matter, pdf_page  # noqa: E402
+
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -50,8 +53,12 @@ TB_PDF_SRC = ROOT / "source" / "11 International Public Law Textbook.pdf"
 TB_PDF_NAME = "11_International_Public_Law_Textbook.pdf"
 raw = json.loads((ROOT / "extracted" / "textbook_decoded.json").read_text(encoding="utf-8"))
 tb_pages = []
+FRONT = front_matter("textbook")          # 11 sheets before book page 1
 for k in sorted(raw.keys(), key=lambda x: int(x)):
-    n = int(k)
+    n = int(k)                            # n is a PDF sheet number
+    book = book_page("textbook", n)       # ...which the book numbers differently
+    if book < 1:
+        continue                          # front matter: cover, title, contents, i-x
     blocks = [b for b in raw[k] if isinstance(b, dict) and (b.get("text") or "").strip()]
     if not blocks:
         continue
@@ -68,7 +75,7 @@ for k in sorted(raw.keys(), key=lambda x: int(x)):
         lines.append(t + (" " if not t.endswith(("-", "។", "៕")) else ""))
         last_y = y
     text = clean("".join(lines))
-    tb_pages.append({"n": n, "text": text, "ch": chapter_for(n, "textbook")})
+    tb_pages.append({"n": book, "text": text, "ch": chapter_for(book, "textbook")})
 
 sources.append({
     "id": "textbook",
@@ -77,6 +84,8 @@ sources.append({
     "title": {"km": "ច្បាប់សាធារណៈអន្តរជាតិ", "en": "International Public Law"},
     "author": {"km": "ឡាយ រត្តនា", "en": "Lay Rottana"},
     "year": "2021",
+    # page numbers in this data are BOOK pages; add this to address the PDF file
+    "offset": FRONT,
     "note": {
         "km": "សៀវភៅសិក្សាដើម (ភាសាខ្មែរ) — អានជាអត្ថបទ ឬមើលទំព័រ PDF ដើម។",
         "en": "The original Khmer textbook — read the recovered text, or view the real PDF pages."
@@ -120,24 +129,27 @@ for sid, jf, title, author, cite, year, pdfname in REFS:
             "km": "ឯកសារផ្លូវការ — មើលបានទាំងអត្ថបទ និងឯកសារ PDF ដើម។",
             "en": "Public legal document — read as text or open the original PDF."
         },
-        "pages": pages, "pdf": "library/" + pdfname, "images": []
+        "pages": pages, "pdf": "library/" + pdfname, "images": [], "offset": 0
     })
 
 # ---------------------------------------------------------------- look-inside images
 img_dir = DOCS / "assets" / "img" / "pages"
 img_dir.mkdir(parents=True, exist_ok=True)
 doc = fitz.open(str(ROOT / "source" / "11 International Public Law Textbook.pdf"))
-LOOK = [(1, "title page"), (12, "chapter 1 opens"), (45, "the State and the nation"), (67, "recognition"),
-        (143, "the Paris Peace Agreements"), (152, "annexes")]
+# BOOK pages (the offset is added when addressing the PDF). The front matter is
+# skipped: a "look inside" gallery should open on the book's own page 1.
+LOOK = [(1, "chapter 1 opens"), (34, "the State and the nation"), (56, "recognition"),
+        (132, "the Paris Peace Agreements"), (141, "annexes")]
 shots = []
-for pno, label in LOOK:
+for book, label in LOOK:
+    pno = pdf_page("textbook", book)
     if pno - 1 >= doc.page_count:
         continue
     page = doc[pno - 1]
-    pix = page.get_pixmap(dpi=105)
-    name = f"p{pno:03d}.jpg"
+    pix = page.get_pixmap(dpi=84)          # keep the gallery light: ~60 KB a shot
+    name = f"p{book:03d}.jpg"
     pix.save(str(img_dir / name), jpg_quality=72)
-    shots.append({"page": pno, "img": "assets/img/pages/" + name, "label": label})
+    shots.append({"page": book, "img": "assets/img/pages/" + name, "label": label})
     print(f"rendered {name} ({(img_dir / name).stat().st_size/1024:.0f} KB)")
 doc.close()
 sources[0]["images"] = shots

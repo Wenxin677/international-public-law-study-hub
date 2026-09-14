@@ -14,3 +14,6 @@ node_modules/
 
 # working notes for the lesson explainers (merged into content/*.json)
 content/plain/
+
+# scratch: screenshots, logs and one-off checks — not part of the site
+tmp/

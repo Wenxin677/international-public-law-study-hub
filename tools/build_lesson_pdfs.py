@@ -14,6 +14,9 @@ import sys
 
 import pymupdf
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from page_map import pdf_page  # noqa: E402
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SITE = ROOT / "docs"
 LIB = SITE / "library"
@@ -33,15 +36,19 @@ total = 0
 count = 0
 print(f"{'lesson':10s} {'pages':>9s} {'file':16s} {'size':>9s}  pages in pdf")
 for ch in chapters:
+    src_id = ch["id"] if ch["id"] in SOURCE_OF else "textbook"
     src_path = SOURCE_OF.get(ch["id"], TEXTBOOK)
     src = pymupdf.open(src_path)
     for les in ch["lessons"]:
         first, last = les["pages"]["from"], les["pages"]["to"]
-        if last > src.page_count:
-            print(f"  !! {les['id']}: pages {first}-{last} go past the end of {src_path.name} ({src.page_count})")
+        # the lesson range is BOOK pages: the textbook PDF is offset by its front matter
+        first_pdf, last_pdf = pdf_page(src_id, first), pdf_page(src_id, last)
+        if last_pdf > src.page_count:
+            print(f"  !! {les['id']}: book pages {first}-{last} = PDF {first_pdf}-{last_pdf}, "
+                  f"past the end of {src_path.name} ({src.page_count})")
             sys.exit(1)
         part = pymupdf.open()
-        part.insert_pdf(src, from_page=first - 1, to_page=last - 1)
+        part.insert_pdf(src, from_page=first_pdf - 1, to_page=last_pdf - 1)
         part.set_metadata({"title": f"{les['id']} — {les['title']['en']}",
                            "producer": "RoboCL lesson extract"})
         dest = OUT / f"{les['id']}.pdf"
